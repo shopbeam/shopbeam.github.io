@@ -1,0 +1,335 @@
+/* COMMENTS MODULE */
+#moduleComments{
+  padding-top: 10px;
+}
+
+.commentHeader{
+  width: 640px;
+  padding: 0px 10px 0px 10px;
+  height: 28px;
+  border-bottom: 1px solid #dcdcdc;
+  overflow: hidden;
+}
+
+.commentCount{
+  float: left;
+  font: 17px arial;
+}
+
+.commentSort{
+  float: right;
+  padding-top: 2px;
+}
+
+.commentCount a:link,
+.commentCount a:visited{
+  font: bold 17px arial;
+}
+
+.commentAdd{
+  width: 640px;
+  padding: 10px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #dcdcdc;
+  background: #f1f1f1;
+  overflow: hidden;
+}
+
+.commentAdd li,
+.commentLine li{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  float: left;
+  overflow: hidden;
+}
+
+.commentAdd li .photo,
+.replyOuter li .photo,
+.commentLine li .photo{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  float: left;
+  width: 45px;
+  overflow: hidden;
+}
+
+.commentAdd img,
+.replyOuter .photo img,
+.commentLine .photo img{
+  width: 35px;
+  margin-right: 10px;
+}
+
+.commentAdd textarea{
+  width: 585px;
+  max-width: 585px;
+  height: 30px;
+  max-height: 30px;
+  border: 1px solid #f0a3cb;
+  background: #ffffff;
+  font: 11px arial;
+  color: #c7c7c7;
+}
+
+.replyInner textarea{
+  width: 513px;
+  max-width: 513px;
+  height: 30px;
+  max-height: 30px;
+  border: 1px solid #f0a3cb;
+  background: #ffffff;
+  font: 11px arial;
+  color: #c7c7c7;
+}
+
+.mainComment{
+  overflow: hidden;
+  clear: both;
+}
+
+.mainComment .comment{
+  width: 595px;
+}
+
+.subComment .comment{
+  width: 520px;
+}
+
+.showComment{
+  color: #888888;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.commentHidden{
+  display: none;
+}
+
+.showHide{
+  color: #d13193;
+}
+
+.commentLine{
+  width: 640px;
+  padding: 10px;
+  border-bottom: 1px solid #dcdcdc;
+  overflow: hidden;
+  font: 12px arial;
+}
+
+.commentLine h1,
+.commentLine a:link,
+.commentLine a:visited{
+  font: bold 11px arial;
+  color: #555555!important;
+  text-decoration: none;
+}
+
+.commentLine a:hover{
+  font: bold 11px arial;
+  color: #d13193!important;
+  text-decoration: none;
+}
+
+.commentLine h2{
+  font: italic 11px arial;
+}
+
+.commentLine .replyOuter{
+  height: 0px;
+  clear: both;
+  overflow: hidden;
+}
+
+.commentLine .timeStamp{
+  margin-right: 20px;
+}
+
+.commentLine .subComment,
+.commentLine .replyInner{
+  margin: 10px 0px 0px 45px;
+  padding: 5px 5px 5px 25px;
+  background: url(http://www.ipsy.com/images/icon_reply.png) no-repeat #f7f7f7;
+  clear: both;
+  overflow: hidden;
+}
+
+.commentLine .stats{
+  font: normal 11px arial;
+  color: #699033;
+  text-align: right;
+  float: left;
+}
+
+.commentLine .toolbar .stats img{
+  margin: 0px 0px -5px 2px;
+}
+
+.commentLine .toolbar{
+  float: right;
+  text-align: right;
+}
+
+.commentLine .toolbar .icons {
+  float: right;
+  width: 60px;
+  text-align: left;
+  margin-left: -20px;
+}
+
+.commentLine .toolbar .icons img {
+  display: none;
+}
+
+.commentLine .toolbar .icons img {
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+.commentLine .noLove {
+  color: #c64b4b!important;
+}
+
+.commentLine .content {
+  clear: both;
+  padding-top: 5px;
+}
+
+.radioInput {
+  padding: 0px;
+  width: auto;
+  height: auto;
+  margin: 0px 5px 0px 0px;
+}
+
+.commentLine .toolbar .icons div {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  float: left;
+  width: 20px;
+  height: 18px;
+  overflow: hidden;
+  text-align: right;
+}
+
+  /* REMOVE COMMENT */
+.commentLine .toolbar .removable {
+  width: 80px!important;
+}
+
+.removeCommentConfirm{
+  position: absolute;
+  margin: -5px 0px 0px -60px;
+  padding: 5px 0px 0px 0px;
+  width: 130px;
+  text-align: center;
+  height: 20px;
+  background: #cdcdcd;
+  filter: alpha(opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  -moz-opacity: 0.0;
+  -khtml-opacity: 0.0;
+  opacity: 0.0;
+  display: none;
+  font-size: 11px;
+}
+
+.subComment .removeCommentConfirm{
+  position: absolute;
+  margin: -5px 0px 0px -36px;
+  padding: 5px 0px 0px 0px;
+  width: 130px;
+  text-align: center;
+  height: 20px;
+  background: #cdcdcd;
+  filter: alpha(opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  -moz-opacity: 0.0;
+  -khtml-opacity: 0.0;
+  opacity: 0.0;
+  display: none;
+  font-size: 11px;
+}
+
+.removeCommentConfirm span{
+  margin: 0px 10px 0px 10px;
+}
+
+.removeCommentConfirm a.Yes,
+.removeCommentConfirm a.No{
+  font-size: 11px;
+  font-weight: normal;
+  color: #d13193;
+}
+
+.removeCommentConfirm a.Yes{
+  font-size: 11px;
+  font-weight: normal;
+  color: #d13193;
+  margin-left: 10px;
+}
+
+.fieldEntry{
+  color: #888888!important;
+  font-size: 12px!important;
+}
+
+/* REMOVE COMMENT */
+.commentLine .toolbar .removable {
+  width: 80px!important;
+}
+
+.removeCommentConfirm{
+  position: absolute;
+  margin: -5px 0px 0px -60px;
+  padding: 5px 0px 0px 0px;
+  width: 130px;
+  text-align: center;
+  height: 20px;
+  background: #cdcdcd;
+  filter: alpha(opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  -moz-opacity: 0.0;
+  -khtml-opacity: 0.0;
+  opacity: 0.0;
+  display: none;
+  font-size: 11px;
+}
+
+.subComment .removeCommentConfirm{
+  position: absolute;
+  margin: -5px 0px 0px -65px;
+  padding: 5px 0px 0px 0px;
+  width: 130px;
+  text-align: center;
+  height: 20px;
+  background: #cdcdcd;
+  filter: alpha(opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  -moz-opacity: 0.0;
+  -khtml-opacity: 0.0;
+  opacity: 0.0;
+  display: none;
+  font-size: 11px;
+}
+
+.removeCommentConfirm span{
+  margin: 0px 10px 0px 10px;
+}
+
+.removeCommentConfirm a.Yes,
+.removeCommentConfirm a.No{
+  font-size: 11px;
+  font-weight: normal;
+  color: #d13193;
+}
+
+.removeCommentConfirm a.Yes{
+  font-size: 11px;
+  font-weight: normal;
+  color: #d13193;
+  margin-left: 10px;
+}

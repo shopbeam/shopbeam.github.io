@@ -1,0 +1,48 @@
+<!-- refer empty --><!-- get widget::3735:0:579::v2 --><!-- db --><!-- set widget::3735:0:579::v2 --><!-- refer empty --><!-- refer empty --><!-- refer empty --><!-- refer empty -->
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: '7', c2: '6036161', c3: '2118', c4: '3735' });
+    (function() {
+        var s = document.createElement('script'), el = document.getElementsByTagName('script')[0]; s.async = true;
+        s.src = (document.location.protocol == 'https:' ? 'https://sb' : 'http://b') + '.scorecardresearch.com/beacon.js'; el.parentNode.insertBefore(s, el);
+    })();
+
+    function ci_click(ctr_link){
+
+
+        if (navigator.appName.toUpperCase().match(/MICROSOFT INTERNET EXPLORER/)){
+            var params  = 'resizeable=1,toolbar=1,menubar=1,scrollbars=1';
+            var target_window='ci_window';
+            var winW = 0, winH = 0;
+
+            if (document.body && document.body.offsetWidth) {
+                winW = document.body.offsetWidth;
+                winH = document.body.offsetHeight;
+            }
+
+            if (document.compatMode=='CSS1Compat' && document.documentElement && document.documentElement.offsetWidth ) {
+                winW = document.documentElement.offsetWidth;
+                winH = document.documentElement.offsetHeight;
+            }
+
+            if (window.innerWidth && window.innerHeight) {
+                winW = window.innerWidth;
+                winH = window.innerHeight;
+            }
+
+                                params +=',width=' + winW + ',height=' + winH;
+            
+
+            window.open('index.html', target_window, params);
+
+            var link=document.getElementById('ci_link_3735');
+            link.target=target_window;
+            link.href=ctr_link;
+            link.click();
+
+            return false;
+        }
+    }
+    var CITra = "<img src='http://cdn.crowdignite.com/img/i.gif?t=" +(new Date()).getTime()+"&r="+Math.floor((Math.random()*1000000)+1)+"' style='width:0px;height:0px;display:none;position:absolute' />";
+	document.getElementById("_CI_widget_1").innerHTML = "<style type='text/css'> #_ci_widget_div_3735, #_ci_widget_div_3735 div, #_ci_widget_div_3735 a, #_ci_widget_div_3735 abbr, #_ci_widget_div_3735 b, #_ci_widget_div_3735 canvas, #_ci_widget_div_3735 center, #_ci_widget_div_3735 code, #_ci_widget_div_3735 dd, #_ci_widget_div_3735 dl, #_ci_widget_div_3735 dt, #_ci_widget_div_3735 embed, #_ci_widget_div_3735 font, #_ci_widget_div_3735 form, #_ci_widget_div_3735 h1, #_ci_widget_div_3735 h2, #_ci_widget_div_3735 h3, #_ci_widget_div_3735 iframe, #_ci_widget_div_3735 img, #_ci_widget_div_3735 li, #_ci_widget_div_3735 ol, #_ci_widget_div_3735 p, #_ci_widget_div_3735 span, #_ci_widget_div_3735 strong, #_ci_widget_div_3735 table, #_ci_widget_div_3735 tbody, #_ci_widget_div_3735 td, #_ci_widget_div_3735 tfoot, #_ci_widget_div_3735 th, #_ci_widget_div_3735 thead, #_ci_widget_div_3735 tr, #_ci_widget_div_3735 ul { border:0; margin:0; padding:0; background:none; font-size:100%; line-height: 1.2em; } #_ci_widget_div_3735 b,strong { font-weight:bold; } #_ci_widget_div_3735 img { max-width:none!important; color: transparent; font-size: 0; vertical-align: middle; -ms-interpolation-mode: bicubic; width:auto!important; } #_ci_widget_div_3735 li { display: list-item; } #_ci_widget_div_3735 table { background: #FFFFFF; border-collapse: separate; border-spacing:4px; width:100%; } #_ci_widget_div_3735 th, #_ci_widget_div_3735 td, #_ci_widget_div_3735 caption { font-weight: normal; vertical-align: top; text-align: left; } #_ci_widget_div_3735 svg { overflow: hidden; } #_ci_widget_div_3735 { width: 600px; height: auto; } #widget_table_3735 td { text-align: center; } #widget_table_3735 a { font-family: Arial; } #widget_table_3735 img { border: medium solid #000000; } #widget_powered_div { background-color:#FFFFFF; text-align:center; font-family: Arial;width: 600px; } #_ci_widget_div_3735 table { border-spacing: 0px; padding: 30px 15px 5px; border: 5px solid black; } #widget_table_3735 td { padding: 2px; } #_ci_widget_div_3735 { margin-top: 30px; }</style> <div id='_ci_widget_div_3735' style='' ><center><table class='widget_table' id='widget_table_3735' cellpadding='0' cellspacing='0' border='0'><a id='ci_link_3735' href='javascript:void(0)' style='display:none;'></a><tr><td valign='top' align='center'><a href='/mtv_movie_awards_prediction_poll_who_do_you_think_will_win' onclick='return ci_click(\u0022http://crowdignite.totallyher.com/v/3735/595518323/0/1/49674855?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=0&referp=0\u0022);' target='_blank' onmousedown=\u0022this.href='http://crowdignite.totallyher.com/v/3735/595518323/0/1/49674855?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=0&referp=0'\u0022><img nopin='nopin' alt='MTV Movie Awards Prediction Poll: Who Do You Think Will Win?' src='http://cdn.crowdignite.com//img/upload/cache/3735/130x130__5331f240b93f5.jpg?t=1395782208' width='130' height='130' style='padding:0px' border='0' /></a><br/><div style='clear:both;margin-top:0px; display: inline-block; width:130px'><a href='/mtv_movie_awards_prediction_poll_who_do_you_think_will_win' onclick='return ci_click(\u0022http://crowdignite.totallyher.com/v/3735/595518323/0/1/49674855?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=0&referp=0\u0022);' style='font-size: 12px; color: #555555' target='_blank' onmousedown=\u0022this.href='http://crowdignite.totallyher.com/v/3735/595518323/0/1/49674855?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=0&referp=0'\u0022>MTV Movie Awards Prediction Poll: Who Do You Think Will Win?</a></div></td><td valign='top' align='center'><a href='/27_natural_photos_of_what_celebrities_really_look_like' onclick='return ci_click(\u0022http://crowdignite.totallyher.com/v/3735/571585499/0/1/46095999?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=1&referp=0\u0022);' target='_blank' onmousedown=\u0022this.href='http://crowdignite.totallyher.com/v/3735/571585499/0/1/46095999?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=1&referp=0'\u0022><img nopin='nopin' alt='27 Celebrities Without Makeup: What Stars Really Look Like!' src='http://cdn.crowdignite.com//img/upload/cache/3735/130x130__52f57c0b014de.jpg?t=1391819822' width='130' height='130' style='padding:0px' border='0' /></a><br/><div style='clear:both;margin-top:0px; display: inline-block; width:130px'><a href='/27_natural_photos_of_what_celebrities_really_look_like' onclick='return ci_click(\u0022http://crowdignite.totallyher.com/v/3735/571585499/0/1/46095999?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=1&referp=0\u0022);' style='font-size: 12px; color: #555555' target='_blank' onmousedown=\u0022this.href='http://crowdignite.totallyher.com/v/3735/571585499/0/1/46095999?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=1&referp=0'\u0022>27 Celebrities Without Makeup: What Stars Really Look Like!</a></div></td><td valign='top' align='center'><a href='/the_hottest_pictures_of_old_celebrities_when_they_were_young' onclick='return ci_click(\u0022http://crowdignite.totallyher.com/v/3735/395376307/0/1/47262783?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=2&referp=0\u0022);' target='_blank' onmousedown=\u0022this.href='http://crowdignite.totallyher.com/v/3735/395376307/0/1/47262783?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=2&referp=0'\u0022><img nopin='nopin' alt='The Hottest Pictures of Old Celebrities When They Were Young ' src='http://cdn.crowdignite.com//img/upload/cache/3735/130x130__5306979925cd9.jpg?t=1392940953' width='130' height='130' style='padding:0px' border='0' /></a><br/><div style='clear:both;margin-top:0px; display: inline-block; width:130px'><a href='/the_hottest_pictures_of_old_celebrities_when_they_were_young' onclick='return ci_click(\u0022http://crowdignite.totallyher.com/v/3735/395376307/0/1/47262783?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=2&referp=0\u0022);' style='font-size: 12px; color: #555555' target='_blank' onmousedown=\u0022this.href='http://crowdignite.totallyher.com/v/3735/395376307/0/1/47262783?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=2&referp=0'\u0022>The Hottest Pictures of Old Celebrities When They Were Young </a></div></td><td valign='top' align='center'><a href='/25_funniest_celebrity_photos_taken_at_the_wrong_time' onclick='return ci_click(\u0022http://crowdignite.totallyher.com/v/3735/584925475/0/1/48430119?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=3&referp=0\u0022);' target='_blank' onmousedown=\u0022this.href='http://crowdignite.totallyher.com/v/3735/584925475/0/1/48430119?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=3&referp=0'\u0022><img nopin='nopin' alt='25 Funniest Celebrity Photos Taken at the Wrong Time' src='http://cdn.crowdignite.com//img/upload/cache/3735/130x130__5317ea5177187.jpg?t=1394076530' width='130' height='130' style='padding:0px' border='0' /></a><br/><div style='clear:both;margin-top:0px; display: inline-block; width:130px'><a href='/25_funniest_celebrity_photos_taken_at_the_wrong_time' onclick='return ci_click(\u0022http://crowdignite.totallyher.com/v/3735/584925475/0/1/48430119?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=3&referp=0\u0022);' style='font-size: 12px; color: #555555' target='_blank' onmousedown=\u0022this.href='http://crowdignite.totallyher.com/v/3735/584925475/0/1/48430119?ltype=0&wtype=0&user_id=c6a9558cc895d3fcdfd3696ba154659f&slot=3&referp=0'\u0022>25 Funniest Celebrity Photos Taken at the Wrong Time</a></div></td></tr></table></center></div>" + CITra;
+
+<!-- 0.1182s -->

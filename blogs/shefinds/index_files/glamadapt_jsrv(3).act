@@ -1,0 +1,625 @@
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+
+
+   
+   
+ 
+      
+   
+   
+      
+   
+   
+      
+   
+
+
+      
+   
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+   
+   
+    
+   
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+/* Generated on : Thu Feb 27 2014 11:07:59 PST */
+
+
+/* ga_adb=ade;ga_srv=normal;;ga_plf=---- */
+
+
+function GlamAdaptSetInfo(gvar, gval) {
+ if ( ! window.glam_adapt_info ) {
+  window.glam_adapt_info = new Object();
+ }
+ window.glam_adapt_info[gvar]=gval;
+}
+function GlamAdaptGetInfo(gvar) {
+ if ( window.glam_adapt_info && window.glam_adapt_info[gvar]) {
+  return window.glam_adapt_info[gvar];
+ }
+ return null;
+}
+if ( ! window.GlamGetAffiliateInfo ) {
+ window.GlamGetAffiliateInfo = function(pName) {
+  var glam_info = new Object();
+  
+  var glam_affiliate_vars = 'js_mode=show;_ge_=3^2^e13f4f7cfc7ed254148ae61026d043a4;ga_adb=ade;sid=11666013328769888111;browser=None;co=US;dma=501;;;flg=64;afid=8156650;zone=/;nt=g;cc=us;ec=ron;p=0;p=1;!c=b;!c=dcm;!c=dcs;!c=s;!c=sf;a_rmt=160;a_rmt=300;a_rmt=728;a_sov=1;atf=o;cl=130757;cl=156241;cl=157124;cl=157620b;cl=324136557;cnt=q;cnt=q=324138422;conv=zappos;cx=s;cx=sf;ec=tb;ec=tf;ec=tsk;ga_af_hydra=1;ga_dealid=st15734;ga_edealid=st25734;ga_erdealid=rn24858;ga_exdealid=exp;ga_rdealid=rn14858;ga_xaxis=portron;hawkeye=live;hyd_g_hq=1;ia=s;lng=en;nat=y;pec=f;pg=qual;psh=y;rmt=exp;rmt=ov;rsk=y;rsu=fs;rsu=po;rsu=sk;rsu=sl;rtb=agha;rtb=pgm;rtb=pgma;rtb=rgm;rtb=rgma;uk=google;uk=push;uk=rsk;vads=prelive;vec=st;vpec=st;vqs=9;ct=set;qc=D;qc=T;qc=1384;qc=34607;qc=34606;qc=34604;qc=34602;qc=27434;qc=27433;qc=14656;qc=14653;qc=14652;qc=14647;qc=14644;qc=14639;qc=14636;qc=14619;qc=14617;qc=14615;qc=14613;qc=14611;qc=14608;qc=14598;qc=14594;qc=14588;qc=14586;qc=14583;qc=14582;qc=14579;qc=14574;qc=14572;qc=14564;qc=14563;qc=14560;qc=14559;qc=14558;qc=14555;qc=14548;qc=14544;qc=14543;qc=14537;qc=14532;qc=14528;qc=14526;qc=14522;qc=14516;qc=14515;qc=14514;qc=14512;qc=14509;qc=14506;qc=14505;qc=14503;qc=13672;qc=12172;qc=12171;qc=12169;qc=12168;qc=8031;qc=2951;qc=2705;qc=2695;qc=2693;qc=2690;qc=1902;atf=1;pfl=3;ga_callseq=4;pt=0;dsid=443996;uv=4;tt=j;u=b01xx0000000000000x,g10001s;sz=300x250,300x600;tile=4;ord=1128794751130044.5;ga_ctime=1395856978279;url=bukm5x;seq=1;ux=g-64,1,;_glt=240:3:14:2:58:279:2014:3:26;a_tz=-240;_g_cv=2;;gpa=1;;';
+  var vars = glam_affiliate_vars.split(";");
+  for (var i=0;i<vars.length;i++) {
+   var pair = vars[i].split("=");
+   if ( pair[1] ) { glam_info[pair[0]] = pair[1]; }
+  }
+  return ( glam_info[pName] ? glam_info[pName] : null);
+ }
+}
+GlamAdaptSetInfo('srv_ad_id', 0);
+
+GlamAdaptSetInfo('country_code', 'US');
+
+GlamAdaptSetInfo('dma', '501');
+
+GlamAdaptSetInfo('region_code', 'NY');
+
+GlamAdaptSetInfo('areacode', '212');
+
+GlamAdaptSetInfo('city', 'NEWYORK');
+
+GlamAdaptSetInfo('bw', '5000');
+
+
+
+  /* Served by  [ggvaapp41/10.143.0.61] for [www30a5.glam.com] at [Wed Mar 26 2014 11:44:31 PDT] */
+
+if ( !window.glamadapt_he_placements )
+{
+    window.glamadapt_he_placements = {};
+}
+function GlamIsHawkeyeAvailable(p)
+{
+ if (!window.glamadapt_he_placements['a'+p] && window.asiPqTag && window.asiPlacements &&  window.asiPlacements[p] && window.asiPlacements[p]['default'] && window.asiPlacements[p]['default']['key'] && window.asiPlacements[p]['blob'])
+  return true;
+ else
+  return false;
+}
+function GlamShowHawkeye(p)
+{
+ if (GlamIsHawkeyeAvailable(p))
+ {
+   window.glamadapt_he_placements['a'+p]=true;
+   document.write('<scri'+'pt type="text/javascript" src="http://imp.revsci.net/rtbads/pq?mode=s&placement=' + p+ '&adgroup=' + asiPlacements[p]['default']['key'] + '&blob=' + asiPlacements[p]['blob'] + '&cachebuster=cachebuster&click="></scri'+'pt>');
+   return true;
+ }
+return false;
+}
+
+
+function GlamIsAvailable(slotname)
+{
+  GlamLogWithTimer('GlamIsAdAvailable() called');
+  var adslot = GlamGetSlotObject(slotname);
+
+  if ( adslot && adslot.show && adslot.he_slot && (GlamIsHawkeyeAvailable(adslot.he_slot) || adslot.he_shown) )
+    return true;
+  else if ( !adslot || !adslot.show || adslot.noad || !window.glamadapt_done || adslot.nopda || adslot.processing || adslot.ccalls >= adslot.acalls )
+    return false;
+  else
+  {
+    adslot.ccalls++;
+    return true;
+  }
+}
+
+
+window.GlamShowSecondaryAde13f4f7cfc7ed254148ae61026d043a4 = function (glamLogParams)
+{
+GlamRtbResetTimeoute13f4f7cfc7ed254148ae61026d043a4();
+
+
+/* Default ads for afid=8156650 */
+
+function GlamShowCustomDefaultAd(pZone, pAdSize) {
+ var adSize_array = pAdSize.split(',');
+ var adSize = ( adSize_array[0] ? adSize_array[0] : '' );
+ var zone = ( pZone.indexOf('Marketplace') > -1 ? 'Marketplace' : 'Premium');
+ var adKey = zone + '_ownad' + adSize;
+
+ var defaultAds={"Premium_noad_320x50":["no"],"Premium_ownad_320x50":["<script type='text\/javascript'>\n\ngoogletag.defineSlot('\/15123798\/She_Finds\/SheFinds\/Onswipe_Passback', [320, 50], 'div-gpt-ad-1371047246199-0').addService(googletag.pubads());\n\ngoogletag.pubads().enableSyncRendering();\n\ngoogletag.pubads().enableSingleRequest();\n\ngoogletag.enableServices();\n\n<\/script>\n\n<!-- She_Finds\/SheFinds\/Onswipe_Passback -->\n\n<div id='div-gpt-ad-1371047246199-0'>\n\n<script type='text\/javascript'>\n\ngoogletag.display('div-gpt-ad-1371047246199-0');\n\n<\/script>\n\n<\/div>"],"Premium_awga_320x50":["no"],"Premium_noad":["no"],"Premium_ownad160x600":["<SCRIPT>var ACE_AR = {Site: '857744', Size: '160600'};<\/SCRIPT> <SCRIPT language='JavaScript' src='http:\/\/uac.advertising.com\/wrapper\/aceUAC.js'><\/SCRIPT>","<script type=\"text\/javascript\" src=\"http:\/\/ap.lijit.com\/www\/delivery\/fpi.js#?z=183080&u=SheFindsRem&width=160&height=600\"><\/script>"],"Premium_ownad728x90":["<script type=\"text\/javascript\" src=\"http:\/\/ap.lijit.com\/www\/delivery\/fpi.js#?z=182728&u=shefindsim&width=728&height=90\"><\/script>","<SCRIPT>var ACE_AR = {Site: '858558', Size: '728090'};<\/SCRIPT> <SCRIPT language='JavaScript' src='http:\/\/uac.advertising.com\/wrapper\/aceUAC.js'><\/SCRIPT>"],"Premium_ownad300x250":["<SCRIPT>var ACE_AR = {Site: '859175', Size: '300600'};<\/SCRIPT> <SCRIPT language='JavaScript' src='http:\/\/uac.advertising.com\/wrapper\/aceUAC.js'><\/SCRIPT>","<script type=\"text\/javascript\" src=\"http:\/\/ap.lijit.com\/www\/delivery\/fpi.js?z=182729&u=SheFindsRem&width=300&height=250\"><\/script>"],"Premium_awga":["no"],"Premium_psa":["no"],"Marketplace_noad":["no"],"Marketplace_ownad160x600":["<!-- BEGIN UAT - 160x600 - SheFinds: SheFinds - DO NOT MODIFY -->\n<script type=\"text\/javascript\" src=\"http:\/\/ad-cdn.technoratimedia.com\/00\/57\/56\/uat_15657.js?ad_size=160x600\"><\/script>\n<!-- END TAG -->","<script type=\"text\/javascript\" src=\"http:\/\/ap.lijit.com\/www\/delivery\/fpi.js#?z=182727&u=shefindsim&width=160&height=600\"><\/script>","<SCRIPT>var ACE_AR = {Site: '857744', Size: '160600'};<\/SCRIPT> <SCRIPT language='JavaScript' src='http:\/\/uac.advertising.com\/wrapper\/aceUAC.js'><\/SCRIPT>"],"Marketplace_ownad300x250":["<script type=\"text\/javascript\" src=\"http:\/\/ap.lijit.com\/www\/delivery\/fpi.js#?z=182729&u=shefindsim&width=300&height=250\"><\/script>","<SCRIPT>var ACE_AR = {Site: '859175', Size: '300600'};<\/SCRIPT> <SCRIPT language='JavaScript' src='http:\/\/uac.advertising.com\/wrapper\/aceUAC.js'><\/SCRIPT>","<SCRIPT>var ACE_AR = {Site: '781276', Size: '300250'};<\/SCRIPT> <SCRIPT language='JavaScript' src='http:\/\/uac.advertising.com\/wrapper\/aceUAC.js'><\/SCRIPT>"],"Marketplace_ownad728x90":["<script type=\"text\/javascript\" src=\"http:\/\/ap.lijit.com\/www\/delivery\/fpi.js#?z=182728&u=shefindsim&width=728&height=90\"><\/script>","<SCRIPT>var ACE_AR = {Site: '858558', Size: '728090'};<\/SCRIPT> <SCRIPT language='JavaScript' src='http:\/\/uac.advertising.com\/wrapper\/aceUAC.js'><\/SCRIPT>"],"Marketplace_awga":["no"],"Marketplace_psa":["no"]};
+
+ if ( defaultAds[zone + '_ownad_' + adSize] )
+  {
+    var adItem=Math.floor(Math.random()*defaultAds[zone + '_ownad_' + adSize].length);
+    document.write(defaultAds[zone + '_ownad_' + adSize][adItem]);
+  }
+
+
+ else if ( defaultAds[zone + '_ownad' + adSize] )
+  {
+    var adItem=Math.floor(Math.random()*defaultAds[zone + '_ownad' + adSize].length);
+    document.write(defaultAds[zone + '_ownad' + adSize][adItem]);
+  }
+}
+
+
+/* PDA data for afid=8156650 */
+
+function GlamGetPdaData() {
+ return {"Marketplace":{"Default":"dt=b;!c=hagl;!c=hagn;","160x600":"dt=s;!c=hagl;!c=hagn;","728x90":"dt=s;!c=hagl;!c=hagn;","300x250":"dt=s;!c=hagl;!c=hagn;"},"ap_info":"dt=yes","Premium":{"Default":"dt=b;!c=hagl;!c=hagn;","160x600":"dt=s;!c=hagl;!c=hagn;","728x90":"dt=s;!c=hagl;!c=hagn;","300x250":"dt=s;!c=hagl;!c=hagn;","320x50":"dt=s;!c=hagl;!c=hagn;"}};
+}
+GlamShowCustomDefaultAd('', '300x250,300x600,300x1050'); 
+
+var glamTracker=new Image();
+glamTracker.src='http://www30a5.glam.com/' + 'gad/log.act' + '?;=;gaevt=imps;reqsq=5;reqid=e13f4f7cfc7ed254148ae61026d043a4;reqindex=-2;srcid=2;advid=1791811;adid=204080335;sz=300x250;crid=25570594;grpid=;grpinc=;afatp=50;co=us;aipid=201403261125;gx_t=s;zone=/;ord=1128794751130044.5;afid=8156650;dsid=443996;sid=11666013328769888111;tile=4;seq=1;tt=j;atf=1;url=bukm5x;urlmd5=d41d8cd98f00b204e9800998ecf8427e;flg=64;ga_kurl=0;ga_rmt=1;u=b01xx0000000000000x,g10001s;' + (glamLogParams?glamLogParams:'');
+
+}
+
+window.GlamShowSecondaryAde13f4f7cfc7ed254148ae61026d043a4Iframe = function()
+{
+ return '<iframe frameborder="0" marginheight="0" marginwidth="0" scrolling="no" allowTransparency="true" width="300" height="250" src="http://www30a5.glam.com/gad/glamadapt_srv.act' + '?;ga_output=html;;gx_t=s;ga_exadvids=50000417,50001916,2457154;ga_exadids=5000137034;_ge_=6^2^e13f4f7cfc7ed254148ae61026d043a4;ga_adb=ade;sid=11666013328769888111;browser=None;co=US;dma=501;;flg=64;afid=8156650;zone=/;nt=g;cc=us;ec=ron;p=0;p=1;!c=b;!c=dcm;!c=dcs;!c=s;!c=sf;a_rmt=160;a_rmt=300;a_rmt=728;a_sov=1;atf=o;cl=130757;cl=156241;cl=157124;cl=157620b;cl=324136557;cnt=q;cnt=q=324138422;conv=zappos;cx=s;cx=sf;ec=tb;ec=tf;ec=tsk;ga_af_hydra=1;ga_dealid=st15734;ga_edealid=st25734;ga_erdealid=rn24858;ga_exdealid=exp;ga_rdealid=rn14858;ga_xaxis=portron;hawkeye=live;hyd_g_hq=1;ia=s;lng=en;nat=y;pec=f;pg=qual;psh=y;rmt=exp;rmt=ov;rsk=y;rsu=fs;rsu=po;rsu=sk;rsu=sl;rtb=agha;rtb=pgm;rtb=pgma;rtb=rgm;rtb=rgma;uk=google;uk=push;uk=rsk;vads=prelive;vec=st;vpec=st;vqs=9;ct=set;qc=D;qc=T;qc=1384;qc=34607;qc=34606;qc=34604;qc=34602;qc=27434;qc=27433;qc=14656;qc=14653;qc=14652;qc=14647;qc=14644;qc=14639;qc=14636;qc=14619;qc=14617;qc=14615;qc=14613;qc=14611;qc=14608;qc=14598;qc=14594;qc=14588;qc=14586;qc=14583;qc=14582;qc=14579;qc=14574;qc=14572;qc=14564;qc=14563;qc=14560;qc=14559;qc=14558;qc=14555;qc=14548;qc=14544;qc=14543;qc=14537;qc=14532;qc=14528;qc=14526;qc=14522;qc=14516;qc=14515;qc=14514;qc=14512;qc=14509;qc=14506;qc=14505;qc=14503;qc=13672;qc=12172;qc=12171;qc=12169;qc=12168;qc=8031;qc=2951;qc=2705;qc=2695;qc=2693;qc=2690;qc=1902;atf=1;pfl=3;ga_callseq=4;pt=0;dsid=443996;uv=4;tt=i;u=b01xx0000000000000x,g10001s;sz=300x250,300x600,300x1050;tile=4;ord=1128794751130044.5;ga_ctime=1395856978279;url=bukm5x;seq=1;ux=g-64,1,;_glt=240:3:14:2:58:279:2014:3:26;a_tz=-240;_g_cv=2;gpa=1;qcsegs=D,T,1384,34607,34606,34604,34602,27434,27433,14656,14653,14652,14647,14644,14639,14636,14619,14617,14615,14613,14611,14608,14598,14594,14588,14586,14583,14582,14579,14574,14572,14564,14563,14560,14559,14558,14555,14548,14544,14543,14537,14532,14528,14526,14522,14516,14515,14514,14512,14509,14506,14505,14503,13672,12172,12171,12169,12168,8031,2951,2705,2695,2693,2690,1902,;iab_ua=2;ga_kurl=0;urlmd5=d41d8cd98f00b204e9800998ecf8427e;ga_rmt=1;dt=s;!c=hagl;!c=hagn;ga_nasl=0;ga_napap=1;ga_naps=1;ga_napo=0;ga_nagl=0;ga_nagap=1;ga_nags=0;ga_nago=0;matf=1,948,306;lbt=ebt;sbt=sa;sbt=ss"></iframe>';
+}
+
+window.GlamLogPrimaryAde13f4f7cfc7ed254148ae61026d043a4 = function(glamLogParams)
+{
+var glamTracker=new Image();
+glamTracker.src='http://www30a5.glam.com/' + 'gad/log.act' + '?;=;gaevt=imps;reqsq=1;reqid=e13f4f7cfc7ed254148ae61026d043a4;reqindex=-1;srcid=2;advid=50003851;adid=5000137034;sz=300x250;crid=500119580;grpid=;grpinc=;afatp=50;co=us;aipid=201403261125;gx_t=s;zone=/;ord=1128794751130044.5;afid=8156650;dsid=443996;sid=11666013328769888111;tile=4;seq=1;tt=j;atf=1;url=bukm5x;urlmd5=d41d8cd98f00b204e9800998ecf8427e;flg=64;ga_kurl=0;ga_rmt=1;u=b01xx0000000000000x,g10001s;' + (glamLogParams?glamLogParams:'');
+}
+/* =================== BEGIN OF GENERIC RTB TEMPLATE ======================== */
+if ( ! window.GlamCallExternalJs )
+{
+window.GlamCallExternalJs=function(pFile) { document.write('<scr' + 'ipt type="text/javascript" language="JavaScript" src="' + pFile + '"><' + '/sc' + 'ript>'); }
+}
+
+window.GlamRtbSuccesse13f4f7cfc7ed254148ae61026d043a4 = function (glamLogParams) {
+  if (window.glam_timer_RTBe13f4f7cfc7ed254148ae61026d043a4) {
+      GlamRtbResetTimeoute13f4f7cfc7ed254148ae61026d043a4();      GlamLogPrimaryAde13f4f7cfc7ed254148ae61026d043a4(glamLogParams);
+  }
+}
+
+window.GlamRtbSuccessDelayede13f4f7cfc7ed254148ae61026d043a4 = function (creativeType, creative, glamLogParams) {
+if (creativeType=='script') 
+ eval(creative);
+else
+ document.write(creative);
+GlamRtbSuccesse13f4f7cfc7ed254148ae61026d043a4(glamLogParams);}
+
+
+window.GlamRtbCallbacke13f4f7cfc7ed254148ae61026d043a4 = function (glamLogParams) {
+  if (window.glam_timer_RTBe13f4f7cfc7ed254148ae61026d043a4) {
+      GlamRtbResetTimeoute13f4f7cfc7ed254148ae61026d043a4();      GlamShowSecondaryAde13f4f7cfc7ed254148ae61026d043a4(glamLogParams);
+  }
+}
+
+window.GlamRtbResetTimeoute13f4f7cfc7ed254148ae61026d043a4 = function () {
+  if (window.glam_timer_RTBe13f4f7cfc7ed254148ae61026d043a4) {
+      clearTimeout(window.glam_timer_RTBe13f4f7cfc7ed254148ae61026d043a4);
+      window.glam_timer_RTBe13f4f7cfc7ed254148ae61026d043a4 = null;
+  }
+}
+
+window.GlamRtbTimeoute13f4f7cfc7ed254148ae61026d043a4 = function () {
+document.getElementById('RTBe13f4f7cfc7ed254148ae61026d043a4').innerHTML=GlamShowSecondaryAde13f4f7cfc7ed254148ae61026d043a4Iframe();
+}
+
+window.glam_timer_RTBe13f4f7cfc7ed254148ae61026d043a4 = setTimeout(function () { GlamRtbResetTimeoute13f4f7cfc7ed254148ae61026d043a4(); GlamRtbTimeoute13f4f7cfc7ed254148ae61026d043a4();}, 
+                                                 5000);
+
+document.write('<span id="RTBe13f4f7cfc7ed254148ae61026d043a4"></span>');
+
+/*
+pri_log_fnc = [GlamLogPrimaryAde13f4f7cfc7ed254148ae61026d043a4]
+pri_log_url = [http://www30a5.glam.com/gad/log.act?;=;gaevt=imps;reqsq=1;reqid=e13f4f7cfc7ed254148ae61026d043a4;reqindex=-1;srcid=2;advid=50003851;adid=5000137034;sz=300x250;crid=500119580;grpid=;grpinc=;afatp=50;co=us;aipid=201403261125;gx_t=s;zone=/;ord=1128794751130044.5;afid=8156650;dsid=443996;sid=11666013328769888111;tile=4;seq=1;tt=j;atf=1;url=bukm5x;urlmd5=d41d8cd98f00b204e9800998ecf8427e;flg=64;ga_kurl=0;ga_rmt=1;u=b01xx0000000000000x,g10001s;]
+sec_show_fnc = [GlamShowSecondaryAde13f4f7cfc7ed254148ae61026d043a4]
+sec_show_url = [http://www30a5.glam.com/gad/glamadapt_srv.act?;_ge_=6^2^e13f4f7cfc7ed254148ae61026d043a4;tt=i;ga_output=html;;gx_t=s;ga_exadvids=50000417,50001916,2457154;sz=300x250;ga_exadids=5000137034;afid=8156650;co=US;ga_adb=ade;ga_kurl=0;urlmd5=d41d8cd98f00b204e9800998ecf8427e;_g_cv=2;]
+slot_uid = [RTBe13f4f7cfc7ed254148ae61026d043a4]
+success_fnc = [GlamRtbSuccesse13f4f7cfc7ed254148ae61026d043a4]
+callback_fnc = [GlamRtbCallbacke13f4f7cfc7ed254148ae61026d043a4]
+timeout_fnc = [GlamRtbTimeoute13f4f7cfc7ed254148ae61026d043a4]
+*/
+
+/* =================== END OF GENERIC RTB TEMPLATE ======================== */
+
+
+window.rp_floorRTBe13f4f7cfc7ed254148ae61026d043a4 = Math.max(
+  parseFloat(1.00*1.3), 
+  parseFloat((isNaN('1.3')?0:'1.3')), 
+  parseFloat((isNaN('1')?0:'1')));
+
+
+window.GlamRubiconCallbackRTBe13f4f7cfc7ed254148ae61026d043a4 = function(response) {
+  var ad_shown=false;
+  var rpimpid='na';
+  if (response.status == "ok") {
+   var ad;
+   var html;
+   for (var i=0; i < response.ads.length; i++) {
+    ad = response.ads[i];
+    rpimpid=(ad.impression_id?'rpimpid='+ad.impression_id:null);
+    if (ad.status == "ok") {
+     if (ad.type == "script" || ad.type == "html") {
+       GlamRtbSuccessDelayede13f4f7cfc7ed254148ae61026d043a4(ad.type,
+                                   (ad.type == "script" ? ad.script : ad.html),
+                                  (ad.impression_id?';rpimpid='+ad.impression_id:null)+
+                                  (ad.deal?';rpdeal='+ad.deal:null)+
+                                  (ad.advertiser?';rpadvertiser='+ad.advertiser:null)+
+                                  (ad.cpm?';rpcpm='+ad.cpm:null)+
+                                  (ad.cpm?';ga_rtbcpm='+ad.cpm:null)+ 
+                                  ';ga_rtbkey=r300x250;ga_rtbfloor='+window.rp_floorRTBe13f4f7cfc7ed254148ae61026d043a4);
+       ad_shown=true;
+     }
+    }
+   }
+  }
+  if ( !ad_shown ) {
+    GlamRtbCallbacke13f4f7cfc7ed254148ae61026d043a4('rpimpid='+rpimpid+';ga_rtbkey=r300x250;ga_rtbfloor='+window.rp_floorRTBe13f4f7cfc7ed254148ae61026d043a4);
+  }
+}
+
+
+window.GlamRubiconCallRTBe13f4f7cfc7ed254148ae61026d043a4 = function() {
+
+window.rp_account  = '9707';
+window.rp_site     = '21224';
+window.rp_zonesize = '71904-15';
+window.rp_tracking = "affiliate-8156650";
+window.rp_visitor =  { gender: "", genre: "" };
+
+
+var glam_rp_inventory = { deals : "" };
+
+
+
+window.rp_width =  300;
+window.rp_height =  250;
+window.rp_adtype   = 'jsonp';
+window.rp_inventory = (window.glam_rp_inventory ? window.glam_rp_inventory : { deals : "st25734,rn24858,exp,billron,portron,qc2690,qc1902,qc2695," } );
+window.rp_floor=window.rp_floorRTBe13f4f7cfc7ed254148ae61026d043a4;
+window.rp_callback = window.GlamRubiconCallbackRTBe13f4f7cfc7ed254148ae61026d043a4;
+GlamCallExternalJs("http://ads.rubiconproject.com/ad/9707.js");
+}
+document.write('<scri' + 'pt>GlamRubiconCallRTBe13f4f7cfc7ed254148ae61026d043a4();</scri' + 'pt>');
+
+document.write('<scri' + 'pt>\n  var bkimg = new Image();\n  bkimg.src=\'http://tags.bluekai.com/site/14555\';\n</scri' + 'pt>\n<iframe height=\"0\" width=\"0\" frameborder=\"0\" style=\"position:absolute;visibility:hidden;\" src=\"http://tags.bluekai.com/site/14555?ret=html\"></iframe>\n<img style=\"display:none;\" src=\"http://tags.bluekai.com/site/14555\" height=\"0\" width=\"0\" border=\"0\"><script src=\"http://b.voicefive.com/c2/6035233/rs.js#c1=3&c3=50011921&c4=500119580&c5=8156650&c6=&c10=1&c11=&c13=&c16=gen&ax_bid=IV1_e13f4f7cfc7ed254148ae61026d043a4_11666013328769888111_d41d8cd98f00b204e9800998ecf8427e_8156650_4_5000137034&ax_i=&ax_g=&\"></scri' + 'pt>');
+
+if ( window.GlamAdaptSetInfo ) { GlamAdaptSetInfo('srv_ad_id', 5000137034);}
+
+
+
+
+/* rs = 115 */
+
+window.glam_adapt_ase_rs = 115; 
+
+  /* _ge_ = 1^2^e13f4f7cfc7ed254148ae61026d043a4 */
+ /* srv_ad_id=5000137034 / ase=115 */
+
+ 
+
+ 
+  
+ 

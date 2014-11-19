@@ -1,0 +1,1 @@
+window.jq18 = jQuery.noConflict(true);

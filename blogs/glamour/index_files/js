@@ -1,0 +1,79 @@
+	/*
+	http://pixel.mathtag.com/event/img?mstech=1
+	*/
+
+	var mm_ri = String( Math.random() );
+	mm_ri = mm_ri.replace( /0\./g,'' );
+	
+	var mm_protocol = location.protocol;
+	if ( mm_protocol != 'http:' && mm_protocol != 'https:' ){ mm_protocol = 'http:'; }
+	
+	var mm_el0 = document.createElement('img');
+	var url0 = 'pixel.mathtag.com/event/img?mstech=1';
+	url0 = url0.replace("\[RANDOM_NUMBER\]", mm_ri);
+	mm_el0.width = 1;
+	mm_el0.height = 1;
+	mm_el0.src = mm_protocol + '//' + url0;
+	
+
+var sync_4815162342 = function()
+{
+this.urls = [
+"http://pixel.mathtag.com/misc/img?mt_id=221702&mt_adid=111283&mop_seq=0:10&mt_cb=144897&mop_top=",
+"http://cm.g.doubleclick.net/pixel?google_nid=mediamath&google_cm&google_hm=iHNSRfBURAC54hhnnbUjQw",
+"http://pixel.mathtag.com/misc/img?mt_id=221702&mt_adid=111283&mop_seq=1:10&mt_cb=549558&mop_top=4:1381861085|",
+"http://www.facebook.com/fr/u.php?p=418865601488577&m=88735245-f054-4400-b9e2-18679db52343",
+"http://pixel.mathtag.com/misc/img?mt_id=221702&mt_adid=111283&mop_seq=2:10&mt_cb=496208&mop_top=4:1381861085|23:1381861085|",
+"http://pixel.rubiconproject.com/tap.php?v=4222&nid=1512&put=88735245-f054-4400-b9e2-18679db52343",
+"http://r.openx.net/set?pid=0b83a084-dd0b-4bfe-9e2e-ab3706fc9955&rtb=uuid%3D88735245-f054-4400-b9e2-18679db52343",
+"http://image2.pubmatic.com/AdServer/Pug?vcode=bz0yJnR5cGU9MSZjb2RlPTM2MiZ0bD00MzIwMA==&piggybackCookie=uid:88735245-f054-4400-b9e2-18679db52343",
+"http://pixel.mathtag.com/misc/img?mt_id=221702&mt_adid=111283&mop_seq=5:10&mt_cb=820255&mop_top=4:1381861085|23:1381861085|9:1381861085|5:1381861085|3:1381861085|",
+"http://r.casalemedia.com/rum?cm_dsp_id=3&external_user_id=88735245-f054-4400-b9e2-18679db52343",
+"http://tags.bluekai.com/site/2948?id=88735245-f054-4400-b9e2-18679db52343",
+"http://loadm.exelator.com/load/?p=204&g=101&buid=88735245-f054-4400-b9e2-18679db52343&j=0",
+"http://ad.360yield.com/match?publisher_dsp_id=5&external_user_id=88735245-f054-4400-b9e2-18679db52343",
+"http://secure-us.imrworldwide.com/cgi-bin/m?ci=us-mediamath&cg=88735245-f054-4400-b9e2-18679db52343&rnd=1332388956",
+"http://pixel.mathtag.com/misc/img?mt_id=221702&mt_adid=111283&mop_seq=10:10&mt_cb=256157&mop_top=4:1381861085|23:1381861085|9:1381861085|5:1381861085|3:1381861085|15:1381861085|10002:1381861085|10008:1381861085|16:1381861085|10016:1381861085|",
+]
+
+   this.progress = 0;
+
+   var self = this;
+
+   this.sync = function(url)
+   {
+      var e = new Image();
+      e.src = url;
+   }
+
+   this.batch = function()
+   {
+      for (var i = self.progress; i < self.urls.length; ++i)
+      {
+          self.sync(self.urls[i]);
+      }
+   }
+
+   this.final = function()
+   {
+      self.sync(self.urls[self.urls.length-1]);
+   }
+
+   this.some = function(howmany)
+   {
+      var count = 0;
+      for (var i = self.progress; i < self.urls.length && count < howmany; ++i)
+      {
+         self.sync(self.urls[self.progress++]);
+         count++;
+      }
+   }
+}
+
+
+var s_4815162342 = new sync_4815162342();
+setTimeout('s_4815162342.some(3)', 1000);
+setTimeout(s_4815162342.batch, 3000);
+setTimeout(s_4815162342.final, 6000);
+
+   

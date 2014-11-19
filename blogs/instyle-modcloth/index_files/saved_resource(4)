@@ -1,0 +1,293 @@
+(function() {
+    "use strict";
+
+    ////     VARIABLES     ////
+    var localTesting = false;
+    var adsPriority = [ "series", "section", "type", "tag" ];
+    var regUrl = "http://adserver.adtechus.com/adcount/3.0/5108/2809797/0/16/AdId=4273665;BnId=17;ct=3417177597;st=5821;adcid=1;itime=421111949;reqtype=25;";
+    var varData;
+    var pathname = document.location.pathname;
+    var page_url = document.location.href;
+    var customVars = [];
+    var defaultVars = [];
+    var adsConfig = [];
+    var urlConfig = [];
+    /////////////////////
+
+
+    ////     DEFAULT DIV IDS AND SECTION     ////
+    defaultVars[0] = "TR-1~RR-1~CW-1~CW-2~CW-3";
+    defaultVars[1] = "ROS";
+    //customVars[1] = "section:diy-remodeling";  overriding default
+    /////////////////////////////
+
+
+
+    ////     URL/PAGE TARGETING     ////
+    //targeting entry 1//
+    urlConfig[0] = {
+        urlTarget: ["http://fashionista.com/2013/10/the-formula-for-the-perfect-first-date-outfit/"],
+        cv0: "TR-1~X~X~X~X",
+        cv1: "series:vspink"
+    };
+    urlConfig[1] = {
+        urlTarget: ["http://fashionista.com/2013/10/giveaway-enter-to-win-a-1000-gift-card-from-guess/","http://fashionista.com/2013/10/your-ultimate-girls-night-out-lbdressed-by-guess/"],
+        cv0: "TR-1~X~X~X~X",
+        cv1: "series:guess"
+    };
+    urlConfig[2] = {
+        urlTarget: ["http://fashionista.com/2013/11/get-amazing-access-to-the-best-nyc-shopping-with-w-hotels/"],
+        cv0: "TR-1~X~X~X~X",
+        cv1: "series:whotels"
+    };
+    urlConfig[3] = {
+        urlTarget: ["http://fashionista.com/2013/12/the-perfect-geek-chic-gifts-under-100"],
+        cv0: "TR-1~X~X~X~X",
+        cv1: "series:warbyParker25618"
+    };
+    urlConfig[4] = {
+        urlTarget: [
+            "http://fashionista.com/2013/12/planning-the-perfect-holiday-party-with-tommy-hilfiger", 
+            "http://fashionista.com/2013/12/planning-the-perfect-holiday-party-with-tommy-hilfiger/2/",
+            "http://fashionista.com/2013/12/planning-the-perfect-holiday-party-with-tommy-hilfiger/3/",
+            "http://fashionista.com/2013/12/planning-the-perfect-holiday-party-with-tommy-hilfiger/4/"
+        ],
+        cv0: "TR-1~X~X~X~X",
+        cv1: "series:tommyHilfiger25720"
+    };
+    urlConfig[5] = {
+        urlTarget: ["http://fashionista.com/2013/12/milly-designer-michelle-smith-career/"],
+        cv0: "TR-1~X~X~X~X",
+        cv1: "series:amex24216"
+    };
+    urlConfig[6] = {
+        urlTarget: ["Trinety-ROCKS"],
+        cv0: "TR-1~RR-1~CW-1~CW-2~CW-3",
+        cv1: "series:rightmedia"
+    }
+    /////////////////////////////
+
+
+
+
+    ////     ADS SETUP     ////
+    adsConfig[0] = {
+        // ROS - This definition is the minimum required for a Site's Ad definition
+        ros:[
+            {  "p":"0", "e":"tpl_fullSpotlight", "300x900": "ai0162fc719589970d0162fc88d1a0970d" },
+            {  "p":"0", "e":"tpl_adframe", "300x600": "ai0162fc719589970d017d3df0df0b970c" },
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d01543706d6d2970c" },
+            {  "p":"0", "e":"tpl_spark", "300x250": "ai0162fc719589970d01543706d3c1970c" }
+        ],
+        section_beauty:[
+            {  "p":"0", "e":"tpl_fullSpotlight", "300x900": "ai0162fc719589970d01543706b6cb970c" },
+            {  "p":"0", "e":"tpl_adframe", "300x600": "ai0162fc719589970d017d3df0e78c970c" },
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d015393333b26970b" },
+            {  "p":"0", "e":"tpl_spark", "300x250": "ai0162fc719589970d015393333a20970b" }
+        ],
+        section_careers:[
+            {  "p":"0", "e":"tpl_fullSpotlight", "300x900": "ai0162fc719589970d01543706ba32970c" },
+            {  "p":"0", "e":"tpl_adframe", "300x600": "ai0162fc719589970d017c33c26308970b" },
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d015393333fbb970b" },
+            {  "p":"0", "e":"tpl_spark", "300x250": "ai0162fc719589970d015393333f24970b" }
+        ],
+        section_fashionweek:[
+            {  "p":"0", "e":"tpl_fullSpotlight", "300x900": "ai0162fc719589970d015393333943970b" },
+            {  "p":"0", "e":"tpl_adframe", "300x600": "ai0162fc719589970d017d3df10127970c" },
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d0162fc88adf2970d" },
+            {  "p":"0", "e":"tpl_spark", "300x250": "ai0162fc719589970d0153933337d8970b" }
+        ],
+        section_howimmakingit:[
+            {  "p":"0", "e":"tpl_fullSpotlight", "300x900": "ai0162fc719589970d017d3cbfe331970c" },
+            {  "p":"0", "e":"tpl_adframe", "300x600": "ai0162fc719589970d017c33c3ec12970b" },
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d017c32914e6a970b" },
+            {  "p":"0", "e":"tpl_spark", "300x250": "ai0162fc719589970d017ee4351a20970d" }
+        ],
+        section_homepage:[
+            {  "p":"0", "e":"tpl_fullSpotlight", "300x900": "ai0162fc719589970d0162fc88d3e9970d" },
+            {  "p":"0", "e":"tpl_adframe", "300x600": "ai0162fc719589970d017ee56640ee970d" },
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d01543706d8a9970c" },
+            {  "p":"0", "e":"tpl_spark", "300x250": "ai0162fc719589970d01543706d81b970c" }
+        ],
+        section_peopleparties:[
+            {  "p":"0", "e":"tpl_fullSpotlight", "300x900": "ai0162fc719589970d0162fc88b7a5970d" },
+            {  "p":"0", "e":"tpl_adframe", "300x600": "ai0162fc719589970d017c33c309a0970b" },
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d01543706bbea970c" },
+            {  "p":"0", "e":"tpl_spark", "300x250": "ai0162fc719589970d015393334178970b" }
+        ],
+        section_shopping:[
+            {  "p":"0", "e":"tpl_fullSpotlight", "300x900": "ai0162fc719589970d0162fc88bba7970d" },
+            {  "p":"0", "e":"tpl_adframe", "300x600": "ai0162fc719589970d017ee5677e12970d" },
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d0162fc88b8d0970d" },
+            {  "p":"0", "e":"tpl_spark", "300x250": "ai0162fc719589970d0162fc88b839970d" }
+        ],
+        section_style:[
+            {  "p":"0", "e":"tpl_fullSpotlight", "300x900": "ai0162fc719589970d01543706b85b970c" },
+            {  "p":"0", "e":"tpl_adframe", "300x600": "ai0162fc719589970d017ee56788f1970d" },
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d015393333df3970b" },
+            {  "p":"0", "e":"tpl_spark", "300x250": "ai0162fc719589970d015393333d33970b" }
+        ],
+        series_vspink:[
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d019b0005b559970b" }
+        ],
+        series_guess:[
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d019b00482833970b" }
+        ],
+        series_whotels:[
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d019afff1c7c4970b" }
+        ],
+        series_warbyParker25618:[
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d019b0287885f970b" }
+        ],
+        series_tommyHilfiger25720:[
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d019b028a9ff9970c" }
+        ],
+        series_amex24216:[
+            {  "p":"100", "e":"tpl_adframe", "300x600": "ai0162fc719589970d019b0005bb87970b" }
+       ],
+        series_rightmedia:[
+            {  "p":"100", "e":"tpl_spark", "300x250": "ai0168e94de309970c019b034fb423970d" }
+        ]
+    }; //TR
+    adsConfig[1] = {
+        ros:[
+            {  "p": "100", "e": "tpl_contentAdTiles",   "ad1":"ai0162fc719589970d017c35461d79970b",
+                                                        "ad2":"ai0162fc719589970d017d3f750ee2970c",
+                                                        "ad3":"ai0162fc719589970d017d3f751635970c",
+                                                        "ad4":"ai0162fc719589970d017c35462656970b",
+                                                        "ad5":"ai0162fc719589970d017ee6e98d25970d",
+                                                        "ad6":"ai0162fc719589970d017c354628da970b",
+                                                        "ad7":"ai0162fc719589970d017ee6e98fe6970d",
+                                                        "ad8":"ai0162fc719589970d017ee6e996e1970d",
+                                                        "ad9":"ai0162fc719589970d01901befec06970b" }
+        ]
+    }; //RR-1
+    adsConfig[2] = {
+        ros:[
+            {  "p":"100", "e":"tpl_streamContentAd_300x250", "300x250_1": "ai0162fc719589970d017ee6e99ab4970d", "300x250_2": "ai0162fc719589970d017ee6e99f60970d", "pos":"1" }
+       ],
+        series_rightmedia:[
+            {  "p":"100", "e":"tpl_streamContentAd_300x250", "300x250_1": "ai0168e94de309970c019b034fb423970d", "300x250_2": "ai0162fc719589970d017ee6e99f60970d", "pos":"1" }
+        ]
+    }; //CW-1
+    adsConfig[3] = {
+        ros:[
+            {  "p":"100", "e":"tpl_streamContentAd_300x250", "300x250_1": "ai0162fc719589970d017c3583cfd0970b", "300x250_2": "ai0162fc719589970d017d3fb2b21d970c", "pos":"2" }
+        ]
+    }; //CW-2
+    adsConfig[4] = {
+        ros:[
+            {  "p":"100", "e":"tpl_streamContentAd_300x250", "300x250_1": "ai0162fc719589970d017c3583d2f1970b", "300x250_2": "ai0162fc719589970d017ee7272678970d", "pos":"3" }
+        ]
+    }; //CW-3
+    /////////////////////////////
+
+
+
+
+
+
+
+
+    //// INIT - DO NOT TOUCH BELOW HERE ////
+    for(var i = 0; i < urlConfig.length; i++)
+    {
+        for(var j = 0; j < urlConfig[i].urlTarget.length; j++)
+        {
+            if(page_url.indexOf(urlConfig[i].urlTarget[j]) != -1)
+            {
+                customVars[0] = urlConfig[i].cv0;
+                customVars[1] = urlConfig[i].cv1;
+                break;
+            }
+        }
+    }
+     if(localTesting){
+        var urlParams = {};
+        getParams();
+        if(customVars[0] == undefined)
+        {
+            customVars[0] = ((urlParams["sub1"] == undefined) ? defaultVars[0] : urlParams["sub1"]);
+        }
+        if(customVars[1] == undefined)
+        {
+            customVars[1] = ((urlParams["sub2"] == undefined) ? defaultVars[1] : urlParams["sub2"]);
+        }
+        customVars[2] = ((urlParams["sub3"] == undefined) ? defaultVars[2] : urlParams["sub3"]);
+        customVars[3] = ((urlParams["sub4"] == undefined) ? defaultVars[3] : urlParams["sub4"]);
+
+        regUrl = "javascript:void(0);";
+    }else{
+        if(customVars[0] == undefined)
+        {
+            customVars[0] = "TR-1~RR-1~CW-1~CW-2~CW-3";
+            customVars[0] = ((customVars[0] == "" || "_ADSUB1" + "_" == "TR-1~RR-1~CW-1~CW-2~CW-3") ? defaultVars[0] : "TR-1~RR-1~CW-1~CW-2~CW-3");
+        }
+        if(customVars[1] == undefined)
+        {
+            customVars[1] = "section:shopping";
+            customVars[1] = ((customVars[1] == "" || "_ADSUB2" + "_" == "section:shopping") ? defaultVars[1] : "section:shopping");
+        }
+
+        customVars[2] = "";
+        customVars[3] = "";
+        customVars[2] = ((customVars[2] == "" || "_ADSUB3" + "_" == "") ? defaultVars[2] : "");
+        customVars[3] = ((customVars[3] == "" || "_ADSUB4" + "_" == "") ? defaultVars[3] : "");
+    }
+
+    function getParams(){  //temp
+
+        var match,
+            pl     = /\+/g,  // Regex for replacing addition symbol with a space
+            search = /([^&=]+)=?([^&]*)/g,
+            decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+            query  = window.location.search.substring(1);
+
+        while (match = search.exec(query))
+           urlParams[decode(match[1])] = decode(match[2]);
+    }
+
+    function sayAdInit(){
+        varData = sayATM.parseCustomVars(customVars);
+        sayATM.selectAds(varData, adsConfig, adsPriority);
+    }
+
+    function loadExtScript(src, test, callback) {
+        if(!window.sayScriptQ) window.sayScriptQ = [];
+        if(window.sayScriptQ.toString().indexOf(src+test+',') === -1){
+            window.sayScriptQ.push(src+test);
+            window.sayScriptQ.push(','); // This is to make sure there is a comma for the last element.
+            var s = document.createElement('script');
+            s.src = src;
+            document.body.appendChild(s);
+        }
+        var callbackTimer = setInterval(function() {
+            var call = false; try { call = test.call(); } catch (e) {};
+            if (call) {clearInterval(callbackTimer);callback.call();}else {;}
+        }, 100);
+    }
+    
+    if(page_url.indexOf("hotfuzz") != -1)
+    {
+        var ele1 = document.createElement("div");
+        var ele2 = document.createElement("div");
+        ele1.id = 'gabeDiv1';
+        ele2.id = 'gabeDiv2';
+        var myScript1 = document.createElement("script");
+        var myScript2 = document.createElement("script");
+        myScript1.src = "http://ads.saymedia.com/ai017c34b791df970b017c34b7a161970b.js?ord="+ Math.random();
+        myScript1.type = "text/javascript";
+        myScript2.src = "http://ads.saymedia.com/ai0168e8148b37970c019b0275a528970c.js?ord="+ Math.random();
+        myScript2.type = "text/javascript";
+        ele1.appendChild(myScript1);
+        ele2.appendChild(myScript2);
+        document.getElementById("sidebar").appendChild(ele1);
+        document.getElementById("sidebar").appendChild(ele2);
+    }
+
+    if(localTesting){
+        loadExtScript("/dev/atm/sayads-common_v3.js?misc=" + Math.random(),function(){return typeof(window.sayATM)==='object'}, sayAdInit);
+    }else{
+        loadExtScript("http://adcontent.saymedia.com/adops/atm/sayads-common_v3.js",function(){return typeof(window.sayATM)==='object'}, sayAdInit);
+    }
+})();

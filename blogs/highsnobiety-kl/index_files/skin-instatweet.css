@@ -1,0 +1,65 @@
+/* ========= General Styles ========= */
+body				{/* background-color:#000; background-image: none !important; DO NOT UNCOMMENT THIS STYLE it makes some sites look bad */ -webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale; margin:0; padding:0; }  /* [background-color] SHOULD NOT BE CHANGED - IT WILL NEGATIVELY AFFECT MANY SITES */
+#cmn_wrap			{position:relative; margin:0 auto 0 auto; /* background:#fff; DO NOT UNCOMMENT THIS STYLE */ z-index:2 !important;} /* [background-color] SHOULD NOT BE CHANGED - IT WILL NEGATIVELY AFFECT MANY SITES */
+
+#cmn_dynBg_lt, #cmn_dynBg_rt	{display:none;position:fixed; top:0; width:50%; /* min-width:600px; this breaks left skin in IE8 */ min-height:1200px; height:auto !important; z-index:1 !important; cursor:pointer; cursor: hand;}
+#cmn_dynBg_lt			{margin: 0; right:50%; text-align:right; }		/* adjustable parameter: [margin:right] (should be #cmn_wrap[width]/2 */
+#cmn_dynBg_rt			{margin: 0; left:50%; text-align:left; }		/* adjustable parameter: [margin:left] (should be #cmn_wrap[width]/2 */
+
+#cmn_dynBg_lt a, #cmn_dynBg_rt a {cursor:pointer !important;}
+
+.cmn_dynBg img 			{max-width: 100%; height: auto; -ms-interpolation-mode: bicubic;}
+
+/* ========= Campaign Creatives ========= */
+.cmn_dynBg		      	{position:relative; height:1200px; text-align:center;  overflow:hidden;}
+#cmn_dynBg_lt_creative 		{float:right; background-color:#000;}
+#cmn_dynBg_rt_creative 		{float:left; background-color:#000;}
+.fw_complex                     { background: #000; } /* SET BACKGROUND IMAGE/COLOR FOR HEADER (this is fixes the isse with whitespace around 728x90 units) */
+
+.cmn_dynBg_logo			{position:relative; margin-top:0px; width:220px; height: auto; z-index: 40; float: right;}
+.cmn_dynBg_logo_right		{position:relative; margin-top:0px; width:220px; height: auto; z-index: 40; float: left;}
+
+
+#borderwrap 			{background: none !important; width: 976px !important;}
+
+
+#rssfeed-wrap { font-family: Helvetica, Arial, sans-serif; color:#b2b1b1; margin-top: 0px; font-weight:normal; width: 220px; height: 500px; overflow:hidden; font-size:11px; text-align:left;}
+#rssfeed-wrap a { color:#ddd; }
+#rssfeed-wrap a:hover{ color:#ffe512; }
+
+#cmn_tweets1,
+#cmn_tweets2,
+#cmn_tweets3,
+#cmn_tweets4 { position:absolute; left:10px; width:182px; height:106px; padding: 8px; overflow:hidden; background: #333 url("http://cdn.complexmedianetwork.com/cdn/agenda.complex.com/assets/Q32013/drmartens/skin/twitter-feed-sm.png") top right no-repeat; border: 1px solid #333; box-sizing: content-box !important; -webkit-box-sizing: content-box !important; -moz-box-sizing: content-box !important;}
+
+#cmn_tweets1:hover,
+#cmn_tweets2:hover,
+#cmn_tweets3:hover,
+#cmn_tweets4:hover { border: 1px solid #ffe512; }
+
+#cmn_tweets1 { top:345px; }
+#cmn_tweets2 { top:583px; }
+#cmn_tweets3 { top:345px; }
+#cmn_tweets4 { top:583px; }
+
+.cmn_tweet { margin-top:5px;}
+.cmn_tweet p { font-weight:normal; }
+
+.cmn_hashtag {color: #ffe512; margin-bottom:10px; }
+
+
+#cmn_instagram_pics1 .photo_lib,
+#cmn_instagram_pics2 .photo_lib { width: 93px; height: 93px; margin:5px; border: 1px solid #333; float: right; z-index: 60;box-sizing: content-box !important; -webkit-box-sizing: content-box !important; -moz-box-sizing: content-box !important;}
+#cmn_instagram_pics3 .photo_lib,
+#cmn_instagram_pics4 .photo_lib { width: 93px; height: 93px; margin:5px; border: 1px solid #333; float: left; z-index: 60;box-sizing: content-box !important; -webkit-box-sizing: content-box !important; -moz-box-sizing: content-box !important;}
+
+#cmn_instagram_pics1 .photo_lib:hover,
+#cmn_instagram_pics2 .photo_lib:hover,
+#cmn_instagram_pics3 .photo_lib:hover,
+#cmn_instagram_pics4 .photo_lib:hover{border: 1px solid #ffe512; z-index: 60;}
+
+#cmn_instagram_pics1{ width: 210px; position: absolute; top: 230px; padding:5px; box-sizing: content-box !important; -webkit-box-sizing: content-box !important; -moz-box-sizing: content-box !important;}
+#cmn_instagram_pics2{ width: 210px; position: absolute; top: 468px; padding:5px; box-sizing: content-box !important; -webkit-box-sizing: content-box !important; -moz-box-sizing: content-box !important;}
+#cmn_instagram_pics3{ width: 210px; position: absolute; top: 230px; padding:5px; box-sizing: content-box !important; -webkit-box-sizing: content-box !important; -moz-box-sizing: content-box !important;}
+#cmn_instagram_pics4{ width: 210px; position: absolute; top: 468px; padding:5px; box-sizing: content-box !important; -webkit-box-sizing: content-box !important; -moz-box-sizing: content-box !important;}

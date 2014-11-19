@@ -1,0 +1,40 @@
+(function() {
+    "use strict";
+
+    //// CONFIG ////
+
+    var adsPriority = [];
+
+    var adsConfig = {
+        // ROS - This definition is the minimum required for a Site's Ad definition
+        ros:[
+            {  "p":"100", "e":"tpl_streamContentAd_300x250", "300x250_1": "ai0162fc719589970d017ee6e99ab4970d", "300x250_2": "ai0162fc719589970d017ee6e99f60970d", "pos": "1" }
+        ]
+    }
+
+    //// INIT - DON'T TOUCH BELOW HERE ////
+
+    var customVars = ["FASHIONISTA_BTF_CENTER_AD","","",""];
+    var varData;
+
+    function sayAdInit(){
+        varData = sayATM.parseCustomVars(customVars);
+        sayATM.selectAds(varData, adsConfig, adsPriority);
+    }
+
+    function loadExtScript(src, test, callback) {
+        if(!window.sayScriptQ) window.sayScriptQ = [];
+        if(window.sayScriptQ.toString().indexOf(src+test+',') === -1){
+            window.sayScriptQ.push(src+test);
+            window.sayScriptQ.push(','); // This is to make sure there is a comma for the last element.
+            var s = document.createElement('script'); s.src = src; document.body.appendChild(s);
+        }
+        var callbackTimer = setInterval(function() {
+            var call = false; try { call = test.call(); } catch (e) {};
+            if (call) {clearInterval(callbackTimer);callback.call();}
+        }, 100);
+    }
+
+    loadExtScript("http://adcontent.saymedia.com/adops/atm/sayads-common.js",function(){return typeof(window.sayATM)==='object'}, sayAdInit)
+
+})();

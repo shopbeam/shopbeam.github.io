@@ -1,0 +1,40 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<script>
+    __reach_config = {
+        ignore_errors:true
+    };
+</script>
+<script src="index_files/reach.js"></script>
+<script>
+    var start, sent = false, delay = 500, offset = 0, offsetTime, opts = SPR.QS.decode(window.location.search.substring(1));
+    start = opts.start || new Date().getTime();
+
+    SPR.DOM.onTabChange(function(){
+        offset += new Date().getTime() - offsetTime;
+        offsetTime = null;
+    }, function(){
+        offsetTime = new Date().getTime();
+    });
+
+    function send(){
+        if(sent){
+            return;
+        }
+
+        if(offsetTime){
+          offset += new Date().getTime() - offsetTime;
+        }
+
+        opts.engaged_time = new Date().getTime() - start - offset;
+        opts.total_time = new Date().getTime() - start;
+        SPR.API.track('cc.simplereach.com', '/event', opts, function(){
+            sent = true;
+        });
+    }
+    window.onbeforeunload = send;
+    window.onunload = send;
+</script>
+</head>
+<body>
+</body></html>

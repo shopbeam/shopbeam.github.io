@@ -1,0 +1,785 @@
+/****
+ **** QAS Pro On Demand > (c) QAS Ltd > www.qas.com
+ **** General > Index, Matrix > Style sheet
+ **** Intranet > ActiveX Control, Rapid Addressing > Standard > Style sheet
+ ****/
+
+
+/**** Template ****/
+.qas-infotable {
+    width: 800px;    
+}
+.qas-container {
+    width: 980px;
+    padding: 5px 10px;
+}
+.qas-header {
+    display: block;
+    font-family: verdana, arial, sans-serif;
+    background-color: #E1E4ED;
+}
+.qas-header-link, .qas-header-link a{
+    text-decoration: none;
+    border:none;
+}
+.qas-header table {
+    display: block;
+    background-color: #E1E4ED;
+}
+.qas-header h1, .qas-header h2 {
+    color: #6A2E58;
+    font-size: 23px;
+    font-weight: normal;
+    display: inline;
+    overflow: visible;
+    white-space: nowrap;
+}
+.qas-header h1 {
+    font-weight: bold;
+}
+.qas-header-right {
+    padding: 10px 10px 0px 0px;
+}
+.qas-header-right .language {
+    font-size: 11px;
+    font-family: arial;
+    width: 90px;
+}
+.qas-header-right a {
+    border: none;
+    font-size: 9px;
+    font-weight: normal;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    text-decoration: none;
+}
+.qas-header-right .qas-link-item {
+    text-align: center;
+    padding: 5px 5px 0px;
+}
+.qas-header-right img {
+    border: none;
+    padding: 3px;
+}
+.qas-header .qas-header-left {
+    width: 90%;
+    vertical-align: top;
+}
+.qas-content-header {
+    color: #36182D;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #E1E4ED;
+    overflow: visible;
+    white-space: nowrap;
+    border-bottom: 2px solid #808080;
+}
+.qas-content {
+    padding: 10px;
+    display: block;
+    background-color: white;
+}
+.qas-footer {
+    border-top: 2px solid #808080;
+    display: block;
+    background-color: #E1E4ED;
+    overflow: visible;
+    white-space: nowrap;
+}
+
+
+/**** General ****/
+.QAS_Dialog option.heading
+{
+    background-color:#F8B4E4;
+}
+.QAS_Dialog {
+  font-family: verdana, arial, sans-serif;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+}
+
+.QAS_Dialog h1 {
+  font-size: 160%;
+  margin-bottom: 0.5em;
+}
+.QAS_Dialog h2 {
+  font-size: 140%;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+.QAS_Dialog h3 {
+  font-size: 130%;
+  margin-bottom: 0.6em;
+  margin-top: 0.8em;
+}
+
+.QAS_Dialog a {
+  color: #5D1D4A;
+  text-decoration: none;
+}
+.QAS_Dialog a:hover {
+  color: #EE92D3;
+}
+.QAS_Dialog a img {
+  border: 0;
+  vertical-align: middle;
+}
+
+
+/**** Tables ****/
+
+
+.QAS_Dialog table {
+  border: 0;
+  border-collapse: collapse;
+  font-size: 100%;
+}
+
+.QAS_Dialog table.std {
+  width: 800px;
+}
+
+.QAS_Dialog table.std p {
+  margin-bottom: 0.5em;
+  margin-top: 0em;
+}
+
+.QAS_Dialog table.std td {
+  border-bottom: white 1em solid;
+}
+
+.QAS_Dialog th.std, .QAS_Dialog th.banner {
+  background-color : #F3BDE3;
+  border-bottom: white 0.7em solid;
+  border-top: white 1.5em solid;
+  font-size: 135%;
+  padding: 0.2em 0.5em;
+  text-align: left;
+}
+
+.QAS_Dialog th.banner {
+  background-color: #FFFFFF;
+  background-image: url(http://www.ipsy.com/images/qas/experianLogo.gif);
+  background-position: 99% 50%;
+  background-repeat: no-repeat;
+  border-bottom: white 1.2em solid;
+  border-top: 0;
+  color: #512143;
+  padding: 0.5em 0.5em;
+}
+
+.QAS_Dialog th.banner h1, .QAS_Dialog th.banner h2 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.QAS_Dialog th.banner a, .QAS_Dialog th.banner a:hover {
+  color: #512143;
+  border-bottom: none;
+}
+
+.QAS_Dialog th.footer {
+  background-color: #E1E4ED;
+  border-top: white 3.5em solid;
+  padding: 0.2em 0.5em;
+  text-align: left;
+  font-weight: normal;
+}
+
+
+/**** Index Table ****/
+
+
+.QAS_Dialog td.product { 
+  width:25%; 
+  font-size: 125%;
+  font-weight: bold;
+  padding-right: 1em;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.QAS_Dialog td.poweredby div {
+  float: right;
+}
+
+.QAS_Dialog div.light, .QAS_Dialog p.light {
+  color: #444a5c;
+}
+
+
+/**** Comparison Matrix ****/
+.QAS_Dialog table.matrix {
+    width: 800px;
+}
+.QAS_Dialog table.matrix td {
+  padding: 1em 0.5em;
+  vertical-align: middle;
+  
+}
+.QAS_Dialog table.matrix td.inverse {
+  background-color:#FBCBED;
+  text-align: center;
+}
+.QAS_Dialog table.matrix {
+  margin: 0px 0px 10px 0px;
+  border:none;
+}
+.QAS_Dialog table.matrix td {
+  border:2px #EEBCDF solid;
+}
+.QAS_Dialog table.matrix td.table-separator {
+  border: none;
+  height: 8px;
+  margin: 0px;
+  padding: 0px;
+  line-height: 8px;
+}
+.QAS_Dialog table.matrix td.matrix-desc-header {
+  height:5px;
+  margin: 0px;
+  padding: 8px;
+}
+.QAS_Dialog th.inverse {
+  background-color: #5871B6;
+  color: white;
+  font-size: 110%;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+.QAS_Dialog th.matrix-scenario-header {
+    background-color:white;
+    color:#4C2240;
+    font-size:140%;
+    border:none;
+    letter-spacing:2px;
+    padding-bottom:7px;
+}
+.QAS_Dialog td.matrix-desc-header {
+    border:none;
+    border-color:#4C2240;
+    background-color:#E7BBDA; 
+    color:#4C2240;
+    font-size:120%; 
+    font-weight: bolder;
+    text-align: center;
+}
+.QAS_Dialog td.matrix-desc-span2 {
+    text-align: center;
+}
+/**** Integration Pages ****/
+
+.QAS_Dialog label em, .QAS_Dialog button em {        /* <em> indicates accesskey (i.e. alt+F) */
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.QAS_Dialog input.readonly {
+  background-color: scrollbar;
+}
+
+.QAS_Dialog .pre {
+  white-space: pre;
+}
+.QAS_Dialog .nowrap {
+  white-space: nowrap;
+}
+
+.QAS_Dialog table.indent, .QAS_Dialog p.indent {
+  margin-left: 1.5em;
+}
+
+.QAS_Dialog table.indent td {
+  border-bottom: 0;
+}
+
+.QAS_Dialog td.indent, .QAS_Dialog td.gap {
+  padding-left: 1.5em;
+}
+
+.QAS_Dialog td.label {
+  padding-right: 1.5em;
+}
+
+.QAS_Dialog td.line input {
+  width: 21em;
+}
+
+.QAS_Dialog table.action {
+  margin-top: -1em;
+}
+.QAS_Dialog tr.action td {
+  text-align: right;
+}
+
+/**** Developer ****/
+.QAS_Dialog .error {
+  color: red;
+}
+/* End */
+
+/**** Fieldset *****/
+.QAS_Dialog .width {
+ width : 1250px;
+}
+			
+.QAS_Dialog fieldset {  	   
+  width: 330px;    
+  margin-left: -1em;	
+  margin-top: 1em;			
+  padding-left: 0em;
+  padding-right: 0em;
+  border-style: none;        
+  border: 1px solid #BFBAB0;    
+  display: inline;
+}
+
+.QAS_Dialog label {    
+  float: left;    
+  width: 7em;    
+  margin-right: 0em;
+  margin-left: 0em; 
+}  
+			
+.QAS_Dialog .first {
+  margin-left: 10px;
+}
+			
+.QAS_Dialog legend {  
+  margin-left: 0px;  
+  color: #000000;  
+  font-weight: bold;  
+}  
+			
+.QAS_Dialog fieldset ol {  
+  margin: 10px 0px 10px 0px;
+  padding: 0em 0em 0 1em;  
+  list-style: none;  
+}  
+			
+.QAS_Dialog fieldset li {  
+  padding-bottom: 1em;  
+} 
+
+.QAS_Dialog .countrySelector {
+  width: 200px;
+}
+
+.QAS_Dialog .nomargin {
+  white-space: nowrap;
+}
+
+/* End */
+
+/**** Verification Pop up ****/
+
+.QAS_Header { 
+	display: block;
+	padding: 1em;
+	position: relative;
+}
+
+.QAS_Prompt {
+	padding-top: 20px;
+	padding-left: 1em;
+	float: left;
+	width: 375px;
+}
+
+.QAS_Input {
+	padding: 0em 0em 0.3em;
+	float: left;
+}
+
+.QAS_RightDetails {
+	padding-top: 20px;
+	padding-left: 1em;
+	float: right;
+	border-left: 1px solid #BFA1B6; 
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 200px;
+}
+
+.QAS_RightSidePrompt {
+  padding-bottom: 0.5em; 
+}
+
+.QAS_RightSidePromptText {
+	padding-bottom: .5em;
+}
+
+.QAS_RightDetails table {
+	font-size: .9em;
+}
+.QAS_EditLink {
+	font-size: .8em;
+	padding-left: 1em;
+}
+
+.QAS_Picklist {
+	padding-top: .5em;
+	padding-left: 1em;
+	width: 375px;
+	float: left;
+	font-size: .9em;
+}
+
+.QAS_DeliverableWarning {
+	font-size: .8em;
+	padding-top: .6em;
+}
+
+.QAS_Pick {
+	font-size: .9em;
+	display: none;
+	width: 375px;
+	height:150px;
+	overflow:auto;
+}
+
+.QAS_MultPick {
+	font-size: .9em;
+	display: none;
+	width: 375px;
+	height:150px;
+	overflow:auto;
+}
+
+.QAS_ShowPick {
+	padding-bottom: .6em;
+}
+
+.QAS_OriginalMessage table {
+	border-collapse: collapse;
+	margin: 10px 0px 10px 10px;
+}
+	
+.QAS_Pick table, .QAS_MultPick table {
+	font-size: .9em;
+}
+.QAS_Pick table td, .QAS_MultPick table td {
+	padding-right: 1.5em;
+}
+
+.QAS_PromptText {
+	margin-bottom: .5em;
+}
+
+.QAS_PromptData table {
+	background-color: #FCBCE9;
+}
+
+#QAS_RefineText {
+	background: #FEDEF5;
+	border: 1px solid #C597B7;
+	width: 100px;
+	margin-right: 1em;
+	color: #333;
+}
+
+#QAS_RefineBtn, #QAS_AcceptOriginal, #QAS_NoApt, #QAS_FinishEdit {
+	padding: .1em 1em;
+}
+
+#QAS_NoApt {
+	margin-top: .5em;
+}
+
+/* End */
+
+/**** showloading ****/
+.loading-indicator {
+    height: 80px;
+    width: 80px;
+    background: url( 'http:www.ipsy.com/images/qas/loading.gif' );
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.loading-indicator-overlay {
+    background-color: #FFFFFF;
+    opacity: 0.6;
+    filter: alpha(opacity = 60);
+}
+
+/********JQUERY CSS*********/
+/* Layout helpers */
+.ui-helper-hidden { 
+	display: none; 
+}
+
+.ui-helper-hidden-accessible { 
+	position: absolute; 
+	left: -99999999px; 
+}
+
+.ui-helper-reset { 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	outline: 0; 
+	line-height: 1.3; 
+	text-decoration: none; 
+	font-size: 100%; 
+	list-style: none; 
+}
+
+.ui-helper-clearfix:after { 
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden; 
+}
+
+.ui-helper-clearfix { 
+	display: inline-block; 
+}
+
+.ui-helper-clearfix {
+    display: block;
+}
+
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix { height:1%; }
+	height:1%; 
+}
+
+.ui-helper-clearfix { 
+	display:block; 
+}
+
+/* end clearfix */
+.ui-helper-zfix { 
+	width: 100%; 
+	height: 100%; 
+	top: 0; 
+	left: 0; 
+	position: absolute; 
+	opacity: 0; 
+	filter:Alpha(Opacity=0); 
+}
+
+/* Interaction Cues */
+.ui-state-disabled { 
+	cursor: default !important; 
+}
+
+/* states and images */
+.ui-icon { 
+	display: block; 
+	text-indent: -99999px; 
+	overflow: hidden; 
+	background-repeat: no-repeat; 
+}
+
+/* Overlays */
+.ui-widget-overlay { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%;
+}
+
+/* Component containers */
+.ui-widget { 
+	font-family: Tahoma,sans-serif; 
+	/*font-size: 1.1em; */
+}
+
+.ui-widget .ui-widget { 
+	font-size: 1em; 
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { 
+	font-family: Tahoma,sans-serif; 
+	font-size: 1em; 
+}
+.ui-widget-content { 
+	border: 1px solid #C597B7; 
+	background: #ffffff; 
+	color: #222222; 
+}
+
+.ui-widget-content a { 
+	color: #222222; 
+}
+
+.ui-widget-header { 
+	border: 1px solid #C597B7; 
+	background: #F3AFDF; 
+	color: #222222; 
+	font-weight: bold; 
+}
+
+.ui-widget-header a { 
+	color: #222222; 
+}
+
+/* Interaction states */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { 
+	border: 1px solid #C597B7; 
+	background: #E1BDD6; 
+	font-weight: normal; 
+	color: #772B61; 
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { 
+	color: #1b82e4; 
+	text-decoration: none; 
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { 
+	border: 1px solid #C597B7; 
+	background: #E1BDD6; 
+	font-weight: normal; 
+	color: #CA0490; 
+}
+
+.ui-state-hover a, .ui-state-hover a:hover { 
+	color: #CA0490; 
+	text-decoration: none; 
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { 
+	border: 1px solid #C597B7; 
+	background: #ffffff; 
+	font-weight: normal; 
+	color: #E324A7; 
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { 
+	color: #E324A7; 
+	text-decoration: none; 
+}
+
+.ui-widget :active { 
+	outline: none; 
+}
+
+/* Interaction Cues */
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {
+	border: 1px solid #C597B7; 
+	background: #FEDEF5; 
+	color: #000000; 
+}
+
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { 
+	color: #000000; 
+}
+
+/* Overlays */
+.ui-widget-overlay { 
+	background: #666666; 
+	opacity: .60;
+	filter:Alpha(Opacity=60); 
+}
+
+.ui-widget-shadow { 
+	margin: -8px 0 0 -8px; 
+	padding: 8px; 
+	background: #aaaaaa; 
+	opacity: .30;
+	filter:Alpha(Opacity=30); 
+	-moz-border-radius: 8px; 
+	-webkit-border-radius: 8px; 
+	border-radius: 8px; 
+}
+
+/****** Dialog *********/
+.ui-dialog { 
+	position: absolute; 
+	padding: .2em; 
+	width: 300px; 
+	overflow: hidden; 
+}
+
+.ui-dialog .ui-dialog-titlebar { 
+	padding: .5em 1em .3em; 
+	position: relative;  
+}
+
+.ui-dialog .ui-dialog-title { 
+	float: left; 
+	margin: .1em 16px .2em 0; 
+}
+
+.ui-dialog .ui-dialog-titlebar-close { 
+	position: absolute; 
+	right: .3em; 
+	top: 50%; 
+	width: 19px; 
+	margin: -10px 0 0 0; 
+	padding: 1px; 
+	height: 18px; 
+}
+
+.ui-dialog .ui-dialog-titlebar-close span { 
+	display: block; 
+	margin: 1px; 
+}
+
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { 
+	padding: 0; 
+}
+
+.ui-dialog .ui-dialog-content { 
+	position: relative; 
+	border: 0; 
+	padding: .5em 1em; 
+	background: none; 
+	overflow: auto; 
+	zoom: 1; 
+}
+
+.ui-dialog .ui-dialog-buttonpane { 
+	text-align: left; 
+	border-width: 1px 0 0 0; 
+	background-image: none; 
+	margin: .5em 0 0 0; 
+	padding: .3em 1em .5em .4em; 
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { 
+	float: right; 
+}
+
+.ui-dialog .ui-dialog-buttonpane button { 
+	margin: .5em .4em .5em 0; 
+	cursor: pointer; 
+}
+
+.ui-dialog .ui-resizable-se { 
+	width: 14px; 
+	height: 14px; 
+	right: 3px; 
+	bottom: 3px; 
+}
+
+.ui-draggable .ui-dialog-titlebar { 
+	cursor: move; 
+}
+
+/******** Button *****/
+input.ui-button {
+    padding: 0.4em 1em;
+}
+
+.ui-button {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.1em;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.ui-corner-all {
+    -moz-border-radius: 4px 4px 4px 4px;
+}

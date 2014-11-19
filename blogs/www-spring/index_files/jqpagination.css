@@ -1,0 +1,125 @@
+.pagination {
+	float: left;
+}
+
+.pagination a {
+	display: block;
+	float: left;
+	height: 20px;
+	width: 20px;
+	color: #555555;
+	text-align: center;
+	text-decoration: none;
+	text-indent: -9999px;
+	outline: none;
+	vertical-align: middle;
+}
+
+.pagination a:hover, .pagination a:focus, .pagination a:active {
+
+}
+
+.pagination a.disabled, .pagination a.disabled:hover, .pagination a.disabled:focus, .pagination a.disabled:active {
+	opacity: 0.7;
+}
+
+.pagination a.first {
+	display: none;
+	border-radius: 2px 0 0 2px;
+	-moz-border-radius: 2px 0 0 2px;
+	-webkit-border-radius: 2px 0 0 2px;
+}
+
+.pagination .line-break {
+	float: left;
+	margin: 10px 5px 0 0;
+	width: 384px;
+	border-top: 1px solid #cecece;
+}
+
+.stories-pagination .line-break {
+    width: 225px;
+}
+
+.pagination .line-break:last-child {
+	margin-left: 5px;
+    margin-right: 0px;
+}
+
+.pagination a.last {
+	display: none;
+	border-radius: 0 2px 2px 0;
+	-moz-border-radius: 0 2px 2px 0;
+	-webkit-border-radius: 0 2px 2px 0;
+}
+
+.pagination a {
+}
+
+.pagination a:first-child {
+	border: none;
+}
+
+.pagination a:last-child {
+	border: none;
+}
+
+.pagination a.previous{
+	background: url(../images/arrow-r.png) no-repeat center;
+}
+.pagination a.next{
+	background: url(../images/arrow-l.png) no-repeat center;
+}
+
+.pagination input {
+	border: none;
+	float: left;
+	text-align: center;
+	height: 20px;
+	outline: none;
+	vertical-align: middle;
+	width: 100px;
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+/* gigantic class for demo purposes */
+
+.gigantic.pagination {
+	margin: 30px 0;
+}
+
+.gigantic.pagination a {
+	height: 60px;
+	width: 60px;
+	font-size: 50px;
+	line-height: 50px;
+}
+
+.gigantic.pagination input {
+	width: 300px;
+	height: 60px;
+	font-size: 30px;
+}
+
+/* log element for demo purposes */
+
+.log {
+	display: none;
+	background-color: #EDEDED;
+	border: 1px solid #B4B4B4;
+	height: 300px;
+	width: 524px;
+	overflow: auto;
+	margin-left: 0;
+	list-style: none;
+	padding: 10px;
+}
+
+.log li {
+    margin-top: 0;
+    margin-bottom: 5px;
+}

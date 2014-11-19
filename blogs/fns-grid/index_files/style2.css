@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(http://themes.googleusercontent.com/static/fonts/playfairdisplay/v8/UC3ZEjagJi85gF9qFaBgIAjfA_CkPizPaBJKI36cCAY.woff) format('woff');
+}

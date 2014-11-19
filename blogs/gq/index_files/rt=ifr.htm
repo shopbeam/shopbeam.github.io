@@ -1,0 +1,81 @@
+
+<!-- saved from url=(0138)http://bcp.crwdcntrl.net/5/c=302/rand=618752096/pv=y/int=%23OpR%2311446%23%20GQ%20%20%3A%20%20Style%20%20%3A%20/p=3591/dp=y/async=y/rt=ifr -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css"></style></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="background-color:transparent; width: 100%; text-align: center;">
+<div><script type="text/javascript">
+function afterFinished_1370() {
+	var response = getTargetingTags_1370();
+	var tokens = new Array();
+	tokens = response.split(';');
+	var intStr = '';
+	for(a in tokens) {
+		if (tokens[a].indexOf('#')>0 && tokens[a].indexOf(':')>0) {
+			val = tokens[a].substring(tokens[a].indexOf('#')+1, tokens[a].indexOf(':'));
+			intStr += 'int=' + val + '/';
+		} else if (tokens[a].indexOf(':')>0) {
+			val = tokens[a].substring(0, tokens[a].indexOf(':'));
+			intStr += 'int=' + val + '/';			
+		}
+	}
+        if (intStr != '') {
+		var img = new Image();
+		img.src= 'http://bcp.crwdcntrl.net/5/c=244/' + intStr;
+	}
+}
+</script>
+<script type="text/javascript">p39_mpu_1370 = 'http://www.gq.com/style/mens-watches-shoes-accessories?intcid=dropdown';</script>
+<script id="peer39ScriptLoader" type="text/javascript" src="http://stags.peer39.net/1370/trg_1370.js?c_CondeNast%20-%20GQ"></script><img src="pixel" height="1" width="1"><script id="LOTCC_368" src="cc(1).js"></script>
+<script id="LOTCC_796" src="cc(2).js"></script>
+<script>
+function processTargusData(json)
+{
+   if (json != null) {
+       if (json.targus != null) {
+            var fire = null;
+            if (json.targus.sk != null && json.targus.sk != "") {
+                lot368.add("tp", "TARG");
+                lot368.add("tpid", json.targus.sk);
+                fireIt = "m";
+            }
+            if (json.targus.segment != null && json.targus.segment != "000") {
+                lot368.add("genp","tiaas-" + json.targus.segment);
+                fireIt = "b";
+            }
+            if (json.targus.age != null && json.targus.age != "") {
+                lot368.add("genp", new Date().getFullYear() - json.targus.age);
+                fireIt = "b";
+            }
+            if (json.targus.gender != null && json.targus.gender != "") {
+                lot368.add("genp", "gender - " + json.targus.gender);
+                fireIt = "b";
+            }
+            if (fireIt == "b") {
+                lot368.bcpdpv();
+            } else if (fireIt == "m") {
+                var img = new Image();
+                img.src = "http://bcp.crwdcntrl.net/map/c=368/tp=TARG/tpid=" + json.targus.sk;
+                document.body.appendChild(img);
+            }
+        }
+        if (json.Client1 != null) {
+            var fireIt = false;
+            if (json.Client1.segment != null && json.Client1.segment != "000") {
+                if (json.Client1.segment instanceof Array) {
+                    for(var i =0; i < json.Client1.segment.length; i++) {
+                        lot796.add("genp","tialnt-" + json.Client1.segment[i]);
+                        fireIt = true;
+                    }
+                } else {
+                    lot796.add("genp","tialnt-" + json.Client1.segment);
+                    fireIt = true;
+                }
+            }
+            if (fireIt) {
+                lot796.bcpdpv();
+            }
+        }
+   }
+}
+</script>
+<script src="http://adadvisor.net/adscores/g.json?sid=9202507693"></script><img src="382416.gif" width="1" height="1"><div><img src="http://ib.adnxs.com/getuid?http%3A%2F%2Fbcp.crwdcntrl.net%2Fmap%2Fc=281%2Frand=701656292%2Ftpid%3D%24UID%2Ftp%3DANXS" height="1" width="1" style="display: none !important;"></div><img src="http://lotame.nexac.com/5/c=205/dc=0/pid=c480d87984bfbc3d401338ccea0a7bfe/tp=DLGX/tpc=na_id" height="1" width="1" style="display: none !important;"><img src="usync" height="1" width="1"><img width="1" height="1" src="http://p.acxiom-online.com/pixel/dap?pid=3011&ord=1000&uid=c480d87984bfbc3d401338ccea0a7bfe&ot=pixel&redir=http%3A%2F%2Fbcp.crwdcntrl.net%2F5%2Fc%3D1205%2Fseg%3D%23DATTRIBUTES%23"><iframe src="px.htm" frameborder="0" height="0" width="0" scrolling="no"></iframe></div>
+
+</body></html>

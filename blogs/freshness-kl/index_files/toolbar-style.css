@@ -1,0 +1,282 @@
+/* Toolbar 2.0.3 - 15-Jun-12 */
+	
+    #close-arrow{
+        position: absolute;
+	top: 5px;
+	right: 1%;
+	text-shadow: 0 1px 0 white;
+	color: #fff;
+    }
+    
+    #close label{
+	color: #fff;
+    }
+    
+    /*#close label{
+        position: absolute;
+        top: 5px;
+	left: 5%;
+	color: #fff;
+        margin-left: 10px;
+	color: black;
+	font-family: Arial !important;
+	font-size: 13px;
+	line-height: 28px;
+	margin-left: 0;
+	text-shadow: 0 1px 0 gray !important;
+    }*/
+   
+   #cmn_network_links div a:hover{
+	text-decoration: none!important;
+	color: #999 !important;
+   }
+   
+  /* #cmn_network_links label, label{
+        color: #fff !important;
+        font-size: 12px;
+        font-weight: bold;
+	display: inline;
+	cursor: default !important;
+   }*/
+   
+   #selectedSilo{
+	top: 10px;
+        width:auto;
+        min-height:180px;
+        z-index: auto;
+	position: relative;
+   }
+   
+   #selectedSiloContainer{
+	position: absolute;
+	margin: 1px auto;
+	width: 90%;
+	left: 100px;
+   }
+
+    /*#selectedSiloContainer div{
+        float: left;
+        margin: 0px 10px 10px 10px;
+        width: 120px;
+        overflow:hidden;
+   }*/
+   
+   #selectedSiloContainer a:hover{
+	text-decoration: none;
+	color: white !important;
+   }
+   
+   #siloContainer{
+        background-color: #2b2c34;
+	-moz-box-shadow: 0 0 15px 2px #000;
+	-webkit-box-shadow: 0 0 15px 2px #000;
+	 box-shadow: 0 0 15px 2px #000;
+   }
+    /*Classes*/
+    .hide{
+        display: none;
+        z-index: auto;
+    }
+    
+    .innerContainer label{
+	color: #fff !important;
+    }
+   
+   .siloLink{
+        color: #fff !important;
+        font-size: 11px;
+        text-decoration: none;
+	text-shadow: 0 1px 1px #000;
+   }
+   
+   .view_all{
+        color: #F36;
+        font-size: 9px;
+        cursor: pointer;
+        text-decoration: none;
+   }
+   
+   /* element selection */
+   div#selectedSiloContainer a:hover{
+	color: #999 !important;
+   }
+   
+   span label{
+        color: #EEE;
+        font-size: 11px;
+        font-weight: normal;
+   }
+
+/* Toolbar 2.0.0 Style - 9/27/2011 */
+
+/* ---- MAIN CONTAINER / MISC ---- */
+
+#cmn_toolbar_nav_middle .transparency {
+background-image: -moz-linear-gradient(top, #12161d, #161720);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#12161d), to(#161720));
+background-image: -o-linear-gradient(top, #12161d, #191819);
+background-image: linear-gradient(top, #12161d, #161720);
+
+border-top: 1px solid #0e1116;
+
+filter: progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Strength=5, Direction=0),
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000, Strength=5, Direction=270),
+	progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr='#12161d', endColorstr='#161720'),
+	alpha(opacity=95) !important;
+}
+
+#tb_expand_content {
+	background: rgb(43, 44, 52);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2b2c34, endColorstr=#2b2c34);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#2b2c34, endColorstr=#2b2c34)";
+}
+
+
+.cmn_btn_text  {color:#fff; text-shadow: 0 1px 1px #000;}
+
+
+/* ---- NETWORK ---- */
+
+#arrow_network {color:#FFF; text-shadow: 1px 0 0 #000 !important;}
+#arrow_network_2 {color:#313341; text-shadow: 1px 0 0 #000 !important;}
+
+#cmn_toolbar_network a, #cmn_toolbar_network a:hover {
+    background:url("http://cdn.complexmedianetwork.com/cdn/toolbar/v2.0.5/images/toolbar_sprite_image.png") no-repeat scroll -27px -22px transparent;
+    /*background:url("http://cdn.complexmedianetwork.com/cdn/toolbar/cmn_logo_style.png") no-repeat scroll 10px 5px transparent;*/
+}
+
+div#advertise:hover {background-color:#151a21 !important;}
+
+.cmn_column {
+float: left;
+font-family: arial;
+text-align: left;
+width:130px;
+height:110px;
+}
+
+.cmn_column a:link, .cmn_column a:visited, .cmn_column a:active {
+color: #BBB !important;
+font-size:14px !important;
+line-height:17px;
+text-shadow: 0 1px 1px #000;
+background-color:#2b2c34;
+}
+
+.cmn_column a:hover {
+	color: #FFF !important;
+	background-color: #22242d;
+	text-shadow: 0 1px 1px #000;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+
+
+/* ---- NEWSFEED ---- */
+
+#arrow_newsfeed {color:#FFF; text-shadow: 1px 0 0 #000 !important;}
+#arrow_newsfeed_2 {color:#313341; text-shadow: 1px 0 0 #000 !important;}
+
+.cmn_network_newsline { 
+	text-shadow: 0 1px 0 #000;
+}
+
+.cmn_newsfeed_source {
+    color: #FFF !important;
+    text-shadow: 0 1px 1px #000;
+}
+.cmn_newsfeed_source:hover {
+    color: #FFF !important;
+    text-shadow: 0 1px 1px #000;
+}
+.cmn_newsfeed_item_title {
+    color: #FFF !important;
+    text-shadow: 0 1px 1px #000;
+}
+.cmn_newsfeed_item_title:hover {
+    color: #FFF !important;
+    text-shadow: 0 1px 1px #000;
+}
+
+#cmn_newsfeed_box {text-shadow: 0 1px 1px #000; overflow:hidden;}
+#cmn_newsfeed_list {margin-top:20px;}
+
+.cmn_newsfeed_story_title {
+background-color: #2b2c34;
+}
+
+.cmn_newsfeed_story_title:link, .cmn_newsfeed_story_title:visited, .cmn_newsfeed_story_title:active {
+   	color: #BBB !important;
+}
+.cmn_newsfeed_story_title:hover{
+   	color: #FFF !important;
+	background-color: #0e1116;
+	text-shadow: 0 1px 1px #000;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.cmn_newsfeed_site_link, .cmn_newsfeed_site_link a:link, .cmn_newsfeed_site_link a:visited, .cmn_newsfeed_site_link a:active {
+    color: #EEE !important;
+}
+.cmn_newsfeed_site_link:hover {
+   	color: #FFF !important;
+}
+
+#text_fade {
+        height:200px;
+        background: rgb(43, 44, 52);
+	-webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+}
+
+/* Scrollbar Handle */
+#cmn_newsfeed_box::-webkit-scrollbar-thumb { background: rgba(34,34,34,1); -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); }
+#cmn_newsfeed_box::-webkit-scrollbar-thumb:window-inactive { background: rgba(38,38,38,0.2); }
+
+
+/* ---- SHARE ---- */
+
+#arrow_share {color:#FFF; text-shadow: 1px 0 0 #000 !important;}
+#arrow_share_2 {color:#313341; text-shadow: 1px 0 0 #000 !important;}
+
+#cmn_share_box {color:#DDD; text-shadow: 0 1px 1px #000;}
+
+#share_link input {color:#FFF; background:#22242d; border:1px solid #313341;}
+
+#share_title {
+	color:#EEE;
+        word-wrap: break-word;
+}
+
+.cmn_btn_logo {
+    background: url("http://cdnl.complex.com/tv/images/widget-logo-white.png") no-repeat;
+    background-size: cover;
+}
+
+
+/* ---- AD 300 ---- */
+
+#cmn_toolbar_ad, #cmn_toolbar_newsfeed_title {
+background: none;
+}
+
+/* ---- OPEN/CLOSE ---- */
+
+#arrow_tb_close {color:#FFF; text-shadow: 0 1px 0 #000 !important;}
+
+#arrow_tb_close:hover {
+background-color: #313341;
+}
+
+#cmn_toolbar_close:hover {
+background-color: #313341;
+}
+
+#arrow_tb_open {
+	color:#FFF;
+	background-color: #313341;
+	text-shadow: 0 -1px 0 #000 !important;
+}
+#arrow_tb_open:hover {
+background-color: #0e1116 !important;
+}

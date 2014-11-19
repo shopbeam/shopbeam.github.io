@@ -1,0 +1,2044 @@
+(function($) {
+	function do_all_client_side_twitter_oembed() {	
+		$.getScript('//platform.twitter.com/widgets.js', function() { $( '.pending-tweet' ).each( do_client_side_twitter_oembed ); } );
+	}
+
+	// handle failed tweets or tweets that haven't been fetched yet
+	function do_client_side_twitter_oembed() {
+		var $this = $(this),
+			text,
+			url = 'https://api.twitter.com/1/statuses/oembed.json?omit_script=true&callback=?&';
+
+		// Handle instances where make_clickable gets too friendly and linkifies our Twitter URL 
+		if ( $this.has( 'a' ).length ) {
+			text = $this.find( 'a' ).first().attr( 'href' );
+		} else {
+			text = $this.text();
+		}
+			
+		// If we find an exact match, we want to fetch its content from the oembed endpoint and display it
+		if ( text.match( /^http(s|):\/\/twitter\.com(\/\#\!\/|\/)([a-zA-Z0-9_]{1,20})\/status(es)*\/(\d+)$/ ) ) {
+			url += 'url=' + encodeURIComponent( text );
+		} else if ( text.match( /^(\d+)$/ ) ) {
+			url += 'id=' + text;
+		} else {
+			return;
+		}
+
+		// Need to make a JSONP call to avoid CORS issues
+		$.getJSON( url, function( data ) {
+			if ( data.html ) {
+				$this.html( data.html );
+				$this.show();
+				twttr.widgets.load();
+			}
+		} );
+	}
+
+	$( document ).ready( do_all_client_side_twitter_oembed );
+	$( document.body ).on('post-load', do_all_client_side_twitter_oembed );
+})(jQuery);
+;
+jQuery( document.body ).on( 'post-load', function() {
+	if ( typeof twttr == 'object' && twttr.widgets && twttr.widgets.load )
+		twttr.widgets.load();
+});;
+var eSalon = {
+	options: {
+		trigger_params: [{name: 'utm_source', value: 'advertorial'}],
+		include_params: ['utm_medium','utm_source', 'utm_campaign'],
+		alink_patterns: 'esalon.com',
+		enclose_selector: 'body'
+	},
+
+	match_triggered: function() {
+		if ( typeof this._triggered !== 'undefined' ) {
+			return this._triggered;
+		}
+		this._triggered = true;
+		for( var i = 0; i < this.options.trigger_params.length; i++ ) {
+			var param = this.options.trigger_params[i];
+			if ( pmc.tracking.get_property(param.name) !== param.value ) {
+				this._triggered = false;
+				return false;
+			}
+		}
+		return this._triggered;
+	},
+
+	append_querystring: function( link ) {
+		if ( typeof this._querystring === 'undefined' ) {
+			this._querystring = this.options.include_params.map(function($name){
+				$value = pmc.tracking.get_property( $name, '' );
+				return $name +'='+$value;
+			}).join('&');
+		}
+		if ( link.indexOf(this._querystring) !== -1 ) {
+			return link;
+		}
+		return link + ( /\?/.test( link ) ? '&' : '?' ) + this._querystring;
+	},
+
+	process: function() {
+		if ( typeof pmc === 'undefined' || ! this.match_triggered() ) {
+			return;
+		}
+		
+		jQuery(this.options.enclose_selector)
+			.find('a[href*="'+ this.options.alink_patterns +'"]')
+			.each( function() {
+				var href = jQuery(this).attr('href');
+				jQuery(this).attr( 'href', eSalon.append_querystring(href) );
+			});
+
+	},
+
+	init: function() {
+
+		jQuery(function(){
+			// execute to process tag within post content before ads code run.
+			// User might click on the link before ads show up so we need to capture that first.
+			eSalon.process();
+
+			// fire after all document ready events had been fired to capture ads events
+			jQuery(window).ready(function(){
+				// this call to process tag to capture ads html that are dynamically generate that wasn't capture from the first event such as Taboola might contains link to esalon.com as well.
+				eSalon.process();
+			});
+
+		});
+		
+	} // initialize
+};
+
+eSalon.init();
+
+;
+/**
+ * File to Handle common JS Functions
+ *
+ * @author Vicky Biswas
+ * @since 2013-11-18
+ */
+
+//Related Posts AJAX code
+jQuery(document).ready(function() {
+	related_page = 1;
+	jQuery('.more-related-article > strong > a').click(function(){
+		var current_element = jQuery(this);
+		if (current_element.text() == 'More Stories') {
+			current_element.html( '<img src="' + pmc_common_urls.current_theme_uri + 'images/loading.gif" />' )
+			.addClass('ajax-link')
+			.removeClass('action-link');
+			jQuery.ajax({
+				url: hollywood_related_posts.ajax_url,
+				type: 'GET',
+				data: "action=fetch_more_related_posts&page=" + related_page + "&postid=" + hollywood_related_posts.post_id,
+				context: current_element,
+				success: function(dropdown) {
+					if (dropdown != 0) {
+						jQuery('.related-articles').append(dropdown);
+					}
+
+					if (dropdown == "") {
+						jQuery('.more-related-article').hide();
+					}
+
+					related_page += 1;
+					jQuery(this).text('More Stories')
+					.removeClass('ajax-link')
+					.addClass('action-link');
+				}
+			});
+		}
+
+		return false;
+	});
+});
+
+;
+!function(a){a.fn.hoverIntent=function(b,c,d){var e={interval:100,sensitivity:7,timeout:0};e="object"==typeof b?a.extend(e,b):a.isFunction(c)?a.extend(e,{over:b,out:c,selector:d}):a.extend(e,{over:b,out:b,selector:c});var f,g,h,i,j=function(a){f=a.pageX,g=a.pageY},k=function(b,c){return c.hoverIntent_t=clearTimeout(c.hoverIntent_t),Math.abs(h-f)+Math.abs(i-g)<e.sensitivity?(a(c).off("mousemove.hoverIntent",j),c.hoverIntent_s=1,e.over.apply(c,[b])):(h=f,i=g,c.hoverIntent_t=setTimeout(function(){k(b,c)},e.interval),void 0)},l=function(a,b){return b.hoverIntent_t=clearTimeout(b.hoverIntent_t),b.hoverIntent_s=0,e.out.apply(b,[a])},m=function(b){var c=jQuery.extend({},b),d=this;d.hoverIntent_t&&(d.hoverIntent_t=clearTimeout(d.hoverIntent_t)),"mouseenter"==b.type?(h=c.pageX,i=c.pageY,a(d).on("mousemove.hoverIntent",j),1!=d.hoverIntent_s&&(d.hoverIntent_t=setTimeout(function(){k(c,d)},e.interval))):(a(d).off("mousemove.hoverIntent",j),1==d.hoverIntent_s&&(d.hoverIntent_t=setTimeout(function(){l(c,d)},e.timeout)))};return this.on({"mouseenter.hoverIntent":m,"mouseleave.hoverIntent":m},e.selector)}}(jQuery);;
+/* SiteCatalyst code version: H.20.3. Copyright 1997-2009 Omniture, Inc.
+	Usage : Just include on Page
+	Date Modified : 19/01/2010
+	Note : corrected Regex bug
+	Site Name: Hollywoodlife
+	By : Pavan
+*/
+//get full domain
+var cd = document.location.toString();
+
+//is it prod or dev
+var isProd=(cd.indexOf("://hollywoodlife.com")!=-1)?true:false;
+
+//account name
+var s_account= 'mmchollywoodlife'+((isProd)?'com':'dev');
+var s_mmc=s_gi(s_account);
+
+/************************** CONFIG SECTION **************************/
+s_mmc.currencyCode="USD"
+s_mmc.trackDownloadLinks=true
+s_mmc.trackExternalLinks=true
+s_mmc.trackInlineStats=true
+s_mmc.linkDownloadFileTypes="exe,zip,wav,mp3,mov,mpg,avi,wmv,pdf,doc,docx,xls,xlsx,ppt,pptx"
+s_mmc.linkInternalFilters="javascript:,hollywoodlife.com"
+s_mmc.linkLeaveQueryString=false
+s_mmc.linkTrackVars="prop11,prop12,prop13,eVar20,eVar21,events,eVar23,eVar24,products"
+s_mmc.linkTrackEvents="event9,event10,event12,event15,event5,event21"
+
+s_mmc.usePlugins=true
+function s_doPlugins(s) {
+/* Add calls to plugins here */
+	if (!s_mmc.charSet)s_mmc.charSet="auto"
+	/* External Sources and Channels Tracking */
+	s_mmc.channelManager('cmpid');
+	s_mmc.eVar28=s_mmc.crossVisitParticipation(s_mmc._channel,'v28','30','5','>','',0);
+	if (s_mmc._campaign=='Direct Load') s_mmc._campaign=s_mmc._keywords=s_mmc._channel='';
+	s_mmc.campaign=s_mmc._campaignID;
+	s_mmc.eVar25=s_mmc._campaign;
+	s_mmc.eVar26=s_mmc._keywords;
+	s_mmc.eVar27=s_mmc._channel;
+	s_mmc.bounceCheck(s_mmc.eVar25,'event19','event20')
+	/* Internal Site Search */
+	if(!s_mmc.prop7)s_mmc.prop7=s_mmc.getQueryParam('KW')
+	s_mmc.prop7=s_mmc.getValOnce(s_mmc.prop7,'s_c7',0);
+	if(s_mmc.prop7){
+	   s_mmc.prop7=s_mmc.prop7.toLowerCase();
+	   s_mmc.eVar7=s_mmc.prop7;
+	   s_mmc.events=s_mmc.apl(s_mmc.events,"event1",",",2);
+	}
+	/* Featured Content Tracking */
+	if(!s_mmc.eVar13)	s_mmc.eVar13=s_mmc.getQueryParam('ftct')
+	s_mmc.eVar13=s_mmc.getValOnce(s_mmc.eVar13,'s_V13',0)
+	if(s_mmc.eVar13)	s_mmc.events=s_mmc.apl(s_mmc.events,"event6",",",2);
+	/* Internal Campaign Tracking */
+	if(!s_mmc.eVar22)	s_mmc.eVar22=s_mmc.getQueryParam('intcmp')
+	s_mmc.eVar22=s_mmc.getValOnce(s_mmc.eVar22,'s_V22',0)
+	if(s_mmc.eVar22)	s_mmc.events=s_mmc.apl(s_mmc.events,"event11",",",2);
+	/* Set Page View Event */
+	s_mmc.events=s_mmc.apl(s_mmc.events,'event2',',',2)
+	/* Set Time Parting Variables */
+	s_mmc.eVar8=s_mmc.prop8=s_mmc.getTimeParting('h','-8'); // Set hour
+	s_mmc.eVar9=s_mmc.prop9=s_mmc.getTimeParting('d','-8'); // Set day
+	s_mmc.eVar10=s_mmc.prop10=s_mmc.getTimeParting('w','-8'); // Set weekday v.Weekend
+	/* Copy props to eVars */
+	if(s_mmc.pageName) s_mmc.pageName.toLowerCase();
+	if(s_mmc.channel) s_mmc.channel.toLowerCase();
+	if(s_mmc.prop1) s_mmc.prop1.toLowerCase();
+	if(s_mmc.prop2) s_mmc.prop2.toLowerCase();
+	if(s_mmc.prop3) s_mmc.prop3.toLowerCase();
+	if(s_mmc.pageName&&!s_mmc.hier1) s_mmc.heir1=s_mmc.pageName;
+	if(s_mmc.pageName&&!s_mmc.eVar11) s_mmc.eVar11=s_mmc.pageName;
+	if(s_mmc.channel&&!s_mmc.eVar12) s_mmc.eVar12=s_mmc.channel;
+	if(s_mmc.server&&!s_mmc.eVar14) s_mmc.eVar14=s_mmc.server;
+	if(s_mmc.prop1&&!s_mmc.eVar1) s_mmc.eVar1=s_mmc.prop1;
+	if(s_mmc.prop2&&!s_mmc.eVar2) s_mmc.eVar2=s_mmc.prop2;
+	if(s_mmc.prop3&&!s_mmc.eVar3) s_mmc.eVar3=s_mmc.prop3;
+	if(s_mmc.prop4&&!s_mmc.eVar4) s_mmc.eVar4=s_mmc.prop4;
+	if(s_mmc.prop5&&!s_mmc.eVar5) s_mmc.eVar5=s_mmc.prop5;
+	if(s_mmc.prop6&&!s_mmc.eVar6) s_mmc.eVar6=s_mmc.prop6;
+	if(s_mmc.prop7&&!s_mmc.eVar7) s_mmc.eVar7=s_mmc.prop7;
+	/* New vs. Repeat */
+	s_mmc.prop17=s_mmc.eVar17=s_mmc.getNewRepeat(999);
+	/* # of days since last visit */
+	s_mmc.prop18=s_mmc.eVar18=s_mmc.getDaysSinceLastVisit('s_lv');
+	/* Visit Depth */
+	s_mmc.eVar19="+1";
+	/* Exit Link tracking */
+	var exit_url=s_mmc.exitLinkHandler();
+	if(exit_url){
+		   s_mmc.eVar23=exit_url;
+		   s_mmc.events=s.apl(s.events,"event12",",",2);
+	}
+	/* Link Tracking */
+	s_mmc.hbx_lt = "manual" // manual, auto
+	s_mmc.setupLinkTrack("prop13,prop11,,prop12","s_c11");
+	/* dedupe referrer */
+	s_mmc.referrer=s_mmc.dedupeReferrer();
+}
+s_mmc.doPlugins=s_doPlugins
+/************************** PLUGINS SECTION *************************/
+/* Function - read combined cookies v 0.3 */
+if(!s_mmc.__ccucr){s_mmc.c_rr=s_mmc.c_r;s_mmc.__ccucr = true;
+s_mmc.c_r=new Function("k",""
++"var s=this,d=new Date,v=s.c_rr(k),c=s.c_rr('s_pers'),i,m,e;if(v)ret"
++"urn v;k=s.ape(k);i=c.indexOf(' '+k+'=');c=i<0?s.c_rr('s_sess'):c;i="
++"c.indexOf(' '+k+'=');m=i<0?i:c.indexOf('|',i);e=i<0?i:c.indexOf(';'"
++",i);m=m>0?m:e;v=i<0?'':s.epa(c.substring(i+2+k.length,m<0?c.length:"
++"m));if(m>0&&m!=e)if(parseInt(c.substring(m+1,e<0?c.length:e))<d.get"
++"Time()){d.setTime(d.getTime()-60000);s.c_w(s.epa(k),'',d);v='';}ret"
++"urn v;");}
+/* Function - write combined cookies v 0.3 */
+if(!s_mmc.__ccucw){s_mmc.c_wr=s_mmc.c_w;s_mmc.__ccucw = true;
+s_mmc.c_w=new Function("k","v","e",""
++"this.new2 = true;"
++"var s=this,d=new Date,ht=0,pn='s_pers',sn='s_sess',pc=0,sc=0,pv,sv,"
++"c,i,t;d.setTime(d.getTime()-60000);if(s.c_rr(k)) s.c_wr(k,'',d);k=s"
++".ape(k);pv=s.c_rr(pn);i=pv.indexOf(' '+k+'=');if(i>-1){pv=pv.substr"
++"ing(0,i)+pv.substring(pv.indexOf(';',i)+1);pc=1;}sv=s.c_rr(sn);i=sv"
++".indexOf(' '+k+'=');if(i>-1){sv=sv.substring(0,i)+sv.substring(sv.i"
++"ndexOf(';',i)+1);sc=1;}d=new Date;if(e){if(e.getTime()>d.getTime())"
++"{pv+=' '+k+'='+s.ape(v)+'|'+e.getTime()+';';pc=1;}}else{sv+=' '+k+'"
++"='+s.ape(v)+';';sc=1;}if(sc) s.c_wr(sn,sv,0);if(pc){t=pv;while(t&&t"
++".indexOf(';')!=-1){var t1=parseInt(t.substring(t.indexOf('|')+1,t.i"
++"ndexOf(';')));t=t.substring(t.indexOf(';')+1);ht=ht<t1?t1:ht;}d.set"
++"Time(ht);s.c_wr(pn,pv,d);}return v==s.c_r(s.epa(k));");}
+/* Plugin: getPreviousValue_v1.0  */
+s_mmc.getPreviousValue=new Function("v","c","el",""
++"var s=this,t=new Date,i,j,r='';t.setTime(t.getTime()+1800000);if(el"
++"){if(s.events){i=s.split(el,',');j=s.split(s.events,',');for(x in i"
++"){for(y in j){if(i[x]==j[y]){if(s.c_r(c)) r=s.c_r(c);v?s.c_w(c,v,t)"
++":s.c_w(c,'no value',t);return r}}}}}else{if(s.c_r(c)) r=s.c_r(c);v?"
++"s.c_w(c,v,t):s.c_w(c,'no value',t);return r}");
+/* s.join: 1.0 - s.join(v,p) */
+s_mmc.join = new Function("v","p",""
++"var s = this;var f,b,d,w;if(p){f=p.front?p.front:'';b=p.back?p.back"
++":'';d=p.delim?p.delim:'';w=p.wrap?p.wrap:'';}var str='';for(var x=0"
++";x<v.length;x++){if(typeof(v[x])=='object' )str+=s.join( v[x],p);el"
++"se str+=w+v[x]+w;if(x<v.length-1)str+=d;}return f+str+b;");
+/*		Plug-in: crossVisitParticipation v1.4 */
+s_mmc.crossVisitParticipation = new Function("v","cn","ex","ct","dl","ev","dv",""
++"var s=this;if(typeof(dv)==='undefined')dv=0;if(s.events&&ev){var ay"
++"=s.split(ev,',');var ea=s.split(s.events,',');for(var u=0;u<ay.leng"
++"th;u++){for(var x=0;x<ea.length;x++){if(ay[u]==ea[x]){s.c_w(cn,'');"
++"return'';}}}}if(!v||v=='')return '';v=escape(v);var arry=new Array("
++"),a=new Array(),c=s.c_r(cn),g=0,h=new Array();if(c&&c!='')arry=eval"
++"(c);var e=new Date();e.setFullYear(e.getFullYear()+5);if(dv==0 && a"
++"rry.length>0 && arry[arry.length-1][0]==v)arry[arry.length-1]=[v, n"
++"ew Date().getTime()];else arry[arry.length]=[v, new Date().getTime("
++")];var start=arry.length-ct<0?0:arry.length-ct;for(var x=start;x<ar"
++"ry.length;x++){var diff=Math.round(new Date()-new Date(parseInt(arr"
++"y[x][1])))/86400000;if(diff<ex){h[g]=unescape(arry[x][0]);a[g]=[arr"
++"y[x][0],arry[x][1]];g++;}}var data=s.join(a,{delim:',',front:'[',ba"
++"ck:']',wrap:\"'\"});s.c_w(cn,data,e);var r=s.join(h,{delim:dl});ret"
++"urn r;");
+/* Utility Function: p_gh */
+s_mmc.p_gh=new Function(""
++"var s=this;if(!s.eo&&!s.lnk)return '';var o=s.eo?s.eo:s.lnk,y=s.ot("
++"o),n=s.oid(o),x=o.s_oidt;if(s.eo&&o==s.eo){while(o&&!n&&y!='BODY'){"
++"o=o.parentElement?o.parentElement:o.parentNode;if(!o)return '';y=s."
++"ot(o);n=s.oid(o);x=o.s_oidt}}return o.href?o.href:'';");
+/* Plugin: exitLinkHandler 0.5 - identify and report exit links */
+s_mmc.exitLinkHandler=new Function("p",""
++"var s=this,h=s.p_gh(),n='linkInternalFilters',i,t;if(!h||(s.linkTyp"
++"e&&(h||s.linkName)))return '';i=h.indexOf('?');t=s[n];s[n]=p?p:t;h="
++"s.linkLeaveQueryString||i<0?h:h.substring(0,i);if(s.lt(h)=='e')s.li"
++"nkType='e';else h='';s[n]=t;return h;");
+/* Plugin: Days since last Visit 1.1.H - capture time from last visit */
+s_mmc.getDaysSinceLastVisit=new Function("c",""
++"var s=this,e=new Date(),es=new Date(),cval,cval_s,cval_ss,ct=e.getT"
++"ime(),day=24*60*60*1000,f1,f2,f3,f4,f5;e.setTime(ct+3*365*day);es.s"
++"etTime(ct+30*60*1000);f0='Cookies Not Supported';f1='First Visit';f"
++"2='More than 30 days';f3='More than 7 days';f4='Less than 7 days';f"
++"5='Less than 1 day';cval=s.c_r(c);if(cval.length==0){s.c_w(c,ct,e);"
++"s.c_w(c+'_s',f1,es);}else{var d=ct-cval;if(d>30*60*1000){if(d>30*da"
++"y){s.c_w(c,ct,e);s.c_w(c+'_s',f2,es);}else if(d<30*day+1 && d>7*day"
++"){s.c_w(c,ct,e);s.c_w(c+'_s',f3,es);}else if(d<7*day+1 && d>day){s."
++"c_w(c,ct,e);s.c_w(c+'_s',f4,es);}else if(d<day+1){s.c_w(c,ct,e);s.c"
++"_w(c+'_s',f5,es);}}else{s.c_w(c,ct,e);cval_ss=s.c_r(c+'_s');s.c_w(c"
++"+'_s',cval_ss,es);}}cval_s=s.c_r(c+'_s');if(cval_s.length==0) retur"
++"n f0;else if(cval_s!=f1&&cval_s!=f2&&cval_s!=f3&&cval_s!=f4&&cval_s"
++"!=f5) return '';else return cval_s;");
+/* Plugin: getNewRepeat 1.0 - Return whether user is new or repeat */
+s_mmc.getNewRepeat=new Function(""
++"var s=this,e=new Date(),cval,ct=e.getTime(),y=e.getYear();e.setTime"
++"(ct+30*24*60*60*1000);cval=s.c_r('s_nr');if(cval.length==0){s.c_w("
++"'s_nr',ct,e);return 'New';}if(cval.length!=0&&ct-cval<30*60*1000){s"
++".c_w('s_nr',ct,e);return 'New';}if(cval<1123916400001){e.setTime(cv"
++"al+30*24*60*60*1000);s.c_w('s_nr',ct,e);return 'Repeat';}else retur"
++"n 'Repeat';");
+/* Plugin: setupLinkTrack 2.0  */
+s_mmc.setupLinkTrack=new Function("vl","c",""
++"var s=this;var l=s.d.links,cv,cva,vla,h,i,l,t,b,o,y,n,oc,d='';cv=s."
++"c_r(c);if(vl&&cv!=''){cva=s.split(cv,'^^');vla=s.split(vl,',');for("
++"x in vla)s._hbxm(vla[x])?s[vla[x]]=cva[x]:'';}s.c_w(c,'',0);if(!s.e"
++"o&&!s.lnk)return '';o=s.eo?s.eo:s.lnk;y=s.ot(o);n=s.oid(o);if(s.eo&"
++"&o==s.eo){while(o&&!n&&y!='BODY'){o=o.parentElement?o.parentElement"
++":o.parentNode;if(!o)return '';y=s.ot(o);n=s.oid(o);}for(i=0;i<4;i++"
++")if(o.tagName)if(o.tagName.toLowerCase()!='a')if(o.tagName.toLowerC"
++"ase()!='area')o=o.parentElement;}b=s._LN(o);o.lid=b[0];o.lpos=b[1];"
++"if(s.hbx_lt&&s.hbx_lt!='manual'){if((o.tagName&&s._TL(o.tagName)=='"
++"area')){if(!s._IL(o.lid)){if(o.parentNode){if(o.parentNode.name)o.l"
++"id=o.parentNode.name;else o.lid=o.parentNode.id}}if(!s._IL(o.lpos))"
++"o.lpos=o.coords}else{if(s._IL(o.lid)<1)o.lid=s._LS(o.lid=o.text?o.t"
++"ext:o.innerText?o.innerText:'');if(!s._IL(o.lid)||s._II(s._TL(o.lid"
++"),'<img')>-1){h=''+o.innerHTML;bu=s._TL(h);i=s._II(bu,'<img');if(bu"
++"&&i>-1){eval(\"__f=/ src\s*=\s*[\'\\\"]?([^\'\\\" ]+)[\'\\\"]?/i\")"
++";__f.exec(h);if(RegExp.$1)h=RegExp.$1}o.lid=h}}}h=o.href?o.href:'';"
++"i=h.indexOf('?');h=s.linkLeaveQueryString||i<0?h:h.substring(0,i);l"
++"=s.linkName?s.linkName:s._hbxln(h);t=s.linkType?s.linkType.toLowerC"
++"ase():s.lt(h);oc=o.onclick?''+o.onclick:'';cv=s.pageName+'^^'+o.lid"
++"+'^^'+s.pageName+' | '+(o.lid=o.lid?o.lid:'no &lid')+'^^'+o.lpos;if"
++"(t&&(h||l)){cva=s.split(cv,'^^');vla=s.split(vl,',');for(x in vla)s"
++"._hbxm(vla[x])?s[vla[x]]=cva[x]:'';}else if(!t&&oc.indexOf('.tl(')<"
++"0){s.c_w(c,cv,0);}else return ''");
+s_mmc._IL=new Function("a","return a!='undefined'?a.length:0");
+s_mmc._II=new Function("a","b","c","return a.indexOf(b,c?c:0)");
+s_mmc._IS=new Function("a","b","c",""
++"return b>s_mmc._IL(a)?'':a.substring(b,c!=null?c:s_mmc._IL(a))");
+s_mmc._LN=new Function("a","b","c","d",""
++"b=a.href;b+=a.name?a.name:'';c=s_mmc._LVP(b,'lid');d=s_mmc._LVP(b,'lpos');r"
++"eturn[c,d]");
+s_mmc._LVP=new Function("a","b","c","d","e",""
++"c=s_mmc._II(a,'&'+b+'=');c=c<0?s_mmc._II(a,'?'+b+'='):c;if(c>-1){d=s_mmc._II(a,"
++"'&',c+s_mmc._IL(b)+2);e=s_mmc._IS(a,c+s_mmc._IL(b)+2,d>-1?d:s_mmc._IL(a));return e}"
++"return ''");
+s_mmc._LS=new Function("a",""
++"var b,c=100,d,e,f,g;b=(s_mmc._IL(a)>c)?escape(s_mmc._IS(a,0,c)):escape(a);b"
++"=s_mmc._LSP(b,'%0A','%20');b=s_mmc._LSP(b,'%0D','%20');b=s_mmc._LSP(b,'%09','%2"
++"0');c=s_mmc._IP(b,'%20');d=s_mmc._NA();e=0;for(f=0;f<s_mmc._IL(c);f++){g=s_mmc._RP("
++"c[f],'%20','');if(s_mmc._IL(g)>0){d[e++]=g}}b=d.join('%20');return unes"
++"cape(b)");
+s_mmc._LSP=new Function("a","b","c","d","d=s_mmc._IP(a,b);return d.join(c)");
+s_mmc._IP=new Function("a","b","return a.split(b)");
+s_mmc._RP=new Function("a","b","c","d",""
++"d=s_mmc._II(a,b);if(d>-1){a=s_mmc._RP(s_mmc._IS(a,0,d)+','+s_mmc._IS(a,d+s_mmc._IL(b),s"
++"._IL(a)),b,c)}return a");
+s_mmc._TL=new Function("a","return a.toLowerCase()");
+s_mmc._NA=new Function("a","return new Array(a?a:0)");
+s_mmc._hbxm=new Function("m","return (''+m).indexOf('{')<0");
+s_mmc._hbxln=new Function("h","var s=this,n=s_mmc.linkNames;if(n)return s_mmc.pt("
++"n,',','lnf',h);return ''");
+/* Plugin: getTimeParting 2.0  */
+s_mmc.getTimeParting=new Function("t","z","y",""
++"var s=this,d,A,U,X,Z,W,B,C,D,Y;d=new Date();;A=d.getFullYear();Y=U="
++"String(A);U=U.substring(2,4);X='090801|101407|111306|121104|131003|"
++"140902|150801|161306|171205|181104|191003';X=s.split(X,'|');for(W=0"
++";W<=10;W++){Z=X[W].substring(0,2);if(U==Z){B=X[W].substring(2,4);C="
++"X[W].substring(4,6)}}if(!B||!C){B='08';C='01'}B='03/'+B+'/'+A;C='11"
++"/'+C+'/'+A;D=new Date('1/1/2000');if(D.getDay()!=6||D.getMonth()!=0"
++"){return'Data Not Available'}else{z=z?z:'0';z=parseFloat(z);B=new D"
++"ate(B);C=new Date(C);W=new Date();if(W>B&&W<C){z=z+1}W=W.getTime()+"
++"(W.getTimezoneOffset()*60000);W=new Date(W + (3600000*z));X=['Sunda"
++"y','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];B"
++"=W.getHours();C=W.getMinutes();D=W.getDay();Z=X[D];U='AM';A='Weekda"
++"y';X='00';if(C>30){X='30'}if(B>=12){U='PM';B=B-12};if (B==0){B=12};"
++"if(D==6||D==0){A='Weekend'}W=B+':'+X+U;if(y&&y!=Y){return 'Data Not"
++" Available'}else{if(t){if(t=='h'){return W}if(t=='d'){return Z}if(t"
++"=='w'){return A}}else{return Z+', '+W}}}");
+/* Plugin: getQueryParam 2.3 */
+s_mmc.getQueryParam=new Function("p","d","u",""
++"var s=this,v='',i,t;d=d?d:'';u=u?u:(s.pageURL?s.pageURL:s.wd.locati"
++"on);if(u=='f')u=s.gtfs().location;while(p){i=p.indexOf(',');i=i<0?p"
++".length:i;t=s.p_gpv(p.substring(0,i),u+'');if(t){t=t.indexOf('#')>-"
++"1?t.substring(0,t.indexOf('#')):t;}if(t)v+=v?d+t:t;p=p.substring(i="
++"=p.length?i:i+1)}return v");
+s_mmc.p_gpv=new Function("k","u",""
++"var s=this,v='',i=u.indexOf('?'),q;if(k&&i>-1){q=u.substring(i+1);v"
++"=s.pt(q,'&','p_gvf',k)}return v");
+s_mmc.p_gvf=new Function("t","k",""
++"if(t){var s=this,i=t.indexOf('='),p=i<0?t:t.substring(0,i),v=i<0?'T"
++"rue':t.substring(i+1);if(p.toLowerCase()==k.toLowerCase())return s."
++"epa(v)}return ''");
+/* Plugin: getValOnce 0.2 - get a value once per session or number of days */
+s_mmc.getValOnce=new Function("v","c","e",""
++"var s=this,k=s.c_r(c),a=new Date;e=e?e:0;if(v){a.setTime(a.getTime("
++")+e*86400000);s.c_w(c,v,e?a:0);}return v==k?'':v");
+/* Utility Function: split v1.5 - split a string (JS 1.0 compatible) */
+s_mmc.split=new Function("l","d",""
++"var i,x=0,a=new Array;while(l){i=l.indexOf(d);i=i>-1?i:l.length;a[x"
++"++]=l.substring(0,i);l=l.substring(i+d.length);}return a");
+/* Plugin Utility: apl v1.1 */
+s_mmc.apl=new Function("L","v","d","u",""
++"var s=this,m=0;if(!L)L='';if(u){var i,n,a=s.split(L,d);for(i=0;i<a."
++"length;i++){n=a[i];m=m||(u==1?(n==v):(n.toLowerCase()==v.toLowerCas"
++"e()));}}if(!m)L=L?L+d+v:v;return L");
+/* bounce rate check */
+s_mmc.bounceCheck=new Function("v","e","b","c",""
++"var s=this,a,b,c=c?c:'bc';if(s.p_fo('bounceCheck')==1){a=s.events?s"
++".events+',':'';if(v){s.events=a+e;if(s.c_r(c)){b=parseInt(s.c_r(c))"
++"+1;s.c_w(c,b,0);}else{s.c_w(c,1,0);}}else{if(s.c_r(c)>=1){s.c_w(c,0"
++",0);s.events=a+b;}}}");
+s_mmc.p_fo=new Function("n",""
++"var s=this;if(!s.__fo){s.__fo=new Object;}if(!s.__fo[n]){s.__fo[n]="
++"new Object;return 1;}else {return 0;}");
+/* Plugin: dedupeReferrer v1.0 - deduplicates the instances for the same external referrer */
+s_mmc.dedupeReferrer=new Function("c","b",""
++"var s=this,a,g,i,j,k,l,m,n,o;g=s.referrer?s.referrer:document.refer"
++"rer;g=g.toLowerCase();if(g){i=g.indexOf('?')>-1?g.indexOf('?'):g.le"
++"ngth;j=g.substring(0,i);k=s.linkInternalFilters.toLowerCase();k=s.s"
++"plit(k,',');l=k.length;for(m=0;m<l;m++){n=j.indexOf(k[m])>-1?g:'';i"
++"f(n)o=n}if(!o){c=c?c:'_dr';b=b?b-1:'1';a=g;a=s.getValOnce(a,c,0);if"
++"(a){return a}else{return k[b]}}}");
+/* Plugin Utility: Replace v1.0 */
+s_mmc.repl=new Function("x","o","n",""
++"var i=x.indexOf(o),l=n.length;while(x&&i>=0){x=x.substring(0,i)+n+x."
++"substring(i+o.length);i=x.indexOf(o,i+l)}return x");
+/* Plugin channelManager v2.0 - The tracking of all external sources and channels */
+s_mmc.channelManager=new Function("a","b","c","V",""
++"var s=this,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,t,u,v,w,x,y,z,A,B,C,D,E,F,"
++"G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,W,X;g=s.referrer?s.referrer:document."
++"referrer;g=g.toLowerCase();if(!g){h='1'}i=g.indexOf('?')>-1?g.index"
++"Of('?'):g.length;j=g.substring(0,i);k=s.linkInternalFilters.toLower"
++"Case();k=s.split(k,',');l=k.length;for(m=0;m<l;m++){n=j.indexOf(k[m"
++"])==-1?'':g;if(n)o=n}if(!o&&!h){p=g;q=g.indexOf('//')>-1?g.indexOf("
++"'//')+2:0;r=g.indexOf('/',q)>-1?g.indexOf('/',q):i;t=g.substring(q,"
++"r);t=t.toLowerCase();u=t;P='Referrers';v=s.seList+'>'+s._extraSearc"
++"hEngines;if(V=='1'){j=s.repl(j,'oogle','%');j=s.repl(j,'ahoo','^');"
++"}A=s.split(v,'>');B=A.length;for(C=0;C<B;C++){D=A[C];D=s.split(D,'|"
++"');E=s.split(D[0],',');F=E.length;for(G=0;G<F;G++){H=j.indexOf(E[G]"
++");if(H>-1){I=s.split(D[1],',');J=I.length;for(K=0;K<J;K++){L=s.getQ"
++"ueryParam(I[K],'',g);if(L){L=L.toLowerCase();M=L;if(D[2]){u=D[2];N="
++"D[2]}else{N=t}N=s.repl(N,'^','ahoo');N=s.repl(N,'%','oogle');}}}}}}"
++"O=s.getQueryParam(a,b);if(O){u=O;if(M){P='Paid Search'}else{P='Paid"
++" Non-Search';}}if(!O&&M){u=N;P='Natural Search'}if(!o&&!M)M='None';"
++"f=s._channelDomain;if(f){k=s.split(f,'>');l=k.length;for(m=0;m<l;m+"
++"+){Q=s.split(k[m],'|');R=s.split(Q[1],',');S=R.length;for(T=0;T<S;T"
++"++){W=j.indexOf(R[T]);if(W>-1)P=Q[0]}}}d=s._channelParameter;if(d){"
++"k=s.split(d,'>');l=k.length;for(m=0;m<l;m++){Q=s.split(k[m],'|');R="
++"s.split(Q[1],',');S=R.length;for(T=0;T<S;T++){U=s.getQueryParam(R[T"
++"]);if(U)P=Q[0]}}}e=s._channelPattern;if(e){k=s.split(e,'>');l=k.len"
++"gth;for(m=0;m<l;m++){Q=s.split(k[m],'|');R=s.split(Q[1],',');S=R.le"
++"ngth;for(T=0;T<S;T++){X=O.indexOf(R[T]);if(X==0)P=Q[0]}}}if(h=='1'&"
++"&!O){u=P=t=p='Direct Load'}if(c!='0'){T=M+u+t;U=c?'c':'c_m';T=s.get"
++"ValOnce(T,U,0);}s._referrer=T&&p?p:'';s._referringDomain=T&&t?t:'';"
++"s._partner=T&&N?N:'';s._campaignID=T&&O?O:'';s._campaign=T&&u?u:'';"
++"s._keywords=T&&M?M:'';s._channel=T&&P?P:'';");
+/* Top 50, Partner = Partner */
+s_mmc.seList=".google.,googlesyndication.com|q|Google>.yahoo.com,search.y"
++"ahoo.com|p,va|Yahoo!>bing.com|q|Microsoft Bing>.aol.|query,q|AOL.co"
++"m Search>.ask.|ask,q|Ask>naver.com,search.naver.com|query|Naver>myw"
++"ay.com|searchfor|MyWay.com>altavista.co,altavista.de|q,r|AltaVista>"
++"netscape.com|query,search|Netscape Search>http://www.baidu.com|wd|B"
++"aidu>busca.uol.com.br|q|UOL Busca>daum.net,search.daum.net|q|Daum>t"
++"iscali.it,www.tiscali.co.uk|key,query|Tiscali>yandex,yandex.ru|text"
++"|Yandex.ru>abcsok.no|q|Startsiden>virgilio.it|qs|Virgilio>reference"
++".com|q|Reference.com>alltheweb.com|query,q|All The Web>icqit.com|q|"
++"icq>search.mobile.goo.ne.jp,goo.ne.jp|MT|Goo (Jp.)>.lycos.,.lycol.|"
++"query|Lycos>search.biglobe.ne.jp,search.kbg.jp|q,extrakey|Biglobe>i"
++"xquick.com|query|ixquick>seznam|w|Seznam.cz>searchalot.com|query,q|"
++"Searchalot>search.nifty.com|q|Nifty>.eniro.|search_word|Eniro>toile"
++".com|query,q|Toile du Quebec>business.com/search|query|Business.com"
++">kvasir.no|q,searchExpr|Kvasir>mail.ru/search,go.mail.ru/search|q|M"
++"ail.ru>Dictionary.com,Dictionary|term,query,q|Dictionary.com>.excit"
++"e.,excitesearch.netscape.com|search,q,s,qkw|Excite>cuil.com|q|Cuil>"
++"web.de|su|Web.de>sensis.com.au|find|Sensis.com.au>empas.com,search."
++"empas.com|q|Empas>.libero.|query,q|Libero>search.about.com|terms|Ab"
++"out.com>walla.co.il|q|Walla>mamma.com|query|Mamma>usseek.com|string"
++"|Usseek>clix.pt|question|Clix>terra.es|query|Terra>.infoseek.|qt,qu"
++"ery|InfoSeek>search.com|qu|7search.com>search.livedoor.com|q|Livedo"
++"or.com>vinden.nl|query|Vinden>dmoz.org|search|Open Directory Projec"
++"t>starmedia.com|q|Starmedia";
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+s_mmc.visitorNamespace="mmc"
+s_mmc.trackingServer="analytics.mail-corp.com"
+s_mmc.trackingServerSecure="sanalytics.mail-corp.com"
+var s_code='',s_objectID;function s_gi(un,pg,ss){var c="s._c='s_c';s.wd=window;if(!s.wd.s_c_in){s.wd.s_c_il=new Array;s.wd.s_c_in=0;}s._il=s.wd.s_c_il;s._in=s.wd.s_c_in;s._il[s._in]=s;s.wd.s_c_in++;s"
++".an=s_an;s.cls=function(x,c){var i,y='';if(!c)c=this.an;for(i=0;i<x.length;i++){n=x.substring(i,i+1);if(c.indexOf(n)>=0)y+=n}return y};s.fl=function(x,l){return x?(''+x).substring(0,l):x};s.co=func"
++"tion(o){if(!o)return o;var n=new Object,x;for(x in o)if(x.indexOf('select')<0&&x.indexOf('filter')<0)n[x]=o[x];return n};s.num=function(x){x=''+x;for(var p=0;p<x.length;p++)if(('0123456789').indexO"
++"f(x.substring(p,p+1))<0)return 0;return 1};s.rep=s_rep;s.sp=s_sp;s.jn=s_jn;s.ape=function(x){var s=this,h='0123456789ABCDEF',i,c=s.charSet,n,l,e,y='';c=c?c.toUpperCase():'';if(x){x=''+x;if(c=='AUTO"
++"'&&('').charCodeAt){for(i=0;i<x.length;i++){c=x.substring(i,i+1);n=x.charCodeAt(i);if(n>127){l=0;e='';while(n||l<4){e=h.substring(n%16,n%16+1)+e;n=(n-n%16)/16;l++}y+='%u'+e}else if(c=='+')y+='%2B';"
++"else y+=escape(c)}x=y}else{x=x?s.rep(escape(''+x),'+','%2B'):x;if(x&&c&&s.em==1&&x.indexOf('%u')<0&&x.indexOf('%U')<0){i=x.indexOf('%');while(i>=0){i++;if(h.substring(8).indexOf(x.substring(i,i+1)."
++"toUpperCase())>=0)return x.substring(0,i)+'u00'+x.substring(i);i=x.indexOf('%',i)}}}}return x};s.epa=function(x){var s=this;return x?unescape(s.rep(''+x,'+',' ')):x};s.pt=function(x,d,f,a){var s=th"
++"is,t=x,z=0,y,r;while(t){y=t.indexOf(d);y=y<0?t.length:y;t=t.substring(0,y);r=s[f](t,a);if(r)return r;z+=y+d.length;t=x.substring(z,x.length);t=z<x.length?t:''}return ''};s.isf=function(t,a){var c=a"
++".indexOf(':');if(c>=0)a=a.substring(0,c);if(t.substring(0,2)=='s_')t=t.substring(2);return (t!=''&&t==a)};s.fsf=function(t,a){var s=this;if(s.pt(a,',','isf',t))s.fsg+=(s.fsg!=''?',':'')+t;return 0}"
++";s.fs=function(x,f){var s=this;s.fsg='';s.pt(x,',','fsf',f);return s.fsg};s.si=function(){var s=this,i,k,v,c=s_gi+'var s=s_gi(\"'+s.oun+'\");s.sa(\"'+s.un+'\");';for(i=0;i<s.va_g.length;i++){k=s.va"
++"_g[i];v=s[k];if(v!=undefined){if(typeof(v)=='string')c+='s.'+k+'=\"'+s_fe(v)+'\";';else c+='s.'+k+'='+v+';'}}c+=\"s.lnk=s.eo=s.linkName=s.linkType=s.wd.s_objectID=s.ppu=s.pe=s.pev1=s.pev2=s.pev3=''"
++";\";return c};s.c_d='';s.c_gdf=function(t,a){var s=this;if(!s.num(t))return 1;return 0};s.c_gd=function(){var s=this,d=s.wd.location.hostname,n=s.fpCookieDomainPeriods,p;if(!n)n=s.cookieDomainPerio"
++"ds;if(d&&!s.c_d){n=n?parseInt(n):2;n=n>2?n:2;p=d.lastIndexOf('.');if(p>=0){while(p>=0&&n>1){p=d.lastIndexOf('.',p-1);n--}s.c_d=p>0&&s.pt(d,'.','c_gdf',0)?d.substring(p):d}}return s.c_d};s.c_r=funct"
++"ion(k){var s=this;k=s.ape(k);var c=' '+s.d.cookie,i=c.indexOf(' '+k+'='),e=i<0?i:c.indexOf(';',i),v=i<0?'':s.epa(c.substring(i+2+k.length,e<0?c.length:e));return v!='[[B]]'?v:''};s.c_w=function(k,v"
++",e){var s=this,d=s.c_gd(),l=s.cookieLifetime,t;v=''+v;l=l?(''+l).toUpperCase():'';if(e&&l!='SESSION'&&l!='NONE'){t=(v!=''?parseInt(l?l:0):-60);if(t){e=new Date;e.setTime(e.getTime()+(t*1000))}}if(k"
++"&&l!='NONE'){s.d.cookie=k+'='+s.ape(v!=''?v:'[[B]]')+'; path=/;'+(e&&l!='SESSION'?' expires='+e.toGMTString()+';':'')+(d?' domain='+d+';':'');return s.c_r(k)==v}return 0};s.eh=function(o,e,r,f){var"
++" s=this,b='s_'+e+'_'+s._in,n=-1,l,i,x;if(!s.ehl)s.ehl=new Array;l=s.ehl;for(i=0;i<l.length&&n<0;i++){if(l[i].o==o&&l[i].e==e)n=i}if(n<0){n=i;l[n]=new Object}x=l[n];x.o=o;x.e=e;f=r?x.b:f;if(r||f){x."
++"b=r?0:o[e];x.o[e]=f}if(x.b){x.o[b]=x.b;return b}return 0};s.cet=function(f,a,t,o,b){var s=this,r,tcf;if(s.apv>=5&&(!s.isopera||s.apv>=7)){tcf=new Function('s','f','a','t','var e,r;try{r=s[f](a)}cat"
++"ch(e){r=s[t](e)}return r');r=tcf(s,f,a,t)}else{if(s.ismac&&s.u.indexOf('MSIE 4')>=0)r=s[b](a);else{s.eh(s.wd,'onerror',0,o);r=s[f](a);s.eh(s.wd,'onerror',1)}}return r};s.gtfset=function(e){var s=th"
++"is;return s.tfs};s.gtfsoe=new Function('e','var s=s_c_il['+s._in+'],c;s.eh(window,\"onerror\",1);s.etfs=1;c=s.t();if(c)s.d.write(c);s.etfs=0;return true');s.gtfsfb=function(a){return window};s.gtfs"
++"f=function(w){var s=this,p=w.parent,l=w.location;s.tfs=w;if(p&&p.location!=l&&p.location.host==l.host){s.tfs=p;return s.gtfsf(s.tfs)}return s.tfs};s.gtfs=function(){var s=this;if(!s.tfs){s.tfs=s.wd"
++";if(!s.etfs)s.tfs=s.cet('gtfsf',s.tfs,'gtfset',s.gtfsoe,'gtfsfb')}return s.tfs};s.mrq=function(u){var s=this,l=s.rl[u],n,r;s.rl[u]=0;if(l)for(n=0;n<l.length;n++){r=l[n];s.mr(0,0,r.r,0,r.t,r.u)}};s."
++"br=function(id,rs){var s=this;if(s.disableBufferedRequests||!s.c_w('s_br',rs))s.brl=rs};s.flushBufferedRequests=function(){this.fbr(0)};s.fbr=function(id){var s=this,br=s.c_r('s_br');if(!br)br=s.br"
++"l;if(br){if(!s.disableBufferedRequests)s.c_w('s_br','');s.mr(0,0,br)}s.brl=0};s.mr=function(sess,q,rs,id,ta,u){var s=this,dc=s.dc,t1=s.trackingServer,t2=s.trackingServerSecure,tb=s.trackingServerBa"
++"se,p='.sc',ns=s.visitorNamespace,un=s.cls(u?u:(ns?ns:s.fun)),r=new Object,l,imn='s_i_'+(un),im,b,e;if(!rs){if(t1){if(t2&&s.ssl)t1=t2}else{if(!tb)tb='2o7.net';if(dc)dc=(''+dc).toLowerCase();else dc="
++"'d1';if(tb=='2o7.net'){if(dc=='d1')dc='112';else if(dc=='d2')dc='122';p=''}t1=un+'.'+dc+'.'+p+tb}rs='http'+(s.ssl?'s':'')+'://'+t1+'/b/ss/'+s.un+'/'+(s.mobile?'5.1':'1')+'/H.21/'+sess+'?AQB=1&ndh=1"
++"'+(q?q:'')+'&AQE=1';if(s.isie&&!s.ismac){if(s.apv>5.5)rs=s.fl(rs,4095);else rs=s.fl(rs,2047)}if(id){s.br(id,rs);return}}if(s.d.images&&s.apv>=3&&(!s.isopera||s.apv>=7)&&(s.ns6<0||s.apv>=6.1)){if(!s"
++".rc)s.rc=new Object;if(!s.rc[un]){s.rc[un]=1;if(!s.rl)s.rl=new Object;s.rl[un]=new Array;setTimeout('if(window.s_c_il)window.s_c_il['+s._in+'].mrq(\"'+un+'\")',750)}else{l=s.rl[un];if(l){r.t=ta;r.u"
++"=un;r.r=rs;l[l.length]=r;return ''}imn+='_'+s.rc[un];s.rc[un]++}im=s.wd[imn];if(!im)im=s.wd[imn]=new Image;im.s_l=0;im.onload=new Function('e','this.s_l=1;var wd=window,s;if(wd.s_c_il){s=wd.s_c_il["
++"'+s._in+'];s.mrq(\"'+un+'\");s.nrs--;if(!s.nrs)s.m_m(\"rr\")}');if(!s.nrs){s.nrs=1;s.m_m('rs')}else s.nrs++;im.src=rs;if(rs.indexOf('&pe=')>=0&&(!ta||ta=='_self'||ta=='_top'||(s.wd.name&&ta==s.wd.n"
++"ame))){b=e=new Date;while(!im.s_l&&e.getTime()-b.getTime()<500)e=new Date}return ''}return '<im'+'g sr'+'c=\"'+rs+'\" width=1 height=1 border=0 alt=\"\">'};s.gg=function(v){var s=this;if(!s.wd['s_'"
++"+v])s.wd['s_'+v]='';return s.wd['s_'+v]};s.glf=function(t,a){if(t.substring(0,2)=='s_')t=t.substring(2);var s=this,v=s.gg(t);if(v)s[t]=v};s.gl=function(v){var s=this;if(s.pg)s.pt(v,',','glf',0)};s."
++"rf=function(x){var s=this,y,i,j,h,l,a,b='',c='',t;if(x){y=''+x;i=y.indexOf('?');if(i>0){a=y.substring(i+1);y=y.substring(0,i);h=y.toLowerCase();i=0;if(h.substring(0,7)=='http://')i+=7;else if(h.sub"
++"string(0,8)=='https://')i+=8;h=h.substring(i);i=h.indexOf(\"/\");if(i>0){h=h.substring(0,i);if(h.indexOf('google')>=0){a=s.sp(a,'&');if(a.length>1){l=',q,ie,start,search_key,word,kw,cd,';for(j=0;j<"
++"a.length;j++){t=a[j];i=t.indexOf('=');if(i>0&&l.indexOf(','+t.substring(0,i)+',')>=0)b+=(b?'&':'')+t;else c+=(c?'&':'')+t}if(b&&c){y+='?'+b+'&'+c;if(''+x!=y)x=y}}}}}}return x};s.hav=function(){var "
++"s=this,qs='',fv=s.linkTrackVars,fe=s.linkTrackEvents,mn,i;if(s.pe){mn=s.pe.substring(0,1).toUpperCase()+s.pe.substring(1);if(s[mn]){fv=s[mn].trackVars;fe=s[mn].trackEvents}}fv=fv?fv+','+s.vl_l+','+"
++"s.vl_l2:'';for(i=0;i<s.va_t.length;i++){var k=s.va_t[i],v=s[k],b=k.substring(0,4),x=k.substring(4),n=parseInt(x),q=k;if(v&&k!='linkName'&&k!='linkType'){if(s.pe||s.lnk||s.eo){if(fv&&(','+fv+',').in"
++"dexOf(','+k+',')<0)v='';if(k=='events'&&fe)v=s.fs(v,fe)}if(v){if(k=='dynamicVariablePrefix')q='D';else if(k=='visitorID')q='vid';else if(k=='pageURL'){q='g';v=s.fl(v,255)}else if(k=='referrer'){q='"
++"r';v=s.fl(s.rf(v),255)}else if(k=='vmk'||k=='visitorMigrationKey')q='vmt';else if(k=='visitorMigrationServer'){q='vmf';if(s.ssl&&s.visitorMigrationServerSecure)v=''}else if(k=='visitorMigrationServ"
++"erSecure'){q='vmf';if(!s.ssl&&s.visitorMigrationServer)v=''}else if(k=='charSet'){q='ce';if(v.toUpperCase()=='AUTO')v='ISO8859-1';else if(s.em==2)v='UTF-8'}else if(k=='visitorNamespace')q='ns';else"
++" if(k=='cookieDomainPeriods')q='cdp';else if(k=='cookieLifetime')q='cl';else if(k=='variableProvider')q='vvp';else if(k=='currencyCode')q='cc';else if(k=='channel')q='ch';else if(k=='transactionID'"
++")q='xact';else if(k=='campaign')q='v0';else if(k=='resolution')q='s';else if(k=='colorDepth')q='c';else if(k=='javascriptVersion')q='j';else if(k=='javaEnabled')q='v';else if(k=='cookiesEnabled')q="
++"'k';else if(k=='browserWidth')q='bw';else if(k=='browserHeight')q='bh';else if(k=='connectionType')q='ct';else if(k=='homepage')q='hp';else if(k=='plugins')q='p';else if(s.num(x)){if(b=='prop')q='c"
++"'+n;else if(b=='eVar')q='v'+n;else if(b=='list')q='l'+n;else if(b=='hier'){q='h'+n;v=s.fl(v,255)}}if(v)qs+='&'+q+'='+(k.substring(0,3)!='pev'?s.ape(v):v)}}}return qs};s.ltdf=function(t,h){t=t?t.toL"
++"owerCase():'';h=h?h.toLowerCase():'';var qi=h.indexOf('?');h=qi>=0?h.substring(0,qi):h;if(t&&h.substring(h.length-(t.length+1))=='.'+t)return 1;return 0};s.ltef=function(t,h){t=t?t.toLowerCase():''"
++";h=h?h.toLowerCase():'';if(t&&h.indexOf(t)>=0)return 1;return 0};s.lt=function(h){var s=this,lft=s.linkDownloadFileTypes,lef=s.linkExternalFilters,lif=s.linkInternalFilters;lif=lif?lif:s.wd.locatio"
++"n.hostname;h=h.toLowerCase();if(s.trackDownloadLinks&&lft&&s.pt(lft,',','ltdf',h))return 'd';if(s.trackExternalLinks&&h.substring(0,1)!='#'&&(lef||lif)&&(!lef||s.pt(lef,',','ltef',h))&&(!lif||!s.pt"
++"(lif,',','ltef',h)))return 'e';return ''};s.lc=new Function('e','var s=s_c_il['+s._in+'],b=s.eh(this,\"onclick\");s.lnk=s.co(this);s.t();s.lnk=0;if(b)return this[b](e);return true');s.bc=new Functi"
++"on('e','var s=s_c_il['+s._in+'],f,tcf;if(s.d&&s.d.all&&s.d.all.cppXYctnr)return;s.eo=e.srcElement?e.srcElement:e.target;tcf=new Function(\"s\",\"var e;try{if(s.eo&&(s.eo.tagName||s.eo.parentElement"
++"||s.eo.parentNode))s.t()}catch(e){}\");tcf(s);s.eo=0');s.oh=function(o){var s=this,l=s.wd.location,h=o.href?o.href:'',i,j,k,p;i=h.indexOf(':');j=h.indexOf('?');k=h.indexOf('/');if(h&&(i<0||(j>=0&&i"
++">j)||(k>=0&&i>k))){p=o.protocol&&o.protocol.length>1?o.protocol:(l.protocol?l.protocol:'');i=l.pathname.lastIndexOf('/');h=(p?p+'//':'')+(o.host?o.host:(l.host?l.host:''))+(h.substring(0,1)!='/'?l."
++"pathname.substring(0,i<0?0:i)+'/':'')+h}return h};s.ot=function(o){var t=o.tagName;t=t&&t.toUpperCase?t.toUpperCase():'';if(t=='SHAPE')t='';if(t){if((t=='INPUT'||t=='BUTTON')&&o.type&&o.type.toUppe"
++"rCase)t=o.type.toUpperCase();else if(!t&&o.href)t='A';}return t};s.oid=function(o){var s=this,t=s.ot(o),p,c,n='',x=0;if(t&&!o.s_oid){p=o.protocol;c=o.onclick;if(o.href&&(t=='A'||t=='AREA')&&(!c||!p"
++"||p.toLowerCase().indexOf('javascript')<0))n=s.oh(o);else if(c){n=s.rep(s.rep(s.rep(s.rep(''+c,\"\\r\",''),\"\\n\",''),\"\\t\",''),' ','');x=2}else if(t=='INPUT'||t=='SUBMIT'){if(o.value)n=o.value;"
++"else if(o.innerText)n=o.innerText;else if(o.textContent)n=o.textContent;x=3}else if(o.src&&t=='IMAGE')n=o.src;if(n){o.s_oid=s.fl(n,100);o.s_oidt=x}}return o.s_oid};s.rqf=function(t,un){var s=this,e"
++"=t.indexOf('='),u=e>=0?','+t.substring(0,e)+',':'';return u&&u.indexOf(','+un+',')>=0?s.epa(t.substring(e+1)):''};s.rq=function(un){var s=this,c=un.indexOf(','),v=s.c_r('s_sq'),q='';if(c<0)return s"
++".pt(v,'&','rqf',un);return s.pt(un,',','rq',0)};s.sqp=function(t,a){var s=this,e=t.indexOf('='),q=e<0?'':s.epa(t.substring(e+1));s.sqq[q]='';if(e>=0)s.pt(t.substring(0,e),',','sqs',q);return 0};s.s"
++"qs=function(un,q){var s=this;s.squ[un]=q;return 0};s.sq=function(q){var s=this,k='s_sq',v=s.c_r(k),x,c=0;s.sqq=new Object;s.squ=new Object;s.sqq[q]='';s.pt(v,'&','sqp',0);s.pt(s.un,',','sqs',q);v='"
++"';for(x in s.squ)if(x&&(!Object||!Object.prototype||!Object.prototype[x]))s.sqq[s.squ[x]]+=(s.sqq[s.squ[x]]?',':'')+x;for(x in s.sqq)if(x&&(!Object||!Object.prototype||!Object.prototype[x])&&s.sqq["
++"x]&&(x==q||c<2)){v+=(v?'&':'')+s.sqq[x]+'='+s.ape(x);c++}return s.c_w(k,v,0)};s.wdl=new Function('e','var s=s_c_il['+s._in+'],r=true,b=s.eh(s.wd,\"onload\"),i,o,oc;if(b)r=this[b](e);for(i=0;i<s.d.l"
++"inks.length;i++){o=s.d.links[i];oc=o.onclick?\"\"+o.onclick:\"\";if((oc.indexOf(\"s_gs(\")<0||oc.indexOf(\".s_oc(\")>=0)&&oc.indexOf(\".tl(\")<0)s.eh(o,\"onclick\",0,s.lc);}return r');s.wds=functio"
++"n(){var s=this;if(s.apv>3&&(!s.isie||!s.ismac||s.apv>=5)){if(s.b&&s.b.attachEvent)s.b.attachEvent('onclick',s.bc);else if(s.b&&s.b.addEventListener)s.b.addEventListener('click',s.bc,false);else s.e"
++"h(s.wd,'onload',0,s.wdl)}};s.vs=function(x){var s=this,v=s.visitorSampling,g=s.visitorSamplingGroup,k='s_vsn_'+s.un+(g?'_'+g:''),n=s.c_r(k),e=new Date,y=e.getYear();e.setYear(y+10+(y<1900?1900:0));"
++"if(v){v*=100;if(!n){if(!s.c_w(k,x,e))return 0;n=x}if(n%10000>v)return 0}return 1};s.dyasmf=function(t,m){if(t&&m&&m.indexOf(t)>=0)return 1;return 0};s.dyasf=function(t,m){var s=this,i=t?t.indexOf('"
++"='):-1,n,x;if(i>=0&&m){var n=t.substring(0,i),x=t.substring(i+1);if(s.pt(x,',','dyasmf',m))return n}return 0};s.uns=function(){var s=this,x=s.dynamicAccountSelection,l=s.dynamicAccountList,m=s.dyna"
++"micAccountMatch,n,i;s.un=s.un.toLowerCase();if(x&&l){if(!m)m=s.wd.location.host;if(!m.toLowerCase)m=''+m;l=l.toLowerCase();m=m.toLowerCase();n=s.pt(l,';','dyasf',m);if(n)s.un=n}i=s.un.indexOf(',');"
++"s.fun=i<0?s.un:s.un.substring(0,i)};s.sa=function(un){var s=this;s.un=un;if(!s.oun)s.oun=un;else if((','+s.oun+',').indexOf(','+un+',')<0)s.oun+=','+un;s.uns()};s.m_i=function(n,a){var s=this,m,f=n"
++".substring(0,1),r,l,i;if(!s.m_l)s.m_l=new Object;if(!s.m_nl)s.m_nl=new Array;m=s.m_l[n];if(!a&&m&&m._e&&!m._i)s.m_a(n);if(!m){m=new Object,m._c='s_m';m._in=s.wd.s_c_in;m._il=s._il;m._il[m._in]=m;s."
++"wd.s_c_in++;m.s=s;m._n=n;m._l=new Array('_c','_in','_il','_i','_e','_d','_dl','s','n','_r','_g','_g1','_t','_t1','_x','_x1','_rs','_rr','_l');s.m_l[n]=m;s.m_nl[s.m_nl.length]=n}else if(m._r&&!m._m)"
++"{r=m._r;r._m=m;l=m._l;for(i=0;i<l.length;i++)if(m[l[i]])r[l[i]]=m[l[i]];r._il[r._in]=r;m=s.m_l[n]=r}if(f==f.toUpperCase())s[n]=m;return m};s.m_a=new Function('n','g','e','if(!g)g=\"m_\"+n;var s=s_c"
++"_il['+s._in+'],c=s[g+\"_c\"],m,x,f=0;if(!c)c=s.wd[\"s_\"+g+\"_c\"];if(c&&s_d)s[g]=new Function(\"s\",s_ft(s_d(c)));x=s[g];if(!x)x=s.wd[\\'s_\\'+g];if(!x)x=s.wd[g];m=s.m_i(n,1);if(x&&(!m._i||g!=\"m_"
++"\"+n)){m._i=f=1;if((\"\"+x).indexOf(\"function\")>=0)x(s);else s.m_m(\"x\",n,x,e)}m=s.m_i(n,1);if(m._dl)m._dl=m._d=0;s.dlt();return f');s.m_m=function(t,n,d,e){t='_'+t;var s=this,i,x,m,f='_'+t,r=0,"
++"u;if(s.m_l&&s.m_nl)for(i=0;i<s.m_nl.length;i++){x=s.m_nl[i];if(!n||x==n){m=s.m_i(x);u=m[t];if(u){if((''+u).indexOf('function')>=0){if(d&&e)u=m[t](d,e);else if(d)u=m[t](d);else u=m[t]()}}if(u)r=1;u="
++"m[t+1];if(u&&!m[f]){if((''+u).indexOf('function')>=0){if(d&&e)u=m[t+1](d,e);else if(d)u=m[t+1](d);else u=m[t+1]()}}m[f]=1;if(u)r=1}}return r};s.m_ll=function(){var s=this,g=s.m_dl,i,o;if(g)for(i=0;"
++"i<g.length;i++){o=g[i];if(o)s.loadModule(o.n,o.u,o.d,o.l,o.e,1);g[i]=0}};s.loadModule=function(n,u,d,l,e,ln){var s=this,m=0,i,g,o=0,f1,f2,c=s.h?s.h:s.b,b,tcf;if(n){i=n.indexOf(':');if(i>=0){g=n.sub"
++"string(i+1);n=n.substring(0,i)}else g=\"m_\"+n;m=s.m_i(n)}if((l||(n&&!s.m_a(n,g)))&&u&&s.d&&c&&s.d.createElement){if(d){m._d=1;m._dl=1}if(ln){if(s.ssl)u=s.rep(u,'http:','https:');i='s_s:'+s._in+':'"
++"+n+':'+g;b='var s=s_c_il['+s._in+'],o=s.d.getElementById(\"'+i+'\");if(s&&o){if(!o.l&&s.wd.'+g+'){o.l=1;if(o.i)clearTimeout(o.i);o.i=0;s.m_a(\"'+n+'\",\"'+g+'\"'+(e?',\"'+e+'\"':'')+')}';f2=b+'o.c+"
++"+;if(!s.maxDelay)s.maxDelay=250;if(!o.l&&o.c<(s.maxDelay*2)/100)o.i=setTimeout(o.f2,100)}';f1=new Function('e',b+'}');tcf=new Function('s','c','i','u','f1','f2','var e,o=0;try{o=s.d.createElement("
++"\"script\");if(o){o.type=\"text/javascript\";'+(n?'o.id=i;o.defer=true;o.onload=o.onreadystatechange=f1;o.f2=f2;o.l=0;':'')+'o.src=u;c.appendChild(o);'+(n?'o.c=0;o.i=setTimeout(f2,100)':'')+'}}catc"
++"h(e){o=0}return o');o=tcf(s,c,i,u,f1,f2)}else{o=new Object;o.n=n+':'+g;o.u=u;o.d=d;o.l=l;o.e=e;g=s.m_dl;if(!g)g=s.m_dl=new Array;i=0;while(i<g.length&&g[i])i++;g[i]=o}}else if(n){m=s.m_i(n);m._e=1}"
++"return m};s.vo1=function(t,a){if(a[t]||a['!'+t])this[t]=a[t]};s.vo2=function(t,a){if(!a[t]){a[t]=this[t];if(!a[t])a['!'+t]=1}};s.dlt=new Function('var s=s_c_il['+s._in+'],d=new Date,i,vo,f=0;if(s.d"
++"ll)for(i=0;i<s.dll.length;i++){vo=s.dll[i];if(vo){if(!s.m_m(\"d\")||d.getTime()-vo._t>=s.maxDelay){s.dll[i]=0;s.t(vo)}else f=1}}if(s.dli)clearTimeout(s.dli);s.dli=0;if(f){if(!s.dli)s.dli=setTimeout"
++"(s.dlt,s.maxDelay)}else s.dll=0');s.dl=function(vo){var s=this,d=new Date;if(!vo)vo=new Object;s.pt(s.vl_g,',','vo2',vo);vo._t=d.getTime();if(!s.dll)s.dll=new Array;s.dll[s.dll.length]=vo;if(!s.max"
++"Delay)s.maxDelay=250;s.dlt()};s.t=function(vo,id){var s=this,trk=1,tm=new Date,sed=Math&&Math.random?Math.floor(Math.random()*10000000000000):tm.getTime(),sess='s'+Math.floor(tm.getTime()/10800000)"
++"%10+sed,y=tm.getYear(),vt=tm.getDate()+'/'+tm.getMonth()+'/'+(y<1900?y+1900:y)+' '+tm.getHours()+':'+tm.getMinutes()+':'+tm.getSeconds()+' '+tm.getDay()+' '+tm.getTimezoneOffset(),tcf,tfs=s.gtfs(),"
++"ta='',q='',qs='',code='',vb=new Object;s.gl(s.vl_g);s.uns();s.m_ll();if(!s.td){var tl=tfs.location,a,o,i,x='',c='',v='',p='',bw='',bh='',j='1.0',k=s.c_w('s_cc','true',0)?'Y':'N',hp='',ct='',pn=0,ps"
++";if(String&&String.prototype){j='1.1';if(j.match){j='1.2';if(tm.setUTCDate){j='1.3';if(s.isie&&s.ismac&&s.apv>=5)j='1.4';if(pn.toPrecision){j='1.5';a=new Array;if(a.forEach){j='1.6';i=0;o=new Objec"
++"t;tcf=new Function('o','var e,i=0;try{i=new Iterator(o)}catch(e){}return i');i=tcf(o);if(i&&i.next)j='1.7'}}}}}if(s.apv>=4)x=screen.width+'x'+screen.height;if(s.isns||s.isopera){if(s.apv>=3){v=s.n."
++"javaEnabled()?'Y':'N';if(s.apv>=4){c=screen.pixelDepth;bw=s.wd.innerWidth;bh=s.wd.innerHeight}}s.pl=s.n.plugins}else if(s.isie){if(s.apv>=4){v=s.n.javaEnabled()?'Y':'N';c=screen.colorDepth;if(s.apv"
++">=5){bw=s.d.documentElement.offsetWidth;bh=s.d.documentElement.offsetHeight;if(!s.ismac&&s.b){tcf=new Function('s','tl','var e,hp=0;try{s.b.addBehavior(\"#default#homePage\");hp=s.b.isHomePage(tl)?"
++"\"Y\":\"N\"}catch(e){}return hp');hp=tcf(s,tl);tcf=new Function('s','var e,ct=0;try{s.b.addBehavior(\"#default#clientCaps\");ct=s.b.connectionType}catch(e){}return ct');ct=tcf(s)}}}else r=''}if(s.p"
++"l)while(pn<s.pl.length&&pn<30){ps=s.fl(s.pl[pn].name,100)+';';if(p.indexOf(ps)<0)p+=ps;pn++}s.resolution=x;s.colorDepth=c;s.javascriptVersion=j;s.javaEnabled=v;s.cookiesEnabled=k;s.browserWidth=bw;"
++"s.browserHeight=bh;s.connectionType=ct;s.homepage=hp;s.plugins=p;s.td=1}if(vo){s.pt(s.vl_g,',','vo2',vb);s.pt(s.vl_g,',','vo1',vo)}if(s.usePlugins)s.doPlugins(s);var l=s.wd.location,r=tfs.document."
++"referrer;if(!s.pageURL)s.pageURL=l.href?l.href:l;if(!s.referrer&&!s._1_referrer){s.referrer=r;s._1_referrer=1}if((vo&&vo._t)||!s.m_m('d')){s.m_m('g');if(s.lnk||s.eo){var o=s.eo?s.eo:s.lnk;if(!o)ret"
++"urn '';var p=s.pageName,w=1,t=s.ot(o),n=s.oid(o),x=o.s_oidt,h,l,i,oc;if(s.eo&&o==s.eo){while(o&&!n&&t!='BODY'){o=o.parentElement?o.parentElement:o.parentNode;if(!o)return '';t=s.ot(o);n=s.oid(o);x="
++"o.s_oidt}oc=o.onclick?''+o.onclick:'';if((oc.indexOf(\"s_gs(\")>=0&&oc.indexOf(\".s_oc(\")<0)||oc.indexOf(\".tl(\")>=0)return ''}ta=n?o.target:1;h=s.oh(o);i=h.indexOf('?');h=s.linkLeaveQueryString|"
++"|i<0?h:h.substring(0,i);l=s.linkName;t=s.linkType?s.linkType.toLowerCase():s.lt(h);if(t&&(h||l))q+='&pe=lnk_'+(t=='d'||t=='e'?s.ape(t):'o')+(h?'&pev1='+s.ape(h):'')+(l?'&pev2='+s.ape(l):'');else tr"
++"k=0;if(s.trackInlineStats){if(!p){p=s.pageURL;w=0}t=s.ot(o);i=o.sourceIndex;if(s.gg('objectID')){n=s.gg('objectID');x=1;i=1}if(p&&n&&t)qs='&pid='+s.ape(s.fl(p,255))+(w?'&pidt='+w:'')+'&oid='+s.ape("
++"s.fl(n,100))+(x?'&oidt='+x:'')+'&ot='+s.ape(t)+(i?'&oi='+i:'')}}if(!trk&&!qs)return '';s.sampled=s.vs(sed);if(trk){if(s.sampled)code=s.mr(sess,(vt?'&t='+s.ape(vt):'')+s.hav()+q+(qs?qs:s.rq(s.un)),0"
++",id,ta);qs='';s.m_m('t');if(s.p_r)s.p_r();s.referrer=''}s.sq(qs);}else{s.dl(vo);}if(vo)s.pt(s.vl_g,',','vo1',vb);s.lnk=s.eo=s.linkName=s.linkType=s.wd.s_objectID=s.ppu=s.pe=s.pev1=s.pev2=s.pev3='';"
++"if(s.pg)s.wd.s_lnk=s.wd.s_eo=s.wd.s_linkName=s.wd.s_linkType='';if(!id&&!s.tc){s.tc=1;s.flushBufferedRequests()}return code};s.tl=function(o,t,n,vo){var s=this;s.lnk=s.co(o);s.linkType=t;s.linkName"
++"=n;s.t(vo)};if(pg){s.wd.s_co=function(o){var s=s_gi(\"_\",1,1);return s.co(o)};s.wd.s_gs=function(un){var s=s_gi(un,1,1);return s.t()};s.wd.s_dc=function(un){var s=s_gi(un,1);return s.t()}}s.ssl=(s"
++".wd.location.protocol.toLowerCase().indexOf('https')>=0);s.d=document;s.b=s.d.body;if(s.d.getElementsByTagName){s.h=s.d.getElementsByTagName('HEAD');if(s.h)s.h=s.h[0]}s.n=navigator;s.u=s.n.userAgen"
++"t;s.ns6=s.u.indexOf('Netscape6/');var apn=s.n.appName,v=s.n.appVersion,ie=v.indexOf('MSIE '),o=s.u.indexOf('Opera '),i;if(v.indexOf('Opera')>=0||o>0)apn='Opera';s.isie=(apn=='Microsoft Internet Exp"
++"lorer');s.isns=(apn=='Netscape');s.isopera=(apn=='Opera');s.ismac=(s.u.indexOf('Mac')>=0);if(o>0)s.apv=parseFloat(s.u.substring(o+6));else if(ie>0){s.apv=parseInt(i=v.substring(ie+5));if(s.apv>3)s."
++"apv=parseFloat(i)}else if(s.ns6>0)s.apv=parseFloat(s.u.substring(s.ns6+10));else s.apv=parseFloat(v);s.em=0;if(String.fromCharCode){i=escape(String.fromCharCode(256)).toUpperCase();s.em=(i=='%C4%80"
++"'?2:(i=='%U0100'?1:0))}s.sa(un);s.vl_l='dynamicVariablePrefix,visitorID,vmk,visitorMigrationKey,visitorMigrationServer,visitorMigrationServerSecure,ppu,charSet,visitorNamespace,cookieDomainPeriods,"
++"cookieLifetime,pageName,pageURL,referrer,currencyCode';s.va_l=s.sp(s.vl_l,',');s.vl_t=s.vl_l+',variableProvider,channel,server,pageType,transactionID,purchaseID,campaign,state,zip,events,products,l"
++"inkName,linkType';for(var n=1;n<51;n++)s.vl_t+=',prop'+n+',eVar'+n+',hier'+n+',list'+n;s.vl_l2=',tnt,pe,pev1,pev2,pev3,resolution,colorDepth,javascriptVersion,javaEnabled,cookiesEnabled,browserWidt"
++"h,browserHeight,connectionType,homepage,plugins';s.vl_t+=s.vl_l2;s.va_t=s.sp(s.vl_t,',');s.vl_g=s.vl_t+',trackingServer,trackingServerSecure,trackingServerBase,fpCookieDomainPeriods,disableBuffered"
++"Requests,mobile,visitorSampling,visitorSamplingGroup,dynamicAccountSelection,dynamicAccountList,dynamicAccountMatch,trackDownloadLinks,trackExternalLinks,trackInlineStats,linkLeaveQueryString,linkD"
++"ownloadFileTypes,linkExternalFilters,linkInternalFilters,linkTrackVars,linkTrackEvents,linkNames,lnk,eo,_1_referrer';s.va_g=s.sp(s.vl_g,',');s.pg=pg;s.gl(s.vl_g);if(!ss)s.wds()",
+w=window,l=w.s_c_il,n=navigator,u=n.userAgent,v=n.appVersion,e=v.indexOf('MSIE '),m=u.indexOf('Netscape6/'),a,i,s;if(un){un=un.toLowerCase();if(l)for(i=0;i<l.length;i++){s=l[i];if(!s._c||s._c=='s_c'){if(s.oun==un)return s;else if(s.fs&&s.sa&&s.fs(s.oun,un)){s.sa(un);return s}}}}w.s_an='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+w.s_sp=new Function("x","d","var a=new Array,i=0,j;if(x){if(x.split)a=x.split(d);else if(!d)for(i=0;i<x.length;i++)a[a.length]=x.substring(i,i+1);else while(i>=0){j=x.indexOf(d,i);a[a.length]=x.subst"
++"ring(i,j<0?x.length:j);i=j;if(i>=0)i+=d.length}}return a");
+w.s_jn=new Function("a","d","var x='',i,j=a.length;if(a&&j>0){x=a[0];if(j>1){if(a.join)x=a.join(d);else for(i=1;i<j;i++)x+=d+a[i]}}return x");
+w.s_rep=new Function("x","o","n","return s_jn(s_sp(x,o),n)");
+w.s_d=new Function("x","var t='`^@$#',l=s_an,l2=new Object,x2,d,b=0,k,i=x.lastIndexOf('~~'),j,v,w;if(i>0){d=x.substring(0,i);x=x.substring(i+2);l=s_sp(l,'');for(i=0;i<62;i++)l2[l[i]]=i;t=s_sp(t,'');d"
++"=s_sp(d,'~');i=0;while(i<5){v=0;if(x.indexOf(t[i])>=0) {x2=s_sp(x,t[i]);for(j=1;j<x2.length;j++){k=x2[j].substring(0,1);w=t[i]+k;if(k!=' '){v=1;w=d[b+l2[k]]}x2[j]=w+x2[j].substring(1)}}if(v)x=s_jn("
++"x2,'');else{w=t[i]+' ';if(x.indexOf(w)>=0)x=s_rep(x,w,t[i]);i++;b+=62}}}return x");
+w.s_fe=new Function("c","return s_rep(s_rep(s_rep(c,'\\\\','\\\\\\\\'),'\"','\\\\\"'),\"\\n\",\"\\\\n\")");
+w.s_fa=new Function("f","var s=f.indexOf('(')+1,e=f.indexOf(')'),a='',c;while(s>=0&&s<e){c=f.substring(s,s+1);if(c==',')a+='\",\"';else if((\"\\n\\r\\t \").indexOf(c)<0)a+=c;s++}return a?'\"'+a+'\"':"
++"a");
+w.s_ft=new Function("c","c+='';var s,e,o,a,d,q,f,h,x;s=c.indexOf('=function(');while(s>=0){s++;d=1;q='';x=0;f=c.substring(s);a=s_fa(f);e=o=c.indexOf('{',s);e++;while(d>0){h=c.substring(e,e+1);if(q){i"
++"f(h==q&&!x)q='';if(h=='\\\\')x=x?0:1;else x=0}else{if(h=='\"'||h==\"'\")q=h;if(h=='{')d++;if(h=='}')d--}if(d>0)e++}c=c.substring(0,s)+'new Function('+(a?a+',':'')+'\"'+s_fe(c.substring(o+1,e))+'\")"
++"'+c.substring(e+1);s=c.indexOf('=function(')}return c;");
+c=s_d(c);if(e>0){a=parseInt(i=v.substring(e+5));if(a>3)a=parseFloat(i)}else if(m>0)a=parseFloat(u.substring(m+10));else a=parseFloat(v);if(a>=5&&v.indexOf('Opera')<0&&u.indexOf('Opera')<0){w.s_c=new Function("un","pg","ss","var s=this;"+c);return new s_c(un,pg,ss)}else s=new Function("un","pg","ss","var s=new Object;"+s_ft(c)+";return s");return s(un,pg,ss)}
+
+;
+/*!
+ * Socialite v2.1
+ * http://socialitejs.com
+ * Copyright (c) 2011 David Bushell
+ * Dual-licensed under the BSD or MIT licenses: http://socialitejs.com/license.txt
+ *
+ * Since v2.1 - Hau Vong
+ *    Add support to new face book share button
+ */
+window.Socialite = (function(window, document, undefined)
+{
+	'use strict';
+
+	var uid = 0,
+		instances = [],
+		networks = {},
+		widgets = {},
+		rstate = /^($|loaded|complete)/,
+		euc = window.encodeURIComponent;
+
+	var socialite = {
+		settings: {},
+		trim: function(str)
+		{
+			return str.trim ? str.trim() : str.replace(/^\s+|\s+$/g, '');
+		},
+		hasClass: function(el, cn)
+		{
+			return (' ' + el.className + ' ').indexOf(' ' + cn + ' ') !== -1;
+		},
+		addClass: function(el, cn)
+		{
+			if (!socialite.hasClass(el, cn)) {
+				el.className = (el.className === '') ? cn : el.className + ' ' + cn;
+			}
+		},
+		removeClass: function(el, cn)
+		{
+			el.className = socialite.trim(' ' + el.className + ' '.replace(' ' + cn + ' ', ' '));
+		},
+		/**
+		 * Copy properties of one object to another
+		 */
+		extendObject: function(to, from, overwrite)
+		{
+			for (var prop in from) {
+				var hasProp = to[prop] !== undefined;
+				if (hasProp && typeof from[prop] === 'object') {
+					socialite.extendObject(to[prop], from[prop], overwrite);
+				} else if (overwrite || !hasProp) {
+					to[prop] = from[prop];
+				}
+			}
+		},
+		/**
+		 * Return elements with a specific class
+		 *
+		 * @param context - containing element to search within
+		 * @param cn      - class name to search for
+		 *
+		 */
+		getElements: function(context, cn)
+		{
+			// copy to a new array to avoid a live NodeList
+			var i = 0,
+					el = [],
+					gcn = !!context.getElementsByClassName,
+					all = gcn ? context.getElementsByClassName(cn) : context.getElementsByTagName('*');
+			for (; i < all.length; i++) {
+				if (gcn || socialite.hasClass(all[i], cn)) {
+					el.push(all[i]);
+				}
+			}
+			return el;
+		},
+		/**
+		 * Return data-* attributes of element as a query string (or object)
+		 *
+		 * @param el       - the element
+		 * @param noprefix - (optional) if true, remove "data-" from attribute names
+		 * @param nostr    - (optional) if true, return attributes in an object
+		 *
+		 */
+		getDataAttributes: function(el, noprefix, nostr)
+		{
+			var i = 0,
+					str = '',
+					obj = {},
+					attr = el.attributes;
+			for (; i < attr.length; i++) {
+				var key = attr[i].name,
+						  val = attr[i].value;
+				if (val.length && key.indexOf('data-') === 0) {
+					if (noprefix) {
+						key = key.substring(5);
+					}
+					if (nostr) {
+						obj[key] = val;
+					} else {
+						str += euc(key) + '=' + euc(val) + '&';
+					}
+				}
+			}
+			return nostr ? obj : str;
+		},
+		/**
+		 * Copy data-* attributes from one element to another
+		 *
+		 * @param from     - element to copy from
+		 * @param to       - element to copy to
+		 * @param noprefix - (optional) if true, remove "data-" from attribute names
+		 * @param nohyphen - (optional) if true, convert hyphens to underscores in the attribute names
+		 *
+		 */
+		copyDataAttributes: function(from, to, noprefix, nohyphen)
+		{
+			// `nohyphen` was needed for Facebook's <fb:like> elements - remove as no longer used?
+			var attr = socialite.getDataAttributes(from, noprefix, true);
+			for (var i in attr) {
+				to.setAttribute(nohyphen ? i.replace(/-/g, '_') : i, attr[i]);
+			}
+		},
+		/**
+		 * Create iframe element
+		 *
+		 * @param src      - iframe URL (src attribute)
+		 * @param instance - (optional) socialite instance to activate on iframe load
+		 *
+		 */
+		createIframe: function(src, instance)
+		{
+			// Socialite v2 has slashed the amount of manual iframe creation, we should aim to avoid this entirely
+			var iframe = document.createElement('iframe');
+			iframe.style.cssText = 'overflow: hidden; border: none;';
+			socialite.extendObject(iframe, {src: src, allowtransparency: 'true', frameborder: '0', scrolling: 'no'}, true);
+			if (instance) {
+				iframe.onload = iframe.onreadystatechange = function()
+				{
+					if (rstate.test(iframe.readyState || '')) {
+						iframe.onload = iframe.onreadystatechange = null;
+						socialite.activateInstance(instance);
+					}
+				};
+			}
+			return iframe;
+		},
+		/**
+		 * Returns true if network script has loaded
+		 */
+		networkReady: function(name)
+		{
+			return networks[name] ? networks[name].loaded : undefined;
+		},
+		/**
+		 * Append network script to the document
+		 */
+		appendNetwork: function(network)
+		{
+			// the activation process is getting a little confusing for some networks
+			// it would appear a script load event does not mean its global object exists yet
+			// therefore the first call to `activateAll` may have no effect whereas the second call does, e.g. via `window.twttr.ready`
+
+			if (!network || network.appended) {
+				return;
+			}
+			// `network.append` and `network.onload` can cancel progress
+			if (typeof network.append === 'function' && network.append(network) === false) {
+				network.appended = network.loaded = true;
+				socialite.activateAll(network);
+				return;
+			}
+
+			if (network.script) {
+				network.el = document.createElement('script');
+				socialite.extendObject(network.el, network.script, true);
+				network.el.async = true;
+				network.el.onload = network.el.onreadystatechange = function()
+				{
+					if (rstate.test(network.el.readyState || '')) {
+						network.el.onload = network.el.onreadystatechange = null;
+						network.loaded = true;
+						if (typeof network.onload === 'function' && network.onload(network) === false) {
+							return;
+						}
+						socialite.activateAll(network);
+					}
+				};
+				document.body.appendChild(network.el);
+			}
+			network.appended = true;
+		},
+		/**
+		 * Remove network script from the document
+		 */
+		removeNetwork: function(network)
+		{
+			if (!socialite.networkReady(network.name)) {
+				return false;
+			}
+			if (network.el.parentNode) {
+				network.el.parentNode.removeChild(network.el);
+			}
+			return !(network.appended = network.loaded = false);
+		},
+		/**
+		 * Remove and re-append network script to the document
+		 */
+		reloadNetwork: function(name)
+		{
+			// This is a last-ditch effort for half-baked scripts
+			var network = networks[name];
+			if (network && socialite.removeNetwork(network)) {
+				socialite.appendNetwork(network);
+			}
+		},
+		/**
+		 * Create new Socialite instance
+		 *
+		 * @param el     - parent element that will hold the new instance
+		 * @param widget - widget the instance belongs to
+		 *
+		 */
+		createInstance: function(el, widget)
+		{
+			var proceed = true,
+					  instance = {
+				el: el,
+				uid: uid++,
+				widget: widget
+			};
+			instances.push(instance);
+			if (widget.process !== undefined) {
+				proceed = (typeof widget.process === 'function') ? widget.process(instance) : false;
+			}
+			if (proceed) {
+				socialite.processInstance(instance);
+			}
+			instance.el.setAttribute('data-socialite', instance.uid);
+			instance.el.className = 'socialite ' + widget.name + ' socialite-instance';
+			return instance;
+		},
+		/**
+		 * Process a socialite instance to an intermediate state prior to load
+		 */
+		processInstance: function(instance)
+		{
+			var el = instance.el;
+			instance.el = document.createElement('div');
+			instance.el.className = el.className;
+			socialite.copyDataAttributes(el, instance.el);
+			// stop over-zealous scripts from activating all instances
+			if (el.nodeName.toLowerCase() === 'a' && !el.getAttribute('data-default-href')) {
+				instance.el.setAttribute('data-default-href', el.getAttribute('href'));
+			}
+			var parent = el.parentNode;
+			parent.insertBefore(instance.el, el);
+			parent.removeChild(el);
+		},
+		/**
+		 * Activate a socialite instance
+		 */
+		activateInstance: function(instance)
+		{
+			if (instance && !instance.loaded) {
+				instance.loaded = true;
+				if (typeof instance.widget.activate === 'function') {
+					instance.widget.activate(instance);
+				}
+				socialite.addClass(instance.el, 'socialite-loaded');
+				return instance.onload ? instance.onload(instance.el) : null;
+			}
+		},
+		/**
+		 * Activate all socialite instances belonging to a network
+		 */
+		activateAll: function(network)
+		{
+			if (typeof network === 'string') {
+				network = networks[network];
+			}
+			for (var i = 0; i < instances.length; i++) {
+				var instance = instances[i];
+				if (instance.init && instance.widget.network === network) {
+					socialite.activateInstance(instance);
+				}
+			}
+		},
+		/**
+		 * Load socialite instances
+		 *
+		 * @param context - (optional) containing element to search within
+		 * @param el      - (optional) individual or an array of elements to load
+		 * @param w       - (optional) widget name
+		 * @param onload  - (optional) function to call after each socialite instance has loaded
+		 * @param process - (optional) process but don't load network (if true)
+		 *
+		 */
+		load: function(context, el, w, onload, process)
+		{
+			// use document as context if unspecified
+			context = (context && typeof context === 'object' && context.nodeType === 1) ? context : document;
+
+			// if no elements search within the context and recurse
+			if (!el || typeof el !== 'object') {
+				socialite.load(context, socialite.getElements(context, 'socialite'), w, onload, process);
+				return;
+			}
+
+			var i;
+
+			// if array of elements load each one individually
+			if (/Array/.test(Object.prototype.toString.call(el))) {
+				for (i = 0; i < el.length; i++) {
+					socialite.load(context, el[i], w, onload, process);
+				}
+				return;
+			}
+
+			// nothing was found...
+			if (el.nodeType !== 1) {
+				return;
+			}
+
+			// if widget name not specified search within the element classes
+			if (!w || !widgets[w]) {
+				w = null;
+				var classes = el.className.split(' ');
+				for (i = 0; i < classes.length; i++) {
+					if (widgets[classes[i]]) {
+						w = classes[i];
+						break;
+					}
+				}
+				if (!w) {
+					return;
+				}
+			}
+
+			// find or create the Socialite instance
+			var instance,
+					  widget = widgets[w],
+					  sid = parseInt(el.getAttribute('data-socialite'), 10);
+			if (!isNaN(sid)) {
+				for (i = 0; i < instances.length; i++) {
+					if (instances[i].uid === sid) {
+						instance = instances[i];
+						break;
+					}
+				}
+			} else {
+				instance = socialite.createInstance(el, widget);
+			}
+
+			// return if just processing (or no instance found)
+			if (process || !instance) {
+				return;
+			}
+
+			// initialise the instance
+			if (!instance.init) {
+				instance.init = true;
+				instance.onload = (typeof onload === 'function') ? onload : null;
+				widget.init(instance);
+			}
+
+			// append the parent network (all instances will be activated onload)
+			// or activate immediately if network has already loaded
+			if (!widget.network.appended) {
+				socialite.appendNetwork(widget.network);
+			} else {
+				if (socialite.networkReady(widget.network.name)) {
+					socialite.activateInstance(instance);
+				}
+			}
+		},
+		/**
+		 * Load a single element
+		 *
+		 * @param el     - an individual element
+		 * @param w      - (optional) widget for this socialite instance
+		 * @param onload - (optional) function to call once each instance has loaded
+		 *
+		 */
+		activate: function(el, w, onload)
+		{
+			// skip the first few steps
+			window.Socialite.load(null, el, w, onload);
+		},
+		/**
+		 * Process elements to an intermediate state prior to load
+		 *
+		 * @param context - containing element to search within
+		 * @param el      - (optional) individual or an array of elements to load
+		 * @param w       - (optional) widget name
+		 *
+		 */
+		process: function(context, el, w)
+		{
+			// stop before widget initialises instance
+			window.Socialite.load(context, el, w, null, true);
+		},
+		/**
+		 * Add a new social network
+		 *
+		 * @param name   - unique name for network
+		 * @param params - additional data and callbacks
+		 *
+		 */
+		network: function(n, params)
+		{
+			networks[n] = {
+				name: n,
+				el: null,
+				appended: false,
+				loaded: false,
+				widgets: {}
+			};
+			if (params) {
+				socialite.extendObject(networks[n], params);
+			}
+		},
+		/**
+		 * Add a new social widget
+		 *
+		 * @param name   - name of owner network
+		 * @param w      - unique name for widget
+		 * @param params - additional data and callbacks
+		 *
+		 */
+		widget: function(n, w, params)
+		{
+			params.name = n + '-' + w;
+			if (!networks[n] || widgets[params.name]) {
+				return;
+			}
+			params.network = networks[n];
+			networks[n].widgets[w] = widgets[params.name] = params;
+		},
+		/**
+		 * Change the default Socialite settings for each network
+		 */
+		setup: function(params)
+		{
+			socialite.extendObject(socialite.settings, params, true);
+		}
+
+	};
+
+	return socialite;
+
+})(window, window.document);
+
+/**
+ * Socialite Extensions - Pick 'n' Mix!
+ */
+(function(window, document, Socialite, undefined)
+{
+
+	// default to the Queen's English
+	Socialite.setup({
+		facebook: {
+			lang: 'en_GB',
+			appId: null
+		},
+		twitter: {
+			lang: 'en'
+		},
+		googleplus: {
+			lang: 'en-GB'
+		}
+	});
+
+
+	// Facebook
+	// http://developers.facebook.com/docs/reference/plugins/like/
+	// http://developers.facebook.com/docs/reference/javascript/FB.init/
+
+	Socialite.network('facebook', {
+		script: {
+			src: '//connect.facebook.net/{{language}}/all.js',
+			id: 'facebook-jssdk'
+		},
+		append: function(network)
+		{
+			var fb = document.createElement('div'),
+					settings = Socialite.settings.facebook,
+					events = {onlike: 'edge.create', onunlike: 'edge.remove', onsend: 'message.send'};
+			fb.id = 'fb-root';
+			document.body.appendChild(fb);
+			network.script.src = network.script.src.replace('{{language}}', settings.lang);
+			window.fbAsyncInit = function() {
+
+				var options = {
+					appId: settings.appId,
+					xfbml: true
+				};
+
+				// use options here to support fb init override for future support
+				if (typeof settings.options === 'object') {
+					Socialite.extendObject(options, settings.options);
+				}
+
+				window.FB.init(options);
+				for (var e in events) {
+					if (typeof settings[e] === 'function') {
+						window.FB.Event.subscribe(events[e], settings[e]);
+					}
+				}
+			};
+		}
+	});
+
+	Socialite.widget('facebook', 'like', {
+		init: function(instance)
+		{
+			var el = document.createElement('div');
+			el.className = 'fb-like';
+			Socialite.copyDataAttributes(instance.el, el);
+			instance.el.appendChild(el);
+			if (window.FB && window.FB.XFBML) {
+				window.FB.XFBML.parse(instance.el);
+			}
+		}
+	});
+
+	// https://developers.facebook.com/blog/post/2013/11/06/introducing-new-like-and-share-buttons/
+	Socialite.widget('facebook', 'share', {
+		init: function(instance)
+		{
+			var el = document.createElement('div');
+			el.className = 'fb-share-button';
+			Socialite.copyDataAttributes(instance.el, el);
+			instance.el.appendChild(el);
+			if (window.FB && window.FB.XFBML) {
+				window.FB.XFBML.parse(instance.el);
+			}
+		}
+	});
+
+
+	// Twitter
+	// https://dev.twitter.com/docs/tweet-button/
+	// https://dev.twitter.com/docs/intents/events/
+	// https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSocial#twitter
+
+	Socialite.network('twitter', {
+		script: {
+			src: '//platform.twitter.com/widgets.js',
+			id: 'twitter-wjs',
+			charset: 'utf-8'
+		},
+		append: function()
+		{
+			var notwttr = (typeof window.twttr !== 'object'),
+					settings = Socialite.settings.twitter,
+					events = ['click', 'tweet', 'retweet', 'favorite', 'follow'];
+			if (notwttr) {
+				window.twttr = (t = {_e: [], ready: function(f) {
+						t._e.push(f);
+					}});
+			}
+			window.twttr.ready(function(twttr)
+			{
+				for (var i = 0; i < events.length; i++) {
+					var e = events[i];
+					if (typeof settings['on' + e] === 'function') {
+						twttr.events.bind(e, settings['on' + e]);
+					}
+				}
+				Socialite.activateAll('twitter');
+			});
+			return notwttr;
+		}
+	});
+
+	var twitterInit = function(instance)
+	{
+		var el = document.createElement('a');
+		el.className = instance.widget.name + '-button';
+		Socialite.copyDataAttributes(instance.el, el);
+		el.setAttribute('href', instance.el.getAttribute('data-default-href'));
+		el.setAttribute('data-lang', instance.el.getAttribute('data-lang') || Socialite.settings.twitter.lang);
+		instance.el.appendChild(el);
+	};
+
+	var twitterActivate = function(instance)
+	{
+		if (window.twttr && typeof window.twttr.widgets === 'object' && typeof window.twttr.widgets.load === 'function') {
+			window.twttr.widgets.load();
+		}
+	};
+
+	Socialite.widget('twitter', 'share', {init: twitterInit, activate: twitterActivate});
+	Socialite.widget('twitter', 'follow', {init: twitterInit, activate: twitterActivate});
+	Socialite.widget('twitter', 'hashtag', {init: twitterInit, activate: twitterActivate});
+	Socialite.widget('twitter', 'mention', {init: twitterInit, activate: twitterActivate});
+
+	Socialite.widget('twitter', 'embed', {
+		process: function(instance)
+		{
+			instance.innerEl = instance.el;
+			if (!instance.innerEl.getAttribute('data-lang')) {
+				instance.innerEl.setAttribute('data-lang', Socialite.settings.twitter.lang);
+			}
+			instance.el = document.createElement('div');
+			instance.el.className = instance.innerEl.className;
+			instance.innerEl.className = '';
+			instance.innerEl.parentNode.insertBefore(instance.el, instance.innerEl);
+			instance.el.appendChild(instance.innerEl);
+		},
+		init: function(instance)
+		{
+			instance.innerEl.className = 'twitter-tweet';
+		},
+		activate: twitterActivate
+	});
+
+
+	// Google+
+	// https://developers.google.com/+/plugins/+1button/
+	// Google does not support IE7
+
+	Socialite.network('googleplus', {
+		script: {
+			src: '//apis.google.com/js/plusone.js'
+		},
+		append: function(network)
+		{
+			if (window.gapi) {
+				return false;
+			}
+			window.___gcfg = {
+				lang: Socialite.settings.googleplus.lang,
+				parsetags: 'explicit'
+			};
+		}
+	});
+
+	var googleplusInit = function(instance)
+	{
+		var el = document.createElement('div');
+		el.className = 'g-' + instance.widget.gtype;
+		Socialite.copyDataAttributes(instance.el, el);
+		instance.el.appendChild(el);
+		instance.gplusEl = el;
+	};
+
+	var googleplusEvent = function(instance, callback) {
+		return (typeof callback !== 'function') ? null : function(data) {
+			callback(instance.el, data);
+		};
+	};
+
+	var googleplusActivate = function(instance)
+	{
+		var type = instance.widget.gtype;
+		if (window.gapi && window.gapi[type]) {
+			var settings = Socialite.settings.googleplus,
+					  params = Socialite.getDataAttributes(instance.el, true, true),
+					  events = ['onstartinteraction', 'onendinteraction', 'callback'];
+			for (var i = 0; i < events.length; i++) {
+				params[events[i]] = googleplusEvent(instance, settings[events[i]]);
+			}
+			window.gapi[type].render(instance.gplusEl, params);
+		}
+	};
+
+	Socialite.widget('googleplus', 'one', {init: googleplusInit, activate: googleplusActivate, gtype: 'plusone'});
+	Socialite.widget('googleplus', 'share', {init: googleplusInit, activate: googleplusActivate, gtype: 'plus'});
+	Socialite.widget('googleplus', 'badge', {init: googleplusInit, activate: googleplusActivate, gtype: 'plus'});
+
+
+	// LinkedIn
+	// http://developer.linkedin.com/plugins/share-button/
+
+	Socialite.network('linkedin', {
+		script: {
+			src: '//platform.linkedin.com/in.js'
+		}
+	});
+
+	var linkedinInit = function(instance)
+	{
+		var el = document.createElement('script');
+		el.type = 'IN/' + instance.widget.intype;
+		Socialite.copyDataAttributes(instance.el, el);
+		instance.el.appendChild(el);
+		if (typeof window.IN === 'object' && typeof window.IN.parse === 'function') {
+			window.IN.parse(instance.el);
+			Socialite.activateInstance(instance);
+		}
+	};
+
+	Socialite.widget('linkedin', 'share', {init: linkedinInit, intype: 'Share'});
+	Socialite.widget('linkedin', 'recommend', {init: linkedinInit, intype: 'RecommendProduct'});
+	Socialite.widget('linkedin', 'follow', {init: linkedinInit, intype: 'FollowCompany'});
+
+})(window, window.document, window.Socialite);
+
+/**
+ * Execute any queued functions (don't enqueue before the document has loaded!)
+ */
+(function() {
+	var s = window._socialite;
+	if (/Array/.test(Object.prototype.toString.call(s))) {
+		for (var i = 0, len = s.length; i < len; i++) {
+			if (typeof s[i] === 'function') {
+				s[i]();
+			}
+		}
+	}
+})();
+;
+/*!
+ * Socialite Plugin
+ * Copyright (c) 2013 PMC
+ * Author: PMC, Hau Vong
+ */
+
+jQuery(function(){
+	if ( typeof Socialite === 'undefined' || typeof jQuery.fn.waypoint !== 'function' ) {
+		return;
+	}
+
+	if ( typeof window._socialite_settings === 'object' ) {
+		Socialite.setup( window._socialite_settings );
+	}
+
+	
+	jQuery(".social").waypoint(function() {
+			Socialite.load(this);
+		},
+		{
+			offset: '150%',
+			triggerOnce: true
+		});
+});
+
+if ( typeof Socialite === 'object' ) {
+	
+	Socialite.network('pinterest',{
+		script: {
+			src: '//assets.pinterest.com/js/pinit.js',
+			id:  'pinterest-js'
+		}
+	});
+
+
+	Socialite.widget('pinterest','pin-it',{
+		init: function(instance) {
+			var params = '';
+			if ( jQuery(instance.el).attr('data-media') ) {
+				params += "&media=" + escape(jQuery(instance.el).attr('data-media'));
+			}
+			if ( jQuery(instance.el).attr('data-description') ) {
+				params += "&description=" + escape(jQuery(instance.el).attr('data-description'));
+			}
+			var el = jQuery('<a class="pin-it-button"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>')
+				.attr('href','http://pinterest.com/pin/create/button/?url='+ escape(jQuery(instance.el).attr('data-href')) + params);
+
+			jQuery(jQuery(instance.el).prop('attributes')).each(function(){
+				if ( /^data-pin/.test(this.name) ) {
+					jQuery(el).attr(this.name,this.value);
+				}
+			});
+			jQuery(instance.el).append(el);
+		}
+	});
+
+};
+/*
+ * Thickbox 3.1 - One Box To Rule Them All.
+ * By Cody Lindley (http://www.codylindley.com)
+ * Copyright (c) 2007 cody lindley
+ * Licensed under the MIT License: http://www.opensource.org/licenses/mit-license.php
+*/
+
+if ( typeof tb_pathToImage != 'string' ) {
+	var tb_pathToImage = thickboxL10n.loadingAnimation;
+}
+
+/*!!!!!!!!!!!!!!!!! edit below this line at your own risk !!!!!!!!!!!!!!!!!!!!!!!*/
+
+//on page load call tb_init
+jQuery(document).ready(function(){
+	tb_init('a.thickbox, area.thickbox, input.thickbox');//pass where to apply thickbox
+	imgLoader = new Image();// preload image
+	imgLoader.src = tb_pathToImage;
+});
+
+//add thickbox to href & area elements that have a class of .thickbox
+function tb_init(domChunk){
+	jQuery('body').on('click', domChunk, tb_click);
+}
+
+function tb_click(){
+	var t = this.title || this.name || null;
+	var a = this.href || this.alt;
+	var g = this.rel || false;
+	tb_show(t,a,g);
+	this.blur();
+	return false;
+}
+
+function tb_show(caption, url, imageGroup) {//function called when the user clicks on a thickbox link
+
+	try {
+		if (typeof document.body.style.maxHeight === "undefined") {//if IE 6
+			jQuery("body","html").css({height: "100%", width: "100%"});
+			jQuery("html").css("overflow","hidden");
+			if (document.getElementById("TB_HideSelect") === null) {//iframe to hide select elements in ie6
+				jQuery("body").append("<iframe id='TB_HideSelect'>"+thickboxL10n.noiframes+"</iframe><div id='TB_overlay'></div><div id='TB_window'></div>");
+				jQuery("#TB_overlay").click(tb_remove);
+			}
+		}else{//all others
+			if(document.getElementById("TB_overlay") === null){
+				jQuery("body").append("<div id='TB_overlay'></div><div id='TB_window'></div>");
+				jQuery("#TB_overlay").click(tb_remove);
+			}
+		}
+
+		if(tb_detectMacXFF()){
+			jQuery("#TB_overlay").addClass("TB_overlayMacFFBGHack");//use png overlay so hide flash
+		}else{
+			jQuery("#TB_overlay").addClass("TB_overlayBG");//use background and opacity
+		}
+
+		if(caption===null){caption="";}
+		jQuery("body").append("<div id='TB_load'><img src='"+imgLoader.src+"' width='208' /></div>");//add loader to the page
+		jQuery('#TB_load').show();//show loader
+
+		var baseURL;
+	   if(url.indexOf("?")!==-1){ //ff there is a query string involved
+			baseURL = url.substr(0, url.indexOf("?"));
+	   }else{
+	   		baseURL = url;
+	   }
+
+	   var urlString = /\.jpg$|\.jpeg$|\.png$|\.gif$|\.bmp$/;
+	   var urlType = baseURL.toLowerCase().match(urlString);
+
+		if(urlType == '.jpg' || urlType == '.jpeg' || urlType == '.png' || urlType == '.gif' || urlType == '.bmp'){//code to show images
+
+			TB_PrevCaption = "";
+			TB_PrevURL = "";
+			TB_PrevHTML = "";
+			TB_NextCaption = "";
+			TB_NextURL = "";
+			TB_NextHTML = "";
+			TB_imageCount = "";
+			TB_FoundURL = false;
+			if(imageGroup){
+				TB_TempArray = jQuery("a[rel="+imageGroup+"]").get();
+				for (TB_Counter = 0; ((TB_Counter < TB_TempArray.length) && (TB_NextHTML === "")); TB_Counter++) {
+					var urlTypeTemp = TB_TempArray[TB_Counter].href.toLowerCase().match(urlString);
+						if (!(TB_TempArray[TB_Counter].href == url)) {
+							if (TB_FoundURL) {
+								TB_NextCaption = TB_TempArray[TB_Counter].title;
+								TB_NextURL = TB_TempArray[TB_Counter].href;
+								TB_NextHTML = "<span id='TB_next'>&nbsp;&nbsp;<a href='#'>"+thickboxL10n.next+"</a></span>";
+							} else {
+								TB_PrevCaption = TB_TempArray[TB_Counter].title;
+								TB_PrevURL = TB_TempArray[TB_Counter].href;
+								TB_PrevHTML = "<span id='TB_prev'>&nbsp;&nbsp;<a href='#'>"+thickboxL10n.prev+"</a></span>";
+							}
+						} else {
+							TB_FoundURL = true;
+							TB_imageCount = thickboxL10n.image + ' ' + (TB_Counter + 1) + ' ' + thickboxL10n.of + ' ' + (TB_TempArray.length);
+						}
+				}
+			}
+
+			imgPreloader = new Image();
+			imgPreloader.onload = function(){
+			imgPreloader.onload = null;
+
+			// Resizing large images - orginal by Christian Montoya edited by me.
+			var pagesize = tb_getPageSize();
+			var x = pagesize[0] - 150;
+			var y = pagesize[1] - 150;
+			var imageWidth = imgPreloader.width;
+			var imageHeight = imgPreloader.height;
+			if (imageWidth > x) {
+				imageHeight = imageHeight * (x / imageWidth);
+				imageWidth = x;
+				if (imageHeight > y) {
+					imageWidth = imageWidth * (y / imageHeight);
+					imageHeight = y;
+				}
+			} else if (imageHeight > y) {
+				imageWidth = imageWidth * (y / imageHeight);
+				imageHeight = y;
+				if (imageWidth > x) {
+					imageHeight = imageHeight * (x / imageWidth);
+					imageWidth = x;
+				}
+			}
+			// End Resizing
+
+			TB_WIDTH = imageWidth + 30;
+			TB_HEIGHT = imageHeight + 60;
+			jQuery("#TB_window").append("<a href='' id='TB_ImageOff' title='"+thickboxL10n.close+"'><img id='TB_Image' src='"+url+"' width='"+imageWidth+"' height='"+imageHeight+"' alt='"+caption+"'/></a>" + "<div id='TB_caption'>"+caption+"<div id='TB_secondLine'>" + TB_imageCount + TB_PrevHTML + TB_NextHTML + "</div></div><div id='TB_closeWindow'><a href='#' id='TB_closeWindowButton' title='"+thickboxL10n.close+"'><div class='tb-close-icon'></div></a></div>");
+
+			jQuery("#TB_closeWindowButton").click(tb_remove);
+
+			if (!(TB_PrevHTML === "")) {
+				function goPrev(){
+					if(jQuery(document).unbind("click",goPrev)){jQuery(document).unbind("click",goPrev);}
+					jQuery("#TB_window").remove();
+					jQuery("body").append("<div id='TB_window'></div>");
+					tb_show(TB_PrevCaption, TB_PrevURL, imageGroup);
+					return false;
+				}
+				jQuery("#TB_prev").click(goPrev);
+			}
+
+			if (!(TB_NextHTML === "")) {
+				function goNext(){
+					jQuery("#TB_window").remove();
+					jQuery("body").append("<div id='TB_window'></div>");
+					tb_show(TB_NextCaption, TB_NextURL, imageGroup);
+					return false;
+				}
+				jQuery("#TB_next").click(goNext);
+
+			}
+
+			jQuery(document).bind('keydown.thickbox', function(e){
+				e.stopImmediatePropagation();
+
+				if ( e.which == 27 ){ // close
+					if ( ! jQuery(document).triggerHandler( 'wp_CloseOnEscape', [{ event: e, what: 'thickbox', cb: tb_remove }] ) )
+						tb_remove();
+
+				} else if ( e.which == 190 ){ // display previous image
+					if(!(TB_NextHTML == "")){
+						jQuery(document).unbind('thickbox');
+						goNext();
+					}
+				} else if ( e.which == 188 ){ // display next image
+					if(!(TB_PrevHTML == "")){
+						jQuery(document).unbind('thickbox');
+						goPrev();
+					}
+				}
+				return false;
+			});
+
+			tb_position();
+			jQuery("#TB_load").remove();
+			jQuery("#TB_ImageOff").click(tb_remove);
+			jQuery("#TB_window").css({'visibility':'visible'}); //for safari using css instead of show
+			};
+
+			imgPreloader.src = url;
+		}else{//code to show html
+
+			var queryString = url.replace(/^[^\?]+\??/,'');
+			var params = tb_parseQuery( queryString );
+
+			TB_WIDTH = (params['width']*1) + 30 || 630; //defaults to 630 if no paramaters were added to URL
+			TB_HEIGHT = (params['height']*1) + 40 || 440; //defaults to 440 if no paramaters were added to URL
+			ajaxContentW = TB_WIDTH - 30;
+			ajaxContentH = TB_HEIGHT - 45;
+
+			if(url.indexOf('TB_iframe') != -1){// either iframe or ajax window
+					urlNoQuery = url.split('TB_');
+					jQuery("#TB_iframeContent").remove();
+					if(params['modal'] != "true"){//iframe no modal
+						jQuery("#TB_window").append("<div id='TB_title'><div id='TB_ajaxWindowTitle'>"+caption+"</div><div id='TB_closeAjaxWindow'><a href='#' id='TB_closeWindowButton' title='"+thickboxL10n.close+"'><div class='tb-close-icon'></div></a></div></div><iframe frameborder='0' hspace='0' src='"+urlNoQuery[0]+"' id='TB_iframeContent' name='TB_iframeContent"+Math.round(Math.random()*1000)+"' onload='tb_showIframe()' style='width:"+(ajaxContentW + 29)+"px;height:"+(ajaxContentH + 17)+"px;' >"+thickboxL10n.noiframes+"</iframe>");
+					}else{//iframe modal
+					jQuery("#TB_overlay").unbind();
+						jQuery("#TB_window").append("<iframe frameborder='0' hspace='0' src='"+urlNoQuery[0]+"' id='TB_iframeContent' name='TB_iframeContent"+Math.round(Math.random()*1000)+"' onload='tb_showIframe()' style='width:"+(ajaxContentW + 29)+"px;height:"+(ajaxContentH + 17)+"px;'>"+thickboxL10n.noiframes+"</iframe>");
+					}
+			}else{// not an iframe, ajax
+					if(jQuery("#TB_window").css("visibility") != "visible"){
+						if(params['modal'] != "true"){//ajax no modal
+						jQuery("#TB_window").append("<div id='TB_title'><div id='TB_ajaxWindowTitle'>"+caption+"</div><div id='TB_closeAjaxWindow'><a href='#' id='TB_closeWindowButton'><div class='tb-close-icon'></div></a></div></div><div id='TB_ajaxContent' style='width:"+ajaxContentW+"px;height:"+ajaxContentH+"px'></div>");
+						}else{//ajax modal
+						jQuery("#TB_overlay").unbind();
+						jQuery("#TB_window").append("<div id='TB_ajaxContent' class='TB_modal' style='width:"+ajaxContentW+"px;height:"+ajaxContentH+"px;'></div>");
+						}
+					}else{//this means the window is already up, we are just loading new content via ajax
+						jQuery("#TB_ajaxContent")[0].style.width = ajaxContentW +"px";
+						jQuery("#TB_ajaxContent")[0].style.height = ajaxContentH +"px";
+						jQuery("#TB_ajaxContent")[0].scrollTop = 0;
+						jQuery("#TB_ajaxWindowTitle").html(caption);
+					}
+			}
+
+			jQuery("#TB_closeWindowButton").click(tb_remove);
+
+				if(url.indexOf('TB_inline') != -1){
+					jQuery("#TB_ajaxContent").append(jQuery('#' + params['inlineId']).children());
+					jQuery("#TB_window").bind('tb_unload', function () {
+						jQuery('#' + params['inlineId']).append( jQuery("#TB_ajaxContent").children() ); // move elements back when you're finished
+					});
+					tb_position();
+					jQuery("#TB_load").remove();
+					jQuery("#TB_window").css({'visibility':'visible'});
+				}else if(url.indexOf('TB_iframe') != -1){
+					tb_position();
+					jQuery("#TB_load").remove();
+					jQuery("#TB_window").css({'visibility':'visible'});
+				}else{
+					jQuery("#TB_ajaxContent").load(url += "&random=" + (new Date().getTime()),function(){//to do a post change this load method
+						tb_position();
+						jQuery("#TB_load").remove();
+						tb_init("#TB_ajaxContent a.thickbox");
+						jQuery("#TB_window").css({'visibility':'visible'});
+					});
+				}
+
+		}
+
+		if(!params['modal']){
+			jQuery(document).bind('keyup.thickbox', function(e){
+
+				if ( e.which == 27 ){ // close
+					e.stopImmediatePropagation();
+					if ( ! jQuery(document).triggerHandler( 'wp_CloseOnEscape', [{ event: e, what: 'thickbox', cb: tb_remove }] ) )
+						tb_remove();
+
+					return false;
+				}
+			});
+		}
+
+	} catch(e) {
+		//nothing here
+	}
+}
+
+//helper functions below
+function tb_showIframe(){
+	jQuery("#TB_load").remove();
+	jQuery("#TB_window").css({'visibility':'visible'});
+}
+
+function tb_remove() {
+ 	jQuery("#TB_imageOff").unbind("click");
+	jQuery("#TB_closeWindowButton").unbind("click");
+	jQuery("#TB_window").fadeOut("fast",function(){jQuery('#TB_window,#TB_overlay,#TB_HideSelect').trigger("tb_unload").unbind().remove();});
+	jQuery("#TB_load").remove();
+	if (typeof document.body.style.maxHeight == "undefined") {//if IE 6
+		jQuery("body","html").css({height: "auto", width: "auto"});
+		jQuery("html").css("overflow","");
+	}
+	jQuery(document).unbind('.thickbox');
+	return false;
+}
+
+function tb_position() {
+var isIE6 = typeof document.body.style.maxHeight === "undefined";
+jQuery("#TB_window").css({marginLeft: '-' + parseInt((TB_WIDTH / 2),10) + 'px', width: TB_WIDTH + 'px'});
+	if ( ! isIE6 ) { // take away IE6
+		jQuery("#TB_window").css({marginTop: '-' + parseInt((TB_HEIGHT / 2),10) + 'px'});
+	}
+}
+
+function tb_parseQuery ( query ) {
+   var Params = {};
+   if ( ! query ) {return Params;}// return empty object
+   var Pairs = query.split(/[;&]/);
+   for ( var i = 0; i < Pairs.length; i++ ) {
+      var KeyVal = Pairs[i].split('=');
+      if ( ! KeyVal || KeyVal.length != 2 ) {continue;}
+      var key = unescape( KeyVal[0] );
+      var val = unescape( KeyVal[1] );
+      val = val.replace(/\+/g, ' ');
+      Params[key] = val;
+   }
+   return Params;
+}
+
+function tb_getPageSize(){
+	var de = document.documentElement;
+	var w = window.innerWidth || self.innerWidth || (de&&de.clientWidth) || document.body.clientWidth;
+	var h = window.innerHeight || self.innerHeight || (de&&de.clientHeight) || document.body.clientHeight;
+	arrayPageSize = [w,h];
+	return arrayPageSize;
+}
+
+function tb_detectMacXFF() {
+  var userAgent = navigator.userAgent.toLowerCase();
+  if (userAgent.indexOf('mac') != -1 && userAgent.indexOf('firefox')!=-1) {
+    return true;
+  }
+}
+;
+/**
+ * A Javascript object to encode and/or decode html characters using HTML or Numeric entities that handles double or partial encoding
+ * Author: R Reid
+ * source: http://www.strictly-software.com/htmlencode
+ * Licences: GPL, The MIT License (MIT)
+ * Copyright: (c) 2011 Robert Reid - Strictly-Software.com
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * 
+ * Revision:
+ *  2011-07-14, Jacques-Yves Bleau: 
+ *       - fixed conversion error with capitalized accentuated characters
+ *       + converted arr1 and arr2 to object property to remove redundancy
+ *
+ * Revision:
+ *  2011-11-10, Ce-Yi Hio: 
+ *       - fixed conversion error with a number of capitalized entity characters
+ *
+ * Revision:
+ *  2011-11-10, Rob Reid: 
+ *		 - changed array format
+ */
+
+Encoder = {
+
+	// When encoding do we convert characters into html or numerical entities
+	EncodeType : "entity",  // entity OR numerical
+
+	isEmpty : function(val){
+		if(val){
+			return ((val===null) || val.length==0 || /^\s+$/.test(val));
+		}else{
+			return true;
+		}
+	},
+	
+	// arrays for conversion from HTML Entities to Numerical values
+	arr1: ['&nbsp;','&iexcl;','&cent;','&pound;','&curren;','&yen;','&brvbar;','&sect;','&uml;','&copy;','&ordf;','&laquo;','&not;','&shy;','&reg;','&macr;','&deg;','&plusmn;','&sup2;','&sup3;','&acute;','&micro;','&para;','&middot;','&cedil;','&sup1;','&ordm;','&raquo;','&frac14;','&frac12;','&frac34;','&iquest;','&Agrave;','&Aacute;','&Acirc;','&Atilde;','&Auml;','&Aring;','&AElig;','&Ccedil;','&Egrave;','&Eacute;','&Ecirc;','&Euml;','&Igrave;','&Iacute;','&Icirc;','&Iuml;','&ETH;','&Ntilde;','&Ograve;','&Oacute;','&Ocirc;','&Otilde;','&Ouml;','&times;','&Oslash;','&Ugrave;','&Uacute;','&Ucirc;','&Uuml;','&Yacute;','&THORN;','&szlig;','&agrave;','&aacute;','&acirc;','&atilde;','&auml;','&aring;','&aelig;','&ccedil;','&egrave;','&eacute;','&ecirc;','&euml;','&igrave;','&iacute;','&icirc;','&iuml;','&eth;','&ntilde;','&ograve;','&oacute;','&ocirc;','&otilde;','&ouml;','&divide;','&oslash;','&ugrave;','&uacute;','&ucirc;','&uuml;','&yacute;','&thorn;','&yuml;','&quot;','&amp;','&lt;','&gt;','&OElig;','&oelig;','&Scaron;','&scaron;','&Yuml;','&circ;','&tilde;','&ensp;','&emsp;','&thinsp;','&zwnj;','&zwj;','&lrm;','&rlm;','&ndash;','&mdash;','&lsquo;','&rsquo;','&sbquo;','&ldquo;','&rdquo;','&bdquo;','&dagger;','&Dagger;','&permil;','&lsaquo;','&rsaquo;','&euro;','&fnof;','&Alpha;','&Beta;','&Gamma;','&Delta;','&Epsilon;','&Zeta;','&Eta;','&Theta;','&Iota;','&Kappa;','&Lambda;','&Mu;','&Nu;','&Xi;','&Omicron;','&Pi;','&Rho;','&Sigma;','&Tau;','&Upsilon;','&Phi;','&Chi;','&Psi;','&Omega;','&alpha;','&beta;','&gamma;','&delta;','&epsilon;','&zeta;','&eta;','&theta;','&iota;','&kappa;','&lambda;','&mu;','&nu;','&xi;','&omicron;','&pi;','&rho;','&sigmaf;','&sigma;','&tau;','&upsilon;','&phi;','&chi;','&psi;','&omega;','&thetasym;','&upsih;','&piv;','&bull;','&hellip;','&prime;','&Prime;','&oline;','&frasl;','&weierp;','&image;','&real;','&trade;','&alefsym;','&larr;','&uarr;','&rarr;','&darr;','&harr;','&crarr;','&lArr;','&uArr;','&rArr;','&dArr;','&hArr;','&forall;','&part;','&exist;','&empty;','&nabla;','&isin;','&notin;','&ni;','&prod;','&sum;','&minus;','&lowast;','&radic;','&prop;','&infin;','&ang;','&and;','&or;','&cap;','&cup;','&int;','&there4;','&sim;','&cong;','&asymp;','&ne;','&equiv;','&le;','&ge;','&sub;','&sup;','&nsub;','&sube;','&supe;','&oplus;','&otimes;','&perp;','&sdot;','&lceil;','&rceil;','&lfloor;','&rfloor;','&lang;','&rang;','&loz;','&spades;','&clubs;','&hearts;','&diams;'],
+	arr2: ['&#160;','&#161;','&#162;','&#163;','&#164;','&#165;','&#166;','&#167;','&#168;','&#169;','&#170;','&#171;','&#172;','&#173;','&#174;','&#175;','&#176;','&#177;','&#178;','&#179;','&#180;','&#181;','&#182;','&#183;','&#184;','&#185;','&#186;','&#187;','&#188;','&#189;','&#190;','&#191;','&#192;','&#193;','&#194;','&#195;','&#196;','&#197;','&#198;','&#199;','&#200;','&#201;','&#202;','&#203;','&#204;','&#205;','&#206;','&#207;','&#208;','&#209;','&#210;','&#211;','&#212;','&#213;','&#214;','&#215;','&#216;','&#217;','&#218;','&#219;','&#220;','&#221;','&#222;','&#223;','&#224;','&#225;','&#226;','&#227;','&#228;','&#229;','&#230;','&#231;','&#232;','&#233;','&#234;','&#235;','&#236;','&#237;','&#238;','&#239;','&#240;','&#241;','&#242;','&#243;','&#244;','&#245;','&#246;','&#247;','&#248;','&#249;','&#250;','&#251;','&#252;','&#253;','&#254;','&#255;','&#34;','&#38;','&#60;','&#62;','&#338;','&#339;','&#352;','&#353;','&#376;','&#710;','&#732;','&#8194;','&#8195;','&#8201;','&#8204;','&#8205;','&#8206;','&#8207;','&#8211;','&#8212;','&#8216;','&#8217;','&#8218;','&#8220;','&#8221;','&#8222;','&#8224;','&#8225;','&#8240;','&#8249;','&#8250;','&#8364;','&#402;','&#913;','&#914;','&#915;','&#916;','&#917;','&#918;','&#919;','&#920;','&#921;','&#922;','&#923;','&#924;','&#925;','&#926;','&#927;','&#928;','&#929;','&#931;','&#932;','&#933;','&#934;','&#935;','&#936;','&#937;','&#945;','&#946;','&#947;','&#948;','&#949;','&#950;','&#951;','&#952;','&#953;','&#954;','&#955;','&#956;','&#957;','&#958;','&#959;','&#960;','&#961;','&#962;','&#963;','&#964;','&#965;','&#966;','&#967;','&#968;','&#969;','&#977;','&#978;','&#982;','&#8226;','&#8230;','&#8242;','&#8243;','&#8254;','&#8260;','&#8472;','&#8465;','&#8476;','&#8482;','&#8501;','&#8592;','&#8593;','&#8594;','&#8595;','&#8596;','&#8629;','&#8656;','&#8657;','&#8658;','&#8659;','&#8660;','&#8704;','&#8706;','&#8707;','&#8709;','&#8711;','&#8712;','&#8713;','&#8715;','&#8719;','&#8721;','&#8722;','&#8727;','&#8730;','&#8733;','&#8734;','&#8736;','&#8743;','&#8744;','&#8745;','&#8746;','&#8747;','&#8756;','&#8764;','&#8773;','&#8776;','&#8800;','&#8801;','&#8804;','&#8805;','&#8834;','&#8835;','&#8836;','&#8838;','&#8839;','&#8853;','&#8855;','&#8869;','&#8901;','&#8968;','&#8969;','&#8970;','&#8971;','&#9001;','&#9002;','&#9674;','&#9824;','&#9827;','&#9829;','&#9830;'],
+		
+	// Convert HTML entities into numerical entities
+	HTML2Numerical : function(s){
+		return this.swapArrayVals(s,this.arr1,this.arr2);
+	},	
+
+	// Convert Numerical entities into HTML entities
+	NumericalToHTML : function(s){
+		return this.swapArrayVals(s,this.arr2,this.arr1);
+	},
+
+
+	// Numerically encodes all unicode characters
+	numEncode : function(s){
+		
+		if(this.isEmpty(s)) return "";
+
+		var e = "";
+		for (var i = 0; i < s.length; i++)
+		{
+			var c = s.charAt(i);
+			if (c < " " || c > "~")
+			{
+				c = "&#" + c.charCodeAt() + ";";
+			}
+			e += c;
+		}
+		return e;
+	},
+	
+	// HTML Decode numerical and HTML entities back to original values
+	htmlDecode : function(s){
+
+		var c,m,d = s;
+		
+		if(this.isEmpty(d)) return "";
+
+		// convert HTML entites back to numerical entites first
+		d = this.HTML2Numerical(d);
+		
+		// look for numerical entities &#34;
+		arr=d.match(/&#[0-9]{1,5};/g);
+		
+		// if no matches found in string then skip
+		if(arr!=null){
+			for(var x=0;x<arr.length;x++){
+				m = arr[x];
+				c = m.substring(2,m.length-1); //get numeric part which is refernce to unicode character
+				// if its a valid number we can decode
+				if(c >= -32768 && c <= 65535){
+					// decode every single match within string
+					d = d.replace(m, String.fromCharCode(c));
+				}else{
+					d = d.replace(m, ""); //invalid so replace with nada
+				}
+			}			
+		}
+
+		return d;
+	},		
+
+	// encode an input string into either numerical or HTML entities
+	htmlEncode : function(s,dbl){
+			
+		if(this.isEmpty(s)) return "";
+
+		// do we allow double encoding? E.g will &amp; be turned into &amp;amp;
+		dbl = dbl || false; //default to prevent double encoding
+		
+		// if allowing double encoding we do ampersands first
+		if(dbl){
+			if(this.EncodeType=="numerical"){
+				s = s.replace(/&/g, "&#38;");
+			}else{
+				s = s.replace(/&/g, "&amp;");
+			}
+		}
+
+		// convert the xss chars to numerical entities ' " < >
+		s = this.XSSEncode(s,false);
+		
+		if(this.EncodeType=="numerical" || !dbl){
+			// Now call function that will convert any HTML entities to numerical codes
+			s = this.HTML2Numerical(s);
+		}
+
+		// Now encode all chars above 127 e.g unicode
+		s = this.numEncode(s);
+
+		// now we know anything that needs to be encoded has been converted to numerical entities we
+		// can encode any ampersands & that are not part of encoded entities
+		// to handle the fact that I need to do a negative check and handle multiple ampersands &&&
+		// I am going to use a placeholder
+
+		// if we don't want double encoded entities we ignore the & in existing entities
+		if(!dbl){
+			s = s.replace(/&#/g,"##AMPHASH##");
+		
+			if(this.EncodeType=="numerical"){
+				s = s.replace(/&/g, "&#38;");
+			}else{
+				s = s.replace(/&/g, "&amp;");
+			}
+
+			s = s.replace(/##AMPHASH##/g,"&#");
+		}
+		
+		// replace any malformed entities
+		s = s.replace(/&#\d*([^\d;]|$)/g, "$1");
+
+		if(!dbl){
+			// safety check to correct any double encoded &amp;
+			s = this.correctEncoding(s);
+		}
+
+		// now do we need to convert our numerical encoded string into entities
+		if(this.EncodeType=="entity"){
+			s = this.NumericalToHTML(s);
+		}
+
+		return s;					
+	},
+
+	// Encodes the basic 4 characters used to malform HTML in XSS hacks
+	XSSEncode : function(s,en){
+		if(!this.isEmpty(s)){
+			en = en || true;
+			// do we convert to numerical or html entity?
+			if(en){
+				s = s.replace(/\'/g,"&#39;"); //no HTML equivalent as &apos is not cross browser supported
+				s = s.replace(/\"/g,"&quot;");
+				s = s.replace(/</g,"&lt;");
+				s = s.replace(/>/g,"&gt;");
+			}else{
+				s = s.replace(/\'/g,"&#39;"); //no HTML equivalent as &apos is not cross browser supported
+				s = s.replace(/\"/g,"&#34;");
+				s = s.replace(/</g,"&#60;");
+				s = s.replace(/>/g,"&#62;");
+			}
+			return s;
+		}else{
+			return "";
+		}
+	},
+
+	// returns true if a string contains html or numerical encoded entities
+	hasEncoded : function(s){
+		if(/&#[0-9]{1,5};/g.test(s)){
+			return true;
+		}else if(/&[A-Z]{2,6};/gi.test(s)){
+			return true;
+		}else{
+			return false;
+		}
+	},
+
+	// will remove any unicode characters
+	stripUnicode : function(s){
+		return s.replace(/[^\x20-\x7E]/g,"");
+		
+	},
+
+	// corrects any double encoded &amp; entities e.g &amp;amp;
+	correctEncoding : function(s){
+		return s.replace(/(&amp;)(amp;)+/,"$1");
+	},
+
+
+	// Function to loop through an array swaping each item with the value from another array e.g swap HTML entities with Numericals
+	swapArrayVals : function(s,arr1,arr2){
+		if(this.isEmpty(s)) return "";
+		var re;
+		if(arr1 && arr2){
+			//ShowDebug("in swapArrayVals arr1.length = " + arr1.length + " arr2.length = " + arr2.length)
+			// array lengths must match
+			if(arr1.length == arr2.length){
+				for(var x=0,i=arr1.length;x<i;x++){
+					re = new RegExp(arr1[x], 'g');
+					s = s.replace(re,arr2[x]); //swap arr1 item with matching item from arr2	
+				}
+			}
+		}
+		return s;
+	},
+
+	inArray : function( item, arr ) {
+		for ( var i = 0, x = arr.length; i < x; i++ ){
+			if ( arr[i] === item ){
+				return i;
+			}
+		}
+		return -1;
+	}
+
+};
+/*
+ * JS to fire AJAX and populate Data for Plugin Hollywoodlife Taboola Module
+ *
+ * Version: 1.0
+ *
+ * Author: PMC, Vicky Biswas
+ * Since: 20 Nov 2013
+ */
+
+//AJAX URL
+var taboola_url = "http://api.taboola.com/1.1/json/pmc-hollywoodlife/recommendations.get?app.type=desktop&app.apikey=d2d64015f7b956573fb26f45359b9e6c07bc9319&rec.type=mix&user.session=init&source.type=text";
+
+//Doing the thing
+jQuery(document).ready(function() {
+	//fire Ajax
+	jQuery.ajax({
+		dataType: "json",
+		url: taboola_url,
+		data: {
+			"source.url": document.URL,
+			"rec.thumbnail.width": taboola_data.width,
+			"rec.thumbnail.height": taboola_data.height,
+			"rec.count": taboola_data.count,
+			"source.id": taboola_data.post_id
+		},
+		success: function(json) {
+			//loop through each value
+			jQuery.each(json.list, function(i, item) {
+				var date = new Date(item.created);
+				var values = {
+					"url": Encoder.htmlEncode( item.url ),
+					"image": Encoder.htmlEncode( item.thumbnail[0].url ),
+					"title": Encoder.htmlEncode( item.name ),
+					"month": date.pmc_short_month_name(),
+					"day": date.getDate(),
+					"courtesy": Encoder.htmlEncode( item.branding )
+				};
+				//Create HTML
+				var data = taboola_data.template;
+				jQuery.each(values, function(i, item) {
+					var patt = new RegExp('%%' + i + '%%', 'g');
+					data = data.replace(patt, item);
+				});
+				//Add HTML
+				jQuery('.taboola_module').append(data);
+			});
+		}
+	});
+});
+
+//Extending Date for Short Month Name
+//Should be moved to a common plce for reuse
+Date.prototype.pmc_short_month_name = function() {
+	var monthNames = [
+		"Jan", "Feb", "Mar",
+		"Apr", "May", "Jun",
+		"Jul", "Aug", "Sep",
+		"Oct", "Nov", "Dec"
+	];
+	return monthNames[this.getMonth()];
+};
+
+
+//EOF;

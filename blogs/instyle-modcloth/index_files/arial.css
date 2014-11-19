@@ -1,0 +1,10 @@
+@import url("packages_common.css");
+#pkgheader {width:992px;position:relative;float:left;line-height:normal;padding:16px 0 17px 0;margin:0;background-color:#fff;}
+#pkgheader .tagline {display:none;padding-left:10px;font:italic 140% Arial,sans-serif; color:#8d8d8d;}
+#pgkHdrLeft{float:left;}
+#pgkHdrLeft h1, #pgkHdrLeft h2{line-height:normal;display:inline;font:bold 33px Arial,sans-serif;color:#000000;   /* text-transform: uppercase; removed DDM 7.26.12 when does not cause more problems remove this note */}
+#pgkHdrRight{float:left;}
+#pkgTwitterButton{background:url("http://img2-2.timeinc.net/instyle/static/i/whatsrightnow/post_sharebar2_8.png");float:left;text-indent:-9999px;background-position:0 -50px;width: 55px;height:25px;display: inline;padding:0;margin:12px 0 0 24px;}
+#pkgFbButton{float:left;padding:0;margin:12px 7px 0 9px;width:82px;}
+#pkgSharingIcons{display: inline;}
+#pkgGooglePlusOneButton{float:left;padding:0;margin:12px 0 0 0;}

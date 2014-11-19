@@ -1,0 +1,178 @@
+#cmn_banner_overlay_content { -moz-box-sizing: content-box !important; box-sizing: content-box !important; -webkit-box-sizing: content-box !important; text-align: left; }
+
+
+.fw_6magazineonline     { position:relative; margin:0px auto; padding:0px; width:950px; overflow:hidden; }
+.fw_12ozprophet	 	 	{ margin:0px auto; padding:0px; width:1008px;  }
+.fw_2dopeboyz		 	{ margin:0px auto 10px auto; padding:0; width:930px;overflow:hidden;}
+.fw_allhiphop    	    { margin:0px auto; padding:0px; width:980px; overflow:hidden; }
+.fw_asportingclub 	    { margin:0px auto; padding:0px; width:1000px; overflow:hidden; }
+.fw_analoghype    	    { margin:10px auto 0px auto; padding:0px; width:970px; overflow:hidden; }
+.fw_apetogentleman 	    { margin:0px auto; padding:0px; width:960px; overflow:hidden; }
+.fw_arrestedmotion    	{ margin:0px auto 8px auto; padding:0px; width:990px; overflow:hidden; }
+.fw_audiomack    	    { margin:0px auto; padding:0px; width:960px; overflow:hidden; }
+.fw_balljunkie			{ margin:0px auto; padding:0; width:990px; overflow:hidden;}
+.fw_bastardly			{ position:relative; margin:0px auto; width:975px; overflow:hidden;}
+.fw_behindthehustle	 	{ position:relative; margin:-20px auto 0 auto !important; padding:0px; width:980px; overflow:hidden;}
+.fw_boomshots	 	 	{ margin:0px auto; padding:0px; width:975px; overflow:hidden;}
+.fw_bouncemag	 		{ margin:0px auto; padding:1px 0px; width:902px; }
+.fw_barbershopconnect	{ margin:0px auto; padding:1px 0px; width:1160px; }
+.fw_bestofbothoffices  	{ position:relative; margin:10px auto 10px auto; padding:0px; width:960px; overflow:hidden; }
+.fw_celebkicks          { margin:0px auto 10px auto; margin-left:13px; padding:0px; width:920px !important; overflow:hidden; }
+.fw_checkoutmyink		{ position:relative; float:left; margin:1px auto; padding:0px; width:975px; overflow:hidden;}
+.fw_cluttermagazine		{ position:relative; margin:0 auto; padding:0px; width:980px; overflow:hidden;}
+.fw_complex		 		{ position:relative; margin:0px auto; padding:0px; width:970px; overflow:hidden; z-index:999;}
+.fw_complextv		 	{ position:relative; margin:0px auto; padding:0px; width:990px; overflow:hidden; z-index:999;}
+.fw_complexbest			{ position:relative; float:left; margin:0px; padding:0px; width:940px; overflow:hidden;  z-index:999;  }
+.fw_complexvideo		{ position:relative; float:left; margin:0px auto; padding:0px; width:960px; overflow:hidden;   }
+.fw_curatedmag			{ margin:0; padding:0px; width:984px; display:block; clear:both;}
+.fw_dailydrop	 		{ position:relative; float:left; margin:0px auto; padding:1px 0px 0px 0px; width:982px;  }
+.fw_consequenceofsound	{ position:relative; margin:0px auto 17px auto; padding:0px; width:950px;overflow:hidden; }
+.fw_dajaz1 {overflow:hidden; width: 1030px;}
+.fw_datnewcudi			{ position:relative; margin:0px auto; padding:0px; width:1000px; height:300px; overflow:hidden;}
+.fw_djbooth				{ position:relative; margin:0px auto; padding:0px; width:1000px; overflow:hidden;}
+.fw_djboothplaylist		{ position:relative; margin:0px auto; padding:0px; width:1000px; overflow:hidden;}
+.fw_dimemag				{ position:relative; margin:0px auto; padding:0px 0px; width:940px; }
+.fw_dimemagtv			{ margin:0px auto; padding:1px 0px; width:976px; }
+.fw_drizzydrake			{ margin:0px auto; padding:0px 0px; width:1000px; overflow:hidden;}
+.fw_earmilk				{ margin:0px auto; padding:0px 0px; width:1000px; overflow:hidden;}
+.fw_egotripland			{ margin:0px auto; padding:0; width:960px; overflow:hidden;}
+.fw_fakeshoredrive		{ position:relative; margin:0; text-align:center; padding:0; width:1006px;}
+.fw_fourpins    		{ position:relative; margin:0 auto; text-align:center; padding:0; width:1050px;}
+.fw_freeonsmash	 		{ position:relative; margin:1px auto; padding:0px; width:950px;  }
+.fw_freshnessmag		{ position:relative; margin:0px auto 0px auto; width:1000px; height:300px; overflow:hidden;}
+.fw_frankocean  	    { position:relative; margin:0 auto 10px auto; padding:0; width:980px; height:300px;}
+.fw_gameranx			{ position:relative; margin:0px auto; padding:0px; width:1080px;  }
+.fw_gamerant			{ position:relative; margin:0px auto; padding:0px; width:960px; overflow:hidden; }
+.fw_geektyrant			{ position:relative; float:left; margin:0px; padding:0px; width:1200px;  }
+.fw_getthebigpicture	{ position:relative; float:left; margin:0px; padding:0px; width:1030px;  }
+.fw_greenlabel {position: relative; width: 990px; margin: 0px; padding: 0px;}
+.fw_hiconsumption		{ position:relative; margin:0 auto; width:1010px; overflow:hidden;}
+.fw_highschoolhoop		{ position:relative; margin:0 auto; padding:0px; width:940px; overflow:hidden;}
+.fw_highsnobette		{ margin:0; padding:0px; width:984px; display:block; clear:both;}
+.fw_highsnobiety		{ margin:0; padding:0px; width:984px; display:block; clear:both;}
+.fw_hiphopdx			{ position:relative; margin:10px auto 0 auto; padding:0px; width:1002px; display:block; clear:both; z-index:0;}
+.fw_hipsterrunoff		{ margin:0 auto; padding:0px; width:1020px; overflow:hidden;}
+.fw_hookit				{ margin:0 auto; padding:0px; width:975px; display:block; clear:both;}
+.fw_houseofhighlights	{ margin:0 auto; padding:0px; width:1090px; display:block; clear:both;}
+.fw_hypevideos	        { margin:0 auto; padding:0px; width:1023px; margin:0 auto; display:block; clear:both; overflow:hidden;}
+.fw_iampacked           { margin:0px auto; padding:0px; width:1110px; }
+.fw_illroots			{ margin:0px auto; padding:0px; width:972px; }
+.fw_inflexwetrust		{ margin:0px auto; padding:0px; width:940px; overflow:hidden;}
+.fw_infinitelegroom		{ margin:0px auto; padding:0px; width:1160px; overflow:hidden;}
+.fw_japanesesportcars	{ margin:0px auto; padding:0px 0px 5px 0px; width:980px;  }
+.fw_joblo				{ margin:0px auto; padding:0px; width:1044px; overflow:hidden;}
+.fw_jordansdaily        { margin:0px auto; margin-left:13px; padding:0px; width:920px; overflow:hidden; }
+.fw_juxtapoz			{ position:relative; margin:0px auto;  width:960px; overflow:hidden; }
+.fw_kineda				{ margin:0px auto; width:1024px; height:300px; overflow:hidden;}
+.fw_kicksfinder			{ margin:0px auto; padding:0px 0px 0px 0px; width:1113px;  }
+.fw_karmaloop			{ margin:0px auto; padding:0; width:990px; overflow:hidden; }
+.fw_kicksdeals		    { position:relative; margin:0 auto; padding:0px; width:1100px; z-index: 100; height:300px;}
+.fw_kicksonfire			{ margin:0px auto; padding:0px 0px 5px 0px; width:1000px; }
+.fw_lakersnation  		{ margin:0px auto 20px auto; width:960px; display:block; overflow:hidden; }
+.fw_lilwaynehq  		{ margin:-20px auto 15px auto; width:960px; display:block; clear:both; overflow:hidden; }
+.fw_livemixtapes        { margin:0px auto; width:850px; overflow:hidden; }
+.fw_lx-goods {overflow:hidden; margin: 0 auto; width: 1000px;}
+.fw_maestroknows		{ margin:0px auto; padding:0px; width:980px;   }
+.fw_magneticmag 		{ margin:0px auto; padding:0px; width:960px; overflow:hidden; }
+.fw_massappeal 			{ margin:0px auto; padding:0px; width:973px; overflow:hidden; }
+.fw_mechanicaldummy     { margin:0px auto; padding:0px; width:980px; overflow:hidden; }
+.fw_missinfo			{ margin:1px auto; padding:0px; width:850px;   }
+.fw_nahright			{ margin:0px auto; padding:1px 0px 0px; width:846px;  overflow:hidden;}
+.fw_nicekicks			{ position:relative; margin:0px auto; padding:1px 0px 0px; width:1000px;  }
+.fw_nme 				{ position:relative; margin:0px auto; padding:0px; width:1006px;  }
+.fw_onethirtybpm	 	{ position:relative; margin:10px auto 0px auto; padding:0px; width:960px; overflow:hidden;}
+.fw_onlythebeat         { margin:0px auto; padding: 0px; width:1000px; }
+.fw_pastapadre	 		{ margin:0px auto; padding:1px 0px 0px 0px; width:940px; overflow:hidden;}
+.fw_pigeonsandplanes    { position:relative; width:970px; height:300px; margin: 0px auto; }
+.fw_planetxbox360		{ margin:1px auto; padding:0px; width:946px;  }
+.fw_planetplaystation   { position:relative; width:960px; height:300px; margin: 0px auto; }
+.fw_playstationuniversity	{ margin:0 auto; padding:0px; width:962px; overflow:hidden;}
+.fw_porhomme	 		{ position:relative; margin:0 auto; width:962px;  }
+.fw_radcollector		{ margin:0; padding:0px; width:984px; display:block; clear:both;}
+.fw_ranker		        { margin:0 auto; padding:0px; width:100%; max-width:1200px; overflow:hidden;}
+.fw_raresoul		    { margin:0 auto; padding:0px; width:980px; overflow:hidden;}
+.fw_rawrdenim	        { margin:0 auto; padding:0px; width:990px; overflow:hidden;}
+.fw_refinedguy   	        { margin:0px auto; width:1002px;  overflow:hidden;}
+.fw_refinedhype		    { margin:0 auto; padding:0px; width:1000px; display:block; clear:both; overflow:hidden;}
+.fw_runthetrap		    { margin:0 auto; padding:0px; width:980px; overflow:hidden;}
+.fw_sarcasticgamer		{ margin:0; padding:0px; width:970px; display:block; clear:both;}
+.fw_selectism			{ margin:0; padding:0px; width:984px; display:block; clear:both; overflow:hidden;}
+.fw_slamxhype	 		{ margin:0px auto; padding:0px 0px 10px 0px; width:980px;  }
+.fw_sneakerfreaker		{ margin:0px auto; padding:0px 0px 1px 0px; width:1200px; }
+.fw_sheridanhoops  	        { margin:0px auto; width:960px;  overflow:hidden;}
+.fw_shockmansion	   	{ margin:0px auto; width:968px;  overflow:hidden;}
+.fw_shoryuken   		{ margin:0px auto; width:1024px; overflow:hidden;}
+.fw_cmn_shoryuken               {height:300px;/*for forums*/}
+.fw_sneakernews	 		{ margin:10px 0 0 0; padding:0px; width:1026px; overflow:hidden; }
+.fw_sneakerwareapp 		{ margin:0px auto; padding:0px; width:1000px;  }
+.fw_sneakerreport   	{ margin:0px auto; width:980px;  overflow:hidden;}
+.fw_solecollector		{ margin:0px auto; width:996px;  overflow:hidden;}
+.fw_styleengine	 		{ margin:0px auto; padding:0px; width:1000px; overflow:hidden; }
+.fw_streetball	 		{ margin:0px auto; padding:0px; width:955px;  }
+.fw_stupiddope 		        { margin:0px auto; padding:0px; width:970px; overflow:hidden;}
+.fw_superglued 		        { margin:0px auto; padding:0px; width:990px; overflow:hidden;}
+.fw_the305         	        { margin:0px auto; padding:0px; width:850px; height:300px; overflow:hidden; }
+.fw_thechoosybeggar         	{ margin:0px auto; padding:0px; width:1060px; height:300px; overflow:hidden; }
+.fw_thecagedoctors,
+.fw_thedugoutdoctors,
+.fw_thehoopdoctors,
+.fw_thepuckdoctors,
+.fw_thepigskindoctors        	{ position:relative; margin:0px auto; padding:0; width:1000px; overflow:hidden; }
+.fw_thefilmstage	 	{ position:relative; margin:10px auto 0px auto; padding:0px; width:960px; overflow:hidden;}
+.fw_themaskedgorilla	 	{ margin:0 auto; padding:0px; width:960px; overflow:hidden;}
+.fw_pushat               	{ margin:0px auto 0px auto; padding:0; width:1000px; height:300px; overflow:hidden; }
+.fw_theoriginalwinger	        { margin:0px auto; padding:0px; width:980px; overflow: hidden; }
+.fw_theshoegame 	        { margin:0px auto; padding:0px; width:982px; overflow:hidden; }
+.fw_totalprosports 		{ margin:10px auto 0 auto; padding:0px; width:960px; overflow:hidden;}
+.fw_upscalehype 		{ position:relative; margin:0px auto 15px auto; padding:0px; width:970px; height:300px; overflow:hidden; }
+.fw_techeater, .fw_trailerobsessed, .fw_hollywoodheavy
+                                { margin:0px auto; padding:0px; width:1054px; overflow:hidden; }
+.fw_vladtv 		        { margin:0px auto; padding:0px; width:1036px; overflow:hidden;  }
+.fw_sneakerwatch 		{ margin:0px auto; padding:0px; width:1024px; overflow:hidden;  }
+.fw_celebrityschoolpics	        { position:relative; margin:0px auto; padding:0px; width:1025px;overflow:hidden;}
+
+.fw_videogoneviral		{ margin:0px auto; padding:0px; width:1200px; overflow:hidden; }
+.fw_vibetothis			{ margin:0px auto; padding:0px; width:1040px; overflow:hidden; }
+.fw_wegotthiscovered		{ margin:0px auto; padding:0px; width:1000px; overflow:hidden; }
+.fw_wizardworld			{ margin:0px auto; padding:0px; width:940px; overflow:hidden; }
+.fw_worldofdance		{ margin:1px auto; padding:0px; width:960px; overflow:hidden; }
+.fw_youheardthatnew	        { margin:0px auto; padding:0px; width:980px;  }
+.fw_youngmoneyhq        	{ margin:20px auto; padding:0px; width:938px; overflow:hidden; }
+.fw_yougottaeatthis		{ margin:0px auto; padding:0px; width:1014px; overflow:hidden; }
+.fw_dmarge              { margin:0px auto; padding:0px; width:1004px; overflow:hidden; }
+/*
+.fw_celebrityschoolpics	        { position:relative; float:left; margin:0px auto; padding:0px; width:1025px;overflow:hidden;}
+.fw_techeater   	        { margin:5px auto; padding:0px; width:1014px; height:300px; overflow:hidden; }
+.fw_sneakerwatch 		{ margin:0px auto; padding:0px; width:1024px; overflow:hidden;  }
+.fw_hollywoodheavy        	{ margin:0px auto; padding:0px; width:1024px; overflow:hidden; }
+*/
+
+
+img						{ background:transparent; }
+#freshnessBanner,
+#container .splash,
+.img #teasers,
+.center-l #content .intro,
+.visual,
+.container #container_top, .hidcontainer,
+#ballerstatus_emailform, .yui3-u-g 			{ display:none; }
+.wpn_wrapper #topadd 	{width:940px; }
+#header-wrapper .ad-728	{width:850px; height:inherit;  }
+.fw_vladtv			#fwbanner-mid #vidframe,
+.fw_bouncemag		#fwbanner-mid #vidframe,
+.fw_dimemag			#fwbanner-mid #vidframe	{ margin:0px 0px 0px 30px;  }
+.fw_slamxhype   #fwbanner { height:300px;  }
+#extralarge_banner		{margin:5px auto; padding:0px; width:975px; height:auto; }
+#cmn_wrap .leaderboard-container {height:300px; padding-top:0px;} /* djbooth */
+.gt_featured, .postFeatured {float:left;} /* geektyrant */
+
+#fwbanner #menu {position:relative; float:left; margin:0; left:0;}
+#fw_promo img { border: none; }
+#fwbanner   {z-index:5;}
+
+/* AllHipHop FWBB Fix */
+/* .fw_allhiphop #fwbanner a, .fw_allhiphop #fwbanner a:active, .fw_allhiphop #fwbanner a:visited {position:absolute !important;} this did not work as expected */
+.fw_allhiphop a  {position:static;}
+#cmn_banner_overlay_content {overflow:visible !important;}
+.ad-holder img { max-height: none; }
+#cmn_ad_tag_head	{display:block !important;}
