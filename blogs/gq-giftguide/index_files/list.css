@@ -1,0 +1,1490 @@
+
+/**
+ * List styles
+ */
+
+#main {
+    border-top: 1px dotted #999;
+    padding-top:6px;
+}
+
+.list {
+/*    position: relative;*/
+    }
+
+.editlink {
+    display: none;
+}
+
+.disabled {
+    opacity: .4;
+    *filter: alpha(opacity=40);
+}
+
+/* intro switching stuff */
+
+.listC .intro-container {
+    position: absolute;
+    left: -9999px;
+}
+
+
+
+html.slideshow-hasintro-true #items-container,
+html.slideshow-hasintro-true .cr-item {
+    position: absolute;
+    left: -9999px;
+}
+
+html.slideshow-hasintro-true .intro-container {
+    position: relative;
+    left: auto;
+    border:1px solid #cacaca;
+    border-width:0 1px;
+}
+
+html.slideshow-hasintro-true .intro-container .intro-text {
+    font:12px arial, helvetica, sans-serif;
+
+}
+
+html.slideshow-hasintro-true .intro-container .intro-text h3.content-headline {
+    padding:10px 10px 0 10px
+}
+
+html.slideshow-hasintro-true .intro-container .intro-text .lead-introduction,
+html.slideshow-hasintro-true .intro-container .intro-text .text {
+    padding:10px
+}
+
+
+html.slideshow-showinitial-true #main div.keywords dl{
+    line-height:1.2em
+}
+
+html.slideshow-showinitial-true #main .list-supporting .photo-credits {
+    float:left
+}
+
+html.slideshow-showinitial-true #items-container .item {
+    display: block;
+}
+
+html.slideshow-showinitial-false #items-container .item {
+    display: none;
+}
+
+
+
+
+.list-view-slideshow {
+    background: url(http://www.gq.com/css/i/slide/slideshow-view-btn.gif) no-repeat right top;
+    cursor: pointer;
+    display: block;
+    height: 22px;
+    width: 182px;
+    text-indent: -9999px;
+    overflow: hidden;
+    padding-left:446px;
+    border:1px solid #cacaca;
+    border-width:1px 0
+}
+
+    .list-view-slideshow:hover {
+        background-position: right -22px;
+    }
+
+.list-backto {
+    color: #d31e25;
+    cursor: pointer;
+    font: 12px arial, helvetica, sans-serif;
+    margin: 10px 0 5px 0;
+}
+
+    .list-backto:hover {
+        text-decoration: underline;
+    }
+
+/* PRIMARY TYPOGRAPHY */
+
+/* PRIMARY LAYOUT */
+
+.headers-container:after,
+.intro-container:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    *zoom: 1;
+}
+
+.headers-container {
+    clear: both;
+    padding-bottom: 15px;
+}
+
+.intro-container {
+    clear: both;
+    margin: 0 0 15px 0;
+}
+
+#items-container {
+    clear: both;
+    position: relative;
+    *zoom: 1; /* IE6 might need this to position view all box correctly, else it animates from the bottom of the screen (sometimes) Also IE7 needs it in order to switch between intro and items container */
+}
+
+/* THUMBNAILS - only relevant with slideshow */
+
+.list .thumbnails ul,
+.list .thumbnails li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .list .thumbnails li {
+        float: left;
+        margin-right: 10px;
+    }
+
+/* ITEM LIST */
+
+.listA #items-container,
+.listB #items-container {
+    margin: 0 0 15px 0;
+}
+
+    .listA .items,
+    .listB .items {
+        width: 100%;
+    }
+
+.listA .item,
+.listB .item {
+    border-bottom: 1px dotted #999;
+    clear: both;
+    float: left;
+    padding: 15px 0 8px 0;
+    position: relative;
+    width: 100%;
+}
+
+    .listA .item:last-child {
+        border-bottom: 0;
+    }
+
+.listA .intro-container .captioned-photo,
+.listB .intro-container .captioned-photo,
+.listA .item .captioned-photo,
+.listB .item .captioned-photo {
+    float: left;
+}
+
+.listA .intro-container .captioned-photo,
+.listB .intro-container .captioned-photo {
+    margin-right: 10px; /* TODO: this may blow out IE6 if image is full-width, but it's the easiest way to do it. Need to address IE sometime */
+}
+
+.listA .item .captioned-photo,
+.listB .item .captioned-photo {
+    margin-right: 20px;
+}
+
+    .listA .intro-container .captioned-photo,
+    .listB .intro-container .captioned-photo,
+    .listA .item .captioned-photo img,
+    .listB .item .captioned-photo img {
+        display: block;
+    }
+
+.listA .item-inner,
+.listB .item-inner {
+    overflow: hidden; /* to get the item text vertically aligned instead of wrapping */
+}
+
+    .listA #main .item .rubric,
+    .listB #main .item .rubric {
+        font-size: .9em;
+        margin-bottom: 0;
+    }
+
+    .listA .item-header,
+    .listB .item-header {
+    }
+
+    .listA .item-header .sub-header,
+    .listB .item-header .sub-header {
+    }
+
+    .listA .item-text,
+    .listB .item-text {
+        font: .9em/1.3em arial, helvetica, sans-serif;
+        margin-top: 2px;
+    }
+
+        .listA .item .detail,
+        .LISTB .item .detail {
+            display: inline;
+            padding-right: 5px;
+        }
+
+/* ITEM PAGE */
+
+.itemA .captioned-photo,
+.itemB .captioned-photo {
+    float: left;
+    margin-right: 20px;
+}
+
+.itemA .item-text,
+.itemB .item-text {
+    font-family: arial, helvetica, sans-serif;
+}
+
+    .itemA .lead-introduction,
+    .itemB .lead-introduction,
+    .itemA .body,
+    .itemB .body,
+    .itemA .embedded-list,
+    .itemB .embedded-list {
+        color: #1d1d1d;
+        font-size: 12px;
+    }
+
+    .itemA .embedded-list, /* move to global? might or might not be applied to other lists with floated images to the left */
+    .itemB .embedded-list {
+        overflow: hidden;
+        padding-left: 14px;
+    }
+
+.itemA .backto,
+.itemB .backto {
+    margin-top: 24px;
+}
+
+    .itemA .backto a.backto-link,
+    .itemB .backto a.backto-link {
+        font-size: 12px;
+        text-transform: lowercase;
+    }
+
+/* SLIDESHOW */
+
+.listC #items-container {
+    margin: 10px 0 15px 0;
+}
+
+.listC .items {
+    height: 516px; /* change to height of design */
+    position: relative;
+    overflow: hidden;
+    width: 628px;
+}
+
+    .listC .captioned-photo {
+        border: 0px solid #daddde;
+        text-align: center;
+    }
+
+    .listC .intro-container .captioned-photo {
+        border-width: 0;
+    }
+
+        .listC .captioned-photo img {
+            display: inline;
+        }
+
+    .listC .item {
+        background: #fff;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+
+    .listC .listCitemA .list .display-date,
+    .listC .listCitemB .list .display-date { padding-top:2px; }
+
+    .listC .itemA .body,
+    .listC .itemB .body {
+        line-height:16px;
+    }
+
+    .listC .itemA {
+        padding-left: 0;
+        padding-top: 435px;
+        width: 628px;
+    }
+
+        .listC .itemA .captioned-photo {
+            height: 434px; /* change to horizontal img height */
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            width: 628px;
+        }
+
+        .listC .itemA .item-inner {
+            height: 80px; /* change */
+        }
+
+    .listC .itemB {
+        padding-left: 410px; /* change */
+        width: 218px; /* change */
+    }
+
+        .listC .itemB .captioned-photo {
+            height: 516px; /* change */
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            width: 409px; /* change */
+        }
+
+        .listC .itemB .item-inner {
+            height: 516px; /* change */
+            width: 218px; /* change */
+        }
+
+            .listC .list .item .captioned-photo {
+                display: table;
+            }
+
+                .listC .list .item .captioned-photo .img-shadow, .listC .list .item .captioned-photo .w {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+
+    .listC .item .content-headline {
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .listC .item-inner {
+        font-size: 11px;
+    }
+
+    .listC .headers-container {
+        padding: 0 0 10px 10px;
+    }
+
+    .listC .item-text {
+        margin: 10px;
+        padding-bottom:10px;
+    }
+
+         .listC .item-text h2 {
+            font-size:12px;
+            font-weight:bold
+        }
+
+    .listC .embedded-list {
+        margin-left: 15px;
+    }
+
+/* interstitial continue */
+
+.slideshow-advertisement-note {
+    color: #a4a4a4;
+    font-family: arial, sans-serif;
+    font-size: 10px;
+    left: 164px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 105px;
+    width: 300px;
+}
+
+    .slideshow-view-larger-container .slideshow-advertisement-note {
+        left: 311px;
+        top: 80px;
+    }
+
+.slideshow-continue {
+    color: #444;
+    font-family: arial, sans-serif;
+    font-size: 9px;
+    left: 163px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 381px;
+    width: 300px;
+}
+
+    .slideshow-continue-link {
+        border: 1px solid #cacaca;
+        color: #09f;
+        display: block;
+        font-size: 11px;
+        font-weight: bold;
+        margin: 10px auto 0;
+        padding: 3px 0;
+        text-decoration: none;
+        text-transform: none;
+        width: 146px;
+    }
+
+        .slideshow-continue-link:hover {
+            background-color: #eee;
+            text-decoration: underline;
+        }
+
+.slideshow-view-larger-container .slideshow-continue {
+    left: 311px;
+    top: 381px;
+}
+
+/* iframe ad */
+
+.slideshow-dartinterstitial {
+    border: 0;
+    height: 250px;
+    left: 164px;
+    overflow: hidden;
+    position: absolute;
+    top: 120px;
+    width: 300px;
+}
+
+    .slideshow-view-larger-container iframe.slideshow-dartinterstitial {
+        left: 311px;
+        top: 100px;
+    }
+
+/* slideshow controls */
+
+.slideshow-loading {
+    width: 630px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(http://www.gq.com/css/i/slide/slideshow-nav.gif) 0 -168px;
+    opacity: .85;
+    *filter: alpha(opacity=85);
+}
+
+    #show-footer .slideshow-loading {
+        background-position: 0 -192px;
+    }
+
+.slideshow-loading-message {
+    background: #fff url(http://www.gq.com/css/i/icons/loader.gif) no-repeat center 30px;
+    border: 1px solid #777;
+    font-size: 10px;
+    height: 35px;
+    left: 237px;
+    opacity: .85;
+    *filter: alpha(opacity=85);
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 200px;
+    width: 126px;
+}
+
+.control-bar {
+    position: relative;
+    z-index: 1;
+    text-indent: -9999px;
+    height: 24px;
+    width: 630px;
+}
+
+    #show-header {
+        margin-bottom: 10px;
+    }
+
+    #show-footer {
+        margin-top: 10px;
+    }
+
+.control-bar a {
+    background: url("http://www.gq.com/css/i/slide/slideshow_sprite.gif");
+    display: block;
+    float: left;
+    cursor: pointer;
+    height: 24px;
+}
+
+    .control-bar .start a {
+        background-position: 122px -42px;
+        width: 53px;
+    }
+
+        .control-bar .start a:hover {
+            background-position: 122px -65px;
+        }
+
+        #show-footer .start a {
+            background-position: 123px -86px;
+        }
+
+        #show-footer .start a:hover {
+            background-position: 123px -65px;
+        }
+
+    .control-bar .stop {
+        display: none;
+    }
+
+    .control-bar .stop a {
+        background-position: 67px 2px;
+        width: 66px;
+    }
+
+        .control-bar .stop a:hover {
+            background-position: 67px 23px;
+        }
+
+        #show-footer .stop a {
+            background-position: 67px 2px;
+        }
+
+        #show-footer .stop a:hover {
+            background-position: 67px 23px;
+        }
+
+    .control-bar .viewlarger a {
+        background-position: -53px -48px;
+        width: 77px;
+    }
+
+        .control-bar .viewlarger a:hover {
+            background-position: -53px -72px;
+        }
+
+        #show-footer .viewlarger a {
+            background-position: -53px -96px;
+        }
+
+        #show-footer .viewlarger a:hover {
+            background-position: -53px -120px;
+        }
+
+    .control-bar .viewall a {
+        background-position: -130px -48px;
+        width: 130px;
+    }
+
+        .control-bar .viewall a:hover,
+        .control-bar .viewall a.slideshow-navigation-viewall-visible {
+            background-position: -130px -72px;
+        }
+
+        #show-footer .viewall a {
+            background-position: -130px -96px;
+        }
+
+        #show-footer .viewall a:hover,
+        #show-footer .viewall a.slideshow-navigation-viewall-visible {
+            background-position: -130px -120px;
+        }
+
+    .control-bar .previous a {
+        background-position: -278px -42px;
+        position: absolute;
+        right: 110px;
+        top: 0;
+        width: 85px;
+    }
+
+        .control-bar .previous a:hover {
+            background-position: -278px -21px;
+        }
+
+        #show-footer .previous a {
+            background-position: -3px -86px;
+        }
+
+        #show-footer .previous a:hover {
+            background-position: -3px -65px;
+        }
+
+    .control-bar .count {
+        color: #444;
+        font-family: arial, sans-serif;
+        font-size: 10px;
+        line-height: 24px;
+        position: absolute;
+        right: 58px;
+        text-align: center;
+        text-indent: 0;
+        width: 52px;
+    }
+
+        #show-footer .count {
+
+        }
+
+    .control-bar .next a {
+        background-position: -91px -42px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 58px;
+    }
+
+        .control-bar .next a:hover {
+            background-position: -91px -21px;
+        }
+
+        #show-footer .next a {
+            background-position: -367px -86px;
+        }
+
+        #show-footer .next a:hover {
+            background-position: -367px -65px;
+        }
+
+/* NAVIGATION OBJECTS */
+
+/* carousel */
+
+#items-container .jcarousel-container {
+    background: #d0d0d0;
+    clear: both;
+    position: relative;
+    width: 630px; /* change to width of entire slideshow player */
+}
+
+#items-container .jcarousel-clip {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+#items-container .jcarousel-list {
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+
+#items-container .jcarousel-list li,
+#items-container .jcarousel-item {
+    float: left;
+    list-style: none;
+    /* width and height must be set explicitly */
+    height: 95px; /* change - ? */
+    width: 102px; /* change - dimension from left edge to left edge - entire item */
+}
+
+    #items-container .jcarousel-list li a {
+        display: block;
+        background: #000;
+        height: 80px; /* change to match img + border */
+        width: 92px; /* change to match img + border */
+    }
+
+    #items-container .jcarousel-item img {
+        border: 1px solid #7f7f7f;
+        display: block;
+        height: 78px; /* change - actual image */
+        opacity: .4;
+        *filter: alpha(opacity=40);
+        width: 90px; /* change - actual image */
+    }
+
+        #items-container .slideshow-carousel .active img, /* for backward compatibility, remove when magnet.slideshow is in sync */
+        #items-container .slideshow-navigation-carousel .active img {
+            border: 1px solid #16507e; /* change color */
+            opacity: 1;
+            *filter: alpha(opacity=100);
+        }
+
+        #items-container .slideshow-carousel a:hover img,
+        #items-container .slideshow-navigation-carousel a:hover img {
+            border: 1px solid #16507e; /* change color */
+            opacity: 1;
+            *filter: alpha(opacity=100);
+        }
+
+    #items-container .slideshow-carousel li span,
+    #items-container .slideshow-navigation-carousel li span {
+        display: block;
+        font-size: 10px;
+        line-height: 1.2em;
+        text-align: center;
+        width: 92px; /* change - image width + border */
+    }
+
+#items-container .jcarousel-next {
+    display: none;
+    z-index: 3;
+}
+
+#items-container .jcarousel-previous {
+    display: none;
+    z-index: 3;
+}
+
+/* carousel skin */
+
+#items-container .jcarousel-skin-default .jcarousel-container {
+    font-family: arial, sans-serif;
+    font-size: .8em;
+}
+
+#items-container .jcarousel-skin-default .jcarousel-container-horizontal { /* padding + width = whole carousel */
+    padding: 7px 60px 5px 60px; /* change - design l/r padding */
+    width: 510px; /* change - individual width * number, and then adjust padding to add up to total and margin the ruleset below */
+}
+
+#items-container .jcarousel-skin-default .jcarousel-clip-horizontal { /* note that setting display inline will not work, so double margin float bug will happen if you need a right or left margin. Have to hack for IE and set its margin to 1/2 the amount to compensate for this bug */
+    height: 92px;
+    margin: 0 0 0 5px; /* difference between padding above and padding in design */
+    _margin: 0 0 0 2px; /* compensate for double margin float bug, belive me, it's necessary to do it this way */
+    width: 510px; /* change to match container width above */
+    _width: 502px; /* this might be good for everyone, but ie is the only one that strictly requires it to keep the box from blowing out */
+}
+
+#items-container .jcarousel-skin-default .jcarousel-item {
+    height: 92px; /* change */
+    width: 102px; /* change - viewable area / number visible */
+}
+
+#items-container .jcarousel-skin-default .jcarousel-item-horizontal {
+    margin: 0;
+}
+
+#items-container .jcarousel-skin-default .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/* carousel buttons */
+
+#items-container .jcarousel-skin-default .jcarousel-next-horizontal {
+    background: url(http://www.gq.com/css/i/slide/slideshow-nav.gif) no-repeat -225px -144px;
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    right: 11px; /* change - design */
+    top: 36px; /* change if necessary */
+    width: 18px;
+}
+
+    #items-container .jcarousel-skin-default .jcarousel-next-horizontal:hover {
+        background-position: -243px -144px;
+    }
+
+    #items-container .jcarousel-skin-default .jcarousel-next-horizontal:active {
+
+    }
+
+    #items-container .jcarousel-skin-default .jcarousel-next-disabled-horizontal,
+    #items-container .jcarousel-skin-default .jcarousel-next-disabled-horizontal:hover,
+    #items-container .jcarousel-skin-default .jcarousel-next-disabled-horizontal:active {
+        background-position: -279px -144px;
+        cursor: default;
+    }
+
+#items-container .jcarousel-skin-default .jcarousel-prev-horizontal {
+    background: url(http://www.gq.com/css/i/slide/slideshow-nav.gif) no-repeat -153px -144px;
+    cursor: pointer;
+    height: 24px;
+    left: 11px; /* change - design */
+    position: absolute;
+    top: 36px; /* change if necessary */
+    width: 18px;
+}
+
+    #items-container .jcarousel-skin-default .jcarousel-prev-horizontal:hover {
+        background-position: -171px -144px;
+    }
+
+    #items-container .jcarousel-skin-default .jcarousel-prev-horizontal:active {
+
+    }
+
+    #items-container .jcarousel-skin-default .jcarousel-prev-disabled-horizontal,
+    #items-container .jcarousel-skin-default .jcarousel-prev-disabled-horizontal:hover,
+    #items-container .jcarousel-skin-default .jcarousel-prev-disabled-horizontal:active {
+        background-position: -207px -144px;
+        cursor: default;
+    }
+
+/* slideshow view all thumbnails */
+
+.slideshow-viewall-container {
+    background: #fff;
+    border: 1px solid #cacaca;
+    border-width: 0 1px;
+    bottom: 24px;
+    left: -9999px;
+    margin-left: 0;
+    padding-top: 39px; /* for close button */
+    position: absolute;
+    z-index: 10011;
+}
+
+    .slideshow-viewall-close {
+        background: url(http://www.gq.com/css/i/slide/slideshow-nav.gif) no-repeat 0 -144px;
+        cursor: pointer;
+        height: 19px;
+        position: absolute;
+        right: 10px;
+        text-indent: -9999px;
+        top: 10px;
+        width: 51px;
+        z-index: 10012;
+    }
+
+        .slideshow-viewall-close:hover {
+            background-position: -51px -144px;
+        }
+
+    .slideshow-viewall-content {
+        height: 470px; /* change */
+        overflow: auto;
+        width: 628px; /* width of entire player less the borders */
+    }
+
+    .slideshow-has-navigation-carousel .slideshow-viewall-content {
+        height: 581px; /* change - above height + carousel height */
+    }
+
+    /* future different navigation items will need to be accounted for as well, if applicable */
+
+        .slideshow-viewall-container ol {
+            list-style: none;
+            padding-left: 54px; /* change - per design */
+        }
+
+            .slideshow-viewall-container li {
+                cursor: pointer;
+                float: left;
+                _display: inline;
+                height: 80px; /* change */
+                margin: 20px 5px; /* change */
+                width: 92px; /* change - entire item, unlike carousel only use the image + border width */
+            }
+
+                .slideshow-viewall-container li img {
+                    height: 78px; /* change - image dimensions */
+                    width: 90px; /* change - image dimensions */
+                }
+
+                .slideshow-navigation-viewall li span {
+                    display: block;
+                    font-family: arial, sans-serif;
+                    font-size: 10px;
+                    text-align: center;
+                }
+
+                    .slideshow-navigation-viewall li a {
+                        border: 1px solid #7f7f7f;
+                        display: block;
+                        height: 78px; /* change - image dimensions */
+                        width: 90px; /* change - image dimensions */
+                    }
+
+                    .slideshow-navigation-viewall li.active a {
+                        border: 1px solid #16507e; /* change - color */
+                    }
+
+                        .slideshow-navigation-viewall li a:hover {
+                            border: 1px solid #16507e; /* change - color */
+                        }
+
+                        .slideshow-navigation-viewall li a:hover img {
+                        }
+
+                        .slideshow-navigation-viewall img {
+                            display: block;
+                        }
+
+                            .slideshow-navigation-viewall .active img {
+                                background: #fff;
+                                cursor: default;
+                            }
+
+/* slideshow view larger */
+
+.slideshow-view-larger-container {
+    background: #fff;
+    font-family: arial, sans-serif;
+    height: 580px;
+    padding-top: 89px;
+    position: absolute;
+    z-index: 1000001;
+}
+
+.slideshow-view-larger-close {
+    background: url(http://www.gq.com/css/i/slide/slideshow-nav.gif) no-repeat 0 -144px;
+    cursor: pointer;
+    height: 19px;
+    position: absolute;
+    right: 34px;
+    text-indent: -9999px;
+    top: 19px;
+    width: 51px;
+    z-index: 1000004;
+}
+
+    .slideshow-view-larger-close:hover {
+        background-position: -51px -144px;
+    }
+
+.slideshow-view-larger-instructions-trigger span {
+    display: none;
+}
+
+.slideshow-view-larger-instructions-close {
+    background: url(http://www.gq.com/css/i/slide/slideshow-nav.gif) no-repeat -297px -144px;
+    cursor: pointer;
+    height: 14px;
+    position: absolute;
+    right: 9px;
+    text-indent: -9999px;
+    top: 9px;
+    width: 15px;
+    z-index: 1000005;
+}
+
+    .slideshow-view-larger-instructions-close:hover {
+        background-position: -312px -144px;
+    }
+
+.slideshow-view-larger-instructions-trigger {
+    background: url(http://www.gq.com/css/i/slide/slideshow-nav.gif) no-repeat -357px -144px;
+    cursor: pointer;
+    display: none;
+    height: 19px;
+    position: absolute;
+    right: 94px;
+    text-indent: -9999px;
+    top: 19px;
+    width: 18px;
+}
+
+    .slideshow-view-larger-instructions-trigger:hover {
+        background-position: -375px -144px;
+    }
+
+.slideshow-view-larger-instructions {
+    background: #fff;
+    border: 1px solid #888;
+    color: #000;
+    font-size: 10px;
+    left: 380px;
+    opacity: .8;
+    padding: 12px;
+    position: absolute;
+    text-align: left;
+    top: 292px;
+    width: 186px;
+    z-index: 1000004;
+}
+
+    .slideshow-view-larger-instructions strong {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+.slideshow-view-larger-previous,
+.slideshow-view-larger-next {
+    background: url(http://www.gq.com/css/i/slide/slideshow-nav.gif) no-repeat;
+    cursor: pointer;
+    width: 25px;
+    height: 34px;
+    position: absolute;
+    top: 350px;
+}
+
+.slideshow-view-larger-previous {
+    background-position: 0 -216px;
+    left: 5px;
+}
+
+    .slideshow-view-larger-previous:hover {
+        background-position: -25px -216px;
+    }
+
+.slideshow-view-larger-next {
+    background-position: -100px -216px;
+    right: 5px;
+}
+
+    .slideshow-view-larger-next:hover {
+        background-position: -125px -216px;
+    }
+
+.slideshow-view-larger-container h1 {
+    font-family: verdana;
+    font-weight: bold;
+}
+
+.slideshow-view-larger-container .items {
+    border: solid #cacaca;
+    border-width: 0 1px 1px 1px;
+    height: 552px;
+    left: 32px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 89px;
+    width: 922px;
+}
+
+body .slideshow-view-larger-container .items {
+    _width: 922px;
+}
+
+    .slideshow-view-larger-container .item {
+        float: none;
+        height: 552px;
+        left: 0;
+        margin: 0;
+        padding: 0 0 0 695px;
+        position: absolute;
+        top: 0;
+        width: 227px;
+    }
+
+
+       .slideshow-view-larger-container .item .captioned-photo {
+            border: 0;
+            display: table;
+            *display: block;
+            float: none;
+            left: 0;
+            margin: 0;
+            position: absolute;
+            top: 0;
+        }
+
+            .slideshow-view-larger-container .img-shadow {
+                display: table-cell;
+                *display: block;
+                vertical-align: middle;
+            }
+
+            .slideshow-view-larger-container .captioned-photo img {
+                display: block;
+                float: none;
+                margin: 0 auto;
+            }
+
+        .slideshow-view-larger-container .item-text {
+            color: #333;
+            float: none; /* ie6 needs this - absolute next to float bug */
+            font-size: 80%;
+            padding: 8px 18px 0 18px;
+            width: 191px;
+            margin-left:0
+        }
+
+        .slideshow-view-larger-container h2 { /* what is this */
+            display: none;
+        }
+
+    .slideshow-view-larger-container .itemA {
+        padding: 0;
+        width: 922px;
+    }
+
+    .slideshow-view-larger-container .itemA .jScrollPaneContainer {
+            position:absolute;
+            bottom:0;
+            padding-right:15px
+        }
+
+        .slideshow-view-larger-container .itemA .item-inner {
+            height: 101px;
+            width: 907px;
+        }
+
+        .slideshow-view-larger-container .itemA .captioned-photo {
+            border-bottom: 1px solid #cacaca;
+            height: 450px;
+            width: 922px;
+        }
+
+            .slideshow-view-larger-container .itemA .captioned-photo .caption {
+                width: 910px;
+                bottom: 122px;
+            }
+
+        .slideshow-view-larger-container .itemA .item-text {
+            width:890px;
+            height:250px;
+            padding-left: 10px;
+            padding-top:0
+        }
+
+    .slideshow-view-larger-container .itemB {
+        height: 552px;
+        padding: 0 0 0 695px;
+        width: 227px;
+    }
+
+    .slideshow-view-larger-container .itemB .jScrollPaneContainer {
+            margin-left:10px;
+            padding-right:15px;
+        }
+
+        .slideshow-view-larger-container .itemB .item-inner {
+            height: 552px;
+            width: 202px;
+        }
+
+        .slideshow-view-larger-container .itemB .captioned-photo {
+            border-right: 1px solid #cacaca;
+            height: 552px;
+            width: 695px;
+        }
+
+            .slideshow-view-larger-container .itemB .captioned-photo .caption {
+                bottom: 0;
+                width: 532px;
+            }
+
+        .slideshow-view-larger-container .itemB .item-text {
+            padding-left:0;
+        }
+
+
+
+.slideshow-view-larger-container h1 {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    left: 32px;
+    padding: 0 104px 0 10px;
+    position: absolute;
+    text-transform: lowercase;
+    top: 21px;
+    width: 810px;
+}
+
+.slideshow-view-larger-overlay {
+    background: #000;
+    left: 0;
+    position: absolute;
+    opacity: .8;
+    *filter: alpha(opacity=80);
+    top: 0;
+    z-index: 1000000;
+}
+
+.slideshow-view-larger-util {
+    background: url(http://www.gq.com/css/i/slide/slideshow-nav.gif) repeat-x center top;
+    position: absolute;
+    top: 65px;
+    left: 32px;
+    width: 924px;
+    height: 24px;
+}
+
+.slideshow-view-larger-util .slideshow-control-forward,
+.slideshow-view-larger-util .slideshow-control-backward,
+.slideshow-view-larger-util .slideshow-control-play,
+.slideshow-view-larger-util .slideshow-control-stop {
+    background: url(http://www.gq.com/css/i/slide/slideshow-nav.gif);
+    cursor: pointer;
+    height: 24px;
+    text-indent: -9999px;
+}
+
+    .slideshow-view-larger-util .slideshow-control-forward {
+        background-position: -575px -48px;
+        width: 55px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+        .slideshow-view-larger-util .slideshow-control-forward:hover {
+            background-position: -575px -72px;
+        }
+
+    .slideshow-view-larger-util .slideshow-control-backward {
+        background-position: -441px -48px;
+        width: 77px;
+        position: absolute;
+        top: 0;
+        right: 112px;
+    }
+
+        .slideshow-view-larger-util .slideshow-control-backward:hover {
+            background-position: -441px -72px;
+        }
+
+    .slideshow-view-larger-util .slideshow-control-play,
+    .slideshow-view-larger-util .slideshow-control-stop {
+        position: absolute;
+    }
+
+    .slideshow-view-larger-util .slideshow-control-play {
+        background-position: 0 -48px;
+        width: 52px;
+        top: 0;
+        left: 0;
+    }
+
+        .slideshow-view-larger-util .slideshow-control-play:hover {
+            background-position: 0 -72px;
+        }
+
+    .slideshow-view-larger-util .slideshow-control-stop {
+        background-position: -260px -48px;
+        display: none;
+        width: 60px;
+        top: 0;
+        left: 0;
+    }
+
+        .slideshow-view-larger-util .slideshow-control-stop:hover {
+            background-position: -260px -72px;
+        }
+
+
+.slideshow-view-larger-container .slideshow-play-slider-container {
+    position: absolute;
+    border: 0;
+    color: #eee;
+    top: 0;
+    left: 61px;
+    z-index: 1000006;
+}
+
+.slideshow-view-larger-container .count {
+    color: #444;
+    font-size: 10px;
+    line-height: 24px;
+    position: absolute;
+    right: 55px;
+    text-align: center;
+    text-indent: 0;
+    top: 0;
+    width: 57px;
+}
+
+
+/* slider */
+
+.slideshow-play-slider-container {
+    float: left;
+    height: 24px;
+    padding: 0 70px 0 7px;
+    position: relative;
+}
+
+    #show-footer .slideshow-play-slider-container {
+        background-position: 100% -192px;
+    }
+
+    .slideshow-play-slider {
+        width: 65px;
+    }
+
+    .slideshow-play-time {
+        color: #777;
+        font-family: arial, sans-serif;
+        font-size: 10px;
+        line-height: 24px;
+        position: absolute;
+        right: 8px;
+        text-indent: 0;
+    }
+
+.slideshow-play-slider-container .ui-slider {
+    background: #777;
+    border: 0;
+    height: 3px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    top: 10px;
+    width: 65px;
+}
+
+    /* bad markup, ie blows the container div above out beyond the 3px height b/c of the link inside */
+    /* TODO: see if this is still necessary with the new 1.6 slider */
+    .slideshow-play-slider-container.ui-slider a {
+        _height: 1%;
+        _zoom: 1;
+    }
+
+.slideshow-play-slider-container .ui-slider-handle {
+    background: url(http://www.gq.com/css/i/slide/slideshow-nav.gif) no-repeat -429px -144px;
+    display: block;
+    height: 11px;
+    margin-left: -5px;
+    padding: 0;
+    position: absolute;
+    text-decoration: none;
+    top: -3px;
+    width: 10px;
+    z-index: 2;
+    _overflow: hidden; /* otherwise blows out in ie6 */
+}
+
+.slideshow-play-slider-container .ui-slider-handle:hover {
+
+}
+
+.slideshow-play-slider-container .ui-slider-handle-active,
+.slideshow-play-slider-container .ui-slider-handle-active:hover {
+
+}
+
+
+/* CONSUMER MARKETING */
+
+#slideshow-cm-container {
+    display: none;
+    position: relative;
+    height: 544px;
+    width: 628px;
+}
+
+    #slideshow-cm-extra {
+        width: 320px;
+        height: 544px;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+        #slideshow-cm-sharing {
+            float: left;
+        }
+
+    #slideshow-cm-subsoffer {
+        background: #f6f6f6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 307px;
+        height: 516px;
+        text-align: center;
+        vertical-align:middle;
+    }
+    #global_slideshow{
+        height: 516px;
+        text-align: center;
+        padding-top:90px;
+    }
+
+        .subsinclude {
+            position: absolute;
+            top: 100px;
+            left: 47px;
+        }
+
+.slideshow-view-larger-container #slideshow-cm-container {
+    background: #e9e9e9;
+    height: 544px;
+    padding: 4px 147px;
+}
+
+    .slideshow-view-larger-container #slideshow-cm-extra {
+        background: #fff;
+        float: right;
+        height: 544px;
+        position: static;
+    }
+
+    .slideshow-view-larger-container #slideshow-cm-subsoffer {
+        float: left;
+        position: static;
+        height: 544px;
+    }
+
+        .slideshow-view-larger-container .subsinclude {
+            top: 100px;
+            left: 165px;
+        }
+
+/* cm utils - note some of these styles are to override the defaults in global.css for regular utility links */
+
+#slideshow-cm-sharing ul.utilities {
+    background: #fff;
+    border: 0;
+    border-bottom: 1px solid #cacaca;
+    float: left;
+    _display: inline;
+    height: auto;
+    margin: 10px 0 0 0;
+    padding: 0 10px 6px 10px;
+    width: 300px;
+    clear: both;
+    display: block;
+}
+
+    #slideshow-cm-sharing ul.utilities li {
+        display: block;
+        float: left;
+        _display: inline;
+        height: 48px;
+        list-style: none;
+        margin: 0 8px 8px 0;
+        width: 112px;
+    }
+
+        #slideshow-cm-sharing ul.utilities li a {
+            background: #fff url(http://www.gq.com/css/i/slide/slideshow-shareicons.gif) no-repeat;
+            color: #555;
+            display: block;
+            float: none;
+            height: 48px;
+            width: 112px;
+        }
+
+            #slideshow-cm-sharing ul.utilities li.utility-print {
+                display: none;
+            }
+
+            #slideshow-cm-sharing ul.utilities li.utility-email a {
+                background-position: 0 0;
+            }
+
+                #slideshow-cm-sharing ul.utilities li.utility-email a:hover {
+                    background-position: 0 -48px;
+                }
+
+            #slideshow-cm-sharing ul.utilities li.utility-feeds {
+                display: none;
+            }
+
+            #slideshow-cm-sharing ul.utilities li.utility-share a {
+                background-position: -112px 0;
+            }
+
+                #slideshow-cm-sharing ul.utilities li.utility-share a:hover     {
+                    background-position: -112px -48px;
+                }
+
+            #slideshow-cm-sharing ul.utilities li.utility-favorite {
+                display: none;
+            }
+
+    /* For Slide Show links ( ref Jira bug: GQ-131 )  */
+    #slideshow-cm-feature .feature .links li {
+        padding: 4px 0px 4px 10px;
+    }
+
+/* IE6 WEIRDNESS */
+#yrail { _padding-left:15px}
+.utilities {
+    _float:none;
+    _margin-left:0;
+}

@@ -229,7 +229,7 @@ div.keywords dt{display:block;line-height:1em}
 .item .keywords{margin-top:0}
 .list .keywords{clear:none}
 .item .caption{font-size:10px;width:115px;margin-top:3px}
-.item .detail{background:transparent url(/css/i/global/see-more-arrows.gif) no-repeat scroll right 4px;font-weight:bold;width:50px}
+.item .detail{background:transparent url(http://www.gq.com/css/i/global/see-more-arrows.gif) no-repeat scroll right 4px;font-weight:bold;width:50px}
 .listCitemA .item .caption{width:439px;padding-left:9px}
 .listD .item .caption{width:439px}
 .listCitemA .keywords,.listD .keywords,.listCitemC .keywords{margin-top:20px}
@@ -255,7 +255,7 @@ div.keywords dt{display:block;line-height:1em}
 .thumbnails li .active img,.thumbnails li:hover{border:1px solid #ff0a0a}
 .thumbnails span{display:none}
 .listCitemB .item .captioned-photo{float:none;margin-right:0}
-.control-bar{position:relative;z-index:1;background:url(/css/i/slide/control.gif) 0 0 no-repeat;text-indent:-9999px;height:50px;margin-left:14px;position:relative;line-height:1em;font-size:10px}
+.control-bar{position:relative;z-index:1;background:url(http://www.gq.com/css/i/slide/control.gif) 0 0 no-repeat;text-indent:-9999px;height:50px;margin-left:14px;position:relative;line-height:1em;font-size:10px}
 .control-bar.simple{background-position:-1405px 0}
 #slideViewAllWrap .control-bar{background-position:-630px 0}
 .control-bar a{display:block;height:25px;position:absolute}
@@ -267,8 +267,8 @@ div.keywords dt{display:block;line-height:1em}
 .control-bar .viewall a{left:99px;width:96px}
 .control-bar .previous a{left:457px;width:68px}
 .control-bar .next a{width:581px;width:46px;left:578px}
-.control-bar .stop a{background:url(/css/i/slide/control.gif) -1282px 0 no-repeat;height:22px}
-#slideCarouselWrap{clear:both;padding:35px 0 0 54px;height:124px;position:relative;margin:10px 0;background:url(/css/i/serial/thumbnail-bg.gif) 0 -182px no-repeat}
+.control-bar .stop a{background:url(http://www.gq.com/css/i/slide/control.gif) -1282px 0 no-repeat;height:22px}
+#slideCarouselWrap{clear:both;padding:35px 0 0 54px;height:124px;position:relative;margin:10px 0;background:url(http://www.gq.com/css/i/serial/thumbnail-bg.gif) 0 -182px no-repeat}
 #slideCarouselWrap.fullweek{padding-left:9px;background-position:0 0}
 #slideCarousel{float:left;margin:0 auto}
 #slideCarousel img{display:inline;opacity:50%;border:1px solid #eaeff3}
@@ -287,7 +287,7 @@ div.keywords dt{display:block;line-height:1em}
 #slideCarouselWrap li.active:hover{color:#000}
 #slideCarouselWrap li.active img{opacity:.35}
 #slideCarouselWrap li.active img:hover{opacity:.99}
-.backto{clear:both;height:1%;font-weight:bold;font-size:11px;background:url(/css/i/global/backto.gif) 0 0 no-repeat;padding-left:22px}
+.backto{clear:both;height:1%;font-weight:bold;font-size:11px;background:url(http://www.gq.com/css/i/global/backto.gif) 0 0 no-repeat;padding-left:22px}
 .backto a{text-decoration:underline;font-weight:normal}
 .backto .related,.backto ul{display:inline}
 .backto li{list-style:none;display:inline;margin:0 2px 0 0}
@@ -296,7 +296,7 @@ div.keywords dt{display:block;line-height:1em}
 .slide-bottom{}
 .seeall{clear:both;height:1%;margin:20px 0 32px 0}
 .seeall a:link,.seeall a:visited,.seeall a:hover{color:#000;text-decoration:underline}
-.seeall a{font:bold italic 11px Arial;padding-right:14px;background:url(/css/i/global/see-more-arrows.gif) right 3px no-repeat}
+.seeall a{font:bold italic 11px Arial;padding-right:14px;background:url(http://www.gq.com/css/i/global/see-more-arrows.gif) right 3px no-repeat}
 .seeall a:hover{background-position:right -15px}
 .item:after,.list:after,.thumbnails:after,#slideViewAllWrap:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .item,.list,.thumbnails,#slideViewAllWrap,.utilties{display:block;height:1%}
@@ -339,7 +339,7 @@ div.keywords dt{display:block;line-height:1em}
 #videobody .footer .text,#videobody .footer .legal{color:#666;margin-bottom:4px}
 #video .seeall{clear:both;height:1%;margin:20px 0 35px 23px}
 #video .seeall a:link,#video .seeall a:visited,#video .seeall a:hover{color:#000;text-decoration:underline}
-#video .seeall a{display:block;font:bold italic 11px Arial;padding-right:14px;background:url(/css/i/global/see-more-arrows.gif) right 3px no-repeat}
+#video .seeall a{display:block;font:bold italic 11px Arial;padding-right:14px;background:url(http://www.gq.com/css/i/global/see-more-arrows.gif) right 3px no-repeat}
 #video .seeall a:hover{background-position:right -15px}
 #videoPlayerAnchor{background:#fff}
 #videoSubsLayer{display:none;position:absolute;z-index:9999;width:380px;height:288px;overflow:hidden;background-color:#fff}
@@ -370,10 +370,10 @@ div.keywords dt{display:block;line-height:1em}
 .appurtenance h6{display:inline;text-transform:uppercase;font-family:Arial,Verdana,sans-serif;color:#000;font-size:11px;margin-right:3px}
 .appurtenances{list-style:none;margin:20px 0;padding-left:0}
 .appurtenances .text{display:inline}
-.preparation{background:url(/css/i/global/hor-dot-br.gif) bottom left repeat-x;padding-bottom:20px;margin-bottom:20px;margin-left:0}
+.preparation{background:url(http://www.gq.com/css/i/global/hor-dot-br.gif) bottom left repeat-x;padding-bottom:20px;margin-bottom:20px;margin-left:0}
 .preparation h3,.ingredient-set h3{font-family:Arial,Verdana,sans-serif;font-size:14px}
 .preparation .presentation h3{font-size:1.3em;font-family:Georgia,"Times New Roman",serif}
-.presentation{padding-top:20px;background:url(/css/i/global/hor-dot-br.gif) top left repeat-x}
+.presentation{padding-top:20px;background:url(http://www.gq.com/css/i/global/hor-dot-br.gif) top left repeat-x}
 .presentation ul{margin-left:0;padding-left:0;list-style:none}
 .presentation li{margin-bottom:3px}
 .presentation li small{font-family:Arial,Verdana,sans-serif}
