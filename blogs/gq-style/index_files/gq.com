@@ -1,0 +1,1 @@
+PARSELY.pInit({"apikey":"gq.com","settings":{"debug":false,"widget":false,"tracker":true},"customizations":null,"track_ip_addresses":true,"bundle":"/code/slim_v06.js","track_third_party_cookies":true,"uuid":"9668a4d7-d223-4e08-ae94-746efcf7ab78"});
