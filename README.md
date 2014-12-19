@@ -1,2 +1,3 @@
-[Demos](http://demo.shopbeam.com/examples)
-[Wiki](http://demo.shopbeam.com/wiki)
+# Shopbeam
+* [Demos](http://demo.shopbeam.com/examples)
+* [Integration Wiki](http://demo.shopbeam.com/wiki)
