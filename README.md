@@ -1,4 +1,2 @@
-shopbeam.github.io
-==================
-
-Shopbeam's Public Github Page
+[Demos](http://demo.shopbeam.com/examples)
+[Wiki](http://demo.shopbeam.com/wiki)
