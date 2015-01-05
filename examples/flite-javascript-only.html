@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flite javascript only</title>
+    <script class="shopbeam-script" type="text/javascript" src="https://www.shopbeam.com/js/widget.loader.js"
+            async="true"></script>
+
+</head>
+<body>
+<!-- Ad Tags for WebView with only javascript -->
+<!-- Base size of ad: 400x250 -->
+<!-- Placements: 1 -->
+
+<!-- Placement: WebView with only javascript #1 -->
+<!-- Placement ID: ad471f56-2af3-4eaf-a238-11e54c1f4c8b -->
+<!-- Placement Size: 400x250 -->
+<!-- Ad Server: NONE -->
+
+<script>
+    (function() {
+        var guid = "ad471f56-2af3-4eaf-a238-11e54c1f4c8b", o = window, r = "", m, s = "http:", e = encodeURIComponent, x = 0, f = document.createElement("script");
+        o.FLITE=o.FLITE || {};
+        o.FLITE.config = o.FLITE.config || {};
+        o.FLITE.config[guid] = o.FLITE.config[guid] || {};
+        o.FLITE.config[guid].cb = Math.random();
+        o.FLITE.config[guid].ts = (+ new Date());
+        try{ r = (top===self && top.location) ? top.location.href : document.referrer || (top.location && top.location.href) || "";}catch(er){x=1}
+        try{ s = o.location && o.location.protocol === "https:"? o.location.protocol : s;}catch(er){x+=2}
+        try{ m = r.match(new RegExp("[A-Za-z]+:[/][/][A-Za-z0-9.-]+")); } catch(er) {x+=4}
+        f.src = [s,"//r.flite.com/syndication/uscript.js?i=",e(guid),"&v=3","&x=us",x,"&cb=",o.FLITE.config[guid].cb,"&d=",e((m && m[0]) || r)].join("");
+        document.write(f.outerHTML);
+    })();
+</script>
+<noscript>
+    <a style="text-decoration:none;display:block;border:0;" href="//r.flite.com/syndication/backuplink/i/ad471f56-2af3-4eaf-a238-11e54c1f4c8b?ct=" target="_blank">
+        <img border="0" src="//r.flite.com/syndication/backupimage/i/ad471f56-2af3-4eaf-a238-11e54c1f4c8b?at="/>
+    </a>
+</noscript>
+</body>
+</html>
