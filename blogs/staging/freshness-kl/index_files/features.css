@@ -1,0 +1,312 @@
+/*Home page Features Slider*/
+.featureSlide {
+    width: 320px;
+    height: 320px;
+    float: left; 
+    background-color: #1f1f1f;
+    position: relative;
+}
+
+
+.featureSlide .attachment-feature-slide {
+    z-index: 0;
+    position: absolute;
+}
+
+.middleSlide {
+    margin: 0 10px;
+}
+
+a.featureSlideMore {
+    background: url('images/features/slider-readmore.png') no-repeat;
+    width: 286px;
+    height: 95px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    padding-right: 10px;
+    position: absolute;
+    top: 110px;
+    z-index: 10;
+}
+
+.short-title {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    float: left;
+    margin-top: -25px;
+    min-width: 75px;
+    white-space: nowrap;
+    background: url('images/features/slider-readmore-title.png') repeat;
+    height: 24px;
+    padding: 9px 9px 0px 11px;
+}
+
+.long-title {
+    float: left;
+    margin: 10px;
+    line-height: 1.3em;
+
+    height: 52px;
+    overflow: hidden;
+}
+
+body.category-features #content, body.category-9 #content, body.single.features #content {
+    width: 980px;
+}
+/*bar*/
+.featuresBar {
+    width: 100%;
+    margin: 0px 0 10px 0;
+}
+
+.featuresBar h2, .featuresBar h1, .featuresBar a#homelink{
+    font-size: 14px;
+}
+
+.featuresBar a#homelink{
+    margin-left: 10px !important;
+}
+
+/*Features List page*/
+
+.featureWrap {
+    margin-right: 20px;
+    float: left;
+}
+
+.last-feature{
+    margin-right: 0px;
+}
+
+.features-post {
+    width: 313px;
+    height: 415px;
+    border-bottom: 0;
+}
+
+#container.features_container{
+    overflow: hidden;
+    padding: 0 10px;
+    background: #fff;
+}
+
+/*First post styles*/
+.featureWrap.first-feature {
+    margin-right: 0px;
+}
+
+.first-feature .features-post {
+    width: 980px;
+        background-color: #1f1f1f;
+}
+
+.first-feature-image {
+    position: absolute;
+}
+    
+.first-feature-meta {
+    height: 125px;
+    background: url('images/features/features-title-background.png') repeat;
+    position: absolute;
+    bottom: 0px;
+    width: 958px;
+    text-align: right;
+    text-transform: uppercase;
+    padding-right: 22px;
+}
+
+.first-feature-image  a {
+    text-decoration: none;
+    color: #fff;
+}
+.first-feature-image  a img{ 
+    float: left;
+}
+
+.subtitle {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/*end First post styles*/
+
+.features-postThumbnail img{
+    width: 313px;
+    height: 200px;
+} 
+
+.features-post .entry-title {
+    width: 100%;
+    font-size: 12px;
+    line-height: 17px;
+    height: 36px;
+    margin: 17px 0 5px 0 !important;
+}
+.features-post .entry-content, .features-post .entry-summary  {
+    width: 100%;
+    line-height: 16px;
+}
+
+.features-post a.more-link {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+/*Features single page*/
+
+body.single.features #container {
+    background: none;
+}
+
+.featuresBar h2, .featuresBar h1 {
+    padding-left: 10px;
+}
+
+.single .featuresBar h2, .single .featuresBar h1 {
+    line-height: 18px;
+    width: 740px;
+    height: auto;
+    padding-left: 2px;
+    padding-bottom: 10px;
+    min-height: 16px;
+}
+
+.featuresBar a#homelink {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    float: left;
+    background: url('images/posts/home.png') no-repeat left center;
+    padding: 3px 0 0 25px;
+    margin-top: 9px;
+}
+.featuresBar a#homelink:hover {
+    color: #ccc;
+    background: url('images/posts/home_hover.png') no-repeat left center;
+}
+
+.language_switcher {
+    position: absolute;
+    text-indent: -999px;
+}
+.language_switcher  a{
+    display: block;
+    width: 34px;
+    height: 34px;
+}
+.language_switcher#chinese_target a {
+    background: url('images/features/chinese_flag.png') no-repeat;
+}
+.language_switcher#english_target a {
+    background: url('images/features/british_flag.png') no-repeat;
+}
+
+body.single.features .post {
+    clear: both;
+    border-bottom: 0px;
+    margin-top: 20px;
+    float: left;
+}
+
+body.single.features .post .entry-content {
+    width: 100%;
+}
+
+.featuresBar .prev_next a {
+    margin-top: 13px;
+}
+/*Override strong span style*/
+body.single.features .post strong span, body.single.features .post p span strong {
+    color: black !important;
+}
+
+.interview_quotation {
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+    border-left: 2px solid #DEE721;
+    padding: 0 0 0 10px;
+    margin: 0 30px 0 18px;
+}
+
+
+/*Features credits and footer buttons*/
+
+body.single.features .postTools {
+    height: 42px;
+    padding: 8px 0 0 10px;
+}
+
+#credits {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    color: #181818;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+body.single.features .postTools .author a {
+    color: #000;
+}
+
+.produced-by {
+    font-weight: bold;
+}
+
+.feature-links a{
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+body.single.features .socialwidgets {
+    margin-top: 5px;
+}
+
+/*NGG slideshow*/
+
+.features .ngg-slideshow, .features  .ngg-slideshow-loader, .features .ngg-slideshow img{
+    width: 980px !important;
+    height: 500px !important;
+}
+
+.features  .ngg-slideshow-loader img {
+    height: 40px !important;
+    width: 40px !important;
+    margin: 0 auto;
+}
+
+
+/*Columns*/
+.wpcolumn-wrapper .wpcolumn {
+    float: left;
+    margin: 10px 4% 15px 0;
+    width: 46%;
+}
+
+.wpcolumn-wrapper .wpcolumn-last {
+    margin-right: 0;
+}
+
+.wpcolumn-wrapper .wpcolumn-first {
+    float: left;
+    width: 980px;
+}
+
+.wpcolumn-clearfix {
+    clear: both;
+}
+
+.post_column_1 {
+    /*Make it a bit narrower for FF*/
+    width: 47% !important;
+    padding-right: 26px !important;
+}

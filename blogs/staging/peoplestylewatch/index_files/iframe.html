@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html class=" js rgba borderradius boxshadow opacity cssgradients" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title></title>
+    <meta content="charset=utf-8">
+    <style media="screen">
+        * { float:left; margin:0; padding:0; overflow:auto; background-color: #000000;}
+        #flashContent { display:none; }
+    </style>
+    <script src="iframe_data/main.js"></script>
+    <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script-->
+    <script src="iframe_data/swfobject.js"></script>
+    <script>
+        if(document.domain.indexOf('stylewatch') > 0){
+            document.domain = 'peoplestylewatch.com';
+        }else{
+            document.domain = 'people.com';
+        }
+        var parentzone = parent.adFactory.zone;
+        var parenturl = location.search.substring(1);
+        var parentpackageid = (parent.PEOPLE.Photo.packageid != '') ? parent.PEOPLE.Photo.packageid+'_' : '';
+        var parentgalleryid = (parent.PEOPLE.Photo.galleryid != '') ? parent.PEOPLE.Photo.galleryid : '';
+        var parentgalleryname = parent.document.getElementsByTagName('h1').item(0).innerHTML;
+        parentgalleryname = parent.PEOPLE.removeHTML(parentgalleryname);
+
+        // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection.
+        var swfVersionStr = "10.0.0";
+        // To use express install, set to playerProductInstall.swf, otherwise the empty string.
+        var xiSwfUrlStr = "playerProductInstall.swf";
+        var timestamp = new Date().getTime();
+
+        var flashvars = {};
+        flashvars.adTag = parent.tgxAds ?
+                escape("http://pubads.g.doubleclick.net/gampad/adx?iu=/8484/peo/" + parentzone + "_flash&t=aid%3D" + parentgalleryid + "&sz=300x600&c=" + timestamp + "&m=text/xml") :
+                "http://ad.doubleclick.net/pfadx/3475.peo/" + parentzone + "_flash;aid=" + parentgalleryid + ";sz=300x600;dcmt=text/xml";
+        flashvars.galleryURL = parenturl;
+        flashvars.galleryName = parentgalleryname;
+        flashvars.masterJSON = "http://www.people.com/people/json/gallery/stflash/0,,"+parentpackageid+parentgalleryid+",00.js";
+        flashvars.basePathDetails = "http://img2.timeinc.net/people/static/json/gallery/";
+        flashvars.hasTags = parent.PEOPLE.Photo.hastags;
+
+        var params = {};
+        params.quality = "high";
+        params.bgcolor = "#000000";
+        params.allowscriptaccess = "sameDomain";
+        params.allowfullscreen = "true";
+        params.wmode = "transparent";
+
+        var attributes = {};
+        attributes.id = "PeopleBestDressed";
+        attributes.name = "PeopleBestDressed";
+        attributes.align = "middle";
+
+        swfobject.embedSWF(
+                "PeopleBestDressed.swf", "flashContent",
+                "57", "28",
+                swfVersionStr, xiSwfUrlStr,
+                flashvars, params, attributes);
+        // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
+        swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+
+    </script><style media="screen" type="text/css">#flashContent {visibility:hidden}#flashContent {display:block;text-align:left;}</style>
+    <script>
+        function getHash() {
+            return window.parent.document.location.hash.replace('#','');
+        }
+        function setHash(val) {
+            window.parent.document.location.hash = val;
+        }
+        function addtags(data, galleryid) {
+            thisMovie("PeopleBestDressed").jsonDetails(galleryid, data);
+        }
+        function PhotoGallery() {
+            this.addtags = addtags;
+        }
+        PhotoGallery = new PhotoGallery();
+        function getDetail(url) {
+            $.getScript(url);
+        }
+        function thisMovie(movieName) {
+            if (navigator.appName.indexOf("Microsoft") != -1) {
+                return window[movieName];
+            } else {
+                return document[movieName];
+            }
+        }
+    </script>
+</head>
+<body bgcolor="#000000">
+<div id="omniture" style="display:none">
+    <script>
+        var s_account="timepeople";
+    </script>
+    <script type="text/javascript" src="index_files/common.js"></script>
+    <script type="text/javascript" src="index_files/people.js"></script>
+    <script>
+        s_time.channel = parent.s_time.channel;
+        s_time.pageName = parent.s_time.pageName;
+        s_time.prop16 = parent.s_time.prop16;
+        s_time.prop11 = parent.s_time.prop11;
+        s_time.prop12 = parent.s_time.prop12;
+        s_time.prop17 = parent.s_time.prop17;
+        if (typeof(catsCSV) == "string") s_time.prop13 = catsCSV;
+        if (typeof(omnitureHookFunction) == "function") eval("omnitureHookFunction();");
+        // set but don't fire Omniture
+        // var s_code=s_time.t();if(s_code)document.write(s_code)
+    </script>
+    <script>
+        var newpagename	= s_time.pageName
+        function omniRCTrack(omniStr){
+//	console.log(omniStr);
+            var regexp = /View:|UA:/;
+            if(!regexp.test(omniStr))return 0;
+            var s = s_gi(s_account);
+            var omniSplit = omniStr.indexOf(':');
+            var omniType = omniStr.substr(0,omniSplit);
+            var omniDetail = omniStr.substr(omniSplit+1,omniStr.length);
+            if(omniType == 'View'){
+                s_time.pageName	= newpagename+'|'+omniDetail.toLowerCase();;
+                s_time.eVar23	= newpagename+'|'+omniDetail.toLowerCase();;
+                s_time.t();
+            }
+            else if(omniType == 'UA'){
+                s_time.linkTrackEvents = 'None';
+                s_time.linkTrackVars   = 'prop13,prop14';
+                s_time.prop13 = omniDetail;
+                s_time.prop14 = s_time.pageName;
+                s_time.tl(this,'o','Red Carpet: '+omniDetail);
+                s.linkTrackVars = s.linkTrackEvents = 'None';
+                s_time.prop13 = s_time.prop14 = '';
+            }
+        }
+
+
+    </script>
+</div>
+
+<!-- SWFObject's dynamic embed method replaces this alternative HTML content with Flash content when enough
+     JavaScript and Flash plug-in support is available. The div is initially hidden so that it doesn't show
+     when JavaScript is disabled.
+-->
+<object data="iframe_data/PeopleBestDressed.swf" name="PeopleBestDressed" id="PeopleBestDressed" type="application/x-shockwave-flash" height="28" align="middle" width="57"><param value="high" name="quality"><param value="#000000" name="bgcolor"><param value="sameDomain" name="allowscriptaccess"><param value="true" name="allowfullscreen"><param value="transparent" name="wmode"><param value="adTag=http%3A//pubads.g.doubleclick.net/gampad/adx%3Fiu%3D/8484/peo/redcarpet/goldenglobes_flash%26t%3Daid%253D20772633%26sz%3D300x600%26c%3D1389723261342%26m%3Dtext/xml&amp;galleryURL=http://www.peoplestylewatch.com/people/stylewatch/package/gallery/0,,20768373_20772633,00.html&amp;galleryName=Golden Globe Awards 2014&amp;masterJSON=http://www.people.com/people/json/gallery/stflash/0,,20768373_20772633,00.js&amp;basePathDetails=http://img2.timeinc.net/people/static/json/gallery/&amp;hasTags=true" name="flashvars"></object>
+
+
+<noscript>
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="57" height="28" id="PeopleBestDressed">
+        <param name="movie" value="PeopleBestDressed.swf" />
+        <param name="quality" value="high" />
+        <param name="bgcolor" value="#ffffff" />
+        <param name="allowScriptAccess" value="sameDomain" />
+        <param name="allowFullScreen" value="true" />
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="PeopleBestDressed.swf" width="57" height="28">
+            <param name="quality" value="high" />
+            <param name="bgcolor" value="#ffffff" />
+            <param name="allowScriptAccess" value="sameDomain" />
+            <param name="allowFullScreen" value="true" />
+            <!--<![endif]-->
+            <!--[if gte IE 6]>-->
+            <p>
+                Either scripts and active content are not permitted to run or Adobe Flash Player version
+                10.0.0 or greater is not installed.
+            </p>
+            <!--<![endif]-->
+            <a href="http://www.adobe.com/go/getflashplayer">
+                <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash Player" />
+            </a>
+            <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+    </object>
+</noscript>
+
+
+</body></html>

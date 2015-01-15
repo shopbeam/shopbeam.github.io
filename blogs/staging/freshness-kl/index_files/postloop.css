@@ -1,0 +1,276 @@
+/*Latest stories nav bar*/
+#postNav {
+margin: 0px 0px 30px 0;
+height: 36px;
+background: black;
+}
+
+#postNav h2, #postNav a.categoryNav, .featuresBar h2, .featuresBar h1{
+font-weight: bold;
+text-transform: uppercase;
+color: #D3DD49;
+min-height: 26px;
+background-color: #000;
+display: block;
+float: left;
+padding-top: 10px;
+text-decoration: none;
+font-size: 11px;
+}
+
+#postNav h2 {
+font-size: 14px;
+width: 216px;
+margin-left: 10px;
+}
+
+#postNav a.categoryNav {
+padding: 13px 15px 0 15px;
+height: 23px;
+}
+
+#viewAs {
+display: block;
+float: right;
+}
+
+#viewAs p, #viewAs a {
+display:-moz-inline-stack;
+display:inline-block;
+zoom:1;
+*display:inline;
+vertical-align: top;
+padding-top: 10px;
+height: 26px;
+width: 30px;
+}
+
+#viewAs p {
+font-size: 11px;
+color: #fff;
+padding-top: 12px;
+margin-right: 10px;
+width: 40px;
+}
+
+a#listView {
+    background: url('images/posts/listview_active.png') no-repeat 0% 50%;
+}
+
+a#gridView {
+    background: url('images/posts/gridview_.png') no-repeat 0% 50%;
+}
+
+body.page-template-pageofposts-php a#listView {
+    background: url('images/posts/listview_.png') no-repeat 0% 50%;
+}
+
+body.page-template-pageofposts-php a#gridView {
+    background: url('images/posts/gridview_active.png') no-repeat 0% 50%;
+}
+
+
+#postNav a.categoryNav.active {
+background: url('images/posts/activeCat.png') no-repeat;
+background-color: none;
+height: 40px;
+color: #000;
+}
+
+/*Posts*/
+.post {
+border-bottom: 1px solid #d0d0d0;
+height: 160px;
+width: 650px;
+position: relative;
+}
+
+.home .post {
+    width: 650px;
+}
+
+.postThumbnail {
+    float: left;
+    margin-right: 20px;
+    background-color: #1F1F1F;
+    height: 160px;
+}
+
+.postThumbnail img{
+    height: 160px;
+    width: 160px;
+}
+
+.entry-title {
+color: #1e1e1e;
+font-size: 16px;
+font-weight: bold;
+border-bottom: 1px dotted #000;
+text-transform: uppercase;
+display: block;
+width: 470px;
+overflow: hidden;
+max-height: 30px;
+float: left;
+padding-bottom: 4px;
+margin: 0 0 3px 0;
+}
+
+.home .entry-title {
+width: 469px;
+}
+
+.entry-title a:link, .entry-title a:visited {
+text-decoration: none;
+color: #1e1e1e;
+}
+.entry-title a:hover {
+color: #1e1e1e;
+}
+
+.post a.more-link {
+font-size: 10px;
+background: url('images/posts/readmore.png') no-repeat 8px 5px #D3DD49;
+width: 60px;
+height: 17px;
+padding: 2px 0px 4px 28px;
+text-decoration: none;
+color: #1E1E1E;
+font-weight: normal;
+position: absolute;
+bottom: 0px;
+left: 180px;
+text-transform: uppercase;
+line-height: 19px;
+}
+
+.entry-content, .entry-summary {
+width: 470px;
+font-size: 12px;
+float: left;
+line-height: 19px;
+margin-top: 2px;
+}
+
+.home .entry-content, .home .entry-summary {
+width: 460px;
+}
+
+.entry-content a, .entry-summary a {
+font-weight: bold;
+color: #d46400;
+}
+
+.post_styles_wrap ol {
+    list-style: decimal;
+}
+
+.post_styles_wrap ul {
+list-style: disc;
+}
+
+/*Social buttons/post tools*/
+.shareBar {
+position: absolute;
+bottom: 0px;
+right: 0px;
+width: 320px;
+}
+
+.shareBtn {
+float: right;
+}
+
+.shareBtn.twitter iframe {
+    width: 95px !important;
+}
+.single-post .socialwidgets {
+float: right;
+margin-right: 10px;
+}
+
+.plusone {
+margin: 0px 10px 0 10px;
+}
+
+.st_sharethis_custom{
+    background: url('images/posts/share_this.png') no-repeat scroll left top transparent;
+    height: 20px;
+    width: 20px;
+    display: block;
+    cursor: pointer;
+}
+
+.st_sharethis_custom:hover{
+    background: url('images/posts/share_this.png') no-repeat scroll right top transparent;
+}
+
+
+.commentcounter a{
+    background: url('images/posts/comment-bubble.png') no-repeat;
+    height: 21px;
+    width: 25px;
+    margin: 1px 9px 0 0;
+    text-align: center;
+    font-size: 12px;
+    padding: 3px 0 0 0;
+    font-weight: bold;
+    overflow: hidden;
+    color: #636467;
+    text-decoration: none;
+    display: block;
+}
+.commentcounter a:hover {
+    color: #999999;
+}
+
+.single-post .commentcounter a{
+    padding: 0px;
+    height: 24px;
+}
+
+.category-features .commentcounter{
+    display: none;
+}
+
+.twitter-share-button {
+    width: 90px !important;
+}
+
+/*Arrow for nextgen gallery*/
+.single-post .ngg_wrapper {
+    height: 400px;
+    position: relative;
+}
+
+.single-post.features .ngg_wrapper {
+    height: 500px;
+	margin-bottom: 26px;
+}
+
+.ngg_next {
+    position: absolute;
+    right: 0px;
+    z-index: 10000;
+    top: 0px;
+    background: url('images/header/sliderArrowSprite.png') no-repeat;
+    background-position: center right;
+    height: 100%;
+    width: 80px;
+    cursor: pointer;
+}
+
+/*Search results page, posts*/
+.post.no-results {
+    border-bottom: 0px;
+    margin-bottom: 20px;
+}
+
+/*Viper video override*/
+.vvqbox {
+	margin: 0 auto 27px 0 !important;
+}
+
+p span span .vvqbox {
+	margin: 0 auto 10px 0 !important;
+}

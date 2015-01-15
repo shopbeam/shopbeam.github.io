@@ -1,0 +1,146 @@
+/**
+ * PMC A/B Test frame work
+ *
+ * @version 1.0
+ * @author Hau Vong
+ *
+ */
+
+function PMC_AB_Test( options ) {
+	if ( this.init ) {
+		try {
+			this.init( options );
+			this.run();
+		} catch (e) {}
+	} else {
+		return new PMC_AB_Test( options );
+	}
+}
+
+PMC_AB_Test.prototype.init = function ( options ) {
+	this.options = {
+			id  :  'pmc_abt',
+			bias: 50,
+            usecookie:false,
+			a   : function(){},
+			b   : function(){}
+		};
+	if ( typeof options.a == 'function' ) {
+		this.options.a = options.a;
+	}
+	if ( typeof options.b == 'function' ) {
+		this.options.b = options.b;
+	}
+	if ( typeof options.id == 'string' ) {
+		this.options.id = options.id;
+	}
+	if ( typeof options.bias == 'number' ) {
+		this.options.bias = options.bias;
+	}
+    if( typeof options.usecookie == 'boolean' ){
+        this.options.usecookie = options.usecookie;
+    }
+
+    if( this.options.usecookie ){
+        this.cookie = pmc.cookie.get( this.options.id + options.bias );
+        if ( typeof this.cookie == 'undefined' || !this.cookie ) {
+            this.cookie = this.get_ab();
+            pmc.cookie.set( this.options.id + options.bias, this.cookie );
+        }
+    }else{
+    	// Not using cookie, but use the same var anyway
+    	this.cookie = this.get_ab();
+    }
+
+	if ( this.cookie == 'a' ) {
+		this.do_test = this.options.a;
+	} else {
+		this.do_test = this.options.b;
+	}
+
+};
+
+PMC_AB_Test.prototype.run = function() {
+	try {
+		if ( typeof this.do_test == 'function' ) {
+			this.do_test();
+		}
+	} catch (e) {}
+}
+
+PMC_AB_Test.prototype.get_ab = function() {
+	if ( Math.floor((Math.random()*100)+1) <= this.options.bias ) {
+		return 'a';
+	} else {
+		return 'b';
+	}
+};
+
+
+PMC_AB_Ads = window.PMC_AB_Ads || {};
+PMC_AB_Ads.LoadScript = function( src ) {
+	var a, s = document.getElementsByTagName("script")[0];
+	a = document.createElement("script");
+	a.type="text/javascript";
+	a.async = true;
+	a.src = src;
+	s.parentNode.insertBefore(a, s);
+};
+
+// Luminate In-Photo Ads
+PMC_AB_Ads.Luminate = function( id ) {
+	if ( typeof id == 'undefined' || !id ) {
+		id = '9502f9019';
+	}
+	PMC_AB_Ads.LoadScript("http://www.luminate.com/widget/async/" + id + "/");
+};
+
+// GumGum Ads
+PMC_AB_Ads.GumGum = function( id ) {
+	if ( typeof id == 'undefined' || !id ) {
+		id = '5cc3fdcf';
+	}
+	jQuery.globalEval( 'var ggv2id = "' + id +'";');
+	PMC_AB_Ads.LoadScript("http://g2.gumgum.com/javascripts/ggv2.js");
+};
+;
+
+/*
+ * This script is written to emulate jwplayer object to intercept and override the option width & height specified
+ * where mobile version of browser does not display properly due to width & height are defined with desktop size.
+ */
+pmcjwplayer = function ( id ) {
+	this.id = id;
+	this.setup = function ( option ) {
+		try {
+			// determine device screen size and width base on device orientation
+			if (typeof window.orientation == 'undefined' || window.orientation == 0 || window.orientation == 180 ) {
+				this.width = window.screen.width;
+			}
+			else {
+				this.width = window.screen.height;
+			}
+			// Some device such as Android have a default viewport width set to 320, while its physical screen width is 480.
+			// We need to adjust the width accordingly to current viewport width.
+			if ( typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 1.0 ) {
+				this.width = this.width / window.devicePixelRatio;
+			}
+			if (typeof option['width'] != 'undefine') {
+				// we need to override and ajust video width
+				if ( this.width < option['width'] ) {
+					// get the scaling ratio to ajust video height if needed
+					this.ratio = this.width/option['width'];
+					if ( typeof option['height'] != 'undefined' ) {
+						// adjusting video height according to scale ratio
+						option['height'] = Math.floor( option['height'] * this.ratio );
+					}
+					option['width'] = this.width;
+				}
+			}
+		} catch (e) {}
+		// setup jwplayer with modified option
+		jwplayer(this.id).setup(option);
+	};
+	return this;
+};
+;

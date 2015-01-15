@@ -1,0 +1,8 @@
+.article-text,
+.article-text p,
+.article-text ol,
+.article-text ul,
+.article-text dl {
+    font-size: 17px;
+    line-height: 25px;
+}

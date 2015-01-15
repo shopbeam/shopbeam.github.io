@@ -1,0 +1,45 @@
+.scout.related_articles .header{
+	background: none repeat scroll 0 0 black;
+	color: white;
+	display: block;
+	height: 30px;
+	width: 580px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0px 10px 0px;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: normal;
+	line-height: 30px;
+}
+.scout.related_articles #sailthru-content {
+	margin-left: 10px;
+}
+.scout.related_articles .sailthruScout {
+	float: left;
+}
+.scout.related_articles .sailthruScout .article{
+	width: 132px;
+	padding: 5px;
+	border-left: 2px dotted #999;
+}
+.scout.related_articles .sailthruScout:first-child .article {
+	border-left: 0px none #ffffff;
+}
+.scout.related_articles .sailthruScout .image_container, .scout.related_articles .sailthruScout .image_container a, .scout.related_articles .sailthruScout .image_container a img{ 
+	width: 132px;
+}
+.scout.related_articles .sailthruScout .image_container {
+	margin-bottom: 10px;
+}
+.scout.related_articles .sailthruScout .article .title {
+	height: 84px;
+	overflow: hidden;
+}
+.scout.related_articles .sailthruScout .article .title a{
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 16px;
+	font-family: Arial, sans-serif;
+}

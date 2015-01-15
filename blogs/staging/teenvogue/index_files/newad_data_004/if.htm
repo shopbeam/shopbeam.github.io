@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+	<style type="text/css">
+		#wrapper {
+			position:relative;
+			background-repeat: no-repeat;
+			padding: 0px;
+			cursor: pointer;	
+		}		
+	</style>
+	</head>
+	<body>
+		<div style="width: 300px; height: 250px; background-image: url(&quot;https://servedbyy-ssmb.netdna-ssl.com/beyondtherack/templates/300x250/3236/05.jpg&quot;);" id="wrapper">
+		</div>
+		<script src="if_data/jquery.js"></script>
+		<script type="text/javascript">
+
+			var adId = "3236a";
+			var adDimensions = "300x250";
+			var adClient = "beyondtherack";
+			var clickUrl = "http://jump.omnitarget.com/f1ca32?src=3181310&cid=3181310&crid=13136353&pid=2299123&icost=2.761141&external_id=nym1COXRpoj81vTeexACGOnAuIq41aGyKyIMMzguMTI1LjEwLjE2KAEwtcbxmQU.&sids=&r=http://www.teenvogue.com/ads/newad.html";
+
+			/******************************/
+			
+			var timeout = 5000; // 5s
+			var backupUrl = "https://servedbyy-ssmb.netdna-ssl.com/" + adClient + "/templates/" + adDimensions + "/" + adId.replace(/\D/g,'') + "/backup.jpg";
+			var jsonUrl = "https://servedbyy-ssmb.netdna-ssl.com/" + adClient + "/jsonp/" + adId.replace(/\D/g,'') + ".json";
+			$("#wrapper").css("width", adDimensions.split("x")[0]).css("height", adDimensions.split("x")[1]);
+			var mult = "";
+			var updated = "";
+			var template = "";
+			var lander = "";
+			var tag = "";
+			var imgs = [];
+
+			$.support.cors = true;
+			$.ajax({
+			  	url: jsonUrl,
+			  	dataType: 'jsonp',
+			  	jsonp: false,
+			  	jsonpCallback: 'creativeTemplates',
+			 	success: function(json){
+			 		// populate imgs array with image indexes, mult times each
+					$(json.images).each(function(i,e){
+						for(var j = 0; j<e.mult; j++){
+							imgs.push(i);
+						}
+					});
+
+					// randomly select number between 0 and number of items in imgs	and choose corresponding image
+					var image = json.images[imgs[Math.floor(Math.random()*imgs.length)]];
+
+					// populate subs
+					mult = "&sub2=mult" + Math.round(parseFloat(image.mult / imgs.length * 100)); // mult out of 100
+					updated = "&sub3=" + json.updated;
+					template = "&sub4=" + adId + '.image' + image.id;
+					if(image.tag != undefined)
+						tag = "&sub5=" + image.tag;
+					if(image.lander != undefined)
+						lander = "&url_id=" + image.lander;
+					else if(json.landers != undefined && json.landers.length > 0){ // random lander
+						var chosenLander = json.landers[Math.floor(Math.random()*json.landers.length)];
+						lander = "&url_id=" + chosenLander;
+					}
+
+					// display chosen template
+					// if swf
+					if(/.swf/.test(image.url)){
+						clickUrl = clickUrl.replace(/&/g,'%26');
+						var subs = "&sub1=" + adId + mult + updated + template + tag + lander;
+						subs = subs.replace(/&/g,'%26');
+						var params = 'source=3181310&clickTAG=http://nym1.ib.adnxs.com/click?ayi1F9EWBkBrKLUX0RYGQJhuEoPAygFAayi1F9EWBkBrKLUX0RYGQGkgToGrhmQr5agJwbfSvXs1YzxTAAAAAPMUIwCeAwAAngMAAAIAAADhccgAdaYFAAAAAQBVU0QAVVNEACwB-gATuAAAX6wDAQQCAQIAAIwABSKmVQAAAAA./cnd=%217AYzQQj-lcIBEOHjoQYY9cwWIAM./referrer=http%3A%2F%2Fwww.teenvogue.com%2Fads%2Fnewad.html/clickenc=http%3A%2F%2Fadclick.g.doubleclick.net%2Faclk%25253Fsa%25253DL%252526ai%25253DBW9u8NWM8U8c5wd6VB8ORgbgD95HgqwUAAAAQASAAOABYh9WApYYBYMnejovApNgPggEXY2EtcHViLTM0NjQwNzE4ODIzNzQ4NzOyARF3d3cudGVlbnZvZ3VlLmNvbboBCWdmcF9pbWFnZcgBCdoBJ2h0dHA6Ly93d3cudGVlbnZvZ3VlLmNvbS9hZHMvbmV3YWQuaHRtbJgC0A_AAgLgAgDqAhszMzc5L3RlZW52b2d1ZS5kYXJ0L2Zhc2hpb274AvDRHpAD4AOYA-ADqAMB4AQBoAYW%252526num%25253D0%252526sig%25253DAOD64_3T68Jz-WRdd7s38oNydS69So1UxA%252526client%25253Dca-pub-3464071882374873%252526adurl%25253D' + clickUrl + subs;
+
+						document.write('<object id="6451626915716754087" data="' + image.url + '" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="' + adWidth + '" height="' + adHeight + '" flashvars="' + params + '">');
+						document.write('<param name="movie" value="' + image.url + '">');
+						document.write('<param name="loop" value="true">');
+						document.write('<param name="menu" value="false">');
+						document.write('<param name="quality" value="high">');
+						document.write('<param name="wmode" value="opaque">');
+						document.write('<param name="bgcolor" value="#FFFFFF">');
+						document.write('<param name="allowscriptaccess" value="always">');
+						document.write('<param name="flashvars" value="' + params + '">');
+
+						document.write('<!--[if !IE]>-->');
+						document.write('<object type="application/x-shockwave-flash" data="' + image.url + '?' + params + '" width="' + adWidth + '" height="' + adHeight + '" wmode="opaque" allowscriptaccess="always">	');
+						document.write('<!--<![endif]-->');
+						document.write('<a href="http://nym1.ib.adnxs.com/click?ayi1F9EWBkBrKLUX0RYGQJhuEoPAygFAayi1F9EWBkBrKLUX0RYGQGkgToGrhmQr5agJwbfSvXs1YzxTAAAAAPMUIwCeAwAAngMAAAIAAADhccgAdaYFAAAAAQBVU0QAVVNEACwB-gATuAAAX6wDAQQCAQIAAIwABSKmVQAAAAA./cnd=%217AYzQQj-lcIBEOHjoQYY9cwWIAM./referrer=http%3A%2F%2Fwww.teenvogue.com%2Fads%2Fnewad.html/clickenc=http%3A%2F%2Fadclick.g.doubleclick.net%2Faclk%25253Fsa%25253DL%252526ai%25253DBW9u8NWM8U8c5wd6VB8ORgbgD95HgqwUAAAAQASAAOABYh9WApYYBYMnejovApNgPggEXY2EtcHViLTM0NjQwNzE4ODIzNzQ4NzOyARF3d3cudGVlbnZvZ3VlLmNvbboBCWdmcF9pbWFnZcgBCdoBJ2h0dHA6Ly93d3cudGVlbnZvZ3VlLmNvbS9hZHMvbmV3YWQuaHRtbJgC0A_AAgLgAgDqAhszMzc5L3RlZW52b2d1ZS5kYXJ0L2Zhc2hpb274AvDRHpAD4AOYA-ADqAMB4AQBoAYW%252526num%25253D0%252526sig%25253DAOD64_3T68Jz-WRdd7s38oNydS69So1UxA%252526client%25253Dca-pub-3464071882374873%252526adurl%25253D' + clickUrl + '&sub1=' + adId + updated + "&sub4=" + adId + '.imageBackup' + image.id + '" target="_blank"><img src="' + backupUrl + '" /></a>');
+						document.write('<!--[if !IE]>-->');
+						document.write('</object>');
+						document.write('<!--<![endif]-->');
+						document.write('</object>');
+					}
+					// if image
+					else{
+						$("#wrapper").css('background-image','url("' + image.url + '")');
+					}
+			 	},
+			  	timeout: timeout,
+			  	error: function(msg){ // for ajax request error, JSON parse error, and timeout
+
+					// populate subs
+                    template = "&sub4=" + adId + '.imageBackup';
+				    tag = "&sub5=" + msg.status + ": " + msg.statusText + "|" + msg.responseText;
+
+					// display backup
+				    $("#wrapper").css('background-image','url("' + backupUrl + '")');
+			  	}
+			});
+
+			// click to target URL
+			$("#wrapper").click(function(){
+				window.open("http://nym1.ib.adnxs.com/click?ayi1F9EWBkBrKLUX0RYGQJhuEoPAygFAayi1F9EWBkBrKLUX0RYGQGkgToGrhmQr5agJwbfSvXs1YzxTAAAAAPMUIwCeAwAAngMAAAIAAADhccgAdaYFAAAAAQBVU0QAVVNEACwB-gATuAAAX6wDAQQCAQIAAIwABSKmVQAAAAA./cnd=%217AYzQQj-lcIBEOHjoQYY9cwWIAM./referrer=http%3A%2F%2Fwww.teenvogue.com%2Fads%2Fnewad.html/clickenc=http%3A%2F%2Fadclick.g.doubleclick.net%2Faclk%25253Fsa%25253DL%252526ai%25253DBW9u8NWM8U8c5wd6VB8ORgbgD95HgqwUAAAAQASAAOABYh9WApYYBYMnejovApNgPggEXY2EtcHViLTM0NjQwNzE4ODIzNzQ4NzOyARF3d3cudGVlbnZvZ3VlLmNvbboBCWdmcF9pbWFnZcgBCdoBJ2h0dHA6Ly93d3cudGVlbnZvZ3VlLmNvbS9hZHMvbmV3YWQuaHRtbJgC0A_AAgLgAgDqAhszMzc5L3RlZW52b2d1ZS5kYXJ0L2Zhc2hpb274AvDRHpAD4AOYA-ADqAMB4AQBoAYW%252526num%25253D0%252526sig%25253DAOD64_3T68Jz-WRdd7s38oNydS69So1UxA%252526client%25253Dca-pub-3464071882374873%252526adurl%25253D" + clickUrl + "&sub1=" + adId + mult + updated + template + tag + lander);
+			});
+		</script>
+	
+</body></html>

@@ -1,0 +1,95 @@
+
+<!-- saved from url=(0145)http://polls.esmas.com/esmassafeiframe/type/wg/host/www.cosmoenespanol.com/pollguid/993fbefa-75cb-1031-b4c0-0019b9d72c08/variant/none/casilla/876 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link id="cssversuspop" rel="stylesheet" type="text/css" href="f10a50a4-3c21-102f-ab7f-0019b9d72c08.css"> <!--CSS para encuestas -->
+                <script language="javascript">
+            var captcha =  '0'
+            var eventPublish = 0;
+			pollactions_type = 0;   
+			var variant = 'none';
+			var iframe = null;
+			var mytimer = null;
+	
+			  function resizeThisFrame() {
+			     var isCookie = readCokie() //viene desde el generaform
+                 
+                /*********************** C A P T C H A *********************/
+                if(captcha == 1 && isCookie == 0){
+                    loadScript("http://www.google.com/recaptcha/api/challenge?k=6LcmEsUSAAAAADPFolv0E450D1GkU3gvbSQbhq2w", function(){ 																					  
+	                   loadScript(RecaptchaState.server + "js/recaptcha.js");	
+	               });
+                }else{
+                    var captchaBox = document.getElementById('recaptcha_widget')
+                    if(captchaBox){
+                        captchaBox.style.display ='none'
+                    }
+                }
+                    /*********************** / C A P T C H A *********************/
+                 
+                    
+					iframe = document.getElementById('inneriframe'); 
+					if ( iframe == null || iframe == undefined){
+						mytimer = setTimeout("resizeThisFrame()",150);
+					} else {
+						clearTimeout(mytimer);
+						waitForiFrame(); 
+					}
+                    
+			  }
+
+	
+			function waitForiFrame(){ 
+			 var type = 'wg';
+             //alert (type);
+                if(type == 'wg' || type == 'mv'){
+                    var size = $('esmas_safe_simple_poll_wrapper_993fbefa-75cb-1031-b4c0-0019b9d72c08').getSize();
+                    iframe.src = 'http://www.cosmoenespanol.com/crossiframes/iframetest-resize.html?height='+ size.y + '&guid=993fbefa-75cb-1031-b4c0-0019b9d72c08'
+                    //console.log(iframe.src)
+                }else{
+                   var size = $('esmas_safe_simple_poll_wrapper_993fbefa-75cb-1031-b4c0-0019b9d72c08').getSize();
+                    size.y = size.y+10
+                    iframe.src = 'http://www.cosmoenespanol.com/crossiframes/iframetest-resize.html?height='+ size.y + '&guid=esmas_safe_simplepoll_iframe_xx' 
+                    //alert(iframe.src)
+                }              
+            }
+
+            
+            function dynamicCss(urlcss){
+	           var fileref=document.createElement('link');
+	           fileref.setAttribute('rel', 'stylesheet');
+	           fileref.setAttribute('type', 'text/css');
+	           fileref.setAttribute('href', urlcss);
+	           document.getElementsByTagName("head")[0].appendChild(fileref);
+            }
+            function dynamicScript(urlscript){
+	            var script = document.createElement('script'); 
+                script.type = 'text/javascript'; 
+                script.src = urlscript; 
+                document.getElementsByTagName('head')[0].appendChild(script); 
+            }
+                
+    var seriesMenu = new Array();               
+
+		</script>
+        
+    
+	<script type="text/javascript" charset="iso-8859-1" src="mootools-1.2.3-core-yc.js"></script><script type="text/javascript" charset="iso-8859-1" src="mootools-1.2-more-plugins.js"></script><script type="text/javascript" charset="iso-8859-1" src="browserdetect.js"></script><script type="text/javascript" charset="iso-8859-1" src="pollactions.js"></script><script type="text/javascript" charset="iso-8859-1" src="saved_resource(2)"></script></head>
+	<body style="background-image: none; background-position: initial initial; background-repeat: initial initial;"> 
+        <script type="text/javascript">  
+            
+            var RecaptchaOptions = {     
+                theme : 'custom',     
+                custom_theme_widget: 'recaptcha_widget'  
+            };
+            
+        </script>
+		<div class="esmas_safe_simple_poll_wrapper wg_esmas_safe_simple_poll_wrapper" id="esmas_safe_simple_poll_wrapper_993fbefa-75cb-1031-b4c0-0019b9d72c08" style="background-image: none; background-position: initial initial; background-repeat: initial initial;">                    <div id="esmas_safe_wrapper_993fbefa-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_wrapper">                       <div id="esmas_safe_title_container_993fbefa-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_title_container">                            <h1>Encuesta</h1>                        </div>                        <div id="esmas_safe_body_container_993fbefa-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_body_container">                           <ul id="esmas_safe_sections_995c58e4-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_sections">                                    <li id="esmas_safe_section_container_995c58e4-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_simple_poll_section">                                                <div id="esmas_safe_question_container_995de0d8-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_question_container">                                                    <div id="esmas_safe_icon_container_995de0d8-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_icon_container"></div>                                                                                                        <div id="esmas_safe_text_container_995de0d8-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_text_container">                                                        <h2>¿Qué accesorio no puede faltar en tu outfit?</h2>                                                    </div>                                                </div>                                                 <div id="publish_box_top" class="wg_publish_container_top"></div>                                                <div id="esmas_safe_answer_container_993fbefa-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_answer_container">  <ul> <li class="wg_lioption"><div><input type="radio" value="995ecdae-75cb-1031-b4c0-0019b9d72c08" name="esmas_safe_input_group_995de0d8-75cb-1031-b4c0-0019b9d72c08" id="esmas_safe_radio_option_995ecdae-75cb-1031-b4c0-0019b9d72c08" class="esmas_safe_radio_option" onclick="activaLi(0)"></div><div><span id="995ecdae-75cb-1031-b4c0-0019b9d72c08" class="spanoption"><a href="javascript:void(0)" onclick="activaRadio(0)" style="text-decoration: none;">Un bolso grande</a></span></div></li><li class="wg_lioption"><div><input type="radio" value="995ff5e4-75cb-1031-b4c0-0019b9d72c08" name="esmas_safe_input_group_995de0d8-75cb-1031-b4c0-0019b9d72c08" id="esmas_safe_radio_option_995ff5e4-75cb-1031-b4c0-0019b9d72c08" class="esmas_safe_radio_option" onclick="activaLi(1)"></div><div><span id="995ff5e4-75cb-1031-b4c0-0019b9d72c08" class="spanoption"><a href="javascript:void(0)" onclick="activaRadio(1)" style="text-decoration: none;">Unos aretes y pulseras llamativos</a></span></div></li><li class="wg_lioption"><div><input type="radio" value="99611a78-75cb-1031-b4c0-0019b9d72c08" name="esmas_safe_input_group_995de0d8-75cb-1031-b4c0-0019b9d72c08" id="esmas_safe_radio_option_99611a78-75cb-1031-b4c0-0019b9d72c08" class="esmas_safe_radio_option" onclick="activaLi(2)"></div><div><span id="99611a78-75cb-1031-b4c0-0019b9d72c08" class="spanoption"><a href="javascript:void(0)" onclick="activaRadio(2)" style="text-decoration: none;">Un reloj elegante</a></span></div></li>  </ul>                                                 </div>                                              </li>                                    <li id="esmas_safe_results_container_993fbefa-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_results_container">                                                     <div id="esmas_safe_conclusion_container_993fbefa-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_conclusion_container">                                                         <h2>¿Qué accesorio no puede faltar en tu outfit?</h2>                                                     </div>                                                <div id="esmas_safe_graph_container_993fbefa-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_graph_container">                                                     <div id="esmas_safe_chart_container_993fbefa-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_chart_container"></div>                                                 </div>                                                <div id="safe_otherpolls_container_995de0d8-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_otherpolls_container">												        <div class="wg_esmas_safe_more_title"><h3>Encuestas Recientes</h3><h4 class="wg_more"></h4></div>												        <ul class="wg_esmas_safe_more_items" id="safe_more_items_other"><li class="safe_more_alternate"><a href="http://encuestas.televisadeportes.com/safeencuestas/type/nt/id/65046/encuesta/encuesta" target="_top">¿Qué accesorio no puede faltar en tu outfit?</a></li><li><a href="http://encuestas.televisadeportes.com/safeencuestas/type/nt/id/63799/encuesta/encuesta-de-prueba" target="_top">Esta es la pregunta</a></li><li class="safe_more_alternate"><a href="http://encuestas.televisadeportes.com/safeencuestas/type/nt/id/51230/encuesta/comunicaci?n" target="_top">¿Qué tal es la comunicación con tu galán?</a></li><li><a href="http://encuestas.televisadeportes.com/safeencuestas/type/nt/id/49005/encuesta/0" target="_top">Y si él te fuera infiel, ¿qué preferirías?</a></li><li class="safe_more_alternate"><a href="http://encuestas.televisadeportes.com/safeencuestas/type/nt/id/48171/encuesta/0" target="_top">Si le fueras infiel a tu galán, ¿se lo confesarías?</a></li><li><a href="http://encuestas.televisadeportes.com/safeencuestas/type/nt/id/47421/encuesta/0" target="_top">¿Te has involucrado en alguna relación de alto riesgo?</a></li><li class="safe_more_alternate"><a href="http://encuestas.televisadeportes.com/safeencuestas/type/nt/id/46900/encuesta/amor-de-amigos" target="_top">Si te enamoras de un amigo, ¿qué preferirías?</a></li><li><a href="http://encuestas.televisadeportes.com/safeencuestas/type/nt/id/46087/encuesta/0" target="_top">Siendo súper honesta, ¿qué tan celosa dirías que eres?</a></li><li class="safe_more_alternate"><a href="http://encuestas.televisadeportes.com/safeencuestas/type/nt/id/45249/encuesta/0" target="_top">¿Qué tanto te molesta o molestaría que tu chico frecuente clubes de strippers?</a></li>												         </ul>												         <div class="wg_safe_more_title"><h3></h3><h4 class="wg_more"></h4></div>												         <ul class="wg_safe_more_items" id="safe_more_items_comms">												         </ul>												   </div>                                    </li><!--esmas_safe_results_container-->                            	</ul>                        </div><!--esmas_safe_body_container-->                                                 <div id="publish_box" class="wg_publish_container"></div>                        <div id="esmas_safe_footer_container_993fbefa-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_footer_container">                            <a href="http://polls.esmas.com/esmassafeiframe/type/wg/host/www.cosmoenespanol.com/pollguid/993fbefa-75cb-1031-b4c0-0019b9d72c08/variant/none/casilla/876#" id="esmas_safe_poll_go_993fbefa-75cb-1031-b4c0-0019b9d72c08"><img src="spacer.gif"></a>                             <span id="esmas_safe_thanks_text_993fbefa-75cb-1031-b4c0-0019b9d72c08" class="wg_esmas_safe_thanks_text"></span>                        </div>                    </div><!--esmas_safe_wrapper-->             <div id="cargaAJAX" style="width:0px; height:0px; display:none"></div><!--Carga ajax de log, regresa vacio o un pixel transparente--></div>
+        		<script type="text/javascript" src="esmas_safe_poll_loader.js"></script>
+
+
+		<iframe id="inneriframe" name="inneriframe" width="0" height="0" frameborder="0" style="display: none;" src="iframetest-resize.html"></iframe>   
+        <!--<script type="text/javascript" src="http://i2.esmas.com/encuestas/public/js/easyXDM.min.js"></script>-->
+ 
+	
+
+</body></html>

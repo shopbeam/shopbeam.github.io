@@ -1,0 +1,16 @@
+window.analyticsEvent=function(category,action,opt_label,opt_value,opt_noninteractive){dataLayer.push({'event':'analyticsEvent','eventCategory':category,'eventAction':action,'eventLabel':opt_label,'eventValue':opt_value,'eventNonInt':opt_noninteractive});}
+var userSegment='';if(wwd.user.isLoggedIn()){userSegment="logged-in";}else{userSegment="logged-out";}
+var pageType=jQuery('#pagetype').val();var pageUrl=window.location.pathname
+var pageUrlArray=pageUrl.split("/");var catName=pageUrlArray[1];var subCatName=pageUrlArray[2];if(catName===""){catName="homepage";}
+var articleInfo=jQuery('#article-id').val()+" | "+jQuery('#article-date').val()+" | "+jQuery('#articleContentTitle').val();autoLoginVar=jQuery.cookie('autologin');if(autoLoginVar!=null){autoLogin="Remember Me Enabled";}else{autoLogin="Remember Me Disabled or Unknown";}
+var accessType=jQuery('#article-access-type').val();if(pageType=="article"){var region=jQuery('#region').val();var metaKeywords=jQuery('meta[name=keywords]').attr("content");if(metaKeywords){metaKeywords=metaKeywords.replace(/, /g,"|");//
+}else{metaKeywords="WWD";}
+var pageAccess="";if(jQuery('#roadblock-article').length){if(jQuery('#roadblock-article').val()=="roadblock"){pageAccess="roadblock";}}
+var authorName=jQuery("#author-container span").map(function(){return jQuery(this).text();}).toArray().join(" ");}
+var userAccountType="";var accountID="";if(wwd.user.isLoggedIn()){userAccountType=wwd.user.getSubscriptionLevel();accountID=wwd.user.email;}
+var organizationID="";var IPclientUsers="";var mbcookies=new Array();if(document.cookie){mbcookies=document.cookie.split(";");}
+var mbids=new Array();for(var i=0;i<mbcookies.length;i++){if(mbcookies[i].match("machinebuild")){var mbcookie=mbcookies[i].split("=")[0];mbcookie=jQuery.trim(mbcookie);var mbid=mbcookie.replace(/machinebuild/,"");mbids.push(mbid);}}
+var machineBuild="machinebuild"+mbids.sort().reverse();if(jQuery.cookie(machineBuild)){var mbVals=jQuery.cookie(machineBuild).split('|');for(var i=0;i<mbVals.length;i++){if(mbVals[i].match("organization")){var mbOrgId=mbVals[i].replace(/organization/,"");accessTypeVar=jQuery('#article-access-type').val();if(mbOrgId){organizationID=mbOrgId;if(wwd.user.hasTooManyIPClientUsers){if(accessTypeVar=="Gated Paid"||accessTypeVar=="Gated Archive"){IPclientUsers="too many IP client users";//
+}}}}}}
+ga('create','UA-23700477-1','auto');ga('send','pageview',{'dimension1':userSegment,'dimension2':pageType,'dimension3':catName,'dimension4':subCatName,'dimension5':articleInfo,'dimension6':autoLogin,'dimension7':accessType,'dimension8':region,'dimension9':metaKeywords,'dimension10':pageAccess,'dimension11':authorName,'dimension12':userAccountType,'dimension13':accountID,'dimension14':organizationID,'dimension15':IPclientUsers});jQuery(document).ready(function(){jQuery("#content a, #yrail a, #zrail a").click(function(e){var getUrlVars=function(href){var vars={};var parts=href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value){vars[key]=value;});return vars;}
+var actionVar=getUrlVars(jQuery(this).attr('href'))["module"];if(actionVar!==undefined){ga('send','event',catName,actionVar,'click');}});});

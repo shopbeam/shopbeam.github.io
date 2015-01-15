@@ -1,0 +1,262 @@
+(function (win, doc) {
+    var parentWindow = false;
+    try {
+        // If a parent win exists, and is accessible, assign
+        // it to parentWindow.  This allows communication
+        // with the parent win (instead of just this <iframe> instance).
+        if (win.top && win.top.document) {
+            parentWindow = win.top;
+        }
+    } catch (error) {
+
+    }
+    var bodyElement = doc.body,
+        readyState = 'readyState',
+        byTag = 'getElementsByTagName',
+        hasOwn = Object.prototype.hasOwnProperty,
+        head = doc[byTag]('head')[0],
+        config = {
+            baseUrl: 'http://explorer.sheknows.com'
+        },
+        request = {"protocol":"http","fullUrl":"http://explorer.sheknows.com/widget/52b1fc8e0d2f379bb1000009"},
+        cbNum = 1,
+        cbPrefix = 'tep' + (+new Date()),
+        scriptElement,
+        addEvent = function (el, event, fn) {
+            if (el.addEventListener) {
+                el.addEventListener(event, fn, false);
+            } else {
+                el.attachEvent("on" + event, fn);
+            }
+        },
+        removeEvent = function (el, event, fn) {
+            if (el.addEventListener) {
+                el.removeEventListener(event, fn, false);
+            } else {
+                el.detachEvent("on" + event, fn);
+            }
+        },
+        removeSelf = function (el) {
+            if (el && el.parentNode) {
+                el.parentNode.removeChild(el);
+            }
+        },
+        beacon = function () {
+            var i = new Image();
+            i.onload = i.onerror = function () {
+                i.onload = i.onerror = null;
+                removeSelf(i);
+            };
+            i.setAttribute('style', 'position:absolute;height:1px;width:1px;left:-9999em');
+            i.src = createUrl('init');
+            bodyElement && bodyElement.appendChild(i);
+        },
+        createUrl = function (path) {
+            var u = config.baseUrl + '/api/widget/52b1fc8e0d2f379bb1000009',
+                qs = ['link=' + encodeURIComponent(doc.location.toString())],
+                referrer = getReferrer();
+
+            if (path && path.length > 0) {
+                u = u + '/' + path;
+            }
+            if (referrer) {
+                qs.push('referrer=' + encodeURIComponent(referrer));
+            }
+            return urlappend(u, qs.join('&'));
+        },
+        getReferrer = function () {
+            if (parentWindow !== false && parentWindow.document && parentWindow.document.referrer) {
+                return parentWindow.document.referrer.toString();
+            } else if (doc.referrer) {
+                return doc.referrer.toString();
+            }
+
+            return '';
+        },
+        widget = {
+            el: null,
+            isLoaded: false,
+            initialize: function () {
+                var _this = widget;
+
+                _this.el = doc.createElement('div');
+
+                scriptElement = _this.findScriptElement();
+
+                scriptElement.parentNode.insertBefore(_this.el, scriptElement);
+
+                // just load right away
+                _this.getHtml();
+
+                addEvent(win, 'scroll', function () {
+                    if (_this.isVisible() && !_this.isLoaded) {
+                        _this.getHtml();
+                        _this.isLoaded = true;
+                    }
+                });
+            },
+            /**
+             * A quick way to find the embedded script tag.
+             * This will not work when multiple widgets on the page are required.
+             *
+             * @todo Improve how this script becomes self-aware :D.
+             */
+            findScriptElement: function () {
+                var scripts = doc[byTag]('script'),
+                    elm = false;
+
+                for (var i = scripts.length - 1, script; i >= 0; i--) {
+                    script = scripts[i];
+
+                    if (script.src == request.fullUrl) {
+                        elm = script;
+                        break;
+                    }
+                }
+
+                return elm;
+            },
+            isVisible: function () {
+                var scrolled = win.pageYOffset || (doc.documentElement || doc.body.parentNode || doc.body).scrollTop,
+                    height   = win.innerHeight || doc.documentElement.offsetHeight;
+
+                return ((scrolled + height) >= (this.el.offsetTop - 100) && !this.isLoaded);
+            },
+            getHtml: function () {
+                var self = widget;
+
+                jsonp(createUrl(), function (err, response) {
+                    if (err) {
+                        widget.isLoaded = false;
+                    } else {
+                        widget.isLoaded = true;
+                        widget.render(response);
+                    }
+                })
+            },
+            render: function (html) {
+                this.el.innerHTML = html;
+                addEvent(doc.getElementById('explorer-widget-52b1fc8e0d2f379bb1000009-branding'), 'click', curatedByModal);
+            }
+        };
+
+    function urlappend(url, s) {
+        return url + (/\?/.test(url) ? '&' : '?') + s;
+    }
+
+    function curatedByModal() {
+        var b = bodyElement,
+        d = doc.createElement('div'),
+        c = d.cloneNode(false),
+        s = d.cloneNode(false),
+        m = d.cloneNode(false),
+        mcb = d.cloneNode(false),
+        mct = doc.createElement('a'),
+        cpf = 'explorer-modal-';
+
+        function cm() {
+            removeSelf(c);
+        }
+
+        c.className = cpf + 'container';
+        s.className = cpf + 'shadow';
+        m.className = cpf + 'modal';
+        mcb.className = cpf + 'close-button';
+        mct.className = cpf + 'close-text';
+
+        mcb.innerHTML = '<img src="http://explorer.sheknows.com/img/close.png" width="29" height="29" />';
+
+        m.innerHTML = '<img src="http://explorer.sheknows.com/img/logo.png" width="240" height="59" class="explorer-modal-logo" /><h1>Curating the Best of the Web</h1><p>SKExplorer brings you the best content from around the web, curated by the editors at <a href="http://sheknows.com" target="_blank">SheKnows.com</a>. Here you will find the hottest articles in parenting, food, celebrities, beauty, and more.</p><p>SKExplorer is not a paid marketing program. Its focus is finding relevant and interesting content for the user. Premium publishers can find out more about the SKExplorer platform <a href="mailto:skexplorer@sheknows.com" target="_blank">here</a>.</p>';
+        mct.innerHTML = 'Close';
+
+        c.appendChild(s);
+        m.appendChild(mcb);
+        m.appendChild(mct);
+        c.appendChild(m);
+
+        s.onclick = cm;
+        mct.onclick = cm;
+        mcb.onclick = cm;
+
+        b.appendChild(c);
+    }
+
+    function createGlobalCallback(fn) {
+        var name;
+        do {
+            name = cbPrefix + '_' + (cbNum++);
+        } while (typeof(win[name]) !== 'undefined');
+
+        win[name] = fn;
+
+        return name;
+    }
+
+    function jsonp(url, fn) {
+        var response = null,
+            cbval = createGlobalCallback(function (d) {
+                response = d;
+            }),
+            reqId = cbNum,
+            cbkey = 'callback' // the 'callback' key,
+            cbreg = new RegExp('((^|\\?|&)' + cbkey + ')=([^&]+)'),
+            match = url.match(cbreg),
+            script = doc.createElement('script'),
+            loaded = 0,
+            isIE10 = navigator.userAgent.indexOf('MSIE 10.0') !== -1;
+
+        if (match) {
+            if (match[3] === '?') {
+                url = url.replace(cbreg, '$1=' + cbval); // wildcard callback func name
+            } else {
+                cbval = match[3]; // provided callback func name
+            }
+        } else {
+            url = urlappend(url, cbkey + '=' + cbval); // no callback details, add 'em
+        }
+
+        script.type = 'text/javascript';
+        script.src = url;
+        script.async = true;
+        if (typeof script.onreadystatechange !== 'undefined' && !isIE10) {
+            // need this for IE due to out-of-order onreadystatechange(), binding script
+            // execution to an event listener gives us control over when the script
+            // is executed. See http://jaubourg.net/2010/07/loading-script-as-onclick-handler-of.html
+            //
+            // if this hack is used in IE10 jsonp callback are never called
+            script.event = 'onclick';
+            script.htmlFor = script.id = '_tep_' + reqId;
+        }
+
+        script.onload = script.onreadystatechange = function () {
+            if ((script[readyState] && script[readyState] !== 'complete' && script[readyState] !== 'loaded') || loaded) {
+                return false;
+            }
+            script.onload = script.onreadystatechange = null;
+            script.onclick && script.onclick();
+            // Call the user callback with the last value stored and clean up values and scripts.
+            fn(undefined, response);
+            response = undefined;
+            head.removeChild(script);
+            loaded = 1;
+        }
+
+        // Add the script to the DOM head
+        head.appendChild(script);
+
+        // Enable JSONP timeout
+        return {
+            abort: function () {
+                script.onload = script.onreadystatechange = null;
+                fn('Request is aborted: timeout', {});
+                response = undefined;
+                head.removeChild(script);
+                loaded = 1;
+            }
+        }
+    };
+
+    beacon();
+
+    widget.initialize();
+})(this, this.document);

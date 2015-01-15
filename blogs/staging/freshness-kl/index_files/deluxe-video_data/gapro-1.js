@@ -1,0 +1,1 @@
+jwplayer().registerPlugin("gapro-1");

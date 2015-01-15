@@ -1,0 +1,39 @@
+#overtblogox {
+    position: fixed;
+    display:block;
+    bottom: 0px;
+    right: 54px;
+    height: 68px;
+    width: 48px;
+    z-index: 2147483647;
+    background: url(http://cdn.complexmedianetwork.com/cdn/agenda.complex.com/assets/Q22013/drpepperentry/toolbar/can.png) no-repeat;
+}	
+#cmnpopadbox {
+    width: 300px;
+    height: 500px;
+    background: #fff url(http://cdn.complexmedianetwork.com/cdn/agenda.complex.com/assets/Q22013/drpepperentry/toolbar/tbbg.jpg) no-repeat top center; /* change background graphic in pop up */
+    color: #ffffff;
+    margin-left:-32px;
+    position: relative;
+}
+#cmn_ad_box {
+    height: 500px; /* adjust height to pop up ad size */
+}
+.cmnbox_hdr_x, .cmnbox_hdr_x a {
+    margin-left:-50px;
+}	
+#cmn_toolbar_ad {
+    min-width: 300px;
+    max-width: 300px;
+    overflow: visible;
+    display: block !important;
+    height: 28px !important;
+    background: #FFF url(http://cdn.complexmedianetwork.com/cdn/agenda.complex.com/assets/Q22013/drpepperentry/toolbar/tb-logo.jpg) no-repeat top center; /* change graphic that floats over the toolbar */
+}
+#toolbarclick {position: absolute; top: 0px; left: 0px; width: 300px; height: 500px; z-index: 200; }  /* adjust height and width to pop up ad size */
+ 
+/* custom class below per unit */
+ 
+#cmntoolbaradholder {position: relative;}
+
+#tbvidframe { position: absolute; top: 54px; left: 10px; z-index: 250; width: 280px; height:158px; border: none;  }

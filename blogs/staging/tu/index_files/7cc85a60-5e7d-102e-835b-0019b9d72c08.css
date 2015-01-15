@@ -1,0 +1,736 @@
+/* Tu en linea */
+/* 2011-10-12  16:28 */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+ margin:0;
+ padding:0;
+ background-color: transparent;
+ border: none;
+}
+table {
+ border-collapse:collapse;
+ border-spacing:0;
+}
+fieldset,img {
+ border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+ font-style:normal;
+ font-weight:normal;
+}
+ol,ul {
+ list-style:none;
+}
+caption,th {
+ text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+ font-size:100%;
+ font-weight:normal;
+}
+q:before,q:after {
+ content:;
+}
+abbr,acronym { border:0;
+}
+HTML { overflow: /*hidden;*/ }
+/* FIN INICIALIZACI?N CROSSBROWSER */
+
+.wg_esmas_safe_wrapper *{
+ margin: 0;
+ padding:0;
+ background: transparent;
+/*border: none;*/
+}
+
+.wg_esmas_safe_wrapper UL{
+	list-style:none;
+	list-style-type:none;
+}
+.wg_esmas_safe_wrapper{
+	width: 260px;
+	/*->height: 245px;*/
+	overflow: hidden;
+}
+
+.wg_esmas_safe_title_container{
+	display:none;
+	background-image:url(http://editorial.esmas.com/img/tu/tit_encuesta.gif);
+	background-repeat:none;
+	width: 260px;
+	height: 30px;
+	overflow:hidden;
+}
+.wg_esmas_safe_title_container H1{
+	padding:10px 0 0 18px;
+	color:#fff;
+	font-size:19px;
+	height:100%;
+	width:100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.wg_esmas_safe_body_container{
+	background:none;
+	width: 260px; 
+	/*->height: 178px; */
+	overflow:hidden;
+	/* border-left:2px solid #CECECE;
+	 border-right:2px solid #CECECE; */
+}
+.wg_esmas_safe_sections{
+	position:relative;
+	width: 604px;
+}
+.wg_esmas_safe_simple_poll_section{
+	float: left;
+	width: 300px;
+
+	/*->height: 150px;*/
+	/*background-color: orange;*/
+	
+	/*->*/
+	padding-bottom: 15px;
+}
+
+.wg_esmas_safe_question_container{
+	display:inline-block;
+	width:260px; 
+	/*->height:55px;*/
+	/*background-color: blue;*/
+}
+.wg_esmas_safe_icon_container{
+	width: 0;
+	height: 0;
+	display: none;
+	visibility: hidden;
+	overflow:hidden;
+}
+.wg_esmas_safe_icon_container A IMG{
+	width: 0;
+	height: 0;
+	display: none;
+	visibility: hidden;
+	overflow:hidden;
+}
+.wg_esmas_safe_text_container{
+	width: 260px;
+	/*->height: 48px; */
+	/*background-color: green; */
+	/*->*/
+}
+.wg_esmas_safe_text_container H2{
+	/*->*/ 
+	display:inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#333333;
+	font-size: 12px;
+	text-align:left;
+
+	/*->*/
+	margin: 14px 14px 10px 14px; 
+}
+
+.wg_esmas_safe_answer_container{
+	width: 240px;
+	height: 135px;
+	display: inline-block;
+	margin-top: 0px;
+	/*background-color: magenta;*/
+	overflow:hidden;
+}
+.wg_esmas_safe_answer_container UL{
+	width: 260px;
+	/*->height: 80px;*/
+	margin-left: 20px;
+	margin-right: 20px;	
+	margin-top: 0px;
+	/*background-color: orange;*/
+}
+.wg_esmas_safe_answer_container UL LI{
+	display:inline-block; 
+	float:none; 
+	/*width: 260px; */
+	margin: 0px !important; 
+	padding: 0px !important; 
+	min-height: 15px !important;
+	
+	/*->*/
+	margin-top: 12px !important;
+	
+	/*overflow: hidden;*/
+}
+.wg_esmas_safe_answer_container UL LI DIV{
+	float: left;
+}
+.wg_esmas_safe_answer_container UL LI DIV INPUT{
+	margin-right: 7px;
+	height: 15px;
+}
+.wg_esmas_safe_answer_container UL LI DIV SPAN{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px !important;
+	color: #333333;
+	min-height: 15px;
+	width: 230px;
+	display: inline-block;
+}
+.wg_esmas_safe_answer_container UL LI DIV SPAN A{
+	color: #333333;
+}
+.mv_selected{
+}
+
+
+.wg_esmas_safe_footer_container{
+	width: 260px;
+	height: 40px;
+	
+	background:none;
+
+	/*background-color: red;*/
+}
+.wg_esmas_safe_footer_container INPUT{
+	margin-top: 5px;
+	margin-left: 20px;
+	margin-right: 5px;
+	float:left;
+}
+
+.wg_esmas_safe_footer_container A IMG{ 
+	margin-top: 10px; 
+	margin-left: 90px; 
+	margin-right: 5px; 
+	float:left; 
+	width: 72px; 
+	height: 16px; 
+	background-image: url(http://editorial.esmas.com/img/tu/bt_votar.gif);
+	background-repeat:no-repeat; 
+	border:none;
+} 
+
+.wg_esmas_safe_thanks_text{
+	width:150px;
+	height: 18px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#fff;
+	margin: 0px;
+	margin-top: 5px;
+	margin-left: 0px;
+	padding-right: 20px;
+	text-align: right;	
+	display: block;
+	float:right;
+}
+.wg_esmas_safe_thanks_text A{
+	color:#fff;
+}
+
+.wg_esmas_safe_results_container{
+	float: left;
+	width: 260px;
+	/*->height: 150px;*/
+	margin-left: 0px;
+	padding-left: 0px;
+	/*ackground-color: darkorange;*/
+}
+.wg_esmas_safe_graph_container{
+	/*display:inline-block; */
+	width:260px;
+	/*->height:130px;*/
+	margin-left: 15px;
+	margin-top:3px;
+	/*background-color: yellow;*/
+}
+.wg_esmas_safe_chart_container{
+	width: 270px; 
+	/*->height: 130px;*/
+	text-align:center;
+	/*background-color: lightgreen;*/
+}
+
+.wg_esmas_safe_conclusion_container{
+	display: inline-block;
+	width: 296;
+	/*->height: 15;*/
+	/*->overflow:visible;*/
+}
+.wg_esmas_safe_conclusion_container H2{
+	display: inline-block;
+	/*->width:270px;*/
+	/*->height: 15px;*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	color:#fff;
+	font-size:12px;
+	font-style:italic;
+	
+	margin-left:15px;
+	margin-top:3px;
+	
+	/*-> */
+	text-align:left;
+}
+
+.wg_esmas_safe_otherpolls_container{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+
+.wg_safe_more_title{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.wg_safe_more_title H3{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.wg_safe_more_title H4{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.wg_safe_more_items{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.wg_safe_more_items LI{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.wg_safe_more_items LI A{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+
+.wg_esmas_safe_poll_go{padding-bottom:5px;}
+
+
+
+
+
+
+
+
+/********** para nota terminal **********/
+/*Contenedor principal, no debe fijarse la altura, debido a que ser? variable seg?n la cantidad de respuestas*/ 
+.nt_esmas_safe_wrapper *{
+	 margin: 0;
+	 padding:0;
+	 background-color: transparent;
+}
+.nt_esmas_safe_wrapper UL{
+	list-style:none;
+	list-style-type:none;
+}
+.nt_esmas_safe_wrapper{
+	width: 610px;
+	overflow: hidden;
+}
+/*Contenedor del T?tulo*/
+.nt_esmas_safe_title_container{
+	width: 610px;
+	height: 0px;
+	/*background-image:url(http://polls.esmas.com/resources/img/standalone/head_encuesta_610px.gif);*/
+	background-repeat:no-repeat;
+}
+/*Texto del T?tulo*/
+.nt_esmas_safe_title_container H1{
+	width: 610px;
+	height: 0px;
+	padding-left: 16px;
+	padding-top: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF; 
+	font-size: 14px;
+	text-align:left;
+	font-weight: bold;
+}
+/*Parte Central, no debe fijarse la altura, debido a que ser? variable seg?n la cantidad de respuestas*/ 
+.nt_esmas_safe_body_container{
+	width: 1220px; 
+	background-color: #FFFFFF;
+	overflow:hidden;
+}
+/*Parte que se desliza hacia la izquierda, por ello deber? ser del doble de ancho que la encuesta*/
+.nt_esmas_safe_sections{
+	position:relative;
+	width: 1220px;
+}
+/*Cada una de las secciones, 1. Muestra las posibles respuestas, 2. Muestra las barras de resultados*/
+.nt_esmas_safe_simple_poll_section{
+	float: left;
+	width: 610px;
+}
+
+/*Contenedor de Pregunta*/
+.nt_esmas_safe_question_container{
+	width:610px; 
+}
+/*Se puede colocar un Icono arriba o a la izquierda de las preguntas, en este caso lo ocultamos*/
+.nt_esmas_safe_icon_container{
+	/*width: 69px;*/
+	width: 0px;
+	height: 0px;
+	/*margin-left: 20px;*/
+	margin-left: 10px;
+	margin-top: 7px;
+	background-image:url(http://polls.esmas.com/resources/img/standalone/logoTD.gif);
+	background-repeat:no-repeat;
+	background-position:top left;
+	float:left; 
+}
+.nt_esmas_safe_icon_container A IMG{
+	width: 69px;
+	height: 0px;
+	border: none;	
+}
+/*Posicionador de la Pregunta*/
+.nt_esmas_safe_text_container{
+	width: 500px;
+	float:left; 
+	margin-top: 7px;
+}
+/*Texto de la Pregunta, preferible no fijarle altura*/ 
+.nt_esmas_safe_text_container H2{
+	display: inline-block;
+	width: 500px;
+	margin-left: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #003; 
+	font-size: 20px;
+	text-align:left;
+	font-weight:normal;
+	padding-top: 10px;
+}
+/*Contenedor de posibles Respuestas (RadioButtons), no debe fijarse la altura, debido a que ser? variable seg?n la cantidad de respuestas*/
+.nt_esmas_safe_answer_container{
+	width: 610px;
+	display: inline-block;
+ 	padding: 0px !important;
+	margin-bottom: 19px;
+}
+/*Lista de Respuestas*/
+.nt_esmas_safe_answer_container UL{
+	width: 560px;
+	margin-left: 20px;
+	margin-top: 0px !important;
+	padding-top: 0px !important;
+}
+/*Cada una de las posibles Respuestas*/
+.nt_esmas_safe_answer_container UL LI{
+	float:none;
+	width: 560px;
+	height: 24px !important;
+	overflow: hidden !important;
+	margin: 0px !important;
+	padding: 0px !important;
+	margin-bottom: 7px !important;
+
+}
+/*Contenedor del Radio Button*/
+.nt_esmas_safe_answer_container UL LI DIV{
+	float: left;
+
+	height: 18px !important;
+	overflow: hidden !important;
+	margin: 0px !important;
+	padding: 0px !important;
+
+
+}
+/*Radio Button*/
+.nt_esmas_safe_answer_container UL LI DIV INPUT{
+	margin-right: 7px;
+}
+/*Etiqueta*/
+.nt_esmas_safe_answer_container UL LI DIV SPAN{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px !important;
+	color: #102345;
+	height: 18px !important;
+	overflow: hidden !important;
+	margin: 0px !important;
+	padding: 0px !important;
+}
+.nt_esmas_safe_answer_container UL LI DIV SPAN A{
+	color: #102345;
+}
+
+/*Contenedor de: Bot?n de Votar, Texto de Elija una opci?n, ?Comenta! ? Gracias por Votar*/
+.nt_esmas_safe_footer_container{ 
+	width: 610px;
+	height: 0px;
+	background-image:url(http://polls.esmas.com/resources/img/standalone/bg_rounded_bar_bottom_big_2.gif);
+	background-repeat:no-repeat;
+	background-position:bottom left;
+}
+/*Bot?n de Votar*/
+.nt_esmas_safe_footer_container A IMG{ 
+	margin-top: 5px;
+	margin-left: 20px;
+	margin-right: 5px;
+	float:left;
+	width: 100px;
+	height: 26px;
+	background-image:url(http://i2.esmas.com/canal30/img/btn_VotaComenta.gif);
+	background-repeat:no-repeat;	
+}
+/*Contenedor de Texto de Elija una opci?n, ?Comenta! ? Gracias por Votar*/
+.nt_esmas_safe_thanks_text{
+	width:150px !important;
+	height: 18px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#F00 !important;
+	margin: 0px;
+	margin-top: 12px;
+	margin-left: 10px;
+	text-align: right;	
+	display: inline-block;
+	float:left;
+}
+/*Liga de Texto ?Comenta! (si es que aplica)*/
+.nt_esmas_safe_thanks_text A{ 
+	color:#F00 !important;
+}
+/*Contenedor de Gr?fica de Resulatados, no debe fijarse la altura, debido a que ser? variable seg?n la cantidad de respuestas*/ 
+.nt_esmas_safe_results_container{
+	float: left;
+	width: 610px;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.nt_esmas_safe_graph_container{
+	display:inline-block; 
+	width:560px; 
+	margin-left: 20px;	
+	margin-top: 0px;
+}
+.nt_esmas_safe_chart_container{
+	display: inline-block;
+	width: 560px;
+	text-align:center;
+}
+
+/*Contenedor de Texto de Conclusiones, por ahora no se usa*/
+.nt_esmas_safe_conclusion_container{
+	display: inline-block; 
+	width: 560px;
+	height: 60px;
+	position:relative;
+	margin-top: 10px;
+	left:20px;
+		
+}
+.nt_esmas_safe_conclusion_container H2{
+	display: inline-block; 
+	height: 0px;
+	background-image:url(http://polls.esmas.com/resources/img/standalone/logoTD.gif);
+	background-repeat:no-repeat;
+	background-position:top left;
+	padding-left: 0px;
+	width: 560px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #003; 
+	font-size: 20px;
+	text-align:left;
+	font-weight:normal;
+	margin-top: 0px;
+}
+
+/*Contenedor de Comentarios, actualmente ninguna encuesta lo muestra en versi?n Widget*/
+.nt_esmas_safe_otherpolls_container{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.nt_safe_more_title{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.nt_safe_more_title H3{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.nt_safe_more_title H4{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.nt_safe_more_items{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.nt_safe_more_items LI{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.nt_safe_more_items LI A{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+
+.nt_esmas_safe_poll_go{padding-bottom:5px;}
+
+.nt_safe_chart_element_label{
+	color:#000000 !important;
+	font-size: 12px !important;
+	display: inline-block;
+}
+
+
+/*************para recents *************/
+
+
+.esmas_safe_more_spl{
+    width: 300px;
+    background-repeat: no-repeat;
+    margin-top: 20px !important;
+}
+/*Contenedor de T?tulo*/
+.esmas_safe_more_spl DIV.safe_more_title{
+    width: 300px;
+    height: 0px;
+    /*background-image:url(http://i2.esmas.com/noticierostelevisa/img/bk_pleca_02.gif);*/
+    background-repeat:no-repeat;
+}
+/*Texto del T?tulo*/
+.esmas_safe_more_spl DIV.safe_more_title H4{
+    width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF; 
+    font-size: 14px;
+    text-align:left;
+    font-weight: bold;
+    padding-top: 11px;
+    padding-left: 10px;
+    
+}
+/*Cuerpo de Cajita de Encuestas Recientes*/
+.esmas_safe_more_spl DIV.safe_more_body{
+    width: 300px; 
+	overflow: hidden; 
+	background-color: #FFFFFF;
+}
+/*Contenedor de Elementos*/
+.esmas_safe_more_spl DIV.safe_more_body DIV.elements_container{
+    margin-top: 5px;
+}
+/*Cada uno de los elementos*/
+.esmas_safe_more_spl DIV.safe_more_body DIV.elements_container DIV.element{
+    width:298px;
+    display:inline-block;
+    padding-top: 5px; 
+    margin-left: 1px;
+}
+/*Caracter?sticas de elemento alterno*/
+.esmas_safe_more_spl DIV.safe_more_body DIV.elements_container DIV.alternate{
+    background-color: #ECEDEC; 
+}
+/*Contenedor de Link*/ 
+.esmas_safe_more_spl DIV.safe_more_body DIV.elements_container DIV.element SPAN{
+	display:inline-block;
+}
+/*Link*/            
+.esmas_safe_more_spl DIV.safe_more_body DIV.elements_container DIV.element SPAN A{
+	display:inline-block;
+    color: #000000; 
+    font-size: 14px;
+    text-align:left;
+    font-weight: normal !important;
+    padding-left: 10px;
+	margin-bottom:3px;
+ }
+
+
+
+
+
+
+
+
+
+
+/*COLORES DE SERIES (Agregar m?si se requieren encuestas con m?preguntas)*/
+.serie_color_0{
+	background-color: #461600;
+}
+.serie_color_1{
+	background-color: #52250F; 
+}
+.serie_color_2{
+	background-color: #5D331E;
+}
+.serie_color_3{
+	background-color: #69422E;
+}
+.serie_color_4{
+	background-color: #75503D;
+}
+.serie_color_5{
+	background-color: #815F4C; 
+}
+.serie_color_6{
+	background-color: #8C6D5B; 
+}
+.serie_color_7{
+	background-color: #987C6A; 
+}
+.serie_color_8{
+	background-color: #A48A79; 
+}
+.serie_color_9{
+	background-color: #B09989; 
+}
+.serie_color_10{
+	background-color: #BBA798; 
+}
+.safe_total_votes {display:none}
+.total {display:none}
+
+
+
+
+

@@ -1,0 +1,53 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = {}; 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=CBeq5YRiWUsqhC4_W0AGSsoCACPP0-fMD06S-32_AjbcBEAEgoZW2GygDUOOYhscFYMnGqYvApNgPoAHVrP3fA8gBAagDAaoEjAFP0CL5KfiJ3WstEZMnv5XPiQmWjZufMfESWHQSdu16gpsuw2aHNLs3-BIJotgzgPmzDwp-Ybm-kVgHisXOTRxdb_mgqQsU5Yl-vHdDaS_wsjB-d3NK6AJgwWyFMHtkUCIpGOxc5WRffKekNQ4S-5C7RQIJ6c6vjJ8hScKeDurBrQXTZheoLm4imu3MJ4gGAYAHk9OCIA&amp;num=1&amp;cid=5Gid15qTHT7nTEiTMFxd-_t3&amp;sig=AOD64_0IcnPkImQbs4jeqLW-ByVoeqFtkg&amp;client=ca-timeinc-instyle-photo&amp;adurl=http://www.shopathome.com/discounts_and_coupons/default-brand-coupons.aspx%3Frefer%3D1033150%26src%3DSEPDSE%26vendor%3Dgoogle%26Distribution%3DContent%26keyword%3Donline%2520tj%2520maxx%26MatchType%3D%26AdId%3D29975084795%26placement%3Dwww.instyle.com%26device%3Dc"; 
+google_ad.visible_url = "tjmaxxonline.shopathome.com"; 
+google_ad.line1 = "Online Tj Maxx"; 
+google_ad.line2 = "Online Shopping Has Arrived."; 
+google_ad.line3 = "Yay: Now Find TJ Maxx Online Deals!"; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_ad = {}; 
+google_ad.n = 2; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=C3IvQYRiWUsqhC4_W0AGSsoCACKqioq4EytKr9YIBwI23ARACIKGVthsoA1Dq5qSpB2DJxqmLwKTYD6ABiOi56APIAQGoAwGqBIwBT9By8y74it1rLRGTJ7-Vz4kJlo2bnzHxElh0EnbteoKbLsNmhzS7N_gSCaLYM4D5sw8KfmG5vpFYB4rFzk0cXW_5oKkLFOWJfrx3Q2kv8LIwfndzSugCYMFshTB7ZFAiKRjsXOVkX3ynpDVfUL-Nu0UCCenOr4yfIUnCng7qwa0F02YXqC5uIoWvoR-IBgGAB-CXxhc&amp;num=2&amp;cid=5Gid15qTHT7nTEiTMFxd-_t3&amp;sig=AOD64_0ADxA9t3Ak9WKngSZupQAAy2fdXg&amp;client=ca-timeinc-instyle-photo&amp;adurl=http://www.modnique.com/bzJApp/ViewNewCustLandingForm2.action%3Fsid%3D300%26tid%3D100%26mainbnr%3DstepsA%26invite%3Dhide%26comp%3Dgoogle%26subid%3Dads"; 
+google_ad.visible_url = "www.Modnique.com"; 
+google_ad.line1 = "Clothing Sale Online"; 
+google_ad.line2 = "Brand Name Clothing up to 85% Off."; 
+google_ad.line3 = "Free Shipping with $99+ Order!"; 
+google_ad.regionname = ""; 
+google_ads[1] = google_ad; 
+google_ad = {}; 
+google_ad.n = 3; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=CUNLXYRiWUsqhC4_W0AGSsoCACKzj5LMErNqz_U_AjbcBEAMgoZW2GygDUOm-l98EYMnGqYvApNgPoAHk-LvXA8gBAagDAaoEigFP0BL6pOGQ5lOfop1fv5WWzg6LipaKOLpfVHalraRanpsqiXOHbLs3oVUOv98-lfD4QgZ8I_-5jF8Kn8yEEg1fZ_Omq0FT4op7sXJbZCnnuTppK2xW6Bxixm6EMHZrSj4pBqpA_GWztqTAmCXS7b3qR1MLRSXo3J1sSzeVDqY06vDQZgdIOBqNmQaIBgGAB4SHxCg&amp;num=3&amp;cid=5Gid15qTHT7nTEiTMFxd-_t3&amp;sig=AOD64_3XIqGe-8IQCJV54LixTPMbk4crGw&amp;client=ca-timeinc-instyle-photo&amp;adurl=https://ads.twitter.com/start-now%3Fref%3Dus-ps-go-branded-tw"; 
+google_ad.visible_url = "Twitter.com/Advertising"; 
+google_ad.line1 = "Grow Twitter Followers"; 
+google_ad.line2 = "Get More Followers Now. Get Started"; 
+google_ad.line3 = "With Twitter Advertising"; 
+google_ad.regionname = ""; 
+google_ads[2] = google_ad; 
+google_info.feedback_url = "https://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.instyle.com/instyle/package/holidaytrends/0,,20754496,00.html%26gl%3DUS%26hl%3Den%26client%3Dca-timeinc-instyle-photo%26hideleadgen%3D1%26ai0%3DCBeq5YRiWUsqhC4_W0AGSsoCACPP0-fMD06S-32_AjbcBEAEgoZW2GygDUOOYhscFYMnGqYvApNgPoAHVrP3fA8gBAagDAaoEjAFP0CL5KfiJ3WstEZMnv5XPiQmWjZufMfESWHQSdu16gpsuw2aHNLs3-BIJotgzgPmzDwp-Ybm-kVgHisXOTRxdb_mgqQsU5Yl-vHdDaS_wsjB-d3NK6AJgwWyFMHtkUCIpGOxc5WRffKekNQ4S-5C7RQIJ6c6vjJ8hScKeDurBrQXTZheoLm4imu3MJ4gGAYAHk9OCIA%26ai1%3DC3IvQYRiWUsqhC4_W0AGSsoCACKqioq4EytKr9YIBwI23ARACIKGVthsoA1Dq5qSpB2DJxqmLwKTYD6ABiOi56APIAQGoAwGqBIwBT9By8y74it1rLRGTJ7-Vz4kJlo2bnzHxElh0EnbteoKbLsNmhzS7N_gSCaLYM4D5sw8KfmG5vpFYB4rFzk0cXW_5oKkLFOWJfrx3Q2kv8LIwfndzSugCYMFshTB7ZFAiKRjsXOVkX3ynpDVfUL-Nu0UCCenOr4yfIUnCng7qwa0F02YXqC5uIoWvoR-IBgGAB-CXxhc%26ai2%3DCUNLXYRiWUsqhC4_W0AGSsoCACKzj5LMErNqz_U_AjbcBEAMgoZW2GygDUOm-l98EYMnGqYvApNgPoAHk-LvXA8gBAagDAaoEigFP0BL6pOGQ5lOfop1fv5WWzg6LipaKOLpfVHalraRanpsqiXOHbLs3oVUOv98-lfD4QgZ8I_-5jF8Kn8yEEg1fZ_Omq0FT4op7sXJbZCnnuTppK2xW6Bxixm6EMHZrSj4pBqpA_GWztqTAmCXS7b3qR1MLRSXo3J1sSzeVDqY06vDQZgdIOBqNmQaIBgGAB4SHxCg\x26usg\x3dAFQjCNFJ5oldqwGjPW4VJ4DBEVvKRNhIvQ";
+var google_attribution_text = "AdChoices";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

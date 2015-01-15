@@ -1,0 +1,200 @@
+.validateTips { border: 1px solid transparent; padding: 0.3em; }
+
+.th_rh_name_field { display: none; }
+
+.no-scroll {
+    position: relative;
+}
+
+.ui-widget-overlay {
+    background: #aaaaaa;
+    opacity: .3;
+    filter: Alpha(Opacity=30);
+    opacity: 0.8;
+    background-color: rgb(0, 0, 0);
+    height:100%;
+    left:0;
+    position:absolute;
+    top:0;
+    width:100%;
+}
+.pi-login-popup input.input {width: 147px; height: 23px; border: solid thin #dfdfdf; padding-left: 3px;}
+#forgot-dialog input.input {width: 320px;}
+.ui-dialog.PiLogin .ui-state-error {border: thin solid red !important}
+.ui-state-highlight {background-color: red}
+.pi-login-popup  {
+	padding-right: 10px;
+}
+.pi-login-popup  label {
+    display: block;
+	font: normal 11px Arial;
+	color: #b2b2b2;
+	padding: 0 0 0px;
+	width: 160px;
+	float: left;
+}
+.ui-dialog.PiLogin {
+    border: solid thin #dfdfdf;
+    background: #efefef;
+    padding: 10px;
+}
+
+.PiLogin .ui-dialog-title {
+    color: #b2b2b2;
+    font: normal 16px TradeGothicBld;
+    text-transform: uppercase;
+}
+
+.PiLogin .ui-dialog-titlebar-close {
+    float: right;
+    color: #b2b2b2;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.PiLogin .ui-icon-closethick:hover {
+    color: #4d4d4d;
+}
+
+.PiLogin .ui-button {
+    background: #b2b2b2;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    height: 26px;
+    position: relative;
+	float: left;
+    top: -78px;
+    left: 341px;
+    display: block;
+}
+.PiLogin {
+    position: fixed;
+}
+.PiLogin .ui-dialog-buttonpane,
+.PiLogin .ui-dialog-buttonset{
+    height: 0px;
+    float: left;
+}
+
+.sign-in .form-input-links {
+    float: none;
+}
+
+.form-input {
+    margin-right: 10px;
+    margin-bottom: 14px;
+}
+
+.form-input label {
+    color: #b2b2b2;
+}
+
+.header-dots {height: 1px; border-bottom: thin dotted; width: 270px; float: right}
+
+.form-input .input {
+    width: 150px;
+    height: 25px;
+    border: solid thin #dfdfdf;
+    padding-left: 5px;
+}
+
+.form-input-links {
+    float: left;
+    color: #b2b2b2;
+    font-size: 11px;
+    font-family: Arial;
+    height: 50px;
+	width: 410px;
+	padding-top: 15px;
+}
+
+
+.rest{    height: 25px;
+	position: relative;
+	top: 10px;}
+
+.form-input-links a {
+    color: #09517b;
+}
+.links-right{
+	float: left;
+	margin-top: 20px;
+	margin-left: 0px;
+}
+.links-right span {
+	margin-right: 10px;
+}
+.links-left{
+	float: right;
+	margin-right: 3px;
+	margin-top: 10px;
+}
+.remember-my-checkbox{
+	float: left;
+margin-top: 17px;
+}
+#ui-id-1 {
+    display: block;
+    float: left;
+}
+#lPiLogin_Status, #fPiLogin_Status, #rPiLogin_Status {
+}
+
+.reset-password .message {
+    background-color: #ffffe0;
+    border-color: #e6db55;
+}
+
+.message-ok {color: green; padding-top: 40px; text-align: center;}
+
+.PiLogin .ui-message-error {color: red;}
+.ui-message-ok {color: green;}
+
+.sign-up-fb-td{
+    position: relative;
+}
+.sign-up-fb{
+    padding: 20px 0 0 11px;
+
+}
+.sign-up-fb-2{float: right; left: -2px; top: 16px; padding: 0; position: relative; width: 66px; height: 23px;}
+.restore{display: block; width: 327px; }
+.restore label{width: 324px;}
+.register-form{height: 100px; display: block; width: 390px;}
+.register-form span{display: block; padding-bottom: 5px;}
+
+.restore2{display: block; width: 160px; float: left; position: relative; top: 8px;top:11px\0/}
+.restore2 label{width: 160px;}
+.restore3{display: block; width: 50px; float: left; }
+
+.PiLogin button.sign-up {
+    background: #b2b2b2;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    height: 26px;
+    position: relative;
+    left: 1px;
+	top: -74px;
+    display: block;
+    padding: 1px 6px 1px 6px;
+    font-size: 14px;
+}
+
+.PiLogin .resetpass{    left: 335px;
+    position: relative;
+    top: -67px;}
+	
+.form-sign{position: relative; top: -12px; left: 147px;}	
+
+#sign-up-dialog   .form-input-links {
+    color: #b2b2b2;
+    font-size: 11px;
+    font-family: Arial;
+    margin-top: 24px;
+    height: 25px;
+}
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- saved from url=(0124)https://demo.shopbeam.com/app/checkout/views/xdm?xdm_e=http%3A%2F%2Fbeautysuitcase.com&xdm_c=default2121&xdm_p=1#mode=copper -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="easyXDM.js"></script><style type="text/css"></style><!--script(src='/socket.io/socket.io.js')--></head><body style="height: 100%; width: 100%; background: transparent; overflow: hidden; margin: 0; padding: 0; position: absolute;"><iframe id="angular" src="saved_resource.html" frameborder="0" width="100%" height="100%" style="width: 100%; height: 100%;" allowtransparency="true"></iframe><script>iframe = document.getElementById('angular');
+iframe.src = '/app/checkout/#/review' + location.hash.replace('#','?');
+
+window.Shopbeam = {};
+//Shopbeam.socket = io.connect(window.location.host);
+
+//-- namespace easyXDM
+Shopbeam.easyXDM = easyXDM.noConflict('Shopbeam');
+
+Shopbeam.checkout = new Shopbeam.easyXDM.Rpc({},
+  {
+    remote: {
+      goTo: {},
+      closeCheckout: {}
+    }
+  });
+  
+//Shopbeam.checkout.cartReady();</script></body></html>

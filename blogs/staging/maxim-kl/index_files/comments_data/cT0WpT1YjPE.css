@@ -1,0 +1,750 @@
+/*!CK:2631140307!*//*1379427266,173224501*/
+
+form{margin:0;padding:0}
+label{cursor:pointer;color:#666;font-weight:bold;vertical-align:middle}
+label input{font-weight:normal}
+textarea, .inputtext, .inputpassword{border:1px solid #bdc7d8;margin:0;padding:3px}
+textarea{max-width:100%}
+select{border:1px solid #bdc7d8;padding:2px}
+fieldset{border:none;margin:0;padding:0}
+.inputtext, .inputpassword{padding-bottom:4px}
+.inputtext:invalid, .inputpassword:invalid{box-shadow:none}
+.gecko.mac .inputtext, .gecko.mac .inputpassword{padding-bottom:3px}
+.inputradio{padding:0;margin:0 5px 0 0;vertical-align:middle}
+.inputcheckbox{border:0;vertical-align:middle}
+.inputbutton, .inputsubmit{border-style:solid;border-width:1px;border-color:#d9dfea #0e1f5b #0e1f5b #d9dfea;background-color:#3b5998;color:#fff;padding:2px 15px 3px 15px;text-align:center}
+.inputsubmit_disabled{background-color:#999;border-bottom:1px solid #000;border-right:1px solid #666;color:#fff}
+.inputaux{background:#f0f0f0;border-color:#e7e7e7 #666 #666 #e7e7e7;color:#000}
+.inputaux_disabled{color:#999}
+.inputsearch{background:#fff url(/rsrc.php/v2/yV/r/IJYgcESal33.png) no-repeat left 4px;padding-left:17px}
+body{background:#fff;color:#333;line-height:1.28;margin:0;padding:0;text-align:left;direction:ltr;unicode-bidi:embed}
+body, button, input, label, select, td, textarea{font-family:'lucida grande',tahoma,verdana,arial,sans-serif;font-size:11px}
+h1, h2, h3, h4, h5, h6{font-size:13px;color:#333;margin:0;padding:0}
+h1{font-size:14px}
+h4, h5, h6{font-size:11px}
+p{margin:1em 0}
+a{color:#3b5998;cursor:pointer;-moz-outline-style:none;text-decoration:none}
+button{margin:0}
+a:hover{text-decoration:underline}
+img{border:0}
+td, td.label{text-align:left}
+dd{color:#000}
+dt{color:#777}
+em{font-style:normal}
+ul{list-style-type:none;margin:0;padding:0}
+abbr{border-bottom:none}
+hr{background:#d9d9d9;border-width:0;color:#d9d9d9;height:1px}
+.clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden}
+.clearfix{zoom:1}
+.datawrap{word-wrap:break-word}
+.word_break{display:inline-block}
+.ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.img_loading{position:absolute;top:-9999999px}
+.aero{opacity:.5}
+.column{float:left}
+.center{margin-left:auto;margin-right:auto}
+#facebook .hidden_elem{display:none !important}
+#facebook .invisible_elem{visibility:hidden}
+#facebook .accessible_elem{clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px}
+.direction_ltr{direction:ltr}
+.direction_rtl{direction:rtl}
+.text_align_ltr{text-align:left}
+.text_align_rtl{text-align:right}
+.uiCloseButton{cursor:pointer;display:-moz-inline-box;display:inline-block;margin:0;padding:0;zoom:1}
+label.uiCloseButton{overflow:hidden}
+.uiCloseButton input{cursor:pointer;opacity:0;outline:none;padding:18px}
+.uiCloseButton{background-image:url(/rsrc.php/v2/yA/r/4WSewcWboV8.png);background-repeat:no-repeat;height:15px;width:15px}
+.uiCloseButtonSmall{background-image:url(/rsrc.php/v2/yx/r/ogYrclupeJV.png);height:11px;margin-top:1px;width:11px}
+.uiCloseButtonHuge{background-image:url(/rsrc.php/v2/yj/r/ubIGOTIgUYc.png)}
+.uiCloseButtonDark{background-position:left -16px}
+.uiCloseButtonInverted{background-image:url(/rsrc.php/v2/yo/r/33RpiRygxAr.png);background-position:left -16px}
+.uiCloseButtonGray{background-image:url(/rsrc.php/v2/y7/r/gmSNAxiWQKY.png)}
+.uiCloseButton:hover, .uiCloseButton:focus{background-position:left -32px}
+.uiCloseButton:active{background-position:left -48px}
+.uiCloseButtonSmallDark{background-position:left -12px}
+.uiCloseButtonSmallGray{background-image:url(/rsrc.php/v2/y0/r/8FA3puZNL-X.png)}
+.uiCloseButtonSmallInverted{background-image:url(/rsrc.php/v2/yT/r/Vi-KTnbdMKr.png);background-position:left -12px}
+.uiCloseButtonSmall:hover, .uiCloseButtonSmall:focus{background-position:left -24px}
+.uiCloseButtonSmall:active{background-position:left -36px}
+.uiCloseButtonHighContrast{display:none}
+.highContrast .uiCloseButtonHighContrast{display:inline-block}
+.uiPopover .uiCloseButton{background-clip:padding-box;border:1px solid transparent;margin:0}
+.uiPopover.openToggler .uiCloseButton{background-position:left -32px}
+.uiPopover.openToggler .uiCloseButtonSmall{background-position:left -24px}
+.uiPopover.openToggler .uiCloseButton, .uiPopover.openToggler .uiCloseButton:active, .uiPopover.openToggler .uiCloseButton:focus, .uiPopover.openToggler .uiCloseButton:hover{background-color:#6d84b4;border:1px solid #3b5998;border-bottom-color:#6d84b4;box-shadow:none}
+.uiTypeaheadView .compact li{min-height:32px;padding:2px 10px 2px 45px}
+.uiTypeaheadView .compact li.raw{min-height:0;padding:0}
+.uiTypeaheadView .compact .splitpics, .uiTypeaheadView .compact img{display:block;height:32px;left:6px;position:absolute;width:32px}
+.uiTypeaheadView .compact img.secretTagIcon{display:inline-block;height:9px;left:0;margin-right:4px;position:relative;top:1px;width:9px}
+.uiTypeaheadView .compact .text{font-weight:bold}
+.uiTypeaheadView .compact .disabled_result .text{font-weight:normal}
+.uiTypeaheadView .compact .wrappingHeader{font-weight:bold;position:relative;white-space:normal}
+.uiTypeaheadView .compact .wrappingHeader .auxTitle{color:gray;font-weight:normal}
+.uiTypeaheadView .compact .details{color:#999;padding-top:0}
+.uiTypeaheadView .compact .detailsContents{position:relative}
+.uiTypeaheadView .compact .splitpic{float:left;overflow:hidden;width:15px}
+.uiTypeaheadView .compact .splitpics img{left:0;margin-left:-8px;position:static}
+.uiTypeaheadView .compact .splitpics .leftpic{margin-right:1px;width:16px}
+.uiTypeaheadView .compact .splitpics .toppic{height:15px;margin-bottom:1px}
+.uiTypeaheadView .compact .splitpics .bottompic{height:16px}
+.uiTypeaheadView .compact .splitpics .toppic img, .uiTypeaheadView .compact .splitpics .bottompic img{margin-top:-8px}
+.uiTypeaheadView .compact .friendlist img{background-color:transparent}
+.fbConnectWidgetTopmost{border:1px solid #aaa;border-top-color:#315c99;overflow:hidden;padding:0;position:relative}
+div.fbDarkWidget{background-color:transparent}
+.fbDarkWidget .fbWidgetTitle{color:#fff}
+.fbDarkWidget a,
+.fbDarkWidget .profileName{color:#fff}
+.fbDarkWidget a.uiLinkSubtle{color:gray}
+.fbDarkWidget a.fbCommentOverlayLink{color:#3b5998}
+div.ConnectActivityLogin{border-width:0 0 1px;zoom:1}
+.fbDarkWidget div.ConnectActivityLogin{border-color:#303030;background-color:#000}
+.fbProfilePic{height:35px;width:35px}
+.fbLoginButton{float:left}
+.ConnectActivityLoginMessage{color:#666;line-height:14px;vertical-align:top;zoom:1}
+.fbDarkWidget .ConnectActivityLoginMessage{color:gray}
+.fbConnectWidgetFooter{bottom:0;cursor:default;position:absolute;width:100%}
+.transparent_widget .fbDarkWidget .fbConnectWidgetFooter{background-color:transparent}
+.fbConnectWidgetFooter .fbFooterBorder{border-top:1px solid #ccc;margin:0 6px;padding:4px 3px}
+.fbDarkWidget .fbConnectWidgetFooter .fbFooterBorder{border-top:1px solid #444}
+.fbConnectWidgetContent, .fbImageContainer img{visibility:hidden}
+.fbConnectWidgetContent, .fbGalleryRecommendationsImageContainer img{visibility:hidden}
+div.fbHalfPage{overflow:hidden}
+div.fbAdminOptions{float:right}
+body.transparent_widget{background-color:transparent;overflow:hidden}
+body.plugin.transparent_widget{overflow-y:hidden}
+.connect_widget{background-color:transparent}
+.connect_widget .connect_widget_facebook_favicon{background:url(/rsrc.php/v2/y7/r/ql9vukDCc4R.png) no-repeat -1px -47px transparent;display:block;height:14px;padding:0 0 0 0;width:14px;position:absolute;left:-1px}
+body.transparent_widget .generic_dialog_popup,
+.connect_widget .generic_dialog_popup{width:400px}
+.DOMControl_placeholder{color:#777}
+.no_js .DOMControl_placeholder{color:#000}
+.fbFeedbackContent.fbDarkWidget{border:none}
+.fbFeedbackContent .async_saving ul, .fbFeedbackContent .async_saving .indicator, .fbFeedbackContent .async_saving .action_links{background:url(/rsrc.php/v2/yb/r/GsNJNwuI-UM.gif) no-repeat right}
+.fbFeedbackContent.fbDarkWidget .composerHider{border-bottom:1px solid #666;border-top:1px solid #666}
+.fbFeedbackContent .composerHider{border-bottom:1px solid #ccc;border-top:1px solid #ccc;margin:0;padding:9px 0 7px}
+.fbFeedbackContent .composerHider .uiSelector{margin:-3px 1px}
+.fbFeedbackContent .composerHider .uiSelector .uiSelectorButton, .fbFeedbackContent .composerHider .uiSelector .uiSelectorButton:active, .fbFeedbackContent .composerHider .uiSelector .uiSelectorButton:focus, .fbFeedbackContent .composerHider .uiSelector .uiSelectorButton:hover{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:right -114px;background-color:transparent;border:none;box-shadow:none;-moz-box-shadow:none;margin:0;outline:0;padding:2px 20px 2px 0}
+.fbFeedbackContent .composerHider .uiSelector .uiSelectorButton .uiButtonText{color:#333}
+.fbFeedbackContent.fbDarkWidget .composerHider .uiSelector .uiSelectorButton .uiButtonText{color:#fff}
+.fbFeedbackContent .composerHider .uiSelector .itemLabel{font-weight:normal}
+.fbFeedbackContent .composerHider .uiSelector .checked .itemLabel{font-weight:bold}
+.fbFeedbackContent .composerHider a{font-weight:bold}
+.fbFeedbackContent .fbThirdPartyIcon{position:relative;right:1px;top:4px}
+.fbCommentContext .fbCommentContextPosts{overflow-x:hidden;overflow-y:auto;max-height:400px}
+.fbCommentContext .fbCommentContextPosts .fbTopLevelComment{padding-top:0}
+.fbCommentContext .composerGrid{width:100%}
+.fbCommentContext .composerTight{width:0}
+.fbCommentContext .composerReply .uiButton{margin-right:4px}
+.fbFeedbackContent .composer{background-color:transparent;background-color:rgba(190, 190, 190, .2);border:solid #e9e9e9;border-width:1px 0;padding:7px 10px 7px 69px;position:relative}
+.fbFeedbackContent.fbDarkWidget .composer{background-color:#333;border-color:#666}
+.fbFeedbackContent .fbFeedbackPosts .composer{margin-left:-10px}
+.fbFeedbackContent .fbFeedbackPostsContainer .fbFeedbackPosts{padding:0}
+.fbFeedbackContent .noTopBorder{border-top:0 !important}
+.fbDarkWidget .fbCommentContext .composer{background-color:#555;border:none}
+.fbCommentContext .composer{background-color:#f2f2f2;border:1px solid #ccc;margin-top:4px;padding-bottom:4px;padding-top:4px;padding-left:70px;position:relative}
+.fbFeedbackContent .composer .viewerProfilePic{background-color:#ddd;margin:2px 0 0 0;padding:0 !important;position:absolute;left:10px}
+.fbFeedbackContent.fbDarkWidget .fbFeedbackTypeahead, .fbFeedbackContent.fbDarkWidget .fbFeedbackTypeahead .wrap{border-color:#434343}
+.fbFeedbackContent.fbDarkWidget .fbFeedbackMentions .mentionsTextarea, .fbFeedbackContent .fbFeedbackMentions .mentionsTextarea{border-width:0;padding:0;margin:0;box-shadow:none;background-color:transparent}
+.fbFeedbackContent.fbDarkWidget .fbFeedbackMentions{background-color:#000}
+.fbFeedbackContent .fbFeedbackMentions{background-color:#fff;margin:2px 0}
+.fbFeedbackContent .fbFeedbackMentions .innerWrap{padding:3px}
+.fbFeedbackContent .fbFeedbackMentions .highlighter{left:0;top:0}
+.fbFeedbackContent.fbDarkWidget .fbFeedbackMentions .highlighter b{background-color:#444}
+.fbCommentContext .textwrapper, .fbFeedbackContent .textwrapper{padding:0 8px 0 0}
+.fbFeedbackContent .postToProfile{float:left;position:relative;min-width:135px}
+.fbFeedbackContent .postToProfile input{position:relative;top:2px}
+.fbFeedbackContent div.commentas{color:gray;float:right;margin:4px 6px}
+.fbFeedbackContent .indicator{float:left;margin:10px 0 0 -45px;position:absolute}
+.fbFeedbackContent select.commentas{float:right;margin:1px 6px}
+.hideCommentas .commentas{display:none}
+.fbCommentContext.fbDarkWidget .composer textarea, .fbFeedbackContent.fbDarkWidget .composer textarea{color:#fff;background-color:#000;border:1px solid #434343}
+.fbCommentContext .composer textarea, .fbFeedbackContent .composer textarea{border-width:0;border:1px solid;border-color:#899bc5;padding:3px;width:100%}
+.fbFeedbackContent .replywrapper{padding:0 8px 0 0}
+.fbCommentContext .viewerProfilePic{float:left}
+.fbCommentContext .replywrapper{width:100%}
+.fbCommentContext .replywrappermargin{margin:0 9px}
+.fbCommentContext .replywrappermargin .textarea{margin-left:-4px}
+.fbFeedbackContent.fbDarkWidget .composerReply{border-top:1px solid #666}
+.fbFeedbackContent .composerReply{border-top:1px solid #e9e9e9}
+.fbFeedbackContent .composerReply{padding-top:8px}
+.fbFeedbackContent .composerReply textarea{width:100%}
+.fbFeedbackContent .postContent .action_links{margin-bottom:8px}
+.fbFeedbackContent .postBlingBox{border:none;bottom:1px;cursor:text;padding:0;position:relative}
+.fbFeedbackContent .postBlingBox:hover{background-color:transparent;border:none}
+.fbFeedbackContent .fbUpDownVoteAfterLogin{display:inline}
+.fbFeedbackContent .fbFeedbackPager{margin-left:0}
+.fbFeedbackContent .fbFeedbackPager .fbFeedbackPagerLink{padding:8px}
+.fbFeedbackContent .fbFeedbackReplyPager .fbFeedbackPagerLink{padding:5px 8px}
+.fbFeedbackContent .fbFeedbackPager .fbFeedbackPagerLink:hover{text-decoration:none}
+.fbFeedbackContent .postReplies .pagerLoader{padding-left:2px}
+.fbFeedbackContent{min-height:160px}
+.fbCommentContext .fbFeedbackContent{min-height:0}
+.fbFeedbackContent .fbFeedbackPosts{padding:0 0 0 10px}
+.fbFeedbackContent .star{height:11px;width:11px}
+.fbFeedbackContent .followLinkInlineCheck, .fbFeedbackContent .followLinkInlineCheckDark{margin-right:4px}
+.fbFeedbackContent .post{margin-top:4px}
+.fbFeedbackContent .post input{margin-left:0}
+.fbCommentContext .post .uiSelector, .fbCommentContext .cancel .uiSelector, .fbFeedbackContent .post .uiSelector, .fbCommentContext .post .uiButton, .fbCommentContext .cancel .uiButton, .fbFeedbackContent .post .uiButton{float:right}
+.fbCommentContext .post .uiSelector .uiButton, .fbCommentContext .cancel .uiSelector .uiButton, .fbFeedbackContent .post .uiSelector .uiButton{float:none}
+.fbFeedbackContent .post label.desc{font-weight:normal;position:absolute;top:4px}
+.fbFeedbackContent .profileName{font-size:11px}
+.fbFeedbackContent .fbFeedbackPost{border:solid #e2e2e2;border-width:1px 0 0;clear:both;padding-bottom:0 !important;padding-top:10px}
+.fbFeedbackContent.fbDarkWidget .fbFeedbackPost{border-color:#555}
+.fbFeedbackContent li.fbTopLevelComment:first-of-type{border-width:0}
+.fbFeedbackContent li.fbTopLevelComment:last-of-type{margin-bottom:-5px}
+.fbDarkWidget .fbFeedbackReplies .fbFeedbackPost{border-color:#444}
+.fbFeedbackReplies .fbFeedbackPost{border-width:0 0 1px 0;border-color:#e9e9e9}
+.fbFeedbackReply form, .fbFeedbackContent .postReply, .postReplies{margin-top:8px}
+.postReplies .uiMorePagerLight .uiMorePagerPrimary:hover{background-color:transparent;background-color:rgba(225, 228, 237, .6)}
+.postReplies .uiMorePagerInverted .uiMorePagerPrimary, .postReplies .uiMorePagerInverted .uiMorePagerLoader{background-color:transparent;border-width:1px 0 0 0;border-color:#444}
+.fbFeedbackContent .uiMorePagerInverted .uiMorePagerPrimary:hover{background-color:#444;border-color:#555}
+.fbDarkWidget .closeButton .uiCloseButton, .fbDarkWidget .closeButton .openToggler .uiCloseButton, .fbDarkWidget .closeButtonAfterLogin .uiCloseButton{border:1px solid #000;margin:0}
+.fbFeedbackContent .postContainer:hover .closeButton, .fbFeedbackContent .postContainer:hover .closeButtonAfterLogin{visibility:visible}
+.fbFeedbackContent .postContainer .closeButton, .fbFeedbackContent .postContainer .closeButtonAfterLogin{float:right;visibility:hidden}
+.fbFeedbackPost{position:relative}
+.fbFeedbackPost .postContent{margin-top:5px}
+.fbDarkWidget .fbFeedbackPost .postText{color:#ccc}
+.fbFeedbackPost .postText{color:#1a1a1a;line-height:14px;margin:0 28px 5px 0}
+.fbFeedbackPost .postActor{background-color:#ededed;margin-bottom:8px;margin-right:11px}
+.fbDarkWidget .postActor{background-color:#333}
+.fbFeedbackReplyPager{height:16px;margin-bottom:8px}
+.fbFeedbackContent .fbConnectWidgetFooter{position:static}
+.fbFeedbackContent .fbConnectWidgetFooter .fbFooterBorder{margin:5px 0 0 0}
+.fbTopLevelComment .fbFeedbackReplies .fbCommentReply{border-width:1px 0 0}
+.fbFeedbackContent .fbCommentOverlay{border-style:solid;border-width:1px;position:absolute;top:0;left:0;bottom:0;right:0;opacity:.90;font-size:12px}
+.fbFeedbackContent .fbReportedByUser{background-color:#fff;border-color:#eee}
+.fbFeedbackContent .fbRecentlyBlacklisted{background-color:#444;border-color:#1a1a1a}
+.fbFeedbackContent .fbRecentlyPublicized{background-color:#e4ffe2;border-color:#d2f1d0}
+.fbFeedbackContent .fbRecentlyPrivatized{background-color:#fffbe8;border-color:#f7e0ff}
+.fbFeedbackContent .fbCommentOverlayInsert{position:absolute;top:50%;margin-top:-0.5em;text-align:center;width:100%}
+.fbFeedbackContent .fbCommentDownvotedButVisible .postText{color:gray}
+.fbFeedbackContent .fbCommentOverlayDark{color:#000}
+.fbFeedbackContent .fbCommentOverlayLight{color:#fff}
+.fbFeedbackContent .fbCommentOverlayLight a:link, .fbFeedbackContent .fbCommentOverlayLight a:hover, .fbFeedbackContent .fbCommentOverlayLight a:visited, .fbFeedbackContent .fbCommentOverlayLight a:active{color:#999}
+.fbCommentsEditSettings .uiInfoTable .label{width:145px;vertical-align:middle}
+.fbCommentsEditSettings .uiInfoTable tr{border-top:1px solid #ccc}
+.fbCommentsEditSettings .uiInfoTable tr:first-child{border:none}
+.fbCommentsEditSettings .uiInfoTable th{padding:10px 5px 10px 0}
+.fbCommentsEditSettings .uiInfoTable td{padding:10px 0 10px 5px}
+.fbCommentsEditSettings .uiInfoTable tr:first-child th, .fbCommentsEditSettings .uiInfoTable tr:first-child td{padding-top:0}
+.fbCommentsEditSettings .uiInfoTable tr:nth-last-child(2) th, .fbCommentsEditSettings .uiInfoTable tr:nth-last-child(2) td{padding-bottom:0}
+.fbCommentsEditSettings .uiInfoTable tr:last-child, .fbCommentsEditSettings .uiInfoTable tr.custom_blacklist{border:none}
+.fbCommentsEditSettings .uiInfoTable tr.custom_blacklist th, .fbCommentsEditSettings .uiInfoTable tr.custom_blacklist td{padding:0 5px 10px 5px}
+.fbDarkWidget .warning a{color:gray}
+.fbFeedbackContent .closeButton .editSelector .uiCloseButton{background-image:url(/rsrc.php/v2/yh/r/rkQF27utoCR.png)}
+.fbFeedbackPost .postContainer .fbCommentEditor textarea{padding:3px;width:100%;border:none}
+.fbFeedbackPost .postContainer .fbCommentEditor{padding:7px 10px 7px 10px;min-height:0}
+.fbFeedbackPost .postContainer .fbCommentEditor .textBoxContainer{background-color:#fff}
+.fbFeedbackPost .postContainer .fbCommentEditor .highlighter{font-size:11px;font-weight:normal}
+.uiHeader h2{color:#1c2a47;font-size:16px}
+.uiHeader h2 a{color:#1c2a47}
+.uiHeader h3, .uiHeader h4{color:#333;font-size:11px}
+.uiHeader h5, .uiHeader h6{color:#666;font-size:11px}
+.uiHeader .uiHeaderTitle{outline:none}
+.uiHeaderWithImage .uiHeaderTop{position:relative}
+.uiHeaderWithImage .uiHeaderTitle{padding-left:22px}
+.uiHeaderImage{left:0;position:absolute}
+.uiHeader h2 .uiHeaderImage{top:2px}
+.uiHeaderTopBorder{border-top:1px solid #aaa;padding-top:.5em}
+div.uiHeaderTopBorder{margin-left:0}
+.uiHeaderTopAndBottomBorder{border-bottom:1px solid #e9e9e9;border-top:1px solid #aaa;padding:5px 0}
+.uiHeaderMiddleBorder{border-bottom:1px solid #ccc;height:.8em;margin:.5em 0 1.5em 0;position:relative}
+.uiHeaderMiddleBorder .uiHeaderTitle, .uiHeaderMiddleBorder .uiHeaderActions{background-color:#fff;position:absolute;top:0}
+.uiHeaderMiddleBorder .uiHeaderTitle{left:0;padding-right:.5em}
+.uiHeaderMiddleBorder .uiHeaderActions{padding-left:.5em;right:0}
+.uiHeaderMiddleBorder .uiButton{margin-top:-2px}
+.uiHeaderBottomBorder{border-bottom:1px solid #aaa;padding-bottom:.5em}
+.uiHeaderPage{padding:6px 0 16px}
+.uiHeaderPage .uiHeaderTitle{line-height:20px;min-height:20px;padding-bottom:2px;vertical-align:bottom}
+.uiHeaderPage .uiHeaderActions{margin-top:-1px}
+.uiHeaderPage .uiHeaderTop .fsl{margin-top:3px}
+.uiHeaderNav{border-color:#eee;margin:8px 0 0 6px;padding:7px 6px 3px 5px}
+.uiHeaderNavEmpty{padding-top:6px}
+.uiHeaderNav h4{color:gray}
+.uiHeaderSection, .uiSideHeader{background-color:#f2f2f2;border-bottom:none;border-top:solid 1px #e2e2e2;padding:4px 6px 5px}
+.lfloat{float:left}
+.rfloat{float:right}
+.uiLinkButton input{background:none;border:none;color:#3b5998;cursor:pointer;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;font-size:11px;margin:0;padding:0;vertical-align:top}
+.uiLinkButton input::-moz-focus-inner{border:0;padding:0}
+.uiLinkButton:hover, .uiLinkButton input:hover, .uiLinkButton input:focus, .uiLinkButton input:active{color:#3b5998;text-decoration:underline}
+.uiLinkButton .boldInput{font-weight:bold}
+.gecko .uiLinkButton:hover{text-decoration:none}
+.uiLinkButtonSubtle input, .uiLinkButtonSubtle:hover, .uiLinkButtonSubtle input:hover, .uiLinkButtonSubtle input:focus, .uiLinkButtonSubtle input:active{color:gray}
+.uiLinkButton input.async_saving{text-decoration:none}
+.uiMentionsInput{position:relative}
+.uiMentionsInput .mentionsTextarea, .uiMentionsInput .mentionsTypeahead{background:transparent;zoom:1}
+.uiMentionsInput .mentionsTextarea{line-height:1.28}
+.uiMentionsInput .highlighter{left:0;overflow:hidden;position:absolute;padding:4px;top:0}
+.gecko .uiMentionsInput .highlighter{padding:4px 5px}
+.uiMentionsInput .highlighter div{color:transparent;line-height:1.28;white-space:pre-wrap;width:100%;word-wrap:break-word}
+.uiMentionsInput .highlighterContent{display:inline-block;max-width:100%}
+.uiMentionsInput .highlighter b{background:#d8dfea;background:-moz-linear-gradient(#dce6f8, #bdcff1);border-radius:2px;box-shadow:0 0 0 1px #a3bcea;font-weight:normal}
+.uiMentionsInput .highlighter b.weak{background:#ddd;background:-moz-linear-gradient(#eaeaea, #d7d7d7);box-shadow:0 0 0 1px #808080}
+.pop_container_advanced{background:rgba(82,82,82,0.7);border-radius:8px;padding:10px}
+.pop_content_old{position:relative}
+.pop_container{direction:ltr;position:relative;top:10px}
+.pop_topleft, .pop_topright, .pop_bottomleft, .pop_bottomright{height:10px;width:10px;overflow:hidden;position:absolute}
+.pop_topleft{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:-144px -73px;left:-10px;top:-10px}
+.pop_topright{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:-133px -73px;right:-10px;top:-10px}
+.pop_bottomleft{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:-166px -73px;bottom:-10px;left:-10px}
+.pop_bottomright{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:-155px -73px;right:-10px;bottom:-10px}
+.pop_verticalslab, .pop_horizontalslab{width:100%;height:100%;position:absolute;background:#525252;opacity:.7}
+.pop_verticalslab{margin:-10px 0 0;padding-bottom:20px}
+.pop_horizontalslab{margin:0 0 0 -10px;padding-right:20px}
+.generic_dialog{height:0;left:0;overflow:visible;outline:none;position:fixed;top:0;width:100%;z-index:200}
+.generic_dialog_modal, .generic_dialog_fixed_overflow{background-color:rgba(252, 252, 252, .9);height:100%;z-index:400}
+.generic_dialog_fixed_overflow{overflow-x:auto;overflow-y:scroll}
+.generic_dialog_fixed_overflow .generic_dialog_popup{height:auto;padding-bottom:40px}
+.generic_dialog_overflow_mode body{overflow:hidden !important}
+.generic_dialog_popup{height:0;overflow:visible;width:465px;margin:0 auto}
+.generic_dialog div.dialog_loading{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:10px}
+.pop_content{direction:ltr;outline:none}
+.pop_dialog_rtl .pop_content{direction:rtl}
+.pop_content h2.dialog_title{background:#6d84b4;border:1px solid #3b5998;border-bottom:none;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.pop_content h2.secure{background:#6d84b4 url(/rsrc.php/v2/yu/r/jp8TzrZb6J1.png) 98% no-repeat}
+.pop_content h2.loading{background:#6d84b4 url(/rsrc.php/v2/y-/r/AGUNXgX_Wx3.gif) 98% no-repeat}
+.pop_content h2.dialog_loading{background:#6d84b4 url(/rsrc.php/v2/y-/r/AGUNXgX_Wx3.gif) no-repeat 400px 10px;padding-right:40px}
+.pop_content h2 span{display:block;padding:5px 10px}
+.pop_content .dialog_content{background:#fff;border:1px solid #555;border-top-width:0}
+.pop_content .dialog_content.dialog_content_titleless{border-top:1px solid #555}
+.pop_content .dialog_loading, .dialog_loading_shown .dialog_title, .dialog_loading_shown .dialog_content{display:none}
+.dialog_loading_shown .dialog_loading{display:block}
+.pop_content .dialog_body{padding:10px;border-bottom:1px solid #ccc}
+.omitDialogFooter .pop_content .dialog_body{border-bottom:0}
+.pop_content .dialog_summary{background:#f2f2f2;padding:8px 10px;border-bottom:1px solid #ccc}
+.pop_content .dialog_buttons{background:#f2f2f2;padding:8px 10px 8px 10px;position:relative}
+.pop_content .dialog_buttons_msg{line-height:17px;padding-top:4px}
+.pop_content .dialog_buttons_msg .uiInputLabel{line-height:14px}
+.pop_content .dialog_footer{background:#F2F2F2 none repeat scroll 0}
+.full_bleed .pop_content .dialog_body{padding:0}
+.pas{padding:5px}
+.pam{padding:10px}
+.pal{padding:20px}
+.pts{padding-top:5px}
+.ptm{padding-top:10px}
+.ptl{padding-top:20px}
+.prs{padding-right:5px}
+.prm{padding-right:10px}
+.prl{padding-right:20px}
+.pbs{padding-bottom:5px}
+.pbm{padding-bottom:10px}
+.pbl{padding-bottom:20px}
+.pls{padding-left:5px}
+.plm{padding-left:10px}
+.pll{padding-left:20px}
+.phs{padding-left:5px;padding-right:5px}
+.phm{padding-left:10px;padding-right:10px}
+.phl{padding-left:20px;padding-right:20px}
+.pvs{padding-top:5px;padding-bottom:5px}
+.pvm{padding-top:10px;padding-bottom:10px}
+.pvl{padding-top:20px;padding-bottom:20px}
+.mas{margin:5px}
+.mam{margin:10px}
+.mal{margin:20px}
+.mts{margin-top:5px}
+.mtm{margin-top:10px}
+.mtl{margin-top:20px}
+.mrs{margin-right:5px}
+.mrm{margin-right:10px}
+.mrl{margin-right:20px}
+.mbs{margin-bottom:5px}
+.mbm{margin-bottom:10px}
+.mbl{margin-bottom:20px}
+.mls{margin-left:5px}
+.mlm{margin-left:10px}
+.mll{margin-left:20px}
+.mhs{margin-left:5px;margin-right:5px}
+.mhm{margin-left:10px;margin-right:10px}
+.mhl{margin-left:20px;margin-right:20px}
+.mvs{margin-top:5px;margin-bottom:5px}
+.mvm{margin-top:10px;margin-bottom:10px}
+.mvl{margin-top:20px;margin-bottom:20px}
+.sp_comments{background-image:url(/rsrc.php/v2/yC/r/0M9Xe0icEV8.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:10px;width:16px}
+.sx_comments_favicon{height:16px;background-position:0 -153px}
+.sx_comments_cfavicon{width:14px;height:14px;background-position:0 -187px}
+.sx_comments_yahoo{height:16px;background-position:-17px -153px}
+.sx_comments_aol{height:16px;background-position:-34px -153px}
+.sx_comments_msft{height:16px;background-position:0 -170px}
+.sx_comments_pyahoo{width:50px;height:50px;background-position:0 0}
+.sx_comments_paol{width:50px;height:50px;background-position:0 -51px}
+.sx_comments_pmsft{width:50px;height:50px;background-position:0 -102px}
+.sx_comments_star{width:11px;background-position:-28px -187px}
+.sx_comments_darkstar{width:11px;background-position:0 -202px}
+.sx_comments_arrowb{width:9px;height:5px;background-position:-33px -202px}
+.sx_comments_arroww{width:9px;height:5px;background-position:-23px -202px}
+.sx_comments_arrowl{width:5px;height:3px;background-position:-28px -198px}
+.sx_comments_like{width:15px;height:13px;background-position:-33px -170px}
+.sx_comments_darklike{width:15px;height:13px;background-position:-17px -170px}
+.sx_comments_subscribe{width:12px;height:14px;background-position:-15px -187px}
+.sx_comments_subscribedark{width:10px;background-position:-12px -202px}
+.sx_comments_followLinkInlineCheck{width:9px;height:11px;background-position:0 -213px}
+.sx_comments_followLinkInlineCheckDark{width:10px;background-position:-40px -187px}
+.sp_comments-1_5x{background-image:url(/rsrc.php/v2/y3/r/d6cK6xWps7V.png);background-repeat:no-repeat;background-size:52px 228px;display:inline-block;height:10px;width:16px}
+.sx_comments-1_5x_favicon{background-position:0 -156px;height:16px}
+.sx_comments-1_5x_cfavicon{background-position:-36px -156px;height:14px;width:14px}
+.sx_comments-1_5x_yahoo{background-position:-18px -156px;height:16px}
+.sx_comments-1_5x_aol{background-position:0 -174px;height:16px}
+.sx_comments-1_5x_msft{background-position:-18px -174px;height:16px}
+.sx_comments-1_5x_pyahoo{background-position:0 0;height:50px;width:50px}
+.sx_comments-1_5x_paol{background-position:0 -52px;height:50px;width:50px}
+.sx_comments-1_5x_pmsft{background-position:0 -104px;height:50px;width:50px}
+.sx_comments-1_5x_star{background-position:0 -208px;width:12px}
+.sx_comments-1_5x_darkstar{background-position:-14px -208px;width:12px}
+.sx_comments-1_5x_arrowb{background-position:-12px -220px;height:6px;width:10px}
+.sx_comments-1_5x_arroww{background-position:0 -220px;height:6px;width:10px}
+.sx_comments-1_5x_arrowl{background-position:-36px -202px;height:4px;width:6px}
+.sx_comments-1_5x_like{background-position:-18px -192px;height:14px}
+.sx_comments-1_5x_darklike{background-position:0 -192px;height:14px}
+.sx_comments-1_5x_subscribe{background-position:-36px -172px;height:14px;width:12px}
+.sx_comments-1_5x_subscribedark{background-position:-40px -208px;width:10px}
+.sx_comments-1_5x_followLinkInlineCheck{background-position:-36px -188px;height:12px;width:10px}
+.sx_comments-1_5x_followLinkInlineCheckDark{background-position:-28px -208px;width:10px}
+.sp_comments-2x{background-image:url(/rsrc.php/v2/yf/r/m1C9zaib-mh.png);background-repeat:no-repeat;background-size:51px 225px;display:inline-block;height:10px;width:16px}
+.sx_comments-2x_favicon{background-position:0 -153px;height:16px}
+.sx_comments-2x_cfavicon{background-position:0 -187px;height:14px;width:14px}
+.sx_comments-2x_yahoo{background-position:-17px -153px;height:16px}
+.sx_comments-2x_aol{background-position:-34px -153px;height:16px}
+.sx_comments-2x_msft{background-position:0 -170px;height:16px}
+.sx_comments-2x_pyahoo{background-position:0 0;height:50px;width:50px}
+.sx_comments-2x_paol{background-position:0 -51px;height:50px;width:50px}
+.sx_comments-2x_pmsft{background-position:0 -102px;height:50px;width:50px}
+.sx_comments-2x_star{background-position:-28px -187px;width:11px}
+.sx_comments-2x_darkstar{background-position:0 -202px;width:11px}
+.sx_comments-2x_arrowb{background-position:-33px -202px;height:5px;width:9px}
+.sx_comments-2x_arroww{background-position:-23px -202px;height:5px;width:9px}
+.sx_comments-2x_arrowl{background-position:-28px -198px;height:3px;width:5px}
+.sx_comments-2x_like{background-position:-33px -170px;height:13px;width:15px}
+.sx_comments-2x_darklike{background-position:-17px -170px;height:13px;width:15px}
+.sx_comments-2x_subscribe{background-position:-15px -187px;height:14px;width:12px}
+.sx_comments-2x_subscribedark{background-position:-12px -202px;width:10px}
+.sx_comments-2x_followLinkInlineCheck{background-position:0 -213px;height:11px;width:9px}
+.sx_comments-2x_followLinkInlineCheckDark{background-position:-40px -187px;width:10px}
+.text_exposed_root{display:inline}
+.text_exposed .text_exposed_show{display:inline}
+.text_exposed_show,
+.text_exposed .text_exposed_hide{display:none}
+.text_exposed_link{padding:0 0 0 .37em;white-space:nowrap}
+.text_exposed_link_icon{margin:0 0 -1px 4px}
+.text_exposed .text_exposed_link{display:none !important}
+.textMetrics{border:none;height:1px;overflow:hidden;padding:0;position:absolute;top:-9999999px}
+.textMetricsInline{white-space:pre}
+.webkitZoomTest{font-size:100px;height:1em;position:absolute}
+html body em.intl-sandbox{font-style:normal}
+html body em.intl-prototype-approvable,
+html body em.intl-prototype-approved,
+html body em.intl-prototype-autoapproved,
+html body em.intl-prototype-complainable,
+html body em.intl-prototype-complained,
+html body em.intl-prototype-contributed,
+html body em.intl-prototype-iapproved,
+html body em.intl-prototype-prototype,
+html body em.intl-prototype-translatable,
+html body em.intl-prototype-translated,
+html body em.intl-prototype-voted{border-bottom:2px solid black;background:none;font-style:normal;padding:0;zoom:1;width:auto}
+html body em.intl-prototype-approvable:hover,
+html body em.intl-prototype-approved:hover,
+html body em.intl-prototype-autoapproved:hover,
+html body em.intl-prototype-complainable:hover,
+html body em.intl-prototype-complained:hover,
+html body em.intl-prototype-contributed:hover,
+html body em.intl-prototype-iapproved:hover,
+html body em.intl-prototype-prototype:hover,
+html body em.intl-prototype-translatable:hover,
+html body em.intl-prototype-translated:hover,
+html body em.intl-prototype-voted:hover{cursor:help;border-top:1px solid #ccc}
+html body em.intl-prototype-approvable,
+html body em.intl-prototype-prototype,
+html body em.intl-prototype-translatable,
+html body em.intl-prototype-unvotable,
+html body em.intl-prototype-votable{border-bottom:1px solid #f99;background:none}
+html body em.intl-prototype-approvable:hover,
+html body em.intl-prototype-prototype:hover,
+html body em.intl-prototype-translatable:hover,
+html body em.intl-prototype-unvotable:hover,
+html body em.intl-prototype-votable:hover{background-color:#fcc}
+html body em.intl-prototype-approved,
+html body em.intl-prototype-complainable,
+html body em.intl-prototype-translated{border-bottom:1px solid #6c9;background:none}
+html body em.intl-prototype-approved:hover,
+html body em.intl-prototype-complainable:hover,
+html body em.intl-prototype-translated:hover{background-color:#cdffcd}
+html body em.intl-prototype-autoapproved{border-bottom:1px dotted #6c9;background:none}
+html body em.intl-prototype-autoapproved:hover{background-color:#ccc}
+html body em.intl-prototype-complained,
+html body em.intl-prototype-contributed,
+html body em.intl-prototype-iapproved,
+html body em.intl-prototype-voted{border-bottom:1px solid #fc0;background:none}
+html body em.intl-prototype-complained:hover,
+html body em.intl-prototype-contributed:hover,
+html body em.intl-prototype-iapproved:hover,
+html body em.intl-prototype-voted:hover{background-color:#ff9}
+.intl-disabled{color:gray}
+.trans_search_form{float:right}
+.trans_title_row .title{float:left;width:300px}
+.trans_title_row .pager{float:right}
+.trans_title_row h3{font-size:11px;color:#555;padding:0;margin:0 0 4px 0;font-weight:normal}
+.trans_title_row h3 span{color:#000;font-weight:bold}
+.nt_row .trans_controls{float:left;padding:0 10px 0 0}
+.trans_controls .nt_verified{float:right;margin-top:2px}
+.nt_row .trans_controls a.delete{background-image:url(/rsrc.php/v2/yU/r/iFjAdRBY_sL.gif)}
+.nt_row .trans_controls a.delete:hover{background-image:url(/rsrc.php/v2/yT/r/nxvE0sWnqcL.gif)}
+.trans_controls .trans_down_cont{float:left;width:19px}
+.trans_controls .trans_up_cont{float:left;width:20px}
+.trans_controls .trans_down_cont a{display:block;width:19px;height:20px;background:url(/rsrc.php/v2/yR/r/BwC4_3LyQCn.gif) top left no-repeat;text-decoration:none}
+.trans_controls .trans_up_cont a{display:block;width:20px;height:20px;background:url(/rsrc.php/v2/yx/r/jrK_XbSboTL.gif) top left no-repeat;text-decoration:none}
+.trans_controls a:hover.downover{background-position:-19px 0}
+.trans_controls a:hover.upover{background-position:-20px 0}
+.trans_controls a.downselect{background-position:-38px 0}
+.trans_controls a.upselect{background-position:-40px 0}
+.string{clear:both;padding:12px 0;border-top:1px solid #d8dfea}
+.translations_page_content .phrases{padding:0 10px;float:left}
+.nt_actions{width:120px;float:left}
+.phrases .native_string{margin-bottom:5px}
+.native_string .t_link{width:90px;float:left}
+.native_string .t_text{width:520px;float:left;font-size:13px;direction:ltr}
+.native_string .sub_comment{font-size:11px;padding:1px 0 1px 6px;margin:10px 0 0 0;color:gray;line-height:15px;border-left:3px solid #d8dfea}
+.nt_row{padding:10px 0 0 0}
+.translations_page_content .nt_strings{width:510px;float:left}
+.nt_trans{width:499px;border-top:1px solid #ddd;padding:8px 0;margin:0 0 0 25px;float:left}
+.nt_trans .nt_strings{width:450px;float:left}
+.nt_text{font-size:12px;line-height:16px;color:#555;margin:0;text-align:left}
+.nt_text_rtl{font-size:12px;line-height:16px;color:#555;margin:0;text-align:left;direction:rtl}
+.intl_inline_delete_button{float:right}
+.nt_warning{font-size:11px;margin:3px 0;padding:1px 0;color:#555;padding-left:6px;border-left:3px solid #e98300}
+.trans_warning_title{font-weight:bold}
+.native_string a.translate_link{font-size:11px;float:left;margin:0;padding:2px 16px 5px 20px;background:url(/rsrc.php/v2/y6/r/yK6Sg58jdbk.gif) no-repeat top left}
+.translations_page_content{margin:0}
+.fallback{margin-bottom:0;padding:20px 0 20px 0}
+.fallback p.notify{font-size:13px;color:#555;line-height:20px;text-align:center}
+a.trans_link_vote_more{display:none}
+.nt_trans_extra_link{display:none;direction:ltr}
+.uiTypeahead{background:#fff;border:solid #bdc7d8;border-width:1px 0;cursor:default;position:relative}
+.uiTypeahead .wrap{border:solid #bdc7d8;border-width:0 1px}
+.uiTypeahead .innerWrap{overflow:hidden;zoom:1}
+.uiTypeahead .textInput{background-color:transparent;border:0;-moz-box-sizing:border-box;outline:0;width:100%}
+.uiTypeahead .selected{background-color:#e2e8f6}
+.uiTypeaheadDisabled, .uiTypeaheadDisabled div.wrap{border-color:#ccc}
+.uiTypeaheadDisabled div.wrap{background:#e2e2e2}
+.uiTypeaheadDisabled div.wrap .textInput{color:#333}
+.uiTypeaheadView{display:block;left:0;position:absolute;top:100%;width:100%}
+.uiContextualTypeaheadView{position:static}
+.uiTypeaheadView ul{background:#fff;border:solid;border-width:1px 1px 2px;border-color:#333 #333 #293e6a;overflow:hidden;padding:2px 0}
+.uiTypeaheadView .freeform{border-top-color:#ddd;padding:2px 6px 1px;text-align:center}
+.uiTypeaheadView li{border:solid #fff;border-width:1px 0;color:#333;cursor:pointer;display:block;min-height:1px;padding:0 6px;position:relative}
+.uiTypeaheadView strong{background-color:#d8dfea;color:#3b5998}
+div.uiTypeaheadView .selected{background-color:#6d84b4;border-color:#3b5998}
+.highContrast div.uiTypeaheadView .selected{border-right-width:10px}
+.uiTypeaheadView .selected, .uiTypeaheadView .selected a, .uiTypeaheadView .selected div, .uiTypeaheadView .selected span{color:#fff !important}
+.uiTypeaheadView .selected strong{background-color:#5670a6}
+.uiTypeaheadView .text, .uiTypeaheadView .subtext, .uiTypeaheadView .category{display:block;overflow:hidden;padding-bottom:2px;text-overflow:ellipsis;white-space:nowrap}
+.uiTypeaheadView .category{color:#666}
+.uiTypeaheadView .subtext{color:#999}
+.uiTypeaheadView .arrow{background:transparent url(/rsrc.php/v2/yV/r/IJYgcESal33.png) 0 -413px;display:inline-block;height:7px;margin-left:4px;width:4px}
+.uiTypeaheadView .selected .arrow{background-position:0 -420px}
+div.uiTypeaheadView li.calltoaction, div.uiTypeaheadView li.browseUpsell{background:#f7f7f7;border-bottom:none;border-color:#ddd;display:block;margin:2px 0 -2px;min-height:1px;padding:8px}
+.uiTypeaheadView li.disabled{color:#999}
+div.uiTypeaheadView li.calltoaction{text-align:center}
+div.uiTypeaheadView li.browseMore{background:#fff}
+div.uiTypeaheadView li.browseUpsell{cursor:default}
+.uiTypeaheadView.typeaheadViewLoading li.browseUpsell{display:none}
+div.uiTypeaheadView .browseSuccess .browseSignup, div.uiTypeaheadView .browseJoined{display:none}
+div.uiTypeaheadView .browseSignup, div.uiTypeaheadView .browseSuccess .browseJoined{display:inherit}
+div.uiTypeaheadView li.calltoaction.selected{background:#6d84b4;border-color:#3b5998}
+div.typeaheadViewLoading li.calltoaction span.text{visibility:hidden}
+div.typeaheadViewLoading li.calltoaction{background:#f7f7f7 url(/rsrc.php/v2/yb/r/GsNJNwuI-UM.gif) no-repeat 50% 50%}
+div.typeaheadViewLoading li.calltoaction.selected{background:#6d84b4 url(/rsrc.php/v2/y-/r/AGUNXgX_Wx3.gif) no-repeat 50% 50%}
+.uiBlingBox{border-bottom:1px solid #fff;display:inline-block;padding:3px 4px 3px 2px}
+.uiBlingBox:hover{text-decoration:none;background-color:#eceff5;border-bottom:1px solid #e5eaf1}
+.uiBlingBox .text{line-height:11px;vertical-align:text-bottom}
+.uiBlingBoxSm .text{font-size:9px}
+.uiBlingBox .img{margin-right:2px;vertical-align:text-top}
+.uiBlingBoxSm .img{vertical-align:text-bottom}
+.uiBlingBox .emptyBling{margin-right:0 !important}
+.uiBoxGray{background-color:#f2f2f2;border:1px solid #ccc}
+.uiBoxDarkgray{color:#ccc;background-color:#333;border:1px solid #666}
+.uiBoxLightblue{background-color:#edeff4;border:1px solid #d8dfea}
+.uiBoxRed{background-color:#ffebe8;border:1px solid #dd3c10}
+.uiBoxWhite{background-color:#fff;border:1px solid #ccc}
+.uiBoxYellow{background-color:#fff9d7;border:1px solid #e2c822}
+.uiBoxOverlay{background:rgba(255, 255, 255, .85);border:1px solid #3b5998;border:1px solid rgba(59, 89, 153, .65);zoom:1}
+.noborder{border:none}
+.topborder{border-bottom:none;border-left:none;border-right:none}
+.bottomborder{border-left:none;border-right:none;border-top:none}
+.dashedborder{border-style:dashed}
+.uiButton{cursor:pointer;display:inline-block;font-size:11px;font-weight:bold;line-height:13px;padding:2px 6px;text-align:center;text-decoration:none;vertical-align:top;white-space:nowrap}
+.uiButton, .uiButtonSuppressed:active, .uiButtonSuppressed:focus, .uiButtonSuppressed:hover{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:-352px -260px;background-color:#eee;border:1px solid #999;border-bottom-color:#888;box-shadow:0 1px 0 rgba(0, 0, 0, .1)}
+.uiButton + .uiButton{margin-left:4px}
+.uiButton:hover{text-decoration:none}
+.uiButton:active, .uiButtonDepressed{background:#ddd;border-bottom-color:#999;box-shadow:inset 0 1px 1px rgba(0, 0, 0, .2)}
+.uiButton .img{margin-top:2px;overflow:hidden;vertical-align:top}
+.uiButtonLarge .img{margin-top:4px}
+.uiButton .customimg{margin-top:0}
+.uiButtonText, .uiButton input{background:none;border:0;color:#333;cursor:pointer;display:-moz-inline-box;display:inline-block;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;font-size:11px;font-weight:bold;line-height:13px;margin:0;padding:1px 0 2px;white-space:nowrap}
+.uiButton input::-moz-focus-inner{border:0;padding:0}
+.gecko .uiButton input:focus{outline:thin dotted}
+.uiButtonOverlay, .uiButtonOverlay:hover{background-clip:padding-box;background-color:#fff;background-color:rgba(255, 255, 255, .8);background-image:none;border-color:#a5a5a5;border-color:rgba(0, 0, 0, .35);border-radius:2px}
+.uiButtonOverlay:focus, .uiButtonOverlay:active{background-color:#f9fafc;background-color:rgba(249, 250, 252, .9);border-color:#3b5998;border-color:rgba(59, 89, 152, .5)}
+form.async_saving .uiButton.uiButtonOverlay, .uiButtonOverlay.uiButtonDisabled, .uiButtonOverlay.uiButtonDisabled:active, .uiButtonOverlay.uiButtonDisabled:focus, .uiButtonOverlay.uiButtonDisabled:hover{background-color:#fff;background-color:rgba(255, 255, 255, .8);border-color:#c8c8c8;border-color:rgba(180, 180, 180, .8)}
+.uiButtonOverlay.uiButtonDepressed{background-color:rgba(0, 0, 0, .05)}
+.uiButtonSpecial{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:-352px -64px;background-color:#69a74e;border-color:#3b6e22 #3b6e22 #2c5115}
+.uiButtonSpecial:active{background:#609946;border-bottom-color:#3b6e22}
+form.async_saving .uiButton.uiButtonSpecial, .uiButtonSpecial.uiButtonDisabled, .uiButtonSpecial.uiButtonDisabled:active, .uiButtonSpecial.uiButtonDisabled:focus, .uiButtonSpecial.uiButtonDisabled:hover{background:#b4d3a7;border-color:#9db791}
+.uiButtonConfirm{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:-352px -309px;background-color:#5b74a8;border-color:#29447e #29447e #1a356e}
+.uiButtonConfirm:active{background:#4f6aa3;border-bottom-color:#29447e}
+form.async_saving .uiButton.uiButtonConfirm, .uiButtonConfirm.uiButtonDisabled, .uiButtonConfirm.uiButtonDisabled:active, .uiButtonConfirm.uiButtonDisabled:focus, .uiButtonConfirm.uiButtonDisabled:hover{background:#adbad4;border-color:#94a2bf}
+form.async_saving .uiButton.uiButtonSpecial .uiButtonText, form.async_saving .uiButton.uiButtonSpecial input, form.async_saving .uiButton.uiButtonConfirm .uiButtonText, form.async_saving .uiButton.uiButtonConfirm input, .uiButtonSpecial .uiButtonText, .uiButtonSpecial input, .uiButtonSpecial.uiButtonDisabled .uiButtonText, .uiButtonSpecial.uiButtonDisabled input, .uiButtonConfirm .uiButtonText, .uiButtonConfirm input, .uiButtonConfirm.uiButtonDisabled .uiButtonText, .uiButtonConfirm.uiButtonDisabled input{color:#fff}
+form.async_saving .uiButton, .uiButtonDisabled, .uiButtonDisabled:active, .uiButtonDisabled:focus, .uiButtonDisabled:hover{background:#f2f2f2;border-color:#c8c8c8;box-shadow:none}
+form.async_saving .uiButton .img, .uiButtonDisabled .img{opacity:.5}
+form.async_saving .uiButtonText, form.async_saving .uiButton input, .uiButtonDisabled .uiButtonText, .uiButtonDisabled input{color:#b8b8b8}
+form.async_saving .uiButton, form.async_saving .uiButtonText, form.async_saving .uiButton input, .uiButtonDepressed, .uiButtonDepressed .uiButtonText, .uiButtonDepressed input, .uiButtonDisabled, .uiButtonDisabled .uiButtonText, .uiButtonDisabled input{cursor:default}
+.uiButtonLarge{height:19px}
+.uiButtonLarge, .uiButtonLarge .uiButtonText, .uiButtonLarge input{font-size:13px;line-height:16px}
+.uiButtonSuppressed{background:none;border-color:transparent;box-shadow:none}
+.uiButtonNoText .img{margin-left:-1px;margin-right:-1px}
+.android .uiButtonText, .android .uiButton input{padding:3px 0 1px 1px}
+.gecko.mac .uiButton, .gecko.mac .uiButtonText, .gecko.mac .uiButton input{line-height:14px}
+.gecko.mac .uiButtonLarge, .gecko.mac .uiButtonLarge .uiButtonText, .gecko.mac .uiButtonLarge input{line-height:16px}
+.gecko.mac .uiButtonText, .gecko.mac .uiButton input{margin-bottom:-1px}
+.gecko.mac .uiButtonLarge .uiButtonText, .gecko.mac .uiButtonLarge input{margin-bottom:0}
+.uiSelector .uiCloseButton{background-clip:padding-box;border:1px solid transparent;margin:0}
+.uiSelector .openToggler .uiCloseButton{background-position:left -32px}
+.uiSelector .openToggler .uiCloseButtonSmall{background-position:left -24px}
+.uiContextualLayerPositioner{height:0;position:absolute;z-index:200}
+.uiContextualLayer{position:absolute}
+div.uiContextualLayerPositionerFixed{position:fixed}
+.uiContextualLayerParent{position:relative}
+.uiIconText{display:inline-block;padding-left:21px;position:relative}
+label.uiIconText{vertical-align:baseline}
+.uiIconText .img{left:0;position:absolute;top:-1px;vertical-align:middle}
+i.img{-ms-high-contrast-adjust:none;_overflow:hidden}
+i.img u{left:-9999999px;position:absolute}
+._8u{margin-top:1px}
+._8o, ._8o .img{display:block}
+._8r{margin-right:5px;margin-top:-1px}
+._8s{margin-right:8px}
+._8t{margin-right:10px}
+._29k{display:table-cell;vertical-align:top;width:10000px}
+._29h{float:left;margin-right:5px}
+._29h .img, img._29h, i._29h{display:block}
+._302{float:right}
+._29i{margin-right:5px;margin-top:-1px}
+._29j{margin-top:1px}
+._303{margin-right:8px}
+._304, ._29l{margin-right:10px}
+._29m ._29k{height:50px;vertical-align:middle}
+._29m img._29h, ._29m i._29h, ._29m ._29h .img{height:50px;width:50px}
+._29m ._302{margin-top:14px;padding-left:8px}
+a.uiLinkLightBlue{color:#6d84b4}
+a.uiLinkSubtle{color:gray}
+a.uiLinkDark{color:#141823}
+._4ki > li{border-width:0 0 0 1px;display:inline-block}
+._4kg > li{border-width:1px 0 0 0}
+._509- > li{vertical-align:top}
+._509_ > li{vertical-align:middle}
+._50a0 > li{vertical-align:bottom}
+.uiList > li:first-child{border-width:0}
+._4ks > li{border-color:#e9e9e9;border-style:solid}
+._4kt > li{border-color:#ccc;border-style:solid}
+._4ku > li{border-color:#aaa;border-style:solid}
+._4of{color:#3b5998;list-style-type:square;margin-left:12px}
+._4ki._703 > li{padding-left:20px;padding-right:20px}
+._4ki._704 > li{padding-left:5px;padding-right:5px}
+._4ki._6-j > li{padding-left:10px;padding-right:10px}
+._4ki._6-i > li{padding-right:0}
+._4kg._704 > li{padding-top:5px;padding-bottom:5px}
+._4kg._6-j > li{padding-top:10px;padding-bottom:10px}
+._4kg._703 > li{padding-top:20px;padding-bottom:20px}
+._4kg._6-i > li{padding-bottom:0}
+._4kg._6-h > li:first-child{padding-top:0}
+._4kg._6-h > li:last-child{padding-bottom:0}
+._4ki._6-h > li:first-child{padding-left:0}
+._4ki._6-h > li:last-child{padding-right:0}
+.uiMenu{background-color:#fff;padding:3px 0 4px;overflow-y:auto}
+.uiMenuItem .itemAnchor{border:solid #fff;border-width:1px 0;color:#111;display:block;font-weight:normal;line-height:16px;padding:1px 16px 1px 22px;text-decoration:none}
+.uiMenuItem a:hover{text-decoration:none}
+.uiMenuItem a:active, .uiMenuItem a:focus{background-color:#6d84b4;border-color:#3b5998;color:#fff;outline:none}
+.uiMenu .checked .itemAnchor{background:url(/rsrc.php/v2/y9/r/6NgdP4PZyfY.png) left 4px no-repeat;font-weight:bold}
+.uiMenu .checked a:active, .uiMenu .checked a:focus{background-color:#6d84b4;background-position:left -56px}
+.uiMenuItem{white-space:nowrap}
+.uiMenuItem .itemLabel{display:block;max-width:300px;text-overflow:ellipsis;white-space:nowrap}
+.uiMenuItem .itemWithIcon .itemLabel, .uiMenuItem .itemIcon{display:inline-block;vertical-align:middle}
+.uiMenuItem .itemLabel .menuIcon{vertical-align:sub}
+.uiMenu .uiMenuItemPlus{position:relative;zoom:1}
+.uiMenu .uiMenuItemPlusIcon{display:block;left:8px;position:absolute;top:6px;background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:-59px -63px;overflow:hidden;width:8px;height:8px}
+.uiMenu .selected .uiMenuItemPlusIcon{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:-51px -63px}
+.uiMenuItemBigLabel .itemLabel{overflow:hidden;min-width:300px}
+.uiMenuItem .disabledAnchor, .uiMenu .disabled .itemAnchor{display:none}
+.uiMenu .disabled .disabledAnchor{display:block}
+.uiMenu .disabled .itemAnchor{opacity:.55}
+.uiMenuItemGroup .groupTitle{margin:0 16px 3px 22px}
+.uiMenuSeparator{border-bottom:1px solid #ddd;margin:5px 7px 6px;padding-top:1px}
+.uiMenuContainer .uiMenu{position:relative}
+.uiMorePager .uiMorePagerPrimary{display:block;padding:10px 15px}
+.uiMorePager .uiMorePagerPrimary:hover{background-color:#d8dfea}
+.uiMorePager .uiMorePagerSecondary{margin:10px 15px}
+.uiMorePager .arrow{display:inline-block;vertical-align:top}
+.uiMorePager .uiMorePagerLoader{display:none;padding:11px 15px 9px;text-align:center}
+.async_saving .uiMorePagerLoader{display:block}
+.async_saving .uiMorePagerPrimary,
+.async_saving .uiMorePagerSecondary{display:none}
+.objectListItem{padding-bottom:8px;padding-top:8px}
+.passive .objectListItem{color:gray}
+.objectListItem .auxiliary{text-align:right}
+._rv{height:100px;width:100px}
+._rw{height:50px;width:50px}
+._s0:only-child{display:block}
+._54rv{height:16px;width:16px}
+._54ru{height:32px;width:32px}
+._54rt{height:48px;width:48px}
+._54rs{height:56px;width:56px}
+._ry{height:24px;width:24px}
+.openToggler{z-index:100}
+.uiToggleFlyout, .toggleTargetClosed, .openToggler .uiToggleFlyout .uiToggleFlyout{display:none}
+.openToggler .uiToggleFlyout, .openToggler .uiToggleFlyout .openToggler .uiToggleFlyout{display:block}
+.hideToggler{border:0;height:0;opacity:0;overflow:hidden;padding:0;pointer-events:none;position:absolute;width:0}
+.uiSelector{max-width:200px;vertical-align:top}
+.uiSelector .wrap{position:relative}
+.uiSelector select, .uiSelector .submitButton, .no_js form .uiSelectorButton{display:none}
+.no_js form .uiSelector select, .no_js form .uiSelector .submitButton{display:inline}
+.uiSelector .uiButton, .uiSelector .uiButton:active, .uiSelector .uiButton:focus, .uiSelector .uiButton:hover{background-image:none}
+.uiSelector .uiSelectorButton{vertical-align:top}
+.uiSelector .uiSelectorButton:active{background-color:#ddd}
+.uiSelector .openToggler .uiSelectorButton, .uiSelector .openToggler .uiSelectorButton:active, .uiSelector .openToggler .uiSelectorButton:focus, .uiSelector .openToggler .uiSelectorButton:hover{background-color:#6d84b4;border:1px solid #3b5998;border-bottom-color:#6d84b4;box-shadow:none}
+.uiSelectorNormal .uiSelectorChevronOnly, .uiSelectorNormal .uiSelectorChevronOnly:active, .uiSelectorNormal .uiSelectorChevronOnly:focus, .uiSelectorNormal .uiSelectorChevronOnly:hover{height:20px;padding:0}
+.uiSelectorNormal .uiSelectorButton, .uiSelectorNormal .uiSelectorButton:active, .uiSelectorNormal .uiSelectorButton:focus, .uiSelectorNormal .uiSelectorButton:hover, .uiSelectorNormal .uiButtonSuppressed:active, .uiSelectorNormal .uiButtonSuppressed:focus, .uiSelectorNormal .uiButtonSuppressed:hover{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:right -358px;max-width:169px;padding-right:23px}
+.uiSelectorNormal .uiButtonDisabled, .uiSelectorNormal a.uiButtonDisabled:active, .uiSelectorNormal a.uiButtonDisabled:focus, .uiSelectorNormal a.uiButtonDisabled:hover{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:right -211px}
+.uiSelectorNormal .uiButtonSuppressed.uiButtonDisabled{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:right -15px}
+.uiSelectorNormal .uiButtonOverlay, .uiSelectorNormal .uiButtonOverlay:active, .uiSelectorNormal .uiButtonOverlay:focus, .uiSelectorNormal .uiButtonOverlay:hover, .uiSelectorNormal .uiSelectorButton:active, .uiSelectorNormal .uiButtonSuppressed{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:right -114px}
+.highContrast .uiSelectorButton::after{content:'\0020 \25BC'}
+.uiSelectorNormal .openToggler .uiSelectorButton, .uiSelectorNormal .openToggler .uiSelectorButton:active, .uiSelectorNormal .openToggler .uiSelectorButton:focus, .uiSelectorNormal .openToggler .uiSelectorButton:hover, .uiSelectorNormal .openToggler .uiButtonSuppressed, .uiSelectorNormal .openToggler .uiButtonSuppressed:active, .uiSelectorNormal .openToggler .uiButtonSuppressed:focus, .uiSelectorNormal .openToggler .uiButtonSuppressed:hover{background-image:url(/rsrc.php/v2/yM/r/0IQ6Ietedaj.png);background-repeat:no-repeat;background-size:auto;background-position:right -162px}
+.uiSelectorNormal .uiSelectorButton .uiButtonText{max-width:169px;overflow:hidden;text-overflow:ellipsis;vertical-align:top}
+.uiSelectorNormal .openToggler .uiSelectorButton .uiButtonText{color:#fff}
+.uiSelectorMenuWrapper{bottom:auto;left:0;margin:-1px 0 30px;max-width:340px;min-width:100%;position:absolute;right:auto;top:100%;z-index:-1}
+.uiSelectorRight .uiSelectorMenuWrapper{left:auto;right:0}
+.uiSelectorMenuWrapper .loading{padding:5px 20px}
+.uiSelectorMenuWrapper .loading span{background:url(/rsrc.php/v2/yb/r/GsNJNwuI-UM.gif) no-repeat 0 0;display:-moz-inline-box;display:inline-block;height:11px;margin:0 auto;width:16px}
+.uiSelector .uiMenu{border:1px solid #777;border-bottom:2px solid #293e6a}
+.uiSelectorContextualLayer .uiSelector{margin:0;max-width:none;position:relative}
+.uiSelectorContextualLayer .uiContextualLayerAboveLeft .uiSelector, .uiSelectorContextualLayer .uiContextualLayerAboveRight .uiSelector{top:2px}
+.uiSelectorContextualLayer .uiContextualLayerBelowLeft .uiSelector, .uiSelectorContextualLayer .uiContextualLayerBelowRight .uiSelector{top:-1px}
+.uiSelectorContextualLayer .uiSelectorMenuWrapper{position:static;margin:0;min-width:auto}
+.uiSelectorContextualLayer .uiSelector .uiSelectorButton{position:absolute}
+.uiSelectorContextualLayer .uiContextualLayerAboveLeft .uiSelector .uiSelectorButton, .uiSelectorContextualLayer .uiContextualLayerAboveRight .uiSelector .uiSelectorButton{border:1px solid #3b5998;border-top-color:#6d84b4;margin-top:-2px;top:100%}
+.uiSelectorContextualLayer .uiContextualLayerBelowLeft .uiSelector .uiSelectorButton, .uiSelectorContextualLayer .uiContextualLayerBelowRight .uiSelector .uiSelectorButton{bottom:100%;margin-bottom:-1px}
+.uiSelectorContextualLayer .uiContextualLayerAboveLeft .uiSelector .uiSelectorButton, .uiSelectorContextualLayer .uiContextualLayerBelowLeft .uiSelector .uiSelectorButton{left:0}
+.uiSelectorContextualLayer .uiContextualLayerAboveRight .uiSelector .uiSelectorButton, .uiSelectorContextualLayer .uiContextualLayerBelowRight .uiSelector .uiSelectorButton{right:0}
+.uiTextareaNoResize{resize:none}
+.uiTextareaAutogrow{overflow:hidden}
+.fss{font-size:9px}
+.fsm{font-size:11px}
+.fsl{font-size:13px}
+.fsxl{font-size:16px}
+.fsxxl{font-size:18px}
+.fwn{font-weight:normal}
+.fwb{font-weight:bold}
+.fcb{color:#333}
+.fcg{color:gray}
+.fcw{color:#fff}
+
+#bootloader_CITFP { height: 42px; }
+.bootloader_CITFP { display:block !important; }

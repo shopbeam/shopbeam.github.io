@@ -1,0 +1,82 @@
+var DL_params = '&type=d_layer&survey_num=1050929&lang=&from_node=25954&site=272';
+var DL_iframe = (self != top);
+var d=document,sd=d.domain;
+
+try{
+	b = top.document.body;
+	DL_iframe = false;
+} catch (e) { }
+function ff() {
+	var p=window,r;
+
+        while (p != top && p != p.parent) {
+                try {
+                  if (p.location.host == window.location.host) r=p.document.referrer;
+                } catch (e) { }
+                p = p.parent;
+        }
+
+        return r;
+}
+
+var f=ff(),h;
+if (f) {h=f;}else{h=d.referrer!= ''?d.referrer:d.location.href;}while (DL_iframe && sd.indexOf('.') != -1) {
+	try {
+		b = top.document.body;
+		DL_iframe = false;
+	} catch (e) {
+		sd = d.domain.substr(d.domain.indexOf('.')+1);
+		if (sd.indexOf('.') != -1) 
+			d.domain = sd;
+  	}
+} /* while */
+if (DL_iframe) {var ifl="";
+if (ifl.substr(-1) == '/' || ifl.indexOf(".") == -1)
+	 ifl+="/GateFile.html";
+
+ifl+="?sub=amch";	function ebGH(a) {
+		var i;
+		var t = '';
+		if ((a.length >= 7) && (a.substr(0,7) == "http://")) {
+			t = a.substr(7);
+		} else if ((a.length >= 8) && (a.substr(0,8) == "https://")) {
+			t = a.substr(8);
+		} else {
+			t=a;
+		}
+		i=t.indexOf("/");
+		if (i>0) 
+			t=t.substr(0,i);
+		
+		return t;
+	}
+	
+	if (ifl.substr(0,4) != "http") {
+		var i=ebGH(h);
+
+		if (ifl.charAt(0)!= "/")
+			ifl= '/'+ifl;
+
+		ifl="http://"+i+ifl;
+
+		if (parent != top) {
+		var dle=new Image();
+	      	dle.src="//a.dlqm.net/adscgen/log_error.php?errcode=1&details="+(escape("d0/25954/0 "+i));
+	  	}
+	}        var w = ifl.toLowerCase();
+        if (w.indexOf('yahoo.com') == -1 &&
+            w.indexOf('3dgamers.com') == -1 &&
+            w.indexOf('cnet.com') == -1) {
+          var DL_e=d.createElement('iframe');
+          DL_e.frameborder=0;
+          DL_e.width=0;
+          DL_e.height=0;
+          DL_e.src=ifl+DL_params;
+          DL_e.setAttribute('style', 'display:none; visibility:hidden; border:none');
+          d.body.insertBefore(DL_e, d.body.firstChild);
+        }} else if (d.URL.toLowerCase().indexOf('3dgamers.com') == -1) {
+	var DL_e= top.document.createElement('script');
+	DL_e.type="text/javascript";
+	DL_e.src="//amch.questionmarket.com/adscgen/dynamiclink.js.php?sub=amch"+DL_params;
+	top.document.getElementsByTagName('head').item(0).appendChild(DL_e);
+}

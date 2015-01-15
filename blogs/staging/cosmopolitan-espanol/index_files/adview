@@ -1,0 +1,1148 @@
+
+
+GLOBAL_IBUSTER_CONTAINER_ZINDEX = (typeof(GLOBAL_IBUSTER_CONTAINER_ZINDEX) == "undefined") ?  999999 : GLOBAL_IBUSTER_CONTAINER_ZINDEX + 1;
+
+GLOBAL_OEW_CONTAINER_ZINDEX = (typeof(GLOBAL_OEW_CONTAINER_ZINDEX) == "undefined") ?  999999 : GLOBAL_OEW_CONTAINER_ZINDEX + 1;
+
+function jivoxUnit(){
+	var creativeUnitType = '14';
+	var expandUnitType = '';	 
+	this.playBtnOrientation = '';
+	
+		 
+	 this.hoverCountDownStyle = 'text';
+	 	 
+	 	 var playBtnWidth = 42;
+	 var playBtnHeight = 36;
+	 this.hideInter = null;
+	 this.showInter = null;
+	 this.showPlayInterval = null;
+	 this.hidePlayTimeout = null;
+	 this.unitUniqueId = Math.round(Math.random() * 100000,  0);
+	 this.adUnitContainerDomReference = null;
+	 this.creativeUnitDomReference = null;
+     this.playBtnContainerDomReference = null;
+	 this.expansionPromptContainerDomReference = null;
+	 this.playBtnExpandUnitContainerDomReference = null;
+     this.playBtnDomReference = null;
+     this.adUnitAnchorDomReference = null;
+	 this.adUnitPanelCollapseTime = 0;
+     this.adUnitPanelCollapseTimer = null;
+	 this.adUnitMouseout = true;
+     this.userDidClickOnAnchor = false;
+	 	 this.iBusterFrame = null;
+	 this.iBusterFrameCords = null;
+	 this.adUnitContainerDomReferenceCords = null;
+	 this.adUnitContainerDomReferenceParentNode = null;
+	 this.placeHolderDiv = null;
+	 this.playerInnerMostContainerDiv = null;
+	 this.playerOuterMostContainerDiv = null;
+
+	 this.playerExInteractivityDomReference = null;
+    this.playerExCloseInteractivityBtnDomReference = null;
+    this.playerExInteractivityLoaderDomReference = null;
+    this.playerExInteractivityFrameDomReference = null;
+	this.maskDomReference = null;
+	this.interactivityState = "close";
+	this.largeAdUnitWidth = 640;
+	this.largeAdUnitHeight = 480;
+    this.useHTML5 = false;
+    this.useHTML5VideoSync = false;
+
+		this.UIRTimer = null;
+	this.UIRRecorded = false;
+	this.DwellTimer = null;
+	this.DwellRecorded = true;
+	this.DwellElapsedTimer = null;
+	this.DwellElapsedTime = 0;
+	
+	this.expandedUnitPanelTimer = null;
+	this.expandedUnitTimeElapsed = 0;
+	
+		
+	var serverURL = "",
+	staticResourceURL = "as.jivox.com/advertiser/",
+    playerObject = this,
+    playerObjectId = "",       
+    endOfTheAd = null,    
+    campaignId = null,
+    siteId = null,
+    destroyInteractivityPanel = false;
+	
+	
+	 function isCanvasSupported(){
+		var elem = document.getElementById( "testCanvas" );
+		if(elem == null || elem == undefined) {
+			elem = document.createElement('canvas');
+			elem.setAttribute("id", "testCanvas");
+		}
+		return !!(elem.getContext && elem.getContext('2d'));
+	 }
+
+	function getBestFitMobileBannerURL(bannerElem, mobileBannerObj){
+		var currentWinWidth = window.innerWidth;
+		var leastDiff = 10000;	
+		var bestFitBannerURL = '';
+		var bestFitBannerDim = '';
+		for(var currentObjKey in mobileBannerObj){
+			var assetWidth = currentObjKey.split('x')[0];
+			if(Math.abs(currentWinWidth - assetWidth) < leastDiff){
+				leastDiff = Math.abs(currentWinWidth - assetWidth);
+				bestFitBannerURL = mobileBannerObj[currentObjKey];
+				bestFitBannerDim = currentObjKey;
+			}
+		}
+
+		var bestFitBannerHeight = bestFitBannerDim.split('x')[1];
+		if(bannerElem != null){	
+						bannerElem.src = bestFitBannerURL;
+						bannerElem.width = currentWinWidth;
+			bannerElem.height = bestFitBannerHeight;
+		}
+	}
+
+	function fireExternalTracker(url){
+		var imgEl = document.createElement('img');
+		var finalURL = "";
+
+		if(!url.match("http://evs.jivox.com/jivox/serverAPIs/saveImpression.php")){
+			var replaceCacheBuster0 = url.replace('[timestamp]', Math.random()); 
+var replaceCacheBuster1 = replaceCacheBuster0.replace('[randomNumber]', Math.random()); 
+var replaceCacheBuster2 = replaceCacheBuster1.replace('{cacheBuster}', Math.random()); 
+var replaceCacheBuster3 = replaceCacheBuster2.replace('{RANDOMNUM}', Math.random()); 
+var replaceCacheBuster4 = replaceCacheBuster3.replace('%%CACHEBUSTER%%', Math.random()); 
+finalURL = replaceCacheBuster4;			//finalURL = replaceCacheBuster;
+		}else{
+			if(url.indexOf("?") == -1){
+				finalURL = url + "?r=" + Math.random();
+			}else{
+				finalURL = url + "&r=" + Math.random();
+			}
+		}
+		
+		imgEl.src = finalURL;
+	}       
+
+	 function attachEventListener(target, eventType, functionRef, capture){
+        if(typeof target.addEventListener != "undefined")
+        {
+            target.addEventListener(eventType, functionRef, capture);
+        }else{
+            target.attachEvent("on" + eventType, functionRef);
+        }
+     };
+	 
+	 this.showFlashHoverAnim = function(){
+		try {playerObject.flashHoverAnimMovieObject.showHoverAnim();} catch(e) {}
+	 }
+
+	 this.hideFlashHoverAnim = function(){
+		try {playerObject.flashHoverAnimMovieObject.hideHoverAnim();} catch(e) {}
+	 }
+
+	 this.openFlashPeelback = function(){
+		if(playerObject.interactivityState == 'open'){
+			return;
+		}
+		try { 
+			clearInterval(playerObject.showPlayInterval);
+			clearInterval(playerObject.peelCloseInt); 
+		} catch(e) {}
+		playerObject.flashPeelbackMovieObject.openPeelback();
+		playerObject.peelCloseInt = setInterval( playerObject.closeFlashPeelback, playerObject.closeInterval);
+	 }
+
+	 this.closeFlashPeelback = function(){
+		try { 
+			clearInterval(playerObject.showPlayInterval);
+			clearInterval(playerObject.peelCloseInt);
+		} catch(e) {}
+		playerObject.flashPeelbackMovieObject.closePeelback();
+		playerObject.showPlayInterval = setInterval( playerObject.openFlashPeelback, playerObject.openInterval);
+	 }
+
+	 this.setPlayerObjectId = function(instanceId){
+		 playerObjectId = instanceId;
+	 }
+
+	 this.setPlayerObject = function(playerObject){
+		 playerObject = playerObject;
+	 }
+
+	 this.setServerURL = function(hostName){
+		 serverURL = hostName;
+	 }
+
+	 this.renderUnit = function(){
+		var contentHtml = '';
+				var topLeftPosn = ((playerObject.playBtnOrientation == 'top' || playerObject.playBtnOrientation == 'bottom') ? (playerObject.playBtnOrientation + ':0px;left:0px;') : (playerObject.playBtnOrientation + ':0px;top:0px;'));
+
+		var peelbackPosn = 'left:0px; top:0px;';
+					if(playerObject.peelPlacement == playerObject.TOP_RIGHT) {
+				peelbackPosn = 'left:'+(Number(1) - Number(playerObject.PEELBACK_WIDTH))+'px; top:0px;';
+
+			} else if(playerObject.peelPlacement == playerObject.BOTTOM_RIGHT) {
+				peelbackPosn = 'left:'+(Number(1) - Number(playerObject.PEELBACK_WIDTH))+'px; top:'+(Number(1) - Number(playerObject.PEELBACK_HEIGHT))+'px;';
+
+			} else if(playerObject.peelPlacement == playerObject.BOTTOM_LEFT) {
+				peelbackPosn = 'left:0px; top:'+(Number(1) - Number(playerObject.PEELBACK_HEIGHT))+'px;';
+				
+			}
+				var playTextTopLeftPosn = 'top:' + ((playerObject.playBtnContainerHeight/2) + (playBtnHeight/2) - 5) +'px;left:'+(playerObject.playBtnContainerWidth/2 - 41)+'px;';
+		
+				
+		
+		
+		var adUnitzIndex = "";
+						
+		contentHtml += '<div id="adUnitContainer'+ playerObject.unitUniqueId +'" style="' + adUnitzIndex + 'position:relative;width:1px;height:1px;">';
+
+								contentHtml += '<a id="adUnitAnchor' + playerObject.unitUniqueId + '" href="http://as.jivox.com/player/proxy.php?campaignId=47863&siteId=2521715ca13bed&adUnitType=9&jvxSessionId=1380317264.9409&es_pId=&clickTagURL=http%3A%2F%2Fadclick.g.doubleclick.net%2Faclk%3Fsa%3DL%26ai%3DB4Z7GUPhFUpLQE-vP0AG93ICIDaqowo0EAAAAEAEgwqCnDjgAWOqL5uphYMnGqYvApNgPsgEWd3d3LmNvc21vZW5lc3Bhbm9sLmNvbboBCzAwZ2ZwX2ltYWdlyAEJ2gEmaHR0cDovL3d3dy5jb3Ntb2VuZXNwYW5vbC5jb20vZmFzaGlvbi-pAo2ngfDMYXQ-wAIC4AIA6gI-LzcxODcvdGVsZXZpc2EuZWRpdG9yaWFsLmNvc21vZW5lc3Bhbm9sL2Nvc21vZW5lc3Bhbm9sLmZhc2hpb274AoHSHpAD4AOYA6QDqAMB0ASQTuAEAaAGIA%26num%3D0%26sig%3DAOD64_1auFdJJrgb5qh-EFPUxfZCfZCLWw%26client%3Dca-pub-7798366957477628%26adurl%3Dhttp%3A%2F%2Fwww.MiPantene.com" target="_blank">';
+						contentHtml += '<img id="banner'+ playerObject.unitUniqueId +'" src="http://playercdn.jivox.com/assets/1x1.png" width="1" height="1" border="0" style="" />';
+						contentHtml += '</a>';
+							
+		
+		contentHtml += '<div id="playBtnExpandUnitContainer'+ playerObject.unitUniqueId +'" style="position:absolute;'+topLeftPosn+'width:'+playerObject.playBtnContainerWidth+'px;height:'+playerObject.playBtnContainerHeight+'px;">';	
+		
+		
+		
+                contentHtml += '<div id="interactivityExpandedPanel'+playerObject.unitUniqueId+'" style="background:#000;  padding:0px; margin:0px; border:0px; z-index:999999; overflow:hidden; width:'+ 0 +'px;height:'+ 0 +'px;position:absolute;top:0px;left:0px;cursor:pointer;"><div id="intrExpandedLoader'+playerObject.unitUniqueId+'" style="background:transparent; height:'+playerObject.largeAdUnitHeight+'px; width:'+playerObject.largeAdUnitWidth+'px; padding:0px; margin:0px; border:0px; position:absolute; background:#000;  filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8; opacity: 0.8;"></div><div id="closeExpandedInteractivityBanner'+playerObject.unitUniqueId+'" style="padding:0px; margin:0px; border:0px; position:absolute; cursor:pointer; height:19px; width:20px; right:0px; top:0px;font-size:11px; height:24px; width:24px;background: url(\'http://'+staticResourceURL+'images/close_24x24.png\');  filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8; opacity: 0.8; font-family:arial, tahoma; text-align:center; letter-spacing:0px; line-height:1; text-transform:none; "></div><iframe name="intrExpandedDetailPanel'+playerObject.unitUniqueId+'" id="intrExpandedDetailPanel'+playerObject.unitUniqueId+'" src="javascript:false;" scrolling="no" style="padding:0px; margin:0px; border:0px; display:none; width:100%; height:'+ playerObject.largeAdUnitHeight +'px;" allowtransparency="true" frameborder="0"></iframe></div>';
+                
+
+		contentHtml += '</div>';	
+
+		
+		
+				
+		contentHtml += '</div>';	
+		
+									document.write(contentHtml);	
+									this.getUnitDomReferences();
+						
+				
+		
+		this.attachEvents();
+		
+};
+
+this.getUnitUniqueId = function(){
+	return this.unitUniqueId;
+};
+
+	  this.getUnitDomReferences = function (){        
+        playerObject.adUnitContainerDomReference = document.getElementById("adUnitContainer" + playerObject.unitUniqueId);
+					playerObject.creativeUnitDomReference = document.getElementById("banner" + playerObject.unitUniqueId);
+						playerObject.expansionPromptContainerDomReference = document.getElementById("expansionPromptContainer" + playerObject.unitUniqueId);
+		playerObject.playBtnExpandUnitContainerDomReference = document.getElementById("playBtnExpandUnitContainer" + playerObject.unitUniqueId);    
+		      
+		playerObject.playerExInteractivityDomReference = document.getElementById("interactivityExpandedPanel" + playerObject.unitUniqueId);
+		        playerObject.playerExCloseInteractivityBtnDomReference = document.getElementById("closeExpandedInteractivityBanner" + playerObject.unitUniqueId);
+		        playerObject.playerExInteractivityLoaderDomReference = document.getElementById("intrExpandedLoader" + playerObject.unitUniqueId);
+        playerObject.playerExInteractivityFrameDomReference = document.getElementById("intrExpandedDetailPanel" + playerObject.unitUniqueId);
+        playerObject.adUnitAnchorDomReference = document.getElementById("adUnitAnchor" + playerObject.unitUniqueId);
+
+	  };
+
+	 this.attachEvents = function(){
+
+		try{
+		
+					attachEventListener(playerObject.adUnitContainerDomReference, "mouseover", function(e){
+				playerObject.DwellRecorded = false;
+				
+				if(null == playerObject.DwellElapsedTimer){
+					playerObject.DwellElapsedTimer = setInterval(function(){ playerObject.DwellElapsedTime = playerObject.DwellElapsedTime+1;}, 1000);
+				}
+				
+				if(null == playerObject.DwellTimer){
+					playerObject.DwellTimer = setTimeout(function(){playerObject.recordDwellEvent(49, playerObject.DwellElapsedTime); },60000);
+				}
+				
+				if(!playerObject.UIRRecorded){
+					playerObject.UIRTimer = setTimeout(function(){playerObject.recordUIREvent(48);},500);
+				}
+				playerObject.cancelEvent(e);
+			}, false);
+		
+		
+
+					playerObject.slideOutLargeAdUnit('47863','2521715ca13bed', '1');
+			setTimeout(function(){playerObject.slideInLargeAdUnit(true);},1000000 * 1000);
+				
+
+		
+				
+                if(playerObject.adUnitAnchorDomReference)
+    		attachEventListener(playerObject.adUnitAnchorDomReference, "click", function(e){
+				playerObject.userDidClickOnAnchor = true;
+								return true;
+			}, false);
+        
+				
+     
+			if(typeof(playerObject.playerExCloseInteractivityBtnDomReference) != "undefined" && playerObject.playerExCloseInteractivityBtnDomReference != null){
+            attachEventListener(playerObject.playerExCloseInteractivityBtnDomReference, "click", function(e){playerObject.slideInLargeAdUnit();}, false);
+			}
+				
+		
+				
+				attachEventListener(playerObject.playerExInteractivityDomReference, "mouseover", function(e){
+		playerObject.adUnitMouseout=false;
+				playerObject.DwellRecorded = false;
+		
+		if(null == playerObject.DwellElapsedTimer){
+			playerObject.DwellElapsedTimer = setInterval(function(){ playerObject.DwellElapsedTime = playerObject.DwellElapsedTime+1; }, 1000);
+		}
+		
+		if(null == playerObject.DwellTimer){
+			playerObject.DwellTimer = setTimeout(function(){playerObject.recordDwellEvent(49, playerObject.DwellElapsedTime); },60000);
+		}
+		
+		if(!playerObject.UIRRecorded){
+			playerObject.UIRTimer = setTimeout(function(){playerObject.recordUIREvent(48);},500);
+		}
+				playerObject.cancelEvent(e);} , false);
+		
+		
+        
+        attachEventListener(window, "message", receiveHtml5Message, false);
+		
+		
+			
+				if("onorientationchange" in window){
+			attachEventListener(window, "orientationchange", playerObject.propagateOrientationChange, false);
+		}else if("onresize" in window){
+			attachEventListener(window, "resize", playerObject.propagateOrientationChange, false);
+		}
+		
+		}catch(e){
+						setTimeout(function(){playerObject.getUnitDomReferences(); playerObject.attachEvents();}, 500);
+		}
+
+	 };	
+
+
+function getViewportDim() {
+    var e = window, a = 'inner';
+    if (!('innerWidth' in window )) {
+        a = 'client';
+        e = document.documentElement || document.body;
+    }
+    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+}
+
+	 	    this.propagateOrientationChange = function(){
+	    		    		var playerPos = findPos(playerObject.playBtnExpandUnitContainerDomReference);
+	    		var maskWinXY = getCenterAlignXY(640,480);
+	    		var unitLeftPosition = maskWinXY[0] - playerPos[0];
+	    		var unitTopPosition = maskWinXY[1] + playerPos[3] - playerPos[1];
+				playerObject.playerExInteractivityDomReference.style.right = "";
+				playerObject.playerExInteractivityDomReference.style.left = "";
+				playerObject.playerExInteractivityDomReference.style.left = (unitLeftPosition) + "px";
+				playerObject.playerExInteractivityDomReference.style.top = (unitTopPosition) + "px";
+	    	
+	    	        };
+     
+	 
+     
+    function receiveHtml5Message(e)
+    {
+                var s = e.data.split(':', 10);
+        if(s && s.length >= 2 && s[0] == playerObjectId)
+        {
+            if(s[1] == 'closeAdUnit') {
+                playerObject.closeAdUnit();
+			}else if(s[1] == 'slideInLargeAdUnit'){
+				if(s[2] == 'preventSlideEvent')
+					playerObject.slideInLargeAdUnit(true);
+				else
+					playerObject.slideInLargeAdUnit();
+			}else if(s[1] == 'slideOutLargeAdUnit'){
+				if(s[2] == 'preventSlideEvent')
+					playerObject.slideOutLargeAdUnit(null, null, true);
+				else
+					playerObject.slideOutLargeAdUnit();
+			}
+        }
+    }
+
+
+    /* Function to create a cookie */
+    function createCookieObj(name,value,days,domainPath) {
+        if (days) {
+                var date = new Date();
+                date.setTime(date.getTime()+(days*24*60*60*1000));
+                var expires = "; expires="+date.toGMTString();
+        } else {
+            var expires = "";
+        }
+        document.cookie = name+"="+value+expires+"; path=/; domain="+domainPath;
+    };
+    
+    /* Function to delete a cookie */
+    
+    function eraseCookieObj(name) {
+            createCookieObj(name,"",-1,".jivox.com");
+    };
+    
+    /* function to read cookie val */
+    function readCookieObj(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+    
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        
+        return null;
+    };
+
+	
+	this.recordUIREvent = function(eventId, elapsedTime){
+		if(playerObject.UIRRecorded){
+			return;
+		}
+				recordEvent(eventId, elapsedTime);
+				playerObject.UIRRecorded = true;
+	};
+	
+	this.recordDwellEvent = function(eventId, elapsedTime){
+		if(playerObject.DwellRecorded){
+			return;
+		}
+		clearTimeout(playerObject.DwellTimer);
+				if(elapsedTime > 0){
+			recordEvent(eventId, elapsedTime);
+		}
+				clearInterval(playerObject.DwellElapsedTimer);
+		playerObject.DwellElapsedTimer = null;
+        playerObject.DwellElapsedTime = 0;
+		playerObject.DwellRecorded = true;
+		playerObject.DwellTimer = null;
+	};
+
+	
+
+	function recordEvent(eventId, elapsedTime){
+
+		
+		var rand = Math.random();	
+		
+		var eventRecordURL = 'http://evs.jivox.com/jivox/serverAPIs/externalReporting/tracker.php?campaignId=47863&siteId=2521715ca13bed&clickThrough='+eventId+'&adUnitType=9&jvxSessionId=1380317264.9409&random=' + rand;
+
+		eventRecordURL += '&es_pId=' + '';
+		
+		if(elapsedTime != undefined && elapsedTime != '' && elapsedTime != 0){
+		 eventRecordURL += '&elapsedTime=' + elapsedTime;
+		}
+
+		var imgEl = document.createElement('img');
+		imgEl.src = eventRecordURL;
+
+			}
+
+	 this.retractOpenPanel = function(e){
+		     };
+
+
+	function getCenterAlignXY(objWidth,objHeight){ 
+		 var winPos = getBrowserWindowProps();
+		 var objX = ((winPos[0]- 28) - objWidth) / 2 ;
+		 var objY = (winPos[1] - objHeight) / 2 ;
+		 objX = (objX < 0) ? 0 : objX;
+		 objY = (objY < 0) ? 0 : objY;
+		 return [objX,objY];
+	}
+
+	function setOpacity(myElement, opacityValue) {
+		if(typeof myElement.style.opacity !== 'undefined'){
+			myElement.style.opacity = opacityValue/100; // Gecko/Opera
+		} else {
+			myElement.style.filter = "alpha(opacity="
+				 + opacityValue + ")"; // IE			
+		}
+	}
+
+	this.injectMask = function(){
+		if(document.getElementById("mask" + playerObject.unitUniqueId) != null || document.getElementById("mask" + playerObject.unitUniqueId) != undefined){
+			playerObject.maskDomReference.style.display = 'block';
+			return;
+		}
+		var maskDiv = document.createElement('div');
+		maskDiv.id = "mask" + playerObject.unitUniqueId;
+		var styleObj = {'position':'fixed','top': '0px','left': '0px','width': '100%','background': '#FFFFFF repeat scroll 0 0','display': 'block'};
+
+		for(var i in styleObj){
+			maskDiv.style[i] = styleObj[i];
+		}
+
+		setOpacity(maskDiv,60);
+		var maskHeight = (document.body.scrollHeight < window.innerHeight) ? window.innerHeight : document.body.scrollHeight;		
+		maskDiv.style.height = maskHeight + 'px';
+		maskDiv.style.zIndex = 50;
+		document.body.appendChild(maskDiv);
+		playerObject.maskDomReference = document.getElementById("mask" + playerObject.unitUniqueId);
+	}
+	 this.slideOutLargeAdUnit = function(campaignIdx, siteIdx, autoExpand){	
+
+			if(playerObject.interactivityState == 'open'){
+				return;
+			}
+
+			
+				
+
+						
+						playerObject.injectMask();
+								
+			clearInterval(playerObject.showInter);
+			clearInterval(playerObject.hideInter);
+			clearInterval(playerObject.showPlayInterval);
+			clearTimeout(playerObject.hidePlayTimeout);
+			clearInterval(playerObject.creativeUnitHoverTimer);
+			clearInterval(playerObject.creativeUnitHoverTimerOnce);
+			playerObject.creativeUnitHoverTimeForExpand = 0;
+						
+			    						
+            if(playerObject.playerExInteractivityLoaderDomReference != null && playerObject.playerExInteractivityLoaderDomReference.innerHTML == ''){
+                playerObject.playerExInteractivityLoaderDomReference.innerHTML = '<img style="width:32px; height:32px; border:0px; margin:0px; padding:0px; position:absolute; top:'+ (playerObject.largeAdUnitHeight - 32) / 2 +'px; left: '+ (playerObject.largeAdUnitWidth - 32) / 2 +'px;" src="http://'+staticResourceURL+'images/loader-animation-2.gif" alt="Loading..." />';
+            }
+			        
+                        
+            campaignId = (typeof(campaignIdx) != "undefined" && !isNaN(campaignIdx)) ? campaignIdx : campaignId;
+            siteId = (typeof(siteIdx) != "undefined") ? siteIdx : siteId;
+            setLargeAdUnitSlideOutOrientation();
+            
+                        
+			            playerObject.playerExCloseInteractivityBtnDomReference.style.display = "block";
+			                        
+            
+            var interactivityUrl = null;	
+			
+			var adUnitDimParams = "";
+
+						adUnitDimParams = "&adUnitWidth=" + playerObject.largeAdUnitWidth + "&adUnitHeight=" + playerObject.largeAdUnitHeight;
+			
+                        interactivityUrl= "http://as.jivox.com/player/expandedUnit.php?expandAsInterstitial=1&t=1380317264318&r=0.4445457870606333&creativeUnitType=8&creativeUnitWidth=640&creativeUnitHeight=480&siteId=2521715ca13bed&campaignId=47863&clickTagURL=http%3A%2F%2Fadclick.g.doubleclick.net%2Faclk%3Fsa%3DL%26ai%3DB4Z7GUPhFUpLQE-vP0AG93ICIDaqowo0EAAAAEAEgwqCnDjgAWOqL5uphYMnGqYvApNgPsgEWd3d3LmNvc21vZW5lc3Bhbm9sLmNvbboBCzAwZ2ZwX2ltYWdlyAEJ2gEmaHR0cDovL3d3dy5jb3Ntb2VuZXNwYW5vbC5jb20vZmFzaGlvbi-pAo2ngfDMYXQ-wAIC4AIA6gI-LzcxODcvdGVsZXZpc2EuZWRpdG9yaWFsLmNvc21vZW5lc3Bhbm9sL2Nvc21vZW5lc3Bhbm9sLmZhc2hpb274AoHSHpAD4AOYA6QDqAMB0ASQTuAEAaAGIA%26num%3D0%26sig%3DAOD64_1auFdJJrgb5qh-EFPUxfZCfZCLWw%26client%3Dca-pub-7798366957477628%26adurl%3Dhttp%3A%2F%2Fwww.MiPantene.com&objectName=jvxAdPlayer_5245f850874f99_49863897&creativeUnitType=14&lDim=640x480&expandUnitType=&adUnitType=9&expandedUnit=1&viewLayout="+adUnitDimParams+ "&jvxSessionId=1380317264.9409";
+                        if(typeof(autoExpand) == 'undefined' || !autoExpand)
+                interactivityUrl += "&userInitAction=1";
+
+            // if parent (us) are using html5, tell expandedUnit to use it too.
+            if(this.useHTML5)
+                interactivityUrl += "&usingHTML5=1";
+            if(this.useHTML5VideoSync)
+                interactivityUrl += "&usingHTML5VideoSync=1";
+
+			
+			                
+            return slideOutLargeUnit(playerObject.playerExInteractivityDomReference.id, interactivityUrl, "expandedUnit", autoExpand);
+        }
+
+	  function setLargeAdUnitSlideOutOrientation(){
+
+        var playerPos = findPos(playerObject.playBtnExpandUnitContainerDomReference);
+        var winPos = getBrowserWindowProps();
+        var availableScreenWidth = winPos[0] - 28; //removed scrollbar from overall space
+		var availableScreenHeight = winPos[1];
+        var playerLeftPos = playerPos[0];
+		var leftAvailableSpace = playerLeftPos;
+		var rightAvailableSpace = availableScreenWidth - (playerLeftPos + 1);
+		var adUnitLeftOffset = 0;
+		
+				var maskWinXY = getCenterAlignXY(640,480);
+		playerObject.playerExInteractivityDomReference.style.right = "";
+		playerObject.playerExInteractivityDomReference.style.left = "";
+		playerObject.playerExInteractivityDomReference.style.left = (maskWinXY[0] - playerLeftPos) + "px";
+		return;
+				
+				
+		        
+         
+		        if((playerLeftPos + 0) > playerObject.largeAdUnitWidth){
+			var newRight = 0;		
+			            playerObject.playerExInteractivityDomReference.style.right = "";
+            playerObject.playerExInteractivityDomReference.style.left = "";
+            playerObject.playerExInteractivityDomReference.style.right = newRight + adUnitLeftOffset + "px";   
+			        }else{
+			var newLeft = 0;
+						if((playerLeftPos + 0 + playerObject.largeAdUnitWidth) > availableScreenWidth){					
+				if(playerObject.largeAdUnitWidth - leftAvailableSpace < leftAvailableSpace){
+					 var newRight = -(playerObject.largeAdUnitWidth - playerLeftPos);
+					 					 playerObject.playerExInteractivityDomReference.style.right = "";
+					 playerObject.playerExInteractivityDomReference.style.left = "";
+					 playerObject.playerExInteractivityDomReference.style.right = newRight + adUnitLeftOffset + "px"; 
+									}else{
+					newLeft = -playerLeftPos+0;
+										playerObject.playerExInteractivityDomReference.style.right = "";
+					playerObject.playerExInteractivityDomReference.style.left = "";
+					playerObject.playerExInteractivityDomReference.style.left = newLeft + adUnitLeftOffset + "px";  
+									}
+			} else {
+					playerObject.playerExInteractivityDomReference.style.right = "";
+					playerObject.playerExInteractivityDomReference.style.left = "";
+					playerObject.playerExInteractivityDomReference.style.left = newLeft + adUnitLeftOffset + "px";
+								}
+                  
+        }
+						 
+    };
+
+	
+	
+	  function slideOutLargeUnit(elementId, interactivityURL, panelId, autoExpand)
+    {
+        
+       var element = document.getElementById(elementId);
+       var playerPos = findPos(playerObject.playBtnExpandUnitContainerDomReference);
+       var winPos = getBrowserWindowProps();
+	          var unitExpandWidth = playerObject.largeAdUnitWidth;
+       var unitExpandHeight = playerObject.largeAdUnitHeight;
+       var unitExpandSpeed = 250;
+       //position the player 10px from the top
+       var unitTopPosition = 0;
+
+								if((winPos[1] - (playerPos[1] - playerPos[3])) > playerObject.largeAdUnitHeight){
+				if(playerPos[1] > playerPos[3]){
+					unitTopPosition = 0;
+				}else{
+					unitTopPosition = playerPos[3] - playerPos[1];
+				}
+			}else {
+				unitTopPosition = (playerObject.largeAdUnitHeight - (winPos[1] - (playerPos[1] - playerPos[3])));
+				if(unitTopPosition < (playerPos[1] - playerPos[3])){
+					unitTopPosition = -unitTopPosition;
+				}else {
+					unitTopPosition = unitTopPosition - (unitTopPosition - (playerPos[1] - playerPos[3]));
+					unitTopPosition = -unitTopPosition;
+				}
+			}
+					
+	   
+       var unitLeftPosition = element.style.left;
+
+	   
+	 
+       
+	   
+	   	   var maskWinXY = getCenterAlignXY(640,480);
+	   unitTopPosition = maskWinXY[1] + playerPos[3] - playerPos[1];
+	   	     
+       var objIframe = element.getElementsByTagName("iframe");
+       iframeURL = objIframe[0].src; //.toLowerCase();
+
+       //var urlRegExp = new RegExp(regExpEscape(interactivityURL).toLowerCase());
+
+       //if(!urlRegExp.test(iframeURL)){
+       if(iframeURL != interactivityURL){
+           objIframe[0].style.display = "block";
+                      objIframe[0].style.visibility = "hidden";
+                      var intrLoader = objIframe[0].parentNode.firstChild;
+           intrLoader.style.display = "block";
+           attachEventListener(objIframe[0], "load", function(){contentLoad(objIframe[0], panelId)}, false);
+           objIframe[0].src = interactivityURL;
+        }
+
+					element.style.visibility = 'visible';
+			element.style.display = 'block';
+		//elementID, newLeft, newTop, newWidth, newHeight, time, callback
+		animate(elementId, unitLeftPosition, unitTopPosition, unitExpandWidth, unitExpandHeight, unitExpandSpeed, completedSlideOutLargeUnit);
+		       
+       
+		
+		playerObject.interactivityState = "open";
+				playerObject.playerExCloseInteractivityBtnDomReference.style.display = 'block';
+		
+		if(!autoExpand){
+			recordEvent(37, 0); // record user initiated expand unit open event.		
+					}
+		playerObject.expandedUnitPanelTimer = setInterval(function(){ playerObject.expandedUnitTimeElapsed = playerObject.expandedUnitTimeElapsed+1; }, 1000);
+		
+       //return flag to the player indicating the expanding unit is on and pause the ad
+       return false;
+
+    };
+
+        
+    function completedSlideOutLargeUnit()
+    {
+        
+		        
+            };
+
+	 
+	this.slideInLargeAdUnit = function(autoClose){
+
+			if(!autoClose){				
+				recordEvent(47, playerObject.expandedUnitTimeElapsed);
+				clearInterval(playerObject.expandedUnitPanelTimer);
+				playerObject.expandedUnitTimeElapsed = 0;
+			}
+            
+			
+				
+
+			
+            
+			var adUnitDimParams = "";
+
+						adUnitDimParams = "&adUnitWidth=" + playerObject.largeAdUnitWidth + "&adUnitHeight=" + playerObject.largeAdUnitHeight;
+			
+                        var interactivityUrl = "http://as.jivox.com/player/expandedUnit.php?expandAsInterstitial=1&t=1380317264318&r=0.4445457870606333&creativeUnitType=8&creativeUnitWidth=640&creativeUnitHeight=480&siteId=2521715ca13bed&campaignId=47863&clickTagURL=http%3A%2F%2Fadclick.g.doubleclick.net%2Faclk%3Fsa%3DL%26ai%3DB4Z7GUPhFUpLQE-vP0AG93ICIDaqowo0EAAAAEAEgwqCnDjgAWOqL5uphYMnGqYvApNgPsgEWd3d3LmNvc21vZW5lc3Bhbm9sLmNvbboBCzAwZ2ZwX2ltYWdlyAEJ2gEmaHR0cDovL3d3dy5jb3Ntb2VuZXNwYW5vbC5jb20vZmFzaGlvbi-pAo2ngfDMYXQ-wAIC4AIA6gI-LzcxODcvdGVsZXZpc2EuZWRpdG9yaWFsLmNvc21vZW5lc3Bhbm9sL2Nvc21vZW5lc3Bhbm9sLmZhc2hpb274AoHSHpAD4AOYA6QDqAMB0ASQTuAEAaAGIA%26num%3D0%26sig%3DAOD64_1auFdJJrgb5qh-EFPUxfZCfZCLWw%26client%3Dca-pub-7798366957477628%26adurl%3Dhttp%3A%2F%2Fwww.MiPantene.com&objectName=jvxAdPlayer_5245f850874f99_49863897&creativeUnitType=14&lDim=640x480&expandUnitType=&adUnitType=9&expandedUnit=1&viewLayout="+adUnitDimParams+"";
+            
+            if(endOfTheAd){
+                interactivityUrl = serverURL + "/player/blank.html";
+            }
+            
+            playerObject.interactivityState = "close";
+						playerObject.playerExCloseInteractivityBtnDomReference.style.display = 'none';
+			            slideIn(playerObject.playerExInteractivityDomReference.id, interactivityUrl, "interactivity");
+			//playerObject.showPlayInterval = setInterval(playerObject.showPlayInInterval,5*1000);
+			    }
+	
+	function onSlideInComplete(){
+		try{
+			document.body.style.position = "relative";
+			document.body.offsetHeight;
+			document.body.style.position = "";
+		}catch(e){
+		}
+	}
+	
+	function onSlideInOver() {
+		playerObject.playerExInteractivityDomReference.style.visibility = 'hidden';
+		playerObject.playerExInteractivityDomReference.style.display = 'none';
+        playerObject.interactivityState = "close"; //Fix for ADPTL-4784
+						playerObject.playerExCloseInteractivityBtnDomReference.style.visibility = 'visible';
+		playerObject.playerExCloseInteractivityBtnDomReference.style.display = 'block';
+								onSlideInComplete();
+		
+	}
+
+	
+	function slideIn(elementId, interactivityURL, panelId)
+    {
+       var element = document.getElementById(elementId);      
+	   var objIframe = element.getElementsByTagName("iframe");
+	   	   var callbackFn = onSlideInComplete;
+	   	   
+       iframeURL = objIframe[0].src.toLowerCase();
+       var urlRegExp = new RegExp(regExpEscape(interactivityURL).toLowerCase());
+           
+       if(!urlRegExp.test(iframeURL)){		
+           objIframe[0].src = interactivityURL;
+           var intrLoader = objIframe[0].parentNode.firstChild;
+           intrLoader.style.display = "block";
+           objIframe[0].style.display = "none";
+       } 
+
+              animate(elementId, 0, 0, 0, 0, 250, callbackFn);
+	   //animate(elementId, 0, 0, 1, 1, 250, onSlideInOver);
+	          destroyInteractivityPanel = true;  	 
+		
+		
+				if(playerObject.maskDomReference != null && playerObject.maskDomReference != undefined)
+			playerObject.maskDomReference.style.display = 'none';
+		    };
+	
+	var countDownAnimTimer = function(dimension, countDownSeconds, parentObj, useDefault) {
+		//"private" variables:
+		var counter, defaultCounter = 3;
+		if(useDefault) {
+			counter = defaultCounter;
+		} else {
+			counter = countDownSeconds;
+		}
+		var width = height = dimension,
+			centerx = centery = dimension/2,
+			circleRadius = dimension/3,
+			circleTopColor = '#bababa',
+			circleBottomColor = '#7c7c7c',
+			circleOpacity = 0.75,
+			circleShadowColor = "#000000",
+			sectorTopColor = '#5780aa',
+			sectorBottomColor = '#3b648d',
+			sectorOpacity = 0.72,
+			sectorLineColor = '#e1e1e1',
+			fontTopColor = '#fefefe',
+			fontBottomColor = '#b6b6b6',
+			lastend = 0,
+			offset = Math.PI / 2,
+			arcsector = Math.PI * (2 / counter),
+			fontSize = Math.floor(dimension/3.5),
+			countdown_context = null,
+			countdown_canvas = null,
+			thisObjRef = null;
+		
+		//"getXY" method - to get the arc end position to draw the line
+		function getXY(x, y, d, a){
+			return {
+				x: x + d * Math.cos(a),
+				y: y + d * Math.sin(a)
+			};
+		};
+		
+		//"clearCanvas" method:
+		function clearCanvas(){
+			countdown_context.clearRect(0, 0, countdown_canvas.clientWidth, countdown_canvas.clientHeight);
+		}
+		
+		function lineargradient(ctx, x0, y0, x1, y1, topColor, bottomColor){
+			var grd = ctx.createLinearGradient(x0, y0, x1, y1);
+			grd.addColorStop(0, topColor);
+			grd.addColorStop(1, bottomColor);
+			ctx.fillStyle = grd;
+		}
+		
+		function radialgradient(ctx, x0, y0, r0, x1, y1, r1, startColor, endColor){
+			var grd = ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
+			grd.addColorStop(0, startColor);
+			grd.addColorStop(0.35, startColor);
+			grd.addColorStop(0.90, endColor);
+			ctx.fillStyle = grd;
+		}	
+		
+		//"drawCircle" method:
+		function drawCircle(){
+			countdown_context.beginPath();
+
+			// Translucency
+			countdown_context.globalAlpha = 0.75;
+
+			// create linear gradient
+			var x0 = y0 = ((height-(circleRadius*2))/2);
+			var x1 = y1 = y0 + (circleRadius*2);		
+			lineargradient(countdown_context, x0, y0, x1, y1, circleTopColor, circleBottomColor);
+			
+			// set the shadow
+			countdown_context.shadowOffsetX = 2;
+			countdown_context.shadowOffsetY = 2;
+			countdown_context.shadowBlur    = 5;
+			countdown_context.shadowColor   = 'rgba(0, 0, 0, 0.75)';
+
+			// draw the circle
+			countdown_context.arc(centerx, centery, circleRadius, Math.PI * 2, 0, true);
+			
+			countdown_context.closePath();
+			
+			countdown_context.fill();
+		}
+		
+		function drawSector(){
+			countdown_context.beginPath();
+			
+			// create gradient
+			countdown_context.moveTo(centerx,centery);
+			radialgradient(countdown_context, centerx,centery,0,centerx,centery,circleRadius, sectorTopColor, sectorBottomColor);
+			
+			countdown_context.arc(centerx, centery, circleRadius, 0 - offset, lastend + arcsector - offset, false);
+			countdown_context.shadowOffsetX = 0;
+			countdown_context.shadowOffsetY = 0;
+			countdown_context.shadowBlur = 0;
+			countdown_context.fill();
+			countdown_context.closePath();
+			
+			if(counter != 1){
+				countdown_context.beginPath();
+				countdown_context.strokeStyle = sectorLineColor;
+				countdown_context.moveTo(centerx, centery); // line 1
+				var xy = getXY(centerx, centery, circleRadius, lastend + arcsector - offset)
+				countdown_context.lineTo(xy.x, xy.y);			
+				countdown_context.moveTo(centerx, centery); // line 1
+				countdown_context.lineTo(centerx, (height/2) - circleRadius); // line 1
+				countdown_context.lineWidth = 1;
+				countdown_context.lineJoin = "miter";
+				countdown_context.stroke();
+				countdown_context.closePath();
+			}
+			
+			lastend += arcsector;
+			
+			// Translucency
+			countdown_context.globalAlpha = 1;
+			countdown_context.font = "bold " + fontSize + "pt Arial";
+			
+			// create linear gradient
+			var x0 = y0 = ((height-fontSize)/2);
+			var x1 = y1 = y0 + fontSize;
+			lineargradient(countdown_context, x0, y0, x1, y1, fontTopColor, fontBottomColor);
+			
+			countdown_context.shadowOffsetX = 2;
+			countdown_context.shadowOffsetY = 2;
+			countdown_context.shadowBlur = 5;
+			countdown_context.textAlign = "center";
+			countdown_context.fillText(counter, centerx, centery + (fontSize/2));
+		}
+		
+		return {
+			drawSectorsTimer: null,
+			rand: null,
+			countdown_canvas: null,
+			countdown_context: null,
+			initCounter: function(){
+				this.exitCounter();
+				this.rand = 'timer' + (new Date()).getTime();
+				this.countdown_canvas = document.createElement('canvas');
+				this.countdown_canvas.setAttribute('width', width);
+				this.countdown_canvas.setAttribute('height', height);
+				this.countdown_canvas.setAttribute('style', 'align: center');
+				this.countdown_canvas.setAttribute('id', this.rand);
+				this.countdown_canvas.setAttribute('style', 'position:absolute');
+				this.countdown_canvas.setAttribute('style', 'left:0px');
+				this.countdown_canvas.setAttribute('style', 'top:0px'); 
+					
+				//document.getElementById(parentObj).appendChild(this.countdown_canvas);
+				parentObj.appendChild(this.countdown_canvas);
+				this.countdown_context = document.getElementById(this.rand).getContext("2d");
+
+				countdown_canvas = this.countdown_canvas;
+				countdown_context = this.countdown_context;
+				this.showCounter();
+				var thisReference = this;
+				//this.drawSectorsTimer = setInterval(function(){thisReference.drawAnimCounter()}, 1000);
+			},
+			showDefaultCounter:function(){
+				var thisReference = this;
+				this.drawSectorsTimer = setInterval(function(){thisReference.showCounter()}, countDownSeconds*1000/defaultCounter);
+			},
+			exitCounter: function(){
+				var removeCanvas = document.getElementById(this.rand);
+				try{
+					clearCanvas();
+					removeCanvas.parentNode.removeChild(removeCanvas);
+				} catch (e){ }
+				if(useDefault) {
+					counter = defaultCounter;
+				} else {
+					counter = countDownSeconds;
+				}
+				lastend = 0;
+				clearInterval(this.drawSectorsTimer);
+			},
+			drawAnimCounter: function(){
+				clearCanvas();
+				drawCircle();
+				drawSector();
+			},
+			showCounter: function(){
+				this.drawAnimCounter();
+				counter--;
+				if(counter < 0) this.exitCounter();
+			}
+		};
+	};
+
+
+	function findPos(obj){
+        var curleft = 0;
+        var curtop = 0;
+        var pageY = 0;
+        var pageX = 0;
+        
+        if (obj.offsetParent) {
+            do{
+                curleft += obj.offsetLeft;
+                curtop += obj.offsetTop;
+            }while (obj = obj.offsetParent);
+        }
+        
+	    if(!isNaN(window.pageYOffset)) {
+	       pageX = window.pageXOffset;
+	       pageY = window.pageYOffset;
+	    }
+	    else {
+	       pageY=document.body.scrollTop || document.documentElement.scrollTop;
+	       pageX=document.body.scrollLeft || document.documentElement.scrollLeft;
+	    }
+
+		    
+        return [curleft,curtop,pageX,pageY];
+    };
+
+	this.getFlashVersion = function(){
+      // ie
+      try {
+        try {
+          // avoid fp6 minor version lookup issues
+          // see: http://blog.deconcept.com/2006/01/11/getvariable-setvariable-crash-internet-explorer-flash-6/
+          var axo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash.6');
+          try { axo.AllowScriptAccess = 'always'; }
+          catch(e) { return '6,0,0'; }
+        } catch(e) {}
+        return new ActiveXObject('ShockwaveFlash.ShockwaveFlash').GetVariable('$version').replace(/\D+/g, ',').match(/^,?(.+),?$/)[1];
+      // other browsers
+      } catch(e) {
+        try {
+          if(navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin){
+            return (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]).description.replace(/\D+/g, ",").match(/^,?(.+),?$/)[1];
+          }
+        } catch(e) {}
+      }
+      return '0,0,0';
+    };
+
+	function getBrowserWindowProps() {
+        var browserWidth = 0, browserHeight = 0;
+        //For checking non-IE browsers Mozilla, Safari, Opera, Chrome.
+        if (typeof (window.innerWidth) == 'number') {
+            browserWidth = window.innerWidth;
+            browserHeight = window.innerHeight;
+        }
+        //All IE except version 4
+        else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {               
+            browserWidth = document.documentElement.clientWidth;
+            browserHeight = document.documentElement.clientHeight;
+        }
+        //IE 4
+        else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+            browserWidth = document.body.clientWidth;
+            browserHeight = document.body.clientHeight;
+        }
+        
+        return [browserWidth, browserHeight];
+    };
+
+    function regExpEscape(str)
+    {
+      var specials = new RegExp("[.*+?|()\&\$\\[\\]{}\\\\]", "g"); // .*+?|()[]{}\
+      return str.replace(specials, "\\$&");
+    };
+    
+	function animate(elementID, newLeft, newTop, newWidth, newHeight, time, callback)
+    {
+        var el = document.getElementById(elementID);
+        if(el == null)
+            return;
+        
+        var cLeft = parseInt(el.style.left);
+        var cTop = parseInt(el.style.top);
+        var cWidth = parseInt(el.style.width);
+		        var cHeight = parseInt(el.style.height);
+        
+		
+        var totalFrames = 1;
+        if(time> 0)
+            totalFrames = time/40;
+        
+        var fLeft = newLeft - cLeft;
+        if(fLeft != 0)
+            fLeft /= totalFrames;
+        
+        var fTop = newTop - cTop;
+        if(fTop != 0)
+            fTop /= totalFrames;
+        
+        var fWidth = newWidth - cWidth;
+        if(fWidth != 0)
+            fWidth /= totalFrames;
+        
+        var fHeight = newHeight - cHeight;
+        if(fHeight != 0)
+            fHeight /= totalFrames;
+        
+        doFrame(elementID, cLeft, newLeft, fLeft,
+          cTop, newTop, fTop, cWidth, newWidth, fWidth,
+          cHeight, newHeight, fHeight, callback);
+    };
+
+    function doFrame(eID, cLeft, nLeft, fLeft, cTop, nTop, fTop, cWidth, nWidth, fWidth, cHeight, nHeight, fHeight, callback)
+    {
+        //alert("eID" + eID + "\n cLeft: " + cLeft + " nLeft: " + nLeft + " fLeft: " + fLeft + "\n cTop: " + cTop + " nTop: " + nTop + " fTop: " + fTop + "\n cWidth: " + cWidth + " nWidth: " + nWidth + " fWidth: " + fWidth + "\n cHeight: " + cHeight + " nHeight: " + nHeight  + " fHeight: " + fHeight)
+        var el = document.getElementById(eID);
+        if(el == null)
+            return;
+        
+        cLeft = moveSingleVal(cLeft, nLeft, fLeft);
+        cTop = moveSingleVal(cTop, nTop, fTop);
+        cWidth = moveSingleVal(cWidth, nWidth, fWidth);
+        cHeight = moveSingleVal(cHeight, nHeight, fHeight);
+
+        if(!isNaN(cLeft)){
+            el.style.left = Math.round(cLeft) + 'px';
+        }
+        el.style.top = Math.round(cTop) + 'px';
+        el.style.width = Math.round(cWidth) + 'px';
+		        el.style.height = Math.round(cHeight) + 'px';
+        
+        //if(cLeft == nLeft && cTop == nTop && cHeight == nHeight && cWidth == nWidth)
+        if(cTop == nTop && cHeight == nHeight && cWidth == nWidth)
+        {
+            if(callback != null)
+                callback();
+                        return;
+        }
+        
+        setTimeout(function(){ doFrame(eID, cLeft, nLeft, fLeft,
+            cTop, nTop, fTop, cWidth, nWidth, fWidth,
+            cHeight, nHeight, fHeight, callback) }, 40);
+    };
+
+	function moveSingleVal(currentVal, finalVal, frameAmt)
+    {
+        if(frameAmt == 0 || currentVal == finalVal)
+            return finalVal;
+        
+        currentVal += frameAmt;
+        
+        if((frameAmt> 0 && currentVal>= finalVal)
+        || (frameAmt <0 && currentVal <= finalVal))
+        {
+            return finalVal;
+        }
+        
+        return currentVal;
+    };
+
+	function contentLoad(obj, panelId){
+        var intrLoader = obj.parentNode.firstChild;
+        
+        intrLoader.style.display = "none";
+        obj.style.display = "block";
+        obj.style.visibility = "visible";
+    };
+
+	this.cancelEvent = function(e){
+        if (!e) var e = window.event;
+        e.cancelBubble = true;
+        if (e.stopPropagation) e.stopPropagation();        
+    }; 
+
+	function getFlashMovieObject(movieName)
+    {
+            if (window.document[movieName])
+        {
+          return window.document[movieName];
+        }
+
+        if (navigator.appName.indexOf("Microsoft Internet")==-1)
+        {
+            if (document.embeds && document.embeds[movieName])
+                return document.embeds[movieName];
+            else
+                 return document.getElementById(movieName);
+        }
+        else // if (navigator.appName.indexOf("Microsoft Internet")!=-1)
+        {
+            return document.getElementById(movieName);
+        }
+        };
+	 
+}
+
+
+var jvxAdPlayer_5245f850874f99_49863897 = new jivoxUnit();
+var jvxAdPlayer_5245f850874f99_49863897flashVersion = jvxAdPlayer_5245f850874f99_49863897.getFlashVersion();
+var jvxAdPlayer_5245f850874f99_49863897versions = jvxAdPlayer_5245f850874f99_49863897flashVersion.split(',');
+var jvxAdPlayer_5245f850874f99_49863897versionMajor = (typeof(jvxAdPlayer_5245f850874f99_49863897versions[0]) != "undefined") ? jvxAdPlayer_5245f850874f99_49863897versions[0] : -1;
+var jvxAdPlayer_5245f850874f99_49863897versionMinor = (typeof(jvxAdPlayer_5245f850874f99_49863897versions[1]) != "undefined") ? jvxAdPlayer_5245f850874f99_49863897versions[1] : -1;
+var jvxAdPlayer_5245f850874f99_49863897versionRevision = (typeof(jvxAdPlayer_5245f850874f99_49863897versions[2]) != "undefined") ? jvxAdPlayer_5245f850874f99_49863897versions[2] : -1;
+var jvxAdPlayer_5245f850874f99_49863897supportedMajorVersion = 9;
+var jvxAdPlayer_5245f850874f99_49863897supportedMinorVersion = 0;
+var jvxAdPlayer_5245f850874f99_49863897supportedRevisionVersion = 115;
+
+
+jvxAdPlayer_5245f850874f99_49863897.setServerURL("http://as.jivox.com");
+jvxAdPlayer_5245f850874f99_49863897.setPlayerObjectId("jvxAdPlayer_5245f850874f99_49863897");
+jvxAdPlayer_5245f850874f99_49863897.setPlayerObject(jvxAdPlayer_5245f850874f99_49863897);
+jvxAdPlayer_5245f850874f99_49863897.renderUnit();
