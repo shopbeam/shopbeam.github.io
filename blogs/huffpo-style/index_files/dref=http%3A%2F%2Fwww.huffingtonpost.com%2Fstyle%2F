@@ -1,0 +1,1 @@
+document.write('  <SCRIPT TYPE=\'text/javascript\'>');document.write('  var ACE_AR = { Site: \'853485\', CallType: \'IFRAME\', Size: \'728090\' };');document.write('  <\/SCRIPT>');document.write('  <SCRIPT TYPE=\'text/javascript\' SRC=\'http://uac.advertising.com/wrapper/aceUAC.js\'>');document.write('  <\/SCRIPT>');document.write('');
