@@ -1,0 +1,114 @@
+/* Wp Page Numbers plugin*/
+.navigation { display:block; margin:40px 0; text-align:center; padding:0; }
+.navigation_photogrid {display:inline-block; margin:0 auto; text-align:center; width: 100%; padding:10px 0; 
+width: 780px; }
+
+#wp_page_numbers { background:none repeat scroll 0 0 #ededed; margin:0 auto; text-align: center;display:table;}
+
+/* IE requires a width here to stay centered  */
+/*
+*:first-child+html #wp_page_number {
+		width:500px;
+       display: inline-table; 
+       min-height:1%;
+} 
+
+* html #wp_page_number {width:500px;}
+*/
+
+.navigation .page_nav ol.wp_page_numbers {
+display:inline;
+}
+
+.wp_page_numbers {
+font-size:12px;
+font-weight:bold;
+margin:0;
+padding:0;
+color:#000000;
+font-family:Arial,Sans-Serif;
+}
+
+.wp_page_numbers li {
+list-style:none outside none;
+display:inline;
+}
+
+
+.wp_page_numbers .active_page a{
+color: #cdcdcd;
+}
+
+.wp_page_numbers a {
+color: #000000;
+margin-right:4px;
+padding:3px 6px;
+text-align:center;
+text-decoration:none;
+font-weight: bold;
+}
+
+.wp_page_numbers li a:hover{
+color: #575757;
+text-decoration: none;
+}
+
+
+.wp_page_numbers li.space {
+display:none;
+}
+
+.navigation .page_nav li img {
+
+}
+
+
+.wp_page_numbers li.previous_page a {
+background:url("nav.png") no-repeat scroll 0px -2px;
+margin:0;
+height:18px;
+width:66px;
+padding: 5px 2px 5px 0;
+}
+.wp_page_numbers li.previous_page a:hover {
+background:url("nav.png") no-repeat scroll 0px -27px;
+margin:0;
+height:18px;
+padding: 5px 2px 5px 0;
+width:66px;
+}
+
+.wp_page_numbers li.previous_page_off {
+background:url("nav.png") no-repeat scroll 0px -52px;
+height:18px;
+margin:0;
+padding: 5px 2px 5px 0;
+width:66px;
+}
+
+
+.wp_page_numbers li.next_page a {
+background:url("nav.png") no-repeat scroll -70px -2px;
+margin:0;
+height:18px;
+padding:5px 0 5px 2px;
+width:57px;
+}
+
+
+.wp_page_numbers li.next_page a:hover {
+background:url("nav.png") no-repeat scroll -70px -27px;
+margin:0;
+height:18px;
+padding:5px 0 5px 2px;
+width:57px;
+}
+
+.wp_page_numbers li.next_page_off {
+background:url("nav.png") no-repeat scroll -70px -52px;
+margin:0;
+height:18px;
+padding:5px 0 5px 2px;
+width:57px;
+}
+

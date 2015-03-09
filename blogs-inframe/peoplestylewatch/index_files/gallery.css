@@ -1,0 +1,747 @@
+/* Gallery */
+.brightcovePlayerInline{margin:0;}
+#adCMTop{top:0;left:auto;right:0;}
+#adCMTop #tcm_tout{background:transparent;}
+#navigation{padding-top:71px;}
+#peopleLogo{top:15px;}
+#hottopicsnav{top:52px;}
+a{color:#6dcaf2;}
+#wrapper{background:#08A9E7;}
+#main{position:relative;float:left;background:#141414;color:#ccc;}
+#headline{float:left;clear:both;width:994px;background:#272727;}
+#headline h1{float:left;clear:both;height:14px;margin:0 0 0 125px;padding:15px 0 0 10px;font-size:16px;color:#ccc;}
+#headline h1 span{font:bold 16px/14px Arial,sans-serif;}
+#headline .logo{position:absolute;left:0;top:5px;width:125px;height:32px;text-indent:-9999px;overflow:hidden;border-right:solid 1px #080607;background:url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png') 10px -360px no-repeat;}
+#headline .main{padding:0 10px 0 0;}
+#headline p{margin:5px 0 3px 125px;padding:10px 195px 7px 10px;font-size:13px;line-height:16px;border-left:solid 1px #080607;}
+#headline.startracks h1{margin-left:100px;}
+#headline.startracks .logo{width:100px;background-position:10px -200px;}
+#headline.startracks p{margin-left:100px;}
+#headline.coverstory h1{margin-left:110px;}
+#headline.coverstory .logo{width:110px;background-position:10px -240px;}
+#headline.coverstory p{margin-left:110px;}
+#headline.peopleexclusive h1{margin-left:158px;}
+#headline.peopleexclusive .logo{width:158px;background-position:10px -280px;}
+#headline.peopleexclusive p{margin-left:158px;}
+#headline.photopoll h1{margin-left:98px;}
+#headline.photopoll .logo{width:98px;background-position:10px -320px;}
+#headline.photopoll p{margin-left:98px;}
+#headline.photospecial h1{margin-left:125px;}
+#headline.photospecial .logo{width:125px;background-position:10px -360px;}
+#headline.photospecial p{margin-left:125px;}
+#headline.tvwatch h1{margin-left:112px;}
+#headline.tvwatch .logo{width:112px;background-position:10px -400px;}
+#headline.tvwatch p{margin-left:112px;}
+#headline.celebsuncensored h1{margin-left:174px;}
+#headline.celebsuncensored .logo{width:174px; height:30px; background-position:10px -490px;}
+#headline.celebsuncensored p{margin-left:174px;}
+#adSponsoredBy{position:absolute;top:5px;right:10px; width:180px; max-height:30px; overflow-y:hidden;}
+#adSponsoredBy iframe{width:180px;}
+#leftColumns{float:left;clear:both;padding:3px 12px 0 11px;width:660px;}
+#slide{position:relative;float:left;margin:10px 0 12px 0;width:660px;}
+#slide .tout{position:relative;width:660px;overflow:hidden;}
+#slide .navigation,
+#slide .swipe-navigation{margin:0;padding:0;background-color:transparent;clear:none;}
+#slide .navigation li,
+#slide .swipe-navigation li{display:block;margin:0;padding:0;position:absolute;top:170px;z-index:3;width:50px;height:100px;overflow:hidden;}
+#slide .navigation .previous,
+#slide .swipe-navigation .swipe-previous{left:0;}
+#slide .navigation .next,
+#slide .swipe-navigation .swipe-next{right:0;}
+#slide .navigation a,
+#slide .swipe-navigation a{display:block;width:50px;height:100px;overflow:hidden;}
+#slide .navigation span,
+#slide .swipe-navigation span{position:absolute;top:0;left:0;display:block;margin:0;width:100px;height:200px;text-indent:-9999px;cursor:pointer;background:url('http://img2.timeinc.net/people/static/i/photos/overlay-prev-next.png') 0 0 no-repeat;_background:0;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img2.timeinc.net/people/static/i/photos/overlay-prev-next.png',sizingMethod='crop');}
+#slide .navigation .next span,
+#slide .swipe-navigation .swipe-next span{left:-50px;}
+#slide .navigation a:hover span,
+#slide .navigation .next a:hover span,
+#slide .swipe-navigation a:hover span,
+#slide .swipe-navigation .swipe-next a:hover span{top:-100px;}
+#slide .navigation .off,
+#slide .swipe-navigation .off{left:-9999px;}
+#slider{position:relative;z-index:2;min-height:300px;padding:0 0 5px;text-align:center;list-style:none;}
+#main.js #slider{height:580px;padding:0;}
+#slider .image{top:0;left:0;float:left;width:660px;overflow:hidden;text-align:center;}
+#main.js .image{position:absolute;display:none;}
+#main.js .image .noscript{display:inline;visibility:hidden;}
+#slider span{float:left;width:660px;text-align:center;}
+#slider .imgcont .hidebehind{z-index:1;}
+#credit{clear:both;float:left;width:504px;height:31px;margin:5px 0 0 0;padding:0 10px;background:#1e1e1e url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png') -265px -80px no-repeat;}
+#credit p{margin:0;font-size:10px;line-height:12px;font-weight:bold;color:#999;}
+#credit .photographer{padding:3px 0 0;font-style:italic;}
+#main.js .photographer,
+#main.js .published{display:none;}
+#credit .published span{color:#e07;}
+#credit .published.noscript{color:#999;}
+#slide .subscribe{float:left;width:136px;height:31px;margin:5px 0 0 0;text-indent:-9999px;overflow:hidden;background:url('http://img2.timeinc.net/people/static/i/photos/subscribe-now.png') 0 0 no-repeat;_background:0;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img2.timeinc.net/people/static/i/photos/subscribe-now.png',sizingMethod='crop');}
+#leftColumns .recirc{clear:both;float:left;display:inline;margin-top:4px;padding:0 0 4px;width:660px;background:#343434;}
+#leftColumns .recirc .title{padding:10px 10px 0;font:bold 22px Arial;color:#FDF19B;}
+#leftColumns .latestnews{float:left;padding:10px;width:310px;overflow:hidden;border-right:1px solid #000;}
+#leftFirst{width:310px;}
+#leftFirst .tout{width:auto;}
+#leftFirst h3{padding:0 0 7px;}
+#leftFirst h3 a{color:#fff;font-size:20px;font-weight:bold;letter-spacing:-0.05em;line-height:18px;}
+#leftFirst li{padding:0 0 6px;}
+#leftFirst li a{font:bold 12px/13px Arial,sans-serif;color:#6DCAF2;}
+#leftFirst .seeAll{display:none;}
+#randomRecirc.active,
+#leftColumns .recirc .recirc{float:left;clear:none;margin-left:-1px;width:325px;border-left:1px solid #000;}
+#randomRecirc .tout,
+#leftColumns .recirc .recirc .tout{float:left;width:325px;}
+#randomRecirc h3{height:40px;overflow:hidden;}
+#randomRecirc h3 a{position:relative;display:block;height:40px;overflow:hidden;}
+#randomRecirc h3 span{position:absolute;top:4px;left:10px;display:block;width:325px;height:500px;text-indent:-9999px;background:url('http://img2.timeinc.net/people/static/i/photos/sprite-partner-logos.png') 0 0 no-repeat;_background:0;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img2.timeinc.net/people/static/i/photos/sprite-partner-logos.png',sizingMethod='crop');}
+#peoplestylewatch h3 span{top:-46px;}
+#celebritybabyblog h3 span{top:-96px;}
+#peoplepets h3 span{top:-150px;}
+#peoplegames h3 span{top:-196px;}
+#peoplepremium h3 span{top:-243px;}
+#randomRecirc .imgcont,
+#leftColumns .recirc .recirc .imgcont{float:left;padding:0 0 5px 10px;}
+#randomRecirc .txtcont,
+#leftColumns .recirc .recirc .txtcont{padding:0 5px 5px 0;float:right;width:150px;}
+#randomRecirc h4,
+#leftColumns .recirc h4{float:left;clear:left;width:auto;text-indent:0;}
+#randomRecirc h4 a,
+#leftColumns .recirc h4 a{font:bold 16px Arial,Helvetica,sans-serif;color:#6dcaf2;display:block;text-transform:none;}
+#randomRecirc .deck a,
+#leftColumns .recirc .deck a{float:left;clear:both;width:auto;display:block;line-height:16px;color:#ccc;}
+#randomRecirc .more,
+#leftColumns .recirc .more{display:none;margin:4px 0 0;padding:0;background-position:right -96px;float:left;}
+#randomRecirc .more a,
+#leftColumns .recirc .more a{font-size:11px;text-transform:uppercase;padding-left:0;color:#069;}
+#rightColumn{position:relative;float:left;width:300px;margin-top:10px;overflow:visible;}
+#rightColumn .toutSection,
+#rightColumn .tout,
+#rightColumn .txtcont{float:left;overflow:visible;}
+#rightColumn .navigation,
+#rightColumn .navigation .off,
+#rightColumn .navigation li a,
+#rightColumn .navigation li p{background:url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png') 0 0 no-repeat;}
+#rightColumn .navigation{float:left;width:100%;overflow:hidden;background-position:0 -40px;}
+#rightColumn .pageof{float:left;width:79px;padding:0 10px;line-height:30px;text-align:left;text-transform:uppercase;font-size:10px;color:#fff;font-weight:bold;}
+#rightColumn .pageof span{font-size:13px;}
+#rightColumn #thisslide{display:inline;}
+#rightColumn .navigation ul{float:left;width:200px;}
+#rightColumn .navigation li{float:left;width:99px;height:30px;}
+#rightColumn .navigation .next{width:101px;}
+#rightColumn .navigation li a{float:left;display:block;padding:0 0 0 24px;width:75px;font:bold 12px/30px Arial,sans-serif;color:#1a1a1a;text-transform:uppercase;}
+#rightColumn .navigation li p{background-position:-120px 0;}
+#rightColumn .navigation .previous a{background-position:-99px 0;}
+#rightColumn .navigation .next a{float:left;padding:0 0 0 33px;width:68px;background-position:-198px 0;}
+#rightColumn .navigation li a:hover{background:none;color:#fff;text-decoration:none;}
+#rightColumn .navigation .off{background-position:-90px 0;}
+#rightColumn .navigation .off a{display:none;}
+#rightColumn .navigation .off p{width:50px;height:30px;}
+#scrollbar{clear:both;float:left;width:300px;height:186px;margin:5px 0 0;padding:8px 0 0;overflow:hidden;overflow-y:auto;background:url('http://img2.timeinc.net/people/static/i/photos/scrollbar-background_8.png') repeat-y 0 0;-moz-border-radius-topleft:5px;-webkit-border-top-left-radius:5px;border-top-left-radius:5px;}
+#scrollbar a{display:inline;font-weight:normal;color:#6dcaf2;}
+#scrollbar .caption{height:137px;font-size:13px;line-height:18px;overflow:auto;}
+#scrollbar .caption strike{text-decoration:line-through;}
+#scrollbar h4{padding:7px 10px 5px;font-weight:bold;font-size:18px;color:#ffee9a;text-transform:uppercase;}
+#scrollbar p{padding:0 10px 5px;color:#ccc;}
+#scrollbar .celebdb span{padding-right:16px;background:url('http://img2.timeinc.net/people/static/i/photos/celebdb-icon-people.gif') right 50% no-repeat;}
+.caption .video {padding-left:22px;background:url('http://img2.timeinc.net/people/static/i/photos/video-link-icon-v2.png') left 49% no-repeat;}
+#rightColumn .shoppingbutton,
+#rightColumn .makeoverbutton{display:none;float:left;width:280px;clear:both;padding:10px;background:url('http://img2.timeinc.net/people/static/i/photos/scrollbar-background_8.png') 0 0 repeat-y;}
+#rightColumn .shoppingbutton a,
+#rightColumn .makeoverbutton a{display:block;width:261px;overflow:hidden;height:19px;padding:0 0 0 22px;color:#333;font-size:11px;line-height:19px;font-weight:bold;background:url('http://img2.timeinc.net/people/static/i/photos/buttonshopthislook_8.png') no-repeat;}
+#rightColumn .makeoverbutton a{height:25px;line-height:23px;background:url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png') no-repeat 0 -452px;}
+#rightColumn .shoppingbutton strong,
+#rightColumn .makeoverbutton span{display:inline;padding-right:5px;color:#fff;font-size:11px;}
+#rightColumn .makeoverbutton a:hover{text-decoration:none;}
+#relatedlinks{float:left;width:280px;clear:both;padding:0 10px;background:url('http://img2.timeinc.net/people/static/i/photos/scrollbar-background_8.png') 0 0 repeat-y;}
+#relatedlinks li{margin:5px 0;}
+#main.js #scrollbar{overflow:visible;height:auto;}
+#main.js #scrollbar .caption{display:none;}
+#main.js #relatedlinks li,
+#main.js #relatedlinks .poll{display:none;}
+#main.js #relatedlinks div,
+#main.js #relatedlinks p,
+#main.js #relatedlinks li li{display:block;padding:0 0 0 10px;background:url('http://img2.timeinc.net/people/static/i/spritearrow_8.png') no-repeat -45px -96px;}
+#main.js #relatedlinks a{display:block;color:#6DCAF2;}
+
+#main.js #relatedlinks .source a {display:inline; font-weight:bold; padding-left:5px;}
+
+#main.poll #scrollbar .caption{height:100px;margin-bottom:0;}
+#relatedlinks .poll{float:left;padding:10px 0 0 0;width:300px;}
+#relatedlinks .poll iframe{width:290px;height:120px;background:transparent;}
+#linktitle{position:absolute;z-index:10;border:1px solid #333;background:#f7f5d1;padding:2px 5px;color:#333;}
+
+/* Prod version
+.sharelinkcont{float:left;clear:both;width:280px;height:28px;padding:5px 10px;border:0;background:url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png') 0 -160px no-repeat;}
+.sharelinkcont .addlinks{display:none;} /* hiding yahoo buzz version of sharebar until galleries are recached */
+/*
+.sharebar{float:left;clear:left;width:240px;background:url('http://img2.timeinc.net/people/static/i/photos/share-buttons-gallery.png') 0 -60px no-repeat;_background-image:url('http://img2.timeinc.net/people/static/i/photos/share-buttons-gallery-sw.gif');}
+.sharebar li,
+.sharebar li a{float:left;width:72px;height:28px;background:url('http://img2.timeinc.net/people/static/i/photos/share-buttons-gallery.png') 0 0 no-repeat;_background-image:url('http://img2.timeinc.net/people/static/i/photos/share-buttons-gallery-sw.gif');}
+.sharebar a{text-indent:-9999px;overflow:hidden;}
+.sharebar .facebook{background-position:0 -31px;}
+.sharebar .twitter{background-position:-72px -31px;}
+.sharebar .email{background-position:-144px -31px;}
+.sharebar .facebook a{background-position:0 0;}
+.sharebar .twitter a{background-position:-72px 0;}
+.sharebar .email a{background-position:-144px 0;}
+.sharebar a:hover{background:0;}
+ */
+
+/* New version with +1 & Pinterest -- comment out above version once Pinterest is up:*/
+.sharelinkcont {position:relative;float:left;clear:both;width:280px;height:28px;padding:5px 10px;border:0;background:url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png') 0 -160px no-repeat;}
+.sharelinkcont #like {display:none;}
+
+.sharebar {float:left;clear:left;width:240px; background:none; _background-image:none;}
+.sharebar li, .sharebar li a {float:left;width:auto; height:20px; background:none; _background-image:none;}
+.sharebar a{text-indent:-9999px;overflow:hidden;}
+.sharebar .facebook, .sharebar .twitter, .sharebar .facebook a, .sharebar .twitter a {background-position:0 0; background:none;}
+.sharebar .email {display:none;}
+
+.sharebar li {padding-right:8px;}
+.sharebar .facebook {width:56px; height:20px;}
+.sharebar .facebook a {width:56px; height:20px; background:url('http://img2.timeinc.net/people/static/i/misc/share/fb_share.png') no-repeat;}
+.sharebar .twitter {width:57px; height:20px;}
+.sharebar .twitter a {width:57px; height:20px; background:url('http://img2.timeinc.net/people/static/i/misc/share/tweet.png') no-repeat;}
+.sharebar .plus1 {width:32px; height:20px;}
+.sharebar .pinterest {width:40px; height:20px;}
+.sharebar .pinterest a {display:block; width:40px; height:20px; background:url('http://assets.pinterest.com/images/pidgets/pin_it_button.png') no-repeat; text-indent:-99999px;}
+
+#rightColumn .adRight{clear:both;float:left;overflow:visible;width:300px;height:264px;margin:10px 0; padding-bottom:10px; background:#272727;}
+#rightColumn .title{font-size:10px;color:#ccc;}
+
+#globalrecirc {clear:none; float:left; width:100%; background:#2a2a2a;}
+#globalrecirc h3 {margin:0; padding:14px 10px 20px; background:0; font-size:18px; font-weight:bold; color:#FDF19B;}
+#globalrecirc .tout {clear:left; float:left; width:100%; margin:0; padding:10px 0;}
+#globalrecirc .header {float:left; width:84px; padding:0 2px 0 8px;}
+#globalrecirc .header a {display:block; width:84px; height:34px; overflow:hidden;}
+#globalrecirc .header span {display:block; width:84px; height:34px; text-indent:-9999px; background:url('http://img2.timeinc.net/people/static/i/misc/partners/gallery_logos.png') 0 0 no-repeat; _background:0; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img2.timeinc.net/people/static/i/misc/partners/gallery_logos.png',sizingMethod='crop');}
+#globalrecirc .recirclinks {clear:none; float:right; width:185px; padding:0 10px 0 0;}
+#globalrecirc .recirclinks li {display:none; padding-right:4px;}
+#globalrecirc .recirclinks li.show {display:block;}
+#globalrecirc .recirclinks li a {display:block; font:bold 11px/13px arial,sans-serif; color:#6dcaf2;}
+#globalrecirc .more {display:none;}
+body.dark #pos1, body.dark #pos3, body.dark #pos5 {background:#313131;}
+body.light #pos1, body.light #pos3, body.light #pos5 {background:#e8e8e8;}
+
+#slide.endScreen .header{margin:0 0 10px;font:bold 18px/20px Arial,sans-serif;color:#ffee9a;text-transform:uppercase;}
+#slide.endScreen #slidetouts{padding-left:74px;}
+#slide.endScreen .tout{float:left;clear:none;padding:0 18px 50px 0;width:169px;}
+#slide.endScreen #slidetouts iframe {float:left; margin-right:20px; height:235px;} /* bug #40361 */
+#slide.endScreen .last{width:150px;}
+#slide.endScreen .imgcont{width:158px;height:121px;margin-bottom:4px;}
+#slide.endScreen .imgcont a{float:left;width:158px;height:121px;margin-bottom:10px;background:url('http://img2.timeinc.net/people/static/i/photos/sprite-channelhome_8.png') 0 -119px no-repeat;}
+#slide.endScreen .imgcont a:hover{background-position:-158px -119px;}
+#slide.endScreen .imgcont img{border:1px solid #fff;}
+#slide.endScreen .imgcont.video {position:relative;}
+#slide.endScreen .imgcont.video span.play {display:inline-block; width:35px; height:35px; position:absolute; bottom:10px; left:4px; background:url('http://img2.timeinc.net/people/static/i/video/btn-play-35.png') no-repeat; text-indent:-9999px;}
+#slide.endScreen .txtcont{float:left;clear:left;width:150px;}
+#slide.endScreen .special_head2{display:inline;margin-bottom:8px;padding:0 4px;font:bold 10px/14px 'trebuchet ms',arial,sans-serif;color:#e07;text-transform:uppercase;}
+#slide.endScreen h4{padding:4px 2px;}
+#slide.endScreen h4 a{display:block;font:bold 14px/20px Arial,sans-serif;color:#fff;text-transform:none;}
+#slide.endScreen .more a{color:#6DCAF2;}
+#slide.endScreen .adCMSlide{float:left;clear:left;margin-top:35px;padding:0;width:660px;height:158px;display:block;background:url('http://img2.timeinc.net/people/static/i/photos/sprite-ofie_8.png') left top no-repeat;overflow:hidden;}
+#slide.endScreen #cmadcover{float:left;clear:left;padding:6px 0 0 15px;width:215px;}
+#slide.endScreen #cmadcover .txtcont{width:210px;}
+#slide.endScreen #cmadcover .bannerheader{font:bold 10px Arial;color:#079dd0;}
+#slide.endScreen #cmadcover .headline{padding:2px 0 0;font:bold 15px Arial;color:#f60;}
+#slide.endScreen #cmadcover .tagline{font:bold 11px Arial;color:#000;text-transform:uppercase;}
+#slide.endScreen #cmadcover .deck{padding:6px 0 2px;font:12px Arial;color:#000;}
+#slide.endScreen #cmadcover .offer{font:bold 12px Arial;color:#000;}
+#slide.endScreen #cmadcover .more{font:bold italic 12px/18px Arial;color:#e07;text-transform:uppercase;background:0;}
+#slide.endScreen .thisweek{float:left;}
+#slide.endScreen .thisweek .thisWeek{float:left;margin-top:10px;padding:0 14px 0 16px;width:200px;height:30px;background:url('http://img2.timeinc.net/people/static/i/photos/sprite-ofie_8.png') 16px -170px no-repeat;text-indent:-9999px;overflow:hidden;}
+#slide.endScreen .thisweek ul{float:left;clear:left;padding:0 14px 0 16px;width:200px;}
+#slide.endScreen .thisweek li{padding:0 0 4px 9px;font:12px/15px Arial,sans-serif;color:#1a1a1a;background:url('http://img2.timeinc.net/people/static/i/photos/bullet-pink-round.gif') left 5px no-repeat;}
+#slide.endScreen .thisweek a{font:12px/15px Arial,sans-serif;color:#1a1a1a;}
+#slide.endScreen .thisweek strong{text-transform:uppercase;}
+#slide.endScreen .thisweek p{float:left;clear:left;padding:0 14px 0 16px;width:200px;font:bold 10px Arial,sans-serif;color:#fff;}
+#slide.endScreen .ofie{float:left;padding:18px 0 0 20px;width:400px;border:0;border-left:1px solid #fef4ca;background:0;position:relative;}
+#slide.endScreen .ofie h4{float:right;margin-top:0;width:297px;height:26px;background:url('http://img2.timeinc.net/people/static/i/photos/sprite-ofie_8.png') -228px -170px no-repeat;text-indent:-9999px;overflow:hidden;position:absolute;left:120px;}
+#slide.endScreen .ofie .imgcont{float:left;clear:none;width:86px;height:114px;border:1px solid #ccc;}
+#slide.endScreen .ofie img{border:0;}
+#slide.endScreen .ofie ul{float:right;padding:30px 0 0 0;width:300px;}
+#slide.endScreen .ofie li{float:left;padding:0 10px 4px 0;}
+#slide.endScreen .ofie .address,
+#slide.endScreen .ofie .zip{padding-right:0;}
+#slide.endScreen .ofie input,
+#slide.endScreen .ofie select{padding:2px 4px;width:132px;height:16px;font:12px/17px Arial,sans-serif;color:#999;border:1px solid #666;}
+#slide.endScreen .ofie .state select{padding:1px 1px 1px 0;width:65px;height:20px;}
+#slide.endScreen .ofie .zip input{width:57px;}
+#slide.endScreen .ofie .submit input{margin-top:6px;padding:0;width:140px;height:25px;border:0;}
+#overlay-stitch-note{position:absolute;top:auto;bottom:-50px;left:0;z-index:1000;width:100%;background:#DCD19B;background:rgba(255,242,178,.85);}
+#overlay-stitch-note p{padding:6px 0;font:12px/16px Arial,sans-serif;color:#292929;text-align:center;}
+#overlay-stitch-note span{font-weight:bold;text-transform:uppercase;}
+#nextgallery{display:none;float:left;padding:4px 10px 0;font:bold 12px/15px Arial,sans-serif;color:#ccc;}
+#nextgallery span{color:#e07;text-transform:uppercase;}
+
+#slider .rollovericon {background:url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png') repeat scroll -1px -519px transparent;color:#FFFFFF;font:italic bold 11px/26px Georgia;height:26px;padding:0;position:absolute;right:0;text-indent:10px;text-transform:lowercase;top:0;width:72px;}
+#slider .zoomtool{position:absolute;z-index:4;right:0;top:0;font:bold italic 12px/26px Georgia;text-transform:lowercase;
+    background: #c5136c;
+    background: -moz-linear-gradient(top, #c5136c 0%, #bf1369 16%, #ab105e 44%, #8c084a 76%, #79013d 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c5136c), color-stop(16%,#bf1369), color-stop(44%,#ab105e), color-stop(76%,#8c084a), color-stop(100%,#79013d));
+    background: -webkit-linear-gradient(top, #c5136c 0%,#bf1369 16%,#ab105e 44%,#8c084a 76%,#79013d 100%);
+    background: -o-linear-gradient(top, #c5136c 0%,#bf1369 16%,#ab105e 44%,#8c084a 76%,#79013d 100%);
+    background: -ms-linear-gradient(top, #c5136c 0%,#bf1369 16%,#ab105e 44%,#8c084a 76%,#79013d 100%);
+    background: linear-gradient(top, #c5136c 0%,#bf1369 16%,#ab105e 44%,#8c084a 76%,#79013d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c5136c', endColorstr='#79013d',GradientType=0);
+}
+#slider .zoomtool a{display:block;cursor:pointer;width:66px;height:26px;color:#fff;
+    background: #4c4c4c;
+    background: -moz-linear-gradient(top, #4c4c4c 0%, #444444 16%, #353535 36%, #141414 72%, #080808 88%, #020202 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(16%,#444444), color-stop(36%,#353535), color-stop(72%,#141414), color-stop(88%,#080808), color-stop(100%,#020202));
+    background: -webkit-linear-gradient(top, #4c4c4c 0%,#444444 16%,#353535 36%,#141414 72%,#080808 88%,#020202 100%);
+    background: -o-linear-gradient(top, #4c4c4c 0%,#444444 16%,#353535 36%,#141414 72%,#080808 88%,#020202 100%);
+    background: -ms-linear-gradient(top, #4c4c4c 0%,#444444 16%,#353535 36%,#141414 72%,#080808 88%,#020202 100%);
+    background: linear-gradient(top, #4c4c4c 0%,#444444 16%,#353535 36%,#141414 72%,#080808 88%,#020202 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c', endColorstr='#020202',GradientType=0);
+}
+#slider .zoomtool a:hover{text-decoration:none;background:none;filter:none;}
+#slider .zoomon a{background-position:-234px -210px;}
+#slider .zoomon a:hover{background-position:-234px -249px;}
+#slider .zoomimage{display:none;position:absolute;top:0;left:0;z-index:3;cursor:move;}
+#slider .tagicon{display:none;position:absolute;z-index:50000;width:22px;height:22px;text-align:left;text-indent:-9999px;overflow:hidden;cursor:pointer;background:url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png') 0 -560px no-repeat;}
+#slider .note-50,
+#slider .note-100{width:50px;height:auto;overflow:visible;}
+#slider .note-100{width:100px;}
+#slider .note-50 .title,
+#slider .note-100 .title{margin:0;padding:6px;font:10px Arial,sans-serif;color:#000;background:#feef9a;text-indent:0;overflow:hidden;cursor:auto;}
+#slider .note-190{height:auto;overflow:visible;background:none;}
+#slider .note-190 .title{margin:0;padding:6px;font:12px Arial,sans-serif;color:#ccc;background:#000;text-indent:0;overflow:hidden;cursor:auto;opacity:.65;}
+#slider .note-190 .title b{font:bold italic 16px/16px Georgia;}
+#slider .tagicon a {color:#067AB4; font-weight:bold;}
+#slider .tagicon .arrow{position:absolute;top:0;left:0;background:url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png') left -438px no-repeat;_background-image:url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png');}
+#slider .tagicon .left{width:6px;height:13px;top:8px;left:-6px;background-position:0 -438px;}
+#slider .tagicon .top{width:13px;height:6px;top:-6px;left:12px;background-position:-15px -440px;}
+#slider .tagicon .right{width:6px;height:13px;top:8px;left:auto;right:-6px;background-position:-39px -438px;}
+#slider .tagicon .bottom{width:13px;height:6px;top:auto;bottom:-6px;left:12px;background-position:-52px -441px;}
+#slider .imagewrapper .tagicon,
+#slider .imagewrapper .zoomtool a{display:block;}
+#slider .overlay .tagicon,
+#slider .overlay .zoomtool a{display:none;}
+#slider .tint{display:none;}
+#slider .imagewrapper .tint,
+#slider .overlay .tint{display:block;position:absolute;top:0;left:0;z-index:1;width:660px;height:1000px;background:#000;-moz-opacity:.50;filter:alpha(opacity=50);opacity:.50;}
+#slider .overlaytout{display:none;position:absolute;z-index:3000;top:30px;left:60px;padding:8px;_padding:0;width:524px;background:rgba(223,223,223,.25);}
+#slider .video{top:0;}
+#slider .overlaytout *{text-align:left;}
+#slider .overlaytout .wrapper{clear:both;float:left;width:524px;}
+#slider .video .wrapper{height:482px;}
+#slider .overlaytout a{color:#069;font-weight:normal;}
+#slider .overlaytout .toutSection{float:left;width:524px;overflow:visible;_overflow-x:hidden;background:#fff; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px;}
+#slider .overlaytout .header{margin:0;padding:10px 10px 5px 10px;color:#000;background:#fff;}
+#slider .overlaytout h3{display:inline;margin:0;padding:0 12px 0 0;font-size:16px;line-height:20px;letter-spacing:0;color:#000;text-transform:uppercase;background:url('http://img2.timeinc.net/people/static/i/spritearrow_8.png') right -3500px no-repeat;}
+#slider .overlaytout h3 a{color:#000;font-weight:bold;}
+#slider .overlaytout h3 span{width:auto;}
+#slider .overlaytout .links{display:block;border-bottom:1px solid #ccc;padding-bottom:5px;}
+#slider .overlaytout h4{margin:0 0 5px 0;color:#e07;font-size:10px;text-transform:uppercase;}
+#slider .overlaytout .imgcont{position:static;float:left;display:inline;width:504px;height:auto;padding:0 10px 10px 10px;background:#fff;}
+#slider .video .imgcont{padding:0;}
+#slider .overlaytout .imgcont a{float:left;}
+#slider .overlaytout img{margin:0;border:1px solid #fff;}
+#slider .overlaytout .txtcont{float:left;width:504px;padding:0 10px 10px 10px;background:#fff;}
+#slider .overlaytout .txtcont ul{padding-left:12px;}
+#slider .overlaytout .txtcont li{position:static;float:none;list-style:disc;width:auto;padding:0 0 2px;font-size:8px;color:#000;text-align:left;}
+#slider .overlaytout .txtcont li a{text-transform:none;font-size:12px;line-height:18px;}
+#slider .overlaytout .top{position:relative;width:504px;padding:8px 10px 5px;_overflow-x:hidden;line-height:20px;background:#b6e4f8;border-bottom:1px solid #a1d3e8;-moz-border-radius-topleft:5px;-webkit-border-top-left-radius:5px;border-top-left-radius:5px;-moz-border-radius-topright:5px;-webkit-border-top-right-radius:5px;border-top-right-radius:5px;}
+#slider .overlaytout .top p{width:524px;font:bold italic 14px/18px Georgia;color:#fff;text-transform:lowercase;}
+#slider .overlaytout .top p span{float:left;width:18px;height:18px;background:url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png') no-repeat scroll -86px -523px transparent;}
+#slider .overlaytout .top{border-bottom:1px solid #6890a0;
+    background:#8cb8c3;
+    background:-moz-linear-gradient(left, #8cb8c3 0%, #83aeba 19%, #597f91 74%, #4b7084 100%);
+    background:-webkit-gradient(linear, left top, right top, color-stop(0%,#8cb8c3), color-stop(19%,#83aeba), color-stop(74%,#597f91), color-stop(100%,#4b7084));
+    background:-webkit-linear-gradient(left, #8cb8c3 0%,#83aeba 19%,#597f91 74%,#4b7084 100%);
+    background:-o-linear-gradient(left, #8cb8c3 0%,#83aeba 19%,#597f91 74%,#4b7084 100%);
+    background:-ms-linear-gradient(left, #8cb8c3 0%,#83aeba 19%,#597f91 74%,#4b7084 100%);
+    background:linear-gradient(left, #8cb8c3 0%,#83aeba 19%,#597f91 74%,#4b7084 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8cb8c3', endColorstr='#4b7084',GradientType=1);
+}
+#slider .overlaytout .top ul{position:absolute;top:0;right:0;}
+#slider .overlaytout .top li{list-style:none;float:left;height:32px;padding:0 10px;}
+#slider .overlaytout .top li a{display:block;text-indent:-9999px;overflow:hidden;}
+#slider .overlaytout .top li.previous a,
+#slider .overlaytout .top li.next a,
+#slider .overlaytout .top li.close a{background:url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png');}
+#slider .overlaytout .top li.previous a,
+#slider .overlaytout .top li.next a{width:14px;height:32px;}
+#slider .overlaytout .top li.previous a{background-position:-33px -553px;}
+#slider .overlaytout .top li.next a{background-position:-57px -553px;}
+#slider .overlaytout .top li.close{border-left:1px solid #6890a0;}
+#slider .overlaytout .top li.close a{width:18px;height:32px;background-position:-81px -554px;}
+#slider .zoomedit p{font-size:12px;line-height:17px;font-weight:normal;color:#000;}
+#slider .zoomedit .top p span{background-position:-114px -523px;}
+#slider .zoomedit .more{background-position:right -96px;font-weight:bold;}
+#slider .zoomedit .more a{float:none;font-size:12px;text-transform:uppercase;}
+#slider .zoomedit .links{display:block;}
+#slider .zoomedit h4{color:#000;font-size:14px;font-weight:bold;border:0;}
+#slider .zoomedit .imgcont{float:left;width:auto;height:auto;margin:0 10px;padding:10px 0 0;}
+#slider .zoomedit .imgcont a{float:left;}
+#slider .zoomedit img{margin:0;border:1px solid #fff;}
+#slider .zoomedit .photographer{display:block;font-size:10px;}
+#slider .zoomedit .txtcont{float:none;width:auto;margin:0 10px 10px;padding:10px 0;}
+#slider .zoomedit .txtcont li{position:static;float:none;width:auto;padding:0 0 2px 10px;text-align:left;background:url('http://img2.timeinc.net/people/static/i/spritearrow_8.png') left -4692px no-repeat;}
+#slider .zoomedit .txtcont li a{text-transform:none;font-size:12px;line-height:18px;}
+#slider .zoomedit .imgonly .imgcont{width:514px;text-align:center;}
+#slider .zoomedit .imgonly .photographer{text-align:center;}
+#slider .zoomedit .imgonly .txtcont{display:none;}
+.interstitial{width:994px;}
+.interstitial #rightColumn .toutSection *,
+.interstitial #rightColumn .adRight{display:none;}
+.interstitial #rightColumn .toutSection{height:630px;}
+.interstitial #rightColumn .recirc{height:auto;}
+.interstitial #rightColumn .recirc *{display:block;}
+#rightColumn .interstitialcontainer{position:absolute;top:-10px;right:-11px;z-index:9999;width:994px;height:650px;background:#141414;}
+#rightColumn .iframewrapper{width:984px;height:570px;margin:0 5px;text-align:center;border-bottom:solid 1px #272727;}
+#rightColumn .iframewrapper .navigation{position:relative;clear:both;float:right;width:300px;height:30px;margin:10px 0 40px;}
+#rightColumn .iframewrapper .navigation ul{margin:0;float:right;text-align:left;}
+#rightColumn .iframewrapper .hideprevious{position:absolute;top:0;height:30px;margin:0;background:url('http://img2-1.timeinc.net/people/static/i/photos/sprite-gallery-people.png') -3px -40px no-repeat;}
+#rightColumn .iframewrapper .one{left:99px;width:51px;height:30px;}
+#rightColumn .iframewrapper .two{left:150px;width:50px;}
+#rightColumn .iframewrapper .previous .first{width:50px;}
+#rightColumn .iframewrapper .title{clear:both;float:left;_float:none;width:100%;height:30px;border-top:solid 1px #272727;color:#999;font-size:10px;line-height:30px;text-transform:uppercase;}
+#rightColumn .iframewrapper iframe{height:430px;}
+.superstitial{width:994px;height:860px;}
+.superstitial #leftColumns *,
+.superstitial #rightColumn *{display:none;}
+.superstitial #superstitial,
+.superstitial #superstitial *{display:block;}
+#superstitial{position:absolute;top:-10px;left:-683px;z-index:9999;width:994px;height:560px;background:#141414;}
+#superstitial .iframewrapper{width:994px;height:610px;}
+.quiz #headline.popquiz h1,
+.quiz #headline.peoplequiz h1{margin-left:90px;}
+.quiz #headline.popquiz h1 .logo,
+.quiz #headline.peoplequiz h1 .logo{width:90px;background:url('http://img2.timeinc.net/people/static/i/photos/sprite-quiz_8.png') 10px -112px no-repeat;}
+.quiz #headline.popquiz p,
+.quiz #headline.peoplequiz p{margin-left:90px;}
+.quiz #slide .navigation a{display:none;}
+.quiz #rightColumn .navigation{height:30px;background:url('http://img2.timeinc.net/people/static/i/photos/sprite-quiz_8.png') 0 1px no-repeat;}
+.quiz #rightColumn .navigation li{font:bold 11px/32px Arial,sans-serif;text-transform:uppercase;}
+.quiz #rightColumn .navigation li span{padding-left:34px;font-size:15px;}
+.quiz #rightColumn #right{color:#7b3;}
+.quiz #rightColumn #wrong{color:#f85;}
+.quiz #rightColumn .caption{height:auto;overflow:hidden;}
+.quiz #rightColumn h4{font:bold 13px/17px Arial,sans-serif;color:#ffee9a;text-transform:none;}
+.quiz #scrollbar ul{float:left;width:300px;padding-bottom:10px;}
+.quiz #scrollbar li{float:left;clear:left;padding:5px;width:290px;line-height:1.25;background:none;}
+.quiz #scrollbar #answers input{float:left;margin:4px 4px 0;background:0;border:0;cursor:pointer;}
+.quiz #scrollbar #answers label{float:left;padding:2px 0 0 5px;*padding-top:5px;width:250px;color:#ccc;line-height:1.25;cursor:pointer;}
+.quiz #scrollbar a{cursor:pointer;}
+.quiz .buttonwrapper{float:left;padding:0 0 20px 10px;background:#141414 url('http://img2.timeinc.net/people/static/i/photos/scrollbar-background_8.png') repeat-y 0 0;}
+.quiz #button{float:left;margin:4px 0 0;padding:0 0 0 2px;width:auto;background:url('http://img2.timeinc.net/people/static/i/photos/sprite-quiz_8.png') 0 -60px no-repeat;}
+.quiz #button span{float:left;padding:0 15px 2px 12px;line-height:22px;background:#141414 url('http://img2.timeinc.net/people/static/i/photos/sprite-quiz_8.png') right -60px no-repeat;cursor:pointer;}
+.quiz #button a{float:left;font:bold 12px Arial,sans-serif;color:#fff;text-transform:uppercase;}
+.quiz #result{padding:7px 10px 0;background:#141414 url('http://img2.timeinc.net/people/static/i/photos/scrollbar-background_8.png') repeat-y 0 0;}
+.quiz #rightColumn #result h4{padding:7px 0 5px;font-size:18px;color:#f85;text-transform:uppercase;}
+.quiz #rightColumn #result h4.correct{color:#7b3;}
+.quiz #scrollbar .correctanswer{padding-bottom:6px;font:bold 13px/1.5 Arial,sans-serif;}
+.quiz #scrollbar .correctanswer span{font:bold 11px/1 Arial,sans-serif;color:#ffee9a;text-transform:uppercase;}
+#finalresults{position:absolute;top:130px;left:60px;z-index:101;width:540px;height:auto;background:#fbf0b0;background:rgba(251,240,176,.9);border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
+#finalresultsscore{float:left;padding:10px;width:162px;border-right:2px solid #fff;}
+#finalresultsscore ul{float:left;border:2px solid #fff;background:#fff url('http://img2.timeinc.net/people/static/i/photos/quiz-finalresults-bg_8.png') 0 0 repeat-x;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
+#finalresultsscore li{padding:0 0 0 10px;width:150px;height:90px;font:bold 18px/125px Arial,sans-serif;#line-height:90px;text-transform:uppercase;text-align:left;}
+#finalresultsscore li span{font-size:70px;width:auto;line-height:90px;}
+#finalresultsscore #right{color:#7b3;border-bottom:1px solid #dfe3e5;}
+#finalresultsscore #wrong{color:#f85;}
+#finalresultscaption{float:right;clear:none;margin-left:-2px;padding:18px;width:320px;#width:318px;text-align:left;border-left:2px solid #fff;}
+#finalresultscaption h4{font:bold 18px/20px Arial,sans-serif;color:#333;text-transform:uppercase;}
+#finalresultscaption .deck{padding:4px 0 10px;font:13px/18px Arial,sans-serif;color:#000;}
+#finalresultscaption .deck a{color:#069;}
+#finalresultscaption .deck a:hover{text-decoration:underline;}
+#finalresultscaption .button{float:left;margin:4px 0 0;padding:0 0 0 2px;width:auto;background:url('http://img2.timeinc.net/people/static/i/photos/sprite-quiz_8.png') 0 -84px no-repeat;}
+#finalresultscaption .button span{padding:0 15px 2px 12px;width:auto;line-height:22px;background:#141414 url('http://img2.timeinc.net/people/static/i/photos/sprite-quiz_8.png') right -84px no-repeat;}
+#finalresultscaption .button a{float:left;font:bold 12px Arial,sans-serif;color:#fff;text-transform:uppercase;}
+
+#finalresultscaption .fbshare{float:left; width:auto; margin:4px 10px 0 0; padding:0 14px; background:#355c9a url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAYCAMAAADwB0wiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADBQTFRFa4a1Nl2aOF6bOl+cNVyaPGCcTWylQmSfSWmiRGagRmihQGOeS2ujT26lPmKdUW+mQK+KowAAADBJREFUeNqswbcBwCAAwDDTSwL8/y2LT0CC145YoopfdDHFEE18YosikogiiKwrwAA3ZwPBNxALdgAAAABJRU5ErkJggg==') repeat-x; -webkit-border-radius:4px; border-radius:4px;}
+#finalresultscaption .fbshare span{width:auto; padding:0 0 2px 20px; background:url('http://img2.timeinc.net/people/static/i/misc/share/icon_fb_14.png') 0 4px  no-repeat; line-height:22px;}
+#finalresultscaption .fbshare a{float:left;font:bold 12px arial,sans-serif;color:#fff;text-transform:uppercase;}
+
+#sendtophone{position:relative;left:6px;float:left;width:16px;height:16px;background:url('http://img2.timeinc.net/people/static/i/photos/sprite-send2phone-sw.png') -70px 0 no-repeat;_background-image:url('http://img2.timeinc.net/people/static/i/photos/sprite-send2phone-sw_8.png');}
+#sendtophone a{display:block;width:16px;height:16px;text-indent:-9999px;overflow:hidden;}
+#sendtophoneoverlay{position:absolute;top:-230px;left:-90px;width:200px;height:240px;background:url('http://img2.timeinc.net/people/static/i/photos/sprite-send2phone-sw.png') 0 -29px no-repeat;_background-image:url('http://img2.timeinc.net/people/static/i/photos/sprite-send2phone-sw_8.png');}
+#sendtophonethanks{display:none;padding:25px 20px 0;width:160px;height:auto;}
+#sendtophonethanks p{font:11px/14px Arial,sans-serif;color:#000;}
+#sendtophoneiframe{width:200px;height:200px;}
+#sendtophoneclose{height:20px;}
+#sendtophoneclose a{margin:6px 12px 0 0;float:right;width:20px;height:20px;text-indent:-9999px;overflow:hidden;border:0;background:url('http://img2.timeinc.net/people/static/i/photos/sprite-send2phone-sw.png') -180px 0 no-repeat;_background-image:url('http://img2.timeinc.net/people/static/i/photos/sprite-send2phone-sw_8.png');}
+
+#rightColumn.fullscreen .pageof {padding:0 6px;width:50px;height:26px;overflow:hidden;}
+#rightColumn.fullscreen .navigation ul {float:right;width:180px;}
+#rightColumn.fullscreen .navigation li {background:url('http://img2.timeinc.net/people/static/i/photos/sprite-gallery-people.gif') no-repeat -104px -42px;margin-top:1px;width:94px;height:28px;}
+#rightColumn.fullscreen .navigation li.off {background-position:-90px -1px;}
+#rightColumn.fullscreen .navigation li p {background-position:-120px -1px;}
+#rightColumn.fullscreen .navigation .previous a {background-position:-104px -1px;border-left:1px solid #AFAFAF;border-right:1px solid #8F8F8F;}
+#rightColumn.fullscreen .navigation li a {line-height:28px;padding:0 0 0 21px;width:77px;}
+#rightColumn.fullscreen .navigation .next {background-position:-214px -42px;width:82px;}
+#rightColumn.fullscreen .navigation .next a {background-position:-214px -1px;border-left:1px solid #AFAFAF;padding:0 0 0 18px;width:68px;}
+#fullscreeniframe{float:left;margin-top:1px;width:57px;height:28px;background:#000;border-right:1px solid #8F8F8F;overflow:hidden;}
+
+#main.js #relatedlinks div.shoplinks{padding-left:0;background:none;}
+#main.js #relatedlinks div.shoplinks p.headline{margin-top:10px;padding:0;}
+#main.js #relatedlinks div.shoplinks p.headline span{padding:1px 6px;background-color:#fffba4;font:bold 11px georgia,"times new roman",times,serif;color:#000;text-transform:uppercase;}
+#main.js #relatedlinks div.shoplinks li {font-weight:normal;}
+#main.js #relatedlinks div.shoplinks li a{display:inline;color:#6DCAF2;}
+#main.js #relatedlinks #stylefind{margin-top:10px;padding:3px 10px 5px 10px;background:#bffcff;border:2px solid #4df3ff;font:bold 11px arial,sans-serif;}
+#main.js #relatedlinks #stylefind span a{display:inline;color:#6DCAF2;}
+
+#main.js #relatedlinks div.storelinks{margin-left:-10px;padding:0;background:#fff;border:1px solid #fff;border-left:0;border-right:0;}
+#main.js #relatedlinks div.storelinks a{display:inline;color:#007CB4;}
+#main.js #relatedlinks div.storelinks p.headline{border-top:1px solid #e1e1e1;background:none;padding:10px 0 0 10px;}
+#main.js #relatedlinks div.storelinks p.headline a{font:bold 11px Arial;color:#ed1524;}
+#main.js #relatedlinks div.storelinks ul{border-bottom:1px solid #e1e1e1;padding:0 0 7px 0;}
+#main.js #relatedlinks div.storelinks li{background:none;}
+
+#main.js #relatedlinks div.buttons-container{width:290px;height:95px;padding:0 0 0 0;background-image:none;}
+.dark #main.js #relatedlinks div.buttons-container{height:80px;}
+#main.js #relatedlinks.gradient{margin-top:10px;
+    background-image: linear-gradient(bottom, rgb(245,245,245) 44%, rgb(245,245,245) 72%, rgb(224,224,224) 86%);
+    background-image: -o-linear-gradient(bottom, rgb(245,245,245) 44%, rgb(245,245,245) 72%, rgb(224,224,224) 86%);
+    background-image: -moz-linear-gradient(bottom, rgb(245,245,245) 44%, rgb(245,245,245) 72%, rgb(224,224,224) 86%);
+    background-image: -webkit-linear-gradient(bottom, rgb(245,245,245) 44%, rgb(245,245,245) 72%, rgb(224,224,224) 86%);
+    background-image: -ms-linear-gradient(bottom, rgb(245,245,245) 44%, rgb(245,245,245) 72%, rgb(224,224,224) 86%);
+}
+.dark #main.js #relatedlinks.gradient{margin-top:0px;background:url('http://img2.timeinc.net/people/static/i/photos/scrollbar-background_8.png') repeat-y 0 0;}
+#main.js #relatedlinks div.buttons-container p{font:bold 11px Arial, sans-serif;text-transform:uppercase;background-image:none;margin:15px 0 10px 20px;}
+.dark #main.js #relatedlinks div.buttons-container p{color:#FFEE9A;font:bold 11px Arial, sans-serif;text-transform:uppercase;background-image:none;margin:23px 0 10px 20px;padding-left:20px;}
+.buttons-container .vote{font:bold 26px Arial, sans-serif;width:61px;height:40px;padding:8px 0 0 53px;float:left;background:url(http://img2-1.timeinc.net/people/static/i/photos/sprite-last-night-btns-v2.png) no-repeat;text-decoration:none;cursor:default;}
+.dark .buttons-container .vote{font:bold 26px Arial, sans-serif;width:61px;height:40px;padding:8px 0 0 53px;float:left;background:url(http://img2-1.timeinc.net/people/static/i/photos/sprite-last-night-btns-dark.png) no-repeat;text-decoration:none;cursor:default;}
+.buttons-container .vote.active,
+.dark .buttons-container .vote.active{width:114px;height:50px;padding:0;font-size:0px;cursor:pointer;}
+.buttons-container .vote.active:hover,
+.dark .buttons-container .vote.active:hover{cursor:pointer;}
+.buttons-container .love-it.active{background-position:0px 0px;}
+.dark .buttons-container .love-it.active{background-position:0px 1px;}
+.buttons-container .leave-it.active{background-position:-136px 0px;}
+.dark .buttons-container .leave-it.active{background-position:-136px 1px;}
+.buttons-container .love-it.active:hover,
+.dark .buttons-container .love-it.active:hover{background-position:0px -53px;}
+.buttons-container .leave-it.active:hover,
+.dark .buttons-container .leave-it.active:hover{background-position:-136px -53px;}
+.buttons-container .love-it,
+.dark .buttons-container .love-it{color:#e07;background-position:0px -103px;margin-left:20px;}
+.buttons-container .leave-it,
+.dark .buttons-container .leave-it{color:#a203e1;background-position:-136px -103px;}
+.buttons-container .divider{width:2px;height:50px;padding:0 10px 0 7px;float:left;background:url(http://img2-1.timeinc.net/people/static/i/photos/sprite-last-night-btns-v2.png) no-repeat -115px 0px;}
+.dark .buttons-container .divider{background:url(http://img2-1.timeinc.net/people/static/i/photos/sprite-last-night-btns-dark.png) no-repeat -115px 2px;}
+.buttons-container form {display: none;}
+.buttons-container iframe {display: none;}
+
+/* Google Ads */
+#leftColumns .googlead {clear:both; width:644px; padding:8px; background:#343434; border:0;}
+#leftColumns .googlead p.adtext {margin:0; padding:0; font:bold 11px arial,sans-serif; color:#ccc;}
+#leftColumns .googlead p.adtext a {color:#ccc;}
+#leftColumns .googlead p.adentry {margin:0; padding:12px 0 0 0; font:normal 12px arial,sans-serif; color:#ccc;}
+#leftColumns .googlead p.adentry span a {color:#ccc; text-decoration:none;}
+#leftColumns .googlead p.adentry span a:hover {color:#ccc; text-decoration:underline;}
+#leftColumns .googlead p.adentry span {display:block;}
+#leftColumns .googlead p.adentry span.line1 {font:bold 13px arial,sans-serif;}
+#leftColumns .googlead p.adentry span.line1 a {color:#6dcaf2;}
+#leftColumns .googlead p.adentry span.line2 {padding-right:4px;}
+#leftColumns .googlead p.adentry span.line2, #leftColumns .googlead p.adentry span.line3 {display:inline;}
+
+#scrollbar .shopthislook{background:url('http://img2.timeinc.net/people/static/i/photos/sticker-getthelook2.png') no-repeat;display:block;width:86px;height:88px;text-indent:-9999px;position:absolute;top:35px;left:-100px;z-index:100;}
+#scrollbar .shopthislook a{display:block;width:86px;height:88px;}
+
+/* Red Carpet Channel overrides */
+.red-carpet-channel #headline,
+.red-carpet-channel #headline.popquiz,
+.red-carpet-channel #headline.peoplequiz{background-color:#272727;height:66px;}
+.red-carpet-channel #headline h1,
+.red-carpet-channel #headline.popquiz h1,
+.red-carpet-channel #headline.peoplequiz h1{width:137px;height:40px;padding:0;margin-left:0;border-bottom:none;}
+.red-carpet-channel #headline h1 a,
+.red-carpet-channel #headline.popquiz h1 a,
+.red-carpet-channel #headline.peoplequiz h1 a{background:none;}
+.red-carpet-channel #headline h1 .logo,
+.red-carpet-channel #headline.popquiz h1 .logo,
+.red-carpet-channel #headline.peoplequiz h1 .logo{position:relative;left:0px;top:5px;display:block;width:117px;height:39px;font-size:0px;overflow:hidden;padding:6px 10px;border-right:solid 1px #080607;background:url(http://img2-1.timeinc.net/people/static/i/photos/hdr-rc-spotlight.png) no-repeat 10px 6px;}
+.red-carpet-channel #headline p,
+.red-carpet-channel #headline.popquiz p,
+.red-carpet-channel #headline.peoplequiz p{width:650px;float:left;clear:none;margin-left:0;border-left:none;}
+.red-carpet-channel #headline span.category,
+.red-carpet-channel #headline.popquiz span.category,
+.red-carpet-channel #headline.peoplequiz span.category{color:#ccc;font:normal 18px Georgia, serif;padding-right:6px;text-transform:none;}
+.red-carpet-channel #headline span.main,
+.red-carpet-channel #headline.popquiz span.main,
+.red-carpet-channel #headline.peoplequiz span.main{display:none;}
+
+.red-carpet-channel #subnavigation{float:left;width:994px;text-align:center;height:30px;z-index:10;border-top:2px solid #e07;background:#2d2d2d !important;}
+.red-carpet-channel #subnavigation ul{float:none; list-style:none;padding:0;margin:0 0 0 302px;}
+.red-carpet-channel #subnavigation ul li{float:left;padding:0;border-right:1px solid #e07;}
+.red-carpet-channel #subnavigation #moreawards{}
+.red-carpet-channel #subnavigation ul li a, .red-carpet-channel #subnavigation ul li a:link{color:#fff; display:block;padding:8px 10px; font-weight:bold;}
+.red-carpet-channel #subnavigation ul li a:hover, #rc-main #redcarpetmain a, #rcgoldenglobes2012 #goldenglobeawards a, #rcsag2012 #sagawards a, #rcgrammys2012 #grammyawards a, #rcacademy2012 #academyawards a, #rcmore2012 #moreawards a, .rcgoldenglobes2012 #goldenglobeawards a, .rcsag2012 #sagawards a, .rcgrammys2012 #grammyawards a, .rcacademy2012 #academyawards a, .rcmore2012 #moreawards a{padding-top:4px;border-top:4px solid #e07;color:#e07;text-decoration:none;}
+.red-carpet-channel #subnavigation #freepreview{float:left;margin-top:5px;margin-left:6px;padding-left:7px;background:url('http://img2.timeinc.net/people/static/i/freepreview_8.png') left top no-repeat;}
+.red-carpet-channel #subnavigation #freepreview p{display:block; background:url('http://img2.timeinc.net/people/static/i/freepreview_8.png') right top no-repeat;padding-right:8px;padding-left:2px;}
+.red-carpet-channel #subnavigation #freepreview b{display:block; background:url('http://img2.timeinc.net/people/static/i/spritearrow_8.png') no-repeat right -93px;}
+.red-carpet-channel #subnavigation #freepreview a{display:inline-block; padding:0 7px 0 0; font:bold 11px/20px arial,sans-serif;color:#f39;}
+.red-carpet-channel #subnavigation #freepreview a:hover {border:0; text-decoration:underline;}
+
+/* overrides
+.sharelinkcont .plus1, .sharelinkcont #like, .sharelinkcont .pinterest{display:none;}
+ */
+
+.imgRevealLeft{position:absolute;top:0;left:0;z-index:50;overflow:hidden;border-right:1pxsolid#fff;display:none;}
+.imgRevealRight{overflow:hidden;}
+.imgRevealSlider{background:url('http://img2.timeinc.net/people/static/i/photos/slider.png') no-repeat;height:50px;width:50px;z-index:51;top:50%;margin-top:-25px;position:absolute;display:none;}
+.imgReveal{position:relative;margin-top:0;padding:0;}
+.imgRevealTip{position:absolute;z-index:52;color:#fff;font-weight:bold;width:100px;height:21px;line-height:21px;background:url('http://img2.timeinc.net/people/static/i/photos/hint.png') no-repeat;text-align:center;left:50px;top:12px;font-size:12px;}
+
+/* ------------------------------ Stylefeeder New Styles -------------------------------- */
+#shoplegaltext {/*display:none;*/ clear:both; margin:0; padding:4px 0; font:normal 10px arial,sans-serif; color:#666;}
+
+#slide .navigation li,
+#slide .swipe-navigation li {z-index:9100;}
+#slide #slider.sf {z-index:9000;}
+
+#slider.sf {height:600px !important;}
+#slider.sfsingle {}
+
+/* Photo Column Specific Styles */
+#slider.sf li.img290 {width:580px; height:580px; margin-left:40px; padding:7px; background:#fff; border:3px solid #bfecff;}
+#slider.sf li.img435 {width:640px; height:580px; padding:7px; background:#fff; border:3px solid #bfecff;}
+
+#slider.sf li.img290 .shopcolumn {float:left; background:#fff; width:283px; height:580px; padding-right:7px;}
+#slider.sf li.img435 .shopcolumn {float:left; background:#fff; width:198px; height:580px; padding-right:7px;}
+
+/* Set Carousel widths */
+#slider.sf li.img290 .jcarousel-clip-horizontal {width:283px;}
+#slider.sf li.img435 .jcarousel-clip-horizontal {width:198px;}
+
+/* General Styles */
+#slider.sf .shopcolumn .psw_header {height:40px; background:#000;}
+#slider.sf .shopcolumn .psw_header h4 {height:40px; background-position:center center !important; color:#fff; text-indent:-99999px;}
+
+#slider.sf .shopcolumn .largeout {height:266px;}
+#slider.sf .shopcolumn .smallout {height:131px;}
+
+/* For Carousel, add 4px to the above numbers, (comes from bottom padding & border-bottom below) to the height because the code is rendering the heights differently */
+#slider.sf ul.largeout li.jcarousel-item {height:270px;}
+#slider.sf ul.smallout li.jcarousel-item {height:135px;}
+
+#slider.sf .shopcolumn .psw_product {clear:both; position:relative; padding-bottom:3px; border-top:1px solid #ccc;}
+#slider.sf .shopcolumn ul.largeout li.jcarousel-item .psw_product {height:262px !important;}
+#slider.sf .shopcolumn ul.smallout li.jcarousel-item .psw_product {height:127px !important;}
+
+/* Product Image Container */
+#slider.sf .shopcolumn p {margin:0; padding:0;}
+#slider.sf li.img290 .shopcolumn .smallout p {float:left; width:110px; padding:5px 8px 0 0;}
+#slider.sf li.img290 .shopcolumn .smallout p img.product_image {}
+#slider.sf li.img435 .shopcolumn .smallout p {float:left; width:90px; padding:8px 8px 0 0;}
+#slider.sf li.img435 .shopcolumn .smallout p img.product_image {width:90px; height:90px;}
+#slider.sf .shopcolumn .largeout p {padding:2px 0;}
+#slider.sf .shopcolumn .largeout p img.product_image {width:190px; height:190px;}
+
+/* Shop Details */
+#slider.sf li.img290 .shopcolumn .largeout .psw_detail {width:283px;}
+#slider.sf li.img290 .shopcolumn .smallout .psw_detail {float:left; width:165px; padding-top:14px;}
+#slider.sf li.img290 span {width:290px;}
+#slider.sf li.img290 .largeout .psw_detail span {width:283px;}
+#slider.sf li.img290 .smallout .psw_detail span {width:165px;}
+#slider.sf li.img435 .shopcolumn .largeout .psw_detail {width:198px;}
+#slider.sf li.img435 .shopcolumn .smallout .psw_detail {float:right; width:100px; padding-top:8px;}
+#slider.sf li.img435 span {width:435px;}
+#slider.sf li.img435 .largeout .psw_detail span {width:198px;}
+#slider.sf li.img435 .smallout .psw_detail span {width:100px;}
+
+#slider.sf .shopcolumn .psw_detail span {display:block; text-align:center;}
+#slider.sf .shopcolumn .psw_detail a {text-decoration:none;}
+#slider.sf .shopcolumn .psw_brand {font:normal 10px georgia,"times new roman",times,serif; text-transform:uppercase; color:#000;}
+#slider.sf .shopcolumn .psw_vendor {font:normal 11px arial,sans-serif; color:#067AB4;}
+#slider.sf .shopcolumn .psw_vendor a {color:#067AB4;}
+#slider.sf .shopcolumn .psw_price {padding-bottom:4px; font:normal 16px georgia,"times new roman",times,serif; color:#000;}
+#slider.sf .shopcolumn .psw_price s {color:#b2b2b2; text-decoration:line-through;}
+#slider.sf .shopcolumn .psw_detail span.psw_buy {
+	display:inline; float:none; padding-right:7px; background:url("http://img2.timeinc.net/people/static/i/spritearrow_8.png") no-repeat scroll right -96px transparent;
+	font:bold 10px georgia,"times new roman",times,serif; color:#e07; text-transform:uppercase; white-space:nowrap;
+}
+
+#slider.sf .shopcolumn .largeout.soldout .desc {padding-top:0;}
+#slider.sf .shopcolumn .soldout .psw_detail, #slider.sf .shopcolumn .soldout .psw_detail span {color:#737373;}
+#slider.sf .shopcolumn .soldout .psw_detail .status {margin:0 auto 3px auto; color:#9cc; text-align:left; text-transform: uppercase;}
+#slider.sf .shopcolumn .largeout.soldout .status {width:90px; height:19px; padding:4px 0 0 20px; background:url("http://img2.timeinc.net/people/static/i/stylewatch/stylefind/bg_tag_lg.png") no-repeat scroll 0 0 transparent; font:bold 12px arial,sans-serif;}
+#slider.sf .shopcolumn .smallout.soldout .status {width:67px; height:16px; padding:4px 0 0 8px; background:url("http://img2.timeinc.net/people/static/i/stylewatch/stylefind/bg_tag_sm.png") no-repeat scroll 0 0 transparent; font: bold 10px arial,sans-serif;}
+
+#slider.sf li.img290 .largeout.soldout .status {margin-left:86px;}
+#slider.sf li.img290 .smallout.soldout .status {margin-left:45px;}
+
+#slider.sf li.img435 .largeout.soldout .status {margin-left:44px;}
+#slider.sf li.img435 .smallout.soldout .status {margin-left:12px;}
+
+/* Carousel buttons */
+#slider.sf .shopcolumn a.psw_carousel_prev {display:block; left:auto !important; right:21px !important; bottom:3px !important; width:20px; height:20px; overflow:hidden; background:url('http://img2.timeinc.net/people/static/i/stylewatch/stylefind/bg_prevnext2.png') 0 0 no-repeat; text-indent:-999999px;}
+#slider.sf .shopcolumn a.psw_carousel_next {right:0 !important; display:block; width:21px; height:20px; bottom:3px !important; overflow:hidden; background:url('http://img2.timeinc.net/people/static/i/stylewatch/stylefind/bg_prevnext2.png') -20px 0 no-repeat; text-indent:-999999px;}
+
+/* Using default Pinterest code */
+#slider.sf .shopcolumn .largeout .psw_pin,
+#slider.sf .shopcolumn .smallout .psw_pin {display:block; width:43px; height:20px; position:absolute; left:0; bottom:3px; text-align:left;}
+
+/* Single Product Shop Flag */
+#slide p.fineprint {display:block; clear:both; margin:0 0 -6px 0; padding:8px 0 0 10px; font:normal 10px arial,sans-serif; color:#666;}
+
+/* Overwrites shopcolumn styles for normal shopping slides */
+#slider.sfsingle li.img435, #slider.sfsingle li.img290 {border:0; padding:0; width:660px; background:transparent;}
+
+#slider.sfsingle .image {width:670px !important; margin-left:0 !important;}
+#slider.sfsingle span {width:auto !important;} /* set <span> container of image to be auto instead of fixed 660px */
+
+#slider #shopflag {float:left; display:block; width:176px; height:87px; /*margin-left:-10px;*/ background:url('http://img2.timeinc.net/people/static/i/stylewatch/stylefind/bg_shopflag.png');}
+
+#slider li.img290 #shopflag {margin-left:94px;}
+#slider li.img435 #shopflag {margin-left:24px;}
+#slider li.img495 #shopflag {margin-left:-10px;}
+
+#slider #shopflag p {width:166px; margin:0; padding:0;}
+#slider #shopflag p.flag_price {display:block; padding-top:13px; font:normal 16px georgia,"times new roman",times, serif; color:#000; text-align:center;}
+#slider #shopflag p.flag_price s {color:#b2b2b2; text-decoration:line-through;}
+
+#slider #shopflag p.flag_buy {display:block; margin-top:10px;}
+#slider #shopflag p.flag_buy a {
+	display:block; width:110px; height:18px; margin:0 auto; padding-top:4px;
+	background:url('http://img2.timeinc.net/people/static/i/stylewatch/stylefind/bg_btn_buyit.gif') repeat-x;
+	font:bold 11px georgia,"times new roman",times, serif; text-align:center; text-transform:uppercase; color:#fff;
+	-webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;
+	-webkit-box-shadow:1px 1px 1px 0px #aaa; -moz-box-shadow:1px 1px 1px 0px #aaa; box-shadow:1px 1px 1px 0px #aaa;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='#aaaaaa', Direction=135, Strength=2);
+}
+#slider #shopflag p.flag_buy a:hover {text-decoration:none;}
+
+/* Sold Out */
+#slider #shopflag.soldout p.flag_price {color:#737373;}
+#slider #shopflag.soldout p.flag_buy {
+	width:110px; height:20px; margin:10px auto 0 auto; padding-top:3px;
+	background:url('http://img2.timeinc.net/people/static/i/stylewatch/stylefind/bg_tag_lg.png') no-repeat;
+	font:bold 12px arial,sans-serif; color:#9cc; text-transform:uppercase;
+}
+
+/* Buy It Now link in the right rail, beneath slide description */
+#sf_buyitnow {margin-left:-10px; padding:7px 10px 5px 10px !important; font:normal 12px/18px arial,sans-serif;}
+#sf_buyitnow s {color:#b2b2b2; text-decoration:line-through;}
+body.dark #sf_buyitnow {background:url("http://img2.timeinc.net/people/static/i/photos/scrollbar-background_8.png") repeat-y !important; color:#ccc;}
+body.dark #sf_buyitnow a {color:#ccc !important;}
+body.dark #sf_buyitnow a span {color:#6DCAF2;}
+body.dark #sf_buyitnow a s {color:#b2b2b2; text-decoration:line-through;}
+body.light #sf_buyitnow {background:url("http://img2.timeinc.net/people/static/i/photos/scrollbar-background-sw_8.png") repeat-y !important; color:#000;}
+body.light #sf_buyitnow a {color:#000 !important;}
+body.light #sf_buyitnow a span {color:#007CB4;}
+body.light #sf_buyitnow a s {color:#b2b2b2; text-decoration:line-through;}
+
+/* Removed from SW/gallery.css and put here */
+#relatedlinks div.shoplinks{padding-left:0;background:none;}
+#relatedlinks div.shoplinks p.headline{margin-top:10px;padding:0;}
+
+body.light #relatedlinks div.shoplinks li a{display:inline;color:#007cb4;}
+body.dark #relatedlinks div.shoplinks li a {display:inline;color:#6DCAF2;}
+
+#relatedlinks div.shoplinks p.headline span,
+#relatedlinks .psw_product strong{padding:1px 6px;background-color:#fffba4;font:bold 11px/14px georgia,"times new roman",times,serif;color:#000;text-transform:uppercase;}
+#relatedlinks .psw_product a{position:relative;padding-top:18px;}
+#relatedlinks .psw_product strong{display:block;float:left;clear:right; /*position:absolute;top:0;*/}
+
+/* https://bugs.timeinc.net/show_bug.cgi?id=34471 */
+#main.js #relatedlinks #stylefind{margin-top:10px;padding:3px 10px 5px 10px;background:#bffcff;border:2px solid #4df3ff;font:bold 11px arial,sans-serif;}
+#main.js #relatedlinks #stylefind span a{display:inline;color:#007cb4;}
+
+/* ---------------------------------------------------- tablet -------------------------------------------------- */
+.swipe #slide .tout { height:580px; }
+.swipe #slide #slider { /*position:absolute !important; top:0; left:0; -webkit-backface-visibility: hidden;*/ }
+.swipe #slide #slider .image { position:relative !important; display:list-item !important; }
+
+body #container #wrapper a.premium-link {color:#6e7cff;}
+body.dark #container #wrapper a.premium-link:after {background-position:-155px -122px;}

@@ -1,0 +1,365 @@
+var DL_HideSelects = true;
+var DL_HideObjects = false;
+var DL_HideIframes = false;
+var DL_Banner; // Will be bound to the DIV element representing the layer
+var DL_ScrollState = 0;
+var DL_width;
+var DL_height;
+var DL_dimension;
+var DL_insert;
+var DL_ImgWidth = 350;
+var DL_ImgHeight = 550;
+var DL_StartCoordPixels = 30;
+var DL_SurveyClickthru = 0;
+
+var DL = DL || {};
+
+DL.subdomain = 'amch';
+DL.survey_num = '1050929';
+DL.site_num = '272';
+DL.aicode = '';
+
+var DL_FriendlyIframe = null;
+
+
+
+// Get the window dimensions
+function DL_GetWH() { //
+    
+	// Inspired by jQuery
+	// Everyone else use document.documentElement or document.body depending on Quirks vs Standards mode
+	// 3rd condition allows Nokia support, as it supports the docElem prop but not CSS1Compat
+	var wd = window.document,
+		de = wd.documentElement,
+		cm = wd.compatMode === "CSS1Compat",
+		ch = 'clientHeight',
+		cw = 'clientWidth';
+	DL_height = cm && de[ch] || wd.body[ch] || de[ch];
+	DL_width = cm && de[cw] || wd.body[cw] || de[cw];
+		
+	// Default to 640x480 if the above information is missing or not well-formed
+    if (parseInt(DL_width) == 0 || parseInt(DL_height) == 0) {
+        DL_width = 640;
+        DL_height = 480;
+    }
+    DL_dimension = DL_width;
+}
+
+DL_GetWH();
+
+// Make sure the layer is where it should be vertically.
+// This is repeated every 30 milliseconds with setTimeout.
+function DL_reposition(){
+	var scrollpos;
+	var edge = 0;
+  
+	if (self.innerHeight) {	// all except Explorer
+		// somehow self.pageYOffset is zero at times which messes up for us :(
+		scrollx = self.pageYOffset;
+		scrolly = self.pageXOffset;
+		edge    = self.innerHeight; 
+	} else if (document.documentElement && document.documentElement.clientHeight > 0) {	// IE 6 in strict mode
+		scrollx = document.documentElement.scrollTop;
+		scrolly = document.documentElement.scrollLeft;
+		edge = document.documentElement.clientHeight;
+	} else if (document.getElementsByTagName("body").length > 0) {
+		var b = document.getElementsByTagName("body")[0];
+		scrollx = b.scrollTop;
+		scrolly = b.scrollLeft;
+		edge = b.clientHeight;
+	}
+	if (document.getElementById) {
+		// Set coordinates style positions
+		DL_Banner.style.top = (parseInt(scrollx) + edge-(DL_ImgHeight + DL_StartCoordPixels))+'px';
+		DL_Banner.style.left = (parseInt(scrolly) + DL_Banner.absolute)+'px';
+  }
+}
+
+function DL_DoHideSelects() {
+	var selects = document.getElementsByTagName('select');
+	for(i = 0; i < selects.length; i++) {
+		selects[i].style.visibility = 'hidden';
+	}
+}
+
+function DL_DoHideIframes() {
+	var objects = document.getElementsByTagName('iframe');
+	for(i = 0; i < objects.length; i++) {
+		objects[i].style.visibility = 'hidden';
+	}
+}
+
+function DL_DoHideObjects() {
+	var objects = document.getElementsByTagName('object');
+	for(i = 0; i < objects.length; i++) {
+		if (objects[i].id != 'DL_object') {
+			objects[i].style.visibility = 'hidden';
+		}
+	}
+	objects = document.getElementsByTagName('embed');
+	for(i = 0; i < objects.length; i++) {
+		if (objects[i].id != 'DL_embed') {
+			objects[i].style.visibility = 'hidden';
+		}
+	}
+}
+
+function DL_DoShowSelects() {
+	// The reverse of DL_DoHideSelects
+	selects = document.getElementsByTagName('select');
+	for(i = 0; i < selects.length; i++) {
+		selects[i].style.visibility = 'visible';
+	}
+}
+
+function DL_DoShowIframes() {
+	var objects = document.getElementsByTagName('iframe');
+	for(i = 0; i < objects.length; i++) {
+		objects[i].style.visibility = 'visible';
+	}
+}
+
+function DL_DoShowObjects() {
+	// The reverse of DL_DoHideObjects
+	objects = document.getElementsByTagName('object');
+	for(i = 0; i < objects.length; i++) {
+		objects[i].style.visibility = 'visible';
+	}
+	objects = document.getElementsByTagName('embed');
+	for(i = 0; i < objects.length; i++) {
+		objects[i].style.visibility = 'visible';
+	}
+}
+
+var DL_PauseStart = 0;
+function DL_Scroll() {
+	// Moves the layer
+	// The global DL_ScrollState governs where the layer is in its trajectory.  
+	// States:
+	// 0 - Layer has not yet appeared.
+	// 1 - Layer is moving to target location.
+	// 2 - Layer disappears.
+	// 3 - Only for gutter layer, layer is moving to stop at the edge of the screen (in the gutter).
+	// 4 - Layer is pausing at target location.
+	// 5 - Only for gutter layer, layer never disapperas and hovers forever in gutter.
+	// 6 - Flash object is pausing so start it playing.
+	// -1 - Invite is finished and layer should not appear again.
+  
+	DL_GetWH();
+	switch (DL_ScrollState) {
+	case 0:  // Layer has not yet appeared
+		// Change the state.  If we have a gutter, and the invitation
+		// image fits in it, switch to state 3.  Otherwise, state 1.
+		DL_ScrollState = 1;
+			// Further preparation: set the image to its starting position
+		// and, if desired, hide any <select> components in the page.
+		DL_Banner.absolute = -DL_ImgWidth;
+	
+		DL_reposition();
+		
+		if(DL_HideSelects) {
+			DL_DoHideSelects();
+		}
+		if(DL_HideIframes) {
+			DL_DoHideIframes();
+		}
+		if(DL_HideObjects) {
+			DL_DoHideObjects();
+		}
+		
+		DL_Banner.style.visibility = 'visible';
+		
+		setTimeout(DL_Scroll, (DL_ScrollState == 6) ? 500: 50);
+		break;	// End case 0
+
+	case 1: // Layer is moving to target location.
+	    DL_GetWH();
+	    DL_reposition();
+	    var x = DL_Banner.absolute;
+		if (x<(DL_dimension-DL_ImgWidth)/2) {
+			x = x +5 ;
+			if (!(x<(DL_dimension-DL_ImgWidth)/2)){
+				x = (DL_dimension-DL_ImgWidth)/2;
+			}
+			DL_Banner.absolute = x;
+			setTimeout(DL_Scroll,15);
+		} else {
+			DL_ScrollState = 4; // end movement
+
+			DL_PauseStart = new Date();
+			setTimeout(DL_Scroll, 50);
+		}
+		
+		break;
+	case 2: // Layer disappears
+//		DL_Banner.style.left = (-DL_ImgWidth) + 'px';
+//		DL_Banner.style.top = (-DL_ImgHeight) + 'px';
+//		DL_Banner.style.visibility = 'hidden';
+		DL_Banner.style.display = 'none';
+		
+  
+
+		if(DL_HideSelects) {
+			DL_DoShowSelects();
+		}
+		if(DL_HideIframes) {
+			DL_DoShowIframes();
+		}
+		if(DL_HideObjects) {
+			DL_DoShowObjects();
+		}
+		
+		if (0 == DL_SurveyClickthru) {	// don't hide cover if the "do not show ad after survey click" is set.
+			try {
+				DL_IframeCover.style.visibility = 'hidden';
+				DL_Adscout(true);
+			} catch(e) {}
+		}
+		DL_ScrollState = -1;
+
+		break;
+	case 3: // Only for gutter layer, layer is moving to stop at the edge of the screen (in the gutter).
+		DL_GetWH();
+		var x = DL_Banner.absolute;
+		// If it's not at the right edge yet, shift right
+		if (x < DL_width - DL_ImgWidth - 4) {
+			x = x + 5;
+			DL_reposition();
+			DL_Banner.absolute = x;
+			setTimeout(DL_Scroll,15);
+		} else {
+			// Otherwise, finish up:
+			// Restore the <select>s
+			if(DL_HideSelects) {
+				DL_DoShowSelects();
+			}
+			if(DL_HideIframes) {
+				DL_DoShowIframes();
+			}
+			if(DL_HideObjects) {
+				DL_DoShowObjects();
+			}
+			DL_ScrollState = 5; // Hover at edge
+			DL_PauseStart = new Date();
+			setTimeout(DL_Scroll, 50);
+		}
+		
+		break;
+	case 4: // Layer is pausing at target location
+		// The window might have been resized.  We must reposition the layer.
+		if (new Date() - DL_PauseStart < 15000) {
+			DL_GetWH();
+			DL_Banner.absolute = (DL_dimension-DL_ImgWidth)/2;
+			DL_reposition();
+			setTimeout(DL_Scroll, 50);
+		} else {
+			DL_ScrollState = 2;
+			DL_Scroll();
+		}
+		
+		break;
+	case 5: //Layer never disapperas and hovers forever.
+		DL_reposition();
+		DL_Banner.style.left = (DL_width - DL_ImgWidth - 4)+'px';
+		setTimeout(DL_Scroll, 50);
+		
+		break;
+	case 6: // Flash object is pausing so start it playing
+		var obj = window.document['DL_object'];
+		try {
+			if (DL_loop < 4 && obj) {
+				obj.Play();
+			}
+		} catch (err) {
+			DL_loop++;
+			setTimeout(DL_Scroll,100);
+			return;
+		}
+		DL_ScrollState = 4;
+		setTimeout(DL_Scroll,50);
+		
+		break;
+	}
+}
+
+function DL_GotoSurvey() {
+	if (0) {
+    	DL_SurveyClickthru = 1;
+    }
+	DL_Close(false);
+
+window.top.location.href='http://amch.questionmarket.com/surveyf/?survey_server=survey.questionmarket.com&survey_num=1050929&from_node=25954&site=272&frame=&lang=&dl_logo=&invite=no&link='+escape(window.location.href)+'&orig='+escape(window.location.href);
+}
+
+function DL_Close(adscout) {
+	if (typeof adscout == 'undefined' || adscout == true) {
+		DL_Adscout(adscout);
+	} 
+	// Set a flag so animation loop will stop running
+	DL_ScrollState = 2;
+	DL_Scroll();
+}
+
+function DL_Adscout(adscout) {
+	(new Image).src="//amch.questionmarket.com/adscgen/adscout_dc.php?site=272&code=&survey_num=1050929&ord="+Math.floor((new Date()).getTime());
+}
+
+function DL_Add(){
+	DL_InsertGif();
+}
+
+function DL_FlashInstalled() {
+	// Detect swf plugin.
+
+	var result = false;
+	if (navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"]) {
+		result = navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin;
+	} else if (document.all && (navigator.appVersion.indexOf("Mac")==-1)) {
+		// IE Windows only -- check for ActiveX control, have to hide code in eval from Netscape (doesn't like try)
+		eval ('try {var xObj = new ActiveXObject("ShockwaveFlash.ShockwaveFlash");if (xObj)	result = true; xObj = null;	} catch (e)	{}');
+	}
+	return result;
+}
+
+function DL_InsertGif(imgname) {  
+	// Variation 1: The invitation is an image.
+	if (!imgname) {
+		imgname = 'http://amch.questionmarket.com/static/bounce_li-350x550-ul-eng-nul-C259,209,343,232.gif';
+	}
+
+	// Inside the DIV tag: the image.  Outside: the imagemap.
+	DL_InsertObject('', '<map name="closeortake"><area coords="259,209,343,232" href="#" onClick="DL_Close();return false;" role="button" aria-label="Click here to close survey invite"><area coords="0,0,350,550" href="#" onClick="DL_GotoSurvey();return false;" role="button" aria-label="Click here to take a survey related to this site"></map><img src="'+imgname+'" usemap="#closeortake" border="0" onload="DL_Scroll();" >');
+}
+
+
+function DL_InsertSwf() {
+	if (DL_FlashInstalled()) {	// Make sure the browser can handle Flash.
+		// Inside the DIV tag: the object.  Outside: nothing; Flash handles its own click events.
+		DL_InsertObject('', '<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=3,0,0,0" WIDTH="'+DL_ImgWidth+'" HEIGHT="'+DL_ImgHeight+'" id="DL_object"><PARAM NAME=movie VALUE="http://amch.questionmarket.com/static/bounce_li-350x550-ul-eng-nul-C259,209,343,232.gif?clickTag=JAVASCRIPT:DL_GotoSurvey();&clickTag2=JAVASCRIPT:DL_Close();"> <PARAM NAME=loop VALUE=false> <PARAM NAME=quality VALUE=high> <PARAM NAME=scale VALUE=exactfit> <PARAM NAME=bgcolor VALUE=#CCCCCC><PARAM NAME=wmode VALUE="transparent"><PARAM NAME="allowScriptAccess" VALUE="always"><EMBED name="DL_object" src="http://amch.questionmarket.com/static/bounce_li-350x550-ul-eng-nul-C259,209,343,232.gif?clickTag=JAVASCRIPT:DL_GotoSurvey();&clickTag2=JAVASCRIPT:DL_Close();" loop=false quality=high scale=exactfit bgcolor=#CCCCCC swLiveConnect=TRUE WIDTH="'+DL_ImgWidth+'" HEIGHT="'+DL_ImgHeight+'" TYPE="application/x-shockwave-flash" PLUGINSPAGE="//www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" wmode="transparent" allowScriptAccess="always"></EMBED></OBJECT>');
+		setTimeout(DL_Scroll, 500)
+	} else {
+		// If Flash is unavailable, use a gif.
+		DL_ImgWidth = 350;
+		DL_ImgHeight = 550;
+		DL_InsertGif('');
+	}
+}
+
+function DL_InsertObject(nonDivText, divText) {
+  // Create a new element using DOM.
+	DL_insert = document.createElement('span');
+	DL_insert.style.position = "static";
+	// Add 'insert' and its DIV to the document body
+	DL_insert.innerHTML = nonDivText + '<div style="position:absolute;top:-'+DL_ImgHeight+'px;left:-'+DL_ImgWidth+'px;width:'+DL_ImgWidth+'px;z-index:10000000" id="dhtmlbanner">' + divText + '</div>';
+	document.getElementsByTagName("body")[0].appendChild(DL_insert);
+
+	// Bind the DIV to the global variable DL_Banner, so other functions can use it
+	DL_Banner = document.getElementById('dhtmlbanner');
+}
+
+
+
+if (!window.DL_already_ran  ) {
+	DL_already_ran = 1;
+	setTimeout(DL_Add, 300);
+}

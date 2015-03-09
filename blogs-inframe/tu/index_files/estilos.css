@@ -1,0 +1,1875 @@
+@charset UTF-8; /* v5.4.1 */
+body{
+
+background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/PatternTuSep.jpg);
+background-repeat:repeat;
+
+
+font-size:12px;font-family:Arial, Helvetica, sans-serif;margin:0;position: relative;}
+img{border:none}
+.clear{clear:both;height:0}
+.main_container{width:980px;background-color:#FFF;height:auto;margin-left:auto;margin-right:auto}
+.header{width:980px;height:212px;
+background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_header2.gif); background-position: center bottom;background-repeat: no-repeat;
+/*background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_header2.jpg);*/
+
+}
+.header2{width:980px;height:197px;
+background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_header_app.gif); background-position: center bottom;background-repeat: no-repeat;
+/*background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_header2.jpg);*/
+
+}
+.sbanner_2{background-color: #006AB5;height: 90px;margin: auto;text-align: center; padding:10px;}
+.logo{width:199px;height:191px;float:left;margin-top:13px;margin-left:13px}
+.logo2{width:166px;height:160px;float:left;margin-top:4px;margin-left:13px}
+.sbanner{width:728px;height:90px;float:right;margin-top:20px;z-index:999; margin-right:13px;}
+.secondary_container{width:728px;height:87px;float:right;margin-right:13px;margin-top:14px}
+.rs{width:100px;margin-top:62px;float:left;z-index:10;}
+.rs ul{list-style:none;margin:0;padding:0}
+.rs li{float:left;margin-right:5px}
+.search{width:250px;height:26px;margin-left:10px;float:left;margin-top:58px;vertical-align:middle}
+.btn_ir{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/g_arrow.gif);background-repeat:no-repeat;width:8px;height:8px;cursor:pointer;border:0}
+.search_field{margin-top:0;color:#E60079;font-weight:700}
+.registro_cont{width:344px;margin-left:10px;float:right;height:66px;margin-top:18px;z-index:10;}
+.img_reg{width:156px;height:48px;float:left}
+.reg{color:#3A1B7D;font-size:9px;font-weight:700;line-height:21px;float:left;width:80px}
+.campos{width:100px;float:right}
+.campos_registro{width:92px;height:10px;margin-bottom:6px}
+.reg2{float:right;color:#3A1B7D;font-size:9px;font-weight:700;width:173px}
+.reg2 a{text-decoration:underline;color:#3A1B7D;font-weight:400}
+.btn_entrar{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bt_entrar.gif);cursor:pointer;height:18px;width:27px;margin-left:15px;border:0;color:#FFF;font-size:11px}
+.reg3{margin-top:26px;float:right;color:#3A1B7D;font-size:11px;font-weight:700;width:173px}
+.reg3 p{color:#3A1B7D;font-size:11px;font-weight:700;margin:0 0 4px}
+.reg3 a{text-decoration:underline;color:#3A1B7D;font-weight:400;font-style:italic;font-size:10px}
+.menu{height:42px;max-height:37px;background-color:#B0D32F;font-family:Arial Black, Arial, Gadget, sans-serif;color:#FFF;padding-left:3px;padding-top:5px;z-index:10;}
+.menu li a{display:block;color:#FFF;text-shadow:#000 .1em .1em .2em;text-decoration:none;font-size:12px;letter-spacing:1px;border-color:#FFF;border-style:dotted none dotted dotted;border-width:2px;padding:5px 21px 5px 15px}
+.ue_menu{display:block;color:#FFF;text-shadow:#000 .1em .1em .2em;text-decoration:none;float:left;font-size:12px;letter-spacing:1px;border-right-width:2px;border-right-style:dotted;border-right-color:#FFF}
+.menu li a:hover{text-shadow:none;color:#E60079}
+.diag{height:10px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/diag.gif);background-repeat:repeat-x}
+.column_wrap{background-color:#FFF;min-height:200px;margin-top:10px;margin-right:13px;margin-left:13px}
+.cleft{float:left;width:638px}
+.cright{float:right;width:300px}
+.c_banner{width:300px;height:auto;margin-bottom:10px}
+.post_it{width:300px;max-width:256px;height:228px;margin-bottom:10px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_postit.jpg);padding-left:14px;padding-right:30px}
+.img_postit{width:134px;height:100px;margin-right:10px;float:left;margin-top:5px}
+.txt_postit{width:112px;height:130px;float:right;margin-top:5px;margin-bottom:7px;overflow:hidden}
+.txt_postit h1,.txt_postit h1 a{color:E60079;font-size:12px;font-weight:700;text-decoration:none;margin:0;padding:0}
+.txt_postit p,.txt_postit p a{font-size:12px;color:#333;margin-top:5px;margin-bottom:3px;text-decoration:none}
+.btn_gris{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_btvermas.gif);background-repeat:no-repeat;cursor:pointer;height:19px;padding-top:2px;max-height:17px;width:78px;border:0;margin-left:auto;margin-right:auto;color:#999;font-weight:700;display:block;font-size:10px;vertical-align:middle;text-decoration:none}
+.suscribete{width:300px;max-width:290px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_suscribete.gif);background-repeat:no-repeat;background-color:#00A99C;margin-bottom:10px;height:335px;max-height:325px;padding:5px}
+.i_sus{border:2px dashed #FFF;height:320px;max-height:310px;padding:5px}
+.portada{margin-top:7px;width:131px;height:180px;float:left;position:relative;left:-90px;top:8px}
+.portada_txt{float:right;width:131px;color:#333;font-weight:700;font-size:13px;height:110px;overflow:hidden;position:relative;top:-100px}
+.portada_txt a{color:#333;font-weight:700;font-size:18px;text-decoration:none}
+.susb{float:left;width:195px;margin-top:10px;color:#333;font-weight:700;font-size:12px;height:30px;position:relative;top:-100px}
+.susb a{color:#333;font-weight:700;font-size:12px;text-decoration:none}
+.susc{float:right;width:73px;position:relative;top:-100px}
+.redes2{float:right;margin-top:8px;position:relative;top:-100px}
+.redes2 li{float:left;margin-left:5px}
+.video_semana{width:300px;margin-bottom:10px}
+.tit_video{width:191px;float:left;margin-bottom:5px}
+.video_link{float:right}
+.video_link a{color:#E60079;font-weight:700;font-size:12px}
+.video_link a:hover{background-color:#E60079;color:#FFF;font-weight:700;font-size:12px}
+.video_cont{clear:both}
+.cont_encuesta{width:300px;margin-bottom:10px;max-width:290px;background-color:#B0D32F;padding:5px;}
+.i_encuesta{border:2px dashed #FFF;padding:5px}
+.i_encuesta iframe {height:210px !important;}
+.descargas_cont{width:300px;max-width:290px;background-color:#EE6EA8;margin-bottom:10px;padding:10px 5px}
+.txt_descargas{color:#E60079;font-size:20px;font-weight:700}
+.txt_descargas2{margin-top:8px;color:#333;font-size:10px}
+.txt_descargas2 a{color:#333;font-size:9px;text-decoration:underline}
+.txt_descargas2 a:hover{background-color:#E60079;color:#fff;font-size:9px;text-decoration:underline}
+.arrow_left{width:14px;height:13px;float:left;margin-left:10px;margin-right:10px;position:relative;top:60px}
+.arrow_right{width:14px;height:13px;float:left;margin-left:10px;position:relative;top:60px}
+.img_descargar{width:220px;height:140px;float:left}
+#fan_box{height:auto;width:300px;background-color:#EEEEE1;margin-bottom:10px; margin-top:51px;}
+.remate{width:996px;height:10px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/remate_inter.png);margin-left:auto;margin-right:auto}
+.cont_footer{width:980px;background-color:#FFF;height:130px;margin-left:auto;margin-right:auto}
+.remate_final{width:996px;height:48px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/remate_final.png);margin-left:auto;margin-right:auto;margin-bottom:5px}
+#footer_televisa{width:194px;max-width:181px;height:130px;max-height:110px;float:right;color:#666;font-family:Arial, Helvetica, sans-serif;font-size:11px;background-color:#E6E6E6;text-align:right;padding-top:20px;padding-right:13px}
+#footer_televisa a{color:#073862;text-decoration:none}
+#footer_televisa a:hover{color:#073862;text-decoration:underline}
+.footer_tu{float:left;width:786px;max-width:766px;max-height:110px;height:130px;padding-top:20px;padding-left:20px}
+.contenido_footer_tu{float:right;width:633px;margin-top:10px}
+.contenido_footer_tu li a{color:#333;font-size:12px;border-right-width:1px;border-right-style:solid;border-right-color:#E60079;padding-right:8px;padding-left:8px;text-decoration:none;display:block;height:15px}
+.contenido_footer_tu li a:hover{color:#fff;background-color:#E60079;font-size:12px;border-right-width:1px;border-right-style:solid;border-right-color:#E60079;float:left;padding-right:8px;padding-left:8px;text-decoration:none}
+.ue_footer a{border-right-width:0!important}
+.logo_footer{width:118px;height:115px;float:left}
+.cont_sec_footer,.cont_sec_footer p{float:right;width:633px;max-width:625px;padding-left:8px;color:#333;font-size:12px;margin:10px 0 0}
+.cont_sec_footer a{text-decoration:underline;margin-left:10px;color:#333}
+.cont_sec_footer a:hover{color:#FFF;background-color:#341B7D}
+.nota{ /* overflow:hidden */ }
+.cont_nota h1{color:#E60079;font-size:27px;margin:0;padding:20px}
+.foto_nota{border:6px solid #B0D32F}
+.pie_foto{font-size:10px;color:#333;width:458px;margin-top:3px;float:right;margin-right:85px}
+.fecha{color:#666;font-size:11px;padding-left:20px;padding-right:20px;padding-top:30px}
+.fecha a,.fecha a:visited{color:#3A1B7D;font-weight:700;text-decoration:none}
+.fecha a:hover{color:#FFF;background-color:#3A1B7D}
+.rs_nota{margin-bottom:20px;margin-top:25px;margin-left:20px}
+.cont_share{width:133px;height:16px;float:left;margin-bottom:5px}
+.cont_share li{float:left;margin-right:6px}
+.test_nota{margin-left:20px;height:28px;background-color:#006BB7;margin-bottom:20px}
+.test_nota a{color:#FFF;font-weight:700;font-size:14px;text-decoration:none;position:relative;top:-8px;left:2px}
+.test_nota a:hover{color:#CCC;font-weight:700;font-size:14px}
+.pestana{z-index:3;position:relative;top:-64px;width:58px;height:64px;left:580px}
+.nr li{margin-right:6px;width:155px;background-color:#006BB7;max-width:134px;float:left;height:260px;min-height:240px;overflow:hidden;padding:10px 11px 10px 10px}
+.tit_nr{width:213px;height:43px;z-index:3;position:relative;top:20px;right:7px}
+.cont_cometarios{width:634px;max-width:604px;border:2px solid #3A1B7D;height:auto;margin-top:15px;margin-bottom:15px;padding:15px}
+.tit_cat{width:634px;height:51px;border:2px dashed #999;margin-bottom:10px}
+.tit_cat h1{font-size:27px;font-family:Arial Black, Arial, Gadget, sans-serif;color:#E60079;margin:0}
+.cont_nr_cat{height:319px}
+.nr_cat{width:638px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_noticias.gif);height:319px;padding-top:20px;max-height:299px}
+.argollas{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/argollas.png);width:42px;height:198px;position:relative;right:13px;top:-257px;z-index:4}
+.nrcat_img{width:374px;height:280px;margin-left:40px;margin-right:15px;float:left}
+.nrcat_txt{width:192px;height:280px;float:left}
+.nrcat_txt h1,.nrcat_txt h1 a{color:#FFF;font-size:20px;text-decoration:none;margin:0}
+.nrcat_txt p{color:#FFF;font-size:13px}
+.test{width:48px;height:19px;margin-bottom:5px;float:left}
+.cont_listado{width:634px;max-width:604px;border:2px dashed #999;margin-bottom:10px;margin-top:10px;padding-left:15px;padding-right:15px;padding-top:8px}
+.cont_listado li{display:block;margin-bottom:15px}
+.listado_img{width:134px;height:100px;border:6px solid #B0D32F;margin-right:15px;float:left}
+.listado_txt{float:right;width:435px}
+.listado_txt h1,.listado_txt h1 a{color:#E60079;font-size:20px;text-decoration:none;margin:0}
+.listado_txt p{color:#333;font-size:12px;text-decoration:none;margin-top:3px}
+.listado_txt p a{color:#333;font-size:12px;text-decoration:none;font-weight:700;line-height:16px}
+.paginacion{background-color:#E4E4E4;width:150px;font-size:12px;display:block;margin-bottom:15px;position:relative;left:220px;padding:10px}
+.paginacion a{color:#006BB7;text-decoration:none;padding:3px}
+.paginacion a:hover{background-color:#3A1B7D;color:#FFF;text-decoration:none;padding:3px}
+.disabled{color:#989898;margin-right:2px;padding:3px}
+.current{color:#E60079;font-weight:700;margin:0 3px 0 2px;padding:3px}
+.galeria{width:636px;max-width:620px;border:1px solid #CCC;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_galerias.gif);padding-top:16px;padding-left:16px;padding-bottom:16px;margin-bottom:10px}
+.nr_cat_belleza{width:638px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_belleza.gif);height:319px;padding-top:20px;max-height:299px}
+.cont_sec{width:638px;margin-bottom:10px}
+.dudas{float:left;width:315px;height:337px;background-color:#006BB7}
+.txt_dudas{color:#800C7B;font-weight:700;font-size:16px;padding:10px 15px 5px}
+.forma_contacto{color:#FC0;font-size:11px;float:right;padding:0 15px 15px}
+.forma_contacto li{margin-bottom:5px;width:200px}
+.forma_contacto2{width:285px!important}
+.bt_enviar{width:76px;height:18px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bt_enviar.jpg);background-repeat:no-repeat;cursor:pointer;border:0;color:#999;font-size:10px;margin-top:5px;margin-left:100px;font-weight:700}
+.tips{margin-top:10px;width:315px;height:327px;background-color:#64C4D9;float:right;z-index:1}
+.tips ul{list-style:none;position:relative;top:-40px;margin:0;padding:0}
+.tips li{height:124px;overflow:hidden}
+.tit_tips{width:91px;height:92px;z-index:6;position:relative;top:-10px;left:5px}
+.tips_img{margin-left:15px;margin-right:10px;width:134px;height:100px;float:left}
+.tips_txt{color:#333;width:145px;float:left}
+.tips_txt h1,.tips_txt h1 a{font-size:13px;font-weight:700;margin:0}
+.btn_tips{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bt_tips.gif);background-repeat:no-repeat;height:18px;padding-top:2px;max-height:16px;width:76px;border:0;margin-left:auto;margin-right:auto;color:#999;font-weight:700;display:block;font-size:10px;vertical-align:middle;text-decoration:none}
+.cont_nr_cat_divan{height:600px}
+.nr_cat_divan{width:638px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_divan.gif);padding-top:20px;height:600px;max-height:580px}
+.nr_cat_divan2{width:638px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_divan.gif);padding-top:20px;height:550px;max-height:530px}
+.argollas_divan{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/argollas.png);width:42px;height:198px;position:relative;right:13px;top:-450px;z-index:4}
+.nrcatdivan_img{width:458px;height:343px;margin-left:100px;margin-right:15px}
+.nrcatdivan_txt{width:575px;margin-left:30px;margin-top:20px}
+.nrcatdivan_txt h1,.nrcatdivan_txt h1 a{color:#FFF;font-size:20px;text-decoration:none;margin:10px 0 0}
+.nrcatdivan_txt p{color:#FFF;font-size:13px;margin:6px 0}
+.nr_catestrella{width:638px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_estrella.gif);height:319px;padding-top:20px;max-height:299px}
+.nr_cat_fresometro{width:638px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_frsometro.gif);height:319px;padding-top:20px;max-height:299px}
+.fresometro{width:501px;background-color:#3A1B7D;margin-left:auto;margin-right:auto;border-right-width:1px;border-left-width:1px;border-right-style:solid;border-left-style:solid;border-right-color:#9D8DBE;border-left-color:#9D8DBE;color:#FFF;height:auto}
+.fresometro li{padding-bottom:15px}
+.fres_img{margin-left:20px;width:220px;height:140px;float:left}
+.fres_txt{width:220px;float:right;margin-right:20px}
+.fres_txt p{margin-top:5px;margin-bottom:5px}
+.fres_txt p a{color:#E60079;font-weight:700;text-decoration:none;margin-top:5px;margin-bottom:5px}
+.votacion{color:#FFF319;font-size:11px;font-weight:700}
+.votacion img{margin-left:5px;margin-right:3px}
+.copia_look{width:651px;max-width:638px;height:590px;max-height:564px;background-color:#800C7B;position:relative;left:-13px;padding-left:13px;padding-right:0;padding-top:13px}
+.f_vertical{width:306px;height:490px;float:left;position:relative;left:-6px}
+.marco{width:306px;height:490px;z-index:9}
+.f_marco{width:290px;height:474px;z-index:2;position:relative;top:-480px;left:8px}
+.gal_moda{width:320px;float:right;display:block}
+.gal_vertical{width:320px;margin-top:5px;margin-bottom:5px}
+#cont_gal_vertical{height:285px;overflow:hidden}
+.caption_galver{width:320px;max-width:312px;background-color:#F16EB3;font-size:10px;color:#800C7B;padding:4px}
+.gal_txt{padding-right:6px;padding-top:10px;color:#fff;height:150px;max-height:140px;overflow:hidden}
+.gal_txt a{color:#FFF319;font-weight:700;text-decoration:none}
+.gal_txt a:hover{background-color:#E60079;color:#FFF319}
+.gal_txt h1{font-size:18px}
+.video_moda{width:315px;height:337px;max-height:332px;background-color:#B0D32f;float:right;padding-top:5px}
+.btn_masvideos{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bt_videosmoda.gif);background-repeat:no-repeat;height:18px;padding-top:2px;max-height:16px;width:76px;border:0;margin-left:auto;margin-right:auto;color:#999;font-weight:700;display:block;font-size:10px;vertical-align:middle;text-decoration:none;margin-top:10px}
+.cont_nr_cat_tragame{height:550px}
+.nr_cat_tragame{width:638px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_tragame.gif);padding-top:20px;height:550px;max-height:530px}
+.argollas_tragame{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/argollas.png);width:42px;height:198px;position:relative;right:13px;top:-377px;z-index:4}
+.nr_tragame li{margin-right:6px;width:155px;background-color:#800C7B;max-width:134px;float:left;height:160px;max-height:140px;overflow:hidden;padding:10px 11px 10px 10px}
+.nr_masleidas_ue{background-color:#3A1B7D!important;margin-right:0!important}
+.tuoso{width:638px;background-color:#006BB7;margin-top:10px;margin-bottom:13px;height:250px}
+.forma_contactooso{color:#FC0;font-size:11px;margin-top:20px}
+.forma_contactooso li{margin-bottom:5px;width:160px;float:left;text-align:right;margin-right:20px}
+.forma_contacto3{width:300px!important}
+.oso{height:100px;width:500px!important}
+.ver_todos_oso a{color:#E60079;font-weight:700;font-size:15px}
+.nr_horos{width:638px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_horos.gif);height:319px;padding-top:20px;max-height:299px}
+.fecha_horos{color:#FFF319;font-size:19px;font-weight:700}
+.list_horos{width:638px;max-width:619px;background-color:#800C7B;padding-left:19px;margin-top:13px;padding-bottom:10px;padding-top:20px}
+.list_horos li{width:134px;margin-right:20px;text-align:center;float:left;height:170px}
+.list_horos img{margin:5px 0 0}
+.division_horos{border-bottom-width:2px;border-bottom-style:dashed;border-bottom-color:#FFF;margin-bottom:15px;width:638px;position:relative;left:-20px}
+.list_horos p{color:#fff319;font:bold}
+.cont_horos_mobile{width:638px;height:183px;position:relative;top:-20px}
+.horos_mobile{background-color:#0DA73E;z-index:1;height:140px;max-height:110px;padding:20px 0 10px 10px}
+.horos_mobile img{float:right;margin-right:10px}
+.tit_horos_mobile{width:125px;height:47px;max-height:37px;z-index:6;position:relative;top:28px;left:15px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/cinta_horos.png);background-repeat:no-repeat;color:#FFF;font-size:14px;font-weight:700;text-align:center;padding-top:10px}
+.horos_mobie_txt{width:454px;float:left;color:#FFF;font-weight:700}
+.cont_descargas{width:638px;height:auto;position:relative;top:-20px}
+.tit_descargas{width:153px;height:46px;max-height:37px;z-index:6;position:relative;top:28px;left:15px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/cinta_descargas.png);background-repeat:no-repeat;color:#FFF;font-size:14px;font-weight:700;text-align:center;padding-top:10px}
+.descargas{z-index:1;background-color:#EE6EA8;padding-left:20px;padding-bottom:10px}
+.descargas li{margin-right:20px;width:134px;height:152px;text-align:center;margin-top:15px;float:left}
+.descargas a{color:#FFF}
+.descargas_cel{z-index:1;background-color:#0DA73E;padding-left:20px;padding-bottom:10px}
+.descargas_cel li{margin-right:20px;width:134px;height:120px;text-align:center;margin-top:15px;float:left;color:#FFF}
+.descargas_instrucciones{color:#FFF;font-size:20px;margin-right:20px;width:598px;text-align:right;padding-top:5px}
+.descargas_bases{color:#FFF;font-size:10px;margin-right:20px;width:598px;padding-top:10px}
+.cont_stage{width:646px;overflow:visible;height:383px}
+.stage{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_home.jpg);width:646px;height:383px}
+.stage_txt{width:135px;color:#FFF;float:left;margin-left:28px;margin-top:70px;height:248px;overflow:hidden}
+.stage_txt h1,.stage_txt h1 a{font-size:16px;text-decoration:none;color:#FFF}
+.stage_txt p a{font-size:12px;text-decoration:none;color:#FFF;font-weight:700}
+.stage_img{width:458px;height:343px;position:relative;top:20px;left:18px;float:left}
+.clip_stage{width:39px;height:92px;z-index:9;position:relative;top:-424px;left:25px}
+.stage_pag{z-index:12px;height:32px;width:155px;position:relative;top:-65px;left:315px}
+.stage_pag li{width:32px;height:32px;max-width:31px;max-height:28px;margin-right:4px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/stage_pag.png);background-repeat:no-repeat;display:block;padding-top:4px;overflow:hidden;float:left;padding-left:1px;text-align:center}
+.stage_pag li a:hover{display:block;color:#fff319}
+.stage_pag a{color:#FFF;text-decoration:none;font-size:20px;font-weight:700}
+.current_pag{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/stage_current.png)!important}
+.ticker{width:636px;clear:both;border:#CCC solid 1px;background:#EDEDED;height:24px;position:relative;top:0!important}
+.ticker_txt{height:20px;max-height:15px;color:#666;font-weight:700;width:514px;overflow:hidden;float:right;padding-top:5px}
+.nr_home{width:638px;height:285px}
+.cont_tit_nr_cinta{width:638px;height:45px}
+.cont_tit_nr_cinta li{width:155px;height:45px;max-height:32px;margin-right:6px;float:left;text-align:center;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/cinta1b.jpg);background-repeat:no-repeat;padding-top:13px}
+.cont_tit_nr_cinta a{color:#FFF;font-weight:700;text-decoration:none}
+.cont_tit_nr_cinta a:hover{font-style:italic}
+.cinta2{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/cinta2b.jpg)!important;background-repeat:no-repeat}
+.cinta3{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/cinta3b.jpg)!important;background-repeat:no-repeat}
+.cinta4{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/cinta4b.jpg)!important;background-repeat:no-repeat;margin-right:0!important}
+.uenrmorado{margin-right:0!important;background-color:#3A1B7D!important}
+.cont_us{width:638px;height:200px;margin-bottom:13px;margin-top:25px}
+.tuestrella{width:315px;height:200px;background-color:#00A99C;float:left}
+.agenda{width:315px;height:200px;background-color:#00A99C;float:right}
+.tit_tuestrella{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_tuestrella.png);background-repeat:no-repeat;width:127px;height:46px;max-height:36px;z-index:25;position:relative;top:-20px;left:7px;text-align:center;padding-top:10px}
+.tit_tuestrella a,.tit_agenda a{color:#FFF;font-weight:700;font-size:14px;text-decoration:none}
+.tit_tuestrella a:hover,.tit_agenda a:hover{color:#FFF319}
+.tit_agenda{background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_agenda.png);background-repeat:no-repeat;width:127px;height:46px;z-index:20;position:relative;top:-20px;text-align:center;left:180px;padding-top:10px;max-height:36px}
+.tuestrella_contenido,.tuagenda_contenido{width:220px;z-index:3;position:relative;top:-35px;left:47px;text-align:center}
+.tuestrella_contenido a,.tuagenda_contenido a{color:#E60079;font-weight:700;font-size:13px;text-decoration:none;display:block}
+.tuestrella_contenido a:hover,.tuagenda_contenido a:hover{color:#fff319}
+.tuestrella_contenido p,.tuagenda_contenido p{margin-top:5px}
+.header_alex{width:638px;height:347px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/cat_alex.jpg);margin-bottom:13px}
+.pins{width:441px;height:37px;z-index:9;position:relative;top:-350px;left:15px}
+.alex_img{z-index:3;width:458px;height:343px;border:#009DE8 dashed 2px;float:left}
+.alex_bio{float:right;width:140px;height:160px;color:#FFF;margin-top:122px;margin-right:25px;overflow:hidden}
+.cont_nota_alex h1,.cont_nota_alex h1 a{color:#006BB7;font-size:24px;padding-top:20px;padding-left:10px;text-decoration:none;margin:0}
+.foto_nota_alex{padding-right:15px;padding-bottom:10px;float:left}
+.fecha_alex{color:#333;font-size:11px;padding-left:20px}
+.pika-wrap h1{font-family:Arial, Helvetica, sans-serif;text-align:center}
+.pika-wrap{width:638px;margin:0 auto}
+.pika-image{position:relative;height:423px;width:580px;background:#fafafa;border:1px solid #e5e5e5;padding:10px}
+.pika-image .animation,.pika-image .main-image{position:absolute;top:10px;left:10px}
+.pika-image .animation{display:none;z-index:2}
+.pika-image img{border:1px solid #E5E5E5}
+.pika-image .caption{position:absolute;font-size:16px;color:#E60079;font-weight:700;text-align:left;left:0;padding:10px}
+.pika-image .caption p{line-height:14px;margin:0;padding:0}
+.pika-imgnav a{position:absolute;text-indent:-5000px;display:block;z-index:3}
+.pika-imgnav a.previous{background:url(http://i2.esmas.com/editorial-televisa/img/tu/arrows_gal_r1_c1.png) no-repeat left 50%;height:340px;width:50px;top:10px;left:10px;cursor:pointer}
+.pika-imgnav a.next{background:url(http://i2.esmas.com/editorial-televisa/img/tu/arrows_gal_r2_c3.png) no-repeat right 50%;height:340px;width:50px;top:10px;right:10px;cursor:pointer}
+.pika-imgnav a.play{background:url(http://i2.esmas.com/editorial-televisa/img/pikachoose/play.png) no-repeat 50% 50%;height:100px;width:40px;top:0;left:50%;display:none;cursor:pointer}
+.pika-imgnav a.pause{background:url(http://i2.esmas.com/editorial-televisa/img/pikachoose/pause.png) no-repeat 50% 50%;height:100px;width:40px;top:0;left:50%;display:none;cursor:pointer}
+.pika-textnav{overflow:hidden;margin:10px 0 0}
+.pika-textnav a{font-size:12px;text-decoration:none;font-family:helvetica, arial, sans-serif;color:#3A1B7D;display:none;padding:4px}
+.pika-textnav a:hover{background:#e5e5e5;color:#0065B2;display:none}
+.pika-textnav a.previous{float:left;width:auto;display:none}
+.pika-textnav a.next{float:right;width:auto;display:none}
+.pika-thumbs{overflow:hidden;margin:10px 0 0;padding:0}
+.pika-thumbs li{float:left;list-style-type:none;width:70px;background:#fafafa;border:1px solid #e5e5e5;cursor:pointer;margin:0 12px;padding:3px}
+.pika-thumbs li .clip{width:70px;height:70px;text-align:center;vertical-align:center;overflow:hidden}
+.jcarousel-skin-pika .jcarousel-container-horizontal{padding:15px 0}
+.jcarousel-skin-pika .jcarousel-container-vertical{width:90px;height:350px;padding:20px}
+.jcarousel-skin-pika .jcarousel-clip-horizontal{height:90px;width:600px}
+.jcarousel-skin-pika .jcarousel-clip-vertical{width:90px;height:350px}
+.jcarousel-skin-pika .jcarousel-item-horizontal{margin-right:10px}
+.jcarousel-skin-pika .jcarousel-item-placeholder{background:#fff;color:#000}
+.cont_error{width:638px;height:600px;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_error.jpg);font-weight:700}
+.error_txt{color:#3A1B7D;width:238px;float:right;margin-top:360px;margin-right:19px}
+.error_txt a{color:#E60079}
+.error_txt a:hover{color:#B0D32F}
+.nivoSlider{position:relative}
+.nivoSlider img{position:absolute;top:0;left:0}
+.nivoSlider a.nivo-imageLink{position:absolute;top:0;left:0;width:100%;height:100%;border:0;z-index:60;display:none;margin:0;padding:0}
+.nivo-slice{display:block;position:absolute;z-index:50;height:100%}
+.nivo-caption{position:absolute;left:0;bottom:0;background:#000;color:#fff;opacity:0.8;width:100%;z-index:89}
+.nivo-caption p{margin:0;padding:5px}
+.nivo-caption a{display:inline!important;text-decoration:underline}
+.nivo-directionNav a{position:absolute;top:45%;z-index:99;cursor:pointer;display:block;width:30px;height:30px;background:url(http://i2.esmas.com/editorial-televisa/img/nivo/arrows.png) no-repeat;text-indent:-9999px;border:0}
+.nivo-prevNav{left:0}
+.nivo-nextNav{right:0}
+.nivo-controlNav a{position:relative;z-index:99;cursor:pointer;display:block;width:10px;height:10px;background:url(http://i2.esmas.com/editorial-televisa/img/nivo/bullets.png) no-repeat;text-indent:-9999px;border:0;margin-right:3px;float:left}
+.nivo-controlNav a.active{font-weight:700;background-position:-10px 0}
+#slider,.slider_nivo{position:relative;min-height:220px;background:#202834 url(http://i2.esmas.com/editorial-televisa/img/nivo/loading.gif) no-repeat 50% 50%;-moz-box-shadow:0 0 10px #333;-webkit-box-shadow:0 0 10px #333;box-shadow:0 0 10px #333;margin:30px 30px 60px}
+.nivo-controlNav{position:absolute;left:47%;bottom:-30px; z-index:900}
+a.nivo-nextNav{background-position:-30px 0;right:15px}
+a.nivo-prevNav{left:15px}
+.round5{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
+.round10{-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px}
+.round15{-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px}
+.round20{-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px}
+.round25{-moz-border-radius:25px;-webkit-border-radius:25px;border-radius:25px}
+.round30{-moz-border-radius:30px;-webkit-border-radius:30px;border-radius:30px}
+thumb_activo{margin-bottom:120px}
+.thumb_activo .nivo-controlNav a{width:90px;height:60px;border:0;float:left;background:none}
+.thumb_activo .nivo-controlNav a.active{background-position:0}
+.thumb_activo .nivo-controlNav{bottom:-70px;width:100%;left:0;text-align:center}
+.thumb_activo .nivo-controlNav .nivo-control img{display:block!important}
+#slider{background:url(http://i2.esmas.com/editorial-televisa/img/nivo/loading.gif) no-repeat scroll 50% 50% transparent;height:343px;position:relative;width:458px}
+element.style{background:url(http://i2.esmas.com/editorial-televisa/img/tu/f_tragame.jpg) no-repeat scroll 0 0 transparent;position:relative}
+#gal_home #slider,#gal_home .slider_nivo{-moz-box-shadow:none;margin:0}
+#gal_home .nivo-controlNav{bottom:3px;left:65%}
+#gal_home .nivo-caption{width:145px;height:245px;left:465px;top:50px;opacity:1!important;background:none}
+#gal_home .nivo-controlNav a{background:no-repeat url(http://i2.esmas.com/editorial-televisa/img/tu/stage_pag.png);height:32px;width:32px;text-indent:0;color:#FFF;font-weight:700;text-decoration:none;text-align:center;padding-top:8px}
+#gal_home .nivo-controlNav a.active{background:no-repeat url(http://i2.esmas.com/editorial-televisa/img/tu/stage_current.png)}
+#gal_home .clip_stage{top:-353px;z-index:80}
+.pie_foto_gal{font-size:10px;color:#333;width:458px;margin-top:3px;float:right;margin-right:20px;position:relative;top:-20px}
+.paginador{color:#E60079;font-weight:700;margin-bottom:10px}
+.paginador a{color:#006BB7;text-decoration:underline}
+#cse,.cse{overflow:hidden;padding-right:0;position:absolute;width:650px!important;z-index:999}
+.gsc-wrapper{background-color:#FFF}
+.gsc-webResult{padding:25px 10px}
+.gsc-resultsbox-visible{border:2px dashed #999;background:url(http://i2.esmas.com/editorial-televisa/img/tu/tit_resultados_busqueda.gif) no-repeat scroll left top transparent}
+.gsc-result .gs-title{height:22px!important}
+.gsc-result .gs-title a:hover{color:#fff!important;background-color:#E60079}
+.gsc-result .gs-title a{color:#E60079!important;font-size:20px;text-decoration:none!important;text-transform:uppercase;margin:0}
+.gsc-result .gs-snippet{color:#333;font-size:12px;margin-top:3px;text-decoration:none}
+.gsc-cursor .gsc-cursor-page{color:#E60079;font-weight:700}
+.gsc-cursor .gsc-cursor-current-page{color:#0DA73E}
+input.gsc-search-button{background:url(http://i2.esmas.com/editorial-televisa/img/tu/g_arrow.gif) no-repeat;cursor:pointer;height:8px;width:8px!important;margin-left:0;padding-left:0;text-indent:-999px;vertical-align:middle!important;display:block;font-size:0;line-height:0;border-style:none;border-width:0; margin-top:5px; float:left;}
+.gsc-input{ font-size: 11px;
+	height: 19px;
+	width:151px;
+	border:1px solid #b7b7b7;
+	color:#999999;
+	background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/buscarTu.jpg);
+	background-repeat: no-repeat;
+	background-position:top center;}
+#sb-title,#sb-info{display:none!important}
+.scrollable{position:relative;overflow:hidden;height:285px;width:320px}
+.scrollable .items{position:absolute;height:20000em}
+h1,.i_sus p{margin:0;padding:0}
+#total_container,#footer{width:996px;height:auto;margin-right:auto;margin-left:auto;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_shadow.png);background-repeat:repeat-y}
+#main{width:996px;height:auto;margin-right:auto;margin-left:auto;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_shadow.png);background-repeat:repeat-y}
+.loggeado,.nivo-html-caption,table.gsc-branding,gsc-adBlockNoHeight,.gsc-resultsHeader,.gsc-result .gs-visibleUrl-short,.gal_moda .disabled,.gsc-resultsbox-invisible{display:none}
+.reg2 a:hover,.reg3 a:hover{text-decoration:underline;color:#E60079}
+.menu ul,.redes2 ul,.contenido_footer_tu ul,.cont_share ul,.nr ul,.cont_listado ul,.forma_contacto ul,.fresometro ul,.nr_tragame ul,.forma_contactooso ul,.list_horos ul,.descargas ul,.descargas_cel ul,.stage_pag ul,.nr_home ul,.cont_tit_nr_cinta ul{list-style:none;margin:0;padding:0}
+.menu ul li,.contenido_footer_tu li,.ticker_img{float:left}
+.txt_postit h1 a:hover,.portada_txt a:hover,.susb a:hover,.stage_txt h1 a:hover,.stage_txt p a:hover,.paginador a:hover{background-color:#E60079;color:#FFF}
+.txt_postit p a:hover,.txt1{text-decoration:underline}
+.btn_gris a,.btn_tips a,.btn_masvideos a{cursor:pointer;border:0;color:#999;font-weight:700;display:block;font-size:10px;text-decoration:none}
+.btn_gris a:hover,.btn_tips a:hover,.btn_masvideos a:hover{color:#CCC}
+.descargas_cont img,.nr img,.nr_tragame img,.descargas img,.descargas_cel img{margin-bottom:5px}
+#footer_televisa img,.jcarousel-skin-pika .jcarousel-item-vertical{margin-bottom:10px}
+.cont_nota,.cont_nota_alex{width:636px;background-color:#F0F0F0;border:1px solid #CCC;z-index:1}
+.cont_nota p,.cont_nota_alex p{color:#333;font-size:12px;padding-left:20px;padding-right:20px;line-height:19px}
+.cont_nota p a,.cont_listado p a,.cont_nota_alex p a{color:#E60079;font-weight:700;text-decoration:none}
+.cont_nota p a:hover,.cont_listado p a:hover,.listado_txt h1 a:hover,.listado_txt p a:hover,.fres_txt p a:hover,.ver_todos_oso a:hover,.cont_nota_alex p a:hover{color:#fff;background-color:#E60079}
+.cont_fb,.cont_tw{width:110px;height:19px;margin-right:5px;float:left;margin-bottom:5px; /* overflow:hidden; */ }
+.cont_nr,.cont_fresometro{width:638px}
+.nr,.nr_tragame{z-index:1;width:638px}
+.nr h1,.nr h1 a,.nr_tragame h1,.nr_tragame h1 a{color:#FFF;font-size:12px;text-decoration:none;margin:0}
+.nr h1 a:hover,.nr p a:hover,.nrcat_txt h1 a:hover,.nrcat_txt p a:hover,.nrcatdivan_txt h1 a:hover,.nrcatdivan_txt p a:hover,.nr_tragame h1 a:hover,.nr_tragame p a:hover,.list_horos h1 a:hover,.descargas a:hover,.list_horos h1:hover{color:#FFF;background-color:#E60079}
+.nr p,.nr_tragame p{color:#FFF;font-size:12px}
+.nr p a,.nr_tragame p a{color:#FFF;font-size:12px;font-weight:700;text-decoration:none}
+.ue_nr,.tit_nr_cinta_ue{margin-right:0!important}
+.nrcat_txt p a,.nrcatdivan_txt p a{color:#FFF;font-size:13px;font-weight:700;text-decoration:none}
+.fb,.tw{width:120px;height:20px;margin-bottom:5px}
+.nr_masleidas,.nrmorado{background-color:#3A1B7D!important}
+.list_horos h1 a,.list_horos h1{color:#FFF;font-size:16px;text-decoration:none}
+.pika-thumbs li:last,#gal_home .stage_txt{margin:0}
+#slider img,.slider_nivo img,#slider img{position:absolute;top:0;left:0;display:none}
+#slider a,.slider_nivo a,#slider a{border:0;display:block}
+.nivo-caption .stage_txt {margin:0}
+.gsc-adBlock { display:none!important}
+/* Reproductor */
+div.jp-audio,div.jp-video{font-size:1em;font-family:Verdana, Arial, sans-serif;line-height:1.6;color:#179ADE;font-weight:700}
+div.jp-audio{width:370px}
+div.jp-video-270p{width:480px}
+div.jp-video-360p{width:640px}
+div.jp-interface{position:relative;background-color:#fff;background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_jplayer.png);width:100%;border:1px solid #E4019C;-moz-border-radius:1em 1em 0 0;border-radius:1em 1em 1em 0 0}
+div.jp-audio div.jp-type-single div.jp-interface{height:80px;border-bottom:none}
+div.jp-audio div.jp-type-playlist div.jp-interface{height:80px}
+div.jp-video div.jp-type-single div.jp-interface{height:60px;border-bottom:none}
+div.jp-video div.jp-type-playlist div.jp-interface{height:60px}
+div.jp-interface ul.jp-controls{list-style-type:none;margin:0;padding:0}
+div.jp-interface ul.jp-controls li{display:inline}
+div.jp-interface ul.jp-controls a{position:absolute;overflow:hidden;text-indent:-9999px}
+a.jp-play,a.jp-pause{width:40px;height:40px;z-index:1}
+div.jp-audio div.jp-type-single a.jp-play,div.jp-audio div.jp-type-single a.jp-pause{top:20px;left:40px}
+div.jp-audio div.jp-type-playlist a.jp-play,div.jp-audio div.jp-type-playlist a.jp-pause{top:20px;left:48px}
+div.jp-video a.jp-play,div.jp-video a.jp-pause{top:15px}
+div.jp-video-270p div.jp-type-single a.jp-play,div.jp-video-270p div.jp-type-single a.jp-pause{left:195px}
+div.jp-video-270p div.jp-type-playlist a.jp-play,div.jp-video-270p div.jp-type-playlist a.jp-pause{left:220px}
+div.jp-video-360p div.jp-type-single a.jp-play,div.jp-video-360p div.jp-type-single a.jp-pause{left:275px}
+div.jp-video-360p div.jp-type-playlist a.jp-play,div.jp-video-360p div.jp-type-playlist a.jp-pause{left:300px}
+a.jp-play{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) 0 0 no-repeat}
+a.jp-play:hover{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) -41px 0 no-repeat}
+a.jp-pause{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) 0 -42px no-repeat;display:none}
+a.jp-pause:hover{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) -41px -42px no-repeat}
+div.jp-audio div.jp-type-single a.jp-stop{top:26px;left:90px}
+div.jp-audio div.jp-type-playlist a.jp-stop{top:26px;left:126px}
+div.jp-video-270p div.jp-type-single a.jp-stop{left:245px}
+div.jp-video-270p div.jp-type-playlist a.jp-stop{left:298px}
+div.jp-video-360p div.jp-type-single a.jp-stop{left:325px}
+div.jp-video-360p div.jp-type-playlist a.jp-stop{left:378px}
+a.jp-stop{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) 0 -83px no-repeat;width:28px;height:28px;z-index:1}
+a.jp-stop:hover{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) -29px -83px no-repeat}
+div.jp-audio div.jp-type-playlist a.jp-previous{left:20px;top:26px}
+div.jp-video-270p div.jp-type-playlist a.jp-previous{left:192px}
+div.jp-video-360p div.jp-type-playlist a.jp-previous{left:272px}
+a.jp-previous{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) 0 -112px no-repeat;width:28px;height:28px}
+a.jp-previous:hover{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) -29px -112px no-repeat}
+div.jp-audio div.jp-type-playlist a.jp-next{left:88px;top:26px}
+div.jp-video-270p div.jp-type-playlist a.jp-next{left:260px}
+div.jp-video-360p div.jp-type-playlist a.jp-next{left:340px}
+a.jp-next{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) 0 -141px no-repeat;width:28px;height:28px}
+a.jp-next:hover{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) -29px -141px no-repeat}
+div.jp-progress{position:absolute;overflow:hidden;background-color:#ddd}
+div.jp-audio div.jp-type-single div.jp-progress{top:32px;left:130px;width:122px;height:15px}
+div.jp-audio div.jp-type-playlist div.jp-progress{top:32px;left:164px;width:122px;height:15px}
+div.jp-video div.jp-progress{top:0;left:0;width:100%;height:10px}
+div.jp-seek-bar{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) 0 -202px repeat-x;width:0;height:100%;cursor:pointer}
+div.jp-play-bar{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) 0 -218px repeat-x;width:0;height:100%}
+div.jp-seeking-bg{background:url("http://i2.esmas.com/editorial-televisa/img/jplayer/pbar-ani.gif")}
+a.jp-mute,a.jp-unmute{width:18px;height:15px}
+div.jp-audio div.jp-type-single a.jp-mute,div.jp-audio div.jp-type-single a.jp-unmute{top:32px;left:274px}
+div.jp-audio div.jp-type-playlist a.jp-mute,div.jp-audio div.jp-type-playlist a.jp-unmute{top:32px;left:296px}
+div.jp-video a.jp-mute,div.jp-video a.jp-unmute{top:27px}
+div.jp-video-270p div.jp-type-single a.jp-mute,div.jp-video-270p div.jp-type-single a.jp-unmute{left:304px}
+div.jp-video-270p div.jp-type-playlist a.jp-unmute,div.jp-video-270p div.jp-type-playlist a.jp-mute{left:363px}
+div.jp-video-360p div.jp-type-single a.jp-mute,div.jp-video-360p div.jp-type-single a.jp-unmute{left:384px}
+div.jp-video-360p div.jp-type-playlist a.jp-mute,div.jp-video-360p div.jp-type-playlist a.jp-unmute{left:443px}
+a.jp-mute{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) 0 -186px no-repeat}
+a.jp-mute:hover{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) -19px -170px no-repeat}
+a.jp-unmute{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) 0 -170px no-repeat;display:none}
+a.jp-unmute:hover{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) -19px -186px no-repeat}
+div.jp-volume-bar{position:absolute;overflow:hidden;background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) 0 -250px repeat-x;width:46px;height:5px;cursor:pointer}
+div.jp-audio div.jp-type-single div.jp-volume-bar{top:37px;left:302px}
+div.jp-audio div.jp-type-playlist div.jp-volume-bar{top:37px;left:324px}
+div.jp-video div.jp-volume-bar{top:32px}
+div.jp-video-270p div.jp-type-single div.jp-volume-bar{left:332px}
+div.jp-video-270p div.jp-type-playlist div.jp-volume-bar{left:391px}
+div.jp-video-360p div.jp-type-single div.jp-volume-bar{left:412px}
+div.jp-video-360p div.jp-type-playlist div.jp-volume-bar{left:471px}
+div.jp-volume-bar-value{background:url(http://i2.esmas.com/editorial-televisa/img/tu/jplayer.png) 0 -256px repeat-x;width:0;height:5px}
+div.jp-current-time,div.jp-duration{position:absolute;font-size:.64em;font-style:oblique}
+div.jp-duration{text-align:right}
+div.jp-audio div.jp-type-single div.jp-current-time,div.jp-audio div.jp-type-single div.jp-duration{top:49px;left:130px;width:122px}
+div.jp-audio div.jp-type-playlist div.jp-current-time,div.jp-audio div.jp-type-playlist div.jp-duration{top:49px;left:164px;width:122px}
+div.jp-video div.jp-current-time,div.jp-video div.jp-duration{top:10px;left:0;width:98%;padding:0 1%}
+div.jp-playlist{width:100%;background-color:#ccc;border:1px solid #E4019C;border-top:none}
+div.jp-playlist ul{list-style-type:none;font-size:.72em;margin:0;padding:0 20px}
+div.jp-type-single div.jp-playlist li{font-weight:700;padding:5px 0 5px 20px}
+div.jp-type-playlist div.jp-playlist li{border-bottom:1px solid #eee;padding:5px 0 4px 20px}
+div.jp-type-playlist div.jp-playlist li.jp-playlist-last{border-bottom:none;padding:5px 0 5px 20px}
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current{list-style-type:square;list-style-position:inside;padding-left:8px}
+div.jp-type-playlist div.jp-playlist a{color:#666;text-decoration:none}
+div.jp-type-playlist div.jp-playlist div.jp-free-media{display:inline;margin-left:20px}
+div.jp-video div.jp-video-play{background:transparent url("http://i2.esmas.com/editorial-televisa/img/jplayer/jplayer.blue.monday.video.play.png") no-repeat center;position:absolute;cursor:pointer;z-index:2}
+div.jp-video div.jp-video-play:hover{background:transparent url("http://i2.esmas.com/editorial-televisa/img/jplayer/jplayer.blue.monday.video.play.hover.png") no-repeat center}
+div.jp-video-270p div.jp-video-play{top:-270px;width:480px;height:270px}
+div.jp-video-360p div.jp-video-play{top:-360px;width:640px;height:360px}
+div.jp-jplayer{width:0;height:0;background-color:#000}
+div.jp-video div.jp-jplayer{border:1px solid #009be3;border-bottom:none;z-index:1}
+div.jp-video-270p div.jp-jplayer{width:480px;height:270px}
+div.jp-video-360p div.jp-jplayer{width:640px;height:360px}
+div.jp-video a.jp-stop,div.jp-video div.jp-type-playlist a.jp-previous,div.jp-video div.jp-type-playlist a.jp-next{top:21px}
+div.jp-type-playlist div.jp-playlist a:hover,div.jp-type-playlist div.jp-playlist a.jp-playlist-current{color:#0d88c1}
+.pika-imgnav a.pause, .pika-imgnav a.play { display:none !important}
+/*FOOTER*/
+
+
+#footer {
+	width:980px;
+	margin:0 auto;
+	font-size:12px;
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+
+#footer img {
+	border:none;
+}
+
+#footer h1, #footer h2 {
+	padding:0;
+	margin:0;
+	font-weight:normal;
+}
+
+#footer ul {
+	margin:0;
+	padding:0;
+	font-size:12px;
+}
+
+#footer li {
+	/*padding-right:3px;*/
+}
+
+
+.identificador {
+	background-color:#131313;
+	height:38px;
+	color:#FFFFFF;
+	font-size:14px;
+	background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/tu_footer.gif);
+	background-repeat:no-repeat;
+	background-position:86px 5px;
+	padding:10px 0 0 20px;
+	max-height:28px;
+	
+}
+
+.container {
+	background-color:#d7d7d7;
+	padding:0 6px 6px 0;
+}
+
+.portada_sus {
+	background-color:#d7d7d7;
+	width:173px;
+	float:left;
+}
+
+.sus_ligas {
+	border-bottom:1px #fff solid;
+	padding:13px 5px 10px 13px;
+}
+
+.sus_ligas_img{
+	margin-right:10px;
+	margin-top:7px;
+	margin-left:7px;
+
+}
+
+.link_sus a {
+	text-transform:uppercase;
+	color:#898989;
+	text-decoration:none;
+	font-size:11px;
+	font-weight:normal;
+	position:relative;
+	top:-10px;
+}
+
+.link_sus a:hover {	
+	text-decoration:underline;
+}
+
+.bt_sus {
+	margin:7px 0 0 135px;
+}
+
+.bt_sus img {
+	margin-right:7px;
+}
+
+
+
+.port {
+	text-align:center;
+	color:#707070;
+	margin-top:15px;
+	padding-bottom:13px;
+	font-size:12px;
+}
+
+.port img{
+	margin:8px 0;
+}
+
+.port a {
+	font-size:10px;
+	text-decoration:none;
+	color:#464646;
+}
+
+.port a:hover {
+	text-decoration:underline;
+}
+
+.content {
+	width:776px;
+	background-color:#FFFFFF;
+	float:right;
+	padding:0 0;
+}
+
+.content a {
+	font-size:10px;
+	text-decoration:none;
+	color:#898989;
+
+}
+
+.content a:hover {
+	text-decoration:underline;
+}
+
+.content ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+	
+	
+}
+
+.ul1 ul, .ul2 ul {
+margin:6px 0 10px 0;
+}
+
+.ul1{
+	width:230px;
+	margin-left:20px;
+	float:left;
+	margin-top:21px;
+}
+
+.ul2{
+	width:200px;
+	margin-left:44px;
+	float:left;
+	margin-top:13px;
+}
+
+.ul2 h1, .ul2 h1 a {
+	color:#E1BB02;
+	font-size:12px;
+	text-decoration:none;
+	text-transform:uppercase;
+	
+}
+
+.ul1 h1, .ul1 h1 a {
+	color:#DA2032;
+	font-size:12px;
+	text-decoration:none;
+	text-transform:uppercase;
+	float:left;
+	width:173px;
+}
+
+.ver_mas {
+	float:right;
+}
+
+.ver_mas img{
+	margin-right:3px;
+}
+
+
+.ver_mas a{
+	color:#CCCCCC;
+	font-size:11px;
+}
+
+.li_nota {
+	list-style:url(http://i2.esmas.com/editorial-televisa/img/tu/bt_articulo.gif) !important;
+	margin-left:22px;
+	margin-bottom:10px;
+}
+
+.li_galeria {
+	list-style: url(http://i2.esmas.com/editorial-televisa/img/tu/bt_mm_r1_c3.gif) !important;
+	margin-left:22px;
+	margin-bottom:10px;
+	
+}
+
+.li_video {
+	list-style:url(http://i2.esmas.com/editorial-televisa/img/tu/bt_mm_r3_c1.gif) !important;
+	margin-left:22px;
+	margin-bottom:10px;
+	
+}
+
+.ul1 a:hover, .ul2 a:hover {
+	color:#666666;
+}
+
+.ul1 h2, .ul2 h2{
+	color:#555555;
+	font-size:12px;
+	display:inline;
+	
+
+}
+
+.ul1 h2 a, .ul2 h2 a {
+	color:#555555;
+	font-size:12px;
+	text-decoration:none;
+}
+
+
+.ul1 h2 a:hover, .ul2 h2 a:hover, ver_mas a:hover {
+	text-decoration:underline;
+}
+
+.footer_cat{
+	border-bottom:3px double #cccccc;
+	padding:0 0 7px 0;
+	margin-bottom:7px;
+}
+
+.otras_revistas {
+	background-color:#000000;
+	color:#898989;
+	padding:14px 20px 18px 20px;
+}
+
+.tit_otras {
+	border-bottom:1px dotted #898989;
+	padding-bottom:10px;
+	position:relative;
+}
+
+.ul3 {
+	width:175px;
+	margin-right:10px;
+	float:left;
+	margin-top:12px;
+	border-right: solid 1px #404040;
+}
+
+.ul3 h1, .ul3 h1 a {
+	color:#fff;
+	font-size:12px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+.ul3 h1 a:hover{
+	color:#666666;
+}
+
+.ul3 h2, .ul3 h2 a {
+	color:#898989;
+	font-size:11px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+.ul3 a:hover{
+	color:#666666;
+}
+
+.ul3 ul {
+	margin:6px 0 6px 12px !important;
+}
+
+.ul3 li{margin-bottom:3px;}
+
+select {
+	width:158px;
+	margin-top:13px;
+}
+
+.footer_televisa {
+	background-color:#e8e8e8;
+	padding:10px 20px 10px 15px;
+	font-size:11px;
+}
+
+.footer_televisa a {
+	color:#000;
+}
+
+.footer_televisa a:hover {
+	color:#666666;
+}
+/*CARRUSEL INFERIOR*/
+.tit_carrusel {
+	background-color:#000000;
+	width:956px;
+	/*margin:13px auto 0;*/
+	color:#898989;
+	font-size:12px;
+	text-transform:uppercase;
+	border-bottom:1px dotted #737373;
+	*border-bottom:1px dotted #737373;
+	padding:8px 63px 8px 35px;
+	max-width:882px;
+	text-align:left;
+}
+
+.carrusel {
+	width:980px;
+	background-image:url(http://i2.esmas.com/editorial-televisa/img/footer.v2/fondofooter.jpg);
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:12px;
+}
+
+a.prev, a.next {
+	width: 24px;
+	height: 45px;
+	display: block;
+	
+}
+
+/*Cambios footer*/
+
+a#foo1_prev, a#foo1_next {
+	width: 24px;
+	height: 45px;
+	display: block;
+	outline: 0px;
+	
+}
+a#foo1_prev {
+			background-image:url(http://i2.esmas.com/editorial-televisa/img/footer.v2/arrows.png);
+			position:relative;
+			top:-142px;
+			left:-23px;
+			background-position: 0 0; 
+			outline: 0px;
+}
+					
+a#foo1_prev:hover {	background-image:url(http://i2.esmas.com/editorial-televisa/img/footer.v2/arrows_over.png);
+					background-position: 0 0; 
+					border:none;
+					border:0;}
+
+a#foo1_next {		background-image: url(http://i2.esmas.com/editorial-televisa/img/footer.v2/arrows.png);
+					background-position: -24px 0;
+					left: 933px;
+					position: relative;
+					top: -187px;
+					outline: 0px;
+			}
+					
+a#foo1_next:hover {	background-image:url(http://i2.esmas.com/editorial-televisa/img/footer.v2/arrows_over.png);
+					background-position: -24px 0; }
+
+a#foo1_prev span, a#foo1_next span {
+	display: none;
+
+}
+
+
+/*fin del cambio*/
+
+.list_carousel {
+	padding: 0 0 0 0;
+	height:216px;
+	padding-left:23px !important;
+	*padding-left:0px;
+	overflow: hidden;
+	position: relative;
+}
+.list_carousel ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+.list_carousel li {
+	font-size: 12px;
+	background-color: #252525;
+	border-right:1px dotted #7a7a7a;
+	width: 227px;
+	height: 211px;
+	display: block;
+	float: left;
+	text-transform:uppercase;
+}
+
+.list_carousel li a {
+	color:#FFFFFF;
+	font-size:12px;
+	text-decoration:none;
+}
+
+.list_carousel li a:hover {
+	text-decoration:underline;
+}
+
+
+.clearfix {
+	float: none;
+	clear: both;
+}
+
+.tit_revista {
+	background-image:url(http://i2.esmas.com/editorial-televisa/img/footer.v2/bck_carrusel.jpg);
+	height:61px;
+	text-align:center;
+}
+
+.tit_revista img{
+	margin-top:10px;
+}
+
+
+
+.caroufredsel_wrapper{
+	/*margin-left:35px !important;*/
+	width:933px !important;
+}
+
+
+#foo2{
+	left:0 !important;
+}
+
+#foo2 li{
+	margin-right:0 !important;
+	width:233px;
+}
+
+.notas_revista {
+	padding:10px 10px 0 10px;
+}
+
+.notas_revista img{
+	float:left;
+	margin-top:3px;
+	*margin-top:0px;
+}
+
+.notas_revista h2 {
+	*height: 28px;
+    float: right;
+    height: 34px;
+    line-height: 10px;
+    margin-bottom: 7px;
+    overflow: hidden;
+    text-align: left;
+    width: 197px;
+}
+
+.notas_revista h2 a{
+    color: #898989;
+    font-size: 11px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.notas_revista h2 a:hover{
+	color:#666666;
+    text-decoration: none;
+}
+.login {
+	
+	height: 85px;
+	width: 200px;
+}
+/*PLECA URL*/
+
+.pleca_url {
+	background-color:#E01238;
+	padding:3px 20px;
+	font-size:14px;
+	color:#fff;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-weight:lighter;
+	*+ padding:3px 20px;
+	*+font-family:"Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif;
+	*height:17px;
+}
+
+.pleca_url_sec {
+	float:right;
+	color:#fff;
+	font-size:10px;
+	margin-top:2px;
+	font-weight:lighter;
+}
+
+.pleca_url_sec a {
+	text-transform:uppercase;
+	color:#fff;
+	text-decoration:none;
+	font-weight:lighter;
+}
+
+
+.pleca_url_sec a:hover {
+	text-decoration:underline;
+}
+
+/*NUEVOS ESTILOS PARA GALERIAS*/
+#wrapper_fotog {
+	width:610px;
+	/*background-color:#000000;*/
+	padding:14px;
+	max-width:610px;
+	text-align:left;
+	margin-bottom:14px;
+	font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif;
+	margin-top:-1px;
+}
+
+#wrapper_fotog .container_fotog {
+  /* background-image: url("http://i2.esmas.com/editorial-televisa/img/tu/bck_fotog.gif");*/
+    margin-left: -30px;
+    margin-right: -14px;
+    margin-top: -12px;
+    padding: 24px;
+}
+
+#wrapper_fotog .fotogal {
+	width:622px;
+	height:655px;
+	float:left;
+}
+
+#wrapper_fotog .fotog_colright {
+	float:right;
+	width:302px;
+}
+
+#wrapper_fotog .c_banner {
+	border:1px solid #666;
+	margin-bottom:16px;
+}
+
+#wrapper_fotog .s_banner {
+	border:1px solid #666;
+	margin-top:12px;
+	width:728px;
+	height:90px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+#wrapper_fotog .pleca_og {
+	background-color:#2A2A2A;
+	padding:7px 0 0 7px;
+	color:#FFFFFF;
+	height:35px;
+	max-height:28px;
+	text-transform:uppercase;
+}
+
+#wrapper_fotog .pleca_og h1{
+	font-size:16px;
+	color:#CCCCCC;
+	font-weight:normal;
+}
+
+#wrapper_fotog .otras_galerias {
+}
+
+#wrapper_fotog .otras_galerias li {
+	border:#333333 solid 1px;
+	background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_otras.jpg);
+	background-repeat:repeat-x;
+	background-color:#242424;
+	width:300px;
+	margin-top:3px;
+	padding:3px 7px 3px 3px;
+	max-width:290px;
+	list-style:none;
+}
+
+#wrapper_fotog .otras_galerias img {
+	border: 1px solid #333333;
+	float:left;
+}
+
+#wrapper_fotog .otras_galerias h2, #wrapper_fotog .otras_galerias h2 a{
+	float:right;
+	font-size:12px;
+	color:#666666;
+	text-decoration:none;
+	width:227px;
+	margin-top:5px;
+}
+
+#wrapper_fotog .otras_galerias h2 a:hover{
+	color:#999999;
+}
+
+
+#wrapper_fotog .liga {
+	color:#FFFFFF;
+}
+/*ESTILOS GALERIAS*/
+
+.ad-gallery {
+  width: 608px;
+}
+.ad-gallery, .ad-gallery * {
+  margin: 0;
+  padding: 0;
+}
+  .ad-gallery .ad-image-wrapper {
+    width: 621px !important;
+    height: 550px !important;
+	height: 510px\9 !important ;
+    margin-bottom: 2px;
+    position: relative;
+	border: 1px solid #ccc;
+	background-color:#F0F0F0;
+
+	
+  }
+  .ad-image{
+    width: 607px !important;
+	text-align:center;
+  }
+    .ad-gallery .ad-image-wrapper .ad-loader {
+      position: absolute;
+      z-index: 10;
+      top: 48%;
+      left: 48%;
+      
+    }
+    .ad-gallery .ad-image-wrapper .ad-next {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 25%;
+      height: 100%;
+      cursor: pointer;
+      display: block;
+      z-index: 100;
+    }
+    .ad-gallery .ad-image-wrapper .ad-prev {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 25%;
+      height: 100%;
+      cursor: pointer;
+      display: block;
+      z-index: 100;
+    }
+    
+      .ad-gallery .ad-image-wrapper .ad-prev .ad-prev-image, .ad-gallery .ad-image-wrapper .ad-next .ad-next-image {
+        background: url(http://i2.esmas.com/editorial-televisa/img/tu/arrows_gal_r1_c1.png);
+        width: 37px;
+        height: 37px;
+        display: none;
+        position: absolute;
+        top: 47%;
+        left: 10px;
+        z-index: 101;
+      }
+      .ad-gallery .ad-image-wrapper .ad-next .ad-next-image {
+        background: url("http://i2.esmas.com/editorial-televisa/img/tu/arrows_gal_r2_c3.png") repeat scroll 0 0 transparent;
+        width: 37px;
+        height: 37px;
+        right: 10px;
+        left: auto;
+      }
+    .ad-gallery .ad-image-wrapper .ad-image {
+      position: absolute;
+      top: 0;
+      left: 7px !important;
+      z-index: 9;
+	  height:440px!important;
+	  background-color:#fff;
+	  z-index:1;
+	 
+    }
+	
+	 .ad-image a {
+		/*width:622px;*/
+		text-align:center;
+		display:block;
+	}
+      
+	  
+	  .ad-gallery .ad-image-wrapper .ad-image a img {
+        border: 0;
+		margin-top:15px;
+      }
+      .ad-gallery .ad-image-wrapper .ad-image .ad-image-description {
+		background-color: #FFFFFF;
+		color: #EA169C;
+		font-weight: 700;
+		left: 0;
+		padding: 7px;
+		position: relative;
+		text-align: left;
+		top: -13px;
+		width: 515px !important;
+		z-index: 2;
+	
+      }
+	  
+      * html .ad-gallery .ad-image-wrapper .ad-image .ad-image-description {
+        background: none;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (enabled=true, sizingMethod=scale, src='opa75.png');
+      }
+        .ad-gallery .ad-image-wrapper .ad-image .ad-image-description .ad-description-title {
+          display: block;
+        }
+  .ad-gallery .ad-controls {
+    height: 20px;
+	width:160px;
+  }
+    .ad-gallery .ad-info {
+		color:#999;
+		font-size:14px;
+        float: right;
+		position:relative;
+		top: -134px;
+		right:-214px;
+    }
+    .ad-gallery .ad-slideshow-controls {
+		margin-left:15px;
+	  	z-index:800;
+	 
+    }
+       .ad-gallery .ad-slideshow-controls .ad-slideshow-stop {
+        /*padding-right: 5px;*/
+        cursor: pointer;
+		float:left;
+		margin-left:0px;
+		margin-left:0px\9;
+      }
+	  .ad-gallery .ad-slideshow-controls .ad-slideshow-start {
+	   /*padding-right: 5px;*/
+        cursor: pointer;
+		float:left;
+		margin-left:14px;
+		margin-left:0px\9;
+	  }
+      .ad-gallery .ad-slideshow-controls .ad-slideshow-countdown {
+        font-size: 11px;
+		color:#ccc;
+		width:13px;
+		/*float:left;*/
+		padding-left:28px !important;
+		padding-left:15px !important \9;
+		
+      }
+    .ad-gallery .ad-slideshow-running .ad-slideshow-start {
+      cursor: default;
+      font-style: italic;
+    }
+  .ad-gallery .ad-nav {
+    width: 622px;
+    position: relative;
+	/*background-color:#000000;*/
+	
+  }
+    .ad-gallery .ad-forward, .ad-gallery .ad-back {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      z-index: 10;
+    }
+    /* IE 6 doesn't like height: 100% */
+    * html .ad-gallery .ad-forward, .ad-gallery .ad-back {
+      height: 86px;
+    }
+    .ad-gallery .ad-back {
+      cursor: pointer;
+      left: 10px;
+      width: 13px;
+      display: block;
+      background: url(http://i2.esmas.com/editorial-televisa/img/tu/ad_scroll_back2.png) 0px 29px no-repeat;
+    }
+    .ad-gallery .ad-forward {
+      cursor: pointer;
+      display: block;
+      right: 10px;
+      width: 13px;
+      background: url(http://i2.esmas.com/editorial-televisa/img/tu/ad_scroll_forward2.png) 0px 29px no-repeat;
+	  height:86px;
+    }
+    .ad-gallery .ad-nav .ad-thumbs {
+		height: 86px;
+		left: 30px;
+		overflow: hidden;
+		position: relative;
+		top: -13px;
+		width: 564px;
+    }
+      .ad-gallery .ad-thumbs .ad-thumb-list {
+        float: left;
+        width: 9000px;
+        list-style: none;
+		height:86px;
+		margin-top:12px;
+
+      }
+        .ad-gallery .ad-thumbs li {
+          float: left;
+          padding-right: 5px;
+		
+        }
+          .ad-gallery .ad-thumbs li a {
+            display: block;
+			outline:none;
+          }
+            .ad-gallery .ad-thumbs li a img {
+              border: 1px solid #333;
+              display: block;
+            }
+            .ad-gallery .ad-thumbs li a.ad-active img {
+              border: 1px solid #333;
+            }
+/* Can't do display none, since Opera won't load the images then */
+.ad-preloads {
+  position: absolute;
+  left: -9000px;
+  top: -9000px;
+}
+
+.f_horizontal {
+	width:101px;
+	height:71px;
+}
+
+.f_vertical {
+	width:51px;
+	height:71px;
+}
+
+.tit_fotog {
+	/*background-color:#333333;
+	color:#CCCCCC;
+	/*padding:12px 12px 10px 12px;*/
+	margin-bottom:-5px;
+	margin-top:-30px;
+	margin-bottom:-18px\9;
+	margin-top:-25px\9;
+}
+
+.tit_fotog h1 {
+	/*font-size: 17px;*/
+    margin-bottom: 10px;
+   /* margin-left: -50px;*/
+    text-align: left;
+}
+
+.descripcion {
+	width:610px;
+	height:60px;
+	background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_descripcion2.jpg);
+	color:#FFFFFF;
+	font-size:14px;
+	z-index:1;
+}
+
+.ad_share {
+	width:610px;
+	max-width:584px;
+	height:34px;
+	max-height:28px;
+	/*background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_share.jpg);*/
+	background-repeat:no-repeat;
+	font-size:10px;
+	color:#CCCCCC;
+	padding:6px 13px 0 13px;
+	float:right;
+	margin-right:40px;
+}
+
+.ad_share a{
+	color:#CCCCCC;
+	text-decoration: none;
+}
+
+.ad_share a:hover{
+	text-decoration: underline;
+}
+
+.ad_share ul {
+	list-style:none;
+	
+}
+
+.ad_share li {
+	float:left;
+	margin-right:3px;
+	/*margin-top:3px;*/
+}
+
+.enviar_amigo{
+	float:right;
+}
+
+
+.enviar_amigo img {
+	margin-right:5px;
+	position:relative;
+	top:5px;
+	
+}
+
+.player {
+	background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/bck_player2.jpg);
+	width:110px;
+	height:23px;
+	float:left;
+	margin-left:74px;
+	padding-top:4px;
+	max-height:19px;
+}
+
+.player img {
+	margin-left:10px;
+}
+
+/*galeria*/
+.rs2{width:135px;float:left;margin-left:20px!important;}
+.ad-image-detalles {  
+    background-color: #FFFFFF;
+    margin-left: 8px;
+    margin-top: -117px;
+    min-height: 56px;
+    overflow: visible;
+    position: absolute;
+    width: 607px;
+    z-index: 1;
+	/*max-height:74px;*/
+	margin-top: -70px\9;
+	height: 56px\9;
+	overflow:hidden\9;
+	}
+	
+	
+	
+.ad-image-detalles .player {     background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+	float:right;
+   /* margin-top: -52px;*/
+    width: 107px;
+	margin-left:0px;}
+.ad-image-detalles .player .ad-controls {width:100%}
+.ad-image-detalles .ad-slideshow-controls{   
+    background-color: #FFFFFF;
+    /*height: 30px;*/
+	margin-left: 1px;
+	margin-left: 0px\9;
+   /* padding-top: 15px;*/
+    width: 98px;}
+.ad-image-detalles .ad-info {    
+	color: #CCCCCC;
+    float: none;
+    font-weight: 700;
+    /*margin-left: 28px;*/
+    right: auto;
+    top: auto;}
+.ad-image-descripcion p{   
+    color: #EA169C;
+    font-weight: 700;
+    text-align: left;}
+div.ad-image-descripcion {
+	 background-color: #FFFFFF;
+    float: left;
+    font-family: Lucida Grande,Lucida Sans Unicode,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 13px !important;
+    /*margin-left: 8px;*/
+	width: 500px;
+    z-index: 1;
+ }
+div.ad-image-descripcion h1 { width:500px; color:#CCCCCC; font-size:13px !important; font-family:Lucida Grande,Lucida Sans Unicode,Verdana,Arial,Helvetica,sans-serif; font-weight:bold;}
+#wrapper_fotog .fotogal { height:auto; }
+/*.ad-slideshow-controls .ad-slideshow-running{
+width:80px!important;
+margin-left:15px!important;
+}*/
+
+/*Clases botones home*/
+.cont_btn{
+width:638px;
+}
+.btn_izq{
+float:left;
+width:300px;
+height:100px;
+}
+.btn_der{
+float:right;
+width:300px;
+height:100px;
+}
+.search {/*display:none !important*/}
+
+.sbanner object{
+position:relative;
+z-index:999;
+}
+.btn_conten{
+	width:636px;
+	height:110px;
+	background-image:url("http://i2.esmas.com/editorial-televisa/img/tu/bck_galerias.gif");
+	border:1px solid #CCCCCC;
+	margin-bottom:10px;
+}
+.btn_index{
+    height: 90px;
+    margin: 10px auto 0;
+    padding: 0;
+    text-align: center;
+    width: 600px;
+	}
+.sigueme_twitter{
+	margin-top:8px;
+	position:absolute;
+}	
+/*bases*/
+.tit_cat{background-repeat:no-repeat;height:50px;color:#FFF;font-family:Georgia, "Times New Roman", Times, serif;font-size:23px;text-transform:uppercase;max-height:43px;font-weight:lighter;width:620px; background-color:#197ABD;padding:7px 0 0 15px}
+.tit_cat_bases a{font-size:16px;color:#FFF;}
+.tit_cat_bases .activo a{color:#FFF!important}
+#txt_cat1{ margin:15px; text-align:justify;}
+#txt_cat2{ margin:15px; text-align:justify;}
+
+/*MÃ“DULO APPS*/
+.modulo_apps{
+	padding:10px 0 20px 0;
+}
+
+.modulo_apps ul{
+	list-style:none;
+	padding:0;
+}
+
+.modulo_apps_main{
+	background-image:url(http://i2.esmas.com/editorial-televisa/img/editorial/apps/apps_main_tu.jpg);
+	background-repeat:no-repeat;
+	height:268px;
+	overflow:hidden;
+}
+
+.modulo_apps_main .logo{
+	float:right;
+	width:278px;
+	margin-right:20px;
+	margin-top:16px;
+	height:auto;
+}
+
+.modulo_apps_main .txt{
+	height:132px;
+	overflow:hidden;
+	float:right;
+	width:278px;
+	color:#006ab5;
+	font-size:12px;
+	margin-right:20px;
+	margin-top:5px;
+	line-height:16px;
+	
+}
+
+.modulo_apps_main .txt p{
+	margin-bottom:10px;
+}
+
+.modulo_apps_main .apps_apple{
+	margin-left:26px;
+	font-size:12px;
+	float:left;
+}
+
+.modulo_apps_main .apps_wp{
+	margin-left:56px;
+	font-size:12px;
+	float:left;
+}
+
+.modulo_apps_main .apps_nokia{
+	margin-left:56px;
+	font-size:12px;
+	float:left;
+}
+
+
+.modulo_apps_main .apps_bb{
+	margin-left:76px;
+	font-size:12px;
+	float:left;
+}
+
+.modulo_apps_main .apps_apple li, .modulo_apps_main .apps_bb li, .modulo_apps_main .apps_wp li, .modulo_apps_main .apps_nokia li{
+	float:left;
+}
+.modulo_apps_main .apps_apple li a, .modulo_apps_main .apps_bb li a, .modulo_apps_main .apps_wp li a, .modulo_apps_main .apps_nokia li a{
+	color:#FFFFFF;
+	text-decoration:none;
+	display:block;
+	padding:3px 15px;
+}
+.modulo_apps_main .apps_apple li a:hover, .modulo_apps_main .apps_bb li a:hover, .modulo_apps_main .apps_wp li a:hover, .modulo_apps_main .apps_nokia li a:hover{
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+	border-radius:50px;
+	background-color:#DF2171;
+}
+
+.mod_todas_apps_tit{
+	color:#898989;
+	font-family:"Trebuchet MS", Tahoma, sans-serif;
+	text-transform:uppercase;
+	font-size:20px;
+	border-bottom: double 3px #898989;
+	padding:4px 0;
+	margin-top:18px;
+}
+
+.aplicaciones li{
+	width:294px;
+	border-right:1px solid #c2c2c2;
+	margin-top:25px;
+	float:left;
+	padding:0 10px;
+	font-family:"Trebuchet MS", Tahoma, sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	text-transform:uppercase;
+	
+}
+
+.icono_app{
+	float:left;
+	margin-right:11px;
+}
+
+.apps_txt{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-transform:none;
+	color:#555;
+	font-weight:normal;
+	height:265px;
+	overflow:hidden;
+}
+
+.apps_txt a{
+	color:#000000;
+	text-decoration:none;
+}
+
+.apps_txt a:hover{
+	text-decoration:underline;
+}
+
+.apps_txt p{
+	margin-top:10px;
+}
+
+.dispositivos{
+	background-color:#CDCDCD;
+	padding:10px 0;
+	height:80px;}
+
+.dispositivos li{
+	width:56px !important;
+	height:92px !important;
+	border-right:none !important;
+	margin-top:0;
+	float:left;
+	padding:0 0;
+	text-align:center;
+	line-height:11px;
+
+}
+
+.dispositivos li a{
+	color:#000000;
+	font-size:10px;
+	text-decoration:none;
+	text-transform:none;
+	font-weight:normal;
+}
+
+
+.dispositivos li a:hover{
+	text-decoration:underline;
+}
+
+.dispositivo_ch{
+	width:40px !important;
+}
+
+.lista_appr{
+	padding-right:0 !important;
+	border-right:none !important;
+}
+
+.contenido{width:980px;margin:0 auto;
+background-color:#FFFFFF;
+max-width:938px;}
+
+.contenido ul{
+	margin-left:-37px !important;
+}
+
+/*CAMBIO HEADER*/
+
+
+.columnas_header {
+	float:left;
+	width:586px;
+	height:35px;
+	margin-top:62px;
+	margin-left:162px;
+	
+	
+}
+
+	.columna1 {
+	float:left;
+	text-align:center;
+	margin-top:10px;
+	
+	}
+	.columna2 {
+	float:left;
+	height:35px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:11px;
+	color:#E5189A;
+	margin-top:10px;
+	margin-left:20px;
+	font-weight:bold;
+	
+	}
+	.columna3 {
+	float:left;
+	}
+		.columna3 img{
+		padding:5px;
+	}
+	
+	.columna4 {
+	float:left;
+	width:120px;
+	height:35px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:11px;
+	color:#006BB7;
+	margin-top:9px;
+
+	}
+	.columna5 {
+	float:left;
+	width:143px;
+	margin-top:7px;
+	}
+
+.campo_busqueda2 {
+	font-size: 11px;
+	height: 19px;
+	width:151px;
+	border:1px solid #b7b7b7;
+	color:#999999;
+	background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/buscarTu.jpg);
+	background-repeat: no-repeat;
+	background-position:top center;
+}
+
+.btn_enviar2 {
+	background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/btn_buscar.png);
+	vertical-align:top;
+	cursor:pointer;
+	height:19px;
+	width:55px;
+	padding-left:0;
+	border:0;
+	position:relative;
+}
+.cont_nheader{
+	float:right;
+	width:645px;
+	height:95px;
+	
+}
+.nLogo{
+	float:left;
+	width:407px;
+}
+.nCampaign{
+	float:left;
+	width:170px;
+}
+.nFlecha{
+	float:left;
+	width:12px;
+}
+.nDescarga{
+	float:left;
+	width:126px;
+	margin-top:8px;
+	}
+	
+		.nDescarga a{color:#FFFFFF; text-decoration:none}
+		.nDescarga a:hover{color:#FFFFFF; text-decoration:underline;}
+	
+		.nTextosh1{
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		font-size:12px;
+		color:#FFFFFF;
+		text-transform:uppercase;
+		text-align:center;
+		}
+		.nTextosp{
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		font-size:11px;
+		color:#FFFFFF;
+		margin-left:28px;
+		}
+		
+		
+.nSuscribete{
+	float:left;
+	width:126px;
+	margin-top:8px;		
+}
+
+	.nSuscribete a{color:#FFFFFF; text-decoration:none}
+	.nSuscribete a:hover{color:#FFFFFF; text-decoration:underline;}
+
+.nSeparacion {
+	float:left;
+	width:5px;
+	}
+
+.nRevista {
+	float:right;
+	position:relative;
+	top:-157px;
+	text-align:center;
+	left:25px;
+	}
+
+.nFondo {
+	height:37px;
+	float:left;
+	}
+
+.nFondologo{
+	float:left;
+	height:95px;
+	width:577px;
+	background-image:url(http://i2.esmas.com/editorial-televisa/img/tu/img_nfondologo.jpg);
+	}
+
+
+.align_ds{
+	position:relative;
+	left:169px;
+}
+
+.tit_app{ font-size:20px; font-weight:bold; color:#898989;}
+
+.redes_indices{width: 340px; height: 30px; float: left;}
+.redes_indices .cont_fb, .cont_tw, .cont_go{  
+    height: 19px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    width: 110px;
+	float:left;}
+.redes_indices .cont_go{ width:90px !important;}
+
+.playerTwitter{ text-align:center; width:646px; height:auto; margin-bottom:20px; margin-top:20px;}
+.tit_twitcam{color: #E60079; font-size: 20px;  margin: 0;  text-decoration: none;}
+.desc_twitcam{color: #333333;  font-size: 16px;  margin-top: 15px; font-weight:bold; text-align:left; margin-left:15px;}
+
+
+.sbanner_2 #div-gpt-ad-1322525793825-1_ad_container {margin:auto;width:728px;}

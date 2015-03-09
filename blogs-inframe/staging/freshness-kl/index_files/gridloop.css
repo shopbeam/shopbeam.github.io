@@ -1,0 +1,56 @@
+.post_grid {
+    float: left;
+    position: relative;
+    margin: 10px 10px 0 0;
+  }
+
+.post_grid.last {
+    margin-right: 0px;
+}
+
+.entry-title_grid {
+    font-size: 11px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 135px;
+    height: 48px;
+    color: white;
+    background: url('images/sidebar/thumbhover.png') no-repeat;
+    padding: 10px;
+    display: none;
+}
+
+.entry-title_grid h2 {
+    font-size: 10px;
+    text-decoration: none;
+    height: 31px;
+    overflow: hidden;
+}
+
+.post_grid a {
+    text-decoration: none;
+}
+
+.postThumbnail_grid img {
+    display: block;
+    height: 155px;
+    width: 155px;
+}
+
+.entry-title_grid a:link, .entry-title_grid a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.grid-view .page-link{
+    margin-top: 10px;
+}
+
+#infscr-loading em {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase; 
+    color: #D0D0D0
+}

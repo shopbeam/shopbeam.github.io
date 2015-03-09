@@ -1,0 +1,3663 @@
+/*
+Theme Name: KimK_3.0
+Theme URI: http://kimkardashian.celebuzz.com/
+Description: 2012 Redesign of the Kim Kardashian website
+Version: 3.0
+Author: Kim Kardashian and BuzzMedia
+*/
+
+/* Reset default browser styles */
+@import url('reset.css');
+/* Begin Document Structure */
+body {background: #ffffff url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_bg.jpg') repeat-x scroll 0 -97px; margin: 0 auto; padding: 0; font: 100%/1em Arial,sans-serif;  color: #000000; text-align: left; height: 100%;}
+#wrapper_container {width: 100%; margin: 0 auto;
+    background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_headerbg.png') no-repeat scroll center -123px;
+}
+#wrapper_container.gallery_detail_bkg {float: left; width: 100%; margin: 0 auto; background:  #000000 url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_bkg.jpg") no-repeat scroll center top;}
+#wrapper {width: 970px; margin: 0 auto; background-color: transparent;}
+#header  {width: 850px; height: 170px;margin: 0 auto; padding: 0 60px; position: relative;background-color: #d8d8d8;}
+
+#main-content {position: relative;}
+.main-image {width:850px;float: left; height:364px;}
+.main-photo {float: left; padding:0 25px 0 45px; width:235px;margin: 0;}
+.main-blog {float: left;margin:0; padding:0 25px 0 11px; width:235px;}
+.main-tweet {width:240px;float: left;}
+
+li {
+    display:inline-block;
+}
+
+@font-face {
+    font-family: 'AbelRegular';
+    src: url('fonts/abel/abel-regular-webfont.eot');
+    src: url('fonts/abel/abel-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/abel/abel-regular-webfont.woff') format('woff'),
+    url('fonts/abel/abel-regular-webfont.ttf') format('truetype'),
+    url('fonts/abel/abel-regular-webfont.svg#AbelRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoBlackRegular';
+    src: url('fonts/lato/lato-black-webfont.eot');
+    src: url('fonts/lato/lato-black-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/lato/lato-black-webfont.woff') format('woff'),
+    url('fonts/lato/lato-black-webfont.ttf') format('truetype'),
+    url('fonts/lato/lato-black-webfont.svg#latoBlackRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoBold';
+    src: url('fonts/lato/lato-bold-webfont.eot');
+    src: url('fonts/lato/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/lato/lato-bold-webfont.woff') format('woff'),
+    url('fonts/lato/lato-bold-webfont.ttf') format('truetype'),
+    url('fonts/lato/lato-bold-webfont.svg#latoBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoHairlineRegular';
+    src: url('fonts/lato/lato-hairline-webfont.eot');
+    src: url('fonts/lato/lato-hairline-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/lato/lato-hairline-webfont.woff') format('woff'),
+    url('fonts/lato/lato-hairline-webfont.ttf') format('truetype'),
+    url('fonts/lato/lato-hairline-webfont.svg#latoHairlineRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latolightRegular';
+    src: url('fonts/lato/lato-light-webfont.eot');
+    src: url('fonts/lato/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/lato/lato-light-webfont.woff') format('woff'),
+    url('fonts/lato/lato-light-webfont.ttf') format('truetype'),
+    url('fonts/lato/lato-light-webfont.svg#latolightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoRegular';
+    src: url('fonts/lato/lato-regular-webfont.eot');
+    src: url('fonts/lato/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/lato/lato-regular-webfont.woff') format('woff'),
+    url('fonts/lato/lato-regular-webfont.ttf') format('truetype'),
+    url('fonts/lato/lato-regular-webfont.svg#latoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+#page {
+    background:transparent;
+    clear:both;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height:20px;
+    text-align:left;
+    width: 890px;
+    margin: 0 auto;
+}
+
+
+#content {
+    float: left;
+    background-color: transparent;
+}
+
+#content-enlarged {
+    background-color: transparent;
+    margin: 0 auto;
+    width:850px;
+}
+
+#content-container {
+    width: 523px;
+    background:transparent;
+}
+
+.splash_rule {
+    clear: both;
+    border-bottom: #777777 solid 1px;
+    height: 1px;
+    margin:0 0 10px -10px;
+}
+
+h2.splash {
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    text-decoration: none;
+    line-height: 17px;
+    color: #ffffff;
+    text-indent:-1em;
+}
+
+h2.splash a {
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 17px;
+    color: #ffffff;
+    text-indent:-1em;
+}
+
+h2.splash a:hover {
+    color: #ac4669;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 17px;
+    text-indent:-1em;
+}
+
+h2.splash a:active {
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 17px;
+    color: #ffffff;
+    text-indent:-1em;
+}
+
+.userprofile input {
+    color: #ac4669;
+}
+
+/* Page Header elements */
+
+.single { margin: 0px auto; padding: 0px;height: 170px;}
+.gallery {background: #000000 url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_gallery_header.jpg') no-repeat scroll 0 0; margin: 0px auto; padding: 0px; height: 120px;}
+
+#header-link {
+    height: 137px;
+    overflow:hidden;
+    position:absolute;
+    text-indent:-9999px;
+    top:32px;
+    width:850px;
+    z-index:9;
+    background: #d8d8d8 url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kim_header.jpg') no-repeat scroll bottom center;
+}
+
+#header-link-splash {
+    height:90px;
+    overflow:hidden;
+    position:absolute;
+    text-indent:-9999px;
+    width:850px;
+    z-index:9;
+    /* top:110px; */
+}
+
+#photos-link-splash {
+    height:20px;
+    overflow:hidden;
+    position:absolute;
+    text-indent:-9999px;
+    width:200px;
+    z-index:9;
+    top:335px;
+}
+
+
+#blog-link-splash {
+    height:20px;
+    overflow:hidden;
+    position:absolute;
+    text-indent:-9999px;
+    width:200px;
+    z-index:9;
+    top:335px;
+    left:280px;
+}
+
+
+#header-link-gallery {
+    height:120px;
+    overflow:hidden;
+    position:absolute;
+    text-indent:-9999px;
+    top:0px;
+    width:850px;
+    z-index:9;
+}
+
+.kk_banner728-wrapper {
+    margin:0 auto;
+    padding:0;
+    width: 728px;}
+
+.kk_banner728 {
+    margin:0 auto;
+    padding:18px 0 0 0;
+}
+
+
+#content-left {
+    clear:both;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    height:100%;
+    width: 492px;
+    line-height:18px;
+    text-align:left;
+    padding:0;
+
+}
+
+.post-metadata {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    color: #636363;
+    line-height:18px;
+    font-weight: normal;
+    clear: both;
+    text-transform:capitalize;
+    padding: 5px 0 10px 0;
+}
+
+.entry_permalink p.post-metadata {font-family:Arial,sans-serif;font-size:11px;color: #636363;font-weight: normal;float:left;margin: 0 0 10px 0;text-transform:capitalize;}
+.entry_permalink .post-metadata a{color: #2aa6ae; text-decoration: none;}
+.entry_permalink .post-metadata a:hover{color: #0a5962; text-decoration: none;}
+
+/* addThis styles
+----------------------------------*/
+
+#content ul.addthis_toolbox{
+    background:none repeat scroll 0 0 #dadada;
+    border:none;
+    display:block;
+    float:left;
+    margin:0 0 15px 0;
+    padding:0;
+    width:492px;
+}
+
+#content ul.addthis_toolbox li.service{
+    border-right:solid 1px #c6c6c6;
+    padding:5px 16px 5px 0;
+    display:inline;
+    float:left;
+}
+
+#content ul.addthis_toolbox li.service_facebook{
+    border-right:solid 1px #c6c6c6;
+    color:#636363;
+    padding:5px 10px 5px 0;
+    display:inline;
+    float: left;
+}
+
+
+#content ul.addthis_toolbox li.service_twitter{
+    border-right:solid 1px #c6c6c6;
+    padding:5px 16px 5px 0;
+    display:inline;
+    color:#636363;
+    float: left;
+}
+
+
+#content ul.addthis_toolbox li.service_email{
+    border-right:solid 1px #c6c6c6;
+    padding:5px 16px 5px 0;
+    display:inline;
+    float: left;
+    color:#636363;
+}
+
+#content ul.addthis_toolbox li.service_myspace{
+    border-right:solid 1px #c6c6c6;
+    padding:5px 16px 5px 0;
+    display:inline;
+    float: left;
+    color:#636363;
+}
+
+#content ul.addthis_toolbox li.share{
+    padding:5px 16px 5px 0;
+    display:inline;
+    float:left;
+    color:#636363;
+}
+
+#content ul.addthis_toolbox .service a, #content ul.addthis_toolbox li.service_myspace a, #content ul.addthis_toolbox li.service_twitter a, #content ul.addthis_toolbox li.service_email a, #content ul.addthis_toolbox li.service_facebook a{
+    font-weight: normal;
+    color:#636363;
+    display:inline;
+    float:left;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+}
+
+
+#content ul.addthis_toolbox .service a:hover, #content ul.addthis_toolbox li.service_myspace a:hover, #content ul.addthis_toolbox li.service_twitter a:hover, #content ul.addthis_toolbox li.service_email a:hover, #content ul.addthis_toolbox li.service_facebook a:hover{
+    color:#AB4668;
+}
+
+#content ul.addthis_toolbox  .at300bs.at15t_facebook {
+    background-position:0 0;
+    float:left;
+    margin:0 5px 0 18px;
+}
+#content ul.addthis_toolbox  .at300bs.at15t_twitter {
+    background-position:0 -38px;
+    float:left;
+    margin:0 5px 0 20px;
+}
+#content ul.addthis_toolbox .at300bs.at15t_myspace {
+    background-position:0 -19px;
+    float:left;
+    margin:0 5px 0 20px;
+}
+#content ul.addthis_toolbox .at300bs.at15t_email {
+    background-position:0 -57px;
+    float:left;
+    margin:0 5px 0 20px;
+}
+
+#content ul.addthis_toolbox .at300bs.at15t_expanded, .at300bs.at15t_compact {
+    background-position:0 -76px;
+    float:left;
+    margin:0 5px 0 20px;
+}
+
+#content ul.addthis_toolbox li.share a{
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    color: #636363;
+    font-weight: normal;
+
+}
+
+#content ul.addthis_toolbox  .at300bs {
+
+    background:url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/sprite_share.gif') no-repeat scroll 0 0 transparent;
+    display:block;
+    height:18px;
+    line-height:18px !important;
+    overflow:hidden;
+    width:18px;
+
+}
+
+.at300b, .at300bo, .at300m, .at300bs {
+    font-size: 11px;
+}
+
+.banner728-wrapper {
+    width: 728px;
+    margin: 15px auto;
+}
+
+#sidebar ul.addthis_toolbox {
+    background:none repeat scroll 0 0;
+    display:block;
+    height:18px;
+    margin-top:20px;
+    padding:0;
+    width:300px;
+}
+#sidebar ul.addthis_toolbox li.service {
+    border-right:1px solid #636363;
+    padding:0px 5px 0 0;
+}
+
+#sidebar ul.addthis_toolbox li.service_facebook {
+    border-right:1px solid #636363;
+    padding:0px 5px 0 0;
+    display:inline;
+    float: left;
+    width:80px;
+}
+
+#sidebar ul.addthis_toolbox li.service_twitter {
+    border-right:1px solid #636363;
+    padding:0px 5px 0 0;
+    display:inline;
+    float: left;
+    width:70px;
+}
+
+#sidebar ul.addthis_toolbox li.service_email {
+    border-right:1px solid #636363;
+    padding:0px 5px 0 0;
+    display:inline;
+    float: left;
+    width:65px;
+}
+
+#sidebar ul.addthis_toolbox .service a {
+    color:#636363;
+    display:inline;
+    float:left;
+}
+#sidebar ul.addthis_toolbox .at300bs.at15t_facebook {
+    background-position:0 0;
+    float:left;
+    margin:0 7px 0 0;
+}
+#sidebar ul.addthis_toolbox .at300bs.at15t_twitter {
+    background-position:0 -38px;
+    float:left;
+    margin:0 7px;
+}
+#sidebar ul.addthis_toolbox .at300bs.at15t_myspace {
+    background-position:0 -19px;
+    float:left;
+    margin:0 7px;
+}
+#sidebar ul.addthis_toolbox .at300bs.at15t_email {
+    background-position:0 -57px;
+    float:left;
+    margin:0 7px;
+}
+#sidebar ul.addthis_toolbox .at300bs.at15t_expanded, .at300bs.at15t_compact {
+    background-position:0 -76px;
+    float:left;
+    margin:0 7px;
+}
+#sidebar ul.addthis_toolbox li.share a {
+    color:#636363;
+    float:left;
+}
+#sidebar ul.addthis_toolbox .at300bs {
+    background:url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/sprite_share.gif') no-repeat scroll 0 0 transparent;
+    display:block;
+    height:18px;
+    line-height:18px !important;
+    overflow:hidden;
+    width:18px;
+}
+
+.date {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    color: #636363;
+}
+
+.comments {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    color: #2aa6ae;
+}
+
+.comments a {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    color: #2aa6ae;
+}
+
+.comments a:hover{
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    color: #0a5962;
+}
+
+/* Navigation */
+
+#menu {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/nav_bg.png') repeat-x; width:850px; padding:0 60px;height:42px; margin:0 auto;}
+#navbar {margin:0; padding:0; width: 850px; list-style: none; overflow: hidden; display: inline;height:27px;}
+#navbar li {display:inline;list-style-image:none;list-style-position:outside;list-style-type:none;padding:0;float:left;height: 17px;margin: 4px 13px 5px 13px;text-align: center;}
+#navbar a {float:left; height:17px !important; overflow:hidden; padding:0; font-family:'AbelRegular';font-size:1em; font-weight: normal; color: #565656;text-transform: uppercase;}
+#navbar a:hover {color: #565656;background-color: #e8f0f0;}
+#navbar a:active, #navbar a.selected {color: #b6b6b6;}
+
+#navbar li#navbar-space {margin:0;padding:0;font-family:Arial,sans-serif;width: 1px;
+    font-size:11px; font-weight: normal;text-indent: 0;  background: #d2d2d2 url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/spacer.png") no-repeat scroll 0 0 ;display:inline-block;height:22px;}
+#navbar li#navbar-space-login {margin:7px 0 0 0;padding:0;font-family:Arial,sans-serif;width: 1px;
+    font-size:11px; font-weight: normal;text-indent: 0; background-color: #d2d2d2;display:inline-block;height:10px;}
+
+
+#navbar-1 a {width:110px;padding: 1px 0 0 0;}
+#navbar-2 a {width:119px;padding: 1px 0 0 0;}
+#navbar-3 a {width:119px;padding: 1px 0 0 0;}
+#navbar-4 a {width:115px;padding: 1px 0 0 0;}
+#navbar-5 a {width:104px;padding: 1px 0 0 0;}
+#navbar-6 a {width:95px;padding: 1px 0 0 0;}
+#navbar-7 a {text-indent:0; padding: 0;font-family:Arial,sans-serif;font-size:.688em; font-weight: normal; text-transform: none;width:50px;}
+#navbar-8 a {text-indent:0; padding:0;font-family:Arial,sans-serif;font-size:.688em; font-weight: normal; text-transform: none; width:50px;}
+
+#navbar-1 a:hover {width:110px;padding: 1px 0 0 0;}
+#navbar-2 a:hover {width:119px;padding: 1px 0 0 0;}
+#navbar-3 a:hover {width:119px;padding: 1px 0 0 0;}
+#navbar-4 a:hover {width:115px;padding: 1px 0 0 0;}
+#navbar-5 a:hover {width:104px;padding: 1px 0 0 0;}
+#navbar-6 a:hover {width:95px;padding: 1px 0 0 0;}
+#navbar-7 a:hover {width:50px;padding: 0;color: #b6b6b6;background-color: transparent;}
+#navbar-8 a:hover {width:50px;padding: 0;color: #b6b6b6;background-color: transparent;}
+
+#navbar-1.selected a {width:110px;color: #b6b6b6;padding: 1px 0 0 0;}
+#navbar-2.selected a {width:119px;color: #b6b6b6;padding: 1px 0 0 0;}
+#navbar-3.selected a {width:119px;color: #b6b6b6;padding: 1px 0 0 0;}
+#navbar-4.selected a {width:115px;color: #b6b6b6;padding: 1px 0 0 0;}
+#navbar-5.selected a {width:104px;color: #b6b6b6;padding: 1px 0 0 0;}
+#navbar-6.selected a {width:95px;color: #b6b6b6;padding: 1px 0 0 0;}
+#navbar-7.selected a {text-indent: 0; padding: 0;width:50px;}
+#navbar-8.selected a {text-indent:0; padding: 0;width:50px;}
+
+
+/* Gallery Navigation */
+
+#menu_gallery {background: #000000 url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') 0 -44px no-repeat; height:22px;margin:0 auto;width:850px; padding:0;}
+#navbar_gallery {margin: 0; padding: 0; width: 850px; list-style: none; overflow: hidden; display: inline;height:22px;}
+#navbar_gallery li {display:inline;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding:0;float:left;height:22px;}
+#navbar_gallery a {float:left; height:18px !important; overflow:hidden; padding:0; text-indent:-9999px; font-family:Arial,sans-serif;
+    font-size:11px; font-weight: normal; color: #ffffff;}
+#navbar_gallery a:hover {background-position:0 -22px; color: #ec96b5;}
+#navbar_gallery a:active, #navbar_gallery a.selected {background-position:0 -44px;  color: #ec96b5;}
+
+#navbar_gallery li#navbar-space_gallery {margin:0;padding:3px 3px 0 4px;font-family:Arial,sans-serif;
+    font-size:11px; font-weight: normal;text-indent: 0; color: #767676;display:inline-block;height:18px;}
+
+#navbar-1_gallery a {width:67px;}
+#navbar-2_gallery a {width:88px;}
+#navbar-3_gallery a {width:101px;}
+#navbar-4_gallery a {width:101px;}
+#navbar-5_gallery a {width:121px;}
+#navbar-6_gallery a {width:89px;}
+#navbar-7_gallery a {width:77px;}
+#navbar-8_gallery a {width:86px;}
+#navbar-9_gallery a {text-indent: 0; padding: 4px 2px 0 29px;}
+#navbar-10_gallery a {text-indent: 0; padding: 4px 0 0 4px;}
+
+#navbar-1_gallery a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') 0px -22px no-repeat;}
+#navbar-2_gallery a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -67px -22px no-repeat;}
+#navbar-3_gallery a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -155px -22px  no-repeat;}
+#navbar-4_gallery a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -256px -22px  no-repeat;}
+#navbar-5_gallery a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -357px -22px no-repeat;}
+#navbar-6_gallery a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -478px -22px no-repeat;}
+#navbar-7_gallery a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -567px -22px no-repeat;}
+#navbar-8_gallery a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -644px -22px no-repeat;}
+#navbar-9_gallery a:hover {text-indent: 0;}
+#navbar-10_gallery a:hover {text-indent: 0;}
+
+#navbar-1_gallery.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') 0px 0px no-repeat;}
+#navbar-2_gallery.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -67px 0 no-repeat;}
+#navbar-3_gallery.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -155px 0 no-repeat;}
+#navbar-4_gallery.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -256px 0 no-repeat;}
+#navbar-5_gallery.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -357px 0 no-repeat;}
+#navbar-6_gallery.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -478px 0 no-repeat;}
+#navbar-7_gallery.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -567px 0 no-repeat;}
+#navbar-8_gallery.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -644px 0 no-repeat;}
+#navbar-9_gallery.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -730px 0 no-repeat; text-indent: 0; padding: 4px 0 0 11px;}
+#navbar-10_gallery.selected a {text-indent: 0; padding:4px 0 0 1px;}
+
+
+#navbar-9_gallery a.pad-pill { padding:4px 5px 0 20px;}
+#navbar-10_gallery a.pad-pill2 {padding:4px 0 0 6px;}
+
+/* SPlASH PAGE Navigation */
+
+#menu_splash {background:#000000 url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') 0 -44px no-repeat; height:22px;margin:0 auto;width:850px; padding:0;}
+#navbar_splash {margin: 0; padding: 0; width: 850px; list-style: none; overflow: hidden; display: inline;height:22px;}
+#navbar_splash li {display:inline;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding:0;float:left;height:22px;}
+#navbar_splash a {float:left; height:18px !important; overflow:hidden; padding:0; text-indent:-9999px; font-family:Arial,sans-serif;
+    font-size:11px; font-weight: normal; color: #ffffff;}
+#navbar_splash a:hover {background-position:0 -22px; color: #ec96b5;}
+#navbar_splash a:active, #navbar a.selected_splash {background-position:0 0;  color: #ec96b5;}
+
+#navbar_splash li#navbar-space_splash {margin:0;padding:3px 3px 0 4px;font-family:Arial,sans-serif;
+    font-size:11px; font-weight: normal;text-indent: 0; color: #767676;display:inline-block;height:18px;}
+
+#navbar-1_splash a {width:67px;}
+#navbar-2_splash a {width:88px;}
+#navbar-3_splash a {width:101px;}
+#navbar-4_splash a {width:101px;}
+#navbar-5_splash a {width:121px;}
+#navbar-6_splash a {width:89px;}
+#navbar-7_splash a {width:77px;}
+#navbar-8_splash a {width:86px;}
+#navbar-9_splash a {text-indent:0; padding:4px 2px 0 29px;}
+#navbar-10_splash a {text-indent: 0; padding:4px 0 0 4px;}
+
+#navbar-1_splash a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') 0px -22px no-repeat;}
+#navbar-2_splash a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -67px -22px no-repeat;}
+#navbar-3_splash a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -155px -22px no-repeat;}
+#navbar-4_splash a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -256px -22px no-repeat;}
+#navbar-5_splash a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -357px -22px no-repeat;}
+#navbar-6_splash a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -478px -22px no-repeat;}
+#navbar-7_splash a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -567px -22px no-repeat;}
+#navbar-8_splash a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -644px -22px no-repeat;}
+#navbar-9_splash a:hover {text-indent: 0;}
+#navbar-10_splash a:hover {text-indent: 0;}
+
+#navbar-1_splash.selected a{background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') 0px 0 no-repeat;}
+#navbar-2_splash.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -67px 0 no-repeat;}
+#navbar-3_splash.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -155px 0 no-repeat;}
+#navbar-4_splash.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -256px 0 no-repeat;}
+#navbar-5_splash.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -357px 0 no-repeat;}
+#navbar-6_splash.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -478px 0 no-repeat;}
+#navbar-7_splash.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -567px 0 no-repeat;}
+#navbar-8_splash.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -644px 0 no-repeat;}
+#navbar-9_splash.selected a {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kk_splash_nav.jpg') -730px 0 no-repeat; text-indent: 0; padding:4px 0 0 11px;}
+#navbar-10_splash.selected a {text-indent: 0; padding:4px 0 0 1px;}
+
+#navbar-9_splash a.pad-pill { padding:4px 5px 0 20px;}
+#navbar-10_splash a.pad-pill2 {padding:4px 0 0 6px;}
+
+/* PHOTOS Navigation */
+h3.photo-menu{float: left;}
+#photos-menu {height:20px;padding:0;display:block;float:left;margin: 5px 0 15px 0;width:750px;}
+#photos-navbar {margin: 0; padding: 0; width: 520px; list-style: none; overflow: hidden; display: inline;height:20px;}
+#photos-navbar li {text-align: center; display:inline;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding: 0 5px 0 5px;float:left;height:20px;overflow:hidden;}
+#photos-navbar li a {margin: 0 auto; float:left; height:20px !important; overflow:hidden; padding:0; font-family:Arial,sans-serif;
+    font-size:12px; font-weight: bold; color: #000000;line-height:20px;}
+#photos-navbar li a:hover {color: #000000;background-color: #e8f0f0;}
+#photos-navbar li.selected {color: #b6b6b6;}
+
+#photos-navbar li#photo-navbar-space {margin:0;padding:0;font-family:Arial,sans-serif;width: 1px;
+    font-size:12px; font-weight: normal;text-indent: 0; background-color: #b6b6b6;display:inline-block;height:20px;}
+
+#photos-navbar-1 a {color: #000000;width:130px;}
+#photos-navbar-2 a {color: #000000;width:130px;}
+#photos-navbar-3 a {color: #000000;width:130px;}
+#photos-navbar-4 a {color: #000000;width:130px;}
+
+#photos-navbar-1 a:hover {color: #000000;background-color: #e8f0f0;}
+#photos-navbar-2 a:hover {color: #000000;background-color: #e8f0f0;}
+#photos-navbar-3 a:hover {color: #000000;background-color: #e8f0f0;}
+#photos-navbar-4 a:hover {color: #000000;background-color: #e8f0f0;}
+
+#photos-navbar-1.selected a {color: #b6b6b6;}
+#photos-navbar-2.selected a {color: #b6b6b6;}
+#photos-navbar-3.selected a {color: #b6b6b6;}
+#photos-navbar-4.selected a {color: #b6b6b6;}
+
+#sidebar {
+    float: right;
+    width:300px;
+    margin:20px 10px 0 0;
+}
+
+#sidebar-container {
+    width: 300px;
+    /* border-left: 1px dotted #c2c2c2; */
+}
+
+
+#splash-sidebar {
+    float: left;
+    width:240px;
+    margin:0;
+    clear:both;
+}
+
+#splash-sidebar-container {
+    width: 240px;
+}
+
+#mtaTwitter {
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height: 17px;
+    list-style: none;
+    margin:0 0 0 5px;
+    height:140px;
+    color: #ffffff;
+}
+
+
+#mtaTwitter li a {
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height: 17px;
+    color:#ec96b5;
+}
+
+#mtaTwitter li a:hover {
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height: 17px;
+    color: #ac4669;
+}
+
+li.odd {
+    margin: 0 0 10px 0;
+}
+
+.twitpic img {
+    display:block;
+    float:left;
+    width: 48px;
+    height: 48px;
+}
+
+span.twitname {
+    display:block;
+    float:left;
+    margin:0 0 0 10px;
+    width:140px;
+}
+
+#mtaTwitter li .twitname a {
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height: 17px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#mtaTwitter li .twitname a:hover {
+    color: #ac4669;
+}
+
+span.when {
+    display:block;
+    float:left;
+    margin:0 0 0 10px;
+    width:140px;
+}
+
+#mtaTwitter li .when a {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    line-height: 17px;
+    color: #ffffff;
+}
+
+#mtaTwitter li .when a:hover {
+    color: #ac4669;
+}
+
+/********Homepage Twitter Widget ****************/
+
+#twitter-3 {
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height: 17px;
+    list-style: none;
+    margin:0;
+    height:140px;
+    color: #ffffff;
+    display: block;
+    clear: both;
+}
+
+#twitter-3 li {
+    display: block;
+}
+
+#twitter-3 li a {
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height: 17px;
+    color:#ec96b5;
+}
+
+#twitter-3 li a:hover {
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height: 17px;
+    color: #ac4669;
+}
+
+
+li.twitter-avatar a img {
+    display:block;
+    float:left;
+    width: 48px;
+    height: 48px;
+    margin:10px 0 0 10px;
+}
+
+#twitter-3 span.entry-content {
+    display:block;
+    float:right;
+    margin:5px 0 0 5px;
+}
+
+
+#twitter-3 span.entry-meta {
+    display:block;
+    float:right;
+    margin:5px 0 0 0;
+    width:170px;
+    height:52px;
+}
+
+#twitter-3 span.entry-meta a {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    line-height: 17px;
+    color: #ffffff;
+}
+
+#twitter-3 span.entry-meta a:hover {
+    color: #ac4669;
+}
+
+span.from-meta {
+    display:none;
+}
+
+
+.widget_search {
+    float: left;
+    background: #fff url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/search_header.png) no-repeat scroll 0 0;height:29px;margin:0 0 10px;
+}
+
+#buzzmedia-grid-view-widget-3 {
+    float: left;
+}
+
+
+#cb_stories {
+    float:left;
+    position: relative;
+    width: 300px;
+}
+
+.cb_stories_header {
+    background: transparent url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/celebuzz-hdr.png) no-repeat scroll 0 0;
+    height:33px;
+    width:300px;
+}
+
+.cb_stories_small {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    line-height: 15px;
+}
+
+.cb_stories_small a {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    line-height: 15px;
+    text-decoration: none;
+    font-weight: normal!important;
+    color: #000000;
+}
+
+.cb_stories_small a:hover{
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    line-height: 15px;
+    text-decoration: none;
+    font-weight: normal!important;
+    color: #575757;
+}
+
+#categoryposts-3.widget_categoryposts, #categoryposts-4.widget_categoryposts {
+    margin:10px 0;
+    float: left;
+}
+
+#categoryposts-3.widget_categoryposts {
+    background: #ffffff url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/widget-bg.png) repeat;
+    padding: 10px;
+    width:280px;
+}
+#categoryposts-4.widget_categoryposts {
+    padding: 0 0 10px 0;
+    width:300px;
+}
+
+#categoryposts-3.widget_categoryposts h3.hidden, #categoryposts-4.widget_categoryposts h3.hidden  {
+    display:block;
+    font-family:'AbelRegular';
+    font-size: 22px;
+    color: #000000;
+    background: #ffffff;
+    margin: 0;
+}
+#categoryposts-3.widget_categoryposts h3.hidden {
+    padding: 10px 15px 10px 15px;
+}
+
+#categoryposts-4.widget_categoryposts h3.hidden {
+    padding: 0px 0px 10px 0px;
+    border-bottom: 5px solid #EBF1F1;
+}
+
+#categoryposts-3.widget_categoryposts ul {
+    background: #fff;
+    border-top: none;
+    margin: 0 !important;
+    overflow: auto;
+    padding: 0 15px 0 15px;
+}
+
+#categoryposts-4.widget_categoryposts ul {
+    background: #fff url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/celebuzz-bg.png) repeat;
+    border-top: none;
+    margin: 0 !important;
+    overflow: auto;
+    padding: 0px 15px 0 15px;
+}
+
+
+#categoryposts-3.widget_categoryposts  ul li {
+    overflow: hidden;
+    background-color: #fff;
+    border: medium none;
+    float: left;
+    height: 160px;
+    padding: 0 !important;
+    width: 130px;
+    margin: 0 auto;
+}
+
+#categoryposts-4.widget_categoryposts  ul li {
+    overflow: hidden;
+    border: medium none;
+    float: left;
+    height: 110px;
+    padding: 10px 0 0 0;
+    width: 270px;
+    margin: 0 auto;
+    border-top: 1px solid #d4dbdb;
+}
+#categoryposts-4.widget_categoryposts  ul li:first-child {
+    border-top: none!important;
+}
+
+#categoryposts-4.widget_categoryposts  ul li span{
+    float: left;
+}
+
+#categoryposts-4.widget_categoryposts  ul li a.latest-post-title {
+    width: 130px;
+    margin: 0 0 10px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 90px;
+    padding: 0 0 0 10px;
+}
+
+#categoryposts-3.widget_categoryposts  ul li.outside {
+    overflow: hidden;
+    background-color: #fff;
+    border: medium none;
+    float: left;
+    height: 160px;
+    padding: 0 !important;
+    width: 120px!important;
+    margin: 0 auto;
+}
+
+
+#categoryposts-3.widget_categoryposts  ul li.archive-link {
+    overflow: hidden;
+    background-color: #fff;
+    color: #2aa6ae;
+    font-weight: bold;
+    font-family:Arial,sans-serif;
+    font-size: 12px;
+    border: medium none;
+    float: left;
+    height: 16px;
+    padding: 0;
+    width: 250px!important;
+    margin: 0 0 10px 0;
+    text-align: right;
+}
+
+#categoryposts-4.widget_categoryposts  ul li.archive-link {
+    overflow: hidden;
+    color: #2aa6ae;
+    font-weight: bold;
+    font-family:Arial,sans-serif;
+    font-size: 12px;
+    border: medium none;
+    float: left;
+    height: 16px;
+    padding: 0;
+    width: 270px!important;
+    margin: 0 0 10px 0;
+    text-align: right;
+    border-top:none!important;
+}
+
+
+#categoryposts-3.widget_categoryposts  ul li.archive-link a, #categoryposts-4.widget_categoryposts  ul li.archive-link a{
+    color: #2aa6ae;
+}
+
+#categoryposts-3.widget_categoryposts  ul li.archive-link a:hover, #categoryposts-4.widget_categoryposts  ul li.archive-link a:hover{
+    color: #0a5962;
+}
+
+a.latest-post-title {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    line-height: 15px;
+    color: #000000;
+    font-weight: bold;
+    width: 120px;
+    display: block;
+    margin: 5px 0 0 0;
+}
+a.latest-post-title:hover {
+    color: #575757;
+}
+
+/*
+.buzzmedia-list-view-widget {
+margin:10px 0;
+float: left;
+}
+*/
+
+.photos-grid .bmwidget-content  {
+    background: #000000 url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/latest_photo_footer.jpg) no-repeat left bottom !important;
+    border:none  !important;
+    overflow:visible;
+    padding:5px 0 0 20px;
+}
+
+.photos-grid .bmwidget-content ul {
+    border-top:none;
+    margin:0 !important;
+    overflow:auto;
+    padding:0 !important;
+}
+
+.photos-grid .bmwidget-content ul li {
+    overflow:hidden;
+    background-color:#000000;
+    border:medium none;
+    float:left;
+    height:165px;
+    padding:0 7px 0 0 !important;
+    width:130px;
+    margin: 0 auto;
+}
+
+div.photos-grid .bmwidget-content ul li a {
+    background-color:#000000;
+    display:block;
+    height:97px;
+    padding:5px;
+    width:126px;
+}
+
+
+div.bmwidget span.bmwidget-img-above {
+    border: 3px solid #ffffff !important;
+    margin:0 0 5px !important;
+}
+
+span.bmwidget-img  {
+    border:none !important;
+}
+
+div.photos-grid .bmwidget-content ul li h4, div.photos-grid .bmwidget-content ul li a {
+    color:#ffffff !important;
+    text-decoration: none;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    font-weight: bold;
+    line-height: 15px;
+    padding:0 5px;
+    display:inline;
+    height:auto;
+    padding:0;
+}
+
+div.photos-grid .bmwidget-content ul li h4, div.photos-grid .bmwidget-content ul li a:hover {
+    color:#ec96b5 !important;
+    text-decoration: none;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.videos-widget .bmwidget-content {
+    background: transparent url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/rule-black.gif) no-repeat left bottom;
+    border:none;
+    overflow:visible;
+    padding:0;
+}
+
+.videos-widget  .bmwidget-content ul {
+    border-top:none;
+    margin:0 !important;
+    overflow:auto;
+    padding:0 !important;
+}
+
+.videos-widget .bmwidget-content ul li {
+    background-color:transparent;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:1px solid #CCCCCC;
+    margin:0 !important;
+    overflow:auto;
+    padding:8px !important;
+    width:280px;
+}
+
+.videos-widget span {
+    background: transparent url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/video-thumb-background.png) no-repeat left top;
+}
+
+.videos-widget  .bmwidget-content ul li h4, .videos-widget .bmwidget-content ul li h4 a {
+    color:#000000;
+    float:left;
+    line-height:15px;
+    margin:0;
+    padding:15px 0 0 2px;
+    width:148px;
+}
+
+.videos-widget  .bmwidget-content ul li h4 a:hover {
+    color: #474747;
+}
+
+
+#kim_official_store {
+    background: transparent url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/official_store_bkg.jpg) no-repeat scroll 0 0;
+    height: 187px;
+    position: relative;
+    width: 300px;
+}
+
+#kim_official_store_link {
+    height:187px;
+    position:relative;
+    width:300px;
+    text-indent: -99999px;
+    position:absolute;
+    z-index:9;
+}
+
+#kim_official_store_link a:hover{
+    color: #0a5962;
+    text-indent: -99999px;
+}
+
+.kim_official_store a {
+    color: #ac4669;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    font-weight: bold;
+    left:230px;
+    position:absolute;
+    text-decoration:none;
+    top:160px;
+    z-index:999;
+}
+
+.kim_official_store a:hover {
+    color: #0a5962;
+}
+
+
+.kim_cares_text {display: block; width: 130px; height: 17px;
+    left:140px;
+    position:absolute;
+    top:74px;
+    width:170px;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    font-weight: bold;}
+
+#kim_cares_module {
+    background: transparent url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kimcares_bkg.jpg) no-repeat scroll 0 0;
+    height: 170px;
+    position: relative;
+    width: 300px;
+}
+
+.kim_cares a {display: block; width: 89px; height: 17px;  background: transparent url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/donate_now_button_normal.png) no-repeat scroll 0 0;
+    left:140px;
+    position:absolute;
+    top:125px;}
+
+
+.kim_cares a:hover {display: block; width: 89px; height: 17px;  background: transparent url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/donate_now_button_hover.png) no-repeat scroll 0 0;
+    left:140px;
+    position:absolute;
+    top:125px;}
+
+
+
+
+#promo_links {
+    background: transparent url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/visit-bg.png) no-repeat scroll 0 0;
+    height: 155px;
+    width: 260px;
+    padding: 59px 20px 20px 20px;
+}
+
+.khloe_link, .kourtney_link, .kris-link, .kenkyl-link {
+    display: block;
+    height: 35px;
+    width: 260px;
+    font-family: 'AbelRegular';
+    text-align: center;
+    float: left;
+}
+.kourtney_link {
+    padding: 7px 0 0 0;
+}
+.kris-link  {
+    padding: 6px 0 0 0;
+}
+.kenkyl-link  {
+    padding: 8px 0 0 0;
+}
+.khloe_link a, .kourtney_link a, .kris-link a, .kenkyl-link a  {
+    font-family:'AbelRegular';
+    margin: 0 auto;
+    font-size: 1.5em;
+    color: #000000;
+}
+.khloe_link a:hover,  .kourtney_link a:hover, .kris-link a:hover, .kenkyl-link a:hover  {
+    color: #575757;
+}
+.cb_stories_inner {
+    float: left;
+    width: 270px;
+    background: transparent url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/celebuzz-bg.png) repeat scroll 0 0;
+    padding: 15px 15px 0 15px;
+}
+
+img.thumb {
+    margin:0;
+    padding:0;
+}
+
+.cb_stories_content {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.cb_stories_content	a {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    line-height: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+}
+
+.cb_stories_content a:hover {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    line-height: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #575757;
+}
+
+.cb_stories_thumb {
+    float:left;
+    width: 125px;
+    margin: 0 15px 5px 0;
+}
+
+.cb_stories_big {
+    height: 130px;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cb_stories_big a{
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    display:block;
+}
+
+
+.cb_stories_big a:hover{
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cb_stories_small {
+    float: left;
+    width:270px;
+    padding: 10px 0 10px 0;
+}
+
+.rule {
+    border-bottom:1px solid #d4dbdb;
+    float:left;
+    height:1px;
+    width:270px;
+}
+
+.follow {
+    float: left;
+    padding:5px 0 0 20px;
+}
+
+#follow_me {
+    float: left;
+    margin:0 0 10px 35px;
+    width:205px;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height: 15px;
+    color: #ffffff;
+    clear:both;
+}
+
+
+
+/************** SOCIAl MEDIA ICON STYlES *********************/
+
+#share_buttons {
+    background:url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/share_buttons.gif') no-repeat scroll 0 0 transparent;
+    height:25px;
+    margin:0 auto;
+    padding:0;
+    width:120px;
+    float: right;
+}
+
+*:first-child+html #share_buttons {margin:0 0 10px;}
+
+* html #share_buttons{margin:0 0 10px;}
+
+#share_navbar {margin: 0; padding: 0; width: 120px; list-style: none; overflow: hidden; display: inline;}
+#share_navbar li {display:inline;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding:0;float:left;}
+#share_navbar a {float:left; height:25px !important; overflow:hidden; padding:0; text-indent:-9999px; font-family:Arial,sans-serif;
+    font-size:11px; font-weight: normal; color: #ffffff;}
+
+#share_1 a {width:32px;}
+#share_2 a {width:31px;}
+#share_3 a {width:32px;}
+#share_4 a {width:25px;}
+
+#share_1 a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/share_buttons.gif') 0px -26px no-repeat;}
+#share_2 a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/share_buttons.gif') -32px -26px no-repeat;}
+#share_3 a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/share_buttons.gif') -63px -26px no-repeat;}
+#share_4 a:hover {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/share_buttons.gif') -95px -26px no-repeat;}
+
+#share_1 a:active {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/share_buttons.gif') 0px -26px no-repeat;}
+#share_2 a:active {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/share_buttons.gif') -32px -26px no-repeat;}
+#share_3 a:active {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/share_buttons.gif') -63px -26px no-repeat;}
+#share_4 a:active {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/share_buttons.gif') -95px -26px no-repeat;}
+
+
+.splash_rule_lg {
+    border-bottom:1px solid #777777;
+    float: left;
+    height:1px;
+    margin:0 0 0 35px;
+    width:782px;
+}
+
+#splash_search {
+    float:left;
+    padding:10px 0 0 35px;
+    width:782px;
+}
+
+#searchform_splash {
+    width:290px;
+    float:right;
+    height:21px;
+    overflow:hidden;
+    background: url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/splash_search_bkg.gif") no-repeat scroll 0 0 #FFFFFF;
+}
+
+#searchform_splash #splash {
+    background-color:#FFFFFF;
+    border:none;
+    height:18px;
+    margin:0;
+    padding:0 0 0 5px;
+    width:256px;
+    color: #636363;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    font-weight: bold;
+    height: 21px;
+}
+
+#searchform_splash  #searchsubmit {
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/trans.gif") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    cursor:pointer;
+    height:22px;
+    margin:0;
+    padding:0;
+    text-indent:-9999px;
+    width:25px;
+}
+
+.cb_stories_footer {
+    float:left;
+    height:30px;
+    width:270px;
+    text-align: right;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2aa6ae;
+    padding: 10px 0 0 0;
+}
+
+.cb_stories_footer a{
+    color: #2aa6ae;
+}
+
+.cb_stories_footer a:hover{
+    color: #0a5962;
+}
+
+#content_left  { width:412px; padding-right:10px; float:left; border-right: 1px dotted #c2c2c2; }
+#content_right { width:176px; padding-left:10px; float:left; overflow:hidden}
+
+#features {
+    height:200px;
+    border: 1px solid green;
+    background: #BADEEE;
+    clear:both;
+}
+
+
+#comscore_container  {
+    background-color: #252525;
+}
+
+#footer {
+    border-top:1px solid #CCCCCC;
+    clear:both;
+    color:#636363;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    font-weight:normal;
+    margin:0 auto;
+    padding:0px;
+    text-align:left;
+    width:850px;
+    background-color: #ffffff;
+}
+
+#footer a, #footer a:visited, #footer a:active { text-decoration:none; font-weight:bold; color: #000000;}
+#footer a:hover { text-decoration:none; font-weight:bold; color: #636363;}
+
+#footer #comscore_container { background-color: #201f1f; width: 830px; font-weight: normal; background-image: url("http://cdn.buzznet.com/assets/pages/p2/ads/comscore_footer/comscore_background.png"); background-repeat: repeat-x; color: #FFFFFF; font-family: Arial; font-size: 12px; padding: 7px 7px 8px 13px; line-height: 10px; }
+#footer #comscore_container .bold { font-weight: bold; }
+#footer #comscore_container .small_text { font-size: 9.5px; }
+#footer #comscore_header_text { padding: 0 0 4px 0; }
+#footer #comscore_body_text { font-size: 10px; line-height: 15px; }
+#footer #comscore_container a { color: #FFFFFF; text-decoration: none; font-weight: normal }
+#footer #comscore_container a:link { color: #FFFFFF; text-decoration: none; font-weight: normal }
+#footer #comscore_container a:visited { color: #FFFFFF; text-decoration: none; font-weight: normal }
+#footer #comscore_container a:hover { color: #A7A7A7; text-decoration: none; font-weight: normal }
+
+.posttitle { font-family:Georgia,sans-serif;font-size: 20px; line-height:22px;font-weight:normal; }
+.posttitle a,.posttitle a:hover { font-weight:normal; }
+.postdate, .postdate a {color:#808080}
+
+
+
+.content_more { text-align:right; font-family:Arial,sans-serif;font-size:12px; font-weight:bold;}
+.content_more a { color: #e74903}
+.content_more a:hover { color: #0c575f }
+
+.more_splash { text-align:right; font-family:Arial,sans-serif;font-size:12px; font-weight:bold; color: #000000;}
+.more_splash a {color: #ec96b5; text-decoration: none;}
+.more_splash a:hover {color: #ac4669; text-decoration: none;}
+
+ul.headline_list  li a { font-weight:normal; }
+#sidebar ul.headline_list li { font-family: Georgia,serif;font-size:14px;line-height:16px;border-bottom:1px dotted #C2C2C2;margin-bottom:0px}
+
+#latest_headlines { line-height:18px }
+#latest_headlines ul li { border-bottom:1px dotted #C2C2C2; padding:10px 0 10px 15px;}
+#latest_headlines ul li a { font-family: Georgia,serif;font-size:14px;font-weight:normal; }
+span.headline_time { font-weight:normal; color:#808080;}
+
+
+.topstory_image {width:412px;height:275px;background:#222;margin:0px auto 10px;overflow:hidden;text-align:center}
+.topstory_image .lead_story {height:275px;overflow:hidden;}
+.topstory_image a img {width:412px;}
+.topstories_row {overflow: hidden; margin-left:-7px; width:427px; height:145px;}
+.topstories_row .topstory {border-left: 1px dotted #c2c2c2; padding:0px 8px; overflow:hidden; width:125px; height:145px; float:left; font-family:georgia;}
+.topstories_row .topstory .topstory_thumb {overflow:hidden; height:84px; margin-bottom:5px;}
+
+#featured_galleries {height:405px;overflow:hidden;margin-bottom:10px}
+.topstory .gallery_image {height:405px;overflow:hidden; background:#000}
+.topstory .gallery_image a img {width:608px;}
+.gallery_title_overlay { position:relative; margin-top:-70px; height:57px; padding:7px 10px;
+    font-family:Georgia,serif; font-size:16px; line-height:20px; color:#fff; background:url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/titleoverlay_bg.png);}
+.gallery_title_overlay a { color:#fff; font-weight:normal;}
+
+
+#featured_videos {height:340px;overflow:hidden;margin-bottom:10px}
+.topstory .video_image {height:340px;overflow:hidden; background:#000}
+.topstory .video_image a img {width:608px;}
+
+img.thumbnail { width:125px; height:125px; border:none;}
+img.thumbnail_small { width:90px; height:90px; border:none;}
+img.thumbnail_tiny { width:50px; height:50px; border:none;}
+
+
+#ontheroad ul li a { font-family: Georgia,serif;  }
+#ontheroad ul li {  font-size:12px; line-height:16px; background:transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/bullet.png') no-repeat left 10px; padding:5px 0 5px 15px;}
+#ontheroad ul li:hover { background-color:#dbe6e7; }
+
+ul.related_post li a { font-family: Georgia,serif; font-size:12px; line-height:16px; font-weight:normal}
+ul.related_post li { background:transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/bullet.png') no-repeat left 10px; padding:5px 0 5px 15px;}
+ul.related_post  li:hover { background-color:#dbe6e7; }
+
+
+div.media_list { padding:0px 10px 13px; font-family: Georgia,serif;font-size:12px; line-height:16px}
+div.media_list div.intro_thumb { margin: 0 auto 10px; float:none;}
+div.media_list a { font-weight:normal; }
+div.media_list_photoicon {background:url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/photo_icon.png') no-repeat;margin:-83px 66px 63px;height:23px;width:23px;}
+div.media_list_videoicon {background:url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/video_icon.png') no-repeat;margin:-83px 66px 63px;height:23px;width:23px;}
+
+/* div.archivetitle { color: #2c2621; font-size: 18px; padding:0 15px 12px;}*/
+div.archivetitle { border-bottom:1px dotted #C2C2C2; }
+
+div.gallery_intro {margin-top:10px}
+div.gallery_intro table { padding:0px }
+div.gallery_intro table tr td span{padding:5px 0 0 5px;}
+div.gallery_intro_leadimg {width:399px;height:235px;overflow:hidden;}
+div.gallery_intro_count {text-align:right; margin-top:30px}
+div.gallery_intro_count a {font-size:15px; color:#e74903}
+
+div.intro_box {border-bottom:1px dotted #c2c2c2; padding:10px 0;clear:both;height:125px;overflow:hidden; position:relative;}
+div.intro_text {float:right; position:absolute; margin-top:0px; margin-left:140px; width:468px; font-size:12px; line-height:18px; font-family:Arial,sans-serif; top: 10px; left: 0;}
+div.intro_title { font-size: 14px; line-height:16px; font-family:Georgia,sans-serif;}
+div.intro_title a { font-weight:normal; }
+div.intro_thumb { float:left;
+    background-color: #ddd;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-image:url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/thumb_bg.gif');
+    height:125px;
+    width:125px;
+}
+img.intro_thumb { width:125px; height:125px; border:none;}
+div.intro_date {padding: 5px 0pt 0pt;}
+
+
+div.franchise_intro div.intro_box { border:none; padding:0 0 10px; position: relative;}
+div.franchise_intro div.intro_text { position:absolute; width:275px; top:0; left: 0; margin-left:135px; float:right; }
+div.franchise_intro div.intro_title { font-size: 14px; line-height:16px; }
+div.franchise_intro div.intro_thumb { float:left}
+div.franchise_intro div.intro_date { display:none}
+
+div.franchise_intro .section_heading { clear:both; font-family:Impact,Charcoal,sans-serif; margin-bottom:0px;
+    font-size:22px; line-height:38px; color: #88372F; text-transform:uppercase; background: none; }
+div.franchise_intro .section_heading span { vertical-align:bottom; background:#fff}
+div.franchise_intro .section_heading span a { color:#88372F; }
+
+#MP3player { padding-bottom:10px; overflow: hidden;}
+#MP3player ul li { border-bottom: 1px dotted #c2c2c2;}
+
+ul.playlist li a.sm2_link .mp3play_button{
+    font-size:23px;
+    font-family:Georgia;
+    background:url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/mp3_play.png') no-repeat 0px 3px;
+    padding-right:9px
+}
+ul.playlist li.sm2_playing a.sm2_link .mp3play_button{ background:url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/mp3_pause.png') no-repeat 0px 3px; }
+ul.playlist li a.sm2_link .mp3play_button img { width:21px;height:21px; }
+ul.playlist li a.post_link { padding-left:30px;color:#E74903; }
+ul.playlist li:hover a.post_link, ul.playlist li.sm2_playing a.post_link, ul.playlist li.sm2_playing:hover a.post_link {color:#E74903;}
+ul.playlist li.sm2_paused a.post_link, ul.playlist li.sm2_paused:hover a.post_link { color:#0C575F; }
+
+/*  inline-list player for MP3s in posts pages */
+p.playlist { border-top: 1px dotted #c2c2c2 !important; border-bottom: 1px dotted #c2c2c2 !important;}
+p.playlist a.sm2_link .mp3play_button{ font-size:22px; font-family:Georgia; background:url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/mp3_play.png') no-repeat 0px 3px;  padding-right:9px }
+p.playlist.sm2_playing a.sm2_link .mp3play_button{ background:url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/mp3_pause.png') no-repeat 0px 3px; }
+p.playlist a.sm2_link .mp3play_button img { width:21px;height:21px;margin:0px }
+p.playlist a.post_link { padding-left:30px;color:#E74903; }
+p.playlist:hover a.post_link, p.playlist.sm2_playing a.post_link, p.playlist.sm2_playing:hover a.post_link {color:#E74903;}
+p.playlist.sm2_paused a.post_link, p.playlist.sm2_paused:hover a.post_link { color:#0C575F; }
+
+
+
+
+
+
+#big_search { border: 1px solid #808080; margin: 9px 0px 9px; height:30px;
+    background: transparent url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/search_icon_big.png) no-repeat scroll right center;
+}
+#big_search #searchform {margin:0; padding:0;text-align:left}
+#big_search #s { border: none; font-size:15px;width:505px}
+
+div.buzzbox_item {border-bottom: 1px dotted rgb(194, 194, 194); padding: 10px 0pt; overflow: hidden; height: 50px;}
+div.buzzbox_item:hover {background:#dbe6e7;}
+.buzzbox_title {line-height: 16px}
+.buzzbox_title a { font-family:Georgia,serif;font-size:14px;font-weight:normal;}
+.buzzbox_rank { color:#0C575F; font-family:Impact,Charcoal,sans-serif; font-size:24px;padding:0 10px}
+
+/* generic class modifiers */
+.bluebox { background:#dadada;}
+.greybox { background:#dadada;}
+.whitebox { background:#ffffff;}
+.pad8 { padding:0 0 8px 0;}
+.pad10 { padding:10px;}
+.pad10tl { padding:10px 0 0 10px;}
+.pad10b { padding:0 0 10px 0px;}
+.pad20 {padding: 8px 0 8px 20px;}
+a.orangelink , a.orangelink :hover { color:#e74903;text-decoration:none; }
+.bigtext { font:16px Georgia,serif;}
+.tinytitle { font-family: Georgia,serif;font-size:12px; line-height:16px}
+
+.news_post { padding: 10px 0pt; }
+
+.news_post_short {padding:0}
+.news_post_short .top { margin:0 -7px; background:url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/shortstorybg_top.png) no-repeat; height:10px}
+.news_post_short .middle { margin:0 -7px; padding:10px 27px; background:url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/shortstorybg_middle.png); }
+.news_post_short .bottom { margin:0 -7px; background:url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/shortstorybg_bottom.png) no-repeat; height:10px}
+/* .news_post_short .wrapper { margin:0 -7px; padding:20px 27px; background:url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/shortstorybg.png); height:110px} */
+.news_post_short .posttitle { font-size:16px; line-height:18px; }
+.news_post_short .news_text { margin: 10px 0; }
+.news_thumb { margin:4px 10px 5px 0px; overflow:hidden; width:217px; height:145px; float:left; }
+.news_thumb a div { width:217px; height:145px;}
+.news_text a { color:#0C575F; }
+
+.prevnext table tr td { font-family: Georgia,serif;font-size:12px; line-height:16px; padding:0 0 10px 0;}
+.prevnext table tr td a { font-weight:normal}
+.prevnext table tr td a img { width:50px;height:50px;padding-right:10px}
+
+.post-wrap {background: transparent url('http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/entry-border.jpg') bottom center no-repeat;
+    margin: 0px; text-align: left; padding: 10px 0 2px 10px;width:513px;clear:both;}
+.post { margin: 0px; text-align: left; padding:10px 0 0 10px; }
+/*.post h2 { font-family:Georgia,sans-serif;font-size: 20px; line-height:22px; }*/
+.post_comments {padding: 5px; font-weight: bold; font-size: 12px;white-space:nowrap}
+span.post_comments { padding:0;float:right}
+.post_comments  a {color:#808080}
+
+span.sharebutton { margin-left:10px; white-space:nowrap}
+span.sharebutton  a.retweet { font-weight:bold; padding-top:2px }
+span.sharebutton  a.retweet span {padding:2px 4px;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:10px;}
+
+
+div.profile_comments { border-top:1px dotted #c2c2c2;clear:both;padding:10px 0;overflow:hidden }
+div.profile_comments div { color:#808080; }
+div.profile_comments div a { font-family: georgia,serif; font-weight:normal; }
+
+.entry {font: 12px Arial,sans-serif; color: #000000; line-height: 20px; padding:10px 10px 0 0;clear:both;}
+.entry p {margin: 0;}
+
+.entry_permalink {font: 12px Arial,sans-serif; color: #000000; line-height: 18px; padding:10px 10px 0 0; font-weight: normal; margin:0;clear:both;}
+.entry_permalink p {/* margin:0 0 10px; */}
+.vidpad p{margin:0 0 10px; }
+.entry_permalink br {display: none;}
+.entry_permalink a { font-weight:normal; color:#2aa6ae;}
+.entry_permalink a:hover { font-weight:normal; color:#0a5962;}
+
+.entry img {margin: 0;}
+.entry p img {margin: 0;}
+
+.entry object { max-width:492px;}
+.entry embed { max-width:492px;}
+.entry object embed { max-width:492px;}
+
+.entry br {display: none;}
+
+.page-entry {font: 12px Arial,sans-serif; color: #000000; line-height: 18px; padding:15px 10px 0 0;clear:both;}
+.page-entry p {margin: 0 0 10px 0;}
+.page-entry br {display: inline;}
+
+
+.tag_bar, .tag_bar a { padding:10px 0; color:#808080;}
+.comment_bar { font-family:Georgia,sans-serif;font-size: 16px; line-height:18px;font-weight:normal;padding:10px 0; } /* border-bottom: 1px dotted #c2c2c2; */
+
+.border_black { border:1px solid black; }
+.border_grey  { border:1px solid #888; }
+
+blockquote { margin: 15px 20px 15px 0; padding-left:45px; background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/block_quote.png) no-repeat; font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height:18px; }
+
+
+/* Some old stuff ... */
+
+.widecolumn .entry p { font-size: 1.05em; }
+
+.narrowcolumn .entry, .widecolumn .entry { line-height: 1.4em; }
+
+.widecolumn { line-height: 1.6em; }
+
+.narrowcolumn .postmetadata { text-align: left; }
+
+.depth-1 { border-top: 1px dotted #c2c2c2; }
+
+.comment-author, .comment-author a {color:#000000; font-size:12px}
+
+a.comment-date  {color:#636363; font-size:12px}
+
+
+
+small {
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 0.95em;
+    line-height: 1.5em;
+    color: #636363;
+}
+
+
+small a {
+    color: #2aa6ae;
+    text-decoration: none;
+}
+
+small a:hover {
+    color: #0a5962;
+    text-decoration: none;
+}
+
+
+
+#sidebar h2 { font-size: 1.2em; }
+
+
+
+h1, h1 a, h1 a:hover,  #headerimg .description {
+    text-decoration: none;
+}
+
+h2, h2 a, h3, h3 a {
+    color: #414141;
+}
+
+h2, h2 a, h2 a:hover, h3, h3 a, h3 a:hover, #sidebar h2, #wp-calendar caption, cite {
+    text-decoration: none;
+}
+
+.entry a { font-weight:normal; color:#2aa6ae;}
+.entry a:hover {color:#0a5962;}
+
+.sticky {
+    background: #f7f7f7;
+    padding: 0 10px 10px;
+}
+.sticky h2 {
+    padding-top: 10px;
+}
+
+#delete_button.btn_pill {
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/delete_button.png) no-repeat scroll 0 0;
+    width:56px; height:17px;
+    border: none;
+    cursor:pointer;
+    padding-bottom:3px;
+    margin-left:10px;
+    text-indent: -9999px;
+}
+#delete_button.btn_pill:hover { background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/delete_button_hover.png) no-repeat scroll 0 0; }
+
+#upload_button.btn_pill {
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/upload_button.png) no-repeat scroll 0 0;
+    width:56px;
+    height:17px;
+    border: none;
+    cursor:pointer;
+    padding-bottom:3px;
+    margin-left:10px;
+    text-indent: -9999px;
+}
+#upload_button.btn_pill:hover { background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/upload_button_hover.png) no-repeat scroll 0 0; }
+
+#respond button.btn_pill { margin-top:3px; }
+
+.fb_oauth2_login {
+    background: url("images/fconnect.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 22px;
+    margin: -1px -15px 0 0;
+    text-indent: -10000px;
+    width: 65px;
+}
+
+#artistnotes li h3 {display:inline}
+
+
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, blockquote, strike { color: #636363; }
+
+code { font: 1.1em 'Courier New', Courier, Fixed; }
+
+acronym, abbr, span.caps
+{
+    font-size: 0.9em;
+    letter-spacing: .07em;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: #0a5962;
+}
+
+h2 a:hover, h3 a:hover {
+    color: #bbbbbb;
+    text-decoration: none;
+}
+
+#wp-calendar #prev a, #wp-calendar #next a {
+    font-size: 9pt;
+}
+
+#wp-calendar a {
+    text-decoration: none;
+}
+
+#wp-calendar caption {
+    font: bold 1.3em Arial, Sans-Serif;
+    text-align: center;
+}
+
+#wp-calendar th {
+    font-style: normal;
+    text-transform: capitalize;
+}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+
+
+.narrowcolumn {
+    float: left;
+    padding: 0 0 25px 30px;
+    margin: 0px 0 0;
+    width: 480px;
+    background: white;
+}
+
+.widecolumn {
+    padding: 10px 0 20px 0;
+    margin: 5px 0 0 30px;
+    width: 570px;
+}
+
+
+
+.post hr {
+    display: block;
+}
+.widecolumn .post { margin: 0; }
+.narrowcolumn .postmetadata { padding-top: 5px; }
+.widecolumn .postmetadata { margin: 30px 0; }
+
+.widecolumn .smallattachment {
+    text-align: center;
+    float: left;
+    width: 128px;
+    margin: 5px 5px 5px 0px;
+}
+
+.widecolumn .attachment {
+    text-align: center;
+    margin: 5px 0px;
+}
+
+
+.postmetadata {font:11px Arial, sans-serif normal; line-height:18px;color:#636363;clear: both;text-transform:capitalize;padding:20px 0 10px 0;clear:both;}
+.postmetadata a {color: #2aa6ae; text-decoration: none;}
+.postmetadata :hover {color: #0a5962; text-decoration: none;}
+.clear { clear: both; display: block; }
+
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+
+h1, h2 {
+    font-weight: normal;
+    font-family:'latolightRegular';
+    line-height: 1.1em;
+    font-size: 2.35em;
+    text-transform:capitalize;
+    color: #414141;
+    margin: 0;
+}
+
+
+#headerimg .description {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+h2.pagetitle {
+    font-size: 1.5em;
+}
+
+h3 {font-family:Georgia, serif;font-size:16px; line-height:18px; font-weight:normal;	padding: 0; margin: 0 0 10px; }
+
+
+h2.search{
+    font-weight: normal;
+    font-family:Georgia, serif;
+    line-height: 22px;
+    font-size: 18px;
+    text-transform:capitalize;
+}
+
+
+
+h2.permalink {margin:0 0 2px;
+}
+
+h2.pagetitle {
+    margin: 0 0 10px 0;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size:1.5em;
+    line-height:1.625em;
+}
+
+#sidebar h2 {
+    margin: 5px 0 0;
+    padding: 0;
+}
+
+h3.comments {
+    padding: 0;
+    margin: 40px auto 20px;
+}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+    padding: 0;
+    max-width: 100%;
+}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.alignright {
+    padding: 4px;
+    margin: 0 0 2px 7px;
+    display: inline;
+}
+
+img.alignleft {
+    padding: 4px;
+    margin: 0 7px 2px 0;
+    display: inline;
+}
+
+
+
+img.thumb_large {
+    padding: 0px;
+    border: 1px solid #000000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+}
+
+.alignright {
+    float: right;
+}
+
+.alignleft {
+    float: left;
+}
+/* End Images */
+
+
+
+
+
+/* Begin Form Elements */
+#searchform {
+    margin: 10px auto;
+    padding: 5px 4px;
+    text-align: left;
+    height: 19px;
+}
+
+#sidebar #searchform #s {
+    background:none repeat scroll 0 0 transparent;
+    border:0 none;
+    height:19px;
+    margin:0;
+    padding:0px 0 5px 5px;
+    width:258px;
+    font-family:Arial,sans-serif;
+    font-size: 12px;
+    color: #888888;
+}
+
+#sidebar #searchsubmit {
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/trans.gif) no-repeat scroll 0 0;
+    cursor:pointer;
+    height:22px;
+    margin:0;
+    padding:0;
+    width:25px;
+    text-indent: -9999px;
+    border: none;
+}
+
+h2.widgettitle {
+    display: none;
+}
+
+.widget_execphp {
+    float:left;
+    margin:10px 0;
+}
+
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+    text-align:center;
+}
+
+select {
+    width: 130px;
+}
+
+#commentform input {
+    width: 170px;
+    padding: 2px;
+    margin: 5px 5px 1px 0;
+}
+
+#commentform input[type="submit"] {
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/submit_button_normal.png") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    color:#FFFFFF;
+    cursor:pointer;
+    float:right;
+    font-weight:bold;
+    margin:5px;
+    padding:1px 6px;
+    text-indent:-9999px;
+    width:56px;
+}
+
+
+#commentform {
+    margin: 0;
+}
+#commentform textarea {
+    width: 100%;
+    padding: 2px;
+}
+#respond:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#respond .commentform-username {
+    font-weight: bold;
+    color: #7a7a7a;
+}
+#commentform #submit {
+    margin: 0 0 5px auto;
+    float: right;
+}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+    margin: 0;
+    padding: 10px;
+}
+
+.comment img { max-width:480px;}
+
+.commentlist {
+    padding: 0;
+    text-align: left;
+    clear:both;
+    margin:0px;
+}
+
+.commentlist table td {
+    vertical-align: top;
+}
+
+
+.children {
+    padding:0 0 0 25px;
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/response_comment.png) no-repeat scroll 0 0;
+}
+
+.commentlist .children  li {
+    border-top:none;
+    padding:0 0 10px 0;
+}
+
+#commentform p {
+    margin: 5px 0;
+}
+
+.nocomments {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.commentmetadata {
+    margin: 0;
+    display: block;
+}
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar form { margin: 0; }
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+    empty-cells: show;
+    margin: 10px auto 0;
+    width: 155px;
+}
+
+#wp-calendar #next a {
+    padding-right: 10px;
+    text-align: right;
+}
+
+#wp-calendar #prev a {
+    padding-left: 10px;
+    text-align: left;
+}
+
+#wp-calendar a {
+    display: block;
+}
+
+#wp-calendar caption {
+    text-align: center;
+    width: 100%;
+}
+
+#wp-calendar td {
+    padding: 3px 0;
+    text-align: center;
+}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+    background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+hr { display: none; }
+a img { 	border: none; }
+
+acronym, abbr, span.caps { cursor: help; }
+acronym, abbr { border-bottom: 1px dashed #999; }
+
+blockquote cite {
+    margin: 5px 0 0;
+    display: block;
+}
+
+/* class mofifiers */
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+.justify { text-align: justify; }
+.hidden { display: none; }
+div.keyhole { text-align:center; overflow:hidden; }
+
+.screen-reader-text { position: absolute; left: -1000em; }
+
+
+.post .navigation {margin: 0px}
+/* End Various Tags & Classes*/
+
+/* Previous Next Nav styles */
+
+#pl-nav{
+
+    display: inline-block;
+    margin: 5px 0 10px 0;
+
+}
+
+#pl-nav li{
+
+    padding:0 10px;
+    width:220px;
+
+}
+
+#pl-nav li.plprev{
+
+    float:right;
+
+}
+
+#pl-nav li.plnext{
+    border-right:1px solid #CCCCCC;
+    float:left;
+}
+
+#pl-nav li h5{
+
+    float:inherit;
+    font-size:12px;
+    margin-bottom: 10px;
+    width:inherit;
+
+}
+
+
+#pl-nav li h5 a{
+    font-weight:normal; color:#2aa6ae;
+}
+
+
+#pl-nav li h5 a:hover{
+    font-weight:normal; color:#5c5c5c;
+}
+
+
+#pl-nav li h4{
+    float:left;
+    font-size:11px;
+    font-weight:bold;
+    line-height:15px;
+    max-width:150px;
+}
+
+
+#pl-nav li h4 a{
+    font-weight:bold; color:#000000;
+}
+
+
+#pl-nav li h4 a:hover{
+    font-weight:bold; color:#5c5c5c;
+}
+
+
+#pl-nav li.plnext img {
+    float:left;
+    margin-right:10px;
+    max-width:50px;
+}
+
+
+#pl-nav li.plprev img {
+    float:left;
+    margin-right:10px;
+    max-width:50px;
+}
+
+/* Comments
+---------------------------------*/
+
+h3#comments {
+    color:#636363;
+    font-family:'latolightRegular';
+    font-size:1.5em;
+    padding:0 0 5px;
+    margin: 0;
+    line-height: 2.35em;
+}
+
+
+.user_comments{
+    margin:0;
+    padding:0 0 0 20px;
+    text-align:left;
+    width:492px;
+}
+
+.user_comments .title{
+    color:#636363;
+    font-family:Georgia,serif;
+    font-size:16px;
+    padding: 0 0 10px 0;
+}
+
+
+.commentlist li {
+    font: 12px Arial, Helvetica, Sans-Serif;
+    line-height: 18px;
+    padding: 10px 0px 10px;
+    list-style: none;
+    overflow:hidden;
+    border-top:1px solid #CCCCCC;
+    float:none;
+    width:100%;
+}
+
+.commentlist li ul {
+    margin:0px
+}
+
+.commentlist li ul li {
+    /* background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/comment_thread.png) no-repeat -2px 0px; */
+    padding: 0px;
+    padding-left: 20px;
+    margin: 5px 0;
+}
+
+.commentlist li .avatar {
+    margin:0 10px 0 0;
+    float: left;
+}
+
+.commentlist li .avatar-32 {
+    margin:0;
+    float: left;
+}
+
+
+.commentlist li img {
+    float:left;
+    margin:0 10px 0 0;
+    padding: 5px 0 0 0;
+}
+
+.commentlist cite, .commentlist cite a {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 12px;
+    color: #000000;
+}
+
+.timestamp {
+    color:#636363;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+}
+
+.commentlist p {
+    font-weight: normal;
+    line-height: 18px;
+    text-transform: none;
+    margin:10px 5px 10px 0px;
+}
+
+#commentform p {
+    font-family: Arial, Helvetica, Sans-Serif;
+}
+
+.commentmetadata {
+    font-weight: normal;
+}
+
+.commentlist div.reply a {
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/reply_button_normal.png") no-repeat scroll 0 0 transparent;
+    display:block;
+    height:17px;
+    margin:10px 5px 0 0px;
+    width:89px;
+    text-indent:-9999px;
+    color:#FFFFFF;
+    font-weight:bold;
+    padding:2px 12px;
+}
+
+
+.commentlist div.reply a:hover {
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/reply_button_hover.png") no-repeat scroll 0 0 transparent;
+    display:block;
+    height:17px;
+    margin:10px 5px 0 0px;
+    width:89px;
+    text-indent:-9999px;
+}
+
+
+#respond { padding:10px; border:1px solid #c2c2c2; clear:both; }
+#respond, #respond a, #respond .user-name { color:#000000;}
+#respond, #respond a:hover, #respond .user-name:hover { color:#808080;}
+#respond h3 { color:#636363; font-family:'latolightRegular';font-size:1.4em; line-height:18px;font-weight:normal;margin:0 0 10px;}
+#respond textarea {background: #f5f5f5 url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/form_bkg.jpg") repeat-x scroll 0 0 ;}
+
+
+.user_comments .commentlist{
+
+}
+
+.user_comments .commentlist li{
+
+    border-bottom:1px solid #CCCCCC;
+    float: none;
+    padding:10px 0 ;
+    width:100%;
+
+}
+
+.user_comments .commentlist .comment-text{
+
+    float:left;
+    margin:0 0 0 9px;
+    overflow:visible;
+    width:400px;
+
+}
+
+.alt img{
+    float:left;
+    margin: 0 10px 0 0;
+}
+
+
+
+#respond {
+    border:solid 1px #cccccc;
+    margin:0;
+    padding:10px;
+}
+
+#respond #commentform #submit{
+    width: 56px;
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/submit_button_normal.png") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    color:#FFFFFF;
+    cursor:pointer;
+    float:right;
+    margin:2px 5px 5px 5px;
+    font-weight:bold;
+    padding:1px 6px;
+    text-indent: -9999px;
+}
+
+#respond #commentform #submit:hover{
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/submit_button_hover.png") no-repeat scroll 0 0 transparent;
+}
+
+#respond #comment{
+    font-weight:normal;
+    border:solid 1px #cccccc;
+    color:#636363;
+    font-family:arial;
+    font-size:12px;
+    line-height:18px;
+    padding:5px;
+    width:97.5%;
+}
+
+/*  End of comments
+---------------------------------*/
+
+.videos-widget {
+    float: left;
+
+}
+
+h1.login {
+    border-bottom:1px solid #CCCCCC;
+    font-family:Georgia,serif;
+    font-size:16px;
+}
+
+input.checkbox {
+    border:1px solid #CCCCCC;
+    text-align: left;
+}
+
+#image_upload{
+    clear:both;
+    margin:10px 0 0 10px;
+    width:360px;
+}
+
+
+#image_upload label{
+    font-weight: bold;
+}
+
+form.loginform p label.remember {
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    font-weight: normal;
+    clear:none;
+    display:inline;
+    float:none;
+    width:150px;
+}
+
+#cycnav {
+    width: 300px;
+    margin:10px 0 0 10px;
+}
+
+
+
+p.message {
+    background-color:lightyellow;
+    border:1px solid yellow;
+    margin:10px 0 0 10px;
+    width:340px;
+}
+
+#sidebar-login {
+    left:720px;
+    position:absolute;
+    top:420px;
+    width:400px;
+}
+
+.sidebar-login {
+    /* background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/sign_in_photo.png") no-repeat scroll 0 0 transparent; */
+    height: 318px;
+    width: 393px;
+}
+
+.widget_text {
+    margin: 10px 0;
+    float: left;
+}
+
+#login-container {
+    min-height: 600px;
+    padding:10px;
+    width:830px;
+}
+
+td.profile-avatar {
+    vertical-align: top;
+    text-align: left;
+}
+
+
+td.profile-info {
+    vertical-align: bottom;
+    text-align: left;
+    padding:0 0 0 10px;
+    font-family:Arial,sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+td.profile-info a{
+    color: #2AA6AE;
+}
+
+
+td.profile-info a:hover{
+    color: #0A5962;
+}
+
+
+#fb-submit {
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/submit_button_normal.png") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    text-indent:-9999px;
+    cursor:pointer;
+    float:right;
+    height:17px;
+    margin:5px;
+    padding:0;
+    width:56px;
+}
+
+#fb-submit:hover {
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/submit_button_hover.png") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    cursor:pointer;
+    float:right;
+    height:17px;
+    margin:5px;
+    padding:0;
+    text-indent:-9999px;
+    width:56px;
+}
+
+p#login_error  {
+    background-color:lightcoral;
+    border:1px solid red;
+    color:#000000;
+    margin:10px 0 0 10px;
+    width:340px;
+}
+
+p.message, p#login_error {
+    padding:3px 5px;
+}
+
+#your-profile {
+    clear:both;
+    margin:10px 0 0 0;
+    width:400px;
+}
+
+.form-table {
+    width:400px;
+    font-family:Arial,sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.form-table td{
+    padding: 3px 0;
+}
+
+
+.contact-table {
+    margin: 20px 0 0 0;
+    width:400px;
+    font-family:Arial,sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.profile-info-table {
+    margin: 20px 0 0 0;
+    width:400px;
+    font-family:Arial,sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.contact-table td{
+    padding: 10px 0 0 0;
+}
+
+textarea.longfield{
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    font-family:Arial,sans-serif;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+input.longfield{
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    font-family:Arial,sans-serif;
+    font-weight: normal;
+    font-size: 11px;
+    height:16px;
+    padding:2px;
+    width:385px;
+}
+
+input.mid-mini{
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    font-family:Arial,sans-serif;
+    font-weight: normal;
+    font-size: 11px;
+    height:16px;
+    padding:2px;
+    width:100px;
+}
+
+select.mid-mini{
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    font-family:Arial,sans-serif;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+
+#content.photo-gallery {
+    margin-top:-4px;
+}
+
+
+#content.fullwidth {
+    width:830px;
+    padding: 10px;
+    margin: 0;
+}
+
+
+#gallery-group-container {
+    float:left;
+    width:840px;
+}
+
+#content.photo-gallery div.gallery-group {
+    margin:0 -3px;
+    float:left;
+}
+
+#content.photo-gallery div.post {
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/bg-gallery-index-item.png") no-repeat scroll 0 0 transparent;
+    float:left;
+    padding:7px 2px 8px 8px;
+    position:relative;
+    width:270px;
+    height: 250px;
+}
+
+#content.photo-gallery h2.posttitle, #content.photo-gallery h2.posttitle a {
+    color:#000000;
+    font-size:12px;
+    line-height:17px;
+    padding:10px 0;
+    font-family:Arial,sans-serif;
+    font-weight: bold;
+    width:270px;
+}
+
+#content.photo-gallery h2.posttitle a:hover {
+    color:#ac4669;
+}
+
+#content.photo-gallery .posttitle a.photo-count {
+    color:#2aa6ae;
+}
+
+#content.photo-gallery .posttitle a.photo-count:hover {
+    color:#0a5962;
+}
+
+.navigation .page_nav ul.page-numbers {
+    display:inline;
+}
+
+.page-numbers {
+    font-size:12px;
+    font-weight:bold;
+    margin:0;
+    padding:0;
+    color:#000000;
+    font-family:Arial,Sans-Serif;
+}
+
+.page-numbers li {
+    display:inline;
+    list-style:none outside none;
+}
+
+.page-numbers .current{
+    color: #636363;
+    margin-right:4px;
+    padding:3px 6px;
+}
+
+.page-numbers a {
+    color: #000000;
+    margin-right:4px;
+    padding:3px 6px;
+    text-align:center;
+    text-decoration:none;
+    font-weight: bold;
+}
+
+.page-numbers li a:hover{
+    color: #ac4769;
+    text-decoration: none;
+}
+
+
+.page-numbers li.space {
+    display:none;
+}
+
+.page-numbers .page_nav li img {
+
+}
+
+
+.page-numbers li a.prev {
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/nav.png") no-repeat scroll 0px -3px;
+    margin:0 5px -2px;
+    height:15px;
+    width:67px;
+    padding:0;
+    float: none;
+}
+.page-numbers li a.prev:hover {
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/nav.png") no-repeat scroll 0 -20px transparent;
+    margin:0 5px -2px;
+    height:15px;
+    padding:0;
+    width:67px;
+    float: none;
+}
+
+
+.page-numbers li a.next {
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/nav.png") no-repeat scroll -68px -3px;
+    margin:0 5px -2px;
+    height:15px;
+    padding:0;
+    width:67px;
+    float: none;
+}
+
+
+.page-numbers li a.next:hover {
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/nav.png") no-repeat scroll -68px -20px;
+    margin:0 5px -2px;
+    height:15px;
+    padding:0;
+    width:67px;
+    float: none;
+}
+
+
+/******* AD STYlES ************/
+
+#ad_300x250_content_column  {
+    float:left;
+    margin:0;
+    padding:10px 0 20px 10px;
+    width:300px;
+}
+
+.kk_banner160-wrapper {
+}
+
+.kk_banner160 {
+    height:600px;
+    margin:0 0 0 70px;
+    text-align:center;
+}
+
+.module-link {
+    font-family:Arial,Sans-Serif;
+    font-size:12px;
+    font-weight:bold;
+    line-height:15px;
+    margin:-10px 0 0;
+    padding:0 10px 0 0;
+    text-align:right;
+    width:300px;
+}
+
+
+.module-link a {
+    color: #ac4669;
+}
+
+.module-link a:hover {
+    color:#0a5962;
+}
+
+
+/******* CElEBUZZ STYlES ************/
+#ad_130x250_inhouse {
+    display:block;
+    float:left;
+    margin:10px 0 10px 20px;
+    width:130px;
+}
+
+#cb_stories_stream {
+    height: 250px;
+    width: 130px;
+    border: 1px #cccccc solid;
+    background-color: #ffffff;
+    float:left;
+}
+
+.cb_stories_header_stream {
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/celebuzz-logo-stream.png") no-repeat scroll 5px 5px;
+    height:35px;
+    width: 128px;
+}
+
+.cb_stories_inner_stream {
+    color:#000000;
+    font-family:Arial,Sans-Serif;
+    font-size:12px;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.cb_stories_footer_stream a {
+    color: #2aa6ae;
+    font-family:Arial,Sans-Serif;
+    font-size:12px;
+    font-weight: bold;
+    line-height: 15px;
+    padding:0 0 0 10px;
+}
+
+.cb_stories_footer_stream a:hover {
+    color:#0a5962;
+}
+
+.cb_stories_content_stream {
+    padding:0 10px 10px;
+}
+
+.cb_stories_thumb_stream {
+    border:1px solid #CCCCCC;
+    height:103px;
+    margin:10px 0 0;
+    padding:3px;
+    width:103px;
+}
+
+/************ GAllERY STYlES ******************/
+.gallery-count {
+    float: left;
+    font-family:Arial,Sans-Serif;
+    font-size:1em;
+    font-weight: bold;
+    clear: both;
+    color: #2aa6ae;
+    margin: 10px 0 0 0;
+    width:492px;
+}
+
+.gallery-count a{
+    font-weight: bold;
+    color: #2aa6ae;
+}
+
+.gallery-count a:hover{
+    font-weight: bold;
+    color: #0a5962;
+}
+
+.wp-smiley {
+    width: 15px;
+    height: 15px;
+}
+
+.cat-image{
+    background:none repeat scroll 0 0 #e9ecec;
+    margin:20px 0 0 10px;
+    width:512px;
+    padding:0;
+    clear:both;
+}
+
+.entry-cat {
+    clear:both;
+    color:#000000;
+    font:12px/20px Arial,sans-serif;
+    padding:12px 12px 10px 10px;
+
+}
+
+.entry-cat .prev_next {
+    margin:0;
+    position:relative;
+}
+
+.cat-image.module{
+    border:medium none;
+    margin:0 0 18px -19px;
+    padding:0 10px 0 15px;
+    width:294px;
+    background-color: #e9ecec;
+}
+
+.cat-image.module p {
+    font-family:Arial,Sans-Serif;
+    font-size:12px;
+    font-weight: normal;
+    line-height: 18px;
+    margin:0px 0 0;
+}
+
+
+.cat-image.module p a {
+    font-family:Arial,Sans-Serif;
+    font-size:12px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #2aa6ae;
+}
+
+
+.cat-image.module p a:hover{
+    text-decoration: none;
+    color: #0a5962;
+}
+
+.cat-image h1{
+    font-family: 'latolightRegular';
+    color: black;
+    font-size: 22px;
+    line-height: 24px;
+    padding: 0 0 0 0;
+    font-weight: normal;
+}
+
+.cat-image.module h1 a{
+    font-family: 'latolightRegular';
+    color: black;
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+.cat-image.module h1 a:hover{
+    text-decoration: none;
+    color: #575757;
+}
+
+#sidebar .more-grey{
+    background:none repeat scroll 0 0 #e9ecec;
+    height:12px;
+    margin:0 0 0 -22px;
+    width:326px;
+}
+
+#sidebar .more-grey-bottom{
+    background: none repeat scroll 0 0 #E9ECEC;
+    height: 12px;
+    margin: 0px 0 0 -14px;
+    width: 318px;
+}
+
+
+.cat-image.module h5{
+    margin-bottom: 15px;
+}
+
+.cat-image .attachment-medium{
+    display:block;
+    margin: 0 auto;
+}
+
+#content .cat-image p{
+    margin:12px 0 0 0;
+    padding:10px;
+    /* width:492px; */
+    background-color: #ffffff;
+}
+
+.cat-image h4.previous a
+{
+    background:url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/bg_nav_images.png) no-repeat scroll -18px 0 transparent;
+}
+
+.cat-image h4.next a{
+    background:url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/bg_nav_images.png) no-repeat scroll 0 0 transparent;
+}
+
+.cat-image h4.next a:hover{
+    background-position: 0 -21px;
+}
+.cat-image h4.previous a:hover{
+
+    background-position: -18px -21px;
+}
+/* image carousel */
+
+
+#topbar {
+    height:23px;
+    margin:0 auto;
+    padding:0;
+}
+
+.enlarged {
+    width: 850px;
+    padding: 10px 0;
+}
+
+.enlarged img {
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.back-to-permalink {
+    margin:10px 0 0 10px;
+    padding:0;
+    color:#636363;
+    font-family:Arial,Sans-Serif;
+    font-size:12px;
+    font-weight: bold;
+    line-height: 15px;
+    width:300px;
+    text-align: left;
+}
+
+
+#controls{
+    float:left;
+    height:18px;
+    margin:0 0 0 10px;
+    padding:0;
+    vertical-align:top;
+    width:215px;
+    color:#636363;
+    font-family:Arial,Sans-Serif;
+    font-size:12px;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.back-to-permalink a {
+    color:#2aa6ae;
+    text-decoration:none;
+}
+
+.back-to-permalink a:hover {
+    color:#0a5962;
+    text-decoration:none;
+}
+
+
+#controls a {
+    color:#636363;
+    text-decoration:none;
+}
+
+#controls a:hover {
+    color:#a3a3a3;
+    text-decoration:none;
+}
+
+#nav {
+    display:block;
+    float:right;
+    height:23px;
+    margin:0 !important;
+    overflow:hidden !important;
+    padding:0 !important;
+    vertical-align:middle;
+}
+
+
+#nav-enlarged {
+    display:block;
+    float:right;
+    height:23px;
+    overflow:hidden !important;
+    padding:0 !important;
+    vertical-align:middle;
+    margin: 0 10px 0 0;
+}
+
+#num {
+    color:#636363;
+    float:left;
+    margin:4px 10px 0 0;
+    font-family:Arial,Sans-Serif;
+    font-size:12px;
+    font-weight: normal;
+    line-height: 15px;
+}
+
+.prev {
+    float:left;
+    height:21px;
+    width:15px;
+    margin:0 10px 0 0;
+}
+
+.prev a {
+    background-image:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/gallery_back_normal.png");
+    display:block;
+    height:21px;
+    text-indent:-9000px;
+    width:15px;
+}
+
+
+.prev a:hover {
+    background-image:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/gallery_back_hover.png");
+    display:block;
+    height:21px;
+    text-indent:-9000px;
+    width:15px;
+}
+
+.next {
+    float:left;
+    height:21px;
+    margin: 0;
+    width:15px;
+}
+
+.next a {
+    background-image:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/gallery_next_normal.png");
+    display:block;
+    height:21px;
+    text-indent:-9000px;
+    width:15px;
+}
+
+.next a:hover {
+    background-image:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/gallery_next_hover.png");
+    display:block;
+    height:21px;
+    text-indent:-9000px;
+    width:15px;
+}
+
+.cat-image .article-thumbs{
+    float: left;
+    margin:0;
+    position: relative;
+    visibility: hidden;
+    left: -5000px;
+    padding: 0 0 0 3px!important;
+}
+.cat-image .carousel{
+    display:inline-block;
+    height:74px;
+    margin:12px 0 0;
+    width:490px;
+}
+
+.cat-image .article-thumbs li{
+    margin:0 3px 0 0;
+    width:74px;
+    height:74px;
+}
+
+
+.cat-image .article-thumbs li a span.thumb-hover{
+    border: 4px #ec96b5 solid;
+    height: 66px;
+    width: 66px;
+    display: block;
+    position: absolute;
+}
+
+
+.cat-image .carousel button.previous{
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/thumb_back_normal.png") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    cursor:pointer;
+    float: left;
+    height:74px;
+    padding:0;
+    text-indent:-10000px;
+    width:12px;
+}
+
+
+.cat-image .carousel button.next{
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/thumb_next_normal.png") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    cursor:pointer;
+    float: right;
+    height:74px;
+    padding:0;
+    text-indent:-10000px;
+    width:12px;
+}
+
+.cat-image .carousel button.next:hover{
+    background:url("http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/thumb_next_hover.png") no-repeat scroll 0 0 transparent;
+}
+
+.cat-image .carousel button.next:active{
+    background-position: 0 -148px;
+}
+
+.gallery-container{
+    margin:0 ;
+    padding:0;
+}
+
+
+.cat-image .position {
+    color:#636363;
+    float:right;
+    height:22px;
+    overflow:hidden;
+    padding:2px 5px 0 0;
+}
+
+.gallery-comments {
+    margin: 20px 0 0 10px;
+}
+
+
+.entry_content {
+    float: left;
+    margin:0;
+}
+
+
+.entry_content div{
+    margin:10px 0 0;
+}
+
+
+.entry_content p{
+    margin:10px 0 0;
+}
+
+.main_img {
+    float:left;
+    overflow:hidden;
+    width:398px;
+    max-height: 372px;
+    position: relative;
+}
+
+span.gallery-overlay{
+    width: 398px;
+    background: transparent url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/gallery-border.png) no-repeat;
+    height: 372px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+a.gal-overlay {
+    height: 372px;
+    width: 398px;
+    display: block;
+}
+
+.main_img_center {
+    width:492px;
+    float:none;
+    text-align: center;
+}
+
+.main_img_center img {
+    width: 484px;
+    text-align: center;
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/photo-bg.png) repeat 0 0;
+    padding: 4px;
+
+}
+
+.main_thumbs_container {
+    float:right;
+    max-height:372px;
+    margin:0;
+    overflow:hidden;
+    padding:0;
+    width:90px;
+}
+
+.main_thumbs {
+    float:right;
+    height:90px;
+    margin:0 0 4px;
+    overflow:hidden;
+    padding:0 0 0 0;
+    width:90px;
+}
+
+/** MODAl STUFF for signup/signin ***/
+/** always is 480ps wide so we can center properly ***/
+.modalPage {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px; left: 0px;
+}
+*:first-child+html .modalBackground {filter: Alpha(Opacity=50);}
+
+* html .modalBackground {filter: Alpha(Opacity=50);}
+.modalBackground {
+    -moz-opacity:0.8;
+    opacity: 0.8;
+    width: 100%; height: 100%; background-color: #000000;
+    position: fixed; z-index: 500;
+    top: 0px; left: 0px;
+}
+.modalContainer {
+    position: relative;
+    width: 480px;
+    left: 50%;
+    top: 25%;
+    z-index: 750;
+}
+.modal {
+    background-color: #ffffff;
+    border: solid 1px black;
+    position: absolute;
+    left: -240px;
+    z-index: 1000;
+    width: 480px;
+    padding: 0px;
+}
+.modalTop { 	padding: 5px 5px 5px 10px; text-align: left; font-family:Georgia,serif;font-size: 16px; line-height:18px; width: 465px; }
+.modalTop span {position:absolute; right:10px; text-align:right; top:8px;}
+.modalTop a, .modalTop a:visited { color: #e74903; }
+.modalBody { padding: 0 10px 10px; font-size: 14px; line-height:16px; text-align: left; width:460px;}
+.fbc_loginstate_top {
+    display:none;
+}
+
+.thumb-link {
+    height:74px;
+    width:74px;
+}
+
+.article-thumbs {
+    height:74px;
+}
+
+.kim-comment {
+    background-color:#F0E3E8;
+    padding:10px 0;
+}
+
+
+.submit_disclaimer {
+    font-family:Arial,sans-serif;font-size: 10px;
+    color: #767676;
+}
+
+.postmeta {
+    float: left;
+    width: 300px;
+    margin: 9px 0 0 0;
+}
+
+.mobile_update {
+    float: right;
+    height:17px;
+    margin:8px 10px 0 0;
+    width:112px;
+}
+
+#newsletter .header {
+    margin-bottom: 5px;
+    font-size: 1.8em;
+    font-family: 'latolightRegular';
+    color: #424242;
+    text-transform: uppercase;
+}
+
+#newsletter #newsletter_form {
+    margin: 5px 0 15px;
+}
+
+#newsletter_form #email {
+    height: 30px;
+    width: 215px;
+    padding: 0 5px;
+    border: 2px solid #929292;
+}
+
+#newsletter_form #newsletter-submit {
+    background: none repeat scroll 0 0 #2AA6AE;
+    border: medium none;
+    color: #FFFFFF;
+    display: inline-block;
+    float: right;
+    height: 33px;
+    line-height: 30px;
+    margin-top: 0;
+}
+
+#newsletter_form #newsletter-submit:hover {
+    background: #0a5962;
+}
+
+
+#follow {
+    color: #424242;
+    width: 300px;
+    padding: 0;
+    margin: 0;
+    font-family: 'latolightRegular';
+    float: left;
+    font-size: 1.8em;
+}
+
+#follow ul {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    display: block;
+    float: left;
+}
+#follow li {
+    float: left;
+    display: block;
+    color: #999;
+}
+#follow li a {
+    color: #FF1A60;
+}
+#follow li.follow_kim {
+    color: #424242;
+    padding: 5px 20px 0 0;
+    margin: 0 0 0 0px;
+    width: 165px;
+    height: 20px;
+    text-transform: uppercase;
+}
+
+li.facebook_follow a {
+    margin: 0;
+    width: 27px;
+    padding: 0 8px 0 0;
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kim_fb.png) no-repeat 0 0;
+    display: block;
+    height: 25px;
+    border-right: 1px dotted #CFCFCF;
+}
+
+li.facebook_follow a:hover {
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kim_fb_hover.png) no-repeat 0 0;
+    border-right: 1px dotted #CFCFCF;
+}
+
+
+li.twitter_follow a{
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kim_twitter.png) no-repeat 0 0;
+    display: block;
+    border-right: 1px dotted #CFCFCF;
+    margin: 0 0 0 8px;
+    width: 27px;
+    padding: 0 8px 0 0px;
+    height: 25px;
+}
+
+li.twitter_follow a:hover{
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kim_twitter_hover.png) no-repeat 0 0;
+    border-right: 1px dotted #CFCFCF;
+}
+
+li.rss_follow a {
+    margin: 0 0 0 8px;
+    width: 27px;
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kim_rss.png) no-repeat 0 0px;
+    display: block;
+    height: 25px;
+    padding: 0 0 0 0;
+}
+
+li.rss_follow a:hover {
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/kim_rss_hover.png) no-repeat 0 0px;
+}
+
+#text-3 {
+    margin: 0;
+}
+.square {
+    z-index: 10000;
+    position: absolute;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.buzzworthy_wrapper{
+    margin: 15px 0pt;
+    padding: 0pt 10px;
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/blog_corner.png) no-repeat scroll -10px -10px transparent;
+}
+
+.sign-in-btn_pill {
+    display: block;
+    color:#fff !important;
+    font: 12px Arial,Helvetica,serif; font-weight:bold;
+    text-align:center;
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/signin_button_normal.png) no-repeat scroll 0 0;
+    width:60px; height:17px;
+    border: none; cursor:pointer;
+    padding-bottom:6px;
+    margin-left:10px
+}
+.sign-in-btn_pill:hover {
+    background: url(http://dzeacavuisdcb.cloudfront.net/themes/kimk_3.0/images/signin_button_hover.png) no-repeat scroll 0 0;
+}
+
+/** Footer Edits **/
+#footer {
+  margin-top: 14px;
+}
+#footer #comscore_container {
+  font-size: inherit;
+  height: 31px;
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+#footer #comscore_header_text {
+  float: left;
+  padding: 2px 0 0 0;
+}
+#footer #comscore_body_text {
+  font-size: inherit;
+  float: right;
+}
+
+#menu {
+  /* override when no shop nav item */
+  width: 705px;
+}

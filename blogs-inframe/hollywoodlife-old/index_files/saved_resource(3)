@@ -1,0 +1,1312 @@
+jQuery(document).ready(function() {
+	if ( typeof _gaq === 'undefined' && typeof pmc === 'object' && typeof pmc.tracking === 'object' && typeof pmc.tracking.remove_from_browser_url === 'function' ) {
+		pmc.tracking.remove_from_browser_url();
+	}
+});
+;
+/*
+ * Swipe 1.0
+ *
+ * Brad Birdsall, Prime
+ * Copyright 2011, Licensed GPL & MIT
+ *
+*/
+
+;window.Swipe = function(element, options) {
+
+  // return immediately if element doesn't exist
+  if (!element) return null;
+
+  var _this = this;
+
+  // retreive options
+  this.options = options || {};
+  this.index = this.options.startSlide || 0;
+  this.speed = this.options.speed || 300;
+  this.callback = this.options.callback || function() {};
+  this.delay = this.options.auto || 0;
+
+  // reference dom elements
+  this.container = element;
+  this.element = this.container.children[0]; // the slide pane
+
+  // static css
+  this.container.style.overflow = 'hidden';
+  this.element.style.listStyle = 'none';
+  this.element.style.margin = 0;
+
+  // trigger slider initialization
+  this.setup();
+
+  // begin auto slideshow
+  this.begin();
+
+  // add event listeners
+  if (this.element.addEventListener) {
+    this.element.addEventListener('touchstart', this, false);
+    this.element.addEventListener('touchmove', this, false);
+    this.element.addEventListener('touchend', this, false);
+    this.element.addEventListener('touchcancel', this, false);
+    this.element.addEventListener('webkitTransitionEnd', this, false);
+    this.element.addEventListener('msTransitionEnd', this, false);
+    this.element.addEventListener('oTransitionEnd', this, false);
+    this.element.addEventListener('transitionend', this, false);
+    window.addEventListener('resize', this, false);
+  }
+
+};
+
+Swipe.prototype = {
+
+  setup: function() {
+
+    // get and measure amt of slides
+    this.slides = this.element.children;
+    this.length = this.slides.length;
+
+    // return immediately if their are less than two slides
+    if (this.length < 2) return null;
+
+    // determine width of each slide
+    this.width = Math.ceil(("getBoundingClientRect" in this.container) ? this.container.getBoundingClientRect().width : this.container.offsetWidth);
+
+    // Fix width for Android WebView (i.e. PhoneGap) 
+    if (this.width === 0 && typeof window.getComputedStyle === 'function') {
+      this.width = window.getComputedStyle(this.container, null).width.replace('px','');
+    }
+
+    // return immediately if measurement fails
+    if (!this.width) return null;
+
+    // hide slider element but keep positioning during setup
+    var origVisibility = this.container.style.visibility;
+    this.container.style.visibility = 'hidden';
+
+    // dynamic css
+    this.element.style.width = Math.ceil(this.slides.length * this.width) + 'px';
+    var index = this.slides.length;
+    while (index--) {
+      var el = this.slides[index];
+      el.style.width = this.width + 'px';
+      el.style.display = 'table-cell';
+      el.style.verticalAlign = 'middle';
+      jQuery(el).find('img').css('max-width',this.width);
+    }
+
+    // set start position and force translate to remove initial flickering
+    this.slide(this.index, 0); 
+
+    // restore the visibility of the slider element
+    this.container.style.visibility = origVisibility;
+
+  },
+
+  slide: function(index, duration) {
+
+    var style = this.element.style;
+
+    // fallback to default speed
+    if (duration == undefined) {
+        duration = this.speed;
+    }
+
+    // set duration speed (0 represents 1-to-1 scrolling)
+    style.webkitTransitionDuration = style.MozTransitionDuration = style.msTransitionDuration = style.OTransitionDuration = style.transitionDuration = duration + 'ms';
+
+    // translate to given index position
+    style.MozTransform = style.webkitTransform = 'translate3d(' + -(index * this.width) + 'px,0,0)';
+    style.msTransform = style.OTransform = 'translateX(' + -(index * this.width) + 'px)';
+
+    // set new index to allow for expression arguments
+    this.index = index;
+
+  },
+
+  getPos: function() {
+    
+    // return current index position
+    return this.index;
+
+  },
+
+  prev: function(delay) {
+
+    // cancel next scheduled automatic transition, if any
+    this.delay = delay || 0;
+    clearTimeout(this.interval);
+
+    if (this.index) this.slide(this.index-1, this.speed); // if not at first slide
+    else this.slide(this.length - 1, this.speed); //if first slide return to end
+
+  },
+
+  next: function(delay) {
+
+    // cancel next scheduled automatic transition, if any
+    this.delay = delay || 0;
+    clearTimeout(this.interval);
+
+    if (this.index < this.length - 1) this.slide(this.index+1, this.speed); // if not last slide
+    else this.slide(0, this.speed); //if last slide return to start
+
+  },
+
+  begin: function() {
+
+    var _this = this;
+
+    this.interval = (this.delay)
+      ? setTimeout(function() { 
+        _this.next(_this.delay);
+      }, this.delay)
+      : 0;
+  
+  },
+  
+  stop: function() {
+    this.delay = 0;
+    clearTimeout(this.interval);
+  },
+  
+  resume: function() {
+    this.delay = this.options.auto || 0;
+    this.begin();
+  },
+
+  handleEvent: function(e) {
+    switch (e.type) {
+      case 'touchstart': this.onTouchStart(e); break;
+      case 'touchmove': this.onTouchMove(e); break;
+      case 'touchcancel' :
+      case 'touchend': this.onTouchEnd(e); break;
+      case 'webkitTransitionEnd':
+      case 'msTransitionEnd':
+      case 'oTransitionEnd':
+      case 'transitionend': this.transitionEnd(e); break;
+      case 'resize': this.setup(); break;
+    }
+  },
+
+  transitionEnd: function(e) {
+    
+    if (this.delay) this.begin();
+
+    this.callback(e, this.index, this.slides[this.index]);
+
+  },
+
+  onTouchStart: function(e) {
+    
+    this.start = {
+
+      // get touch coordinates for delta calculations in onTouchMove
+      pageX: e.touches[0].pageX,
+      pageY: e.touches[0].pageY,
+
+      // set initial timestamp of touch sequence
+      time: Number( new Date() )
+
+    };
+
+    // used for testing first onTouchMove event
+    this.isScrolling = undefined;
+    
+    // reset deltaX
+    this.deltaX = 0;
+
+    // set transition time to 0 for 1-to-1 touch movement
+    this.element.style.MozTransitionDuration = this.element.style.webkitTransitionDuration = 0;
+    
+    e.stopPropagation();
+  },
+
+  onTouchMove: function(e) {
+
+    // ensure swiping with one touch and not pinching
+    if(e.touches.length > 1 || e.scale && e.scale !== 1) return;
+
+    this.deltaX = e.touches[0].pageX - this.start.pageX;
+
+    // determine if scrolling test has run - one time test
+    if ( typeof this.isScrolling == 'undefined') {
+      this.isScrolling = !!( this.isScrolling || Math.abs(this.deltaX) < Math.abs(e.touches[0].pageY - this.start.pageY) );
+    }
+
+    // if user is not trying to scroll vertically
+    if (!this.isScrolling) {
+
+      // prevent native scrolling 
+      e.preventDefault();
+
+      // cancel slideshow
+      clearTimeout(this.interval);
+
+      // increase resistance if first or last slide
+      this.deltaX = 
+        this.deltaX / 
+          ( (!this.index && this.deltaX > 0               // if first slide and sliding left
+            || this.index == this.length - 1              // or if last slide and sliding right
+            && this.deltaX < 0                            // and if sliding at all
+          ) ?                      
+          ( Math.abs(this.deltaX) / this.width + 1 )      // determine resistance level
+          : 1 );                                          // no resistance if false
+      
+      // translate immediately 1-to-1
+      this.element.style.MozTransform = this.element.style.webkitTransform = 'translate3d(' + (this.deltaX - this.index * this.width) + 'px,0,0)';
+      
+      e.stopPropagation();
+    }
+
+  },
+
+  onTouchEnd: function(e) {
+
+    // determine if slide attempt triggers next/prev slide
+    var isValidSlide = 
+          Number(new Date()) - this.start.time < 250      // if slide duration is less than 250ms
+          && Math.abs(this.deltaX) > 20                   // and if slide amt is greater than 20px
+          || Math.abs(this.deltaX) > this.width/2,        // or if slide amt is greater than half the width
+
+    // determine if slide attempt is past start and end
+        isPastBounds = 
+          !this.index && this.deltaX > 0                          // if first slide and slide amt is greater than 0
+          || this.index == this.length - 1 && this.deltaX < 0;    // or if last slide and slide amt is less than 0
+
+    // if not scrolling vertically
+    if (!this.isScrolling) {
+
+      // call slide function with slide end value based on isValidSlide and isPastBounds tests
+      this.slide( this.index + ( isValidSlide && !isPastBounds ? (this.deltaX < 0 ? 1 : -1) : 0 ), this.speed );
+
+    }
+    
+    e.stopPropagation();
+  }
+
+};
+;
+/*!
+ * jQuery hashchange event - v1.3 - 7/21/2010
+ * http://benalman.com/projects/jquery-hashchange-plugin/
+ * 
+ * Copyright (c) 2010 "Cowboy" Ben Alman
+ * Dual licensed under the MIT and GPL licenses.
+ * http://benalman.com/about/license/
+ */
+
+// Script: jQuery hashchange event
+//
+// *Version: 1.3, Last updated: 7/21/2010*
+// 
+// Project Home - http://benalman.com/projects/jquery-hashchange-plugin/
+// GitHub       - http://github.com/cowboy/jquery-hashchange/
+// Source       - http://github.com/cowboy/jquery-hashchange/raw/master/jquery.ba-hashchange.js
+// (Minified)   - http://github.com/cowboy/jquery-hashchange/raw/master/jquery.ba-hashchange.min.js (0.8kb gzipped)
+// 
+// About: License
+// 
+// Copyright (c) 2010 "Cowboy" Ben Alman,
+// Dual licensed under the MIT and GPL licenses.
+// http://benalman.com/about/license/
+// 
+// About: Examples
+// 
+// These working examples, complete with fully commented code, illustrate a few
+// ways in which this plugin can be used.
+// 
+// hashchange event - http://benalman.com/code/projects/jquery-hashchange/examples/hashchange/
+// document.domain - http://benalman.com/code/projects/jquery-hashchange/examples/document_domain/
+// 
+// About: Support and Testing
+// 
+// Information about what version or versions of jQuery this plugin has been
+// tested with, what browsers it has been tested in, and where the unit tests
+// reside (so you can test it yourself).
+// 
+// jQuery Versions - 1.2.6, 1.3.2, 1.4.1, 1.4.2
+// Browsers Tested - Internet Explorer 6-8, Firefox 2-4, Chrome 5-6, Safari 3.2-5,
+//                   Opera 9.6-10.60, iPhone 3.1, Android 1.6-2.2, BlackBerry 4.6-5.
+// Unit Tests      - http://benalman.com/code/projects/jquery-hashchange/unit/
+// 
+// About: Known issues
+// 
+// While this jQuery hashchange event implementation is quite stable and
+// robust, there are a few unfortunate browser bugs surrounding expected
+// hashchange event-based behaviors, independent of any JavaScript
+// window.onhashchange abstraction. See the following examples for more
+// information:
+// 
+// Chrome: Back Button - http://benalman.com/code/projects/jquery-hashchange/examples/bug-chrome-back-button/
+// Firefox: Remote XMLHttpRequest - http://benalman.com/code/projects/jquery-hashchange/examples/bug-firefox-remote-xhr/
+// WebKit: Back Button in an Iframe - http://benalman.com/code/projects/jquery-hashchange/examples/bug-webkit-hash-iframe/
+// Safari: Back Button from a different domain - http://benalman.com/code/projects/jquery-hashchange/examples/bug-safari-back-from-diff-domain/
+// 
+// Also note that should a browser natively support the window.onhashchange 
+// event, but not report that it does, the fallback polling loop will be used.
+// 
+// About: Release History
+// 
+// 1.3   - (7/21/2010) Reorganized IE6/7 Iframe code to make it more
+//         "removable" for mobile-only development. Added IE6/7 document.title
+//         support. Attempted to make Iframe as hidden as possible by using
+//         techniques from http://www.paciellogroup.com/blog/?p=604. Added 
+//         support for the "shortcut" format $(window).hashchange( fn ) and
+//         $(window).hashchange() like jQuery provides for built-in events.
+//         Renamed jQuery.hashchangeDelay to <jQuery.fn.hashchange.delay> and
+//         lowered its default value to 50. Added <jQuery.fn.hashchange.domain>
+//         and <jQuery.fn.hashchange.src> properties plus document-domain.html
+//         file to address access denied issues when setting document.domain in
+//         IE6/7.
+// 1.2   - (2/11/2010) Fixed a bug where coming back to a page using this plugin
+//         from a page on another domain would cause an error in Safari 4. Also,
+//         IE6/7 Iframe is now inserted after the body (this actually works),
+//         which prevents the page from scrolling when the event is first bound.
+//         Event can also now be bound before DOM ready, but it won't be usable
+//         before then in IE6/7.
+// 1.1   - (1/21/2010) Incorporated document.documentMode test to fix IE8 bug
+//         where browser version is incorrectly reported as 8.0, despite
+//         inclusion of the X-UA-Compatible IE=EmulateIE7 meta tag.
+// 1.0   - (1/9/2010) Initial Release. Broke out the jQuery BBQ event.special
+//         window.onhashchange functionality into a separate plugin for users
+//         who want just the basic event & back button support, without all the
+//         extra awesomeness that BBQ provides. This plugin will be included as
+//         part of jQuery BBQ, but also be available separately.
+
+(function($,window,undefined){
+  '$:nomunge'; // Used by YUI compressor.
+  
+  // Reused string.
+  var str_hashchange = 'hashchange',
+    
+    // Method / object references.
+    doc = document,
+    fake_onhashchange,
+    special = $.event.special,
+    
+    // Does the browser support window.onhashchange? Note that IE8 running in
+    // IE7 compatibility mode reports true for 'onhashchange' in window, even
+    // though the event isn't supported, so also test document.documentMode.
+    doc_mode = doc.documentMode,
+    supports_onhashchange = 'on' + str_hashchange in window && ( doc_mode === undefined || doc_mode > 7 );
+  
+  // Get location.hash (or what you'd expect location.hash to be) sans any
+  // leading #. Thanks for making this necessary, Firefox!
+  function get_fragment( url ) {
+    url = url || location.href;
+    return '#' + url.replace( /^[^#]*#?(.*)$/, '$1' );
+  };
+  
+  // Method: jQuery.fn.hashchange
+  // 
+  // Bind a handler to the window.onhashchange event or trigger all bound
+  // window.onhashchange event handlers. This behavior is consistent with
+  // jQuery's built-in event handlers.
+  // 
+  // Usage:
+  // 
+  // > jQuery(window).hashchange( [ handler ] );
+  // 
+  // Arguments:
+  // 
+  //  handler - (Function) Optional handler to be bound to the hashchange
+  //    event. This is a "shortcut" for the more verbose form:
+  //    jQuery(window).bind( 'hashchange', handler ). If handler is omitted,
+  //    all bound window.onhashchange event handlers will be triggered. This
+  //    is a shortcut for the more verbose
+  //    jQuery(window).trigger( 'hashchange' ). These forms are described in
+  //    the <hashchange event> section.
+  // 
+  // Returns:
+  // 
+  //  (jQuery) The initial jQuery collection of elements.
+  
+  // Allow the "shortcut" format $(elem).hashchange( fn ) for binding and
+  // $(elem).hashchange() for triggering, like jQuery does for built-in events.
+  $.fn[ str_hashchange ] = function( fn ) {
+    return fn ? this.bind( str_hashchange, fn ) : this.trigger( str_hashchange );
+  };
+  
+  // Property: jQuery.fn.hashchange.delay
+  // 
+  // The numeric interval (in milliseconds) at which the <hashchange event>
+  // polling loop executes. Defaults to 50.
+  
+  // Property: jQuery.fn.hashchange.domain
+  // 
+  // If you're setting document.domain in your JavaScript, and you want hash
+  // history to work in IE6/7, not only must this property be set, but you must
+  // also set document.domain BEFORE jQuery is loaded into the page. This
+  // property is only applicable if you are supporting IE6/7 (or IE8 operating
+  // in "IE7 compatibility" mode).
+  // 
+  // In addition, the <jQuery.fn.hashchange.src> property must be set to the
+  // path of the included "document-domain.html" file, which can be renamed or
+  // modified if necessary (note that the document.domain specified must be the
+  // same in both your main JavaScript as well as in this file).
+  // 
+  // Usage:
+  // 
+  // jQuery.fn.hashchange.domain = document.domain;
+  
+  // Property: jQuery.fn.hashchange.src
+  // 
+  // If, for some reason, you need to specify an Iframe src file (for example,
+  // when setting document.domain as in <jQuery.fn.hashchange.domain>), you can
+  // do so using this property. Note that when using this property, history
+  // won't be recorded in IE6/7 until the Iframe src file loads. This property
+  // is only applicable if you are supporting IE6/7 (or IE8 operating in "IE7
+  // compatibility" mode).
+  // 
+  // Usage:
+  // 
+  // jQuery.fn.hashchange.src = 'path/to/file.html';
+  
+  $.fn[ str_hashchange ].delay = 50;
+  /*
+  $.fn[ str_hashchange ].domain = null;
+  $.fn[ str_hashchange ].src = null;
+  */
+  
+  // Event: hashchange event
+  // 
+  // Fired when location.hash changes. In browsers that support it, the native
+  // HTML5 window.onhashchange event is used, otherwise a polling loop is
+  // initialized, running every <jQuery.fn.hashchange.delay> milliseconds to
+  // see if the hash has changed. In IE6/7 (and IE8 operating in "IE7
+  // compatibility" mode), a hidden Iframe is created to allow the back button
+  // and hash-based history to work.
+  // 
+  // Usage as described in <jQuery.fn.hashchange>:
+  // 
+  // > // Bind an event handler.
+  // > jQuery(window).hashchange( function(e) {
+  // >   var hash = location.hash;
+  // >   ...
+  // > });
+  // > 
+  // > // Manually trigger the event handler.
+  // > jQuery(window).hashchange();
+  // 
+  // A more verbose usage that allows for event namespacing:
+  // 
+  // > // Bind an event handler.
+  // > jQuery(window).bind( 'hashchange', function(e) {
+  // >   var hash = location.hash;
+  // >   ...
+  // > });
+  // > 
+  // > // Manually trigger the event handler.
+  // > jQuery(window).trigger( 'hashchange' );
+  // 
+  // Additional Notes:
+  // 
+  // * The polling loop and Iframe are not created until at least one handler
+  //   is actually bound to the 'hashchange' event.
+  // * If you need the bound handler(s) to execute immediately, in cases where
+  //   a location.hash exists on page load, via bookmark or page refresh for
+  //   example, use jQuery(window).hashchange() or the more verbose 
+  //   jQuery(window).trigger( 'hashchange' ).
+  // * The event can be bound before DOM ready, but since it won't be usable
+  //   before then in IE6/7 (due to the necessary Iframe), recommended usage is
+  //   to bind it inside a DOM ready handler.
+  
+  // Override existing $.event.special.hashchange methods (allowing this plugin
+  // to be defined after jQuery BBQ in BBQ's source code).
+  special[ str_hashchange ] = $.extend( special[ str_hashchange ], {
+    
+    // Called only when the first 'hashchange' event is bound to window.
+    setup: function() {
+      // If window.onhashchange is supported natively, there's nothing to do..
+      if ( supports_onhashchange ) { return false; }
+      
+      // Otherwise, we need to create our own. And we don't want to call this
+      // until the user binds to the event, just in case they never do, since it
+      // will create a polling loop and possibly even a hidden Iframe.
+      $( fake_onhashchange.start );
+    },
+    
+    // Called only when the last 'hashchange' event is unbound from window.
+    teardown: function() {
+      // If window.onhashchange is supported natively, there's nothing to do..
+      if ( supports_onhashchange ) { return false; }
+      
+      // Otherwise, we need to stop ours (if possible).
+      $( fake_onhashchange.stop );
+    }
+    
+  });
+  
+  // fake_onhashchange does all the work of triggering the window.onhashchange
+  // event for browsers that don't natively support it, including creating a
+  // polling loop to watch for hash changes and in IE 6/7 creating a hidden
+  // Iframe to enable back and forward.
+  fake_onhashchange = (function(){
+    var self = {},
+      timeout_id,
+      
+      // Remember the initial hash so it doesn't get triggered immediately.
+      last_hash = get_fragment(),
+      
+      fn_retval = function(val){ return val; },
+      history_set = fn_retval,
+      history_get = fn_retval;
+    
+    // Start the polling loop.
+    self.start = function() {
+      timeout_id || poll();
+    };
+    
+    // Stop the polling loop.
+    self.stop = function() {
+      timeout_id && clearTimeout( timeout_id );
+      timeout_id = undefined;
+    };
+    
+    // This polling loop checks every $.fn.hashchange.delay milliseconds to see
+    // if location.hash has changed, and triggers the 'hashchange' event on
+    // window when necessary.
+    function poll() {
+      var hash = get_fragment(),
+        history_hash = history_get( last_hash );
+      
+      if ( hash !== last_hash ) {
+        history_set( last_hash = hash, history_hash );
+        
+        $(window).trigger( str_hashchange );
+        
+      } else if ( history_hash !== last_hash ) {
+        location.href = location.href.replace( /#.*/, '' ) + history_hash;
+      }
+      
+      timeout_id = setTimeout( poll, $.fn[ str_hashchange ].delay );
+    };
+    
+    // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+    // vvvvvvvvvvvvvvvvvvv REMOVE IF NOT SUPPORTING IE6/7/8 vvvvvvvvvvvvvvvvvvv
+    // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+    $.browser.msie && !supports_onhashchange && (function(){
+      // Not only do IE6/7 need the "magical" Iframe treatment, but so does IE8
+      // when running in "IE7 compatibility" mode.
+      
+      var iframe,
+        iframe_src;
+      
+      // When the event is bound and polling starts in IE 6/7, create a hidden
+      // Iframe for history handling.
+      self.start = function(){
+        if ( !iframe ) {
+          iframe_src = $.fn[ str_hashchange ].src;
+          iframe_src = iframe_src && iframe_src + get_fragment();
+          
+          // Create hidden Iframe. Attempt to make Iframe as hidden as possible
+          // by using techniques from http://www.paciellogroup.com/blog/?p=604.
+          iframe = $('<iframe tabindex="-1" title="empty"/>').hide()
+            
+            // When Iframe has completely loaded, initialize the history and
+            // start polling.
+            .one( 'load', function(){
+              iframe_src || history_set( get_fragment() );
+              poll();
+            })
+            
+            // Load Iframe src if specified, otherwise nothing.
+            .attr( 'src', iframe_src || 'javascript:0' )
+            
+            // Append Iframe after the end of the body to prevent unnecessary
+            // initial page scrolling (yes, this works).
+            .insertAfter( 'body' )[0].contentWindow;
+          
+          // Whenever `document.title` changes, update the Iframe's title to
+          // prettify the back/next history menu entries. Since IE sometimes
+          // errors with "Unspecified error" the very first time this is set
+          // (yes, very useful) wrap this with a try/catch block.
+          doc.onpropertychange = function(){
+            try {
+              if ( event.propertyName === 'title' ) {
+                iframe.document.title = doc.title;
+              }
+            } catch(e) {}
+          };
+          
+        }
+      };
+      
+      // Override the "stop" method since an IE6/7 Iframe was created. Even
+      // if there are no longer any bound event handlers, the polling loop
+      // is still necessary for back/next to work at all!
+      self.stop = fn_retval;
+      
+      // Get history by looking at the hidden Iframe's location.hash.
+      history_get = function() {
+        return get_fragment( iframe.location.href );
+      };
+      
+      // Set a new history item by opening and then closing the Iframe
+      // document, *then* setting its location.hash. If document.domain has
+      // been set, update that as well.
+      history_set = function( hash, history_hash ) {
+        var iframe_doc = iframe.document,
+          domain = $.fn[ str_hashchange ].domain;
+        
+        if ( hash !== history_hash ) {
+          // Update Iframe with any initial `document.title` that might be set.
+          iframe_doc.title = doc.title;
+          
+          // Opening the Iframe's document after it has been closed is what
+          // actually adds a history entry.
+          iframe_doc.open();
+          
+          // Set document.domain for the Iframe document as well, if necessary.
+          domain && iframe_doc.write( '<script>document.domain="' + domain + '"</script>' );
+          
+          iframe_doc.close();
+          
+          // Update the Iframe's hash, for great justice.
+          iframe.location.hash = hash;
+        }
+      };
+      
+    })();
+    // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    // ^^^^^^^^^^^^^^^^^^^ REMOVE IF NOT SUPPORTING IE6/7/8 ^^^^^^^^^^^^^^^^^^^
+    // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    
+    return self;
+  })();
+  
+})(jQuery,this);;
+var BrowserDetect = {
+	init: function () {
+		this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+		this.version = this.searchVersion(navigator.userAgent)
+			|| this.searchVersion(navigator.appVersion)
+			|| "an unknown version";
+		this.OS = this.searchString(this.dataOS) || "an unknown OS";
+	},
+	searchString: function (data) {
+		for (var i=0;i<data.length;i++)	{
+			var dataString = data[i].string;
+			var dataProp = data[i].prop;
+			this.versionSearchString = data[i].versionSearch || data[i].identity;
+			if (dataString) {
+				if (dataString.indexOf(data[i].subString) != -1)
+					return data[i].identity;
+			}
+			else if (dataProp)
+				return data[i].identity;
+		}
+	},
+	searchVersion: function (dataString) {
+		var index = dataString.indexOf(this.versionSearchString);
+		if (index == -1) return;
+		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+	},
+	dataBrowser: [
+		{
+			string: navigator.userAgent,
+			subString: "Chrome",
+			identity: "Chrome"
+		},
+		{ 	string: navigator.userAgent,
+			subString: "OmniWeb",
+			versionSearch: "OmniWeb/",
+			identity: "OmniWeb"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Apple",
+			identity: "Safari",
+			versionSearch: "Version"
+		},
+		{
+			prop: window.opera,
+			identity: "Opera",
+			versionSearch: "Version"
+		},
+		{
+			string: navigator.vendor,
+			subString: "iCab",
+			identity: "iCab"
+		},
+		{
+			string: navigator.vendor,
+			subString: "KDE",
+			identity: "Konqueror"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Firefox",
+			identity: "Firefox"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Camino",
+			identity: "Camino"
+		},
+		{		// for newer Netscapes (6+)
+			string: navigator.userAgent,
+			subString: "Netscape",
+			identity: "Netscape"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "MSIE",
+			identity: "Explorer",
+			versionSearch: "MSIE"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Gecko",
+			identity: "Mozilla",
+			versionSearch: "rv"
+		},
+		{ 		// for older Netscapes (4-)
+			string: navigator.userAgent,
+			subString: "Mozilla",
+			identity: "Netscape",
+			versionSearch: "Mozilla"
+		}
+	],
+	dataOS : [
+		{
+			string: navigator.platform,
+			subString: "Win",
+			identity: "Windows"
+		},
+		{
+			string: navigator.platform,
+			subString: "Mac",
+			identity: "Mac"
+		},
+		{
+			   string: navigator.userAgent,
+			   subString: "iPhone",
+			   identity: "iPhone/iPod"
+	    },
+		{
+			string: navigator.platform,
+			subString: "Linux",
+			identity: "Linux"
+		}
+	]
+
+};
+BrowserDetect.init();;
+jQuery(document).ready(function() {
+	var show=0, start=0, target=null;
+	//Mappings to our functions
+	window.pmc_gallery = {
+		current_position: 0,
+		total_images: 0,
+		swipe: null,
+		click_counter: 0,
+		interstitial_duration: 0,
+		interstitial_timer_id: null,
+		move: function(pos){
+            var track_view = false;
+			if ( this.current_position == pos) {
+				return;
+			}
+			if (BrowserDetect.browser== "Explorer") {
+				jQuery('.gallery-image > div.gallery-multi > div ').hide();
+				jQuery('.gallery-image > div.gallery-multi > div ').eq(pos).show();
+			}
+				if (BrowserDetect.browser== "Safari") {
+					jQuery('.gallery-image > div.gallery-multi > div').css('display','inline-block');
+				}
+
+			position = pos + 1 - pmc_gallery_jsdata.gallery_start;
+			if ( pos < pmc_gallery_jsdata.gallery_start || position > pmc_gallery_jsdata.gallery_count ) {
+				div = jQuery('.gallery-image > div.gallery-multi > div ').eq(pos);
+				window.location = div.attr('data-url') + '#!' + div.attr('data-pos') + '/' + div.attr('data-slug') + '/';
+			} else {
+				if ( this.click_counter > 0 ) {
+                    track_view = true;
+					jQuery.event.trigger({
+						type: 'pmc-gallery-image-load',
+						current: position,
+						total: pmc_gallery_jsdata.gallery_count
+					});
+				}
+				this.click_counter++;
+				if ( this.click_counter != 1 || pmc_gallery_jsdata.interstitial_start == 1 ) {
+					if ( !isNaN( pmc_gallery_jsdata.ad_click ) && pmc_gallery_jsdata.ad_click > 0 && (this.click_counter - 1) % pmc_gallery_jsdata.ad_click == 0 && this.click_counter != 1 ) {
+						if ( jQuery.isFunction(rotateAd) )  rotateAd();
+						jQuery.event.trigger({
+							type: 'pmc-gallery-rotate-ad',
+							current: position,
+							click: window.pmc_gallery.click_counter,
+							showon: pmc_gallery_jsdata.ad_click
+						});
+					}
+
+					if (  parseInt(pmc_gallery_jsdata.ad_interstitial) > 0 && (this.click_counter - 1) % pmc_gallery_jsdata.ad_interstitial == 0 ) {
+						this.start_interstitial();
+						jQuery.event.trigger({
+							type: 'pmc-gallery-rotate-interstitial',
+							click: window.pmc_gallery.click_counter,
+							showon: pmc_gallery_jsdata.ad_interstitial
+						});
+					}
+				}
+
+				this.preload(pos);
+
+				total = jQuery('.gallery-thumbs div.gallery-multi div').length;
+
+
+			//swipe hack - hide not visible main image
+			//so that the height stays at auto
+			//drawback - the images go to white n then to the next image instead of continuous swipe
+			if ( 'variable_height' in pmc_gallery_jsdata ) {
+				jQuery('.gallery-image > div > div ').slice( 0,pos ).each(function(){
+					jQuery(this).find('img').hide();
+				});
+				jQuery('.gallery-image > div > div ').slice( pos,pos+1 ).each(function(){
+					jQuery(this).find('img').show();
+				});
+				jQuery('.gallery-image > div > div ').slice( pos+1 ).each(function(){
+					jQuery(this).find('img').hide();
+				});
+			}
+
+
+				//show proper text
+				for (cssclass in pmc_gallery_jsdata.multiparts) {
+					jQuery('.'+pmc_gallery_jsdata.multiparts[cssclass]+' > div > div ').hide();
+					jQuery('.'+pmc_gallery_jsdata.multiparts[cssclass]+' > div > div ').eq(pos).show();
+				}
+
+				//show proper thumbs
+				for (cssclass in pmc_gallery_jsdata.imageparts) {
+					if ( jQuery('.'+cssclass).attr('data-style') != 'all' ) {
+						start = pos;
+						stop = pos + pmc_gallery_jsdata.imageparts[cssclass].show;
+						jQuery('.'+cssclass+' > div > div ').slice( 0,start ).hide();
+						jQuery('.'+cssclass+' > div > div ').slice( start, stop ).show();
+						jQuery('.'+cssclass+' > div > div ').slice( stop, total ).hide();
+						jQuery('.'+cssclass+' > div > div > img').removeClass('current');
+						jQuery('.'+cssclass+' > div > div ').eq(start).find('img').addClass('current');
+					}
+				}
+
+				//update position
+				this.current_position = pos;
+
+				image = jQuery('.gallery-image > div > div ').eq(pos).find('img');
+				jQuery('.gallery-count .current').html(position);
+				if ( position > 1 || window.location.hash != "" ) {
+					window.location.hash = '!' + position + "/" + image.attr('data-slug') + "/";
+				}
+				if ( track_view ) {
+					if ( jQuery.isFunction(global_urlhashchanged) ) {
+						// if we're calling function we don't know, better wrap it around try catch statement
+						try {
+							global_urlhashchanged();
+						} catch (e) {
+						}
+					}
+				}
+			}
+		},
+
+		start_interstitial: function(){
+
+			//show ad layer n write ad code
+			this.interstitial_duration = pmc_gallery_jsdata.interstitial_duration;
+			jQuery('.gallery-interstitial').show();
+			jQuery('.gallery-interstitial > .ad').html(pmc_gallery_jsdata.interstitial_ad_code);
+			if ( jQuery.isFunction(mmc_load_ad) ) mmc_load_ad();
+
+			//start counter
+			this.interstitial_timer_id = setInterval(this.show_interstitial_countdown, 1000);
+			jQuery.event.trigger({
+				type: 'pmc-gallery-interstitial-start',
+				time: pmc_gallery_jsdata.interstitial_duration,
+				current: window.pmc_gallery.current_position
+			});
+
+		},
+
+		show_interstitial_countdown: function(){
+			if ( window.pmc_gallery.interstitial_duration <= 0 ) {
+				window.pmc_gallery.stop_interstitial();
+				return;
+			}
+
+			jQuery('.gallery-interstitial > .countdown').html("Pictures will display in " + window.pmc_gallery.interstitial_duration + " seconds.");
+			--window.pmc_gallery.interstitial_duration;
+		},
+
+		stop_interstitial: function(){
+			// to stop the counter
+			clearInterval(this.interstitial_timer_id);
+			jQuery(".gallery-interstitial").hide();
+			this.interstitial_duration = 0;
+			jQuery.event.trigger({
+				type: 'pmc-gallery-interstitial-stop'
+			});
+			if (BrowserDetect.browser== "Safari") {
+				jQuery('.gallery-image > div.gallery-multi > div').css('display','table-cell');
+			}
+		},
+
+		preload: function(pos){
+			if (this.current_position == pos) {
+				return;
+			}
+			if ( pmc_gallery_jsdata.imageparts == undefined ) {
+				//In case no thumbs
+				this.load_full( '', pos - 1 );
+				this.load_full( '', pos );
+				this.load_full( '', pos + 1 );
+			} else {
+				for (cssclass in pmc_gallery_jsdata.imageparts) {
+					show  = pos+2*pmc_gallery_jsdata.imageparts[cssclass].show-1;
+					if (show > jQuery('.'+cssclass+' > div > div').length){
+						show=jQuery('.'+cssclass+' > div > div').length;
+					}
+					//might have to put a condition here
+					start = pos - 1 ;
+					for ( i= start; i < show; i++ ) {
+						if ( i-pos < pmc_gallery_jsdata.imageparts[cssclass].show ) {
+							this.load_full(cssclass,i);
+						} else {
+							this.load_thumb(cssclass,i);
+						}
+					}
+				}
+			}
+		},
+		load_thumb: function(cssclass, pos) {
+			target=jQuery('.'+cssclass+' > div > div').eq(pos);
+			if ( target.find( 'img' ).size() == 0 ){
+				target.append('<img src="' + target.attr('data-src') + '" alt="' + target.attr('data-alt') + '" data-slug="' + target.attr('data-slug') + '" />' + target.attr('data-content') );
+			}
+		},
+		load_full: function(cssclass, pos) {
+			//accomodating the case of no thumbs
+			if (cssclass != '' ) {
+				this.load_thumb(cssclass, pos);
+			}
+
+			target=jQuery('.gallery-image > div > div').eq(pos);
+			if ( target.find( 'img' ).size() == 0 ){
+				var img = jQuery('<img src="' + target.attr('data-src') + '" alt="' + target.attr('data-alt') + '" data-slug="' + target.attr('data-slug') + '" />');
+				if ( target.css('width') > '0px' ) {
+					// restrict image to max-width to div holder width
+					img.css('max-width',target.css('width'));
+				}
+				target.append(img);
+			}
+		},
+		prev: function() {
+			//todo: needs edge for stopping left movement
+			if ( this.interstitial_duration == 0 ) {
+				if (BrowserDetect.browser== "Explorer") {
+					width = jQuery('.gallery-image').width();
+					this.move(this.current_position-1);
+				} else {
+					this.swipe.prev();
+				}
+			}
+		},
+		next: function() {
+			//todo: needs edge for stopping right movement
+			if ( this.interstitial_duration == 0 ) {
+				if (BrowserDetect.browser== "Explorer") {
+					width = jQuery('.gallery-image').width();
+					this.move(this.current_position+1);
+				} else {
+					this.swipe.next();
+				}
+			}
+		},
+		jump: function(position) {
+			if ( this.interstitial_duration == 0 ){
+				if (BrowserDetect.browser== "Explorer") {
+					width = jQuery('.gallery-image').width();
+					this.move(position);
+				} else {
+					this.swipe.next();
+				}
+				this.swipe.slide(position);
+			}
+		},
+		parsehash: function() {
+			imageid = 0;
+			this.redirect_old_url();	//if current URL is old gallery URL then redirect it to new URL
+			imageid = parseInt((location.hash).replace( /^#!/, '' ).split('/')[0]);
+			if ( isNaN(imageid) ) {
+				imageid = 1;
+			}
+			return imageid;
+		},
+		redirect_old_url: function() {
+			var current_url = location.href;
+
+			// Handling _escaped_fragment_
+			var image = '';
+			var position = 0;
+			var temp_current_url_parts = current_url.split("#");
+			var pos = 0;
+
+
+			if ( current_url.indexOf('_escaped_fragment_=') !== -1 ) {
+				var current_url_parts = temp_current_url_parts[0].split('?');
+				if ( current_url_parts.length >= 2 ) {
+					var params= current_url_parts[1].split(/[&;]/g);
+					for ( var i= params.length; i-->0; ) {
+						if ( params[i].lastIndexOf( '_escaped_fragment_=', 0 ) !== -1 ) {
+							params.splice(i, 1);
+						}
+					}
+					//pos = position in array
+					pos = pmc_gallery_jsdata.gallery_first + pmc_gallery_jsdata.gallery_start;
+					image = jQuery('.gallery-image > div > div ').eq(pos).find('img');
+					//position = position displayed
+					position = pos + 1 - pmc_gallery_jsdata.gallery_start;
+					window.location = current_url_parts[0]+'?'+params.join('&')+'#'+'!' + position + "/" + image.attr('data-slug') + "/";
+					return;
+				}
+			}
+
+			//Handling Old formats of hashstring
+
+			if( current_url.indexOf("#") < 0 || current_url.indexOf("#!") > 0 ) {
+				//either current url has no hash or hashbang is correct in it, bail out
+				return;
+			}
+
+			var current_url_parts = current_url.split("#");
+
+			if( current_url_parts.length !== 2 ) {
+				//not a url we should be concerned with
+				return;
+			}
+
+
+			url_format_hl = /^(\d+)\-(\d+)\-(.*)/.exec(current_url_parts[1]);
+			if (url_format_hl != null) {
+				//1027327-8-08-Kristen-Stewart
+				window.location = current_url_parts[0] + '#!' + url_format_hl[2] + '/' + url_format_hl[3];
+			} else {
+				//05/Jumpin-Baby
+				url_format_hl = /^(\d+)\/(.*)/.exec(current_url_parts[1]);
+				if (url_format_hl != null) {
+					current_url_parts[1] = '!' + current_url_parts[1];
+					//redirect
+					window.location = current_url_parts.join("#");
+				}
+			}
+			return;
+		}
+	}
+
+	if (parseInt(jQuery('.gallery-image div.gallery-multi').length) > 0) {
+
+		// Bind an event to window.onhashchange that, when the hash changes, gets the
+		// hash and adds the class "selected" to any matching nav link.
+		jQuery(window).hashchange( function(){
+			if ( '#comments' == location.hash || '#article-comments' == location.hash ) {
+				var pos = window.pmc_gallery.current_position;
+				//handling edge case where pos stays 0 of 1st load
+				if ( pos < 1 ) pos = 1;
+				var image = jQuery('.gallery-image > div > div ').eq(pos).find('img');
+				jQuery('html,body').animate({scrollTop: jQuery(location.hash).offset().top},'slow');
+				window.location.hash = '!' + pos + "/" + image.attr('data-slug') + "/";
+				return false;
+			} else {
+				var imageid = window.pmc_gallery.parsehash();
+				if ( imageid > pmc_gallery_jsdata.gallery_count || imageid < 1 ) {
+					imageid = 1;
+				}
+				window.pmc_gallery.jump(imageid-1+pmc_gallery_jsdata.gallery_start);
+			}
+		});
+
+		// Check for back Link and integrate
+		var picsbackregex = new RegExp("ref=(.*)pos=");
+		var picsbackurl	  = picsbackregex.exec(location.hash);
+		if (picsbackurl != null && /.+:\/\//.exec(picsbackurl) == null) {
+			jQuery('.gallery-back').attr('href',picsbackurl[1]).css('display','block');
+		}
+
+		//get current position
+		pos=window.pmc_gallery.parsehash()-1;
+		if(pos<0) pos=0;
+
+		if (pmc_gallery_jsdata.gallery_first > 0) pos = pmc_gallery_jsdata.gallery_first;
+
+		//Creating Difference for first Load
+		window.pmc_gallery.current_position = -1
+		window.pmc_gallery.move( pos+pmc_gallery_jsdata.gallery_start );
+
+		//start swipe from current if not IE
+		if (BrowserDetect.browser != "Explorer") {
+			window.pmc_gallery.swipe = new Swipe(
+				jQuery('.gallery-image')[0],
+				{
+					startSlide: window.pmc_gallery.current_position,
+					callback: function(event, index, elem){
+						window.pmc_gallery.move(index);
+					}
+				}
+			);
+		}
+		// arrow keys -> <-
+		jQuery(document).on( "keydown", function(e){
+			switch(e.which) {
+				case 37: // left
+					//case 38: // up
+					window.pmc_gallery.prev();
+					break;
+
+				case 39: // right
+					//case 40: // down
+					window.pmc_gallery.next();
+					break;
+
+				default:
+					return; // exit this handler for other keys
+			}
+			e.preventDefault();
+		});
+
+		// nav clicks
+		jQuery('.gallery-navigation-previous').on("click", function(){
+			window.pmc_gallery.prev();
+		});
+		jQuery('.gallery-navigation-next').on("click", function(){
+			window.pmc_gallery.next();
+		});
+		//thumb clicks
+		jQuery('.gallery-thumbs > div.gallery-multi > div').on("click", function(){
+			window.pmc_gallery.jump(jQuery(this).parent().children().index(this));
+		});
+		//interstitial close click
+		jQuery('.gallery-interstitial > .close').on("click", function(){
+			window.pmc_gallery.stop_interstitial();
+		});
+	}
+
+	//CloudZoom is only loaded if it's enabled for a post, so if the CloudZoom is not undefined, we can assume its ok to set it up
+	if ( typeof CloudZoom !== "undefined" ) {
+		var cloudZoomOptions = {zoomPosition: 'inside', zoomOffsetX: 0, startMagnification: 2};
+		jQuery('.gallery-image img').CloudZoom(cloudZoomOptions);
+	}
+});
+
+;
+jQuery(document).ready(function()
+{
+	var $ = jQuery; // Encapsulated
+	//$('.topper_mobile').fitText(1.5);
+	
+	// Main nav
+	$('#mobile_nav_more').click(function()
+	{
+		var el = $(this);
+		if(!el.hasClass('selected'))
+		{
+			el.addClass('selected');
+			//$('#main_nav').addClass('show');
+			$('#hb-nav').addClass('show');
+		}
+		else
+		{
+			el.removeClass('selected');
+			//$('#main_nav').removeClass('show');
+			$('#hb-nav').removeClass('show');
+		}
+	});
+
+
+});
+/* JS for Videos
+ * Since 25th Oct Vicky Biswas
+ */
+	var Apple = {};
+	Apple.UA = navigator.userAgent;
+	Apple.Terms = ["iPhone", "iPod", "iPad"];
+	Apple.Device = !!Apple.UA.match(new RegExp(Apple.Terms.join('|'),'gi'));
+	if (Apple.Device)
+		jQuery(document).ready(function() {
+			jQuery('.vvqbox').each(function(){
+				x=jQuery(this).html().match(/http\:\/\/www\.youtube\.com\/watch\?v\=(.+?)[<|&]/i); 
+				if(!(x && x[1]))
+					x=jQuery(this).html().match(/http\:\/\/youtu\.be\/(.+?)[&|<]/i); 
+				if(x && x[1])
+					jQuery(this).html('<iframe height="100%" frameborder="0" width="100%" allowfullscreen="" src="http://www.youtube.com/embed/'+x[1]+'"></iframe>');
+				else
+					if ((jQuery(this).html()).indexOf('<ifr'+'ame') == -1) jQuery(this).hide();
+			});
+		});
+
+/* for older Iframe Embeds 
+ * Since 3rd Nov Vicky Biswas
+ */
+	jQuery(document).ready(function() {
+		jQuery('iframe').each(function(){
+			if(iframe_is_video(jQuery(this).attr('src'))) jQuery(this).parent().addClass('vvqbox');
+		});
+	});
+	function iframe_is_video( src ){
+		var keys = new Array('player','youtu','discoverymedia');
+		for ( akey in keys) {
+		   if ( typeof src != "undefined" && src.indexOf(keys[akey])!=-1)
+			return true;
+		} 
+		return false;
+	}
+;
+/*
+ * This contains the code to track click events of next & previous buttons
+ * on the left/right screen edges. This is only for articles & gallery pages
+ * where these buttons are in use.
+ *
+ * @author Amit Gupta
+ * @since 2013-03-13
+ */
+
+jQuery(document).ready(function($){
+
+	if( ! hl_tracker || ! hl_tracker.page_type ) {
+		var hl_tracker = {"page_type":"article"};
+	}
+
+	$('.btn-prev-article').on( 'click', function(){
+		_gaq.push(['_trackEvent', 'side-previous-button', 'click', hl_tracker.page_type, 0, true]);
+	} );
+
+	$('.btn-next-article').on( 'click', function(){
+		_gaq.push(['_trackEvent', 'side-next-button', 'click', hl_tracker.page_type, 0, true]);
+	} );
+
+});
+
+//EOF
+;
+var HL_Single_GA_Event = {
+	initialize: function() {
+
+		if (typeof PMC_GA_Event === 'undefined') {
+			return;
+		}
+		
+		PMC_GA_Event.monitor_view_scroll('article-related-stories',[
+				{ action: 'all', label: 'view', element: '#sidebar' },
+			]);
+		
+		jQuery('#sidebar a.post').on('click', function () {
+			var action = 'chip' + ( jQuery(this).index() + 1);
+			PMC_GA_Event.track('article-related-stories', action, 'click');
+			PMC_GA_Event.track('article-related-stories', 'all', 'click');
+		});
+
+	}
+};
+
+// we want to fire the event as early as possible to attach view scroll events.
+jQuery(HL_Single_GA_Event.initialize);;
+var addComment={moveForm:function(a,b,c,d){var e,f=this,g=f.I(a),h=f.I(c),i=f.I("cancel-comment-reply-link"),j=f.I("comment_parent"),k=f.I("comment_post_ID");if(g&&h&&i&&j){f.respondId=c,d=d||!1,f.I("wp-temp-form-div")||(e=document.createElement("div"),e.id="wp-temp-form-div",e.style.display="none",h.parentNode.insertBefore(e,h)),g.parentNode.insertBefore(h,g.nextSibling),k&&d&&(k.value=d),j.value=b,i.style.display="",i.onclick=function(){var a=addComment,b=a.I("wp-temp-form-div"),c=a.I(a.respondId);if(b&&c)return a.I("comment_parent").value="0",b.parentNode.insertBefore(c,b),b.parentNode.removeChild(b),this.style.display="none",this.onclick=null,!1};try{f.I("comment").focus()}catch(l){}return!1}},I:function(a){return document.getElementById(a)}};;

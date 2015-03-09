@@ -1,0 +1,799 @@
+body {
+font-family: 'Droid Sans', arial, serif;
+background: #fff;
+}
+
+p {
+margin: 0px;
+font-family: 'Droid Sans', arial, serif;
+}
+
+/* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* =Layout
+-------------------------------------------------------------- */
+
+/*
+LAYOUT: Two columns
+DESCRIPTION: Two-column fixed layout with one sidebar right of content
+*/
+#access,
+div.menu,
+#colophon,
+#branding,
+#featuredSlider,
+#main,
+#container {
+margin: 0 auto;
+width: 980px;
+}
+
+#featuredSlider {
+padding-top: 10px;
+}
+
+#content {
+    float: left;
+    width: 650px;
+    margin: 0px 10px 36px 0;
+}
+.home #content { 
+    width: 650px;
+}
+
+#main {
+    clear: both;
+    /* Not sure we need this overflow: hidden; */
+}
+
+#freshnessSidebar {
+float: right;
+width: 310px;
+background: #e3e3e3;
+padding-left: 10px;
+padding-top: 10px;
+}
+
+#secondary {
+    clear: right;
+}
+
+#footer {
+    clear: both;
+    background: url('images/footer/footerbg.png') repeat-x #d3dd49;
+    height: 195px;
+}
+
+#brandingWrapper, #menuWrapper, #featuredSliderWrapper, #footer {
+width: 100%;
+}
+
+#brandingWrapper {
+    background: url('images/header/headerbg.png') repeat-x #000;
+    height: 108px;
+}
+
+#menuWrapper, #access {
+background: url('images/header/menubg.png') repeat-x #d3dd49;
+height: 38px;
+}
+
+#featuredSliderWrapper {
+background: url('images/header/sliderbg.png') repeat-x;
+}
+
+#featuredSlider {
+height: 350px;
+z-index: 1;
+position: relative;
+}
+
+#container {
+background: url(images/bodybg.png) repeat-y;
+margin-top: 10px;
+}
+
+/*Top ad needs to be hidden. CMN unhide it when they send an ad*/
+.cmn5x5 {
+    display: none;
+}
+
+/*Hide wp.com stats tracking gif*/
+img#wpstats{display:none}
+
+/*Aw slider override*/
+    /* Navigation arrows */
+.showcase-arrow-previous, .showcase-arrow-next
+{
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    z-index: 100;
+    top: 150px;
+    display: none;
+}
+
+.showcase-arrow-previous
+{
+    left: 10px;
+    background-position: bottom left;
+}
+
+.showcase-arrow-previous:hover
+{
+    background-position: top left;
+}
+
+.showcase-arrow-next
+{
+    right: 10px;
+    background-position: bottom right;
+}
+
+.showcase-arrow-next:hover
+{
+    background-position: top right;
+}
+
+.arrowtarget {
+    width: 80px;
+    height: 320px;
+    position: absolute;
+    z-index: 100;
+   overflow: hidden;
+   cursor: pointer;
+}
+
+#arrowtargetRight {
+    right: 0px;
+}
+
+.arrowtarget a {
+    background: url('images/header/sliderArrowSprite.png') no-repeat;
+    height: 320px;
+    width: 80px;
+    display: block;
+    position: relative;
+    text-indent: -1000px;
+}
+#arrowtargetLeft a {
+    right: 80px;
+}
+
+#arrowtargetRight a {
+    left: 80px;
+    background-position: top right;
+}
+
+
+
+/* =Menu
+-------------------------------------------------------------- 
+
+#access {
+    background: #000;
+    display: block;
+    float: left;
+    margin: 0 auto;
+    width: 980px;
+}*/
+
+#access .menu-header,
+div.menu {
+    font-size: 11px;
+    font-weight: bold;
+}
+.menu-header ul,
+div.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#access .menu-header li,
+div.menu li {
+    float: left;
+    position: relative;
+    margin-top: 7px;
+    padding: 0 7px 0 7px;
+    background: url('images/header/menuBorder.png') no-repeat right center;
+}
+
+#access .menu-header li.first-menu-item,
+div.menu li.first-menu-item {
+    padding: 0 11px 0 0px
+} 
+
+#access a {
+    color: #000;
+    display: block;
+    padding: 8px 9px 7px 9px;
+    text-decoration: none;
+    text-transform: uppercase;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+    
+
+#access ul ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    float: left;
+    width: 180px;
+    z-index: 0;
+}
+
+#access ul ul li {
+    min-width: 180px;
+}
+
+#access ul ul ul {
+    left: 100%;
+    top: 0;
+}
+#access ul ul a {
+    line-height: 1em;
+    width: 160px;
+    height: auto;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+#access li:hover > a,
+#access ul ul :hover > a {
+    background: #fff;
+    color: #000;
+}
+#access ul li:hover > ul {
+
+}
+
+#access ul li.current_page_item > a,
+#access ul li.current-menu-ancestor > a,
+#access ul li.current-menu-item > a,
+#access ul li.current-menu-parent > a {
+    background: #fff;
+    color: #000;
+}
+* html #access ul li.current_page_item a,
+* html #access ul li.current-menu-ancestor a,
+* html #access ul li.current-menu-item a,
+* html #access ul li.current-menu-parent a,
+* html #access ul li a:hover {
+    color: #fff;
+}
+
+/*Submenu*/
+#menu-main .sub-menu .menu-item {
+    background: none;
+}
+#menu-main .sub-menu .menu-item a{
+    padding: 0px 0 1px 10px;
+    font-size: 10px;
+}
+#menu-main .sub-menu .menu-item:hover > a, 
+#menu-main .sub-menu .menu-item a:hover {
+    background: none;
+    color: #696e24;
+}
+#menu-main .sub-menu  .current-menu-item a {
+    background: none;
+}
+
+/*dropdown-notalink*/
+.dropdown-notalink {
+    cursor: pointer;
+}
+
+/*Show/hide btn*/
+a#showHide{
+font-size: 11px;
+text-transform: none;
+padding: 15px 12px 0 13px;
+float: left;
+width: 65px;
+text-align: right;
+}
+
+a#showHide.toggle{
+background: url('images/header/show.png') no-repeat right 18px;
+}
+
+a#showHide.close{
+background: url('images/header/hide.png') no-repeat right 18px;
+}
+
+/*Search and newsletter inputs*/
+
+#searchform  {
+padding-top: 7px;
+float: right;
+}
+
+#searchform input, #newsletter form input {
+padding: 0;
+margin: 0;
+border: 0;
+outline: 0;
+float: left;
+height: 25px;
+}
+
+#searchform input[type="text"], #newsletter form input[type="text"] {
+width: 273px;
+color: #000;
+padding-left: 5px;
+background: #fff;
+-webkit-border-top-left-radius: 13px;
+-webkit-border-top-right-radius: 0px;
+-webkit-border-bottom-right-radius: 0px;
+-webkit-border-bottom-left-radius: 13px;
+-moz-border-radius-topleft: 13px;
+-moz-border-radius-topright: 0px;
+-moz-border-radius-bottomright: 0px;
+-moz-border-radius-bottomleft: 13px;
+border-top-left-radius: 13px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 13px;
+font-family: 'Droid Sans', arial, serif;
+font-size: 11px;
+color: #000;
+}
+
+#searchform input[type="submit"], #newsletter form input[type="submit"] {
+background: url('images/header/search.png') no-repeat;
+width: 46px;
+font-size: 0px;
+}
+
+
+#searchform input[type="submit"]:hover {
+background: url('images/header/search_hover.png') no-repeat;
+}
+
+/*Newsletter specific*/
+
+#newsletter form {
+margin-top: 13px;
+}
+
+#newsletter form input[type="text"] {
+width: 228px;
+}
+
+#newsletter form input[type="submit"] {
+background: url('images/sidebar/newsletter_.png') no-repeat;
+}
+
+#newsletter form input[type="submit"]:hover {
+background: url('images/sidebar/newsletter_hover.png') no-repeat;
+}
+
+
+/*Sidebar*/
+
+.sidebarItem {
+margin-bottom: 12px;
+}
+
+.xoxo {
+margin: 0px 0px 0px 0px;
+padding: 0px 0px 0px 0px;
+}
+
+#freshnessSidebar .widget-container {
+background: #000;
+}
+
+#freshnessSidebar .widget-container  ul{
+margin: 0px;
+padding: 0px;
+list-style-position:inside;
+}
+
+#freshnessSidebar .widget-container  ul li, 
+#freshnessSidebar .widget-container  ul a,
+#freshnessSidebar p{
+font-size: 11px;
+color: #aaaaaa;
+line-height: 1.3em;
+}
+
+/* Footer widget areas */
+#footer-widget-area {
+font-size: 11px;
+}
+
+/*Second footer area*/
+#footer-widget-area #second {
+    width: 280px;
+}
+
+.textwidget p {
+    margin-bottom: 7px;
+}
+
+/*Twitter widget*/
+
+.twtr-hd h3 {
+text-transform: uppercase;
+}
+
+/*Copy to clipboard*/
+#multiple_container {
+    position: relative;
+}
+
+#multiple {
+background: url('images/sidebar/copyPerma.png') no-repeat 10px 11px;
+width:300px; 
+height:33px;
+border-top:1px solid #000;
+border-bottom:1px solid #000;
+margin: 10px 10px;
+cursor: pointer;
+}
+
+#multiple.hover {
+background-color: #f5f5f5;
+}
+
+#multiple p {
+font-size: 12px;
+margin: 10px 0 0 33px;
+}
+
+.copyReplaceText {
+    font-weight: bold;
+    }
+
+.sidebarTags {
+margin: 20px 10px;
+font-size: 12px;
+}
+
+/*Tags*/
+.sidebarTags p{
+    background: url('images/sidebar/tags.png') no-repeat 0px 0px;
+    padding: 0 0 12px 19px;
+}
+
+.categorgies_sidebar.sidebarTags p{
+    background: url('images/sidebar/categories.png') no-repeat 0px 0px;
+    padding: 2px 0 12px 19px;
+}
+
+.sidebarTags ul{
+    margin: 0;
+    padding: 0;
+}
+
+.sidebarTags li{
+    display: inline;
+}
+
+.sidebarTags a{
+    font-size: 12px;
+    background: #B3B3B3;
+    color: black;
+    text-decoration: none;
+    padding: 2px 4px;
+    margin: 0 2px 5px 0;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+.sidebarTags a:hover{
+    background-color: #bebebe;
+}
+
+/*Footer*/
+
+#colophon {
+    position: relative;
+    padding-top: 5px;
+}
+
+#footerLogo {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+
+.back-top {
+    position: fixed;
+    bottom: 30px;
+    margin: 0 0 40px -150px;
+    display: none;
+}
+
+.back-top.right {
+    margin: 0 0 40px 1055px;
+}
+
+.back-top a {
+    width: 85px;
+    display: block;
+    color: #bbb;
+
+    /* transition */
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+
+/* arrow icon (span tag) */
+.back-top span {
+    width: 85px;
+    height: 85px;
+    display: block;
+    background: #666 url('images/footer/backtotop.png') no-repeat center center;
+    /* transition */
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+.back-top a:hover span {
+    background-color: #000;
+}
+
+#footer .widget-container  ul{
+margin: 0px;
+padding: 0px;
+list-style: none;
+width: 180px;
+}
+
+#footer .widget-container  ul li, #footer .widget-container  ul a{
+font-size: 11px;
+color: #000;
+margin-bottom: 7px;
+}
+
+/*Single post view. And some bits cascading into Page view*/
+
+body.single-post .post {
+height: auto;
+width: auto;
+float: right;
+}
+body.page .page, #lf_comment_stream  {
+    float: right;
+}
+
+#lf_comment_stream  {
+    width: 100%;
+}
+
+.post_styles_wrap {
+    width: 570px;
+    margin: 0 auto;
+}
+.features .post_styles_wrap {
+    width: 980px;
+    padding-bottom: 10px;
+    float: left;
+}
+
+body.single-post .post .entry-content, body.page .entry-content{
+width: 650px;
+}
+
+body.single-post .post .entry-content p, body.page .entry-content p {
+padding-bottom: 15px;
+}
+
+/*PostNav bar*/
+.postTitlebar, .featuresBar{
+    width: 650px;
+    min-height: 36px;
+    background: #000;
+    margin: 0px 0 30px 0;
+}
+.postTitlebar.withpostTools {
+    margin: 0px;
+}
+
+.single .postTitlebar, .single .featuresBar{
+    float: left;
+}
+
+a.homeLink {
+    background: url('images/posts/home.png') no-repeat left center;
+    display: block;
+    height: 33px;
+    width: 17px;
+    float: left;
+    margin-left: 10px;
+}
+
+.view-title {
+    width: 610px;
+    color: #d3dd49;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    float: left;
+    margin-top: 9px;
+    line-height: 18px;
+    padding: 0 0 8px 10px;
+}
+
+.current-tag {
+    font-style: italic;
+}
+
+/*end PostNav bar*/
+
+body.single-post .entry-title a:link, body.single-post .entry-title a:visited {
+    text-decoration: none;
+    color: #1e1e1e;
+}
+body.single-post .entry-title a:hover {
+    color: #1e1e1e;
+}
+
+/*Single post pagination*/
+
+.page-link {
+    clear: both;
+    color: #d3dd49;
+    font-weight: bold;
+    background: #000;
+    height: 27px;
+    padding: 9px 0 0 20px;
+    font-size: 11px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+body.features .page-link {
+    margin-bottom: 0px;
+}
+
+.page-link a:link,
+.page-link a:visited {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.page_number {
+    padding: 0 10px 0 10px;
+}
+
+.page-link span.page_next {
+    background: url('images/sidebar/next.png') no-repeat left center #000;
+    padding: 0 0 0 20px;
+}
+
+.home .sticky .page-link a {
+    background: #d9e8f7;
+}
+
+.page-link a:active,
+.page-link a:hover {
+    color: #ccc;
+}
+
+.currentPage {
+    padding: 0 10px 0 10px;
+}
+
+a.pageNextPrev, span.pageNextPrev a{
+padding: 7px 0;
+}
+/*span.pageNextPrev is also used in cases where we don't have access to the next post link directly*/
+
+a:link.pageNextPrev, a:visited.pageNextPrev , .page-link span.pageNextPrev a{
+background: url('images/sidebar/next.png') no-repeat left center #000;
+margin-left: 10px;
+padding: 0 0 0 20px;
+}
+
+/*postTools*/
+
+.postTools {
+    background: #e3e3e3;
+    font-size: 12px;
+    line-height: 19px;
+    width: 640px;
+    height: 26px;
+    margin: 0px 0 30px 0;
+    padding: 10px 0 0 10px;
+    float: left;
+}
+
+body.features .postTools {
+    width: 970px;
+}
+
+.postTools  .author a {
+font-weight: bold;
+color: #d46400;
+text-decoration: none;
+}
+
+/*Facebook custom styles*/
+.fb_iframe_widget iframe {
+vertical-align: baseline !important;
+}
+
+/*More post links at bottom*/
+
+#morePostsLists {
+height: 200px;
+background: #181818;
+color: #fff;
+float: right;
+width: 100%;
+}
+
+ul.morePostsList {
+width: 196px;
+float: left;
+margin: 0px 10px 0px 10px;
+padding: 0px 0px 0px 0px;
+}
+
+ul.morePostsList li, ul.morePostsList li a { 
+    font-size: 11px;
+    color: #AAA;
+    border: none;
+}
+ul.morePostsList li a {
+    text-decoration: none;
+    height: 14px;
+    overflow: hidden;
+    margin-bottom: 4px;
+    line-height: 15px;
+    display: block;
+    background: url('images/posts/bullet.gif') no-repeat left center;
+    padding: 0 0 0 9px;
+}
+
+ul.morePostsList li a:hover {
+text-decoration: underline;
+}
+
+ul.morePostsList h3.widget-title {
+    padding: 12px 0px 0px 0px;
+}
+ul.morePostsList h3.widget-title, ul.morePostsList li.title {
+color: #d3dd49;
+list-style: none;
+margin-bottom: 7px !important;
+border-bottom: none;
+}
+
+ul.morePostsList li.title {
+    border-bottom: 1px solid #3D3D3D;
+}
+
+/*Advert styles*/
+#brandingWrapper #largeBanner {
+    padding-top: 10px;
+    float: right;
+}
+
+#midBanner {
+    background: #fff;
+    width: 980px;
+    margin: 0 auto;
+}
+
+/*Quick hover states...*/
+a.featureSlideMore:hover, a#showHide:hover {
+    -moz-opacity: 80;
+    -khtml-opacity: 80;
+    opacity: 0.8;
+}

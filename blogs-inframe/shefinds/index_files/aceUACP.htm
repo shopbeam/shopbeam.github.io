@@ -1,0 +1,74 @@
+
+<!-- saved from url=(0485)http://uac.advertising.com/wrapper/aceUACP.htm#acehost=http://imp.bid.ace.advertising.com&site=895019&region=1&size=728090&CallType=IFRAME&pmcpmprice=3.3194&rip=ChRMbjg1MDAxMzI5NTk2NzgwMDA2MBIiQVNmYmNkN2U2YWM2Njk0YjY3OGY3Y2U1ZWU5Zjg0YTBmNBgJIgAqBTI5OTQ2Mgx3d3cuZ2xhbS5jb204q_5kQFBIAFgAcLCkzJkFffdlizuAAR-IAQSVATTGoT-dAfdlizulAZdzPD-tAc11TTu1AZF6jDu9AfdlizvFAfdlizvNAc11TTvVAQAAgD_dAc11TTviASpNVE01TkRVM05USXlNVHN4T2pFNVlXTTFNbkl4WjJkdmJqTm9Pak0yTlHoAQHyAQVhYm92Zf0B-GWLO4ACAIoCBUZhbHNl -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="ftpagefold_v3.0.15.js"></script></head><body marginwidth="0" marginheight="0">
+<script type="text/javascript">
+var data=location.hash;
+var ACE_AR = new Object();
+var ACE_extradata = "";
+var ACE_HOST="";
+
+if (data){
+  data=data.substr(1);
+  var vars=data.split("&");
+  for (var i=0; i<vars.length; i++){
+    var kv = vars[i];
+    var kvs = kv.split("=");
+    if (kvs.length == 2) {
+		var tmpKey = (kvs[0].toLowerCase() != 'class') ? kvs[0].toLowerCase() : kvs[0];
+		var tmpVal;
+		if (tmpKey == 'rip') {
+			tmpVal  = encodeURIComponent(kvs[1]);
+		}
+		else {
+			tmpVal = unescape(kvs[1]);
+		}
+
+		if (tmpKey=='acehost') {
+			ACE_HOST=tmpVal;
+		}
+		else {
+		    if (tmpKey == 'site' || tmpKey == 'size' || tmpKey == 'calltype' || tmpKey == 'akoptout' || tmpKey == 'exchmap' || tmpKey == 'dynclick' || tmpKey == 'rclk' || tmpKey == 'allowexp' || tmpKey == 'ud' || tmpKey == 'alttext' || tmpKey == 'poptype' || tmpKey == 'poponunload' || tmpKey == 'region' || tmpKey == 'bnum' || tmpKey == 'width' || tmpKey == 'height' || tmpKey == 'media' || tmpKey == 'adtype' || tmpKey == 'at' || tmpKey == 'popfreq' || tmpKey == 'extra' || tmpKey == 'dontopenwindow' || tmpKey == 'isaol' || tmpKey == 'burl' || tmpKey == 'popdelay' || tmpKey == 'mnum' || tmpKey == 'betr' || tmpKey == 'ctxt' || tmpKey == 'dmip' || tmpKey == 'xsmemid' || tmpKey == 'zpcd' || tmpKey == 'mn' || tmpKey == 'zid') {
+		        ACE_AR[tmpKey] = tmpVal;
+		    }
+		    else {
+		        ACE_extradata = ACE_extradata+'/'+tmpKey+'='+tmpVal;
+		    }
+		}
+	}
+  }
+  if (ACE_extradata.length > 0) {
+    ACE_AR['extra'] = ACE_extradata.substr(1);
+  }
+}
+if (ACE_AR){
+  if (ACE_AR.calltype){
+    var ct=ACE_AR.calltype.toString().toUpperCase()
+    if (ct=="IFRAME"||ct=="IF")ACE_AR.calltype = "J";
+  }
+  var ACE_src = "http://uac.advertising.com/wrapper/aceUAC.js";
+  document.write("<scr"+"ipt type='text/javascript' src='"+ACE_src+"'></scr"+"ipt>");
+}
+</script><script type="text/javascript" src="aceUAC.js"></script><script type="text/javascript" src="dref=http%3A%2F%2Fwww.shefinds.com%2F2014%2Fshop-reese-witherspoons-designer-accessories-now%2F"></script><script language="Javascript1.1" type="text/javascript">
+var ftClick = "http://servedby.advertising.com/click/site=895019/mnum=1654571/cstr=21124798=_53331650,2571860463,895019_1654571_80_0,1_/xsxdata=$XSXDATA/bnum=21124798/optn=64?trg=";
+var ftExpTrack_759558 = "";
+var ftX = "";
+var ftY = "";
+var ftZ = "";
+var ftOBA = 1;
+var ftContent = "";
+var ftCustom = "";
+var ft728x90_OOBclickTrack = "";
+var ftRandom = Math.random()*1000000;
+var ftBuildTag1 = "<scr";
+var ftBuildTag2 = "</";
+var ftClick_759558 = ftClick;
+if(typeof(ft_referrer)=="undefined"){var ft_referrer=(function(){var r="";if(window==top){r=window.location.href;}else{try{r=window.parent.location.href;}catch(e){}r=(r)?r:document.referrer;}while(encodeURIComponent(r).length>1500){r=r.substring(0,r.length-1);}return r;}());}
+var ftDomain = (window==top)?"":(function(){var d=document.referrer,h=(d)?d.match("(?::q/q/)+([qw-]+(q.[qw-]+)+)(q/)?".replace(/q/g,decodeURIComponent("%"+"5C")))[1]:"";return (h&&h!=location.host)?"&ft_ifb=1&ft_domain="+encodeURIComponent(h):"";}());
+var ftTag = ftBuildTag1 + 'ipt language="javascript1.1" type="text/javascript" ';
+ftTag += 'src="https://servedby.flashtalking.com/imp/3/31321;759558;201;js;Adcom;PURdCPMTMobilecpmcampaignPlansROS728x90Stnd/?ftx='+ftX+'&fty='+ftY+'&ftadz='+ftZ+'&ftscw='+ftContent+'&ft_custom='+ftCustom+'&ftOBA='+ftOBA+ftDomain+'&ft_referrer='+encodeURIComponent(ft_referrer)+'&cachebuster='+ftRandom+'" id="ftscript_728x90" name="ftscript_728x90"';
+ftTag += '>' + ftBuildTag2 + 'script>';
+document.write(ftTag);
+</script><script language="javascript1.1" type="text/javascript" src="31321;759558;201;js;Adcom" id="ftscript_728x90" name="ftscript_728x90"></script><script src="j-759558-679671.js" id="ftscript_m759558" name="ftscript_m759558"></script><div id="ftdiv759558" style="position:relative; width:728px; height:90px;"><object type="application/x-shockwave-flash" data="http://cdn.flashtalking.com/xre/75/759558/679671/swf/tMobile_DDR_Tier2_728x90_base_Retargeting.swf" id="ftswf759558" width="728" height="90"><param name="movie" value="http://cdn.flashtalking.com/xre/75/759558/679671/swf/tMobile_DDR_Tier2_728x90_base_Retargeting.swf"><param name="FlashVars" value="clickTag=http%3A%2F%2Fservedby.advertising.com%2Fclick%2Fsite%3D895019%2Fmnum%3D1654571%2Fcstr%3D21124798%3D_53331650%2C2571860463%2C895019_1654571_80_0%2C1_%2Fxsxdata%3D%24XSXDATA%2Fbnum%3D21124798%2Foptn%3D64%3Ftrg%3Dhttp%3A%2F%2Fservedby.flashtalking.com%2Fclick%2F3%2F31321%3B759558%3B679671%3B211%3B990657%2F%3Fg%3D1509539C42419B%26random%3D906460640%26ft_width%3D728%26ft_height%3D90%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fclk%3B278392452%3B105300244%3Bw%3Bpc%3D%5BTPAS_ID%5D&amp;clickTag1=http%3A%2F%2Fservedby.advertising.com%2Fclick%2Fsite%3D895019%2Fmnum%3D1654571%2Fcstr%3D21124798%3D_53331650%2C2571860463%2C895019_1654571_80_0%2C1_%2Fxsxdata%3D%24XSXDATA%2Fbnum%3D21124798%2Foptn%3D64%3Ftrg%3Dhttp%3A%2F%2Fservedby.flashtalking.com%2Fclick%2F3%2F31321%3B759558%3B679671%3B211%3B990657%2F%3Fg%3D1509539C42419B%26random%3D906460640%26ft_width%3D728%26ft_height%3D90%26url%3Dhttps%3A%2F%2Fad.doubleclick.net%2Fclk%3B278392452%3B105300244%3Bw%3Bpc%3D%5BTPAS_ID%5D&amp;ftStreamMode=0&amp;ftPL=0&amp;ftLinkID=0&amp;ftLinkMode=0&amp;ftServeDom=http%3A%2F%2Fcdn.flashtalking.com&amp;ftMVT=true&amp;ftStatBaseURL=http%3A%2F%2Fstat.flashtalking.com%2FreportV3%2Fft.stat%3F34526832-&amp;ftSetFileSize=15.9521484375&amp;aID=1&amp;ftPlacementID=759558&amp;cID=26997&amp;creativeID=679671&amp;ftfuncid=759558&amp;divID=ftdiv759558&amp;adVis=1&amp;ftSegment=aelsku5870225%2Cael%2Cdfq%2Cdem%2Ccxt%2Ccxv%2Ccxx%2Ccbf_sports%2Ccbf%2Ccbf4336233%2Cdr6%2Cdr6030eacc5_7195_4fbf_813e_3094ce4e835d%2Ctmo_SamsungGalaxyS4&amp;ftKeyword=&amp;ftConfID=990657&amp;ftGUID=1509539C42419B"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div>
+
+ <div style="position: absolute; top: 90px; width: 1px; height: 2px; left: 0px; z-index: -1;"><object data="http://cdn.flashtalking.com/pageFold/pagefold.swf" type="application/x-shockwave-flash" id="ftPF0" name="ftPF0" width="1" height="2" style="float:left;"><param name="movie" value="http://cdn.flashtalking.com/pageFold/pagefold.swf"><param name="FlashVars" value="identifier=0"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div><div style="position: absolute; top: 0px; width: 1px; height: 2px; left: 0px; z-index: -1;"><object data="http://cdn.flashtalking.com/pageFold/pagefold.swf" type="application/x-shockwave-flash" id="ftPF1" name="ftPF1" width="1" height="2" style="float:left;"><param name="movie" value="http://cdn.flashtalking.com/pageFold/pagefold.swf"><param name="FlashVars" value="identifier=1"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div><div style="position: absolute; top: 0px; width: 1px; height: 2px; left: 728px; z-index: -1;"><object data="http://cdn.flashtalking.com/pageFold/pagefold.swf" type="application/x-shockwave-flash" id="ftPF2" name="ftPF2" width="1" height="2" style="float:left;"><param name="movie" value="http://cdn.flashtalking.com/pageFold/pagefold.swf"><param name="FlashVars" value="identifier=2"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div><div style="position: absolute; top: 89px; width: 1px; height: 2px; left: 728px; z-index: -1;"><object data="http://cdn.flashtalking.com/pageFold/pagefold.swf" type="application/x-shockwave-flash" id="ftPF3" name="ftPF3" width="1" height="2" style="float:left;"><param name="movie" value="http://cdn.flashtalking.com/pageFold/pagefold.swf"><param name="FlashVars" value="identifier=3"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div><div style="position: absolute; top: 90px; width: 1px; height: 2px; left: 728px; z-index: -1;"><object data="http://cdn.flashtalking.com/pageFold/pagefold.swf" type="application/x-shockwave-flash" id="ftPF4" name="ftPF4" width="1" height="2" style="float:left;"><param name="movie" value="http://cdn.flashtalking.com/pageFold/pagefold.swf"><param name="FlashVars" value="identifier=4"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div><div style="position: absolute; top: 0px; width: 1px; height: 2px; left: 728px; z-index: -1;"><object data="http://cdn.flashtalking.com/pageFold/pagefold.swf" type="application/x-shockwave-flash" id="ftPF5" name="ftPF5" width="1" height="2" style="float:left;"><param name="movie" value="http://cdn.flashtalking.com/pageFold/pagefold.swf"><param name="FlashVars" value="identifier=5"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div><div style="position: absolute; top: 90px; width: 1px; height: 2px; left: 0px; z-index: -1;"><object data="http://cdn.flashtalking.com/pageFold/pagefold.swf" type="application/x-shockwave-flash" id="ftPF6" name="ftPF6" width="1" height="2" style="float:left;"><param name="movie" value="http://cdn.flashtalking.com/pageFold/pagefold.swf"><param name="FlashVars" value="identifier=6"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div><div style="position: absolute; top: 0px; width: 1px; height: 2px; left: 0px; z-index: -1;"><object data="http://cdn.flashtalking.com/pageFold/pagefold.swf" type="application/x-shockwave-flash" id="ftPF7" name="ftPF7" width="1" height="2" style="float:left;"><param name="movie" value="http://cdn.flashtalking.com/pageFold/pagefold.swf"><param name="FlashVars" value="identifier=7"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div><div style="position: absolute; top: 0px; width: 1px; height: 2px; left: 0px; z-index: -1;"><object data="http://cdn.flashtalking.com/pageFold/pagefold.swf" type="application/x-shockwave-flash" id="ftPF8" name="ftPF8" width="1" height="2" style="float:left;"><param name="movie" value="http://cdn.flashtalking.com/pageFold/pagefold.swf"><param name="FlashVars" value="identifier=8"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div><div style="position: absolute; top: 89px; width: 1px; height: 2px; left: 0px; z-index: -1;"><object data="http://cdn.flashtalking.com/pageFold/pagefold.swf" type="application/x-shockwave-flash" id="ftPF9" name="ftPF9" width="1" height="2" style="float:left;"><param name="movie" value="http://cdn.flashtalking.com/pageFold/pagefold.swf"><param name="FlashVars" value="identifier=9"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div><div style="position: absolute; top: 90px; width: 1px; height: 2px; left: 727px; z-index: -1;"><object data="http://cdn.flashtalking.com/pageFold/pagefold.swf" type="application/x-shockwave-flash" id="ftPF10" name="ftPF10" width="1" height="2" style="float:left;"><param name="movie" value="http://cdn.flashtalking.com/pageFold/pagefold.swf"><param name="FlashVars" value="identifier=10"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div><div style="position: absolute; top: 0px; width: 1px; height: 2px; left: 727px; z-index: -1;"><object data="http://cdn.flashtalking.com/pageFold/pagefold.swf" type="application/x-shockwave-flash" id="ftPF11" name="ftPF11" width="1" height="2" style="float:left;"><param name="movie" value="http://cdn.flashtalking.com/pageFold/pagefold.swf"><param name="FlashVars" value="identifier=11"><param name="quality" value="autohigh"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"></object></div><iframe id="ComScorePingFile" name="ComScorePingFile" src="cs.htm" width="0" height="0" style="width: 0px; height: 0px; display: none;"></iframe></body></html>

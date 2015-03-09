@@ -1,0 +1,5635 @@
+@charset "UTF-8";
+/* CSS Document v2.8*/
+
+body {
+	background-color:#CCCCCC;
+	font-family: Helvetica, sans-serif;
+	margin:0;
+}
+
+.sbanner, .header, .cont_stage, .contenido { background-color:#FFF;}
+
+.header .cabezal { height:126px;}
+
+h1, h2, h3 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+}
+
+.clear {
+	clear:both; 
+	height:0px;
+}
+
+img {
+	border:0;
+}
+
+ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+/*SUPER BANNER*/
+
+.sbanner {
+	width:980px;
+	margin:auto;
+	padding:10px 0;
+	text-align:center;
+	background-color: #E11361;
+}
+
+.header{
+	background-image:url(../../img/cosmopolitan/bck_header.gif);
+	background-repeat:repeat-x;
+	height:180px;
+	width:980px;
+	margin:auto;
+}
+
+.cont_header{
+	width:980px;
+	margin:0 auto;
+}
+.logo_cosmo {
+	float:left;
+	margin-top:22px;
+	margin-left:14px;
+}
+
+.cont_buscador{
+	float:right;
+	background-image:url(../../img/cosmopolitan/bck_buscador.png);
+	width:531px;
+	height:99px;
+	margin-top:12px;
+}
+
+.buscador{
+	float:left;
+	width:315px;
+	margin-top:20px;
+	margin-left:20px;
+}
+
+.suscripcion{
+	width:183px;
+	float:right;
+}
+
+.suscripcion img{
+	float:left;
+}
+
+.sus_txt{
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF500;
+	margin-left:5px;
+	text-align:center;
+	width:100px;
+	height:70px;
+}
+
+.sus_txt p{
+	margin:9px 0;
+}
+
+.sus_txt img{
+	position:relative;
+	top:-5px;
+	margin-right:4px;
+}
+
+.sus_txt a{
+	text-decoration:none;
+	color:#FFFFFF;
+	font-size:10px;
+}
+
+.sus_txt a:hover{
+	text-decoration:underline;
+}
+
+.redes{
+	margin-bottom:4px;
+	
+}
+
+.lista_redes{
+	float:left;
+}
+
+.sesion{
+	border-right:1px solid #666;
+	text-align:right;
+	padding-right:5px;
+	color:#FFFFFF;
+	font-size:11px;
+	width:224px;
+	float:left;
+	height:14px;
+	position:relative;
+	top:3px;
+	padding-top:1px;
+	max-height:13px;
+}
+
+.lista_redes li{
+	float:left;
+	margin-left:6px;
+}
+
+.sesion a{
+	color:#FFFFFF;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.sesion a:hover{
+	text-decoration:underline;
+}
+
+.campo_buscador{
+	background-image:url(../../img/cosmopolitan/bck_buscador.gif);
+	background-repeat:no-repeat;
+	width:320px;
+	height:37px;
+	padding-top:2px;
+	max-height:35px;
+	padding-left:2px;
+	max-width:318px;
+}
+
+.campo{
+	border:#fff 1px solid;
+	width:269px;
+	height:25px;
+	color:#000000;
+	font-size:15px;
+	padding-left:5px;
+	max-width:264px;
+	float:left;
+	background-image:url(http://editorial.televisa.com/img/cosmopolitan/buscarCosmo.jpg);
+	background-repeat: no-repeat;background-position:left top;
+	}
+
+.bt_buscar{
+	width:28px;
+	height:33px;
+	background-image:url(../../img/cosmopolitan/bt_ok.gif);
+	background-repeat:no-repeat;
+	display:block;
+	cursor:pointer;
+	border:0;
+	float:left;
+	position:relative;
+	top:-2px;
+}
+
+/*MENÃš*/
+
+.menu {
+	font-family:'Arial Black', Gadget, sans-serif;	
+}
+
+.menu ul{
+	position:relative;
+	top:12px;
+	
+}
+.menu li {
+	float:left;
+	display:block;
+	height:35px;
+	max-height:27px;
+}
+
+.menu li a{
+	color:#000000;
+	letter-spacing:-1px;
+	font-size:13px;
+	text-decoration:none;
+	display:block;
+	height:35px;
+	max-height:27px;
+	padding:8px 6px 0 6px;
+	border-left:2px solid #FFEE02;
+	border-right:2px solid #FFEE02;
+}
+
+.menu li a:hover{
+	background-color:#FFFFFF;
+	border-left:2px solid #D6D18A;
+	border-right:2px solid #D6D18A;
+}
+
+/*COLUMNAS*/
+
+.contenido{
+	width:980px;
+	margin:0 auto;
+}
+
+.col_izq{
+	float:left;
+	width:669px;
+	padding:15px 0;
+	
+}
+
+.cont_colizq{
+	background-color:#FFFFFF;
+	padding:0 0 1px 0;
+}
+
+.interior{
+	width:663px;
+	margin-left:10px;
+}
+
+.remate_colizq{
+	width:669px;
+	float:left;
+	margin-bottom:15px;
+}
+	
+
+.col_der{
+	width:300px;
+	float:right;
+	padding:15px 0;
+}
+	
+/*COLUMNA DERECHA*/
+
+.c_banner{
+	margin-bottom:5px;
+}
+
+.banner{
+	margin-bottom:15px;
+	width:300px;
+}
+
+.boton{
+	margin-bottom:9px;
+}
+	
+
+/*CAMPO REGISTRO*/
+
+.registro{
+	width:300px;
+	height:111px;
+	background-image:url(../../img/cosmopolitan/bkc_registro.jpg);
+	background-repeat:no-repeat;
+	margin-bottom:15px;
+}
+
+.bt_registro {
+	display:block;
+	height:22px;
+	width:35px;
+	cursor:pointer;
+	color:#FFFFFF;
+	border:0;
+	float:left;
+	margin-left:6px;
+	margin-top:78px;
+	background-image:url(../../img/cosmopolitan/bt_registro.gif);
+	text-indent:100px;
+}
+
+.campo_registro {
+	float:left;
+	height:14px;
+	margin-left:10px;
+	width:171px;
+	margin-top:78px;
+	color:#333;
+	font-size:12px;
+}
+
+/*MÃ“DULO +RECIENTES*/
+.cont_modmas{
+	background-color:#000000;
+	margin-bottom:15px;
+	padding:10px;
+}
+
+.cont_mod_tabs{
+	background-color:#FFFFFF;
+}
+
+.mod_tabs{
+	background-color:#000000;
+}
+
+
+.mod_tabs li {
+    color: #FFFFFF;
+    float: left;
+    font-family: 'Arial Black',Gadget,sans-serif;
+    font-size: 14px;
+    letter-spacing: -1px;
+    padding: 4px 7px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+	cursor:pointer;
+}
+.mod_tabs li:hover{
+	background-color:#FFFFFF;
+	color:#000000;
+}
+
+.active{
+	color:#000 !important;
+	background-color:#FFFFFF;
+}
+
+.modmas_principal{
+	padding:10px;
+}
+
+.modmas_principal img{
+	float:left;
+}
+
+.modmas_txt{
+	width:120px;
+	float:right;
+}
+
+.modmas_txt h1 a{
+	color:#E11361;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.modmas_txt h1 a:hover{
+	color:#666;
+}
+
+.modmas_txt p{
+	margin:4px 0;
+	padding:0;
+}
+
+.modmas_txt p a{
+	color:#000;
+	font-size:12px;
+	text-decoration:none;
+}
+
+.modmas_txt p a:hover{
+	text-decoration:none;
+}
+
+.modmas_list{
+	padding:8px 10px 10px 10px;
+}
+
+.modmas_list ul{
+	list-style:url(../../img/cosmopolitan/bullet_listmodmas.gif);
+	margin-left:18px;
+}
+
+.modmas_list li{
+	margin-bottom:10px;
+}
+
+.modmas_list li h2 a{
+	color:#666;
+	text-decoration:none;
+	font-size:12px;
+	
+}
+.modmas_list li h2 a:hover{
+	text-decoration:underline;
+}
+
+/*ENCUESTA*/
+.tit_encuesta{
+	background-image:url(../../img/cosmopolitan/top_encuesta.gif);
+	background-repeat:no-repeat;
+	font-family:'Arial Black', Gadget, sans-serif;
+	letter-spacing:-1px;
+	font-size:16px;
+	text-align:center;
+	color:#000000;
+	height:17px;
+}
+
+.cont_encuesta{
+	border-bottom:10px solid #E11361;
+	border-left:#E11361 solid 10px;
+	border-right:10px solid #E11361;
+	height:250px;
+}
+
+/*CABEZA CATEGORÃA*/
+
+.cabeza_cat{
+	padding:15px 0 0 7px;
+}
+
+.tit_cat h1, .tit_cat h1 a{
+	font-family:'Arial Black', Gadget, sans-serif;
+	color:#000000;
+	font-size:35px;
+	letter-spacing:-4px;
+	text-decoration:none;
+	float:left;
+}
+
+.tit_cat h1 a:hover{
+	color:#333333;
+}
+
+.tit_cat img{
+	float:left;
+	margin-top:11px;
+	margin-left:13px;
+}
+
+.breadcrumb{
+	margin-top:4px;
+	font-size:12px;
+}
+
+.indicador{
+	color:#FFFFFF;
+	background-color:#000000;
+	padding:5px;
+	font-weight:bold;
+	float:left;
+}
+
+.indicadorb{
+	color:#000000;
+	font-weight:bold;
+	float:left;
+	margin-left:13px;
+	margin-top:6px;
+}
+
+.indicadorb a{
+	color:#E11361;
+	text-decoration:none;
+}
+
+.indicadorb a:hover{
+	text-decoration:underline;
+}
+
+/*NOTA*/
+
+.nota{
+	border-top:3px dashed #d3d3d3;
+	padding:16px 0;
+	margin-top:19px;
+}
+
+.nota h1{
+	color:#E11361;
+	font-size:29px;
+	font-weight:bold;
+}
+
+.cont_fnota{
+	width:645px;
+	height:353px;
+	margin-left:2px;
+}
+
+.piedefoto{
+	height:16px;
+	background-color:#000000;
+	float:right;
+	padding:3px 5px 0 5px;
+	max-height:13px;
+	color:#FFFFFF;
+	font-size:10px;
+	font-weight:bold;
+	z-index:10;
+	position:relative;
+	top:353px;
+}
+
+.fnota{
+	width:645px;
+	height:353px;
+	z-index:1;
+}
+
+
+.resumen{
+	color:#000000;
+	font-size:18px;
+	font-weight:bold;
+	padding:35px 0 8px 0;;
+}
+
+
+.fecha{
+	font-size:11px;
+	color:#666666;
+	line-height:14px;
+}
+
+.fecha a{
+	color:#E11361;
+	font-size:10px;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.fecha a:hover{
+	background-color:#000000;
+	color:#FFFFFF;
+}
+
+.redes_nota{
+	padding:9px 6px 9px 11px;
+	border-bottom:1px solid #828282;
+	border-top:1px solid #828282;
+	float:left;
+	margin-top:16px;
+}
+
+.mod_fb{
+	float:left;
+	margin-right:15px;
+}
+
+.mod_tw{
+	float:left;
+	margin-right:15px;
+}
+
+.mod_go{
+	float:left;
+	margin-right:15px;
+}
+
+.compartir{
+	float:left;
+	margin-top:3px;
+}
+.redes_nota li{
+	margin-right:5px;
+	float:left;
+	
+}
+
+.txt_nota{
+	width:416px;
+	float:left;
+	margin-top:10px;
+}
+
+.txt_nota p{
+	color:#000;
+	font-size:13px;
+	line-height:15px;
+}
+
+.txt_nota p a{
+	text-decoration:none;
+	font-weight:bold;
+	color:#000000;
+	
+}
+
+.txt_nota p a:hover{
+	color:#E11361;
+	
+}
+
+.cont_relacionadas{
+	width:201px;
+	float:right;
+	margin-top:10px;
+}
+
+.tit_relacionadas{
+	background-image:url(../../img/cosmopolitan/bck_relacionadas.gif);
+	background-repeat:no-repeat;
+	color:#E11361;
+	font-size:13px;
+	font-family:'Arial Black', Gadget, sans-serif;
+	letter-spacing:-1px;
+	text-transform:uppercase;
+	text-align:center;
+	height:18px;
+}
+
+.relacionadas{
+	border-bottom:solid #000 5px;
+	border-left:solid #000 5px;
+	border-right:solid #000 5px;
+	padding:8px 8px 0 8px;
+}
+
+.relacionadas li{
+	margin-bottom:7px;
+}
+
+.relacionadas img{
+	float:left;
+}
+
+.txt_rel{
+	width:98px;
+	float:right
+}
+
+.txt_rel h2 a{
+	color:#000;
+	font-size:11px;
+	text-decoration:none;
+}
+
+.txt_rel h2 a:hover{
+	text-decoration:underline;
+}
+
+.comentarios{
+	background-color:#d7d7d7;
+	padding:14px 0;
+	margin-top:15px;
+}
+
+.tit_comentario {
+	border-bottom:3px double #898989;
+	padding-bottom:15px;
+	padding-left:21px;
+}
+
+.comments_cont{
+	padding:10px 21px 0 21px;
+	color:#898989;
+	font-weight:bold;
+	font-size:14px;
+}
+
+.comments{
+	background-color:#FFFFFF;
+	padding:10px 5px;
+	margin-top:15px;
+}
+
+/*NOTAS SECUNDARIAS*/
+.notas_sec{
+	background-color:#000000;
+	width:663px;
+	padding-top:7px;
+	padding-bottom:18px;
+}
+
+.notas_sec li{
+	float:left;
+	margin-left:10px;
+	width:204px;
+}
+
+.notas_sec ul{
+	margin-left:5px;
+}
+
+.notas_sec h2, .notas_sec h2 a{
+	color:#FFFFFF;
+	font-family:'Arial Black', Gadget, sans-serif;
+	letter-spacing:-1px;
+	font-size:16px;
+	text-align:center;
+	margin-bottom:9px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+.notas_sec h3 a{
+	color:#FFEE02;
+	font-size:13px;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.notas_sec h3 a:hover{
+	color:#ccc;
+}
+
+.notas_sec p, .notas_sec h3{
+	margin-top:7px;
+}
+.notas_sec p a{
+	color:#FFFFFF;
+	text-decoration:none;
+	font-size:12px;
+}
+.notas_sec p a:hover{
+	text-decoration:underline;
+}
+
+/*HISTORICO*/
+
+.historico {
+	margin-top:15px;
+}
+
+.historico li{
+	background-color:#ececec;
+	height:173px;
+	overflow:hidden;
+	margin-bottom:14px;
+}
+
+.historico img{
+	float:left;
+	border:1px solid #ccc;
+}
+
+.hist_txt{
+	float:right;
+	width:315px;
+	padding-top:15px;
+	padding-right:15px;
+	max-width:300px;
+}
+
+.hist_txt h1{
+	max-height:36px;
+	overflow:hidden;
+}
+
+.hist_txt h1 a{
+	color:#000;
+	font-size:16px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.hist_txt h1 a:hover{
+	color:#e11361;
+}
+
+.hist_txt p{
+	margin:5px 0;
+}
+
+.hist_txt p a{
+	color:#666;
+	font-size:13px;
+	text-decoration:none;
+}
+
+.hist_txt p a:hover{
+	text-decoration:underline;
+}
+
+.cont_tags_rel{
+	height:66px;
+	overflow:hidden;
+}
+
+.tags{
+	color:#666;
+	font-size:10px;
+	text-transform:uppercase;
+	font-weight:bold;
+	margin:3px 0;
+}
+
+.tags a{
+	color:#AA0E4B;
+	text-decoration:none;
+}
+
+.tags a:hover{
+	background-color:#000000;
+	color:#FFFFFF;
+}
+
+.rel {
+	color:#000;
+	font-size:11px;
+	text-transform:uppercase;
+	font-weight:bold;
+	margin-top:7px;
+}
+
+.rel ul{
+	list-style:disc;
+	color:#666;
+	list-style-position:inside;
+}
+
+.rel li{
+	height:auto !important;
+	text-transform:none;
+	margin-top:3px;
+	background-color:none !important;
+	margin-bottom:0 !important;
+}
+
+.rel li a{
+	color:#666;
+	text-decoration:none;
+	font-weight:normal;
+}
+
+.rel li a:hover{
+	text-decoration:underline;
+}
+
+/*PAGINACIÃ“N*/
+
+.paginacion {
+	background-color:#E11361;
+	color:#fff;	
+	display:block;
+	font-family:'Arial Black', Gadget, sans-serif;
+	font-size:14px;
+	height:21px;
+	overflow:hidden;
+	text-align:center;
+	width:663px;
+}
+
+.paginacion a{
+	color:#fff;	
+	font-size:14px;
+	margin:0 15px;
+	padding-bottom:2px;	
+	text-decoration:none;
+	width:95px;
+}
+
+.disabled {
+	font-size:14px;
+	color:#E11361;
+	width:95px;
+	height:34px;
+	padding-top:6px;
+	max-height:28px;
+}
+
+.paginacion a:hover{
+	color:#333333;
+}
+
+.anterior{
+	float:left;
+	letter-spacing:-1px;
+	color:#000000;
+	width:95px;
+	height:34px;
+}
+
+.siguiente{
+	float:right;
+	letter-spacing:-1px;
+	color:#000000;
+}
+.numpag{
+	float:left;
+	width:473px;
+	height:34px;
+	padding-top:6px;
+	max-height:28px;
+}
+
+/*HORÃ“SCOPOS*/
+
+.horos_principal{
+	margin-top:15px;
+	background-color:#333;
+	width:663px;
+	background-image:url(../../img/cosmopolitan/bck_tauro.jpg);
+	background-repeat:no-repeat;
+	padding:11px;
+	max-width:641px;
+	
+}
+
+.cumple{
+	width:225px;
+	float:left;
+	color:#FFEE02;
+	font-size:13px;
+}
+
+.cumple img{
+	margin-bottom:7px;
+}
+
+.txt_horosprin{
+	float:right;
+	width:406px;
+	color:#FFFFFF;
+	font-size:16px;
+}
+
+.txt_horosprin h1{
+	color:#FFEE02;
+	font-size:29px;
+	font-family:'Arial Black', Gadget, sans-serif;
+	letter-spacing:-1px;
+}
+
+.horos_fecha{
+	font-size:16px;
+	font-weight:bold;
+	color:#E11361;
+	font-family: Helvetica, sans-serif;
+	letter-spacing:normal;
+}
+
+.txt_horosprin p{
+	line-height:19px;
+}
+
+.horoscopos{
+	margin-bottom:10px;
+	
+}
+
+.horoscopos li{
+	width:208px;
+	background-color:#eee;
+	height:345px;
+	overflow:hidden;
+	margin-left:10px;
+	margin-bottom:5px;
+	border-bottom:1px solid #ccc;
+	float:left;
+}
+
+.horos_txt{
+	
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	padding:0 10px 10px 10px;
+	height:252px;
+}
+
+.horos_txt h2{
+	font-family:'Arial Black', Gadget, sans-serif;
+	letter-spacing:-1px;
+	color:#e11361;
+	font-size:16px;
+	text-align:center;
+}
+
+.horos_txt p{
+	color:#333;
+	font-size:12px;
+}
+
+.horos_fecha2{
+	color:#333;
+	font-size:13px;
+	text-align:center;
+	font-weight:bold;
+}
+
+.intercalado {
+	background-color:#fff !important;
+}
+/*CATEGORÃAS*/
+
+.cat_resaltadas{
+	background-color:#000000;
+	padding:10px 0 14px 0;
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+.catr{
+	margin-bottom:0 !important;
+}
+
+.cat_resaltadas ul{
+	margin-left:9px;
+}
+.cat_resaltadas li{
+	width:200px;
+	float:left;
+	margin-right:22px;
+}
+
+.cat_resaltadas_last{
+	margin-right:0 !important;
+}
+
+.cat_resaltadas_txt{
+	background-color:#FFFFFF;
+	height:305px;
+	overflow:hidden;
+}
+
+.cat_resaltadas_txt h1{
+	padding:8px 10px 0 10px;
+}
+
+
+
+.cat_resaltadas_txt h1 a{
+	font-size:14px;
+	color:#000000;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.cat_resaltadas_txt h1 a:hover{
+	color:#333333;
+}
+
+.cat_resaltadas_txt p{
+	margin:4px 0;
+	padding:0 10px;
+}
+
+.cat_resaltadas_txt p a{
+	font-size:13px;
+	color:#666;
+	text-decoration:none;
+	font-weight:normal;
+}
+
+.cat_resaltadas_txt p a:hover{
+	text-decoration:underline;
+}
+
+.cat_tags{
+	padding:2px 10px;
+}
+.cat_tags, .cat_tags a{
+	font-size:10px;
+	text-transform:uppercase;
+	color:#AA0E4B;
+	
+}
+
+.cat_tags a:hover{
+	background-color:#000000;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+.txt_tit a { color:#FFFFFF; text-decoration:none;}
+.txt_tit{
+	font-family:'Arial Black', Gadget, sans-serif;
+	letter-spacing:-1px;
+	text-transform:uppercase;
+	font-size:14px;
+	color:#FFFFFF;
+	text-align:center;
+	height:20px;
+	overflow:hidden;
+	margin-bottom:10px;
+}
+
+.ultimas_noticias{
+	margin-bottom:15px;
+	padding:0 0 0 10px;
+}
+
+.un2{
+	width:312px !important;
+	float:left;
+	margin-bottom:0 !important;
+}
+
+
+.titulos_bloque{
+	font-family:'Arial Black', Gadget, sans-serif;
+	letter-spacing:-1px;
+	text-transform:uppercase;
+	font-size:16px;
+	color:#FFFFFF;
+	background-color:#000000;
+	padding:6px 10px;
+	float:left;
+}
+
+.tb3{
+	background-color:#AA0E4B !important;
+}
+
+
+.titulos_vermas a{
+	float:left;
+	color:#E11361;
+	font-size:14px;
+	font-weight:bold;
+	margin-top:10px;
+	margin-left:12px;
+}
+
+.titulos_vermas a:hover{
+	color:#000000;
+}
+
+
+.ultimas_noticias li{
+	width:312px;
+	border-bottom:#ccc dashed 2px;
+	padding:8px 0;
+	float:left;
+	margin-right:13px;
+}
+
+.ultimas_noticias img{
+	float:left;
+	border:1px solid #ccc;
+}
+
+.ultimas_txt{
+	float:right;
+	width:230px;
+	height:auto;
+	overflow:hidden;
+}
+
+.ultimas_txt h2{
+	line-height:13px;
+}
+
+.ultimas_txt a{
+	
+}
+
+.ultimas_txt h2 a{
+	color:#000000;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.ultimas_txt h2 a:hover{
+	color:red;
+}
+
+.ultimas_txt p{
+	margin:4px 0;
+	line-height:14px;
+}
+
+.ultimas_txt p a{
+	color:#666666;
+	font-size:12px;
+	text-decoration:none;
+}
+
+.ultimas_txt p a:hover{
+	text-decoration:underline;
+}
+
+/*MÃ“DULO GALERÃA*/
+
+
+.mod_galeria{
+	height:384px;
+	background-image:url(../../img/cosmopolitan/bck_modulogal.gif);
+	background-repeat:no-repeat;
+}
+
+.fgal{
+	float:left;
+	position:relative;
+	top:42px;
+	left:46px;
+}
+
+.fgal_txt{
+	float:right;
+	width:260px;
+	margin-right:15px;
+	margin-top:41px;
+	height:150px;
+	overflow:hidden;
+}
+
+.fgal_rosa{
+	background-color:#E11361 !important;
+}
+
+
+.fgal_txt h2{
+	margin-top:10px;
+}
+.fgal_txt h2 a{
+	color:#000000;
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+}
+
+.fgal_txt h2 a:hover{
+	color:#666666;
+}
+
+.fgal_txt p{
+	margin:4px 0;
+}
+
+.fgal_txt p a{
+	color:#666;
+	font-size:13px;
+	text-decoration:none;
+}
+
+.fgal_txt p a:hover{
+	text-decoration:underline;
+}
+
+.mas_gal{
+	float:right;
+	width:260px;
+	margin-right:15px;
+	margin-top:22px;
+	overflow:hidden;
+}
+.mas_gal ul {
+	width:290px;
+	overflow:hidden;
+}
+.mas_gal li{
+	width:70px;
+	float:left;
+	margin-top:4px;
+	margin-right:24px;
+	height:111px;
+	overflow:hidden;
+}
+
+
+.mas_gal h3 a{
+	font-size:10px;
+	text-decoration:none;
+	color:#000000;
+}
+
+.mas_gal h3 a:hover{
+	text-decoration:underline;
+}
+
+.tit1{
+	float:left;
+	font-size:12px;
+	font-family:'Arial Black', Gadget, sans-serif;
+	letter-spacing:-1px;
+}
+
+.tit2{
+	margin-top:2px;
+}
+	
+
+.tit2 a{
+	float:right;
+	font-size:11px;
+	font-weight:bold;
+	color:#FFEE02;
+
+}
+
+.tit2 a:hover{	
+	color:#666666;
+}
+
+/*CARRUSEL1*/
+.carrusel1{
+	background-color:#F05F01;
+	padding-left:9px;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+.carrusel1 h1{
+	font-size:16px;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+
+.carrusel1 p{
+	font-size:14px;
+	color:#FFFFFF;
+}
+
+
+
+/* The Nivo Slider styles */
+.carrusel1 .nivoSlider {
+	position:relative;
+}
+.carrusel1 .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+/* If an image is wrapped in a link */
+.carrusel1 .nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:60;
+	display:none;
+}
+/* The slices in the Slider */
+.carrusel1 .nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:50;
+	height:100%;
+}
+/* Caption styles */
+.carrusel1 .nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background-image:url(../../img/cosmopolitan/bck_caption.png);
+	color:#fff;
+	opacity:1 !important; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:89;
+}
+.carrusel1 .nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.carrusel1 .nivo-caption a {
+	display:inline !important;
+}
+.carrusel1 .nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.carrusel1 .nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:99;
+	cursor:pointer;
+}
+.carrusel1 .nivo-prevNav {
+	left:0px;
+}
+.carrusel1 .nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.carrusel1 .nivo-controlNav a {
+	position:relative;
+	z-index:99;
+	cursor:pointer;
+}
+.carrusel1 .nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+/*============================*/
+/*=== Custom Slider Styles ===*/
+/*============================*/
+.carrusel1 #slider, .carrusel1 .slider_nivo {
+	position:relative;
+	height:353px;
+	width:645px;
+	background:#F05F01 url(../../img/cosmopolitan/nivo/loading.gif) no-repeat 50% 50%;
+}
+.carrusel1 #slider img, .carrusel1 .slider_nivo img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.carrusel1 #slider a, .carrusel1 .slider_nivo a {
+	border:0;
+	display:block;
+}
+
+.carrusel1 .nivo-controlNav {
+	position:absolute;
+	left:47%;
+	bottom:-30px;
+}
+.carrusel1 .nivo-controlNav a {
+	display:block;
+	width:10px;
+	height:10px;
+	background:url(../../img/cosmopolitan/nivo/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.carrusel1 .nivo-controlNav a.active {
+	background-position:-10px 0;
+}
+.carrusel1 .nivo-directionNav a {
+	display:block;
+	width:24px;
+	height:35px;
+	background:url(../../img/cosmopolitan/arrows_carrusel1.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.carrusel1 a.nivo-nextNav {
+	background-position:-26px 0;
+	right:15px;
+}
+.carrusel1 a.nivo-prevNav {
+	left:15px;
+}
+
+.carrusel1 .nivo-caption a { 
+    text-decoration:underline;
+}
+
+/* Easy Border Radius */
+.carrusel1 .round5 { -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.carrusel1 .round10 { -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; }
+.carrusel1 .round15 { -moz-border-radius:15px; -webkit-border-radius:15px; border-radius:15px; }
+.carrusel1 .round20 { -moz-border-radius:20px; -webkit-border-radius:20px; border-radius:20px; }
+.carrusel1 .round25 { -moz-border-radius:25px; -webkit-border-radius:25px; border-radius:25px; }
+.carrusel1 .round30 { -moz-border-radius:30px; -webkit-border-radius:30px; border-radius:30px; }
+/* Para ver thumbs */
+.carrusel1 thumb_activo { margin-bottom:120px;}
+.carrusel1 .thumb_activo .nivo-controlNav a {
+	width:90px;	
+	height:60px;
+	border:0;
+	float:left;
+	background:none;
+}
+.carrusel1 .thumb_activo .nivo-controlNav a.active {
+	background-position:0;
+}
+.carrusel1 .thumb_activo .nivo-controlNav {bottom:-70px; width:100%;left:0; text-align:center;}
+.carrusel1 .thumb_activo .nivo-controlNav .nivo-control img { display:block !important;}
+
+/*MÃ“DULO ESPECIAL DE CATEGORÃA*/
+	
+.mod_catespecial{
+	float:right;
+	width:321px;
+	margin-right:10px;
+}
+
+.img_modcatesp{
+	border:1px solid #ccc;
+	margin-top:13px;
+	margin-bottom:13px;
+}
+
+.mod_catespecial_txt{
+	width:221px;
+	margin:0 auto;
+	text-align:center;
+}
+
+.mod_catespecial_txt h2{
+	margin-top:10px;
+}
+
+.mod_catespecial_txt h2 a{
+	font-size:17px;
+	font-weight:bold;
+	font-style:italic;
+	color:#000000;
+	text-decoration:none;
+}
+
+.mod_catespecial_txt h2 a:hover{
+	color:#E11361;
+}
+
+.mod_catespecial_txt p{
+	margin:10px 0;
+}
+
+.mod_catespecial_txt p a{
+	font-size:15px;
+	font-style:italic;
+	color:#666;
+	text-decoration:none;
+}
+
+.mod_catespecial_txt p a:hover{
+	text-decoration:underline;
+}
+
+/*CARRUSEL 2*/
+
+/*ELEMENTO MULTIMEDIA 2*/
+/* The Nivo Slider styles */
+
+.carrusel2{
+	background-color:#F05F01;
+	padding:0 0 10px 0;
+	margin-top:15px;
+	
+}
+
+.full_banner{
+	text-align:center;
+	padding:10px 0;
+	background-color:#000000;
+}
+
+.tit_carrusel2{
+	background-color:#E11361;
+
+}
+
+
+.carrusel2 h1{
+	color:#fff;
+	font-size:20px;
+	width:598px;
+	padding:10px;
+	margin-bottom:10px;
+	text-align:center;
+	font-weight:bold;
+}
+
+.carrusel2 .nivoSlider {
+	position:relative;
+}
+.carrusel2 .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+/* If an image is wrapped in a link */
+.carrusel2 .nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:60;
+	display:none;
+}
+/* The slices in the Slider */
+.carrusel2 .nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:50;
+	height:100%;
+}
+/* Caption styles */
+.carrusel2 .nivo-caption {
+	position:absolute;
+	left:329px;
+	bottom:0;
+	background:#000;
+	color:#fff !important;
+	opacity:1 !important; /* Overridden by captionOpacity setting */
+	z-index:89;
+	width:316px;
+	height:380px;
+}
+.carrusel2 .nivo-caption p {
+	
+	margin:0;
+}
+.carrusel2 .nivo-caption a {
+	display:inline !important;
+}
+.carrusel2 .nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+
+.carrusel2 .nivo-directionNav{
+	display:block !important;
+}
+
+.carrusel2 .nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:99;
+	cursor:pointer;
+}
+.carrusel2 .nivo-prevNav {
+	left:0px;
+}
+.carrusel2 .nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.carrusel2 .nivo-controlNav a {
+	position:relative;
+	z-index:99;
+	cursor:pointer;
+}
+.carrusel2 .nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+/*============================*/
+/*=== Custom Slider Styles ===*/
+/*============================*/
+.carrusel2 #slider, .carrusel2 .slider_nivo {
+	position:relative;
+	min-height:220px;
+	margin:0 0 0 10px;
+	background:#E2E2E2 url(../../img/cosmopolitan/loading.gif) no-repeat 50% 50%;
+}
+.carrusel2 #slider img, .carrusel2 .slider_nivo img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.carrusel2 #slider a, .carrusel2 .slider_nivo a {
+	border:0;
+	display:block;
+	color:white;
+	text-decoration: none;
+	font-weight: bold;
+}
+.carrusel2 #slider a:hover {
+	color: red;
+}
+
+.carrusel2 .nivo-controlNav {
+	position:absolute;
+	left:47%;
+	bottom:-30px;
+	display:none;
+}
+.carrusel2 .nivo-controlNav a {
+	display:block !important;
+	width:10px;
+	height:10px;
+	background:url(../../img/cosmopolitan/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.carrusel2 .nivo-controlNav a.active {
+	background-position:-10px 0;
+}
+.carrusel2 .nivo-directionNav a {
+	display:block;
+	width:19px;
+	height:29px;
+	background:url(../../img/cosmopolitan/arrows_carrusel2.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.carrusel2 a.nivo-nextNav {
+	background-position:-20px 0;
+	right:15px;
+	top:180px;
+}
+.carrusel2 a.nivo-prevNav {
+	left:340px;
+	top:180px;
+}
+
+.carrusel2 .nivo-caption a { 
+    text-decoration:underline;
+}
+
+/* Easy Border Radius */
+.carrusel2 .round5 { -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.carrusel2 .round10 { -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; }
+.carrusel2 .round15 { -moz-border-radius:15px; -webkit-border-radius:15px; border-radius:15px; }
+.carrusel2 .round20 { -moz-border-radius:20px; -webkit-border-radius:20px; border-radius:20px; }
+.carrusel2 .round25 { -moz-border-radius:25px; -webkit-border-radius:25px; border-radius:25px; }
+.carrusel2 .round30 { -moz-border-radius:30px; -webkit-border-radius:30px; border-radius:30px; }
+/* Para ver thumbs */
+.carrusel2 thumb_activo { margin-bottom:120px;}
+.carrusel2 .thumb_activo .nivo-controlNav a {
+	width:90px;	
+	height:60px;
+	border:0;
+	float:left;
+	background:none;
+}
+.carrusel2 .thumb_activo .nivo-controlNav a.active {
+	background-position:0;
+}
+.carrusel2 .thumb_activo .nivo-controlNav {bottom:-70px; width:100%;left:0; text-align:center;}
+.carrusel2 .thumb_activo .nivo-controlNav .nivo-control img { display:block !important;}
+
+.carrusel2 .tip {
+	padding:0 50px 10px 50px;
+	height:270px;
+	max-height:260px;
+	position:relative;
+	top:40px;
+	font-size:14px;
+	color:#FFFFFF;
+	overflow:hidden;
+}
+.carrusel2 .tit_c2{
+	padding:20px 50px 0 50px;
+	color:#FFFFFF;
+	font-size:20px;
+	font-weight:bold;
+}
+
+.mas_multimedia{
+	background-color:#000000;
+	padding:10px;
+	text-align:right;
+	margin-bottom:20px;
+}
+
+.mas_multimedia a{
+	color:#FFFFFF;
+	font-size:14px;
+	text-decoration:none;
+}
+
+.mas_multimedia a:hover{
+	text-decoration:underline;
+	
+}
+
+/*CARRUSEL 3*/
+
+/*ELEMENTO MULTIMEDIA 2*/
+/* The Nivo Slider styles */
+
+.carrusel3{
+	background-color:#000;
+	padding:0;
+	margin-top:15px;
+	
+}
+
+.full_banner{
+	text-align:center;
+	padding:10px 0;
+	background-color:#000000;
+}
+
+.tit_carrusel3{
+	background-color:#F05F01;
+
+}
+
+
+.carrusel3 h1, .tit_carrusel3 h1{
+	color:#fff;
+	font-size:20px;
+	width:598px;
+	padding:10px;
+	text-align:center;
+	font-weight:bold;
+}
+
+.carrusel3 .nivoSlider {
+	position:relative;
+}
+.carrusel3 .nivoSlider img {
+	position:absolute;
+	top:0;
+	left:0;
+}
+/* If an image is wrapped in a link */
+.carrusel3 .nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:60;
+	display:none;
+}
+/* The slices in the Slider */
+.carrusel3 .nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:50;
+	height:100%;
+}
+/* Caption styles */
+.carrusel3 .nivo-caption {
+	position:absolute;
+	bottom:0;
+	background:#E11361;
+	color:#fff !important;
+	opacity:1 !important; /* Overridden by captionOpacity setting */
+	z-index:89;
+	height:100px;
+	overflow:hidden;
+	width:663px;
+}
+.carrusel3 .nivo-caption p {
+	
+	margin:0;
+}
+.carrusel3 .nivo-caption a {
+	display:inline !important;
+}
+.carrusel3 .nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+
+.carrusel3 .nivo-directionNav{
+	display:block !important;
+}
+
+.carrusel3 .nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:99;
+	cursor:pointer;
+}
+.carrusel3 .nivo-prevNav {
+	left:0px;
+}
+.carrusel3 .nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.carrusel3 .nivo-controlNav a {
+	position:relative;
+	z-index:99;
+	cursor:pointer;
+}
+.carrusel3 .nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+/*============================*/
+/*=== Custom Slider Styles ===*/
+/*============================*/
+.carrusel3 #slider, .carrusel3 .slider_nivo {
+	position:relative;
+	height:600px;
+	margin:0;
+	background:#000 url(../../img/cosmopolitan/loading.gif) no-repeat  center 0 !important;
+	background-position: center top!important;
+}
+.carrusel3 #slider img, .carrusel3 .slider_nivo img {
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+	
+}
+.carrusel3 #slider a, .carrusel3 .slider_nivo a {
+	border:0;
+	display:block;
+}
+
+.carrusel3 .nivo-controlNav {
+	position:absolute;
+	left:47%;
+	bottom:-30px;
+	display:none;
+}
+.carrusel3 .nivo-controlNav a {
+	display:block !important;
+	width:10px;
+	height:10px;
+	background:url(../../img/cosmopolitan/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.carrusel3 .nivo-controlNav a.active {
+	background-position:-10px 0;
+}
+.carrusel3 .nivo-directionNav a {
+	display:block;
+	width:24px;
+	height:35px;
+	background:url(../../img/cosmopolitan/arrows_carrusel1.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.carrusel3 a.nivo-nextNav {
+	background-position:-26px 0;
+	right:8px;
+	top:530px;
+}
+.carrusel3 a.nivo-prevNav {
+	left:9px;
+	top:530px;
+}
+
+.carrusel3 .nivo-caption a { 
+    text-decoration:underline;
+}
+
+/* Easy Border Radius */
+.carrusel3 .round5 { -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.carrusel3 .round10 { -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; }
+.carrusel3 .round15 { -moz-border-radius:15px; -webkit-border-radius:15px; border-radius:15px; }
+.carrusel3 .round20 { -moz-border-radius:20px; -webkit-border-radius:20px; border-radius:20px; }
+.carrusel3 .round25 { -moz-border-radius:25px; -webkit-border-radius:25px; border-radius:25px; }
+.carrusel3 .round30 { -moz-border-radius:30px; -webkit-border-radius:30px; border-radius:30px; }
+/* Para ver thumbs */
+.carrusel3 thumb_activo { margin-bottom:120px;}
+.carrusel3 .thumb_activo .nivo-controlNav a {
+	width:90px;	
+	height:60px;
+	border:0;
+	float:left;
+	background:none;
+}
+.carrusel3 .thumb_activo .nivo-controlNav a.active {
+	background-position:0;
+}
+.carrusel3 .thumb_activo .nivo-controlNav {bottom:-70px; width:100%;left:0; text-align:center;}
+.carrusel3 .thumb_activo .nivo-controlNav .nivo-control img { display:block !important;}
+
+.carrusel3 .tip {
+	padding:0 50px 10px 50px;
+	height:270px;
+	max-height:260px;
+	position:relative;
+	top:40px;
+	font-size:14px;
+	color:#FFFFFF;
+	overflow:hidden;
+}
+.carrusel3 .tit_c2{
+	padding:20px 50px 0 50px;
+	color:#FFFFFF;
+	font-size:20px;
+	font-weight:bold;
+}
+
+.carrusel3 .txt1{
+	float:left;
+	width:270px;
+	font-size:13px;
+	color:#FFFFFF;
+	font-weight:normal;
+	margin-left:45px;
+	margin-top:15px;
+	height:71px;
+	overflow:hidden;
+}
+
+.carrusel3 .txt2{
+	float:right;
+	width:270px;
+	font-size:13px;
+	color:#FFFFFF;
+	font-weight:normal;
+	margin-right:45px;
+	margin-top:15px;
+	height:71px;
+	overflow:hidden;
+}
+
+/*ELEMENTO MULTIMEDIA MOSAICO*/
+
+.mosaico {
+	background-color:#000;
+	padding:0;
+	margin-top:15px;
+}
+
+.mosaico_destacada{
+	float:left;
+	width:424px;
+	text-align:center;
+}
+
+.mosaico_tit {
+	padding-bottom:17px;
+	height:48px;
+	margin-bottom:10px;
+}
+
+.mosaico_destacada h1 {
+	font-size:21px;
+	color:#464646;
+	height:52px;
+	overflow:hidden;
+}
+
+.mosaico_destacada p {
+	padding:10px 6px 0 6px;
+	color:#707070;
+	font-size:12px;
+	height:60px;
+	overflow:hidden;
+}
+
+.f_mosaico {
+	float:right;
+	width:238px;
+}
+
+.f_mosaico ul{
+	margin-top:10px;
+}
+
+.f_mosaico li {
+	width:108px;
+	margin-right:10px;
+	margin-bottom:5px;
+	float:left;
+}
+
+.f_mosaico li a img:hover {
+	opacity:1 !important;
+}
+
+.mosaico_principal{
+	width:254px;
+	height:482px;
+	margin:0 auto;
+	display:block;
+}
+
+.foto_mosaico{
+	width:254px;
+	height:482px;
+	z-index:1;
+}
+
+.txt_mosaico{
+	width:254px;
+	background-image:url(../../img/cosmopolitan/bck_black.png);
+	color:#FFFFFF;
+	z-index:100;
+	text-align:center;
+	padding:10px;
+	max-width:234px;
+	position:relative;
+	top:-80px;
+	height:80px;
+	max-height:60px;
+	
+}
+
+/*AGÃ‰NDALO*/
+
+.agenda{
+	margin-top:15px;
+	background-color:#000000;
+}
+
+.agenda li{
+	width:208px;
+	height:208px;
+	float:left;
+	margin-left:10px;
+	margin-bottom:10px;
+}
+
+.f_agenda{
+	width:208px;
+	height:208px;
+	z-index:1;
+}
+
+.txt_agenda{
+	width:208px;
+	z-index:100px;
+	background-image:url(../../img/cosmopolitan/bck_white.png);
+	padding:8px;
+	max-width:192px;
+	position:relative;
+	top:-63px;
+	height:47px;
+	overflow:hidden;
+}
+
+.txt_agenda h1 a{
+	color:#000000;
+	font-size:14px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.txt_agenda p{
+	margin:4px 0 0 0;
+}
+.txt_agenda p a{
+	color:#000000;
+	font-size:13px;
+	text-decoration:none;
+}
+
+.descripcion_agenda{
+	background-color:#E11361;
+	color:#FFFFFF;
+	font-size:14px;
+	padding:20px;
+}
+
+/*STAGE INDEX*/
+
+.cont_stage{
+	padding:0 0 17px;
+	width:632px;
+}
+
+.stage{
+	margin:0 10px 0 auto;
+}
+
+.stage .ad-gallery, .stage .ad-gallery-home {
+  width: 632px;
+  background-color:#1b1b1b;
+  float:left;
+}
+.stage .ad-gallery, .stage .ad-gallery-home, .stage .ad-gallery *, .stage .ad-gallery-home * {
+  margin: 0;
+  padding: 0;
+}
+.stage .ad-gallery .ad-image-wrapper, .stage .ad-gallery-home .ad-image-wrapper  {
+    width: 100%;
+    height: 346px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+    .stage .ad-gallery .ad-image-wrapper .ad-loader, .stage .ad-gallery-home .ad-image-wrapper .ad-loader {
+      position: absolute;
+      z-index: 10;
+      top: 48%;
+      left: 48%;
+      border: 1px solid #CCC;
+    }
+    .stage .ad-gallery .ad-image-wrapper .ad-next, .stage .ad-gallery-home .ad-image-wrapper .ad-next {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 25%;
+      height: 100%;
+      cursor: pointer;
+      display: block;
+      z-index: 100;
+    }
+    .stage .ad-gallery .ad-image-wrapper .ad-prev,.stage .ad-gallery-home .ad-image-wrapper .ad-prev {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 25%;
+      height: 100%;
+      cursor: pointer;
+      display: block;
+      z-index: 100;
+    }
+      .stage .ad-gallery-home .ad-image-wrapper .ad-prev .ad-prev-image, .stage .ad-gallery-home .ad-image-wrapper .ad-next .ad-next-image, .stage .ad-gallery .ad-image-wrapper .ad-prev .ad-prev-image, .stage .ad-gallery .ad-image-wrapper .ad-next .ad-next-image {
+        background: url(../img/ad-gallery/ad_prev.png);
+        width: 30px;
+        height: 30px;
+        display: none;
+        position: absolute;
+        top: 47%;
+        left: 0;
+        z-index: 101;
+      }
+      .stage .ad-gallery .ad-image-wrapper .ad-next .ad-next-image,.stage .ad-gallery-home .ad-image-wrapper .ad-next .ad-next-image {
+        background: url(../img/ad-gallery/ad_next.png);
+        width: 30px;
+        height: 30px;
+        right: 0;
+        left: auto;
+      }
+    .stage .ad-gallery-home .ad-image-wrapper .ad-image, .stage .ad-gallery .ad-image-wrapper .ad-image {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      z-index: 9;
+    }
+      .stage .ad-gallery .ad-image-wrapper .ad-image a img,.stage .ad-gallery-home .ad-image-wrapper .ad-image a img {
+        border: 0;
+      }
+      .stage .ad-gallery .ad-image-wrapper .ad-image .ad-image-description,.stage .ad-gallery-home .ad-image-wrapper .ad-image .ad-image-description {
+        position: absolute;
+        bottom: 20px;
+        left: 0px;
+        padding: 7px;
+        text-align: left;
+        width: 100%;
+        z-index: 2;
+        background:url(../../img/cosmopolitan/bck_black.png);
+        color: #000;
+      }
+      * html .stage .ad-gallery .ad-image-wrapper .ad-image .ad-image-description, * html .stage .ad-gallery-home .ad-image-wrapper .ad-image .ad-image-description {
+        background: none;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (enabled=true, sizingMethod=scale, src='bck_black.png');
+      }
+        .stage .ad-gallery .ad-image-wrapper .ad-image .ad-image-description .ad-description-title,.stage .ad-gallery-home .ad-image-wrapper .ad-image .ad-image-description .ad-description-title {
+          display: block;
+		  color:#FFFFFF;
+		  font-size:22px;
+		  font-weight:bold;
+		  padding:8px;
+        }
+  .stage .ad-gallery .ad-controls, .stage .ad-gallery-home .ad-controls {
+    height: 20px;
+	display:none;
+  }
+    .stage .ad-gallery .ad-info, .stage .ad-gallery-home .ad-info {
+      float: left;
+    }
+    .stage .ad-gallery .ad-slideshow-controls, .stage .ad-gallery-home .ad-slideshow-controls {
+      float: right;
+    }
+      .stage .ad-gallery-home .ad-slideshow-controls .ad-slideshow-start, .stage .ad-gallery-home .ad-slideshow-controls .ad-slideshow-stop, .stage .ad-gallery .ad-slideshow-controls .ad-slideshow-start, .stage .ad-gallery .ad-slideshow-controls .ad-slideshow-stop {
+        padding-left: 5px;
+        cursor: pointer;
+      }
+      .stage .ad-gallery .ad-slideshow-controls .ad-slideshow-countdown, .stage .ad-gallery-home .ad-slideshow-controls .ad-slideshow-countdown {
+        padding-left: 5px;
+        font-size: 0.9em;
+      }
+    .stage .ad-gallery .ad-slideshow-running .ad-slideshow-start,.stage .ad-gallery-home .ad-slideshow-running .ad-slideshow-start {
+      cursor: default;
+      font-style: italic;
+    }
+  .stage .ad-gallery .ad-nav,.stage .ad-gallery-home .ad-nav {
+    width: 100%;
+    position: relative;
+	height:87px;
+  }
+    .stage .ad-gallery .ad-forward, .ad-gallery .ad-back, .stage .ad-gallery-home .ad-forward, .ad-gallery-home .ad-back {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      z-index: 10;
+	  top:22px;
+    }
+    /* IE 6 doesn't like height: 100% */
+    * html .stage .ad-gallery .ad-forward, .ad-gallery .ad-back,* html .stage .ad-gallery-home .ad-forward, .ad-gallery .ad-back {
+      height: 100px;
+    }
+    .stage .ad-gallery .ad-back, .stage .ad-gallery-home .ad-back {
+      cursor: pointer;
+      left: 21px;
+      width: 19px;
+	  height:29px;
+      display: block;
+	  top:22px;
+      background: url(../../img/cosmopolitan/arrows_stageh_r1_c1.jpg) 0 0 no-repeat;
+	  opacity: 1 !important;
+    }
+    .ad-gallery .ad-forward, .ad-gallery-home .ad-forward {
+      cursor: pointer;
+      display: block;
+      right: 21px;
+      width: 19px;
+      background: url(../../img/cosmopolitan/arrows_stageh_r1_c3.jpg) 0 0 no-repeat;
+	  opacity: 1 !important;
+	  height:29px;
+	
+    }
+    .stage .ad-gallery .ad-nav .ad-thumbs, .stage .ad-gallery-home .ad-nav .ad-thumbs  {
+      overflow: hidden;
+      width: 504px;
+	  position:relative;
+	  top:4px;
+	  left:68px;
+    }
+      .stage .ad-gallery .ad-thumbs .ad-thumb-list, .stage .ad-gallery-home .ad-thumbs .ad-thumb-list {
+        float: left;
+        width: 9000px;
+        list-style: none;
+      }
+        .stage .ad-gallery .ad-thumbs li, .stage .ad-gallery-home .ad-thumbs li {
+          float: left;
+          padding-right: 8px;
+		  
+		  
+        }
+          .stage .ad-gallery .ad-thumbs li a,.stage .ad-gallery-home .ad-thumbs li a {
+            display: block;
+          }
+            .stage .ad-gallery .ad-thumbs li a img , .stage .ad-gallery-home .ad-thumbs li a img {
+              border:1px solid #E01361;
+              display: block;
+			  padding:3px;
+            }
+            .stage .ad-gallery .ad-thumbs li a.ad-active img, .stage .ad-gallery-home .ad-thumbs li a.ad-active img {
+              border: 1px solid #FFEE02;
+            }
+/* Can't do display none, since Opera won't load the images then */
+.stage .ad-preloads {
+  position: absolute;
+  left: -9000px;
+  top: -9000px;
+}
+
+
+.stage .f_horizontal {
+	width:110px;
+	height:61px;
+}
+
+
+.stage_cubo_promo{
+	float:right;
+	padding-left:23px;
+	margin-right:20px;
+}
+
+.stage_cubo{
+	width:300px;
+	margin-bottom:28px;
+}
+
+.stage_promo{
+	width:300px;
+}
+/*MÃ“DULO ESPECIALES HOME*/
+
+.mod_especial{
+	width:232px;
+	height:474px;
+	max-height:458px;
+	background-color:#E11361;
+	float:left;
+	padding:8px 0;
+	overflow:hidden;
+}
+
+.mod_especial img{
+	margin-left:9px;
+}
+
+.mod_especial_tit {
+	font-family:'Arial Black', Gadget, sans-serif;
+	letter-spacing:-1px;
+	color:#FFEE02;
+	font-size:16px;
+	padding:0 0 7px 8px;
+	text-transform:uppercase;
+	text-decoration:none;
+}
+
+.especial_txt{
+	padding:8px;
+	height:162px;
+	max-height:146px;
+	margin-bottom:15px;
+	overflow:hidden;
+}
+
+.especial_txt h1 a{
+	color:#FFFFFF;
+	font-size:14px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.especial_txt h1 a:hover{
+	color:#CCCCCC;
+}
+
+.especial_txt p{
+	margin-top:6px;
+}
+
+.especial_txt p a{
+	color:#FFFFFF;
+	font-size:13px;
+	text-decoration:none;
+}
+
+.especial_txt p a:hover{
+	text-decoration:underline;
+}
+
+.tags_especial, .tags_especial a{
+	color:#FFFFFF;
+	font-size:10px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.tags_especial a:hover{
+	color:#F05F01;
+}
+
+.tit_bloque_especial a {
+	font-family:'Arial Black', Gadget, sans-serif;
+	letter-spacing:-1px;
+	text-transform:uppercase;
+	font-size:13px;
+	color:#FFFFFF;
+	background-color:#000000;
+	padding:6px 10px;
+	float:right;
+	text-decoration:none;
+	
+}
+
+/*LISTA MÃS RECIENTE HOME*/
+
+.un_home{
+	margin-bottom:15px;
+	float:left;
+	width:390px;
+	margin-left:10px;
+}
+.un_home li{
+	width:390px;
+	border-bottom:#ccc dashed 2px;
+	padding:8px 0;
+	float:left;
+	margin-right:13px;
+}
+
+.un_home img{
+	float:left;
+	border:1px solid #ccc;
+}
+
+.un_home_txt{
+	float:right;
+	width:298px;
+	height:72px;
+	overflow:hidden;
+	margin-right:10px;
+}
+
+.un_home_txt h2{
+	line-height:13px;
+}
+
+.un_home_txt h2 a{
+	color:#000000;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.un_home_txt h2 a:hover{
+	color:#333;
+}
+
+.un_home_txt p{
+	margin:4px 0;
+	line-height:14px;
+}
+
+.un_home_txt p a{
+	color:#666666;
+	font-size:12px;
+	text-decoration:none;
+}
+
+.un_home_txt p a:hover{
+	text-decoration:underline;
+}
+
+
+.last_list{
+	border-bottom:0 !important;
+}
+
+/*MÃ“DULO HORÃ“SCOPOS HOME*/
+
+.mod_horos{
+	float:left;
+	background-color:#996699;
+	width:416px;
+	height:224px;
+	margin-top:15px;
+}
+
+.cont_foto_horos{
+	width:201px;
+	height:201px;
+	margin-top:66px;
+	margin-left:13px;
+	float:left;
+}
+
+.f_horos_home{
+	z-index:2;
+	text-align:center;
+	position:relative;
+	top:-29px;
+}
+
+.horos_over{
+	z-index:100;
+	position:relative;
+	top:-201px;
+}
+
+.mod_horos_home_txt{
+	background-image:url(../../img/cosmopolitan/bck_mod_horostxt.gif);
+	background-repeat:no-repeat;
+	width:186px;
+	float:left;
+	margin-left:4px;
+	margin-top:12px;
+	padding-top:36px;
+	padding-left:5px;
+	width:181px;
+	height:150px;
+	overflow:hidden;
+}
+
+.mod_horos_home_txt h3{
+	font-size:21px;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+
+.mod_horos_home_txt p{
+	color:#FFFFFF;
+	font-size:12px;
+}
+
+.mod_horos_home_txt p a{
+	text-decoration:none;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+
+.mod_horos_home_txt p a:hover{
+	color:#999999;
+}
+
+
+.fecha_horos{
+	font-size:13px;
+	color:#FFFFFF;
+}
+
+.estemes{
+	font-size:10px;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+
+.tit_bloque_horos a{
+	font-family:'Arial Black', Gadget, sans-serif;
+	letter-spacing:-1px;
+	text-transform:uppercase;
+	font-size:12px;
+	color:#FFFFFF;
+	background-color:#000000;
+	padding:4px 8px;
+	float:right;
+	text-decoration:none;
+}
+
+/*BOX NUMERALIA*/
+.mod_numeralia {
+	float:right;
+	width:232px;
+	height:223px;
+	background-image:url(../../img/cosmopolitan/bck_modulos_r1_c3.gif);
+	background-repeat:no-repeat;
+	background-color:#000000;
+	margin-top:15px;
+}
+
+/* The Nivo Slider styles */
+.mod_numeralia .nivoSlider {
+	position:relative;
+}
+.mod_numeralia .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+/* If an image is wrapped in a link */
+.mod_numeralia .nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:60;
+	display:none;
+}
+/* The slices in the Slider */
+.mod_numeralia .nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:50;
+	height:100%;
+}
+/* Caption styles */
+.mod_numeralia .nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.8; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:89;
+	display:none;
+}
+.mod_numeralia .nivo-caption p {
+	padding:0;
+	margin:0;
+}
+.mod_numeralia .nivo-caption a {
+	display:inline !important;
+}
+.mod_numeralia .nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.mod_numeralia .nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:99;
+	cursor:pointer;
+}
+.mod_numeralia .nivo-prevNav {
+	left:0px;
+}
+.mod_numeralia .nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.mod_numeralia .nivo-controlNav a {
+	position:relative;
+	z-index:99;
+	cursor:pointer;
+}
+.mod_numeralia .nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+/*============================*/
+/*=== Custom Slider Styles ===*/
+/*============================*/
+.mod_numeralia #slider, .mod_numeralia .slider_nivo {
+	position:relative;
+	min-height:220px;
+}
+.mod_numeralia #slider img, .mod_numeralia .slider_nivo img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.mod_numeralia #slider a, .mod_numeralia .slider_nivo a {
+	border:0;
+	display:block;
+}
+
+.mod_numeralia .nivo-controlNav {
+	position:absolute;
+	left:47%;
+	bottom:-30px;
+	display:none;
+}
+.mod_numeralia .nivo-controlNav a {
+	display:block;
+	width:10px;
+	height:10px;
+	background:url(./nivo/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.mod_numeralia .nivo-controlNav a.active {
+	background-position:-10px 0;
+}
+.mod_numeralia .nivo-directionNav a {
+	display:block !important;
+	width:8px;
+	height:11px;
+	background:url(../../img/cosmopolitan/flechas_numeralia.jpg) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.mod_numeralia a.nivo-nextNav {
+	background-position:-8px 0;
+	margin-top:108px;
+	margin-right:10px;
+}
+.mod_numeralia a.nivo-prevNav {
+	margin-top:108px;
+	margin-left:10px;
+	
+}
+
+.mod_numeralia .nivo-caption a { 
+    text-decoration:underline;
+}
+
+/* Easy Border Radius */
+.mod_numeralia .round5 { -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.mod_numeralia .round10 { -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; }
+.mod_numeralia .round15 { -moz-border-radius:15px; -webkit-border-radius:15px; border-radius:15px; }
+.mod_numeralia .round20 { -moz-border-radius:20px; -webkit-border-radius:20px; border-radius:20px; }
+.mod_numeralia .round25 { -moz-border-radius:25px; -webkit-border-radius:25px; border-radius:25px; }
+.mod_numeralia .round30 { -moz-border-radius:30px; -webkit-border-radius:30px; border-radius:30px; }
+/* Para ver thumbs */
+.mod_numeralia thumb_activo { margin-bottom:120px;}
+.mod_numeralia .thumb_activo .nivo-controlNav a {
+	width:90px;	
+	height:60px;
+	border:0;
+	float:left;
+	background:none;
+}
+.mod_numeralia .thumb_activo .nivo-controlNav a.active {
+	background-position:0;
+}
+.mod_numeralia .thumb_activo .nivo-controlNav {bottom:-70px; width:100%;left:0; text-align:center;}
+.mod_numeralia .thumb_activo .nivo-controlNav .nivo-control img { display:block !important;}
+.numeralia{
+	background-color:#000;
+	color:#fff;
+	font-size:11px;
+	width:232px;
+	text-align:center;
+	position:relative;
+	top:-18px;
+	z-index:20;
+	height:22px;
+	padding-top:2px;
+	max-height:20px;
+	font-family:'Arial Black', Gadget, sans-serif;
+
+}
+
+
+.mod_numeralia .mod_feed {
+	margin-top:0; width:300px; float:left;
+}
+
+/*CONFESIONES*/
+
+.confe_lista{
+	padding:20px 11px;
+}
+.confe_lista li{
+	border-top:2px dashed #ccc;
+	padding:15px 0;
+}
+
+.confe_lista h2{
+	color:#000000;
+	font-weight:bold;
+	font-size:17px;
+}
+.confe_lista p{
+	color:#000000;
+	font-size:13px;
+	margin:4px 0;
+}
+
+.auto_confe{
+	text-align:right;
+	font-style:italic;
+	font-size:13px;
+}
+
+.votacion{
+	font-size:17px;
+	font-weight:bold;
+	color:#000000;
+	height:25px;
+}
+
+.vota{
+	float:left;
+}
+
+.angel{
+	background-color:#74BED7;
+	color:#FFFFFF;
+	padding:3px;
+	float:left;
+	margin-left:6px;
+	margin-right:6px;
+}
+
+.demon{
+	background-color:#C70000;
+	color:#FFFFFF;
+	padding:3px;
+	float:left;
+	margin-left:6px;
+	margin-right:6px;
+}
+
+.compartelo{
+	float:left;
+	width:430px;
+	margin-left:20px;
+	margin-top:11px;
+}
+
+.compartelo .cont_fb, .compartelo .cont_tw{ float:left; width:150px; position:relative; overflow:hidden;}
+
+.compartelo li{
+	float:left;
+	margin-right:5px;
+	border-top:none !important;
+	padding:0 !important;
+}
+
+.tuconfesion {
+	margin:0 10px;
+	background-color:#FF6600;
+	background-image:url(../../img/cosmopolitan/bck_confesiones.jpg);
+	background-repeat:repeat-x;
+	margin-top:10px;
+	margin-bottom:13px;
+	height:285px;
+	padding:10px 10px;
+	color:#FFFFFF;
+	font-family:'Arial Black', Gadget, sans-serif;
+	letter-spacing:-1px;
+	font-style:italic;
+	text-align:center;
+}
+
+.tuconfesion p{
+	font-family: Helvetica, sans-serif;
+	letter-spacing:normal;
+	
+}
+
+.forma_contactoconfesion {
+	color:#FFF;
+	font-size:14px;
+	margin-top:20px;
+	font-style:italic;
+	font-weight:bold;
+	font-family: Helvetica, sans-serif;
+	letter-spacing:normal;
+	
+}
+
+.forma_contactoconfesion ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.forma_contactoconfesion li{
+	margin-bottom:5px;
+	width:160px;
+	float:left;
+	text-align:right;
+	margin-right:20px;
+	margin-bottom:10px;
+}
+.forma_contacto3 {
+	width:300px !important;
+}
+
+.oso {
+	height:110px;
+	width:470px!important;
+}
+
+.bt_enviar_confe {
+	width:72px;
+	height:27px;
+	background-image:url(../../img/cosmopolitan/bt_enviar_confe.gif);
+	background-repeat:no-repeat;
+	cursor:pointer;
+	border:0px;
+	margin-top: 5px;
+	margin-left: 100px;
+	font-weight:bold;
+}
+
+.respuesta{
+	margin:10px 0;
+}
+
+
+/*FOTOGALERÃA*/
+#wrapper_fotog {
+	width:980px;
+	background-color:#000000;
+	padding:14px;
+	max-width:952px;
+	text-align:left;
+	margin-bottom:14px;
+	font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif;
+	margin-top:15px;
+}
+
+#wrapper_fotog .container_fotog {
+	background-image:url(../../img/cosmopolitan/bck_fotog.gif);
+	padding:14px;
+}
+
+#wrapper_fotog .fotogal {
+	width:610px;
+	height:655px;
+	float:left;
+}
+
+#wrapper_fotog .fotog_colright {
+	float:right;
+	width:302px;
+}
+
+#wrapper_fotog .c_banner {
+	border:1px solid #666;
+	margin-bottom:16px;
+}
+
+#wrapper_fotog .s_banner {
+	border:1px solid #666;
+	margin-top:12px;
+	width:728px;
+	height:90px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+#wrapper_fotog .pleca_og {
+	background-color:#2A2A2A;
+	padding:7px 0 0 7px;
+	color:#FFFFFF;
+	height:35px;
+	max-height:28px;
+	text-transform:uppercase;
+}
+
+#wrapper_fotog .pleca_og h1{
+	font-size:16px;
+	color:#CCCCCC;
+	font-weight:normal;
+}
+
+#wrapper_fotog .otras_galerias {
+}
+
+#wrapper_fotog .otras_galerias li {
+	border:#333333 solid 1px;
+	background-image:url(../../img/cosmopolitan/bck_otras.jpg);
+	background-repeat:repeat-x;
+	background-color:#242424;
+	width:300px;
+	margin-top:3px;
+	padding:3px 7px 3px 3px;
+	max-width:290px;
+	list-style:none;
+}
+
+#wrapper_fotog .otras_galerias img {
+	border: 1px solid #333333;
+	float:left;
+}
+
+#wrapper_fotog .otras_galerias h2, #wrapper_fotog .otras_galerias h2 a{
+	float:right;
+	font-size:12px;
+	color:#666666;
+	text-decoration:none;
+	width:227px;
+	margin-top:5px;
+}
+
+#wrapper_fotog .otras_galerias h2 a:hover{
+	color:#999999;
+}
+
+
+#wrapper_fotog .liga {
+	color:#FFFFFF;
+}
+
+/*ESTILOS GALERÃA*/
+
+#wrapper_fotog .ad-gallery {
+  width: 608px;
+}
+#wrapper_fotog .ad-gallery, #wrapper_fotog .ad-gallery * {
+  margin: 0;
+  padding: 0;
+}
+  #wrapper_fotog .ad-gallery .ad-image-wrapper {
+    width: 100%;
+    height: 427px;
+    margin-bottom: 2px;
+    position: relative;
+	border: 1px solid #666;
+
+	
+  }
+    #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-loader {
+      position: absolute;
+      z-index: 10;
+      top: 48%;
+      left: 48%;
+      
+    }
+    #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-next {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 25%;
+      height: 100%;
+      cursor: pointer;
+      display: block;
+      z-index: 100;
+    }
+    #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-prev {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 25%;
+      height: 100%;
+      cursor: pointer;
+      display: block;
+      z-index: 100;
+    }
+    #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-prev, #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-next {
+      /* Or else IE will hide it */
+      background: url(../../img/ad-gallery/non-existing.jpg)\9
+    }
+      #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-prev .ad-prev-image, #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-next .ad-next-image {
+        background: url(../../img/cosmopolitan/ad_prev.png);
+        width: 30px;
+        height: 20px;
+        display: none;
+        position: absolute;
+        top: 47%;
+        left: 0;
+        z-index: 101;
+      }
+      #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-next .ad-next-image {
+        background: url(../../img/cosmopolitan/ad_next.png);
+        width: 30px;
+        height: 20px;
+        right: 0;
+        left: auto;
+      }
+    #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-image {
+      position: absolute;
+      top: 0;
+      left: 0 !important;
+      z-index: 9;
+	 
+    }
+	
+	 #wrapper_fotog .ad-image a {
+		width:608px;
+		text-align:center;
+		display:block;
+	}
+      
+	  
+	  #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-image a img {
+        border: 0;
+      }
+      #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-image .ad-image-description {
+        position: relative;
+        top:0;
+        left: 0;
+        padding: 7px;
+        text-align: left;
+        width:515px !important;
+        z-index: 2;
+        color: #ccc;
+		font-size:13px !important;
+	
+      }
+	  
+      * html #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-image .ad-image-description {
+        background: none;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (enabled=true, sizingMethod=scale, src='opa75.png');
+      }
+        #wrapper_fotog .ad-gallery .ad-image-wrapper .ad-image .ad-image-description .ad-description-title {
+          display: block;
+        }
+  #wrapper_fotog .ad-gallery .ad-controls {
+    height: 20px;
+	width:160px;
+  }
+    #wrapper_fotog .ad-gallery .ad-info {
+		color:#999;
+		font-size:14px;
+        float: right;
+		position:relative;
+		top: -134px;
+		right:-214px;
+    }
+    #wrapper_fotog .ad-gallery .ad-slideshow-controls {
+		margin-left:15px;
+	  	z-index:800;
+	 
+    }
+      #wrapper_fotog .ad-gallery .ad-slideshow-controls .ad-slideshow-start, #wrapper_fotog .ad-gallery .ad-slideshow-controls .ad-slideshow-stop {
+        padding-right: 5px;
+        cursor: pointer;
+		float:left;
+      }
+      #wrapper_fotog .ad-gallery .ad-slideshow-controls .ad-slideshow-countdown {
+        font-size: 11px;
+		color:#fff;
+		width:13px;
+		float:left;
+		padding-left:5px;
+		
+      }
+    #wrapper_fotog .ad-gallery .ad-slideshow-running .ad-slideshow-start {
+      cursor: default;
+      font-style: italic;
+    }
+  #wrapper_fotog .ad-gallery .ad-nav {
+    width: 610px;
+    position: relative;
+	background-color:#000000;
+	
+  }
+    #wrapper_fotog .ad-gallery .ad-forward, #wrapper_fotog .ad-gallery .ad-back {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      z-index: 10;
+    }
+    /* IE 6 doesn't like height: 100% */
+    * html #wrapper_fotog .ad-gallery .ad-forward, #wrapper_fotog .ad-gallery .ad-back {
+      height: 86px;
+    }
+    #wrapper_fotog .ad-gallery .ad-back {
+      cursor: pointer;
+      left: 10px;
+      width: 13px;
+      display: block;
+      background: url(../../img/cosmopolitan/ad_scroll_back2.png) 0px 29px no-repeat;
+    }
+    #wrapper_fotog .ad-gallery .ad-forward {
+      cursor: pointer;
+      display: block;
+      right: 10px;
+      width: 13px;
+      background: url(../../img/cosmopolitan/ad_scroll_forward2.png) 0 8px no-repeat;
+	  height:86px;
+    }
+    #wrapper_fotog .ad-gallery .ad-nav .ad-thumbs {
+      overflow: hidden;
+      width: 100%;
+	  height:86px;
+	  width:537px;
+	  position:relative;
+	  left:36px; 
+	  top:-6px;
+    }
+      #wrapper_fotog .ad-gallery .ad-thumbs .ad-thumb-list {
+        float: left;
+        width: 9000px;
+        list-style: none;
+		height:86px;
+		margin-top:12px;
+
+      }
+        #wrapper_fotog .ad-gallery .ad-thumbs li {
+          float: left;
+          padding-right: 5px;
+		
+        }
+          #wrapper_fotog .ad-gallery .ad-thumbs li a {
+            display: block;
+          }
+            #wrapper_fotog .ad-gallery .ad-thumbs li a img {
+              border: 1px solid #333;
+              display: block;
+            }
+            #wrapper_fotog .ad-gallery .ad-thumbs li a.ad-active img {
+              border: 1px solid #333;
+            }
+/* Can't do display none, since Opera won't load the images then */
+#wrapper_fotog .ad-preloads {
+  position: absolute;
+  left: -9000px;
+  top: -9000px;
+}
+
+#wrapper_fotog .f_horizontal {
+	width:101px;
+	height:71px;
+}
+
+#wrapper_fotog .f_vertical {
+	width:51px;
+	height:71px;
+}
+
+#wrapper_fotog .tit_fotog {
+	background-color:#333333;
+	color:#FFFFFF;
+	padding:12px 12px 10px 12px;
+	margin-bottom:3px;
+}
+
+#wrapper_fotog .tit_fotog h1 {
+	font-size:17px;
+}
+
+#wrapper_fotog .descripcion {
+	width:610px;
+	height:60px;
+	background-image:url(../../img/cosmopolitan/bck_descripcion2.jpg);
+	color:#FFFFFF;
+	font-size:14px;
+	z-index:1;
+}
+
+#wrapper_fotog .ad_share {
+	width:610px;
+	max-width:584px;
+	height:34px;
+	max-height:28px;
+	background-image:url(../../img/cosmopolitan/bck_share.jpg);
+	background-repeat:no-repeat;
+	font-size:10px;
+	color:#CCCCCC;
+	padding:6px 13px 0 13px;
+}
+
+#wrapper_fotog .ad_share a{
+	color:#CCCCCC;
+	text-decoration: none;
+}
+
+#wrapper_fotog .ad_share a:hover{
+	text-decoration: underline;
+}
+
+#wrapper_fotog .ad_share ul {
+	list-style:none;
+	
+}
+
+#wrapper_fotog .ad_share li {
+	float:left;
+	margin-right:3px;
+	margin-top:3px;
+}
+#wrapper_fotog .rs {
+	float:left;
+}
+
+#wrapper_fotog .enviar_amigo{
+	float:right;
+}
+
+
+#wrapper_fotog .enviar_amigo img {
+	margin-right:5px;
+	position:relative;
+	top:5px;
+	
+}
+
+#wrapper_fotog .player {
+	background-image:url(../../img/cosmopolitan/bck_player2.jpg);
+	width:110px;
+	height:23px;
+	float:left;
+	margin-left:74px;
+	padding-top:4px;
+	max-height:19px;
+}
+
+#wrapper_fotog .player img {
+	margin-left:10px;
+}
+
+/*CATEGORÃA FOTOGALERÃAS*/
+.autor_fecha {
+	text-transform:uppercase;
+	color:#898989;
+	font-size:10px;
+	margin-top:12px;
+	margin-bottom:12px;
+}
+
+.hist_fotos {
+	padding-top:15px;
+	font-size:18px;
+	color:#898989;
+	background-image:url(../../img/cosmopolitan/indicador.png);
+	background-position:207px 13px;
+	background-repeat:no-repeat;
+	padding-right:10px;
+}
+
+.buscador_int{
+	float:right;
+	width:242px;
+	color:#FFFFFF;
+	font-size:11px;
+	padding:4px 10px;
+	max-width:280px;
+	background-color:#E11361;
+	position:relative;
+	top:-4px;
+}
+
+.campo3{
+	margin-left:10px;
+	margin-right:5px;
+	width:164px;
+	color:#000;
+	
+	
+}
+
+.bt_enviar3 {
+	background:none;
+	background-image:url(../../img/cosmopolitan/bt_fotos.jpg);
+	border:0;
+	cursor:pointer;
+	width:50px;
+	height:21px;
+	font-size:11px;
+	color:#fff;
+}
+
+.cont_list_hist_fv{
+	background-color:#e2e2e2;
+	margin-top:15px;
+	
+}
+
+.pleca_list_hist_fv{
+	padding:8px 15px;
+	height:40px;
+	max-height:24px;
+	background-color:#c7c6c6;
+}
+
+.lis_bxcat{
+	position:relative;
+	top:-9px;
+}
+
+.ordenar{
+	float:right;
+	color:#FFFFFF;
+	font-size:15px;
+}
+
+.ordenar a{
+	background-image:url(../../img/cosmopolitan/bt_ordenar.jpg);
+	background-repeat:repeat-x;
+	width:70px; 
+	height:23px;
+	color:#FFFFFF;
+	font-size:11px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	padding-top:4px;
+	max-height:19px;
+	
+}
+
+.ordenar a:hover {
+	color:#CCCCCC;
+}
+
+.list_fv{
+	overflow-y:auto;
+	height:328px;
+	padding-top:8px;
+	max-height:320px;
+	margin-bottom:15px;
+}
+
+.list_fv li{
+	float:left;
+	width:176px;
+	text-align:center;
+	height:155px;
+	padding:6px 0 2px 0;
+	max-height:143px;
+	margin-left:19px;
+	margin-bottom:8px;
+}
+
+.list_fv_txt {
+	text-align:left !important;
+	width:176px;
+}
+
+.list_fv li h2 {
+	height:29px;
+	overflow:hidden;
+}
+
+
+.list_fv li h2 a{
+	font-size:12px;
+	color:#E11361;
+	text-decoration:none;
+	line-height:14px;
+}
+
+.list_fv li h2 a:hover{
+	color:#666666;
+}
+
+.list_fv li p{
+	color:#999999;
+	font-size:10px;
+	margin-top:4px;
+	
+}
+
+/*MÃ“DULO VIDEOS*/
+
+.mod_video_cat{
+	background-color:#555;
+	margin-top:15px;
+}
+.cont_video_banner{
+	background-color:#000000;
+	padding:17px 26px;
+}
+.video{
+	float:left;
+	width:606px;
+	
+}
+
+.video_cubo{
+	float:right;
+	width:300px;
+	margin-top:47px;
+}
+
+.list_videos {
+	border-top:0 !important;
+	margin-bottom:0 !important;
+}
+
+.videos_mod{
+	max-height:321px !important;
+}
+
+.video_txt {
+	padding:13px 26px;
+}
+
+.video_txt h1{
+	color:#fff;
+	font-size:20px;
+	font-weight:bold;
+}
+
+.video_txt p{
+	color:#b7b7b7;
+	font-size:14px;
+	margin:4px 0;
+}
+
+.video p{
+	font-size:12px;
+	color:#898989;
+	margin-top:10px;
+}
+
+.error{
+	background-image:url(../../img/cosmopolitan/bck_error.jpg);
+	background-repeat:no-repeat;
+	height:380px;
+}
+
+.error_txt p{
+	color:#FFFFFF;
+	width:350px;
+	font-size:15px;
+	position:relative;
+	top:179px;
+	left:281px;
+}
+
+.error_txt p a{
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:15px;
+}
+
+/*REGISTRO*/
+#registro
+{
+	text-shadow:none;
+	text-align:left;
+	padding:0 10px 15px 10px;
+	font-size:14px;
+	margin-top:15px;
+	color:#707070;
+	
+	
+}
+
+#registro p {
+	margin-bottom:10px;
+}
+
+#registro h1
+{
+	color:#666;
+	font-size:13px !important;
+	text-transform:uppercase;
+	background-color:#e9e9e9;
+	padding: 6px 15px;
+}
+#registro ul
+{
+	overflow:hidden;
+	list-style:none;
+	margin-left:15px;
+	padding:2px 0 13px 0;
+}
+#registro ul li
+{
+	width:176px;
+	display:block;
+	float:left;
+	font-size:11px;
+	margin-top:11px;
+	
+}
+
+
+#registro ul a{
+	text-decoration:underline;
+	color:#333;
+}
+
+#registro ul a:hover{
+	color:#666666;
+}
+
+
+#registro ul .lbl
+{
+	width:166px;
+	margin-right:0px;
+	text-align:right;
+	font-size:14px;
+	padding-right:10px;
+	max-width:156px;
+}
+
+#registro ul .lbl2
+{
+	width:130px;
+	margin-right:0px;
+}
+#registro #btn_enviar {text-align:center; margin-top:10px; }
+#registro input, #registro select
+{
+		width:143px;
+		font-size:11px;
+		margin-top:0 !important;
+}
+
+#registro .campos1
+{
+		width:125px;
+		font-size:11px;
+		margin-top:7px !important;
+		margin-right:30px;
+}
+
+#registro .fecha { width:auto;}
+#registro #Registrar
+{
+	background-image:url(../../img/cosmopolitan/bt_continuar.gif);
+	width:139px; height:34px;
+	margin-top:10px;
+	border:none;
+	cursor:pointer;
+	vertical-align:top;
+	text-indent:150px;
+	text-align:center
+}
+#registro ul .error {margin:5px 10px 0 0;}
+#registro .reg_captcha p {margin-left:16px;}
+#registro .reg_captcha p img {margin-right:10px; vertical-align:bottom; margin-left:10px;}
+#registro .error .messages li { color:#990000; width:auto;}
+#registro .error .messages { padding:0; margin:0; width:auto;}
+
+.txt_registro{
+	text-align:center;
+	margin-top:40px;
+}
+
+.txt_registro p{
+	color:#000000;
+	font-size:10px;
+}
+
+.txt_registro p a{
+	color:#E11361;
+}
+
+.txt_registro p a:hover{
+	color:#FF0000;
+}
+
+
+.otros_boletines{
+	background-color:#ECECEC;
+	padding:15px;
+	margin-bottom:30px;
+	margin-top:30px;
+}
+
+.otros_boletines li{
+	width:190px !important;
+	float:left;
+	text-align:left;
+}
+
+.otros_boletines input{
+	width:15px !important;
+	margin-right:10px;
+}
+
+.obligatorio{
+	color:#E11361;
+}
+
+.registro2{
+	background-image:url(../../img/cosmopolitan/f_registro.jpg);
+	background-repeat:no-repeat;
+	color:#555;
+	font-size:18px;
+	height:455px;
+	margin-top:15px;
+	padding:35px 0 0 240px;
+	max-height:420px;
+}
+
+.registro2 p{
+	margin-bottom:20px;
+}
+
+.registro2 ul{
+	list-style:disc;
+	list-style-position:inside;
+}
+
+.bt_continuar {
+	background-image:url(../../img/cosmopolitan/bt_continuar.gif);
+	background-repeat:repeat-x;
+	height:34px;
+	width:139px;
+	cursor:pointer;
+	border:0;
+	margin-left:83px;
+	margin-top:15px;
+}
+
+
+
+/*FOOTER*/
+
+#footer {
+	font-family: Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	width:980px;
+	text-align:left;
+}
+
+.identificador {
+	background-color:#131313;
+	height:38px;
+	color:#FFFFFF;
+	font-size:14px;
+	background-image:url(../../img/cosmopolitan/indicador.png);
+	background-repeat:no-repeat;
+	background-position:82px 6px;
+	padding:10px 0 0 20px;
+	max-height:28px;
+	
+}
+
+.container {
+	background-color:#d7d7d7;
+	padding:0 6px 10px 0;
+}
+
+.portada_sus {
+	width:196px;
+	float:left;
+}
+
+.sus_ligas {
+	border-bottom:1px #fff solid;
+	padding:13px 5px 10px 25px;
+}
+
+.sus_ligas_img{
+	margin-right:10px;
+	margin-top:7px;
+	margin-left:7px;
+
+}
+
+.link_sus a {
+	text-transform:uppercase;
+	color:#898989;
+	text-decoration:none;
+	font-size:11px;
+	font-weight:normal;
+	position:relative;
+	top:-10px;
+}
+
+.link_sus a:hover, .mod_home_b h2 a:hover, .mod_home_c h2 a:hover, .mas_estilo a:hover, .estilos_sec h2 a:hover, .box_horoscopos p a:hover, .box_horoscopos h1 a:hover {	
+	text-decoration:underline;
+}
+
+.bt_sus {
+	margin:7px 0 0 135px;
+}
+
+.bt_sus img {
+	margin-right:7px;
+}
+
+
+
+.port {
+	text-align:center;
+	color:#707070;
+	margin-top:15px;
+	padding-bottom:13px;
+	font-size:12px;
+}
+
+.port img{
+	margin:8px 0;
+	border:1px solid #ccc;
+}
+
+.port a {
+	font-size:10px;
+	text-decoration:none;
+	color:#464646;
+}
+
+.port a:hover {
+	text-decoration:underline;
+}
+
+.content {
+	width:776px;
+	background-color:#FFFFFF;
+	float:right;
+	padding:0 0;
+}
+
+.content a {
+	font-size:10px;
+	text-decoration:none;
+	color:#898989;
+
+}
+
+.content a:hover {
+	text-decoration:underline;
+}
+
+.content ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+	
+	
+}
+
+.ul1 ul, .ul2 ul {
+margin:6px 0 10px 0;
+}
+
+.ul1{
+	width:230px;
+	margin-left:20px;
+	float:left;
+	margin-top:21px;
+}
+
+.ul2{
+	width:200px;
+	margin-left:44px;
+	float:left;
+	margin-top:13px;
+}
+
+.ul2 h1, .ul2 h1 a {
+	color:#E0232B;
+	font-size:12px;
+	text-decoration:none;
+	text-transform:uppercase;
+	
+}
+
+.ul1 h1, .ul1 h1 a {
+	color:#E0232B;
+	font-size:12px;
+	text-decoration:none;
+	text-transform:uppercase;
+	float:left;
+	width:173px;
+	font-weight:bold;
+}
+
+.ver_mas {
+	float:right;
+}
+
+.ver_mas img{
+	margin-right:3px;
+}
+
+
+.ver_mas a{
+	color:#999999;
+	font-size:11px;
+}
+
+.li_nota {
+	list-style:url(../../img/cosmopolitan/bt_articulo.gif) !important;
+	margin-left:22px;
+	margin-bottom:20px;
+}
+
+.li_galeria {
+	list-style:url(../../img/cosmopolitan/bt_mm_r1_c3.gif) !important;
+	margin-left:22px;
+	margin-bottom:20px;
+	
+}
+
+.li_video {
+	list-style:url(../../img/cosmopolitan/bt_mm_r3_c1.gif) !important;
+	margin-left:22px;
+	margin-bottom:20px;
+	
+}
+
+.ul1 h2, .ul2 h2{
+	color:#555555;
+	font-size:12px;
+	display:inline;
+	
+
+}
+
+.ul1 h2 a, .ul2 h2 a {
+	color:#555555;
+	font-size:12px;
+	text-decoration:none;
+}
+
+
+.ul1 h2 a:hover, .ul2 h2 a:hover, ver_mas a:hover {
+	text-decoration:underline;
+}
+
+.footer_cat{
+	border-bottom:3px double #cccccc;
+	padding:0 0 7px 0;
+	margin-bottom:7px;
+}
+
+.otras_revistas {
+	background-color:#000000;
+	color:#898989;
+	padding:14px 20px 18px 20px;
+}
+
+.tit_otras {
+	border-bottom:1px dotted #898989;
+	padding-bottom:10px;
+}
+
+.ul3 {
+	width:179px;
+	margin-right:10px;
+	float:left;
+	margin-top:12px;
+	border-right: solid 1px #404040;
+	
+}
+
+.ul3 h1, .ul3 h1 a {
+	color:#fff;
+	font-size:12px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+.ul3 h1 a:hover{
+	color:#666666;
+}
+
+.ul3 h2, .ul3 h2 a {
+	color:#898989;
+	font-size:11px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+.ul3 a:hover{
+	color:#666666;
+}
+
+.ul3 ul {
+	margin:6px 0 6px 12px !important;
+	list-style:disc;
+	font-size:12px;
+}
+
+select {
+	width:158px;
+	margin-top:13px;
+}
+
+.footer_televisa {
+	background-color:#e8e8e8;
+	padding:10px 20px 10px 15px;
+	font-size:11px;
+	color:#000000;
+}
+
+.footer_televisa a {
+	color:#000;
+}
+
+.footer_televisa a:hover {
+	color:#666666;
+}
+
+.bt_combo {
+	width:150px;
+	height:28px;
+	float:right;
+	font-size:10px;
+	color:#999;
+	background-image:url(../../img/cosmopolitan/bt_combo.gif);
+	background-repeat:no-repeat;
+	margin-right:6px;
+	margin-top:12px;
+	text-align:center;
+	padding-top:7px;
+	max-height:21px;
+	z-index:10;
+	overflow:visible;
+	position:relative;
+	left:-12px;
+}
+
+.bt_combo a {
+	color:#ccc;
+	margin-top:10px;
+	text-decoration:none;
+	
+}
+	
+.bt_combo:hover ul,.bt_combo ul:hover{
+display:block;
+z-index:10;
+
+}
+.bt_combo ul {
+	list-style:none;
+	background-color:#222222;
+	width:150px;
+	display:none;
+	position:relative;
+}	
+
+.bt_combo li {
+	background-image:url(../../img/cosmopolitan/bck_list.jpg);
+	width:144px;
+	height:20px;
+	text-transform:uppercase;
+	text-align:	left;
+	margin-left:3px;
+	padding-left:7px;
+	padding-top:3px;
+	max-width:137px;
+	max-height:17px;
+	display:block;
+	font-size:11px;
+}	
+
+.bt_combo li a:hover{
+	text-decoration:underline;
+}
+
+
+
+
+/*FOOTER*/
+
+#footer {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	width:980px;
+	text-align:left;
+}
+
+.identificador {
+	background-color:#131313;
+	height:38px;
+	color:#FFFFFF;
+	font-size:14px;
+	background-image:url(../../img/padresehijos/internas/bck_indicador.gif);
+	background-repeat:no-repeat;
+	background-position:82px 4px;
+	padding:10px 0 0 20px;
+	max-height:28px;
+	
+}
+
+.container {
+	background-color:#d7d7d7;
+	padding:0 6px 10px 0;
+}
+
+.portada_sus {
+	width:196px;
+	float:left;
+}
+
+.sus_ligas {
+	border-bottom:1px #fff solid;
+	padding:13px 5px 10px 25px;
+}
+
+.sus_ligas_img{
+	margin-right:10px;
+	margin-top:7px;
+	margin-left:7px;
+
+}
+
+.link_sus a {
+	text-transform:uppercase;
+	color:#898989;
+	text-decoration:none;
+	font-size:11px;
+	font-weight:normal;
+	position:relative;
+	top:-10px;
+}
+
+.link_sus a:hover, .mod_home_b h2 a:hover, .mod_home_c h2 a:hover, .mas_estilo a:hover, .estilos_sec h2 a:hover, .box_horoscopos p a:hover, .box_horoscopos h1 a:hover {	
+	text-decoration:underline;
+}
+
+.bt_sus {
+	margin:7px 0 0 135px;
+}
+
+.bt_sus img {
+	margin-right:7px;
+}
+
+
+
+.port {
+	text-align:center;
+	color:#707070;
+	margin-top:15px;
+	padding-bottom:13px;
+	font-size:12px;
+}
+
+.port img{
+	margin:8px 0;
+	border:1px solid #ccc;
+}
+
+.port a {
+	font-size:10px;
+	text-decoration:none;
+	color:#464646;
+}
+
+.port a:hover {
+	text-decoration:underline;
+}
+
+.content {
+	width:776px;
+	background-color:#FFFFFF;
+	float:right;
+	padding:0 0;
+}
+
+.content a {
+	font-size:10px;
+	text-decoration:none;
+	color:#898989;
+
+}
+
+.content a:hover {
+	text-decoration:underline;
+}
+
+.content ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+	
+	
+}
+
+.ul1 ul, .ul2 ul {
+margin:6px 0 10px 0;
+}
+
+.ul1{
+	width:230px;
+	margin-left:20px;
+	float:left;
+	margin-top:21px;
+}
+
+.ul2{
+	width:200px;
+	margin-left:44px;
+	float:left;
+	margin-top:13px;
+}
+
+.ul2 h1, .ul2 h1 a {
+	color:#E0232B;
+	font-size:12px;
+	text-decoration:none;
+	text-transform:uppercase;
+	
+}
+
+.ul1 h1, .ul1 h1 a {
+	color:#E0232B;
+	font-size:12px;
+	text-decoration:none;
+	text-transform:uppercase;
+	float:left;
+	width:173px;
+	font-weight:bold;
+}
+
+.ver_mas {
+	float:right;
+}
+
+.ver_mas img{
+	margin-right:3px;
+}
+
+
+.ver_mas a{
+	color:#999999;
+	font-size:11px;
+}
+
+.li_nota {
+	list-style:url(../../img/padresehijos/internas/bt_articulo.gif) !important;
+	margin-left:22px;
+	margin-bottom:20px;
+}
+
+.li_galeria {
+	list-style:url(../../img/padresehijos/internas/bt_mm_r1_c3.gif) !important;
+	margin-left:22px;
+	margin-bottom:20px;
+	
+}
+
+.li_video {
+	list-style:url(../../img/padresehijos/internas/bt_mm_r3_c1.gif) !important;
+	margin-left:22px;
+	margin-bottom:20px;
+	
+}
+
+.ul1 h2, .ul2 h2{
+	color:#555555;
+	font-size:12px;
+	display:inline;
+	
+
+}
+
+.ul1 h2 a, .ul2 h2 a {
+	color:#555555;
+	font-size:12px;
+	text-decoration:none;
+}
+
+
+.ul1 h2 a:hover, .ul2 h2 a:hover, ver_mas a:hover {
+	text-decoration:underline;
+}
+
+.footer_cat{
+	border-bottom:3px double #cccccc;
+	padding:0 0 7px 0;
+	margin-bottom:7px;
+}
+
+/*ESTILOS SLIDE HOME*/
+
+#area {
+	width: 633px;
+	height:auto;
+}
+/* root element for scrollable */
+#scroller {
+
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+
+	/* vertical scrollables have typically larger height than width but not now */
+	height: 346px;
+	width: 633px;
+	margin:0 0 0 0;
+}
+
+/* root element for scrollable items */
+#scroller .items {
+	position:absolute;
+
+	/* this time we have very large space for the height */
+	width:10000em;
+	
+}
+
+#scroller .items .item {
+	width: 633px;
+	height: 346px;
+	float: left;
+}
+
+#scroller .items .item a.image {
+	display: block;
+	width: 633px;
+	height: 346px;
+}
+.navi {
+	width: 100px;
+	margin: 0 auto 0 auto;
+}
+.navi a {
+	width:9px;
+	height:9px;
+	float:left;
+	margin: 3px;
+	border:solid 2px #25BCBD;
+	background-color:#FFF;
+	-moz-border-radius:8px; 
+	-webkit-border-radius:8px;
+	display: block;
+}
+.navi a:hover {
+    background-position:0 -8px;
+	background-color:#AFE1E0;
+	border:solid 2px #25BCBD;
+}
+
+.navi a.active {
+	background-position: 0 0px;
+	background-color:#AFE1E0;
+	border:solid 2px #25BCBD;
+}
+
+
+
+
+/*CARRUSEL INFERIOR*/
+.tit_carrusel {
+	background-color:#000000;
+	width:956px;
+	width:980px\9;
+	/*margin:13px auto 0;*/
+	color:#696969;
+	font-size:12px;
+	text-transform:uppercase;
+	border-bottom:1px dotted #737373;
+	*border-bottom:1px dotted #737373;
+	padding:8px 63px 8px 35px;
+	max-width:882px;
+	text-align:left;
+}
+
+.carrusel {
+	width:980px;
+	background-image:url(../../img/padresehijos/imgFooter/fondofooter.jpg);
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:12px;
+	height: 215px !important;
+}
+
+a.prev, a.next {
+	width: 24px;
+	height: 45px;
+	display: block;
+	
+}
+
+/*Cambios footer*/
+
+a#foo1_prev, a#foo1_next {
+	width: 24px;
+	height: 45px;
+	display: block;
+	outline: 0px;
+	
+}
+a#foo1_prev {
+			background-image:url(../../img/padresehijos/imgFooter/arrows.png);
+			position:relative;
+			top:-142px;
+			left:-23px;
+			background-position: 0 0; 
+			outline: 0px;
+}
+					
+a#foo1_prev:hover {	background-image:url(../../img/padresehijos/imgFooter/arrows_over.png);
+					background-position: 0 0; 
+					border:none;
+					border:0;}
+
+a#foo1_next {		background-image: url(../../img/padresehijos/imgFooter/arrows.png);
+					background-position: -24px 0;
+					left: 933px;
+					position: relative;
+					top: -187px;
+					outline: 0px;
+			}
+					
+a#foo1_next:hover {	background-image:url(../../img/padresehijos/imgFooter/arrows_over.png);
+					background-position: -24px 0; }
+
+a#foo1_prev span, a#foo1_next span {
+	display: none;
+
+}
+
+
+/*fin del cambio*/
+
+.list_carousel {
+	padding: 0 0 0 0;
+	height:216px;
+	padding-left:23px !important;
+	margin-bottom:-80px\9;
+	overflow: hidden;
+	position: relative;
+}
+.list_carousel ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+.list_carousel li {
+	font-size: 12px;
+	background-color: #252525;
+	border-right:1px dotted #7a7a7a;
+	width: 227px;
+	height: 211px;
+	display: block;
+	float: left;
+	text-transform:uppercase;
+}
+
+.list_carousel li a {
+	/*color:#FFFFFF;*/
+	font-size:12px;
+	text-decoration:none;
+}
+
+.list_carousel li a:hover {
+	text-decoration:underline;
+}
+
+
+.clearfix {
+	float: none;
+	clear: both;
+}
+
+.tit_revista {
+	background-image:url(../../img/padresehijos/imgFooter/bck_carrusel.jpg);
+	height:61px;
+	text-align:center;
+}
+
+.tit_revista img{
+	margin-top:10px;
+}
+
+
+
+.caroufredsel_wrapper{
+	/*margin-left:35px !important;*/
+	width:933px !important;
+}
+
+
+#foo2{
+	left:0 !important;
+}
+
+#foo2 li{
+	margin-right:0 !important;
+	width:233px;
+}
+
+.notas_revista {
+	padding:10px 10px 0 10px;
+}
+
+.notas_revista img{
+	float:left;
+	/*margin-top:3px;
+	*margin-top:0px;*/
+}
+
+.notas_revista h2 {
+    height: 29px;
+    line-height: 10px;
+    margin-bottom: 7px;
+    overflow: hidden;
+    width: 197px;
+	margin-left:9px !important;
+}
+
+.notas_revista h2 a{
+    color: #898989;
+    font-size: 11px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.notas_revista h2 a:hover{
+	color:#666666;
+    text-decoration: none;
+}
+
+
+
+/*FOOTER*/
+
+#footer {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	width:980px;
+	text-align:left;
+}
+
+.identificador {
+	background-color:#131313;
+	height:38px;
+	color:#FFFFFF;
+	font-size:14px;
+	background-image:url("../../img/cosmopolitan/indicador.png");
+	background-repeat:no-repeat;
+	background-position:82px 4px;
+	padding:10px 0 0 20px;
+	max-height:28px;
+	
+}
+
+.container {
+	background-color:#d7d7d7;
+	padding:0 6px 10px 0;
+}
+
+.portada_sus {
+	width:196px;
+	float:left;
+}
+
+.sus_ligas {
+	border-bottom:1px #fff solid;
+	padding:13px 5px 10px 25px;
+}
+
+.sus_ligas_img{
+	margin-right:10px;
+	margin-top:7px;
+	margin-left:7px;
+
+}
+
+.link_sus a {
+	text-transform:uppercase;
+	color:#898989;
+	text-decoration:none;
+	font-size:11px;
+	font-weight:normal;
+	position:relative;
+	top:-10px;
+}
+
+.link_sus a:hover, .mod_home_b h2 a:hover, .mod_home_c h2 a:hover, .mas_estilo a:hover, .estilos_sec h2 a:hover, .box_horoscopos p a:hover, .box_horoscopos h1 a:hover {	
+	text-decoration:underline;
+}
+
+.bt_sus {
+	margin:7px 0 0 135px;
+}
+
+.bt_sus img {
+	margin-right:7px;
+}
+
+
+
+.port {
+	text-align:center;
+	color:#707070;
+	margin-top:15px;
+	padding-bottom:13px;
+	font-size:12px;
+}
+
+.port img{
+	margin:8px 0;
+	border:1px solid #ccc;
+}
+
+.port a {
+	font-size:10px;
+	text-decoration:none;
+	color:#464646;
+}
+
+.port a:hover {
+	text-decoration:underline;
+}
+
+.content {
+	width:776px;
+	background-color:#FFFFFF;
+	float:right;
+	padding:0 0;
+}
+
+.content a {
+	font-size:10px;
+	text-decoration:none;
+	color:#898989;
+
+}
+
+.content a:hover {
+	text-decoration:underline;
+}
+
+.content ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+	
+	
+}
+
+.ul1 ul, .ul2 ul {
+margin:6px 0 10px 0;
+}
+
+.ul1{
+	width:230px;
+	margin-left:20px;
+	float:left;
+	margin-top:21px;
+}
+
+.ul2{
+	width:200px;
+	margin-left:44px;
+	float:left;
+	margin-top:13px;
+}
+
+.ul2 h1, .ul2 h1 a {
+	color:#E0232B;
+	font-size:12px;
+	text-decoration:none;
+	text-transform:uppercase;
+	
+}
+
+.ul1 h1, .ul1 h1 a {
+	color:#E0232B;
+	font-size:12px;
+	text-decoration:none;
+	text-transform:uppercase;
+	float:left;
+	width:173px;
+	font-weight:bold;
+}
+
+.ver_mas {
+	float:right;
+}
+
+.ver_mas img{
+	margin-right:3px;
+}
+
+
+.ver_mas a{
+	color:#999999;
+	font-size:11px;
+}
+
+.li_nota {
+	list-style:url(../../img/padresehijos/internas/bt_articulo.gif) !important;
+	margin-left:22px;
+	margin-bottom:20px;
+}
+
+.li_galeria {
+	list-style:url(../../img/padresehijos/internas/bt_mm_r1_c3.gif) !important;
+	margin-left:22px;
+	margin-bottom:20px;
+	
+}
+
+.li_video {
+	list-style:url(../../img/padresehijos/internas/bt_mm_r3_c1.gif) !important;
+	margin-left:22px;
+	margin-bottom:20px;
+	
+}
+
+.ul1 h2, .ul2 h2{
+	color:#555555;
+	font-size:12px;
+	display:inline;
+	
+
+}
+
+.ul1 h2 a, .ul2 h2 a {
+	color:#555555;
+	font-size:12px;
+	text-decoration:none;
+}
+
+
+.ul1 h2 a:hover, .ul2 h2 a:hover, ver_mas a:hover {
+	text-decoration:underline;
+}
+
+.footer_cat{
+	border-bottom:3px double #cccccc;
+	padding:0 0 7px 0;
+	margin-bottom:7px;
+}
+
+
+/* Galeria */
+#wrapper_fotog{width:980px;max-width:952px;text-align:left;margin-bottom:14px;font-family:Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif;padding:14px}
+#wrapper_fotog .container_fotog{padding:14px}
+#wrapper_fotog .fotogal{width:610px;height:auto;float:left}
+#wrapper_fotog .fotog_colright{float:right;width:302px}
+#wrapper_fotog .c_banner{border:1px solid #666;margin-bottom:16px}
+#wrapper_fotog .s_banner{border:1px solid #666;margin-top:12px;width:728px;height:90px;margin-left:auto;margin-right:auto}
+#wrapper_fotog .pleca_og{background-color:#2A2A2A;color:#FFF;height:35px;max-height:28px;text-transform:uppercase;padding:7px 0 0 7px}
+#wrapper_fotog .pleca_og h1{font-size:16px;color:#CCC;font-weight:400}
+#wrapper_fotog .otras_galerias li{border:#333 solid 1px;background-image:url(http://editorial.esmas.com/img/natgeo/bck_otras.jpg);background-repeat:repeat-x;background-color:#242424;width:300px;margin-top:3px;max-width:290px;list-style:none;padding:3px 7px 3px 3px}
+#wrapper_fotog .otras_galerias img{border:1px solid #333;float:left}
+#wrapper_fotog .otras_galerias h2,#wrapper_fotog .otras_galerias h2 a{float:right;font-size:12px;color:#666;text-decoration:none;width:227px;margin-top:5px}
+.ad-gallery{width:608px}
+.ad-gallery .ad-image-wrapper{width:100%;height:427px;margin-bottom:2px;position:relative;border:1px solid #666}
+.ad-gallery .ad-image-wrapper .ad-loader{position:absolute;z-index:10;top:48%;left:48%}
+.ad-gallery .ad-image-wrapper .ad-next{position:absolute;right:0;top:0;width:25%;height:100%;cursor:pointer;display:block;z-index:100}
+.ad-gallery .ad-image-wrapper .ad-prev{position:absolute;left:0;top:0;width:25%;height:100%;cursor:pointer;display:block;z-index:100}
+.ad-gallery .ad-image-wrapper .ad-prev,.ad-gallery .ad-image-wrapper .ad-next{background:url(../../img/ad-gallery/non-existing.jpg)\9}
+.ad-gallery .ad-image-wrapper .ad-prev .ad-prev-image,.ad-gallery .ad-image-wrapper .ad-next .ad-next-image{background:url(http://editorial.esmas.com/img/natgeo/ad_prev.png);width:30px;height:20px;display:none;position:absolute;top:47%;left:0;z-index:101}
+.ad-gallery .ad-image-wrapper .ad-next .ad-next-image{background:url(http://editorial.esmas.com/img/natgeo/ad_next.png);width:30px;height:20px;right:0;left:auto}
+.ad-gallery .ad-image-wrapper .ad-image{position:absolute;top:0;left:0!important;z-index:9}
+.ad-image a{width:608px;text-align:center;display:block}
+.ad-gallery .ad-image-wrapper .ad-image .ad-image-description{position:relative;top:0;left:0;text-align:left;width:515px!important;z-index:2;color:#ccc;font-size:13px!important;padding:7px}
+* html .ad-gallery .ad-image-wrapper .ad-image .ad-image-description{background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (enabled=true,sizingMethod=scale,src='opa75.png')}
+.ad-gallery .ad-controls{height:20px;width:160px;padding-top:3px}
+.ad-gallery .ad-info{color:#999;font-size:14px;float:right;position:relative;top:-3px}
+.ad-gallery .ad-slideshow-controls{margin-left:15px;z-index:800}
+.ad-gallery .ad-slideshow-controls .ad-slideshow-start,.ad-gallery .ad-slideshow-controls .ad-slideshow-stop{padding-right:5px;cursor:pointer;float:left}
+.ad-gallery .ad-slideshow-controls .ad-slideshow-countdown{font-size:11px;color:#fff;width:13px;float:left;padding-left:5px;margin-top:-3px}
+.ad-gallery .ad-slideshow-running .ad-slideshow-start{cursor:default;font-style:italic}
+.ad-gallery .ad-nav{width:610px;position:relative;background-color:#000}
+.ad-gallery .ad-forward,.ad-gallery .ad-back{position:absolute;top:0;height:100%;z-index:10}
+* html .ad-gallery .ad-forward,.ad-gallery .ad-back{height:86px}
+.ad-gallery .ad-back{cursor:pointer;left:10px;width:13px;display:block;background:url(http://editorial.esmas.com/img/natgeo/ad_scroll_back2.png) 0 29px no-repeat}
+.ad-gallery .ad-forward{cursor:pointer;display:block;right:10px;width:13px;background:url(http://editorial.esmas.com/img/natgeo/ad_scroll_forward2.png) 0 29px no-repeat;height:86px}
+.ad-gallery .ad-nav .ad-thumbs{overflow:hidden;height:86px;width:537px;position:relative;left:36px;top:-6px}
+.ad-gallery .ad-thumbs .ad-thumb-list{float:left;width:9000px;list-style:none;height:86px;margin-top:12px}
+.ad-gallery .ad-thumbs li{float:left;padding-right:5px}
+.ad-gallery .ad-thumbs li a img{border:1px solid #333;display:block}
+.ad-gallery .ad-thumbs li a.ad-active img{border:1px solid #333}
+.ad-preloads{position:absolute;left:-9000px;top:-9000px}
+.f_horizontal{width:101px;height:71px}
+.f_vertical{width:51px;height:71px}
+.tit_fotog{background-color:#333;color:#FFF;margin-bottom:3px;padding:12px 12px 10px}
+.tit_fotog h1{font-size:17px}
+.descripcion{width:608px;min-height:60px;z-index:1;background:#2D2D2D;border:1px solid #666;color:#CCC;font-size:13px!important;font-family:Lucida Grande,Lucida Sans Unicode,Verdana,Arial,Helvetica,sans-serif}
+.ad_share{width:610px;height:34px;max-height:28px;background-image:url(http://editorial.esmas.com/img/natgeo/bck_share.jpg);background-repeat:no-repeat;font-size:10px;color:#CCC;padding:6px 13px 0}
+.ad_share a{color:#CCC;text-decoration:none}
+.ad_share li{float:left;margin-right:3px;margin-top:3px}
+.rs{float:left;margin-left:3px!important}
+.enviar_amigo img{margin-right:5px;position:relative;top:5px}
+.player{background-image:url(http://editorial.esmas.com/img/natgeo/bck_player2.jpg);width:110px;height:23px;float:left;margin-left:74px;padding-top:4px;max-height:19px;margin-top:3px!important}
+.player img{margin-left:10px}
+.ad-image-detalles{background-color:#343434;min-height:56px;width:610px}
+.ad-image-detalles .player{background-color:#383838;background:none repeat scroll 0 0 #383838;float:right;height:100%;margin-left:0;width:109px}
+.ad-image-detalles .player .ad-controls{width:100%}
+.ad-image-detalles .ad-info{width:109px;text-align:center;float:none;right:auto;top:auto}
+.ad-image-detalles .ad-slideshow-controls{width:109px;height:20px;margin-left:0;padding-top:5px;background-color:#383838}
+div.ad-image-descripcion h1{width:500px;color:#CCC;font-size:13px!important;font-family:Lucida Grande,Lucida Sans Unicode,Verdana,Arial,Helvetica,sans-serif;font-weight:700}
+div.ad-image-descripcion{color:#CCC;font-family:Lucida Grande,Lucida Sans Unicode,Verdana,Arial,Helvetica,sans-serif;font-size:13px!important;width:500px;z-index:1;float:left}
+*,.ad-gallery,.ad-gallery *,*,.ad-gallery,.ad-gallery *{margin:0;padding:0}
+img,.ad-gallery .ad-image-wrapper .ad-image a img,img,.ad-gallery .ad-image-wrapper .ad-image a img{border:0}
+.boton_suscribete a,.btns a{color:#FFF;text-decoration:none}
+.txt_c {height: 90px;margin-left: 50px;margin-top: 5px;overflow: hidden;width: 570px;}
+
+
+/* Menu */
+/*CAMBIOS*/
+.slidenav {
+	margin-top: 10px;
+    position: relative;
+}
+
+
+.slidenav a {
+    color: #f1f1f1;
+	text-decoration: none;
+}
+
+.menu_container{
+	background-image:url(img/bck_header2.gif);
+	background-repeat:repeat-x;
+}
+
+.slidenav ul, .slidenav ul li {
+    height: 35px;
+    line-height: 22px;
+    list-style: none;
+}
+
+.subnav ul li, .subnav ul, .slidenav-box {
+    height: 2em;
+    line-height: 2.3em;
+    list-style: none;
+}
+
+.slidenav ul a, .subnav ul a {
+    display: block;
+    padding: 0px 10px;
+}
+
+.slidenav ul li, .subnav ul li {
+    float: left;
+}
+
+.slidenav ul li ul {
+    display: none !important;
+    position: absolute;
+    top: 3em;
+    left: 0;
+}
+
+.slidenav ul li:hover ul {
+    display: block;
+}
+
+.subnav ul {
+    display: none;
+	font-size: 13px;
+}
+
+.subnav ul a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.slidenav-box {
+    margin: 5px 0px;
+    border: 1px solid #472841;
+    padding: 0px 20px;
+	background: #c15600;
+}
+
+.inactive-box {
+	visibility: hidden;
+}
+
+
+
+/* ------ */
+.menu2 {
+	font-family:'Arial Black', Gadget, sans-serif;
+	width:980px;
+	height:35px;
+	background-color:#FFEE02;
+	float:left;
+}
+
+.menu2 .subnav ul li, .menu2 .subnav ul, .menu2 .slidenav-box {height:auto;}
+
+
+.menu2 .slidenav
+{
+	background:none;
+	height:30px;
+	margin-top:0;
+}
+.menu2 .slidenav ul { height:auto; line-height:normal;}
+.menu2 .slidenav ul li a {
+	color:#000000;
+	letter-spacing:-1px;
+	font-size:13px;
+	text-decoration:none;
+	padding:8px 4px 5px;
+	border-left:2px solid #FFEE02;
+	border-right:2px solid #FFEE02;
+	}
+.menu2 .subnav ul a
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#c36;
+	font-size:12px;
+}
+.menu2 .subnav ul a:hover
+{
+	color:#000;
+}
+.menu2 .slidenav-box {background:none; border:1px solid #FFF}
+.menu2  .subnav ul { height:20px; }
+.menu2  .subnav ul li { line-height:normal;}
+.menu2  .subnav ul li.bullet { background:url(../../img/bodamonaco/bullets.png) no-repeat; width:10px; background-position:3px 0}
+
+
+
+.menu2 .slidenav ul li a:hover{
+	background-color:#FFFFFF;
+	border-left:2px solid #D6D18A;
+	border-right:2px solid #D6D18A;
+}
+
+.pleca_url {
+    background-color: #A70E4A;
+    color: #FFEE02;
+    font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 3px 20px;
+	width:980px;
+	max-width:940px;
+	margin:auto;
+}
+.pleca_url a { color: #FFEE02; text-decoration:none; }
+
+
+lista_errores { list-style:disc;}
+.lista_errores li {height:auto};
+
+.nivo-caption .txt_c { margin-left: 28px !important;width: 604px !important;}
+.nivo-caption .txt_c h1 { padding:3px; }
+.nivo-caption .txt_c .hot_der {float:right;margin-right:20px;width:230px;}
+.nivo-caption .txt_c .hot_izq {float:left;margin-left:20px;width:230px;}
+
+.list_fv iframe { height:311px !important }
+
+
+.txt_c .izq { width:270px; float:left;}
+.txt_c .der { width:270px; float:left; padding-left:10px;}
+.txt_c .izq h1, .txt_c .der h1 { font-size:18px; width:auto;}
+
+
+.nota_vs { width:645px; display:block;}
+.vs_izq { width:312px; display:block; float:left;}
+.vs_der {width:312px; display:block; float:right;}
+
+/*contacto*/
+.col3 fieldset{
+	width:485px;
+	margin:auto;
+	overflow:hidden;
+	/*padding:7px 0 0 33px;*/
+	border:none;
+}
+.col3 h1{
+	padding:0 0 0 7px;
+	font-size:46px;
+	color:#FFF;
+	letter-spacing:-3px;
+}
+.col1 h1{
+	padding:0 0 0 7px;
+	font-size:46px;
+	color:#FFF;
+	letter-spacing:-3px;
+}
+.col3 p{
+	margin:0 0 30px 0; padding:0 0 5px 0;
+	font-size:10px;
+	border-bottom:1px solid #cfe0e9;
+}
+.col3 label{
+	float:left;/* Importante, para la alineaciÃ³n */
+	width:150px; /* ancho del label */
+	font-size:2.8em;
+	/*margin:5px 0 25px;*/
+}
+.col3 textarea{
+	float:left;/* Importante, para la alineaciÃ³n */
+	width:245px; height:100px;/* Medidas del Input */
+	margin:0 0 15px 0; padding:15px;
+	color:#000;font-size:14px;
+	border:none;
+}
+.col3 input{
+	float:left;/* Importante, para la alineaciÃ³n */
+	width:245px; height:16px;/* Medidas del Input */
+	margin:0 0 15px 0; padding:15px;
+	color:#000;font-size:14px;
+	border:none;
+}
+.col3 span{
+	font-size:10px; /* TamaÃ±o mÃ¡s pequeÃ±o para las indicaciones */
+	display:block; /* hace que salte de linea */
+}
+/* Personzaliando el botÃ³n de registrar */
+#registrar{
+	float:right;
+	font-size:18px;
+	padding:0;
+	
+	background:#78002d; color:#ff0;
+	width:155px;height:45px;
+	margin-top:15px;
+}
+/* Hover a nuestro Boton 
+   No funciona en IE6(no se por quÃ© lo siguen usando xD) */
+#registrar:hover{
+	background:#fff; color:#000;
+}
+/* Opcional - Bordes Redondeados
+   Solo funciona con Firefox / Safari / Google Chrome */
+.col3 input,#registrar, textarea{
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+/* Si usan esto ultimo no validara, porque aun no lo han estanderizado
+   pero funciona a la perfecciÃ³n - salvo con IE (la oveja negra) */
+
+
+.col1{
+	padding:10px 0 20px 0;
+	width:635px;
+	background-color:#78002d;
+}
+.col2{
+	width:900px;
+	background-color:#FFF;
+}
+
+.col3{
+	padding:15px 0 0 0;
+	width:635px;
+	height:410px;
+	background-color:#000;
+	color:#ff0;
+	/*background-image:url(http://editorial.televisa.com/img/tu/fondo_contacto.jpg);*/
+	background-image:url(http://editorial.televisa.com/img/cosmopolitan/fondo.png);
+}
+.captcha{    
+	float: left;
+    margin-left: 150px;
+    /*margin-top: 20px;*/
+    width: auto;}
+
+.captcha p{margin:0; padding:0; border-bottom: 0 none; font-size: 20px; float: left;}
+.captcha img{float: left;height: 30px;vertical-align: bottom; width: 79px;}
+.captcha input{float: left; width: 40px; border-radius: 0pt 0pt 0pt 0pt; margin: 0pt; padding: 0pt; height: 20px;}
+/*chicas cosmo*/
+.img{
+	border:none;
+}
+
+.c_video {
+	width:664px;
+	height:auto;
+	margin:0 0 0 0;
+	float:left;
+	border-top:dashed 3px #999;
+	background-color:#FFF;
+	padding-bottom:20px;
+}
+
+.menu_header {
+	width:658px;
+	height:35px;
+	background-color:#8c4c66;
+	margin:5px 0 0 0;
+	float:left;
+}
+
+.img_header {
+	width:658px;
+	height:118px;
+	float:left;
+	margin:5px 0 0 0;
+}
+
+.menu_header p{
+	width:136px;
+	height:auto;
+	float:left;
+	margin:0 20px 0 10px;
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:20px;
+	line-height:35px;
+}
+
+.logo_blog {
+	width:136px;
+	height:auto;
+	float:left;
+	margin:2px 0 0 0;
+}
+
+.btn_blog {
+	width:119px;
+	height:auto;
+	float:left;
+	margin:0 0 0 0;
+}
+
+.btn_youtube {
+	width:218px;
+	height:auto;
+	float:left;
+	margin:0 0 0 0;
+}
+
+.pag_videos {
+	width:658px;
+	height:40px;
+	float:left;
+	margin:5px 0 0 0;
+	background-image:url(http://editorial.televisa.com/img/cosmopolitan/bg_video2.jpg);
+	background-repeat:no-repeat;
+}
+
+.pag_videos2 {
+	width:658px;
+	height:40px;
+	float:left;
+	margin:0 0 0 0;
+	background-color:#8c4c66;
+}
+
+.paginacion_esp {
+	ont-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	display:block;
+	color:#FFF;
+	text-align:right;
+	margin:18px 15px 0 0;
+}
+
+.paginacion_esp a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#ed6ea9;
+	text-decoration:none;
+	padding:0 5px 0 5px;
+}
+
+.paginacion_esp a:hover{
+	text-decoration:underline;
+}
+
+.list_videos {
+	width:658px;
+	height:auto;
+	float:left;
+	margin:0 0 0 0;
+}
+
+.video_cosmo{
+	width:658px;
+	height:auto;
+	float:left;
+	color:#fff;
+	background-image:url(http://editorial.televisa.com/img/cosmopolitan/bg_video.jpg);
+	background-repeat:repeat;
+	border-bottom:solid 1px #FFF;
+}
+
+.video_cosmo h1{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:25px;
+	float:left;
+	color:#fff;
+	margin:25px 0 0 70px;
+}
+
+.video_cosmo img{
+	width:515px;
+	height:288px;
+	overflow:hidden;
+	float:left;
+	color:#fff;
+	margin:20px 0 0 70px;
+}
+
+.video_cosmo p{
+	width:530px;
+	height:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	float:left;
+	color:#fff;
+	margin:15px 0 30px 70px;
+}
+
+.imgCosmo{   
+	 height: 288px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 658px;}
+.txtCosmo{
+    height: 60px;
+    margin-left: 73px;
+    margin-top: 10px;
+    overflow: hidden;
+    padding: 0;
+    text-align: justify;
+    width: 515px;}
+
+/* Carrusel promos */
+#carrusel2 {width:980px;font-family:Arial,Helvetica,sans-serif;font-size:12px;height:120px;margin:auto; padding-bottom:10px;background-color:#FFF}
+.scrollable2 {height: 120px;overflow: hidden;width: 860px;float:left;position:relative;margin:0 8px;}
+/* #carrusel2 .scrollable2 .items2 { width:1160px; height:290px;} */
+.scrollable2 .notas_carrusel {margin-top:0; padding:0 8px;}
+.scrollable2 .items2 {clear:both;position:absolute;left:0;}
+.items2 div {float:left;width:270px; height:120; padding-bottom:20px;}
+#foo1_prev1, #foo1_next1 {float:left; margin-top:25px;}
+#foo1_prev1 { margin-left:18px;}
+.s_banner{ height: auto; margin: auto; width: 728px;}
+.sbanner_footer {padding-bottom:10px;}
+
+/*bases*/
+.tit_cat{background-repeat:no-repeat;height:50px;color:#FFF;font-family:Georgia, "Times New Roman", Times, serif;font-size:23px;text-transform:uppercase;max-height:43px;font-weight:lighter;width:620px; background-color: #E11361;padding:7px 0 0 15px}
+.tit_cat_bases a{font-size:16px;color:#FFF;}
+.tit_cat_bases .activo a{color:#FFF!important}
+#txt_cat1{ margin:15px; text-align:justify;}
+#txt_cat2{ margin:15px; text-align:justify;}
+
+.modulo_apps{
+	padding:10px 0 20px;
+}
+.modulo_apps_main{
+	background-image:url(http://editorial.televisa.com/img/cosmopolitan/apps_back_maincosmo.jpg);
+	background-repeat:no-repeat;
+	height:300px;
+	overflow:hidden;
+}
+
+.modulo_apps_main .logo{
+	float:right;
+	width:278px;
+	margin-right:30px;
+	margin-top:11px;
+	height:auto;
+}
+
+.modulo_apps_main .txt{
+	height:138px;
+	overflow:hidden;
+	float:right;
+	width:278px;
+	color:#fff;
+	font-size:12px;
+	margin-right:30px;
+	line-height:16px;
+	
+}
+.modulo_apps_main .txt p{
+	margin-bottom:10px;
+}
+
+.modulo_apps_main .apps_apple{
+	margin-top:15px;
+	margin-left:103px;
+	font-size:12px;
+	float:left;
+}
+
+.modulo_apps_main .apps_bb{
+	margin-top:15px;
+	margin-left:155px;
+	font-size:12px;
+	float:left;
+}
+
+.modulo_apps_main .apps_apple li, .modulo_apps_main .apps_bb li{
+	float:left;
+}
+.modulo_apps_main .apps_apple li a, .modulo_apps_main .apps_bb li a{
+	color:#FFFFFF;
+	text-decoration:none;
+	display:block;
+	padding:3px 15px;
+}
+.modulo_apps_main .apps_apple li a:hover, .modulo_apps_main .apps_bb li a:hover{
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+	border-radius:50px;
+	background-color:#000000;
+}
+
+.mod_todas_apps_tit{
+	color:#898989;
+	font-family:"Trebuchet MS", Tahoma, sans-serif;
+	text-transform:uppercase;
+	font-size:20px;
+	border-bottom: double 3px #898989;
+	padding:4px 0;
+}
+
+.aplicaciones li{
+	width:294px;
+	border-right:1px solid #c2c2c2;
+	margin-top:25px;
+	float:left;
+	padding:0 10px;
+	font-family:"Trebuchet MS", Tahoma, sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	text-transform:uppercase;
+	
+}
+
+.icono_app{
+	float:left;
+	margin-right:11px;
+}
+
+.apps_txt{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-transform:none;
+	color:#555;
+	font-weight:normal;
+	height:230px;
+	overflow:hidden;
+}
+
+.apps_txt a{
+	color:#000000;
+	text-decoration:none;
+}
+
+.apps_txt a:hover{
+	text-decoration:underline;
+}
+
+.apps_txt p{
+	margin-top:10px;
+}
+
+.dispositivos{
+	background-color:#CDCDCD;
+	padding:10px 0;
+	height:90px;}
+
+.dispositivos li{
+	width:56px !important;
+	height:92px !important;
+	border-right:none !important;
+	margin-top:0;
+	float:left;
+	padding:0 0;
+	text-align:center;
+	line-height:11px;
+
+}
+
+.dispositivos li a{
+	color:#000000;
+	font-size:10px;
+	text-decoration:none;
+	text-transform:none;
+	font-weight:normal;
+}
+
+
+.dispositivos li a:hover{
+	text-decoration:underline;
+}
+
+.dispositivo_ch{
+	width:40px !important;
+}
+
+.lista_appr{
+	padding-right:0 !important;
+	border-right:none !important;
+}
+
+.contenido_apps{width:980px;margin:0 auto;
+background-color:#FFFFFF;
+padding:0 21px;
+max-width:938px;}
+.tit_app{ font-size:20px; font-weight:bold; color:#898989;}
+
+/*CAMBIO HEADER 27 MARZO 2012 */
+#main2 {
+	width:980px;
+	height:auto;
+	background-color:#FFF;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left
+}
+
+.columnas_header {
+	float:left;
+	width:980px;
+	height:35px;
+	
+	
+}
+
+	.columna1 {
+	float:left;
+	width:356px;
+	text-align:center;
+	
+	}
+	.columna2 {
+	float:left;
+	width:73px;
+	height:35px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:11px;
+	color:#FFFFFF;
+	margin-top:9px;
+	}
+	.columna3 {
+	float:left;
+	width:182px;
+	}
+	.columna3 div{
+	float:left;
+	}
+		.columna3 img{
+		padding:5px;
+	}
+	
+	.columna4 {
+	float:left;
+	width:120px;
+	height:35px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:11px;
+	color:#FFFFFF;
+	margin-top:9px;
+	}
+	.columna5 {
+	float:left;
+	width:143px;
+	margin-top:7px;
+	}
+
+.campo_busqueda2 {
+	font-size: 11px;
+	height: 19px;
+	width:207px;
+	border:1px solid #b7b7b7;
+	color:#999999;
+	background-image:url(http://editorial.televisa.com/img/cosmopolitan/buscarCosmo.jpg);
+	background-repeat: no-repeat;
+	background-position:left top;
+	margin-top:6px;
+}
+
+.btn_enviar2 {
+	background-image:url(http://editorial.televisa.com/img/cosmopolitan/btn_buscar.png);
+	vertical-align:top;
+	cursor:pointer;
+	height:19px;
+	width:55px;
+	padding-left:0;
+	border:0;
+	position:relative;
+	left:-1px;
+	margin-top:8px;
+}
+.cont_nheader{
+	float:left;
+	width:980px;
+	background-image:url(http://editorial.televisa.com/img/cosmopolitan/img_nfondo.png);
+		
+}
+.nLogo{
+	float:left;
+	width:407px;
+}
+.nCampaign{
+	float:left;
+	width:170px;
+}
+.nFlecha{
+	float:left;
+	width:12px;
+}
+.nDescarga{
+	float:left;
+	width:126px;
+	margin-top:8px;
+	}
+	
+		.nDescarga a{color:#FFFFFF; text-decoration:none}
+		.nDescarga a:hover{color:#FFFFFF; text-decoration:underline;}
+	
+		.nTextosh1{
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		font-size:12px;
+		color:#FFFFFF;
+		text-transform:uppercase;
+		text-align:center;
+		margin-bottom:10px;
+		}
+		.nTextosp{
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		font-size:11px;
+		color:#FFFFFF;
+		margin-left:28px;
+		}
+		
+		
+.nSuscribete{
+	float:left;
+	width:126px;
+	margin-top:8px;		
+}
+
+	.nSuscribete a{color:#FFFFFF; text-decoration:none}
+	.nSuscribete a:hover{color:#FFFFFF; text-decoration:underline;}
+
+.nSeparacion {
+	float:left;
+	width:5px;
+	}
+
+.nRevista {
+	float: right;
+	width:130px;
+	margin-top:-93px;
+	text-align:center;
+	}
+
+.nFondo {
+	height:37px;
+	background-color:#f8941d; /*FONDO BARRA BUSQUEDA*/
+	float:left;
+	border-top:1px solid #000;
+	}
+
+.nFondologo{
+	float:left;
+	height:95px;
+	width:577px;
+	background-image:url(http://editorial.televisa.com/img/cosmopolitan/img_nfondologo.png);
+	}
+	
+	.header select{
+	margin-top:0;
+	width:95px;
+}
+.cont_fiesta{
+	width:632px;
+	height:357px;
+	background-image:url(http://editorial.televisa.com/img/cosmopolitan/bkcomo40.jpg);
+	}
+.cont_fiesta .video{ padding:65px 15px 30px;}	
+.btn_pinterest{
+	border: medium none;
+    height: 62px;
+    overflow: hidden;
+    width: 292px;
+	margin-left:8px;}
+.btn_pinterest_name{ float:left; width:200px; margin-bottom:10px;}	
+.btn_pinterest_img{float: left;
+    height: 40px;
+    margin: 0 0 4px;
+    padding: 0 10px 0 0;
+    width: 40px;}
+	.btn_pinterest_name a {color: #CC2027;
+    font-weight: bold;
+    text-decoration: none;
+	font-size:12px;}
+	.btn_pinterest_name .name{ font-size:14px;}
+	.btn_pinterest_follow{    border: 0 none;
+    float: left;}
+	.btn_pinterest img{ border:none !important}
+
+
+/* ESTILOS VIDEO TRANSMISIÓN EN VIVO */
+
+.video_transmision_vivo {
+	width:980px;
+	height:450px;
+	margin-left:auto;
+	margin-right:auto;
+	background-image:url(http://editorial.televisa.com/img/especiales/mbfwm2013/video/bg_patrocinio.jpg);
+	background-repeat:no-repeat;
+	background-color:#000;
+}
+
+.transmision_cintillo {
+	width:135px;
+	height:450px;
+	float:left;
+	margin:0 0 0 10px;
+	background-color:#000;
+}
+
+.cintillo_logo {
+	width:135px;
+	height:140px;
+	float:left;
+	margin:15px 0 0 0;
+}
+
+.cintillo_patrocinio {
+	width:135px;
+	height:100px;
+	float:left;
+	margin:195px 0 0 0;
+}
+
+.transmision_titulo {
+	width:300px;
+	height:27px;
+	float:left;
+}
+
+.transmision_video {
+	width:606px;
+	height:336px;
+	float:left;
+	margin:5px 0 0 5px;
+}
+
+
+[feedly mini] 

@@ -1,0 +1,87 @@
+.summary .btn,.widget-root .btn,.lightbox .btn,.summary .btn:hover,.widget-root .btn:hover,.lightbox .btn:hover,.summary .btn:focus,.widget-root .btn:focus,.lightbox .btn:focus,.summary .btn:active,.widget-root .btn:active,.lightbox .btn:active{-webkit-transition:background .5s,color .3s;-moz-transition:background .5s,color .3s;transition:background .5s,color .3s}
+.summary .btn:hover,.widget-root .btn:hover,.lightbox .btn:hover,.summary .btn:active,.widget-root .btn:active,.lightbox .btn:active{color:#333}
+.summary .btn:hover,.widget-root .btn:hover,.lightbox .btn:hover,.summary .btn:focus,.widget-root .btn:focus,.lightbox .btn:focus{outline:none}
+.summary .btn,.widget-root .btn,.lightbox .btn,.summary .btn.btn-default,.widget-root .btn.btn-default,.lightbox .btn.btn-default{color:#fff;background:#9b9b9b;-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-transform:uppercase;letter-spacing:2px;font-size:10px;border:0 solid #9b9b9b}
+.summary .btn:focus,.widget-root .btn:focus,.lightbox .btn:focus,.summary .btn.btn-default:focus,.widget-root .btn.btn-default:focus,.lightbox .btn.btn-default:focus,.summary .btn:hover,.widget-root .btn:hover,.lightbox .btn:hover,.summary .btn.btn-default:hover,.widget-root .btn.btn-default:hover,.lightbox .btn.btn-default:hover,.summary .btn:active,.widget-root .btn:active,.lightbox .btn:active,.summary .btn.btn-default:active,.widget-root .btn.btn-default:active,.lightbox .btn.btn-default:active{background:#b9b9b9;color:#4d4d4d;}
+.summary .btn:focus>.caret,.widget-root .btn:focus>.caret,.lightbox .btn:focus>.caret,.summary .btn.btn-default:focus>.caret,.widget-root .btn.btn-default:focus>.caret,.lightbox .btn.btn-default:focus>.caret,.summary .btn:hover>.caret,.widget-root .btn:hover>.caret,.lightbox .btn:hover>.caret,.summary .btn.btn-default:hover>.caret,.widget-root .btn.btn-default:hover>.caret,.lightbox .btn.btn-default:hover>.caret,.summary .btn:active>.caret,.widget-root .btn:active>.caret,.lightbox .btn:active>.caret,.summary .btn.btn-default:active>.caret,.widget-root .btn.btn-default:active>.caret,.lightbox .btn.btn-default:active>.caret{border-top-color:#4d4d4d !important}
+.summary .btn.dropdown-toggle > .caret,.widget-root .btn.dropdown-toggle > .caret,.lightbox .btn.dropdown-toggle > .caret,.summary .btn.btn-default.dropdown-toggle > .caret,.widget-root .btn.btn-default.dropdown-toggle > .caret,.lightbox .btn.btn-default.dropdown-toggle > .caret{-webkit-transition:border-top-color .3s;-moz-transition:border-top-color .3s;transition:border-top-color .3s;border-top-color:#fff}
+.summary .btn-primary,.widget-root .btn-primary,.lightbox .btn-primary{background:#0093a7;}
+.summary .btn-primary:hover,.widget-root .btn-primary:hover,.lightbox .btn-primary:hover,.summary .btn-primary:focus,.widget-root .btn-primary:focus,.lightbox .btn-primary:focus,.summary .btn-primary:active,.widget-root .btn-primary:active,.lightbox .btn-primary:active{background:#00aec5;color:#006674}
+.summary .btn-danger,.widget-root .btn-danger,.lightbox .btn-danger{background:#ec5424;}
+.summary .btn-danger:hover,.widget-root .btn-danger:hover,.lightbox .btn-danger:hover,.summary .btn-danger:focus,.widget-root .btn-danger:focus,.lightbox .btn-danger:focus,.summary .btn-danger:active,.widget-root .btn-danger:active,.lightbox .btn-danger:active{background:#ff6f42;color:#a73e1c}
+.summary .btn-group>.btn,.widget-root .btn-group>.btn,.lightbox .btn-group>.btn{font-size:10px;border-left:1px solid #fff}
+.summary .btn-group>.btn:first-child,.widget-root .btn-group>.btn:first-child,.lightbox .btn-group>.btn:first-child,.summary .btn-group.solo>.btn,.widget-root .btn-group.solo>.btn,.lightbox .btn-group.solo>.btn{border-left:none;border-top-left-radius:15px;border-bottom-left-radius:15px}
+.summary .btn-group>.btn:last-child,.widget-root .btn-group>.btn:last-child,.lightbox .btn-group>.btn:last-child,.summary .btn-group.solo>.btn,.widget-root .btn-group.solo>.btn,.lightbox .btn-group.solo>.btn{border-top-right-radius:15px;border-bottom-right-radius:15px}
+.summary .btn-group.open .btn.dropdown-toggle,.widget-root .btn-group.open .btn.dropdown-toggle,.lightbox .btn-group.open .btn.dropdown-toggle{background:#9b9b9b}
+@media (max-width: 1150px){.lightbox.modal{width:95% !important;margin-left:-47.25% !important}
+}@media (max-width: 767px){.lightbox.modal{width:95% !important;margin-left:0 !important}
+}.lightbox .close,.lightbox .close:hover{-webkit-transition:opacity 250ms;-moz-transition:opacity 250ms;transition:opacity 250ms}
+.lightbox .close{opacity:1;text-shadow:none;position:absolute;top:10px;right:20px;}
+.lightbox .close .close-times,.lightbox .close .close-text{vertical-align:middle}
+.lightbox .close .close-times{font-size:36px;font-weight:100}
+.lightbox .close .close-text{font-size:14px;text-transform:uppercase;margin-right:10px}
+.lightbox.modal{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;width:1100px;margin-left:-550px;-webkit-transition:all .2s linear !important;-moz-transition:all .2s linear !important;transition:all .2s linear !important}
+.lightbox.modal.fade.in{top:7.5%}
+.lightbox.modal{height:85%;max-height:750px;}
+.lightbox.modal .modal-body{background:#f7f7f7;height:100%;max-height:750px;overflow:hidden;}
+.lightbox.modal .modal-body .container-fluid{padding:0;height:100%;}
+.lightbox.modal .modal-body .container-fluid hr{margin:10px 0;border-top-color:#c9c9c9}
+.lightbox.modal .modal-body .container-fluid .row-fluid{height:100%;}
+.lightbox.modal .modal-body .container-fluid .row-fluid.colors .tiles{max-height:218px;overflow-x:none;overflow-y:scroll}
+.lightbox.modal .modal-body .container-fluid .row-fluid.colors .span12{margin-left:0}
+.lightbox.modal .modal-body .container-fluid .row-fluid.colors .color-image{-webkit-transition:border-color 500ms;-moz-transition:border-color 500ms;transition:border-color 500ms;margin:2px;border:1px solid #c9c9c9;}
+.lightbox.modal .modal-body .container-fluid .row-fluid.colors .color-image.selected{margin:0;border:3px solid #505050}
+.lightbox.modal .modal-body .container-fluid .row-fluid.details{max-height:130px;overflow-x:hidden;overflow-y:scroll;}
+.lightbox.modal .modal-body .container-fluid .row-fluid.details .details-text p{color:#333;display:block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif !important;font-size:13px !important;line-height:20px;margin:0 0 10px 0;width:auto;height:auto}
+.lightbox.modal .modal-body .container-fluid .row-fluid .sb-label{margin-bottom:0;}
+.lightbox.modal .modal-body .container-fluid .row-fluid .sb-label .value{font-weight:100}
+.lightbox.modal .hero{height:100%;margin-left:15px;}
+.lightbox.modal .hero img{max-height:100%;border:1px solid #c9c9c9}
+.lightbox .action-buttons{position:relative;}
+.lightbox .action-buttons .span-auto{position:absolute;right:0;}
+.lightbox .action-buttons .span-auto>*{width:156px}
+.lightbox .action-buttons .span-auto .or{text-align:center;padding:5px 0;font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.lightbox .variant-images{height:100%;overflow-x:hidden;overflow-y:scroll;}
+.lightbox .variant-images .variant-image{-webkit-transition:border-color 500ms;-moz-transition:border-color 500ms;transition:border-color 500ms;margin-bottom:15px;border:1px solid #c9c9c9;}
+.lightbox .variant-images .variant-image.selected{border:3px solid #505050}
+.lightbox .brand{margin-bottom:0}
+.lightbox .name{margin-top:0;height:auto}
+.lightbox .prices h3{font-weight:100}
+.lightbox .btn-group.add-to-cart .dropdown-toggle{border-top-right-radius:0;border-bottom-right-radius:0}
+.lightbox .btn-group.add-to-cart .btn-primary{border-bottom-color:#000;border-top-color:#707070}
+.lightbox h2,.lightbox h4,.lightbox h5,.lightbox h6{color:#333;display:block;font-size:32px !important;font-weight:bold !important;height:40px;line-height:40px;width:auto}
+.lightbox .name{margin:0 0 10px 0}
+.lightbox h4,.lightbox h5{font-size:18px !important;height:20px;line-height:20px;margin:10px 0 10px 0}
+.lightbox h5{font-size:14px !important;margin:10px 0 10px 10px}
+.lightbox h6{font-size:12px !important;height:20px;line-height:20px;margin:0 0 10px 0}
+.flyout{display:none;cursor:pointer;overflow:hidden;position:absolute;top:0;width:50%;height:100%;background:#eeeeeb;}
+.flyout .container{margin:10px 10%}
+.flyout h1,.flyout h2,.flyout h3,.flyout h4,.flyout h5,.flyout h6{margin:0}
+.low-price,.high-price{font-weight:100}
+.high-price{text-decoration:line-through;color:#f00}
+.brand{margin-top:10px;font-weight:bold}
+.buttons{position:absolute;top:50%;left:10%;width:80%;}
+.buttons .btn{margin-top:15px;width:100%;text-shadow:0 1px 1px rgba(0,0,0,0.75);padding:5px 15px;line-height:14px;}
+.buttons .btn:hover,.buttons .btn:focus,.buttons .btn:active{text-shadow:0 1px 1px rgba(255,255,255,0.75)}
+.lightbox .bootstrap-select .btn,.lightbox .bootstrap-select .btn.btn-default{text-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;background:#f7f7f7;border:1px solid #333 !important;color:#333;font-weight:700;letter-spacing:2px;}
+.lightbox .bootstrap-select .btn .caret,.lightbox .bootstrap-select .btn.btn-default .caret{border-top-color:#333 !important}
+.lightbox .bootstrap-select .btn:hover,.lightbox .bootstrap-select .btn:focus,.lightbox .bootstrap-select .btn:active{color:#fff;background:#adadad;}
+.lightbox .bootstrap-select .btn:hover .caret,.lightbox .bootstrap-select .btn:focus .caret,.lightbox .bootstrap-select .btn:active .caret{border-top-color:#fff !important}
+body{position:relative;background:transparent;margin:0;padding:0;position:absolute}
+body *{font-family:'proxima-nova' !important}
+body .image-detail,body .variant-image,body .color-image{cursor:pointer}
+.span-auto{width:auto !important}
+.widget-content{position:relative;display:inline-block;width:100%;height:100%;margin:0;padding:0;text-align:left;font-size:16px;cursor:pointer;}
+.widget-content .image,.widget-content .image img{width:100%}
+.widget-content .beam-power-container{position:absolute;overflow:hidden;width:100%;height:15%;bottom:-4%;left:0;min-height:61px}
+.widget-content .beam-power{display:block;overflow:hidden;position:relative;bottom:0;right:-90%;width:50%;height:100%}
+.widget-content .beam-power svg{width:100%;height:100%}
+.widget-content .beam-power .circles{opacity:.35}
+.widget-content .pid{visibility:hidden;display:none}
+.widget-content .title{display:none;position:absolute;width:100%;background:rgba(0,0,0,0.5);color:#fff;text-align:center;}
+.widget-content .title .prices>*{margin-right:5px;}
+.widget-content .title .prices>*.strike{color:#ff7474;text-decoration:line-through}
+.widget-content .title .prices>*:last-child{margin-right:0}
+.widget-content .title h5,.widget-content .title h4{font-weight:100;margin:5px}
+.widget-content .title.bottom{bottom:0}
+.widget-content .title.top{top:0}

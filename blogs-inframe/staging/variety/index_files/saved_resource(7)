@@ -1,0 +1,2844 @@
+(function($) {
+	function do_all_client_side_twitter_oembed() {	
+		$.getScript('//platform.twitter.com/widgets.js', function() { $( '.pending-tweet' ).each( do_client_side_twitter_oembed ); } );
+	}
+
+	// handle failed tweets or tweets that haven't been fetched yet
+	function do_client_side_twitter_oembed() {
+		var $this = $(this),
+			text,
+			url = 'https://api.twitter.com/1/statuses/oembed.json?omit_script=true&callback=?&';
+
+		// Handle instances where make_clickable gets too friendly and linkifies our Twitter URL 
+		if ( $this.has( 'a' ).length ) {
+			text = $this.find( 'a' ).first().attr( 'href' );
+		} else {
+			text = $this.text();
+		}
+			
+		// If we find an exact match, we want to fetch its content from the oembed endpoint and display it
+		if ( text.match( /^http(s|):\/\/twitter\.com(\/\#\!\/|\/)([a-zA-Z0-9_]{1,20})\/status(es)*\/(\d+)$/ ) ) {
+			url += 'url=' + encodeURIComponent( text );
+		} else if ( text.match( /^(\d+)$/ ) ) {
+			url += 'id=' + text;
+		} else {
+			return;
+		}
+
+		// Need to make a JSONP call to avoid CORS issues
+		$.getJSON( url, function( data ) {
+			if ( data.html ) {
+				$this.html( data.html );
+				$this.show();
+				twttr.widgets.load();
+			}
+		} );
+	}
+
+	$( document ).ready( do_all_client_side_twitter_oembed );
+	$( document.body ).on('post-load', do_all_client_side_twitter_oembed );
+})(jQuery);
+;
+jQuery( document.body ).on( 'post-load', function() {
+	if ( typeof twttr == 'object' && twttr.widgets && twttr.widgets.load )
+		twttr.widgets.load();
+});;
+var addComment={moveForm:function(a,b,c,d){var e,f=this,g=f.I(a),h=f.I(c),i=f.I("cancel-comment-reply-link"),j=f.I("comment_parent"),k=f.I("comment_post_ID");if(g&&h&&i&&j){f.respondId=c,d=d||!1,f.I("wp-temp-form-div")||(e=document.createElement("div"),e.id="wp-temp-form-div",e.style.display="none",h.parentNode.insertBefore(e,h)),g.parentNode.insertBefore(h,g.nextSibling),k&&d&&(k.value=d),j.value=b,i.style.display="",i.onclick=function(){var a=addComment,b=a.I("wp-temp-form-div"),c=a.I(a.respondId);if(b&&c)return a.I("comment_parent").value="0",b.parentNode.insertBefore(c,b),b.parentNode.removeChild(b),this.style.display="none",this.onclick=null,!1};try{f.I("comment").focus()}catch(l){}return!1}},I:function(a){return document.getElementById(a)}};;
+//Used sparingly. Used for video landing page to detect if mobile device and allow autoplay.
+
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};;
+/*! http://mths.be/placeholder v2.0.7 by @mathias */
+;(function(f,h,$){var a='placeholder' in h.createElement('input'),d='placeholder' in h.createElement('textarea'),i=$.fn,c=$.valHooks,k,j;if(a&&d){j=i.placeholder=function(){return this};j.input=j.textarea=true}else{j=i.placeholder=function(){var l=this;l.filter((a?'textarea':':input')+'[placeholder]').not('.placeholder').bind({'focus.placeholder':b,'blur.placeholder':e}).data('placeholder-enabled',true).trigger('blur.placeholder');return l};j.input=a;j.textarea=d;k={get:function(m){var l=$(m);return l.data('placeholder-enabled')&&l.hasClass('placeholder')?'':m.value},set:function(m,n){var l=$(m);if(!l.data('placeholder-enabled')){return m.value=n}if(n==''){m.value=n;if(m!=h.activeElement){e.call(m)}}else{if(l.hasClass('placeholder')){b.call(m,true,n)||(m.value=n)}else{m.value=n}}return l}};a||(c.input=k);d||(c.textarea=k);$(function(){$(h).delegate('form','submit.placeholder',function(){var l=$('.placeholder',this).each(b);setTimeout(function(){l.each(e)},10)})});$(f).bind('beforeunload.placeholder',function(){$('.placeholder').each(function(){this.value=''})})}function g(m){var l={},n=/^jQuery\d+$/;$.each(m.attributes,function(p,o){if(o.specified&&!n.test(o.name)){l[o.name]=o.value}});return l}function b(m,n){var l=this,o=$(l);if(l.value==o.attr('placeholder')&&o.hasClass('placeholder')){if(o.data('placeholder-password')){o=o.hide().next().show().attr('id',o.removeAttr('id').data('placeholder-id'));if(m===true){return o[0].value=n}o.focus()}else{l.value='';o.removeClass('placeholder');l==h.activeElement&&l.select()}}}function e(){var q,l=this,p=$(l),m=p,o=this.id;if(l.value==''){if(l.type=='password'){if(!p.data('placeholder-textinput')){try{q=p.clone().attr({type:'text'})}catch(n){q=$('<input>').attr($.extend(g(this),{type:'text'}))}q.removeAttr('name').data({'placeholder-password':true,'placeholder-id':o}).bind('focus.placeholder',b);p.data({'placeholder-textinput':q,'placeholder-id':o}).before(q)}p=p.removeAttr('id').hide().prev().attr('id',o).show()}p.addClass('placeholder');p[0].value=p.attr('placeholder')}else{p.removeClass('placeholder')}}}(this,document,jQuery));
+;
+/**
+ * IMPORTANT README !!!
+ *
+ * The jQuery library included with Wordpress loads with the noConflict method.
+ * In order to use the $ shortcut you must use a wrapper around your code.
+ * See http://codex.wordpress.org/Function_Reference/wp_enqueue_script#jQuery_noConflict_wrappers
+ *
+ */
+
+var pmc_variety = {};
+var theme_dir = pmc_common_urls.parent_theme_uri;
+
+/* Sticky Header
+ -------------------------------------------------------------- */
+pmc_variety_sticky_header = (function ($) {
+
+	var init = function () {
+
+		//If user scrolls past the target element we display the condensed header
+		//and 'dock' at the top of the screen.
+		//We do the opposite if user scrolls above the target element.
+
+		var $element = $('#content'),
+			$header = $('#header'),
+			$container = $('#container'),
+			elemClass = $header.attr('class'),
+			headerHeight = $header.outerHeight(true),
+			headerTop = '0px';
+
+		if( $('#wpadminbar').length ) {
+			headerTop = $('#wpadminbar').height() + 'px';
+		}
+
+		$element.waypoint(function (direction) {
+			if (direction === 'down') {
+				$header.removeClass('expanded').css({
+					'position': 'fixed',
+					'top': '-100px'
+				}).animate({
+						'top': headerTop
+					});
+
+				$container.css({
+					'paddingTop': headerHeight
+				});
+
+			} else if (direction === 'up') {
+
+				$header.addClass(elemClass).css({
+					'position': 'relative',
+					'top': '0'
+				});
+
+				$container.css({
+					'paddingTop': 0
+				});
+			}
+		});
+	};
+
+	return {
+		init: init
+	};
+
+})(jQuery);
+
+/* Main Navigation
+ -------------------------------------------------------------- */
+pmc_variety_main_nav = (function ($) {
+
+	var init = function () {
+
+		$nav = $('#nav'),
+			$moreMenuTrigger = $('.nav-more-trigger'),
+			$moreMenu = $('#nav-more-menu'),
+			$mobileNavTrigger = $('#mobile-nav-button'),
+			$utilityMenu = $('.header-utilities');
+
+		$('#nav .active a').live('click', function() {
+			VarietyEvent.track(null, 'nav', 'click');
+			window.location = $(this).attr('href');
+			return false;
+		});
+
+		$('#nav .nav-pmc').click(function () {
+			var href = $(this).find('a').attr('href');
+			window.open(href, '_blank');
+			return false;
+		});
+
+		// More Item appears when items go out of view
+		// Items being hidden are determined by media query breakpoints
+		$moreMenuTrigger.click(function () {
+			$(this).toggleClass('active');
+			$(this).next().toggle();
+			return false;
+		});
+
+		$('.nav-more').bind("clickoutside touchstartoutside", function (event) {
+			if ($moreMenuTrigger.hasClass('active')) {
+				$moreMenuTrigger.next().hide();
+				$moreMenuTrigger.removeClass('active');
+			}
+
+		});
+
+		$mobileNavTrigger.click(function () {
+			$nav.toggleClass('mobile-nav-menu');
+			$utilityMenu.toggleClass('show');
+			$('.keep-showing').removeClass('keep-showing');
+
+			return false;
+
+		});
+
+		//Stop Hiding of Menu if focus on Mobile Search
+		$(document).on('focus','.gsc-input',function(){
+			$nav.addClass('keep-showing');
+			$utilityMenu.addClass('keep-showing');
+		});
+
+		//If mobile nav is present, clicking outside of its area will close it
+		$('#menu').bind("clickoutside touchstartoutside", function (event) {
+			if ($nav.hasClass('mobile-nav-menu')) {
+				$nav.removeClass('mobile-nav-menu');
+				$utilityMenu.removeClass('show');
+			}
+
+		});
+
+		$(window).on("resize", function () {
+			if ($nav.hasClass('mobile-nav-menu') && $(window).width() > 480) {
+				$nav.removeClass('mobile-nav-menu');
+				$utilityMenu.removeClass('show');
+			}
+
+		});
+
+		$(window).on("scroll", function () {
+			if ($nav.hasClass('mobile-nav-menu') && !$('.header-utilities .search-field').is(":focus")) {
+				$nav.removeClass('mobile-nav-menu');
+				$utilityMenu.removeClass('show');
+			}
+			if ($moreMenuTrigger.hasClass('active')) {
+				$moreMenuTrigger.next().hide();
+				$moreMenuTrigger.removeClass('active');
+			}
+		});
+
+	};
+
+	var setActiveMenu = function ($activeTrigger, $moreMenu, $moreMenuTrigger) {
+		//Display active and inactive states
+		$activeTrigger.toggleClass('inactive active');
+
+		//Hide any open panels
+		$moreMenu.hide();
+		$moreMenuTrigger.removeClass('active');
+	};
+
+	return {
+		init: init
+	};
+
+})(jQuery);
+
+//Loader.js
+//Let's load the module's javascript file if that objects classname exists on the page.
+function loader(scriptName) {
+	(function () {
+		var d = document,
+			h = d.getElementsByTagName('head')[0],
+			s = d.createElement('script');
+		s.type = 'text/javascript';
+		s.async = true;
+		s.src = scriptName.concat('.js?v1');
+		h.appendChild(s);
+	}());
+}
+
+// Customized FooTable plugin.
+(function($){
+  $.fn.pmcVarietyFootable = function(options){
+
+    // iOS triggers the resize event on scroll. This is particularly costly
+    // for footables because of all the calculations and traversing, so use a
+    // timeout to see if we were just scrolling
+    if (typeof window.pmcScrolling === 'undefined') {
+      window.pmcScrolling = false;
+      $(window).bind('scroll', function(){
+        window.pmcScrolling = true;
+        clearTimeout(window.pmcScrollingTimer);
+        window.pmcScrollingTimer = setTimeout(function(){
+          window.pmcScrolling = false;
+        }, 200);
+      });
+    };
+
+    options = options || {};
+    var defaults = {
+      breakpoints: {
+        // width of table, not actual viewport
+        phone: 480,
+        tablet: 768
+      },
+      dataColumnIndex : 2 // The index of the column to stick data from hidden columns in
+    };
+    var o = $.extend(true, {}, defaults, options); //merge user and default options
+    var FooTable = $(this).footable(o);
+
+    // Override each FooTable's resize function:
+    for (var i=0; i < FooTable.length; i++) {
+      // NOTE: in a perfect world it would just be:
+      // var _resize = FooTable[i].footable.resize;
+      // However, FooTable uses 'ft' rather than 'this' making it impossible
+      // to override the normal way, we have to copy the whole function and set 'ft' to 'this'.
+      // This only becomes an issue if there are multiple FooTables on the page.
+
+      var _resize = function() {
+        if (window.pmcScrolling) return false;
+        var ft = this;
+        // ======= begin clone of footable.resize =======
+        var $table = $(ft.table);
+        var info = {
+          'width': $table.width(),                  //the table width
+          'height': $table.height(),                //the table height
+          'viewportWidth': ft.getViewportWidth(),   //the width of the viewport
+          'viewportHeight': ft.getViewportHeight(), //the width of the viewport
+          'orientation': null
+        };
+        info.orientation = info.viewportWidth > info.viewportHeight ? 'landscape' : 'portrait';
+
+        if (info.viewportWidth < info.width) info.width = info.viewportWidth;
+        if (info.viewportHeight < info.height) info.height = info.viewportHeight;
+
+        var pinfo = $table.data('footable_info');
+        $table.data('footable_info', info);
+
+        // This (if) statement is here purely to make sure events aren't raised twice as mobile safari seems to do
+        if (!pinfo || ((pinfo && pinfo.width && pinfo.width != info.width) || (pinfo && pinfo.height && pinfo.height != info.height))) {
+          var current = null, breakpoint;
+          for (var i = 0; i < ft.breakpoints.length; i++) {
+            breakpoint = ft.breakpoints[i];
+            if (breakpoint && breakpoint.width && info.width <= breakpoint.width) {
+              current = breakpoint;
+              break;
+            }
+          }
+
+          var breakpointName = (current == null ? 'default' : current['name']);
+
+          var hasBreakpointFired = ft.hasBreakpointColumn(breakpointName);
+
+          $table
+            .removeClass('default breakpoint').removeClass(ft.breakpointNames)
+            .addClass(breakpointName + (hasBreakpointFired ? ' breakpoint' : ''))
+            .find('> thead > tr > th').each(function() {
+              var data = ft.columns[$(this).index()];
+              var count = data.index + 1;
+              //get all the cells in the column
+              var $column = $table.find('> tbody > tr > td:nth-child(' + count + '), > tfoot > tr > td:nth-child(' + count + '), > colgroup > col:nth-child(' + count + ')').add(this);
+
+              if (data.hide[breakpointName] == false) $column.show();
+              else $column.hide();
+            })
+            .end()
+            .find('> tbody > tr.footable-detail-show').each(function() {
+              ft.createOrUpdateDetailRow(this);
+            });
+
+          $table.find('> tbody > tr.footable-detail-show:visible').each(function() {
+            var $next = $(this).next();
+            if ($next.hasClass('footable-row-detail')) {
+              if (breakpointName == 'default' && !hasBreakpointFired) $next.hide();
+              else $next.show();
+            }
+          });
+
+          // adding .footable-last-column to the last th and td in order to allow for styling if the last column is hidden (which won't work using :last-child)
+         $table.find('> thead > tr > th.footable-last-column,> tbody > tr > td.footable-last-column').removeClass('footable-last-column');
+         $table.find('> thead > tr > th:visible:last,> tbody > tr > td:visible:last').addClass('footable-last-column');
+
+          ft.raise('footable_breakpoint_' + breakpointName, { 'info': info });
+        }
+        // ======= end clone of footable.resize =======
+
+				// Trigger an event in case we need it.
+				$table.parents('.table-wrapper').andSelf().trigger('resize.pmcVarietyFootable');
+				return true;
+      };
+
+      FooTable[i].footable.resize = function(){
+        // Reuse the default resize function:
+        var resized = _resize.apply(this);
+        if (!resized) return;
+
+        var self = this;
+
+        // Loop through rows, collecting hidden data and displaying it in the chosen cell
+        $('tr', this.table).each(function(){
+          var values = [];
+          $('td:hidden', this).each(function(){
+            var column = self.columns[$(this).index()];
+            if (column.ignore == true) return;
+            values.push({ 'name': column.name, 'value': self.parse(this, column), 'display': $.trim($(this).html()) });
+          });
+
+          var $cell = $('td:nth-child(' + self.options.dataColumnIndex + ')', this);
+		  $cell.addClass('details-container');
+          var $details = $('div.details', $cell).empty();
+          if (values.length == 0) return;
+
+          if (!$details.length) $details = $cell.append('<div class="details"></div>').find('div.details');
+          self.options.createDetail($details, values);
+
+        });
+      };
+
+      // Be sure to call the new resize function
+      FooTable[i].footable.resize();
+    };
+
+    // Remove the click-to-view-hidden-row funtionality from FooTable.
+    FooTable.find(window.footable.options.toggleSelector).unbind('click.footable');
+
+    return FooTable;
+  };
+})(jQuery);
+
+/* Initiate on page load
+ -------------------------------------------------------------- */
+jQuery(document).ready(function ($) {
+
+	//Modules that can be initiated
+	var modules = [
+		'module-carousel-feature-stories',
+		'module-special-report',
+		'module-vscore-list',
+		'module-vscore-table'
+	];
+
+	pmc_variety_sticky_header.init();
+	pmc_variety_main_nav.init();
+
+	//Any image that has a class of lazy will be lazy loaded
+	//See lazy loading plugin for options
+	$('img.lazy').lazyload({
+		//effect: 'fadeIn',
+		failure_limit: 7,
+		threshold: 1024
+	});
+
+	//Expand Search Field
+	$('#search-icon a').click(function () {
+		$(this).parents('.utility-bar').next().toggleClass('show').find('input').focus();
+		return false;
+	});
+
+	//Put into share tools module object
+	$('.module-share-tools').localScroll({
+		duration: 700,
+		offset: -300
+	})
+
+	//Loading Modules
+	$(modules).each(function (index, cName) {
+
+		var obj = $('.'.concat(cName)),
+			len = obj.length,
+		//mName = cName.replace('-','_','g'),
+		//moduleName = 'pmc_variety_'.concat(mName),
+
+			fileName = theme_dir + 'library/js/modules/'.concat(cName);
+
+		if (len > 0) {
+			//console.warn(moduleName)
+
+			loader(fileName);
+
+			//if(window[moduleName]){
+			//window[moduleName]['init']();
+			//}
+
+		}
+
+	});
+
+	//video filter mobile dropdown
+	$('.video-dropdown-ui .active').click(function(){
+		$(this).parent().find('li:not(.active)').toggleClass('open');
+		$(this).find('i').toggleClass('icon-caret-up').toggleClass('icon-caret-down');
+		return false;
+	});
+	$(window).on("resize", function() {
+		if($('.video-dropdown-ui').find('li:not(.active)').hasClass('open') && $(window).width() > 480) {
+			$('.video-dropdown-ui').find('li:not(.active)').removeClass('open');
+			$('.video-dropdown-ui').find('li.active i').removeClass().addClass('icon-caret-down');
+		}
+
+	});
+
+
+	//Add support for HTML5 placeholder property for browsers like IE
+	$('input, textarea').placeholder();
+
+	//ranked list module
+	$('.module-ranked-list .toggle a').click(function(e){
+		e.preventDefault();
+		if ($(this).is('.animating')) return;
+		$(this).addClass('animating');
+
+		$(this).parents('.module-ranked-list').find('.toggle-pane').slideToggle(500, function(){
+			$(this).parents('.module-ranked-list').find('.expand').toggle();
+			$(this).parents('.module-ranked-list').find('.collapse').toggle().parent().removeClass('animating');
+		});
+
+		if ($(this).parents('.module-ranked-list').find('.collapse').is(':visible')) {
+			$(window).scrollTo($(this).parents('.module-ranked-list'), 500, { offset:-100 } );
+			//$(window).scrollTop($(this).parents('.module-ranked-list').offset().top - 100);
+		}
+	});
+
+	function getTableHeights($table) {
+		var $hidden = $('.hide', $table),
+				hide = !$hidden.first().is(':visible'),
+				footable = $table.is('table') ? $table[0].footable : $('table', $table)[0].footable;
+
+		window.gettingFootableHeights = true; // Prevent infinite loop
+
+		footable.resize();
+		$('.hide', $table).hide();
+		$table.data('collapsedHeight', $table.outerHeight());
+		$('.hide', $table).show();
+		footable.resize();
+		$table.data('expandedHeight', $table.outerHeight());
+
+		window.gettingFootableHeights = false;
+
+		if (hide) $('.hide', $table).hide();
+	}
+
+	$('.footable').pmcVarietyFootable();
+
+	//generic vscore table
+	//$('.module-generic-table .footable').pmcVarietyFootable();
+	$('.module-generic-table').each(function(){
+		var $tableWrapper = $('.table-wrapper', this),
+				$table = $tableWrapper.length ? $tableWrapper : $('table.footable', this),
+				$wrapper = $table.wrap('<div style="overflow: hidden; margin-bottom: 25px;"></div>').parent();
+
+		getTableHeights($table);
+
+		$wrapper.height($table.data('collapsedHeight'));
+
+		$('.toggle a', this).click(function(e){
+			e.preventDefault();
+			if ($(this).is('.animating')) return;
+			$(this).addClass('animating');
+			$table = $(this).parents('.module-generic-table').find('table.footable');
+			if ($table.parent().is('.table-wrapper')) { $table = $table.parent(); };
+			$wrapper = $table.parent();
+			getTableHeights($table);
+			if ($table.is('.expanded')) {
+				// collapse
+				$wrapper.animate({ height: $table.data('collapsedHeight') }, 500, function(){
+					$('.hide', this).hide();
+					$(this).parents('.module-generic-table').find('.toggle a').removeClass('animating');
+				});
+				$table.addClass('collapsed').removeClass('expanded');
+			} else {
+				// expand
+				$('.hide', $table).show();
+				$wrapper.animate({ height: $table.data('expandedHeight') }, 500, function(){
+					$(this).parents('.module-generic-table').find('.toggle a').removeClass('animating');
+				});
+				$table.addClass('expanded').removeClass('collapsed');
+			};
+			// Trigger footable's resize function so things don't get messed up.
+			// (Already triggered by getTableHeights, don't need to call it again.)
+			// $table[0].footable.resize();
+			$('.expand, .collapse', this).toggle();
+
+			if (!$(this).find('.collapse').is(':visible')){
+			    $(window).scrollTo($table, 500, {offset:-155} );
+				//$(window).scrollTop($table.offset().top - 155);
+			}
+		});
+
+		$table.on('resize.pmcVarietyFootable', function(){
+			if (window.gettingFootableHeights) return;
+			var $wrapper = $(this).parent();
+			getTableHeights($(this));
+			var h = $(this).is('.expanded') ? $(this).data('expandedHeight') : $(this).data('collapsedHeight');
+			$wrapper.height(h);
+		});
+
+	});
+
+	$(window).resize(function(){
+		$('.module-generic-table').each(function(){
+			var $table =  $('table.footable', this);
+			if ($table.parent().is('.table-wrapper')) $table = $table.parent();
+			var h = $table.outerHeight();
+			$table.parent().height(h);
+		})
+	});
+
+});
+
+
+var VarietyEvent = {
+
+	// View events that have scrolled into view
+	viewed: {},
+
+	// Current category
+	category: 'homepage',
+
+	initialize: function() {
+		var body = jQuery('body');
+
+		if (body.hasClass('home')) {
+			VarietyEvent.enableCommon('homepage');
+			VarietyEvent.enableHomepage();
+			VarietyEvent.enableBrandingPage();
+
+		} else if (body.hasClass('term-video') || body.hasClass('single-variety_top_video')) {
+			VarietyEvent.enableCommon('video-landing');
+			VarietyEvent.enableVideo();
+
+		} else if (body.hasClass('term-vscore')) {
+			VarietyEvent.enableCommon('vscore-landing');
+			VarietyEvent.enableVscore();
+
+		} else if (body.hasClass('single')) {
+			VarietyEvent.enableCommon('articles');
+			VarietyEvent.enableSingle();
+
+		} else if (body.hasClass('tax-vertical')) {
+			VarietyEvent.enableCommon('section-front');
+			VarietyEvent.enableArchive();
+		}
+
+		VarietyEvent.enableCarousel();
+        VarietyEvent.enableModules();
+	},
+
+	track: function(category, action, label, nonInteractive, value) {
+		var event = ['_trackEvent', category || VarietyEvent.category, action, label, 0, true];
+        var event_two = ['pmc_ga_account._trackEvent', category || VarietyEvent.category, action, label, 0, true];
+
+		if (typeof nonInteractive !== 'undefined') {
+			event.push(value || 1);
+			event.push(nonInteractive);
+
+            event_two.push(value || 1);
+            event_two.push(nonInteractive);
+
+		} else if (value) {
+			event.push(value);
+            event_two.push(value);
+		}
+
+		try {
+			_gaq.push(event);
+            _gaq.push(event_two);
+		} catch(err) { }
+	},
+
+	enableCommon: function(category) {
+		VarietyEvent.category = category;
+
+		VarietyEvent.monitorViewScroll(category, [
+			{ action: 'photo-carousel', element: '#cycle-slideshow' },
+			{ action: 'voices', element: '.module-voices h3' }
+		]);
+
+		jQuery('#nav ul a').on('click', function() {
+			VarietyEvent.track(category, 'nav', 'click');
+		});
+
+		jQuery(document).on('click', '#cycle-slideshow .cycle-slide a', function() { // delegated
+			VarietyEvent.track(category, 'photo-carousel', 'click');
+		});
+
+		jQuery('.carousel-feature-stories-next, .carousel-feature-stories-prev, .carousel-feature-stories-pager a').on('click', function() {
+			VarietyEvent.track(category, 'photo-carousel', 'paginate', true);
+		});
+
+		jQuery('.module-voices h3 a, .module-voices li > a').on('click', function() {
+			VarietyEvent.track(category, 'voices', 'click-authors');
+		});
+
+		jQuery('.module-voices h4 a').on('click', function() {
+			VarietyEvent.track(category, 'voices', 'click-stories');
+		});
+
+		//Gallery Events
+		//Return to Article Click
+		jQuery('a.gallery-back').on('click', function() {
+			VarietyEvent.track('photo-gallery', 'gallery-performance', 'return-article');
+		});
+		//Small Nav used
+		jQuery('.gallery-small-nav a').on('click', function() {
+			VarietyEvent.track('photo-gallery', 'gallery-performance', 'small-arrow-navigate');
+		});
+		//Gallery Move
+		jQuery('.gallery-image').on('pmc-gallery-image-load', function(event) {
+			VarietyEvent.track('photo-gallery', 'gallery-performance', 'image-navigate');
+			return false;
+		});
+		//Gallery Thumbs
+		jQuery('.pmc-gallery-template .gallery-thumbs > div.gallery-multi > div').on("click", function(event) {
+			VarietyEvent.track('photo-gallery', 'gallery-performance', 'thumbs-navigate');
+		});
+		//read-more-view
+		jQuery('.gallery-readmore').on('pmc-gallery-readmore-load', function(event) {
+			VarietyEvent.track('photo-gallery', 'gallery-performance', 'read-more-view');
+		});
+		// read more click
+		jQuery('.gallery-readmore').on('pmc-gallery-readmore-click', function(event) {
+			VarietyEvent.track('photo-gallery', 'gallery-performance', 'read-more-click');
+			return false;
+		});
+		// recently Added click
+		jQuery('.latest-galleries a').on('click', function() {
+			VarietyEvent.track('photo-gallery', 'gallery-performance', 'recently-added-click');
+		});
+		//article page
+		//Preview
+		if (jQuery('.view-gallery').length) {
+			VarietyEvent.track('articles', 'photo-gallery', 'view');
+		}
+		// Preview click
+		jQuery('.gallery-preview a').on('click', function() {
+			VarietyEvent.track('articles', 'photo-gallery', 'click');
+		});
+
+		// tempoarily to be removed when vscore is live
+		jQuery('li.nav-vscore a').on('click', function() {
+			jQuery('#nav-vscore-drop-down').toggle();
+		});
+
+		jQuery('#header #subscribe-link-text').on('click', function() {
+			VarietyEvent.track('site-header', 'subscribe-variety', 'click');
+		});
+
+		VarietyEvent.enableFooter();
+	},
+
+	enableCarousel: function() {
+		var carousel = jQuery('.module-carousel-feature-stories'),
+			featured = jQuery('.module-featured-stories'),
+			trackEvent = function(label, element) {
+				var index = jQuery(element).parents('li').index(),
+					parts = jQuery(element).attr('href').split('/'),
+					url = '';
+
+				while (url === '') {
+					url = parts.pop();
+				}
+
+				VarietyEvent.track('homepage', 'editorial', label + '-' + index + '-' + url, false);
+			};
+
+		if (carousel.length) {
+			jQuery(document).on('click', '.module-carousel-feature-stories .event-click', function() { // delegated
+				trackEvent('carousel', this);
+			});
+		}
+
+		if (featured.length) {
+			jQuery(document).on('click', '.module-featured-stories .event-click', function() { // delegated
+				trackEvent('stage', this);
+			});
+		}
+	},
+
+    enableModules: function() {
+
+        var page_id = jQuery('body').attr('id');
+
+        VarietyEvent.monitorViewScroll( page_id, [
+            { action: 'film-release-calendar', element: '.module-film-release-calendar' },
+            { action: 'specs-around-town', element: '.module-specs-around-town' }
+        ])
+        //module-vscore-film-release-calendar
+        jQuery('.module-film-release-calendar tr .td2 a').on('click', function () {
+            VarietyEvent.track('film-release-calendar', 'view-film-tag-page', 'click');
+        });
+        jQuery('.module-film-release-calendar .toggle .expand').on('click', function () {
+            VarietyEvent.track('film-release-calendar', 'expand-full-list', 'click');
+        });
+
+        //module-vscore-specs-around-town
+        jQuery('.module-specs-around-town tr .td1 a').on('click', function () {
+            VarietyEvent.track('specs-around-town', 'view-program-tag-page', 'click');
+        });
+        jQuery('.module-specs-around-town .toggle .expand').on('click', function () {
+            VarietyEvent.track('specs-around-town', 'expand-full-list', 'click');
+        });
+    },
+
+    enableSingle: function() {
+		VarietyEvent.monitorViewScroll('articles', [
+			{ action: 'related-reviews', element: '.module-related-stories' },
+			{ action: 'related-category', element: '.module-related-category' },
+			{ action: 'most-popular', element: '.module-most-popular' },
+			{ action: 'poll', element: '.PDS_Poll' },
+			{ action: 'twitter-pull-quote', element: '.twitter-tweet' },
+			{ action: 'social-media', element: '.social-buttons' },
+			{ action: 'vscore-module-film', element: '.module-vscore-film' },
+			{ action: 'vscore-module-tv', element: '.module-vscore-tv' },
+			{ action: 'filed-under', element: '.tags' },
+			{ action: 'twitter-signup', element: '.article-twitter-experiment',label: 'view' },
+			{ action: 'newsletter-signup', element: '.newsletter' },
+			{ action: 'newsletter-signup', element: '.newsletter_modal' , label: 'popup-view'},
+			{ action: 'see-all-comments', element: '.next-comment-link-wrapper #more-comments' }
+		]);
+
+		jQuery('.module-most-popular a').on('click', function() {
+			VarietyEvent.track('articles', 'most-popular', 'click');
+		});
+
+		jQuery('.module-related-category a').on('click', function() {
+			VarietyEvent.track('articles', 'related-category', 'click');
+		});
+
+		jQuery('.tags a').on('click', function() {
+			VarietyEvent.track('articles', 'filed-under', 'click');
+		});
+
+		/**
+		 * twitter experiment tracking
+		 */
+		jQuery('.article-twitter-experiment').on('click', function() {
+			VarietyEvent.track('articles', 'twitter-signup', 'click');
+		});
+		jQuery('.newsletter button').on('click', function() {
+			VarietyEvent.track('articles', 'newsletter-signup', 'click');
+		});
+        jQuery('.newsletter .learn-more').on('click', function() {
+            VarietyEvent.track('articles', 'newsletter-signup', 'learn-more');
+        });
+        jQuery('.newsletter_modal button').on('click', function() {
+            VarietyEvent.track('articles', 'newsletter-signup', 'click');
+        });
+        jQuery('.newsletter_modal .learn-more').on('click', function() {
+            VarietyEvent.track('articles', 'newsletter-signup', 'learn-more');
+        });
+
+		jQuery('.module-related-stories a').on('click', function() {
+			VarietyEvent.track('articles', 'related-reviews', 'click');
+		});
+
+		jQuery('.PDS_Poll .pds-vote-button').on('click', function() {
+			VarietyEvent.track('articles', 'poll', 'click-vote', true);
+		});
+
+		jQuery('.PDS_Poll .pds-view-results').on('click', function() {
+			VarietyEvent.track('articles', 'poll', 'view-results');
+		});
+
+		jQuery('iframe.twitter-tweet').contents().find('a').click(function() {
+			VarietyEvent.track('articles', 'twitter-pull-quote', 'click');
+		});
+
+		jQuery('.module-share-tools').one('mouseover', function() {
+			VarietyEvent.track('articles', 'social-media', 'mouse-over', true);
+		});
+
+		jQuery('.module-vscore-film .open-popup').on('click', function() {
+			VarietyEvent.track('articles', 'vscore-module-film', 'view-trailer', true);
+		});
+
+		jQuery('.module-vscore-film .expand').on('click', function() {
+			VarietyEvent.track('articles', 'vscore-module-film', 'expand', true);
+		});
+
+		jQuery('.module-vscore-film .read-review').on('click', function() {
+			VarietyEvent.track('articles', 'vscore-module-film', 'view-film-review');
+		});
+
+		jQuery('.module-vscore-film .see-all a').on('click', function() {
+			VarietyEvent.track('articles', 'vscore-module-film', 'view-full-list');
+		});
+
+		jQuery('.module-vscore-film .data-provider a').on('click', function() {
+			VarietyEvent.track('articles', 'vscore-module-film', 'variety-insight-click');
+		});
+
+		jQuery('.module-vscore-film .view-coverage').on('click', function() {
+			VarietyEvent.track('articles', 'vscore-module-film', 'view-film-tag-page');
+		});
+
+		jQuery('.module-vscore-tv .open-popup').on('click', function() {
+			VarietyEvent.track('articles', 'vscore-module-tv', 'view-trailer', true);
+		});
+
+		jQuery('.module-vscore-tv .expand').on('click', function() {
+			VarietyEvent.track('articles', 'vscore-module-tv', 'expand', true);
+		});
+
+		jQuery('.module-vscore-tv .ratings-roundup').on('click', function() {
+			VarietyEvent.track('articles', 'vscore-module-tv', 'view-ratings-roundup-page');
+		});
+
+		jQuery('.module-vscore-tv .see-all a').on('click', function() {
+			VarietyEvent.track('articles', 'vscore-module-tv', 'view-full-list');
+		});
+
+		jQuery('.module-vscore-tv .data-provider a').on('click', function() {
+			VarietyEvent.track('articles', 'vscore-module-tv', 'variety-insight-click');
+		});
+
+		jQuery('.module-vscore-tv .view-coverage').on('click', function() {
+			VarietyEvent.track('articles', 'vscore-module-tv', 'view-tv-tag-page');
+		});
+
+
+        /*
+        Start Tracking code for new article river changes
+         */
+        jQuery(document).on('click', '#more-comments', function () {
+            VarietyEvent.track('articles', 'see-all-comments', 'click');
+        });
+        jQuery(document).on('click', '.form-submit #comment-submit', function () {
+            VarietyEvent.track('articles', 'comments', 'click');
+        });
+
+        jQuery(document).on('click', '.article-river .single-col3-wrapper:eq(0) .col2 a', function () {
+            VarietyEvent.track('articles', 'article-river', 'click-block-1-left');
+        });
+        jQuery(document).on('click', '.article-river .single-col3-wrapper:eq(0) .col1 a', function () {
+            VarietyEvent.track('articles', 'article-river', 'click-block-1-center');
+        });
+        jQuery(document).on('click', '.article-river .single-col3-wrapper:eq(0) .col3 a', function () {
+            VarietyEvent.track('articles', 'article-river', 'click-block-1-right');
+        });
+
+        jQuery(document).on('click', '.article-river .single-col3-wrapper:eq(1) .col2 a', function () {
+            VarietyEvent.track('articles', 'article-river', 'click-block-2-left');
+        });
+        jQuery(document).on('click', '.article-river .single-col3-wrapper:eq(1) .col1 a', function () {
+            VarietyEvent.track('articles', 'article-river', 'click-block-2-center');
+        });
+        jQuery(document).on('click', '.article-river .single-col3-wrapper:eq(1) .col3 a', function () {
+            VarietyEvent.track('articles', 'article-river', 'click-block-2-right');
+        });
+        /*
+         End Tracking code for new article river changes
+         */
+        /*
+        Tracking for Exec pages.
+         */
+        jQuery('.view-exec-full-profile').on('click', function() {
+            VarietyEvent.track('exec', 'view-profile-click', 'view-profile-click');
+        });
+        jQuery('.exec-vinsight-logo').on('click', function() {
+            VarietyEvent.track('exec', 'large-logo-click', 'view-profile-click');
+        });
+        jQuery('.exec-update-info a').on('click', function() {
+            VarietyEvent.track('exec', 'update-info-click', 'view-profile-click');
+        });
+        jQuery('.exec-learn-more-link a').on('click', function() {
+            VarietyEvent.track('exec', 'learn-more-click', 'view-profile-click');
+        });
+        jQuery('.data-provided-by-title a').on('click', function() {
+            VarietyEvent.track('exec', 'small-logo-click', 'view-profile-click');
+        });
+        jQuery('.latest-headlines a').on('click', function() {
+            VarietyEvent.track('exec', 'atest-headlines-click', 'view-profile-click');
+        });
+
+	},
+
+	enableFooter: function() {
+		VarietyEvent.monitorViewScroll('site-footer', [
+			{ action: 'subscribe-variety', element: '.subscription-tout' },
+			{ action: 'footer-links', element: '.variety-links' },
+			{ action: 'additional-footer-links', element: '.variety-links' },
+			{ action: 'footer-logo-links', element: '.pmc-links' },
+			{ action: 'sister-sites', element: '.sister-links' }
+		]);
+
+		jQuery('.sister-links h4 a').on('click', function() {
+			VarietyEvent.track('site-footer', 'sister-sites', 'click-logos');
+		});
+
+		jQuery('.sister-links li > a').on('click', function() {
+			VarietyEvent.track('site-footer', 'sister-sites', 'click-articles');
+		});
+
+		jQuery('.subscription-tout a').on('click', function() {
+			VarietyEvent.track('site-footer', 'subscribe-variety', 'click');
+		});
+
+		jQuery('.variety-links .container a').on('click', function() {
+			VarietyEvent.track('site-footer', 'footer-links', 'click-' + VarietyEvent.slugify(jQuery(this).text()));
+		});
+
+		jQuery('#footer-insight a').on('click', function() {
+			VarietyEvent.track('site-footer', 'additional-footer-links', 'variety-insight-click');
+		});
+
+		jQuery('#footer-archives a').on('click', function() {
+			VarietyEvent.track('site-footer', 'additional-footer-links', 'variety-archives-click');
+		});
+
+		jQuery('#footer-email').one('keyup', function() {
+			VarietyEvent.track('site-footer', 'additional-footer-links', 'newsletter-signup', true);
+		});
+
+		jQuery('.pmc-links a').on('click', function() {
+			VarietyEvent.track('site-footer', 'footer-logo-links', 'click-' + VarietyEvent.slugify(jQuery(this).text()));
+		});
+	},
+
+	enableHomepage: function() {
+		VarietyEvent.monitorViewScroll('homepage', [
+			{ action: '*', element: '[data-vr-zone]', action_attr: 'data-vr-zone' },
+			{ action: 'vscore-module', element: '.module-vscore-list' },
+			{ action: 'special-coverage', element: '.module-award-story-arc' }
+		]);
+
+		jQuery('.module-special-report .trigger').on('click', function() {
+			VarietyEvent.track('homepage', 'promo-module', 'expand', true);
+		});
+
+		jQuery('.module-special-report .banner').on('click', function() {
+			VarietyEvent.track('homepage', 'promo-module', 'banner-click');
+		});
+
+		jQuery('.module-special-report ul a').on('click', function() {
+			VarietyEvent.track('homepage', 'promo-module', 'expand-click');
+		});
+
+		jQuery('.module-featured-stories a').on('click', function() {
+			VarietyEvent.track('homepage', 'second-stage', 'click');
+		});
+
+		jQuery('.col1 .story a').on('click', function() {
+			VarietyEvent.track('homepage', 'middle-column', 'click');
+		});
+
+		jQuery('.col2 .story a').on('click', function() {
+			VarietyEvent.track('homepage', 'left-column', 'click');
+		});
+
+		jQuery('.col3 .story a').on('click', function() {
+			VarietyEvent.track('homepage', 'right-column', 'click');
+		});
+
+		jQuery('.module-vscore-list .icon-video').on('click', function() {
+			VarietyEvent.track('homepage', 'vscore-module', 'view-trailer', true);
+		});
+
+		jQuery('.module-vscore-list .see-all a').on('click', function() {
+			VarietyEvent.track('homepage', 'vscore-module', 'view-full-list');
+		});
+
+		jQuery('.module-vscore-list .data-provider a').on('click', function() {
+			VarietyEvent.track('homepage', 'vscore-module', 'variety-insight-click');
+		});
+
+		jQuery('.module-vscore-list .expand').on('click', function() {
+			VarietyEvent.track('homepage', 'vscore-module', 'expand', true);
+		});
+
+		jQuery('.module-vscore-list .view-coverage').on('click', function() {
+			VarietyEvent.track('homepage', 'vscore-module', 'view-film-tag-page');
+		});
+
+		jQuery('.module-vscore-list .read-review').on('click', function() {
+			VarietyEvent.track('homepage', 'vscore-module', 'view-film-review');
+		});
+
+		jQuery('.module-top-videos a').on('click', function() {
+			VarietyEvent.track('homepage', 'top-videos', 'click');
+		});
+
+		jQuery('.module-vpage a').on('click', function() {
+			VarietyEvent.track('homepage', 'vpage', 'click');
+		});
+
+		jQuery('.module-award-story-arc a').on('click', function() {
+			VarietyEvent.track('homepage', 'special-coverage', 'click');
+		});
+
+
+		VarietyEvent.track('homepage', 'page-scroll', 'view', true);
+
+		VarietyEvent.monitorViewScroll('homepage', [
+			{ action: 'page-scroll', label: 'content-flow', element: '#content-flow-top' },
+			{ action: 'page-scroll', label: 'homepage-view', element: '#content-flow-middle' },
+			{ action: 'page-scroll', label: 'top-videos-view', element: '#content-flow-videos' },
+			{ action: 'page-scroll', label: 'vpage-view', element: '#content-flow-vpage' },
+			{ action: 'page-scroll', label: 'footer-view', element: '#footer' }
+		]);
+	},
+
+	enableArchive: function() {
+		VarietyEvent.monitorViewScroll('section-front', [
+			{ action: 'secondary-nav', element: '.section-subnav' },
+			{ action: 'most-popular', element: '.module-most-popular' },
+			{ action: 'related-reviews', element: '.module-related-stories' }
+		]);
+
+		jQuery('.section-subnav a').on('click', function() {
+			VarietyEvent.track('section-front', 'secondary-nav', 'click');
+		});
+
+		jQuery('.module-most-popular a').on('click', function() {
+			VarietyEvent.track('section-front', 'most-popular', 'click');
+		});
+
+		jQuery('.module-related-stories a').on('click', function() {
+			VarietyEvent.track('section-front', 'related-reviews', 'click');
+		});
+
+	},
+
+	enableVideo: function() {
+		VarietyEvent.monitorViewScroll('video-landing', [
+			{ action: 'up-next', element: '.playlist' },
+			{ action: 'recently-added', element: '.module-carousel-video' },
+			{ action: 'related-reviews', element: '.module-related-stories' }
+		]);
+
+		jQuery('.playlist a').on('click', function() {
+			VarietyEvent.track('video-landing', 'up-next', 'click');
+		});
+
+		jQuery('.module-carousel-video ul a').on('click', function() {
+			VarietyEvent.track('video-landing', 'recently-added', 'click-videos');
+		});
+
+		jQuery('.module-carousel-video .cycle-pager a').on('click', function() {
+			VarietyEvent.track('video-landing', 'recently-added', 'click-pagination', true);
+		});
+	},
+
+	enableVscore: function() {
+		VarietyEvent.monitorViewScroll('vscore-landing', [
+			{ action: 'content-flow', element: '.vscore-col3-wrapper' },
+			{ action: 'content-flow', element: '.vscore-col3-wrapper-b' },
+			{ action: 'vscore-domestic-box-office', element: '.vscore-type-0' },
+			{ action: 'vscore-foreign-box-office', element: '.vscore-type-1' },
+			{ action: 'top-programs', element: '.top-tv-viewers' },
+			{ action: 'top-gainers', element: '.top-tv-gainers' },
+			{ action: 'editorial-uploaded-image', element: '.infographic-sidebar' },
+			{ action: 'editorial-infographic', element: '.infographic-content' }
+		]);
+
+		jQuery.each({
+			'.vscore-type-0': 'vscore-domestic-box-office',
+			'.vscore-type-1': 'vscore-foreign-box-office'
+		}, function(element, action) {
+			jQuery(element + ' .module-vscore-list .icon-video').on('click', function() {
+				VarietyEvent.track('vscore-landing', action, 'view-trailer', true);
+			});
+
+			jQuery(element + ' .module-vscore-list h3 a').on('click', function() {
+				VarietyEvent.track('vscore-landing', action, 'view-film-tag');
+			});
+
+			jQuery(element + ' .module-vscore-table .toggle-footable').on('click', function() {
+				VarietyEvent.track('vscore-landing', action, 'expand-full-list', true);
+			});
+
+			jQuery(document).on('change', element + ' .module-vscore-table .time-period-selector', function() { // delegated
+				VarietyEvent.track('vscore-landing', action, 'switch-view');
+			});
+
+			jQuery(document).on('change', element + ' .module-vscore-table .region-selector', function() { // delegated
+				VarietyEvent.track('vscore-landing', action, 'switch-country-view');
+			});
+
+			jQuery(document).on('click', element + ' .module-vscore-table .event-object', function() { // delegated
+				VarietyEvent.track('vscore-landing', action, 'expand-full-view-film-tag');
+			});
+
+			jQuery(document).on('click', element + ' .module-vscore-table .event-studio', function() { // delegated
+				VarietyEvent.track('vscore-landing', action, 'expand-full-view-distributor-tag');
+			});
+		});
+
+		jQuery('.story a').on('click', function() {
+			VarietyEvent.track('vscore-landing', 'content-flow', 'click');
+		});
+
+		jQuery('.top-tv-viewers h3 a').on('click', function() {
+			VarietyEvent.track('vscore-landing', 'top-programs', 'view-program-tag-page');
+		});
+
+		jQuery('.top-tv-viewers .toggle a').on('click', function() {
+			VarietyEvent.track('vscore-landing', 'top-programs', 'expand-full-list');
+		});
+
+		jQuery('.top-tv-gainers h3 a').on('click', function() {
+			VarietyEvent.track('vscore-landing', 'top-gainers', 'view-program-tag-page');
+		});
+
+		jQuery('.top-tv-gainers .toggle a').on('click', function() {
+			VarietyEvent.track('vscore-landing', 'top-gainers', 'expand-full-list');
+		});
+
+		jQuery('.infographic-sidebar a').on('click', function() {
+			VarietyEvent.track('vscore-landing', 'editorial-uploaded-image', 'click');
+		});
+
+		jQuery('.infographic-content a').on('click', function() {
+			VarietyEvent.track('vscore-landing', 'editorial-infographic', 'click');
+		});
+	},
+
+	monitorViewScroll: function(category, list) {
+		jQuery.each(list, function(key, value) {
+			if ( value.action == '*' && typeof value.element == 'undefined' && typeof value.action_attr != 'undefined' ) {
+				value.element = '[' + value.action_attr +']';
+			}
+			jQuery(value.element).waypoint(function() {
+				var label = value.label || 'view', action, id;
+				if ( value.action == '*' && typeof (value.action_attr) != 'undefined' ) {
+					action = jQuery(this).attr(value.action_attr);
+				} else {
+					action = value.action;
+				}
+				id = category + action + label;
+
+				if ( !VarietyEvent.viewed[id] ) {
+					VarietyEvent.viewed[id] = true;	// prevent multiple tracking event firing
+					VarietyEvent.track(category, action, label, true);
+				}
+			});
+		});
+	},
+
+	slugify: function(string) {
+		return string.toLowerCase().replace(/[^a-z0-9]/i, '-').replace(' ', '-');
+	},
+
+	enableBrandingPage: function(){
+		/**
+		 * tracking for variety latino branding modal
+		 */
+		jQuery('.modal-varietylatino').on('click', function() {
+			VarietyEvent.track('branding-page', 'variety-latino-logo', 'clicks');
+		});
+		jQuery('.modal-variety').on('click', function() {
+			VarietyEvent.track('branding-page', 'variety-latino', 'clicks');
+		});
+	}
+
+};
+
+jQuery(function() {
+	VarietyEvent.initialize();
+});
+
+/* Gallery Read More Module
+-------------------------------------------------------------- */
+jQuery(document).ready(function() {
+	var curGalleryReadMoreHeight = jQuery('.variety-content-wrapper').height();
+	jQuery('.variety-content-wrapper').css('height', 'auto');
+	var autoGalleryReadMoreHeight = jQuery('.variety-content-wrapper').height();
+	if ( autoGalleryReadMoreHeight > curGalleryReadMoreHeight ) {
+		jQuery('.variety-content-wrapper').css('height', curGalleryReadMoreHeight);
+		jQuery(".gallery-readmore").trigger('pmc-gallery-readmore-load');
+		jQuery(".gallery-readmore").click(function() {
+			if(jQuery(this).parent().hasClass("open")) {
+				jQuery(this).parent().removeClass("open",250);
+				jQuery(this).html('<span class="gallery-readmore">... Read more <i class="icon-caret-down"></i></span>');
+			} else {
+				jQuery(".gallery-readmore").trigger('pmc-gallery-readmore-click');
+				jQuery(this).parent().addClass("open",250);
+				jQuery(this).html('<span class="gallery-readmore">Collapse <i class="icon-caret-up"></i></span>');
+			}
+		})
+	} else {
+		jQuery(".gallery-readmore").hide();
+	}
+});
+
+/*
+ * Generic read more implementation
+ */
+jQuery(document).ready(function() {
+	jQuery('[show-more]').each(function(){
+		$class_name = jQuery(this).attr('show-more');
+		var div = jQuery('.'+ $class_name);
+		var div_top = jQuery(div).offset().top;
+		var div_height = jQuery(div).height();
+		var child_top = jQuery(div).children(':last-child').offset().top;
+		var child_height = jQuery(div).children(':last-child').height();
+
+		if ( div_top +  div_height > child_top +  child_height ) {
+			jQuery('.' + $class_name ).removeClass($class_name);
+			jQuery(this).remove();
+		}
+	});
+	jQuery('[show-more]').click(function(){
+		$class_name = jQuery(this).attr('show-more');
+		jQuery('.' + $class_name ).removeClass($class_name);
+		jQuery(this).remove();
+	});
+});
+
+/**
+ * code for the select drop down in the header.
+ */
+function variety_editions_change_handler(selectedObj){
+	window.location = selectedObj.options[selectedObj.selectedIndex].value;
+}
+;
+// Modified to include touch events
+
+/*!
+ * jQuery outside events - v1.1 - 3/16/2010
+ * http://benalman.com/projects/jquery-outside-events-plugin/
+ * 
+ * Copyright (c) 2010 "Cowboy" Ben Alman
+ * Dual licensed under the MIT and GPL licenses.
+ * http://benalman.com/about/license/
+ */
+
+// Script: jQuery outside events
+//
+// *Version: 1.1, Last updated: 3/16/2010*
+// 
+// Project Home - http://benalman.com/projects/jquery-outside-events-plugin/
+// GitHub       - http://github.com/cowboy/jquery-outside-events/
+// Source       - http://github.com/cowboy/jquery-outside-events/raw/master/jquery.ba-outside-events.js
+// (Minified)   - http://github.com/cowboy/jquery-outside-events/raw/master/jquery.ba-outside-events.min.js (0.9kb)
+// 
+// About: License
+// 
+// Copyright (c) 2010 "Cowboy" Ben Alman,
+// Dual licensed under the MIT and GPL licenses.
+// http://benalman.com/about/license/
+// 
+// About: Examples
+// 
+// These working examples, complete with fully commented code, illustrate a few
+// ways in which this plugin can be used.
+// 
+// clickoutside - http://benalman.com/code/projects/jquery-outside-events/examples/clickoutside/
+// dblclickoutside - http://benalman.com/code/projects/jquery-outside-events/examples/dblclickoutside/
+// mouseoveroutside - http://benalman.com/code/projects/jquery-outside-events/examples/mouseoveroutside/
+// focusoutside - http://benalman.com/code/projects/jquery-outside-events/examples/focusoutside/
+// 
+// About: Support and Testing
+// 
+// Information about what version or versions of jQuery this plugin has been
+// tested with, what browsers it has been tested in, and where the unit tests
+// reside (so you can test it yourself).
+// 
+// jQuery Versions - 1.4.2
+// Browsers Tested - Internet Explorer 6-8, Firefox 2-3.6, Safari 3-4, Chrome, Opera 9.6-10.1.
+// Unit Tests      - http://benalman.com/code/projects/jquery-outside-events/unit/
+// 
+// About: Release History
+// 
+// 1.1 - (3/16/2010) Made "clickoutside" plugin more general, resulting in a
+//       whole new plugin with more than a dozen default "outside" events and
+//       a method that can be used to add new ones.
+// 1.0 - (2/27/2010) Initial release
+//
+// Topic: Default "outside" events
+// 
+// Note that each "outside" event is powered by an "originating" event. Only
+// when the originating event is triggered on an element outside the element
+// to which that outside event is bound will the bound event be triggered.
+// 
+// Because each outside event is powered by a separate originating event,
+// stopping propagation of that originating event will prevent its related
+// outside event from triggering.
+// 
+//  OUTSIDE EVENT     - ORIGINATING EVENT
+//  clickoutside      - click
+//  dblclickoutside   - dblclick
+//  focusoutside      - focusin
+//  bluroutside       - focusout
+//  mousemoveoutside  - mousemove
+//  mousedownoutside  - mousedown
+//  mouseupoutside    - mouseup
+//  mouseoveroutside  - mouseover
+//  mouseoutoutside   - mouseout
+//  keydownoutside    - keydown
+//  keypressoutside   - keypress
+//  keyupoutside      - keyup
+//  changeoutside     - change
+//  selectoutside     - select
+//  submitoutside     - submit
+
+(function($,doc,outside){
+  '$:nomunge'; // Used by YUI compressor.
+  
+  $.map(
+    // All these events will get an "outside" event counterpart by default.
+    'click dblclick mousemove mousedown mouseup mouseover mouseout touchstart touchend touchmove change select submit keydown keypress keyup'.split(' '),
+    function( event_name ) { jq_addOutsideEvent( event_name ); }
+  );
+  
+  // The focus and blur events are really focusin and focusout when it comes
+  // to delegation, so they are a special case.
+  jq_addOutsideEvent( 'focusin',  'focus' + outside );
+  jq_addOutsideEvent( 'focusout', 'blur' + outside );
+  
+  // Method: jQuery.addOutsideEvent
+  // 
+  // Register a new "outside" event to be with this method. Adding an outside
+  // event that already exists will probably blow things up, so check the
+  // <Default "outside" events> list before trying to add a new one.
+  // 
+  // Usage:
+  // 
+  // > jQuery.addOutsideEvent( event_name [, outside_event_name ] );
+  // 
+  // Arguments:
+  // 
+  //  event_name - (String) The name of the originating event that the new
+  //    "outside" event will be powered by. This event can be a native or
+  //    custom event, as long as it bubbles up the DOM tree.
+  //  outside_event_name - (String) An optional name for the new "outside"
+  //    event. If omitted, the outside event will be named whatever the
+  //    value of `event_name` is plus the "outside" suffix.
+  // 
+  // Returns:
+  // 
+  //  Nothing.
+  
+  $.addOutsideEvent = jq_addOutsideEvent;
+  
+  function jq_addOutsideEvent( event_name, outside_event_name ) {
+    
+    // The "outside" event name.
+    outside_event_name = outside_event_name || event_name + outside;
+    
+    // A jQuery object containing all elements to which the "outside" event is
+    // bound.
+    var elems = $(),
+      
+      // The "originating" event, namespaced for easy unbinding.
+      event_namespaced = event_name + '.' + outside_event_name + '-special-event';
+    
+    // Event: outside events
+    // 
+    // An "outside" event is triggered on an element when its corresponding
+    // "originating" event is triggered on an element outside the element in
+    // question. See the <Default "outside" events> list for more information.
+    // 
+    // Usage:
+    // 
+    // > jQuery('selector').bind( 'clickoutside', function(event) {
+    // >   var clicked_elem = $(event.target);
+    // >   ...
+    // > });
+    // 
+    // > jQuery('selector').bind( 'dblclickoutside', function(event) {
+    // >   var double_clicked_elem = $(event.target);
+    // >   ...
+    // > });
+    // 
+    // > jQuery('selector').bind( 'mouseoveroutside', function(event) {
+    // >   var moused_over_elem = $(event.target);
+    // >   ...
+    // > });
+    // 
+    // > jQuery('selector').bind( 'focusoutside', function(event) {
+    // >   var focused_elem = $(event.target);
+    // >   ...
+    // > });
+    // 
+    // You get the idea, right?
+    
+    $.event.special[ outside_event_name ] = {
+      
+      // Called only when the first "outside" event callback is bound per
+      // element.
+      setup: function(){
+        
+        // Add this element to the list of elements to which this "outside"
+        // event is bound.
+        elems = elems.add( this );
+        
+        // If this is the first element getting the event bound, bind a handler
+        // to document to catch all corresponding "originating" events.
+        if ( elems.length === 1 ) {
+          $(doc).bind( event_namespaced, handle_event );
+        }
+      },
+      
+      // Called only when the last "outside" event callback is unbound per
+      // element.
+      teardown: function(){
+        
+        // Remove this element from the list of elements to which this
+        // "outside" event is bound.
+        elems = elems.not( this );
+        
+        // If this is the last element removed, remove the "originating" event
+        // handler on document that powers this "outside" event.
+        if ( elems.length === 0 ) {
+          $(doc).unbind( event_namespaced );
+        }
+      },
+      
+      // Called every time a "outside" event callback is bound to an element.
+      add: function( handleObj ) {
+        var old_handler = handleObj.handler;
+        
+        // This function is executed every time the event is triggered. This is
+        // used to override the default event.target reference with one that is
+        // more useful.
+        handleObj.handler = function( event, elem ) {
+          
+          // Set the event object's .target property to the element that the
+          // user interacted with, not the element that the "outside" event was
+          // was triggered on.
+          event.target = elem;
+          
+          // Execute the actual bound handler.
+          old_handler.apply( this, arguments );
+        };
+      }
+    };
+    
+    // When the "originating" event is triggered..
+    function handle_event( event ) {
+      
+      // Iterate over all elements to which this "outside" event is bound.
+      $(elems).each(function(){
+        var elem = $(this);
+        
+        // If this element isn't the element on which the event was triggered,
+        // and this element doesn't contain said element, then said element is
+        // considered to be outside, and the "outside" event will be triggered!
+        if ( this !== event.target && !elem.has(event.target).length ) {
+          
+          // Use triggerHandler instead of trigger so that the "outside" event
+          // doesn't bubble. Pass in the "originating" event's .target so that
+          // the "outside" event.target can be overridden with something more
+          // meaningful.
+          elem.triggerHandler( outside_event_name, [ event.target ] );
+        }
+      });
+    };
+    
+  };
+  
+})(jQuery,document,"outside");
+;
+/*
+ * Lazy Load - jQuery plugin for lazy loading images
+ *
+ * Copyright (c) 2007-2012 Mika Tuupola
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Project home:
+ *   http://www.appelsiini.net/projects/lazyload
+ *
+ * Version:  1.8.3
+ *
+ */
+(function(a,b,c,d){var e=a(b);a.fn.lazyload=function(c){function i(){var b=0;f.each(function(){var c=a(this);if(h.skip_invisible&&!c.is(":visible"))return;if(!a.abovethetop(this,h)&&!a.leftofbegin(this,h))if(!a.belowthefold(this,h)&&!a.rightoffold(this,h))c.trigger("appear"),b=0;else if(++b>h.failure_limit)return!1})}var f=this,g,h={threshold:0,failure_limit:0,event:"scroll",effect:"show",container:b,data_attribute:"original",skip_invisible:!0,appear:null,load:null};return c&&(d!==c.failurelimit&&(c.failure_limit=c.failurelimit,delete c.failurelimit),d!==c.effectspeed&&(c.effect_speed=c.effectspeed,delete c.effectspeed),a.extend(h,c)),g=h.container===d||h.container===b?e:a(h.container),0===h.event.indexOf("scroll")&&g.bind(h.event,function(a){return i()}),this.each(function(){var b=this,c=a(b);b.loaded=!1,c.one("appear",function(){if(!this.loaded){if(h.appear){var d=f.length;h.appear.call(b,d,h)}a("<img />").bind("load",function(){c.hide().attr("src",c.data(h.data_attribute))[h.effect](h.effect_speed),b.loaded=!0;var d=a.grep(f,function(a){return!a.loaded});f=a(d);if(h.load){var e=f.length;h.load.call(b,e,h)}}).attr("src",c.data(h.data_attribute))}}),0!==h.event.indexOf("scroll")&&c.bind(h.event,function(a){b.loaded||c.trigger("appear")})}),e.bind("resize",function(a){i()}),/iphone|ipod|ipad.*os 5/gi.test(navigator.appVersion)&&e.bind("pageshow",function(b){b.originalEvent.persisted&&f.each(function(){a(this).trigger("appear")})}),a(b).load(function(){i()}),this},a.belowthefold=function(c,f){var g;return f.container===d||f.container===b?g=e.height()+e.scrollTop():g=a(f.container).offset().top+a(f.container).height(),g<=a(c).offset().top-f.threshold},a.rightoffold=function(c,f){var g;return f.container===d||f.container===b?g=e.width()+e.scrollLeft():g=a(f.container).offset().left+a(f.container).width(),g<=a(c).offset().left-f.threshold},a.abovethetop=function(c,f){var g;return f.container===d||f.container===b?g=e.scrollTop():g=a(f.container).offset().top,g>=a(c).offset().top+f.threshold+a(c).height()},a.leftofbegin=function(c,f){var g;return f.container===d||f.container===b?g=e.scrollLeft():g=a(f.container).offset().left,g>=a(c).offset().left+f.threshold+a(c).width()},a.inviewport=function(b,c){return!a.rightoffold(b,c)&&!a.leftofbegin(b,c)&&!a.belowthefold(b,c)&&!a.abovethetop(b,c)},a.extend(a.expr[":"],{"below-the-fold":function(b){return a.belowthefold(b,{threshold:0})},"above-the-top":function(b){return!a.belowthefold(b,{threshold:0})},"right-of-screen":function(b){return a.rightoffold(b,{threshold:0})},"left-of-screen":function(b){return!a.rightoffold(b,{threshold:0})},"in-viewport":function(b){return a.inviewport(b,{threshold:0})},"above-the-fold":function(b){return!a.belowthefold(b,{threshold:0})},"right-of-fold":function(b){return a.rightoffold(b,{threshold:0})},"left-of-fold":function(b){return!a.rightoffold(b,{threshold:0})}})})(jQuery,window,document)
+;
+// Generated by CoffeeScript 1.4.0
+/*
+jQuery Waypoints - v2.0.1
+Copyright (c) 2011-2013 Caleb Troughton
+Dual licensed under the MIT license and GPL license.
+https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
+*/
+(function(){var t,e,n,r,i,o,l,s,f,u,a,c,h,d,p,w,y=[].indexOf||function(t){for(var e=0,n=this.length;e<n;e++){if(e in this&&this[e]===t)return e}return-1},v=[].slice;t=window.jQuery;e=t(window);i={horizontal:{},vertical:{}};o=1;s={};l="waypoints-context-id";a="resize.waypoints";c="scroll.waypoints";h=1;d="waypoints-waypoint-ids";p="waypoint";w="waypoints";n=function(){function e(e){var n=this;this.$element=e;this.element=e[0];this.didResize=false;this.didScroll=false;this.id="context"+o++;this.oldScroll={x:e.scrollLeft(),y:e.scrollTop()};this.waypoints={horizontal:{},vertical:{}};e.data(l,this.id);s[this.id]=this;e.bind(c,function(){var e;if(!n.didScroll){n.didScroll=true;e=function(){n.doScroll();return n.didScroll=false};return window.setTimeout(e,t[w].settings.scrollThrottle)}});e.bind(a,function(){var e;if(!n.didResize){n.didResize=true;e=function(){t[w]("refresh");return n.didResize=false};return window.setTimeout(e,t[w].settings.resizeThrottle)}})}e.prototype.doScroll=function(){var e,n=this;e={horizontal:{newScroll:this.$element.scrollLeft(),oldScroll:this.oldScroll.x,forward:"right",backward:"left"},vertical:{newScroll:this.$element.scrollTop(),oldScroll:this.oldScroll.y,forward:"down",backward:"up"}};if(y.call(window,"ontouchstart")>=0&&(!e.vertical.oldScroll||!e.vertical.newScroll)){t[w]("refresh")}t.each(e,function(e,r){var i,o,l;l=[];o=r.newScroll>r.oldScroll;i=o?r.forward:r.backward;t.each(n.waypoints[e],function(t,e){var n,i;if(r.oldScroll<(n=e.offset)&&n<=r.newScroll){return l.push(e)}else if(r.newScroll<(i=e.offset)&&i<=r.oldScroll){return l.push(e)}});l.sort(function(t,e){return t.offset-e.offset});if(!o){l.reverse()}return t.each(l,function(t,e){if(e.options.continuous||t===l.length-1){return e.trigger([i])}})});return this.oldScroll={x:e.horizontal.newScroll,y:e.vertical.newScroll}};e.prototype.refresh=function(){var e,n,r,i=this;r=t.isWindow(this.element);n=this.$element.offset();this.doScroll();e={horizontal:{contextOffset:r?0:n.left,contextScroll:r?0:this.oldScroll.x,contextDimension:this.$element.width(),oldScroll:this.oldScroll.x,forward:"right",backward:"left",offsetProp:"left"},vertical:{contextOffset:r?0:n.top,contextScroll:r?0:this.oldScroll.y,contextDimension:r?t[w]("viewportHeight"):this.$element.height(),oldScroll:this.oldScroll.y,forward:"down",backward:"up",offsetProp:"top"}};return t.each(e,function(e,n){return t.each(i.waypoints[e],function(e,r){var i,o,l,s,f;i=r.options.offset;l=r.offset;o=t.isWindow(r.element)?0:r.$element.offset()[n.offsetProp];if(t.isFunction(i)){i=i.apply(r.element)}else if(typeof i==="string"){i=parseFloat(i);if(r.options.offset.indexOf("%")>-1){i=Math.ceil(n.contextDimension*i/100)}}r.offset=o-n.contextOffset+n.contextScroll-i;if(r.options.onlyOnScroll&&l!=null||!r.enabled){return}if(l!==null&&l<(s=n.oldScroll)&&s<=r.offset){return r.trigger([n.backward])}else if(l!==null&&l>(f=n.oldScroll)&&f>=r.offset){return r.trigger([n.forward])}else if(l===null&&n.oldScroll>=r.offset){return r.trigger([n.forward])}})})};e.prototype.checkEmpty=function(){if(t.isEmptyObject(this.waypoints.horizontal)&&t.isEmptyObject(this.waypoints.vertical)){this.$element.unbind([a,c].join(" "));return delete s[this.id]}};return e}();r=function(){function e(e,n,r){var o,l;r=t.extend({},t.fn[p].defaults,r);if(r.offset==="bottom-in-view"){r.offset=function(){var e;e=t[w]("viewportHeight");if(!t.isWindow(n.element)){e=n.$element.height()}return e-t(this).outerHeight()}}this.$element=e;this.element=e[0];this.axis=r.horizontal?"horizontal":"vertical";this.callback=r.handler;this.context=n;this.enabled=r.enabled;this.id="waypoints"+h++;this.offset=null;this.options=r;n.waypoints[this.axis][this.id]=this;i[this.axis][this.id]=this;o=(l=e.data(d))!=null?l:[];o.push(this.id);e.data(d,o)}e.prototype.trigger=function(t){if(!this.enabled){return}if(this.callback!=null){this.callback.apply(this.element,t)}if(this.options.triggerOnce){return this.destroy()}};e.prototype.disable=function(){return this.enabled=false};e.prototype.enable=function(){this.context.refresh();return this.enabled=true};e.prototype.destroy=function(){delete i[this.axis][this.id];delete this.context.waypoints[this.axis][this.id];return this.context.checkEmpty()};e.getWaypointsByElement=function(e){var n,r;r=t(e).data(d);if(!r){return[]}n=t.extend({},i.horizontal,i.vertical);return t.map(r,function(t){return n[t]})};return e}();u={init:function(e,i){var o;if(i==null){i={}}if((o=i.handler)==null){i.handler=e}this.each(function(){var e,o,f,u;e=t(this);f=(u=i.context)!=null?u:t.fn[p].defaults.context;if(!t.isWindow(f)){f=e.closest(f)}f=t(f);o=s[f.data(l)];if(!o){o=new n(f)}return new r(e,o,i)});t[w]("refresh");return this},disable:function(){return u._invoke(this,"disable")},enable:function(){return u._invoke(this,"enable")},destroy:function(){return u._invoke(this,"destroy")},prev:function(t,e){return u._traverse.call(this,t,e,function(t,e,n){if(e>0){return t.push(n[e-1])}})},next:function(t,e){return u._traverse.call(this,t,e,function(t,e,n){if(e<n.length-1){return t.push(n[e+1])}})},_traverse:function(e,n,r){var i,o;if(e==null){e="vertical"}if(n==null){n=window}o=f.aggregate(n);i=[];this.each(function(){var n;n=t.inArray(this,o[e]);return r(i,n,o[e])});return this.pushStack(i)},_invoke:function(e,n){e.each(function(){var e;e=r.getWaypointsByElement(this);return t.each(e,function(t,e){e[n]();return true})});return this}};t.fn[p]=function(){var e,n;n=arguments[0],e=2<=arguments.length?v.call(arguments,1):[];if(u[n]){return u[n].apply(this,e)}else if(t.isFunction(n)){return u.init.apply(this,arguments)}else if(t.isPlainObject(n)){return u.init.apply(this,[null,n])}else if(!n){return t.error("jQuery Waypoints needs a callback function or handler option.")}else{return t.error("The "+n+" method does not exist in jQuery Waypoints.")}};t.fn[p].defaults={context:window,continuous:true,enabled:true,horizontal:false,offset:0,triggerOnce:false};f={refresh:function(){return t.each(s,function(t,e){return e.refresh()})},viewportHeight:function(){var t;return(t=window.innerHeight)!=null?t:e.height()},aggregate:function(e){var n,r,o;n=i;if(e){n=(o=s[t(e).data(l)])!=null?o.waypoints:void 0}if(!n){return[]}r={horizontal:[],vertical:[]};t.each(r,function(e,i){t.each(n[e],function(t,e){return i.push(e)});i.sort(function(t,e){return t.offset-e.offset});r[e]=t.map(i,function(t){return t.element});return r[e]=t.unique(r[e])});return r},above:function(t){if(t==null){t=window}return f._filter(t,"vertical",function(t,e){return e.offset<=t.oldScroll.y})},below:function(t){if(t==null){t=window}return f._filter(t,"vertical",function(t,e){return e.offset>t.oldScroll.y})},left:function(t){if(t==null){t=window}return f._filter(t,"horizontal",function(t,e){return e.offset<=t.oldScroll.x})},right:function(t){if(t==null){t=window}return f._filter(t,"horizontal",function(t,e){return e.offset>t.oldScroll.x})},enable:function(){return f._invoke("enable")},disable:function(){return f._invoke("disable")},destroy:function(){return f._invoke("destroy")},extendFn:function(t,e){return u[t]=e},_invoke:function(e){var n;n=t.extend({},i.vertical,i.horizontal);return t.each(n,function(t,n){n[e]();return true})},_filter:function(e,n,r){var i,o;i=s[t(e).data(l)];if(!i){return[]}o=[];t.each(i.waypoints[n],function(t,e){if(r(i,e)){return o.push(e)}});o.sort(function(t,e){return t.offset-e.offset});return t.map(o,function(t){return t.element})}};t[w]=function(){var t,e;e=arguments[0],t=2<=arguments.length?v.call(arguments,1):[];if(f[e]){return f[e].apply(null,t)}else{return f.aggregate.call(null,e)}};t[w].settings={resizeThrottle:100,scrollThrottle:30};e.load(function(){return t[w]("refresh")})}).call(this);;
+/*!
+* jQuery Cycle2; ver: 20121219
+* http://jquery.malsup.com/cycle2/
+* Copyright (c) 2012 M. Alsup; Dual licensed: MIT/GPL
+*/
+(function(a){function c(){window.console&&console.log&&console.log("[cycle2] "+Array.prototype.join.call(arguments," "))}function d(a){return(a||"").toLowerCase()}"use strict";var b="20121219";a.fn.cycle=function(b){var e;return this.length===0&&!a.isReady?(e={s:this.selector,c:this.context},c("requeuing slideshow (dom not ready)"),a(function(){a(e.s,e.c).cycle(b)}),this):this.each(function(){var e,f,g,h,i=a(this);if(i.data("cycle.opts"))return;if(i.data("cycle-log")===!1||b&&b.log===!1||f&&f.log===!1)c=a.noop;c("--c2 init--"),e=i.data();for(var j in e)e.hasOwnProperty(j)&&/^cycle[A-Z]+/.test(j)&&(h=e[j],g=j.match(/^cycle(.*)/)[1].replace(/^[A-Z]/,d),c(g+":",h,"("+typeof h+")"),e[g]=h);f=a.extend({},a.fn.cycle.defaults,e,b||{}),f.timeoutId=0,f.paused=f.paused||!1,f.container=i,f._maxZ=f.maxZ,f.API=a.extend({_container:i},a.fn.cycle.API),f.API.log=c,f.API.trigger=function(a,b){return f.container.trigger(a,b),f.API},i.data("cycle.opts",f),i.data("cycle.API",f.API),f.API.trigger("cycle-bootstrap",[f,f.API]),f.API.addInitialSlides(),f.API.preInitSlideshow(),f.slides.length&&f.API.initSlideshow()})},a.fn.cycle.API={opts:function(){return this._container.data("cycle.opts")},addInitialSlides:function(){var b=this.opts(),c=b.slides;b.slideCount=0,b.slides=a(),c=c.jquery?c:b.container.find(c),b.random&&c.sort(function(){return Math.random()-.5}),b.API.add(c)},preInitSlideshow:function(){var b=this.opts();b.API.trigger("cycle-pre-initialize",[b]);var c=a.fn.cycle.transitions[b.fx];c&&a.isFunction(c.preInit)&&c.preInit(b),b._preInitialized=!0},postInitSlideshow:function(){var b=this.opts();b.API.trigger("cycle-post-initialize",[b]);var c=a.fn.cycle.transitions[b.fx];c&&a.isFunction(c.postInit)&&c.postInit(b)},initSlideshow:function(){var b=this.opts(),c=b.container;b.API.calcFirstSlide(),b.container.css("position")=="static"&&b.container.css("position","relative"),a(b.slides[b.currSlide]).css("opacity",1).show(),b.API.stackSlides(b.slides[b.currSlide],b.slides[b.nextSlide],!b.reverse),b.pauseOnHover&&(b.pauseOnHover!==!0&&(c=a(b.pauseOnHover)),c.hover(function(){b.hoverPaused=!0,b.paused||b.API.trigger("cycle-paused",[b])},function(){b.hoverPaused=!1,b.paused||b.API.trigger("cycle-resumed",[b])})),b.timeout&&(b.timeoutId=setTimeout(function(){b.API.prepareTx(!1,!b.reverse)},b.timeout+b.delay)),b._initialized=!0,b.API.updateView(!0),b.container.on("cycle-paused cycle-resumed",function(a){b.container[a.type==="cycle-paused"?"addClass":"removeClass"]("cycle-paused")}),b.API.trigger("cycle-initialized",[b]),b.API.postInitSlideshow()},add:function(b,c){var d=this.opts(),e=d.slideCount,f=!1,g;a(b).each(function(b){var e,f=a(this);c?d.container.prepend(f):d.container.append(f),d.slideCount++,e=d.API.buildSlideOpts(f),c?d.slides=a(f).add(d.slides):d.slides=d.slides.add(f),d.API.initSlide(e,f,--d._maxZ),f.data("cycle.opts",e),d.API.trigger("cycle-slide-added",[d,e,f])}),d.API.updateView(!0),f=d._preInitialized&&e<2&&d.slideCount>=1,f&&(d._initialized?d.timeout&&(g=d.slides.length,d.nextSlide=d.reverse?g-1:1):d.API.initSlideshow())},calcFirstSlide:function(){var a=this.opts(),b;b=parseInt(a.startingSlide||0,10);if(b>=a.slides.length||b<0)b=0;a.currSlide=b,a.reverse?(a.nextSlide=b-1,a.nextSlide<0&&(a.nextSlide=a.slides.length-1)):(a.nextSlide=b+1,a.nextSlide==a.slides.length&&(a.nextSlide=0))},calcNextSlide:function(){var a=this.opts(),b;a.reverse?(b=a.nextSlide-1<0,a.nextSlide=b?a.slideCount-1:a.nextSlide-1,a.currSlide=b?0:a.nextSlide+1):(b=a.nextSlide+1==a.slides.length,a.nextSlide=b?0:a.nextSlide+1,a.currSlide=b?a.slides.length-1:a.nextSlide-1)},calcTx:function(b,d){var e=b,f;return d&&e.manualFx&&(f=a.fn.cycle.transitions[e.manualFx]),f||(f=a.fn.cycle.transitions[e.fx]),f||(f=a.fn.cycle.transitions.fade,c('Transition "'+e.fx+'" not found.  Using fade.')),f},prepareTx:function(a,b){var c=this.opts(),d,e,f,g,h;if(c.slideCount<2){c.timeoutId=0;return}a&&(c.API.stopTransition(),c.busy=!1,clearTimeout(c.timeoutId),c.timeoutId=0);if(c.busy)return;if(c.timeoutId===0&&!a)return;e=c.slides[c.currSlide],f=c.slides[c.nextSlide],g=c.API.getSlideOpts(c.nextSlide),h=c.API.calcTx(g,a),c._tx=h,a&&g.manualSpeed!==undefined&&(g.speed=g.manualSpeed),c.nextSlide!=c.currSlide&&(a||!c.paused&&!c.hoverPaused&&c.timeout)?(c.API.trigger("cycle-before",[g,e,f,b]),h.before&&h.before(g,e,f,b),d=function(){c.busy=!1,h.after&&h.after(g,e,f,b),c.API.trigger("cycle-after",[g,e,f,b]),c.API.queueTransition(g),c.API.updateView(!0)},c.busy=!0,h.transition?h.transition(g,e,f,b,d):c.API.doTransition(g,e,f,b,d),c.API.calcNextSlide(),c.updateView<0&&c.API.updateView()):c.API.queueTransition(g)},doTransition:function(b,c,d,e,f){var g=b,h=a(c),i=a(d),j=function(){i.animate(g.animIn||{opacity:1},g.speed,g.easeIn||g.easing,f)};i.css(g.cssBefore||{}),h.animate(g.animOut||{},g.speed,g.easeOut||g.easing,function(){h.css(g.cssAfter||{}),g.sync||j()}),g.sync&&j()},queueTransition:function(a){var b=this.opts();if(b.nextSlide===0&&--b.loop===0){b.API.log("terminating; loop=0"),b.timeout=0,b.API.trigger("cycle-finished",[b]),b.nextSlide=b.currSlide;return}a.timeout&&(b.timeoutId=setTimeout(function(){b.API.prepareTx(!1,!b.reverse)},a.timeout))},stopTransition:function(){var a=this.opts();a.slides.filter(":animated").length&&(a.slides.stop(!1,!0),a.API.trigger("cycle-transition-stopped",[a])),a._tx&&a._tx.stopTransition&&a._tx.stopTransition(a)},advanceSlide:function(a){var b=this.opts();return clearTimeout(b.timeoutId),b.timeoutId=0,b.nextSlide=b.currSlide+a,b.nextSlide<0?b.nextSlide=b.slides.length-1:b.nextSlide>=b.slides.length&&(b.nextSlide=0),b.API.prepareTx(!0,a>=0),!1},buildSlideOpts:function(b){var e=this.opts(),f,g,h=b.data()||{};for(var i in h)h.hasOwnProperty(i)&&/^cycle[A-Z]+/.test(i)&&(f=h[i],g=i.match(/^cycle(.*)/)[1].replace(/^[A-Z]/,d),c("["+(e.slideCount-1)+"]",g+":",f,"("+typeof f+")"),h[g]=f);h=a.extend({},a.fn.cycle.defaults,e,h),h.slideNum=e.slideCount;try{delete h.API,delete h.slideCount,delete h.currSlide,delete h.nextSlide,delete h.slides}catch(j){}return h},getSlideOpts:function(b){var c=this.opts();b===undefined&&(b=c.currSlide);var d=c.slides[b],e=a(d).data("cycle.opts");return a.extend({},c,e)},initSlide:function(b,c,d){var e=this.opts();c.css(b.slideCss||{}),d>0&&c.css("zIndex",d),isNaN(b.speed)&&(b.speed=a.fx.speeds[b.speed]||a.fx.speeds._default),b.sync||(b.speed=b.speed/2),c.addClass(e.slideClass)},updateView:function(a){var b=this.opts();if(!b._initialized)return;var c=b.API.getSlideOpts(),d=b.slides[b.currSlide];b.slideActiveClass&&b.slides.removeClass(b.slideActiveClass).eq(b.currSlide).addClass(b.slideActiveClass),a&&b.hideNonActive&&b.slides.filter(":not(."+b.slideActiveClass+")").hide(),b.API.trigger("cycle-update-view",[b,c,d])},getComponent:function(b){var c=this.opts(),d=c[b];return typeof d=="string"?/^\s*\>/.test(d)?c.container.find(d):a(d):d.jquery?d:a(d)},stackSlides:function(b,c,d){var e=this.opts();b||(b=e.slides[e.currSlide],c=e.slides[e.nextSlide],d=!e.reverse),a(b).css("zIndex",e.maxZ);var f,g=e.maxZ-2,h=e.slideCount;if(d){for(f=e.currSlide+1;f<h;f++)a(e.slides[f]).css("zIndex",g--);for(f=0;f<e.currSlide;f++)a(e.slides[f]).css("zIndex",g--)}else{for(f=e.currSlide-1;f>=0;f--)a(e.slides[f]).css("zIndex",g--);for(f=h-1;f>e.currSlide;f--)a(e.slides[f]).css("zIndex",g--)}a(c).css("zIndex",e.maxZ-1)},getSlideIndex:function(a){return this.opts().slides.index(a)}},a.fn.cycle.log=c,a.fn.cycle.version=function(){return"Cycle2: "+b},a.fn.cycle.transitions={custom:{},none:{before:function(a,b,c,d){a.API.stackSlides(c,b,d),a.cssBefore={opacity:1,display:"block"}}},fade:{before:function(b,c,d,e){var f=b.API.getSlideOpts(b.nextSlide).slideCss||{};b.API.stackSlides(c,d,e),b.cssBefore=a.extend(f,{opacity:0,display:"block"}),b.animIn={opacity:1},b.animOut={opacity:0}}},fadeout:{before:function(b,c,d,e){var f=b.API.getSlideOpts(b.nextSlide).slideCss||{};b.API.stackSlides(c,d,e),b.cssBefore=a.extend(f,{opacity:1,display:"block"}),b.animOut={opacity:0}}},scrollHorz:{before:function(a,b,c,d){a.API.stackSlides(b,c,d);var e=a.container.css("overflow","hidden").width();a.cssBefore={left:d?e:-e,top:0,opacity:1,display:"block"},a.cssAfter={zIndex:a._maxZ-2,left:0},a.animIn={left:0},a.animOut={left:d?-e:e}}}},a.fn.cycle.defaults={allowWrap:!0,autoSelector:".cycle-slideshow[data-cycle-auto-init!=false]",delay:0,easing:null,fx:"fade",hideNonActive:!0,loop:0,manualFx:undefined,manualSpeed:undefined,maxZ:100,pauseOnHover:!1,reverse:!1,slideActiveClass:"cycle-slide-active",slideClass:"cycle-slide",slideCss:{position:"absolute",top:0,left:0},slides:"> img",speed:500,startingSlide:0,sync:!0,timeout:4e3,updateView:-1},a(document).ready(function(){a(a.fn.cycle.defaults.autoSelector).cycle()})})(jQuery),function(a){"use strict",a.extend(a.fn.cycle.defaults,{autoHeight:0}),a(document).on("cycle-initialized",function(b,c){function h(){c.container.height(c.container.width()/g)}var d=c.autoHeight,e=-1,f,g;d==="calc"||a.type(d)=="number"&&d>=0?(d==="calc"?c.slides.each(function(b){var c=a(this).height();c>e&&(e=c,d=b)}):d>=c.slides.length&&(d=0),f=a(c.slides[d]).clone(),f.removeAttr("id").find("[id]").removeAttr("id"),f.removeAttr("name").find("[name]").removeAttr("name"),f.css({position:"static",visibility:"hidden",display:"block"}).prependTo(c.container).removeClass().addClass("cycle-sentinel cycle-slide"),f.find("*").css("visibility","hidden"),c._sentinel=f):a.type(d)=="string"&&/\d+\:\d+/.test(d)&&(g=d.match(/(\d+)\:(\d+)/),g=g[1]/g[2],a(window).on("resize",h),c._autoHeightOnResize=h,setTimeout(function(){a(window).triggerHandler("resize")},15))}),a(document).on("cycle-destroyed",function(b,c){c._sentinel&&c._sentinel.remove(),c._autoHeightOnResize&&a(window).off("resize",c._autoHeightOnResize)})}(jQuery),function(a){"use strict",a.extend(a.fn.cycle.defaults,{caption:"> .cycle-caption",captionTemplate:"{{slideNum}} / {{slideCount}}",overlay:"> .cycle-overlay",overlayTemplate:"<div>{{title}}</div><div>{{desc}}</div>"}),a(document).on("cycle-update-view",function(b,c,d,e){var f;a.each(["caption","overlay"],function(){var a=this,b=d[a+"Template"],f=c.API.getComponent(a);f.length&&b?(f.html(c.API.tmpl(b,d,c,e)),f.show()):f.hide()})}),a(document).on("cycle-destroyed",function(b,c){var d;a.each(["caption","overlay"],function(){var a=this,b=c[a+"Template"];c[a]&&b&&(d=c.API.getComponent("caption"),d.empty())})})}(jQuery),function(a){"use strict";var b=a.fn.cycle;a.fn.cycle=function(c){var d,e,f,g=a.makeArray(arguments);return a.type(c)=="number"?this.cycle("goto",c):a.type(c)=="string"?this.each(function(){var h;d=c,f=a(this).data("cycle.opts");if(f===undefined){b.log('slideshow must be initialized before sending commands; "'+d+'" ignored');return}d=d=="goto"?"jump":d,e=f.API[d];if(a.isFunction(e))return h=a.makeArray(g),h.shift(),e.apply(f.API,h);b.log("unknown command: ",d)}):b.apply(this,arguments)},a.extend(a.fn.cycle,b),a.extend(b.API,{next:function(){var a=this.opts(),b=a.reverse?-1:1;if(a.allowWrap===!1&&a.currSlide+b>=a.slideCount)return;a.API.advanceSlide(b),a.API.trigger("cycle-next",[a]).log("cycle-next")},prev:function(){var a=this.opts(),b=a.reverse?1:-1;if(a.allowWrap===!1&&a.currSlide+b<0)return;a.API.advanceSlide(b),a.API.trigger("cycle-prev",[a]).log("cycle-prev")},destroy:function(){var a=this.opts();clearTimeout(a.timeoutId),a.timeoutId=0,a.API.stop(),a.API.trigger("cycle-destroyed",[a]).log("cycle-destroyed"),a.container.removeData("cycle.opts")},jump:function(a){var b,c=this.opts(),d=parseInt(a,10);if(isNaN(d)||d<0||d>=c.slides.length){c.API.log("goto: invalid slide index: "+d);return}if(d==c.currSlide){c.API.log("goto: skipping, already on slide",d);return}c.nextSlide=d,clearTimeout(c.timeoutId),c.timeoutId=0,c.API.log("goto: ",d," (zero-index)"),b=c.currSlide<c.nextSlide,c.API.prepareTx(!0,b)},stop:function(){var b=this.opts(),c=b.container;clearTimeout(b.timeoutId),b.timeoutId=0,b.API.stopTransition(),b.pauseOnHover&&(b.pauseOnHover!==!0&&(c=a(b.pauseOnHover)),c.off("mouseenter mouseleave")),b.API.trigger("cycle-stopped",[b]).log("cycle-stopped")},pause:function(){var a=this.opts();a.paused=!0,a.API.trigger("cycle-paused",[a]).log("cycle-paused")},resume:function(){var a=this.opts();a.paused=!1,a.API.trigger("cycle-resumed",[a]).log("cycle-resumed")},reinit:function(){var a=this.opts();a.API.destroy(),a.container.cycle()},remove:function(b){var c=this.opts(),d,e,f=[],g=1;for(var h=0;h<c.slides.length;h++)d=c.slides[h],h==b?e=d:(f.push(d),a(d).data("cycle.opts").slideNum=g,g++);e&&(c.slides=a(f),c.slideCount--,a(e).remove(),b==c.currSlide&&c.API.advanceSlide(1),c.API.trigger("cycle-slide-removed",[c,b,e]).log("cycle-slide-removed"),c.API.updateView())}}),a(document).on("click.cycle","[data-cycle-cmd]",function(b){b.preventDefault();var c=a(this),d=c.data("cycle-cmd"),e=c.data("cycle-context")||".cycle-slideshow";a(e).cycle(d,c.data("cycle-arg"))})}(jQuery),function(a){function b(b,c){var d;if(b._hashFence){b._hashFence=!1;return}d=window.location.hash.substring(1),b.slides.each(function(e){if(a(this).data("cycle-hash")==d)return c===!0?b.startingSlide=e:(b.nextSlide=e,b.API.prepareTx(!0,!1)),!1})}"use strict",a(document).on("cycle-pre-initialize",function(c,d){b(d,!0),d._onHashChange=function(){b(d,!1)},a(window).on("hashchange",d._onHashChange)}),a(document).on("cycle-update-view",function(a,b,c){c.hash&&(b._hashFence=!0,window.location.hash=c.hash)}),a(document).on("cycle-destroyed",function(b,c){c._onHashChange&&a(window).off("hashchange",c._onHashChange)})}(jQuery),function(a){"use strict",a.extend(a.fn.cycle.defaults,{loader:!1}),a(document).on("cycle-bootstrap",function(b,c){function e(b,e){function h(b){var h;c.loader=="wait"?(f.push(b),g===0&&(f.sort(i),d.apply(c.API,[f,e]),c.container.removeClass("cycle-loading"))):(h=a(c.slides[c.currSlide]),d.apply(c.API,[b,e]),h.show(),c.container.removeClass("cycle-loading"))}function i(a,b){return a.data("index")-b.data("index")}var f=[];b=a(b);var g=b.length;b.hide().appendTo("body").each(function(b){function l(){--i===0&&(--g,h(j))}var i=0,j=a(this),k=j.is("img")?j:j.find("img");j.data("index",b),k=k.filter(":not(.cycle-loader-ignore)");if(!k.length){--g,f.push(j);return}i=k.length,k.each(function(){this.complete?l():a(this).load(function(){l()}).error(function(){--i===0&&(c.API.log("slide skipped; img not loaded:",this.src),--g===0&&c.loader=="wait"&&d.apply(c.API,[f,e]))})})}),g&&c.container.addClass("cycle-loading")}var d;if(!c.loader)return;d=c.API.add,c.API.add=e})}(jQuery),function(a){function b(b,c,d){var e,f=b.API.getComponent("pager");f.each(function(){var f=a(this);if(c.pagerTemplate){var g=b.API.tmpl(c.pagerTemplate,c,b,d[0]);e=a(g).appendTo(f)}else e=f.children().eq(b.slideCount-1);e.on(b.pagerEvent,function(a){a.preventDefault(),b.API.page(f,a.currentTarget)})})}function c(a,b){var c=this.opts(),d=a.children().index(b),e=d,f=c.currSlide<e;if(c.currSlide==e)return;c.nextSlide=e,c.API.prepareTx(!0,f),c.API.trigger("cycle-pager-activated",[c,a,b])}"use strict",a.extend(a.fn.cycle.defaults,{pager:"> .cycle-pager",pagerActiveClass:"cycle-pager-active",pagerEvent:"click.cycle",pagerTemplate:"<span>&bull;</span>"}),a(document).on("cycle-bootstrap",function(a,c,d){d.buildPagerLink=b}),a(document).on("cycle-slide-added",function(a,b,d,e){b.pager&&(b.API.buildPagerLink(b,d,e),b.API.page=c)}),a(document).on("cycle-slide-removed",function(b,c,d,e){if(c.pager){var f=c.API.getComponent("pager");f.each(function(){var b=a(this);a(b.children()[d]).remove()})}}),a(document).on("cycle-update-view",function(b,c,d){var e;c.pager&&(e=c.API.getComponent("pager"),e.each(function(){a(this).children().removeClass(c.pagerActiveClass).eq(c.currSlide).addClass(c.pagerActiveClass)}))}),a(document).on("cycle-destroyed",function(a,b){var c;b.pager&&b.pagerTemplate&&(c=b.API.getComponent("pager"),c.empty())})}(jQuery),function(a){"use strict",a.extend(a.fn.cycle.defaults,{next:"> .cycle-next",nextEvent:"click.cycle",disabledClass:"disabled",prev:"> .cycle-prev",prevEvent:"click.cycle",swipe:!1}),a(document).on("cycle-initialized",function(a,b){b.API.getComponent("next").off(b.nextEvent).on(b.nextEvent,function(a){a.preventDefault(),b.API.next()}),b.API.getComponent("prev").off(b.prevEvent).on(b.prevEvent,function(a){a.preventDefault(),b.API.prev()});if(b.swipe){var c=b.swipeVert?"swipeUp.cycle":"swipeLeft.cycle swipeleft.cycle",d=b.swipeVert?"swipeDown.cycle":"swipeRight.cycle swiperight.cycle";b.container.on(c,function(a){b.API.next()}),b.container.on(d,function(){b.API.prev()})}}),a(document).on("cycle-update-view",function(a,b,c,d){if(b.allowWrap)return;var e=b.disabledClass,f=b.API.getComponent("next"),g=b.API.getComponent("prev"),h=b._prevBoundry||0,i=b._nextBoundry||b.slideCount-1;b.currSlide==i?f.addClass(e).prop("disabled",!0):f.removeClass(e).prop("disabled",!1),b.currSlide===h?g.addClass(e).prop("disabled",!0):g.removeClass(e).prop("disabled",!1)}),a(document).on("cycle-destroyed",function(b,c){a(c.next).off(c.nextEvent),a(c.prev).off(c.prevEvent),c.container.off("swipeleft.cycle swiperight.cycle swipeLeft.cycle swipeRight.cycle swipeUp.cycle swipeDown.cycle")})}(jQuery),function(a){"use strict",a.extend(a.fn.cycle.defaults,{progressive:!1}),a(document).on("cycle-pre-initialize",function(b,c){if(!c.progressive)return;var d=c.API,e=d.next,f=d.prev,g=d.prepareTx,h,i=a.type(c.progressive);if(i=="array")h=c.progressive;else if(a.isFunction(c.progressive))h=c.progressive(c);else if(i=="string"){h=a(c.progressive).html();if(!a.trim(h))return;try{h=a.parseJSON(h)}catch(j){d.log("error parsing progressive slides",j);return}}g&&(d.prepareTx=function(a,b){var d,e;if(a||h.length===0){g.apply(c.API,[a,b]);return}b&&c.currSlide==c.slideCount-1?(e=h[0],h=h.slice(1),c.container.one("cycle-slide-added",function(a,b){b.API.advanceSlide(1)}),c.API.add(e)):!b&&c.currSlide===0?(d=h.length-1,e=h[d],h=h.slice(0,d),c.container.one("cycle-slide-added",function(a,b){b.currSlide=1,b.API.advanceSlide(-1)}),c.API.add(e,!0)):g.apply(c.API,[a,b])}),e&&(d.next=function(){var a=this.opts();if(h.length&&a.currSlide==a.slideCount-1){var b=h[0];h=h.slice(1),a.container.one("cycle-slide-added",function(a,b){e.apply(b.API),b.container.removeClass("cycle-loading")}),a.container.addClass("cycle-loading"),a.API.add(b)}else e.apply(a.API)}),f&&(d.prev=function(){var a=this.opts();if(h.length&&a.currSlide===0){var b=h.length-1,c=h[b];h=h.slice(0,b),a.container.one("cycle-slide-added",function(a,b){b.currSlide=1,b.API.advanceSlide(-1),b.container.removeClass("cycle-loading")}),a.container.addClass("cycle-loading"),a.API.add(c,!0)}else f.apply(a.API)})})}(jQuery),function(a){"use strict",a.extend(a.fn.cycle.defaults,{tmplRegex:"{{((.)?.*?)}}"}),a.extend(a.fn.cycle.API,{tmpl:function(b,c){var d=new RegExp(c.tmplRegex||a.fn.cycle.defaults.tmplRegex,"g"),e=a.makeArray(arguments);return e.shift(),b.replace(d,function(b,c){var d,f,g,h,i=c.split(".");for(d=0;d<e.length;d++){g=e[d];if(i.length>1){h=g;for(f=0;f<i.length;f++)g=h,h=h[i[f]]||c}else h=g[c];if(a.isFunction(h))return h.apply(g,e);if(h!==undefined&&h!==null&&h!=c)return h}return c})}})}(jQuery);;
+/**
+ * ScrollTo Plug-in
+ * Copyright (c) 2007-2012 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+ * Dual licensed under MIT and GPL.
+ * @author Ariel Flesler
+ * @version 1.4.5 BETA
+ */
+;(function($){var h=$.scrollTo=function(a,b,c){$(window).scrollTo(a,b,c)};h.defaults={axis:'xy',duration:parseFloat($.fn.jquery)>=1.3?0:1,limit:true};h.window=function(a){return $(window)._scrollable()};$.fn._scrollable=function(){return this.map(function(){var a=this,isWin=!a.nodeName||$.inArray(a.nodeName.toLowerCase(),['iframe','#document','html','body'])!=-1;if(!isWin)return a;var b=(a.contentWindow||a).document||a.ownerDocument||a;return/webkit/i.test(navigator.userAgent)||b.compatMode=='BackCompat'?b.body:b.documentElement})};$.fn.scrollTo=function(e,f,g){if(typeof f=='object'){g=f;f=0}if(typeof g=='function')g={onAfter:g};if(e=='max')e=9e9;g=$.extend({},h.defaults,g);f=f||g.duration;g.queue=g.queue&&g.axis.length>1;if(g.queue)f/=2;g.offset=both(g.offset);g.over=both(g.over);return this._scrollable().each(function(){if(e==null)return;var d=this,$elem=$(d),targ=e,toff,attr={},win=$elem.is('html,body');switch(typeof targ){case'number':case'string':if(/^([+-]=?)?\d+(\.\d+)?(px|%)?$/.test(targ)){targ=both(targ);break}targ=$(targ,this);if(!targ.length)return;case'object':if(targ.is||targ.style)toff=(targ=$(targ)).offset()}$.each(g.axis.split(''),function(i,a){var b=a=='x'?'Left':'Top',pos=b.toLowerCase(),key='scroll'+b,old=d[key],max=h.max(d,a);if(toff){attr[key]=toff[pos]+(win?0:old-$elem.offset()[pos]);if(g.margin){attr[key]-=parseInt(targ.css('margin'+b))||0;attr[key]-=parseInt(targ.css('border'+b+'Width'))||0}attr[key]+=g.offset[pos]||0;if(g.over[pos])attr[key]+=targ[a=='x'?'width':'height']()*g.over[pos]}else{var c=targ[pos];attr[key]=c.slice&&c.slice(-1)=='%'?parseFloat(c)/100*max:c}if(g.limit&&/^\d+$/.test(attr[key]))attr[key]=attr[key]<=0?0:Math.min(attr[key],max);if(!i&&g.queue){if(old!=attr[key])animate(g.onAfterFirst);delete attr[key]}});animate(g.onAfter);function animate(a){$elem.animate(attr,f,g.easing,a&&function(){a.call(this,e,g)})}}).end()};h.max=function(a,b){var c=b=='x'?'Width':'Height',scroll='scroll'+c;if(!$(a).is('html,body'))return a[scroll]-$(a)[c.toLowerCase()]();var d='client'+c,html=a.ownerDocument.documentElement,body=a.ownerDocument.body;return Math.max(html[scroll],body[scroll])-Math.min(html[d],body[d])};function both(a){return typeof a=='object'?a:{top:a,left:a}}})(jQuery);
+
+/**
+ * LocalScrollTo
+ * Copyright (c) 2007-2010 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+ * Dual licensed under MIT and GPL.
+ * @author Ariel Flesler
+ * @version 1.2.8b
+ */
+;(function($){var g=location.href.replace(/#.*/,'');var h=$.localScroll=function(a){$('body').localScroll(a)};h.defaults={duration:1000,axis:'y',event:'click',stop:true,target:window,reset:true};h.hash=function(a){if(location.hash){a=$.extend({},h.defaults,a);a.hash=false;if(a.reset){var d=a.duration;delete a.duration;$(a.target).scrollTo(0,a);a.duration=d}scroll(0,location,a)}};$.fn.localScroll=function(b){b=$.extend({},h.defaults,b);return b.lazy?this.bind(b.event,function(e){var a=$([e.target,e.target.parentNode]).filter(filter)[0];if(a)scroll(e,a,b)}):this.find('a,area').filter(filter).bind(b.event,function(e){scroll(e,this,b)}).end().end();function filter(){return!!this.href&&!!this.hash&&this.href.replace(this.hash,'')==g&&(!b.filter||$(this).is(b.filter))}};function scroll(e,a,b){var c=a.hash.slice(1),elem=document.getElementById(c)||document.getElementsByName(c)[0];if(!elem)return;if(e)e.preventDefault();var d=$(b.target);if(b.lock&&d.is(':animated')||b.onBefore&&b.onBefore(e,elem,d)===false)return;if(b.stop)d._scrollable().stop(true);if(b.hash){var f=elem.id==c?'id':'name',$a=$('<a> </a>').attr(f,c).css({position:'absolute',top:$(window).scrollTop(),left:$(window).scrollLeft()});elem[f]='';$('body').prepend($a);location=a.hash;$a.remove();elem[f]=c}d.scrollTo(elem,b).trigger('notify.serialScroll',[elem])}})(jQuery);
+
+;
+/*!
+ * FooTable - Awesome Responsive Tables
+ * http://themergency.com/footable
+ *
+ * Requires jQuery - http://jquery.com/
+ *
+ * Copyright 2012 Steven Usher & Brad Vincent
+ * Released under the MIT license
+ * You are free to use FooTable in commercial projects as long as this copyright header is left intact.
+ *
+ * Date: 18 Nov 2012
+ */
+(function ($, w, undefined) {
+  w.footable = {
+    options: {
+      delay: 100, // The number of millseconds to wait before triggering the react event
+      breakpoints: { // The different screen resolution breakpoints
+        phone: 480,
+        tablet: 1024
+      },
+      parsers: {  // The default parser to parse the value out of a cell (values are used in building up row detail)
+        alpha: function (cell) {
+          return $(cell).data('value') || $.trim($(cell).text());
+        }
+      },
+      toggleSelector: ' > tbody > tr:not(.footable-row-detail)', //the selector to show/hide the detail row
+      createDetail: function (element, data) {  //creates the contents of the detail row
+        for (var i = 0; i < data.length; i++) {
+          element.append('<div><strong>' + data[i].name + '</strong>: ' + data[i].display + '</div>');
+        }
+      },
+      classes: {
+        loading : 'footable-loading',
+        loaded : 'footable-loaded',
+        sorted : 'footable-sorted',
+        descending : 'footable-sorted-desc',
+        indicator : 'footable-sort-indicator'
+      },
+      debug: false // Whether or not to log information to the console.
+    },
+
+    version: {
+      major: 0, minor: 1,
+      toString: function () {
+        return w.footable.version.major + '.' + w.footable.version.minor;
+      },
+      parse: function (str) {
+        version = /(\d+)\.?(\d+)?\.?(\d+)?/.exec(str);
+        return {
+          major: parseInt(version[1]) || 0,
+          minor: parseInt(version[2]) || 0,
+          patch: parseInt(version[3]) || 0
+        };
+      }
+    },
+
+    plugins: {
+      _validate: function (plugin) {
+        ///<summary>Simple validation of the <paramref name="plugin"/> to make sure any members called by Foobox actually exist.</summary>
+        ///<param name="plugin">The object defining the plugin, this should implement a string property called "name" and a function called "init".</param>
+
+        if (typeof plugin['name'] !== 'string') {
+          if (w.footable.options.debug == true) console.error('Validation failed, plugin does not implement a string property called "name".', plugin);
+          return false;
+        }
+        if (!$.isFunction(plugin['init'])) {
+          if (w.footable.options.debug == true) console.error('Validation failed, plugin "' + plugin['name'] + '" does not implement a function called "init".', plugin);
+          return false;
+        }
+        if (w.footable.options.debug == true) console.log('Validation succeeded for plugin "' + plugin['name'] + '".', plugin);
+        return true;
+      },
+      registered: [], // An array containing all registered plugins.
+      register: function (plugin, options) {
+        ///<summary>Registers a <paramref name="plugin"/> and its default <paramref name="options"/> with Foobox.</summary>
+        ///<param name="plugin">The plugin that should implement a string property called "name" and a function called "init".</param>
+        ///<param name="options">The default options to merge with the Foobox's base options.</param>
+
+        if (w.footable.plugins._validate(plugin)) {
+          w.footable.plugins.registered.push(plugin);
+          if (options != undefined && typeof options === 'object') $.extend(true, w.footable.options, options);
+          if (w.footable.options.debug == true) console.log('Plugin "' + plugin['name'] + '" has been registered with the Foobox.', plugin);
+        }
+      },
+      init: function (instance) {
+        ///<summary>Loops through all registered plugins and calls the "init" method supplying the current <paramref name="instance"/> of the Foobox as the first parameter.</summary>
+        ///<param name="instance">The current instance of the Foobox that the plugin is being initialized for.</param>
+
+        for(var i = 0; i < w.footable.plugins.registered.length; i++){
+          try {
+            w.footable.plugins.registered[i]['init'](instance);
+          } catch(err) {
+            if (w.footable.options.debug == true) console.error(err);
+          }
+        }
+      }
+    }
+  };
+
+  var instanceCount = 0;
+
+  $.fn.footable = function(options) {
+    ///<summary>The main constructor call to initialize the plugin using the supplied <paramref name="options"/>.</summary>
+    ///<param name="options">
+    ///<para>A JSON object containing user defined options for the plugin to use. Any options not supplied will have a default value assigned.</para>
+    ///<para>Check the documentation or the default options object above for more information on available options.</para>
+    ///</param>
+
+    options=options||{};
+    var o=$.extend(true,{},w.footable.options,options); //merge user and default options
+    return this.each(function () {
+      instanceCount++;
+      this.footable = new Footable(this, o, instanceCount);
+    });
+  };
+
+  //helper for using timeouts
+  function Timer() {
+    ///<summary>Simple timer object created around a timeout.</summary>
+    var t=this;
+    t.id=null;
+    t.busy=false;
+    t.start=function (code,milliseconds) {
+      ///<summary>Starts the timer and waits the specified amount of <paramref name="milliseconds"/> before executing the supplied <paramref name="code"/>.</summary>
+      ///<param name="code">The code to execute once the timer runs out.</param>
+      ///<param name="milliseconds">The time in milliseconds to wait before executing the supplied <paramref name="code"/>.</param>
+
+      if (t.busy) {return;}
+      t.stop();
+      t.id=setTimeout(function () {
+        code();
+        t.id=null;
+        t.busy=false;
+      },milliseconds);
+      t.busy=true;
+    };
+    t.stop=function () {
+      ///<summary>Stops the timer if its runnning and resets it back to its starting state.</summary>
+
+      if(t.id!=null) {
+        clearTimeout(t.id);
+        t.id=null;
+        t.busy=false;
+      }
+    };
+  };
+
+  function Footable(t, o, id) {
+    ///<summary>Inits a new instance of the plugin.</summary>
+    ///<param name="t">The main table element to apply this plugin to.</param>
+    ///<param name="o">The options supplied to the plugin. Check the defaults object to see all available options.</param>
+    ///<param name="id">The id to assign to this instance of the plugin.</param>
+
+    var ft = this;
+    ft.id = id;
+    ft.table = t;
+    ft.options = o;
+    ft.breakpoints = [];
+    ft.breakpointNames = '';
+    ft.columns = { };
+
+    var opt = ft.options;
+    var cls = opt.classes;
+
+    // This object simply houses all the timers used in the footable.
+    ft.timers = {
+      resize: new Timer(),
+      register: function (name) {
+        ft.timers[name] = new Timer();
+        return ft.timers[name];
+      }
+    };
+
+    w.footable.plugins.init(ft);
+
+    ft.init = function() {
+      var $window = $(w), $table = $(ft.table);
+
+      if ($table.hasClass(cls.loaded)) {
+        //already loaded FooTable for the table, so don't init again
+        ft.raise('footable_already_initialized');
+        return;
+      }
+
+      $table.addClass(cls.loading);
+
+      // Get the column data once for the life time of the plugin
+      $table.find('> thead > tr > th, > thead > tr > td').each(function() {
+        var data = ft.getColumnData(this);
+        ft.columns[data.index] = data;
+
+        var count = data.index + 1;
+        //get all the cells in the column
+        var $column = $table.find('> tbody > tr > td:nth-child(' + count + ')');
+        //add the className to the cells specified by data-class="blah"
+        if (data.className != null) $column.not('.footable-cell-detail').addClass(data.className);
+      });
+
+      // Create a nice friendly array to work with out of the breakpoints object.
+      for(var name in opt.breakpoints) {
+        ft.breakpoints.push({ 'name': name, 'width': opt.breakpoints[name] });
+        ft.breakpointNames += (name + ' ');
+      }
+
+      // Sort the breakpoints so the smallest is checked first
+      ft.breakpoints.sort(function(a, b) { return a['width'] - b['width']; });
+
+      //bind the toggle selector click events
+      ft.bindToggleSelectors();
+
+      ft.raise('footable_initializing');
+
+      $table.bind('footable_initialized', function (e) {
+        //resize the footable onload
+        ft.resize();
+
+        //remove the loading class
+        $table.removeClass(cls.loading);
+
+        //hides all elements within the table that have the attribute data-hide="init"
+        $table.find('[data-init="hide"]').hide();
+        $table.find('[data-init="show"]').show();
+
+        //add the loaded class
+        $table.addClass(cls.loaded);
+      });
+
+      $window
+        .bind('resize.footable', function () {
+          ft.timers.resize.stop();
+          ft.timers.resize.start(function() {
+            ft.raise('footable_resizing');
+            ft.resize();
+            ft.raise('footable_resized');
+          }, opt.delay);
+        });
+
+      ft.raise('footable_initialized');
+    };
+    
+    //moved this out into it's own function so that it can be called from other add-ons
+    ft.bindToggleSelectors = function() {
+      var $table = $(ft.table);
+      $table.find(opt.toggleSelector).unbind('click.footable').bind('click.footable', function (e) {
+        if ($table.is('.breakpoint')) {
+          var $row = $(this).is('tr') ? $(this) : $(this).parents('tr:first');
+          ft.toggleDetail($row.get(0));
+        }
+      });      
+    };
+
+    ft.parse = function(cell, column) {
+      var parser = opt.parsers[column.type] || opt.parsers.alpha;
+      return parser(cell);
+    };
+
+    ft.getColumnData = function(th) {
+      var $th = $(th), hide = $th.data('hide');
+      hide = hide || '';
+      hide = hide.split(',');
+      var data = {
+        'index': $th.index(),
+        'hide': { },
+        'type': $th.data('type') || 'alpha',
+        'name': $th.data('name') || $.trim($th.text()),
+        'ignore': $th.data('ignore') || false,
+        'className': $th.data('class') || null
+      };
+      data.hide['default'] = ($th.data('hide')==="all") || ($.inArray('default', hide) >= 0);
+
+      for(var name in opt.breakpoints) {
+        data.hide[name] = ($th.data('hide')==="all") || ($.inArray(name, hide) >= 0);
+      }
+      var e = ft.raise('footable_column_data', { 'column': { 'data': data, 'th': th } });
+      return e.column.data;
+    };
+
+    ft.getViewportWidth = function() {
+      return window.innerWidth || (document.body ? document.body.offsetWidth : 0);
+    };
+
+    ft.getViewportHeight = function() {
+      return window.innerHeight || (document.body ? document.body.offsetHeight : 0);
+    };
+
+    ft.hasBreakpointColumn = function(breakpoint) {
+      for(var c in ft.columns) {
+        if (ft.columns[c].hide[breakpoint]) {
+          return true;
+        }
+      }
+      return false;
+    };
+
+    ft.resize = function() {
+      var $table = $(ft.table);
+      var info = {
+        'width': $table.width(),                  //the table width
+        'height': $table.height(),                //the table height
+        'viewportWidth': ft.getViewportWidth(),   //the width of the viewport
+        'viewportHeight': ft.getViewportHeight(), //the width of the viewport
+        'orientation': null
+      };
+      info.orientation = info.viewportWidth > info.viewportHeight ? 'landscape' : 'portrait';
+
+      if (info.viewportWidth < info.width) info.width = info.viewportWidth;
+      if (info.viewportHeight < info.height) info.height = info.viewportHeight;
+
+      var pinfo = $table.data('footable_info');
+      $table.data('footable_info', info);
+
+      // This (if) statement is here purely to make sure events aren't raised twice as mobile safari seems to do
+      if (!pinfo || ((pinfo && pinfo.width && pinfo.width != info.width) || (pinfo && pinfo.height && pinfo.height != info.height))) {
+        var current = null, breakpoint;
+        for (var i = 0; i < ft.breakpoints.length; i++) {
+          breakpoint = ft.breakpoints[i];
+          if (breakpoint && breakpoint.width && info.width <= breakpoint.width) {
+            current = breakpoint;
+            break;
+          }
+        }
+
+        var breakpointName = (current == null ? 'default' : current['name']);
+
+        var hasBreakpointFired = ft.hasBreakpointColumn(breakpointName);
+
+        $table
+          .removeClass('default breakpoint').removeClass(ft.breakpointNames)
+          .addClass(breakpointName + (hasBreakpointFired ? ' breakpoint' : ''))
+          .find('> thead > tr > th').each(function() {
+            var data = ft.columns[$(this).index()];
+            var count = data.index + 1;
+            //get all the cells in the column
+            var $column = $table.find('> tbody > tr > td:nth-child(' + count + '), > tfoot > tr > td:nth-child(' + count + '), > colgroup > col:nth-child(' + count + ')').add(this);
+
+            if (data.hide[breakpointName] == false) $column.show();
+            else $column.hide();
+          })
+          .end()
+          .find('> tbody > tr.footable-detail-show').each(function() {
+            ft.createOrUpdateDetailRow(this);
+          });
+
+        $table.find('> tbody > tr.footable-detail-show:visible').each(function() {
+          var $next = $(this).next();
+          if ($next.hasClass('footable-row-detail')) {
+            if (breakpointName == 'default' && !hasBreakpointFired) $next.hide();
+            else $next.show();
+          }
+        });
+        
+        // adding .footable-last-column to the last th and td in order to allow for styling if the last column is hidden (which won't work using :last-child)
+       $table.find('> thead > tr > th.footable-last-column,> tbody > tr > td.footable-last-column').removeClass('footable-last-column');
+       $table.find('> thead > tr > th:visible:last,> tbody > tr > td:visible:last').addClass('footable-last-column');
+
+        ft.raise('footable_breakpoint_' + breakpointName, { 'info': info });
+      }
+    };
+
+    ft.toggleDetail = function(actualRow) {
+      var $row = $(actualRow),
+          created = ft.createOrUpdateDetailRow($row.get(0)),
+          $next = $row.next();
+
+      if (!created && $next.is(':visible')) {
+        $row.removeClass('footable-detail-show');
+        //only hide the next row if it's a detail row
+        if($next.hasClass('footable-row-detail'))
+          $next.hide();
+      } else {
+        $row.addClass('footable-detail-show');
+        $next.show();
+      }
+    };
+
+    ft.createOrUpdateDetailRow = function (actualRow) {
+      var $row = $(actualRow), $next = $row.next(), $detail, values = [];
+      if ($row.is(':hidden')) return; //if the row is hidden for some readon (perhaps filtered) then get out of here
+      $row.find('> td:hidden').each(function () {
+        var column = ft.columns[$(this).index()];
+        if (column.ignore == true) return true;
+        values.push({ 'name': column.name, 'value': ft.parse(this, column), 'display': $.trim($(this).html()) });
+      });
+      if(values.length == 0) //return if we don't have any data to show
+        return;
+      var colspan = $row.find('> td:visible').length;
+      var exists = $next.hasClass('footable-row-detail');
+      if (!exists) { // Create
+        $next = $('<tr class="footable-row-detail"><td class="footable-cell-detail"><div class="footable-row-detail-inner"></div></td></tr>');
+        $row.after($next);
+      }
+      $next.find('> td:first').attr('colspan', colspan);
+      $detail = $next.find('.footable-row-detail-inner').empty();
+      opt.createDetail($detail, values);
+      return !exists;
+    };
+
+    ft.raise = function(eventName, args) {
+      args = args || { };
+      var def = { 'ft': ft };
+      $.extend(true, def, args);
+      var e = $.Event(eventName, def);
+      if (!e.ft) { $.extend(true, e, def); } //pre jQuery 1.6 which did not allow data to be passed to event object constructor
+      $(ft.table).trigger(e);
+      return e;
+    };
+
+    ft.init();
+    return ft;
+  };
+})(jQuery, window);
+;
+/** ajax load "more comments" **/
+var variety_comments = {
+
+    first_load: 0,
+
+    more_comments: function( postid ) {
+        if( 0 == this.first_load ) {
+            jQuery( "#comment-list-wrapper.commentlist-partial-hidden .comment").show();
+            jQuery( "#comment-list-wrapper").removeClass("commentlist-partial-hidden");
+            this.first_load++;
+            jQuery('#more-comments').html('Older Comments');
+
+            var pagenum = jQuery('#more-comments').attr('pagenum');
+            if ( jQuery('#more-comments').attr('maxpages') <= pagenum )
+                jQuery('#more-comments').hide();
+
+            return false;
+        }
+
+        jQuery('#more-comments').html('(loading)');
+
+        var pagenum = parseInt( jQuery('#more-comments').attr('pagenum') ) + 1;
+
+        jQuery.get( variety_ajax.ajaxurl, { action: 'more_comments', pagenum: pagenum, post_id: postid },
+            function(response) {
+                jQuery('ol#comment-list-wrapper').append(response);
+
+                if ( jQuery('#more-comments').attr('maxpages') <= pagenum ) {
+                    jQuery('#more-comments').hide();
+                } else {
+                    jQuery('#more-comments').attr('pagenum',pagenum);
+                }
+
+                jQuery('#more-comments').html('Older Comments');
+            }
+        );
+
+        return false;
+    }
+};
+var variety_lazy_load = variety_lazy_load || {};
+variety_lazy_load.posts = {
+
+	offset: -1,
+
+	load_posts: function ( data, element ) {
+		data['action'] = 'v-ajax';
+		data['offset'] = ++this.offset;
+		data['post_id'] = jQuery( element ).data( "post-id" );
+		this.ajax_request( data, element );
+
+	},
+	ajax_request: function ( data, element ) {
+
+		var request_url = "/" + data['action'] + "/" + data["type"] + "/" + data['post_id'] + "/" + data['offset'] + "/";
+
+		jQuery.get( request_url, function ( response ) {
+			if ( -1 == response.indexOf( 'document' ) ) {
+				jQuery( element ).before( response );
+				jQuery( "img.lazy" ).lazyload();
+				jQuery.waypoints( 'refresh' );
+			} else {
+				//we have doc.write bail
+			}
+			jQuery( '.variety-lazy-load-posts img' ).hide();
+		} );
+	},
+	waypoints_load: function () {
+
+		jQuery( '.variety-lazy-load-posts' ).waypoint( { offset: "100%", handler: function ( direction ) {
+
+			if ( "down" != direction ) {
+				return;
+			}
+
+			if ( variety_lazy_load.posts.offset < 1 ) {
+				jQuery( '.variety-lazy-load-posts img' ).show();
+				VarietyEvent.track( 'articles', 'article-river', 'view-block-' + (variety_lazy_load.posts.offset + 2) );
+				variety_lazy_load.posts.load_posts( { "type": "article-river" }, this );
+			} else {
+				jQuery( '.variety-lazy-load-posts' ).waypoint( 'disable' );
+			}
+		}} );
+	}
+}
+
+jQuery( document ).ready( function () {
+	variety_lazy_load.posts.waypoints_load();
+} );;
+/*!
+ * Socialite v2.1
+ * http://socialitejs.com
+ * Copyright (c) 2011 David Bushell
+ * Dual-licensed under the BSD or MIT licenses: http://socialitejs.com/license.txt
+ *
+ * Since v2.1 - Hau Vong
+ *    Add support to new face book share button
+ */
+window.Socialite = (function(window, document, undefined)
+{
+	'use strict';
+
+	var uid = 0,
+		instances = [],
+		networks = {},
+		widgets = {},
+		rstate = /^($|loaded|complete)/,
+		euc = window.encodeURIComponent;
+
+	var socialite = {
+		settings: {},
+		trim: function(str)
+		{
+			return str.trim ? str.trim() : str.replace(/^\s+|\s+$/g, '');
+		},
+		hasClass: function(el, cn)
+		{
+			return (' ' + el.className + ' ').indexOf(' ' + cn + ' ') !== -1;
+		},
+		addClass: function(el, cn)
+		{
+			if (!socialite.hasClass(el, cn)) {
+				el.className = (el.className === '') ? cn : el.className + ' ' + cn;
+			}
+		},
+		removeClass: function(el, cn)
+		{
+			el.className = socialite.trim(' ' + el.className + ' '.replace(' ' + cn + ' ', ' '));
+		},
+		/**
+		 * Copy properties of one object to another
+		 */
+		extendObject: function(to, from, overwrite)
+		{
+			for (var prop in from) {
+				var hasProp = to[prop] !== undefined;
+				if (hasProp && typeof from[prop] === 'object') {
+					socialite.extendObject(to[prop], from[prop], overwrite);
+				} else if (overwrite || !hasProp) {
+					to[prop] = from[prop];
+				}
+			}
+		},
+		/**
+		 * Return elements with a specific class
+		 *
+		 * @param context - containing element to search within
+		 * @param cn      - class name to search for
+		 *
+		 */
+		getElements: function(context, cn)
+		{
+			// copy to a new array to avoid a live NodeList
+			var i = 0,
+					el = [],
+					gcn = !!context.getElementsByClassName,
+					all = gcn ? context.getElementsByClassName(cn) : context.getElementsByTagName('*');
+			for (; i < all.length; i++) {
+				if (gcn || socialite.hasClass(all[i], cn)) {
+					el.push(all[i]);
+				}
+			}
+			return el;
+		},
+		/**
+		 * Return data-* attributes of element as a query string (or object)
+		 *
+		 * @param el       - the element
+		 * @param noprefix - (optional) if true, remove "data-" from attribute names
+		 * @param nostr    - (optional) if true, return attributes in an object
+		 *
+		 */
+		getDataAttributes: function(el, noprefix, nostr)
+		{
+			var i = 0,
+					str = '',
+					obj = {},
+					attr = el.attributes;
+			for (; i < attr.length; i++) {
+				var key = attr[i].name,
+						  val = attr[i].value;
+				if (val.length && key.indexOf('data-') === 0) {
+					if (noprefix) {
+						key = key.substring(5);
+					}
+					if (nostr) {
+						obj[key] = val;
+					} else {
+						str += euc(key) + '=' + euc(val) + '&';
+					}
+				}
+			}
+			return nostr ? obj : str;
+		},
+		/**
+		 * Copy data-* attributes from one element to another
+		 *
+		 * @param from     - element to copy from
+		 * @param to       - element to copy to
+		 * @param noprefix - (optional) if true, remove "data-" from attribute names
+		 * @param nohyphen - (optional) if true, convert hyphens to underscores in the attribute names
+		 *
+		 */
+		copyDataAttributes: function(from, to, noprefix, nohyphen)
+		{
+			// `nohyphen` was needed for Facebook's <fb:like> elements - remove as no longer used?
+			var attr = socialite.getDataAttributes(from, noprefix, true);
+			for (var i in attr) {
+				to.setAttribute(nohyphen ? i.replace(/-/g, '_') : i, attr[i]);
+			}
+		},
+		/**
+		 * Create iframe element
+		 *
+		 * @param src      - iframe URL (src attribute)
+		 * @param instance - (optional) socialite instance to activate on iframe load
+		 *
+		 */
+		createIframe: function(src, instance)
+		{
+			// Socialite v2 has slashed the amount of manual iframe creation, we should aim to avoid this entirely
+			var iframe = document.createElement('iframe');
+			iframe.style.cssText = 'overflow: hidden; border: none;';
+			socialite.extendObject(iframe, {src: src, allowtransparency: 'true', frameborder: '0', scrolling: 'no'}, true);
+			if (instance) {
+				iframe.onload = iframe.onreadystatechange = function()
+				{
+					if (rstate.test(iframe.readyState || '')) {
+						iframe.onload = iframe.onreadystatechange = null;
+						socialite.activateInstance(instance);
+					}
+				};
+			}
+			return iframe;
+		},
+		/**
+		 * Returns true if network script has loaded
+		 */
+		networkReady: function(name)
+		{
+			return networks[name] ? networks[name].loaded : undefined;
+		},
+		/**
+		 * Append network script to the document
+		 */
+		appendNetwork: function(network)
+		{
+			// the activation process is getting a little confusing for some networks
+			// it would appear a script load event does not mean its global object exists yet
+			// therefore the first call to `activateAll` may have no effect whereas the second call does, e.g. via `window.twttr.ready`
+
+			if (!network || network.appended) {
+				return;
+			}
+			// `network.append` and `network.onload` can cancel progress
+			if (typeof network.append === 'function' && network.append(network) === false) {
+				network.appended = network.loaded = true;
+				socialite.activateAll(network);
+				return;
+			}
+
+			if (network.script) {
+				network.el = document.createElement('script');
+				socialite.extendObject(network.el, network.script, true);
+				network.el.async = true;
+				network.el.onload = network.el.onreadystatechange = function()
+				{
+					if (rstate.test(network.el.readyState || '')) {
+						network.el.onload = network.el.onreadystatechange = null;
+						network.loaded = true;
+						if (typeof network.onload === 'function' && network.onload(network) === false) {
+							return;
+						}
+						socialite.activateAll(network);
+					}
+				};
+				document.body.appendChild(network.el);
+			}
+			network.appended = true;
+		},
+		/**
+		 * Remove network script from the document
+		 */
+		removeNetwork: function(network)
+		{
+			if (!socialite.networkReady(network.name)) {
+				return false;
+			}
+			if (network.el.parentNode) {
+				network.el.parentNode.removeChild(network.el);
+			}
+			return !(network.appended = network.loaded = false);
+		},
+		/**
+		 * Remove and re-append network script to the document
+		 */
+		reloadNetwork: function(name)
+		{
+			// This is a last-ditch effort for half-baked scripts
+			var network = networks[name];
+			if (network && socialite.removeNetwork(network)) {
+				socialite.appendNetwork(network);
+			}
+		},
+		/**
+		 * Create new Socialite instance
+		 *
+		 * @param el     - parent element that will hold the new instance
+		 * @param widget - widget the instance belongs to
+		 *
+		 */
+		createInstance: function(el, widget)
+		{
+			var proceed = true,
+					  instance = {
+				el: el,
+				uid: uid++,
+				widget: widget
+			};
+			instances.push(instance);
+			if (widget.process !== undefined) {
+				proceed = (typeof widget.process === 'function') ? widget.process(instance) : false;
+			}
+			if (proceed) {
+				socialite.processInstance(instance);
+			}
+			instance.el.setAttribute('data-socialite', instance.uid);
+			instance.el.className = 'socialite ' + widget.name + ' socialite-instance';
+			return instance;
+		},
+		/**
+		 * Process a socialite instance to an intermediate state prior to load
+		 */
+		processInstance: function(instance)
+		{
+			var el = instance.el;
+			instance.el = document.createElement('div');
+			instance.el.className = el.className;
+			socialite.copyDataAttributes(el, instance.el);
+			// stop over-zealous scripts from activating all instances
+			if (el.nodeName.toLowerCase() === 'a' && !el.getAttribute('data-default-href')) {
+				instance.el.setAttribute('data-default-href', el.getAttribute('href'));
+			}
+			var parent = el.parentNode;
+			parent.insertBefore(instance.el, el);
+			parent.removeChild(el);
+		},
+		/**
+		 * Activate a socialite instance
+		 */
+		activateInstance: function(instance)
+		{
+			if (instance && !instance.loaded) {
+				instance.loaded = true;
+				if (typeof instance.widget.activate === 'function') {
+					instance.widget.activate(instance);
+				}
+				socialite.addClass(instance.el, 'socialite-loaded');
+				return instance.onload ? instance.onload(instance.el) : null;
+			}
+		},
+		/**
+		 * Activate all socialite instances belonging to a network
+		 */
+		activateAll: function(network)
+		{
+			if (typeof network === 'string') {
+				network = networks[network];
+			}
+			for (var i = 0; i < instances.length; i++) {
+				var instance = instances[i];
+				if (instance.init && instance.widget.network === network) {
+					socialite.activateInstance(instance);
+				}
+			}
+		},
+		/**
+		 * Load socialite instances
+		 *
+		 * @param context - (optional) containing element to search within
+		 * @param el      - (optional) individual or an array of elements to load
+		 * @param w       - (optional) widget name
+		 * @param onload  - (optional) function to call after each socialite instance has loaded
+		 * @param process - (optional) process but don't load network (if true)
+		 *
+		 */
+		load: function(context, el, w, onload, process)
+		{
+			// use document as context if unspecified
+			context = (context && typeof context === 'object' && context.nodeType === 1) ? context : document;
+
+			// if no elements search within the context and recurse
+			if (!el || typeof el !== 'object') {
+				socialite.load(context, socialite.getElements(context, 'socialite'), w, onload, process);
+				return;
+			}
+
+			var i;
+
+			// if array of elements load each one individually
+			if (/Array/.test(Object.prototype.toString.call(el))) {
+				for (i = 0; i < el.length; i++) {
+					socialite.load(context, el[i], w, onload, process);
+				}
+				return;
+			}
+
+			// nothing was found...
+			if (el.nodeType !== 1) {
+				return;
+			}
+
+			// if widget name not specified search within the element classes
+			if (!w || !widgets[w]) {
+				w = null;
+				var classes = el.className.split(' ');
+				for (i = 0; i < classes.length; i++) {
+					if (widgets[classes[i]]) {
+						w = classes[i];
+						break;
+					}
+				}
+				if (!w) {
+					return;
+				}
+			}
+
+			// find or create the Socialite instance
+			var instance,
+					  widget = widgets[w],
+					  sid = parseInt(el.getAttribute('data-socialite'), 10);
+			if (!isNaN(sid)) {
+				for (i = 0; i < instances.length; i++) {
+					if (instances[i].uid === sid) {
+						instance = instances[i];
+						break;
+					}
+				}
+			} else {
+				instance = socialite.createInstance(el, widget);
+			}
+
+			// return if just processing (or no instance found)
+			if (process || !instance) {
+				return;
+			}
+
+			// initialise the instance
+			if (!instance.init) {
+				instance.init = true;
+				instance.onload = (typeof onload === 'function') ? onload : null;
+				widget.init(instance);
+			}
+
+			// append the parent network (all instances will be activated onload)
+			// or activate immediately if network has already loaded
+			if (!widget.network.appended) {
+				socialite.appendNetwork(widget.network);
+			} else {
+				if (socialite.networkReady(widget.network.name)) {
+					socialite.activateInstance(instance);
+				}
+			}
+		},
+		/**
+		 * Load a single element
+		 *
+		 * @param el     - an individual element
+		 * @param w      - (optional) widget for this socialite instance
+		 * @param onload - (optional) function to call once each instance has loaded
+		 *
+		 */
+		activate: function(el, w, onload)
+		{
+			// skip the first few steps
+			window.Socialite.load(null, el, w, onload);
+		},
+		/**
+		 * Process elements to an intermediate state prior to load
+		 *
+		 * @param context - containing element to search within
+		 * @param el      - (optional) individual or an array of elements to load
+		 * @param w       - (optional) widget name
+		 *
+		 */
+		process: function(context, el, w)
+		{
+			// stop before widget initialises instance
+			window.Socialite.load(context, el, w, null, true);
+		},
+		/**
+		 * Add a new social network
+		 *
+		 * @param name   - unique name for network
+		 * @param params - additional data and callbacks
+		 *
+		 */
+		network: function(n, params)
+		{
+			networks[n] = {
+				name: n,
+				el: null,
+				appended: false,
+				loaded: false,
+				widgets: {}
+			};
+			if (params) {
+				socialite.extendObject(networks[n], params);
+			}
+		},
+		/**
+		 * Add a new social widget
+		 *
+		 * @param name   - name of owner network
+		 * @param w      - unique name for widget
+		 * @param params - additional data and callbacks
+		 *
+		 */
+		widget: function(n, w, params)
+		{
+			params.name = n + '-' + w;
+			if (!networks[n] || widgets[params.name]) {
+				return;
+			}
+			params.network = networks[n];
+			networks[n].widgets[w] = widgets[params.name] = params;
+		},
+		/**
+		 * Change the default Socialite settings for each network
+		 */
+		setup: function(params)
+		{
+			socialite.extendObject(socialite.settings, params, true);
+		}
+
+	};
+
+	return socialite;
+
+})(window, window.document);
+
+/**
+ * Socialite Extensions - Pick 'n' Mix!
+ */
+(function(window, document, Socialite, undefined)
+{
+
+	// default to the Queen's English
+	Socialite.setup({
+		facebook: {
+			lang: 'en_GB',
+			appId: null
+		},
+		twitter: {
+			lang: 'en'
+		},
+		googleplus: {
+			lang: 'en-GB'
+		}
+	});
+
+
+	// Facebook
+	// http://developers.facebook.com/docs/reference/plugins/like/
+	// http://developers.facebook.com/docs/reference/javascript/FB.init/
+
+	Socialite.network('facebook', {
+		script: {
+			src: '//connect.facebook.net/{{language}}/all.js',
+			id: 'facebook-jssdk'
+		},
+		append: function(network)
+		{
+			var fb = document.createElement('div'),
+					settings = Socialite.settings.facebook,
+					events = {onlike: 'edge.create', onunlike: 'edge.remove', onsend: 'message.send'};
+			fb.id = 'fb-root';
+			document.body.appendChild(fb);
+			network.script.src = network.script.src.replace('{{language}}', settings.lang);
+			window.fbAsyncInit = function() {
+
+				var options = {
+					appId: settings.appId,
+					xfbml: true
+				};
+
+				// use options here to support fb init override for future support
+				if (typeof settings.options === 'object') {
+					Socialite.extendObject(options, settings.options);
+				}
+
+				window.FB.init(options);
+				for (var e in events) {
+					if (typeof settings[e] === 'function') {
+						window.FB.Event.subscribe(events[e], settings[e]);
+					}
+				}
+			};
+		}
+	});
+
+	Socialite.widget('facebook', 'like', {
+		init: function(instance)
+		{
+			var el = document.createElement('div');
+			el.className = 'fb-like';
+			Socialite.copyDataAttributes(instance.el, el);
+			instance.el.appendChild(el);
+			if (window.FB && window.FB.XFBML) {
+				window.FB.XFBML.parse(instance.el);
+			}
+		}
+	});
+
+	// https://developers.facebook.com/blog/post/2013/11/06/introducing-new-like-and-share-buttons/
+	Socialite.widget('facebook', 'share', {
+		init: function(instance)
+		{
+			var el = document.createElement('div');
+			el.className = 'fb-share-button';
+			Socialite.copyDataAttributes(instance.el, el);
+			instance.el.appendChild(el);
+			if (window.FB && window.FB.XFBML) {
+				window.FB.XFBML.parse(instance.el);
+			}
+		}
+	});
+
+
+	// Twitter
+	// https://dev.twitter.com/docs/tweet-button/
+	// https://dev.twitter.com/docs/intents/events/
+	// https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSocial#twitter
+
+	Socialite.network('twitter', {
+		script: {
+			src: '//platform.twitter.com/widgets.js',
+			id: 'twitter-wjs',
+			charset: 'utf-8'
+		},
+		append: function()
+		{
+			var notwttr = (typeof window.twttr !== 'object'),
+					settings = Socialite.settings.twitter,
+					events = ['click', 'tweet', 'retweet', 'favorite', 'follow'];
+			if (notwttr) {
+				window.twttr = (t = {_e: [], ready: function(f) {
+						t._e.push(f);
+					}});
+			}
+			window.twttr.ready(function(twttr)
+			{
+				for (var i = 0; i < events.length; i++) {
+					var e = events[i];
+					if (typeof settings['on' + e] === 'function') {
+						twttr.events.bind(e, settings['on' + e]);
+					}
+				}
+				Socialite.activateAll('twitter');
+			});
+			return notwttr;
+		}
+	});
+
+	var twitterInit = function(instance)
+	{
+		var el = document.createElement('a');
+		el.className = instance.widget.name + '-button';
+		Socialite.copyDataAttributes(instance.el, el);
+		el.setAttribute('href', instance.el.getAttribute('data-default-href'));
+		el.setAttribute('data-lang', instance.el.getAttribute('data-lang') || Socialite.settings.twitter.lang);
+		instance.el.appendChild(el);
+	};
+
+	var twitterActivate = function(instance)
+	{
+		if (window.twttr && typeof window.twttr.widgets === 'object' && typeof window.twttr.widgets.load === 'function') {
+			window.twttr.widgets.load();
+		}
+	};
+
+	Socialite.widget('twitter', 'share', {init: twitterInit, activate: twitterActivate});
+	Socialite.widget('twitter', 'follow', {init: twitterInit, activate: twitterActivate});
+	Socialite.widget('twitter', 'hashtag', {init: twitterInit, activate: twitterActivate});
+	Socialite.widget('twitter', 'mention', {init: twitterInit, activate: twitterActivate});
+
+	Socialite.widget('twitter', 'embed', {
+		process: function(instance)
+		{
+			instance.innerEl = instance.el;
+			if (!instance.innerEl.getAttribute('data-lang')) {
+				instance.innerEl.setAttribute('data-lang', Socialite.settings.twitter.lang);
+			}
+			instance.el = document.createElement('div');
+			instance.el.className = instance.innerEl.className;
+			instance.innerEl.className = '';
+			instance.innerEl.parentNode.insertBefore(instance.el, instance.innerEl);
+			instance.el.appendChild(instance.innerEl);
+		},
+		init: function(instance)
+		{
+			instance.innerEl.className = 'twitter-tweet';
+		},
+		activate: twitterActivate
+	});
+
+
+	// Google+
+	// https://developers.google.com/+/plugins/+1button/
+	// Google does not support IE7
+
+	Socialite.network('googleplus', {
+		script: {
+			src: '//apis.google.com/js/plusone.js'
+		},
+		append: function(network)
+		{
+			if (window.gapi) {
+				return false;
+			}
+			window.___gcfg = {
+				lang: Socialite.settings.googleplus.lang,
+				parsetags: 'explicit'
+			};
+		}
+	});
+
+	var googleplusInit = function(instance)
+	{
+		var el = document.createElement('div');
+		el.className = 'g-' + instance.widget.gtype;
+		Socialite.copyDataAttributes(instance.el, el);
+		instance.el.appendChild(el);
+		instance.gplusEl = el;
+	};
+
+	var googleplusEvent = function(instance, callback) {
+		return (typeof callback !== 'function') ? null : function(data) {
+			callback(instance.el, data);
+		};
+	};
+
+	var googleplusActivate = function(instance)
+	{
+		var type = instance.widget.gtype;
+		if (window.gapi && window.gapi[type]) {
+			var settings = Socialite.settings.googleplus,
+					  params = Socialite.getDataAttributes(instance.el, true, true),
+					  events = ['onstartinteraction', 'onendinteraction', 'callback'];
+			for (var i = 0; i < events.length; i++) {
+				params[events[i]] = googleplusEvent(instance, settings[events[i]]);
+			}
+			window.gapi[type].render(instance.gplusEl, params);
+		}
+	};
+
+	Socialite.widget('googleplus', 'one', {init: googleplusInit, activate: googleplusActivate, gtype: 'plusone'});
+	Socialite.widget('googleplus', 'share', {init: googleplusInit, activate: googleplusActivate, gtype: 'plus'});
+	Socialite.widget('googleplus', 'badge', {init: googleplusInit, activate: googleplusActivate, gtype: 'plus'});
+
+
+	// LinkedIn
+	// http://developer.linkedin.com/plugins/share-button/
+
+	Socialite.network('linkedin', {
+		script: {
+			src: '//platform.linkedin.com/in.js'
+		}
+	});
+
+	var linkedinInit = function(instance)
+	{
+		var el = document.createElement('script');
+		el.type = 'IN/' + instance.widget.intype;
+		Socialite.copyDataAttributes(instance.el, el);
+		instance.el.appendChild(el);
+		if (typeof window.IN === 'object' && typeof window.IN.parse === 'function') {
+			window.IN.parse(instance.el);
+			Socialite.activateInstance(instance);
+		}
+	};
+
+	Socialite.widget('linkedin', 'share', {init: linkedinInit, intype: 'Share'});
+	Socialite.widget('linkedin', 'recommend', {init: linkedinInit, intype: 'RecommendProduct'});
+	Socialite.widget('linkedin', 'follow', {init: linkedinInit, intype: 'FollowCompany'});
+
+})(window, window.document, window.Socialite);
+
+/**
+ * Execute any queued functions (don't enqueue before the document has loaded!)
+ */
+(function() {
+	var s = window._socialite;
+	if (/Array/.test(Object.prototype.toString.call(s))) {
+		for (var i = 0, len = s.length; i < len; i++) {
+			if (typeof s[i] === 'function') {
+				s[i]();
+			}
+		}
+	}
+})();
+;
+/*!
+ * Socialite Plugin
+ * Copyright (c) 2013 PMC
+ * Author: PMC, Hau Vong
+ */
+
+jQuery(function(){
+	if ( typeof Socialite === 'undefined' || typeof jQuery.fn.waypoint !== 'function' ) {
+		return;
+	}
+
+	if ( typeof window._socialite_settings === 'object' ) {
+		Socialite.setup( window._socialite_settings );
+	}
+
+	
+	jQuery(".social").waypoint(function() {
+			Socialite.load(this);
+		},
+		{
+			offset: '150%',
+			triggerOnce: true
+		});
+});
+
+if ( typeof Socialite === 'object' ) {
+	
+	Socialite.network('pinterest',{
+		script: {
+			src: '//assets.pinterest.com/js/pinit.js',
+			id:  'pinterest-js'
+		}
+	});
+
+
+	Socialite.widget('pinterest','pin-it',{
+		init: function(instance) {
+			var params = '';
+			if ( jQuery(instance.el).attr('data-media') ) {
+				params += "&media=" + escape(jQuery(instance.el).attr('data-media'));
+			}
+			if ( jQuery(instance.el).attr('data-description') ) {
+				params += "&description=" + escape(jQuery(instance.el).attr('data-description'));
+			}
+			var el = jQuery('<a class="pin-it-button"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>')
+				.attr('href','http://pinterest.com/pin/create/button/?url='+ escape(jQuery(instance.el).attr('data-href')) + params);
+
+			jQuery(jQuery(instance.el).prop('attributes')).each(function(){
+				if ( /^data-pin/.test(this.name) ) {
+					jQuery(el).attr(this.name,this.value);
+				}
+			});
+			jQuery(instance.el).append(el);
+		}
+	});
+
+};

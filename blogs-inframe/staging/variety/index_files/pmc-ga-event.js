@@ -1,0 +1,6 @@
+var PMC_GA_Event={viewed:{},current_categgory:'',track:function(category,action,label,nonInteractive,value){if(typeof _gaq==='undefined'){return;}
+var event=['_trackEvent',category||PMC_GA_Event.current_category,action,label,0,true];if(typeof nonInteractive!=='undefined'){event.push(value||1);event.push(nonInteractive);}else if(value){event.push(value);}
+try{_gaq.push(event);}catch(err){}},monitor_view_scroll:function(category,list){if(typeof jQuery.fn.waypoint!=='function'){return;}
+jQuery.each(list,function(key,value){if(value.action==='*'&&typeof value.element==='undefined'&&typeof value.action_attr!=='undefined'){value.element='['+value.action_attr+']';}
+jQuery(value.element).waypoint(function(){var label=value.label||'view',action,id;if(value.action==='*'&&typeof(value.action_attr)!=='undefined'){action=jQuery(this).attr(value.action_attr);}else{action=value.action;}
+id=category+action+label;if(!PMC_GA_Event.viewed[id]){PMC_GA_Event.viewed[id]=true;PMC_GA_Event.track(category,action,label,true);}},{offset:'100%'});});}};

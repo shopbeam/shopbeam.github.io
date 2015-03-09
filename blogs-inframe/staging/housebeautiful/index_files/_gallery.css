@@ -1,0 +1,39 @@
+#leftColumn{width:600px;margin-right:27px;float:left;}
+#rightRail {float: right;width: 336px;}
+#rightRail #adGallery {margin-bottom:20px; margin-top:10px; }
+#rightRail #adGallery .advertisment {padding:1px 0; background-color:#F4F9FC; text-align:center; height:14px; font-family: Arial, sans-serif; font-size:10px; color:#999; text-transform:uppercase;}
+#rightRail #adGallery #adContainer {background-color:#ddd; text-align:center;}
+
+#rightRail #specialOffer {margin-top:10px;}
+#rightRail #specialOffer #offerTitle {padding:1px 0; background-color:#F4F9FC; text-align:center; height:14px; font-size:10px; color:#999; font-family: Arial, sans-serif; text-transform:uppercase;}
+#rightRail #specialOffer #offerContainer {padding-left:15px; background-color:#F4F9FC; padding-bottom:12px; text-align:center;}
+
+#leftColumn #breadcrumb{margin-bottom:34px;}
+#galleryContent{float:left;}
+.feature {float: left;width: 120px;margin-right: 40px;}
+.feature.last{margin:0;}
+#galleryHeader h1{font:bold 26px/26px Arial,Helvetica,sans-serif;color:#82a53c;clear:both;}
+#galleryHeader h2{font:15px/18px Arial,Helvetica,sans-serif;color:#333;margin-top:8px;}
+.feature .header h1 a, #galleryContent hgroup h1 a {font:bold 14px/16px Arial,Helvetica,sans-serif;color:#4e8bf6;}
+.feature .header h1 a:hover{text-decoration: underline;}
+.feature .header h1, #galleryContent hgroup h1 {margin-bottom:7px;margin-top:8px;}
+.feature .header h2, #galleryContent article p {font:14px/16px Arial,Helvetica,sans-serif;color:#666;}
+.feature img{border:1px solid #DADADA;}
+#leftColumn .vl_main{border:0;margin-top:23px;border-bottom:1px solid black;padding-bottom:11px;margin-bottom:28px;width:100%;}
+#leftColumn .vl_main .tools{margin:0;}
+#archiveLink{text-align:right;clear:both;border-top:2px dotted #ccc;width:100%;padding-top:9px;margin-bottom:27px;}
+#archiveLink a{font:bold 13px/18px Arial,Helvetica,sans-serif;color:#4e8bf6;position:relative;padding-right:9px;}
+#archiveLink a:hover{text-decoration: underline;}
+#archiveLink a::after {content: " ";background: url(/cm/housebeautiful/site_images/homepage/arrow.gif) no-repeat 2px 0;width: 11px;height: 9px;position:absolute;top:4px;}
+#ams_circ_hbu_620x200{border:1px solid #ededed;margin-bottom:14px;text-align:center;width:627px;}
+#ams_circ_hbu_620x200 span{font:bold 10px Arial,Helvetica,sans-serif;color:#999;}
+.clear{clear:both;height:37px;}
+.vl_main .tools a{background: url("/cm/housebeautiful/site_images/redesign_viral/viral_tools_bg2.png") no-repeat scroll 0 0 transparent;}
+.vl_main .tools .email a{background-position: 0px -3px; height: 15px; width: 17px;}
+.vl_main .tools .print a{background-position: -25px -3px; height: 15px; width: 17px;}
+.vl_main .viral_tools .fbshare a{background: url("/cm/housebeautiful/site_images/redesign_viral/viral_tools_bg.png") no-repeat scroll 0 0 transparent;}
+.vl_main .tools .comment{margin-right: 10px;}
+.vl_main .tools .comment a{background-position: -52px -6px; color: transparent; float: left; margin-right: 4px; margin-top: 5px; text-indent: -9999em; width: 16px;}
+.soc_commentcount{background: url("/cm/shared/social/img/comment_bubble_COS.gif") repeat scroll 0 0 transparent; float: left; line-height: 18px; padding: 0 0 0 10px;}
+.soc_commentcountbin{background: url("/cm/shared/social/img/comment_bubble_COS.gif") repeat scroll right 0 transparent; height: 20px; padding: 0 5px 0 0;}
+.soc_commentcount .fb_comments_count{display: block !important; font-size: 11px; padding-top: 1px;}

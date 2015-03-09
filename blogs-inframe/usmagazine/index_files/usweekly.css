@@ -1,0 +1,1415 @@
+@charset "UTF-8";
+/* CSS Document */
+/*	--------------------------------------------------------------------------------------------------------------------------
+	body/global/reset Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, font, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+	}
+	html {
+		height:100%;	
+	}
+	body {
+		height:100%;
+		font:normal 12px Arial, Helvetica, sans-serif;
+	}
+	body.blackground {
+		background-color:#000;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	/* tables still need 'cellspacing="0"' in the markup */
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	.altText {
+		width:0; height:0;
+		display:block;
+		overflow:hidden;
+	}
+	.cleaner {
+		clear:both;
+		height:0px;
+		font-size:1px;
+		overflow:hidden;
+		border:none;
+		margin:0; padding:0;
+		background:transparent;
+	}
+	.clearfix:after {
+		content: ".";
+		display: block;
+		clear:both;
+		visibility:hidden;
+		line-height:0;
+		height:0;
+	}
+	.clearfix {
+		display:inline-block;
+	}	
+	html[xmlns] .clearfix {
+		display:block;
+	}
+	* html .clearfix {
+		height:1%;
+	}
+
+/*	--------------------------------------------------------------------------------------------------------------------------
+	skeleton styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+/*HEADER STYLES*/
+	#page-header {
+		width:100%; height:154px;
+		background:url(http://www.usmagazine.com/images/fe/global-page_header-background.png) top center repeat-x;
+		position:absolute;
+		top:0px;
+		left:0px;
+		z-index:200;
+	}
+		.takeover #page-header {
+			background:url(http://www.usmagazine.com/images/fe/global-page_header-background_takeover.png) top center no-repeat;
+		}
+		#page-header #header-content {
+			margin:0 auto; padding:24px 0 0 0;
+			width:990px;
+			position:relative;
+		}
+			h3.us-logo {
+					position:absolute;
+					top:24px;
+					left:10px;
+					width:170px; height:132px;
+					background:url(http://www.usmagazine.com/images/fe/global-h3-USweekly.png) top center no-repeat;
+					float:left;
+			}
+				h3.us-logo a {
+					width:171px; height:131px;
+					display:block;	
+				}
+			#page-header #header-content ul#navbar {
+				margin:90px 0 0 0;
+				width:811px; 
+				float:right;	
+			}
+				#page-header #header-content ul#navbar li {
+					display:inline;
+					float:left;
+					height:43px;	
+				}
+					#page-header #header-content ul#navbar li a {
+						height:43px;
+						display:block;
+						background:url(http://www.usmagazine.com/images/fe/global-sprite-navbar2.png) 0 0 no-repeat;
+					}
+						#page-header #header-content ul#navbar li.home a {
+							width:72px;
+							background-position:0 0;	
+						}
+							#page-header #header-content ul#navbar li.home a:hover {
+								background-position:0 -53px;	
+							}
+						#page-header #header-content ul#navbar li.news a {
+							width:78px;
+							background-position:-72px 0;	
+						}
+							#page-header #header-content ul#navbar li.news a:hover {
+								background-position:-72px -53px;	
+							}
+						#page-header #header-content ul#navbar li.photos a {
+							width:94px;
+							background-position:-150px 0;	
+						}
+							#page-header #header-content ul#navbar li.photos a:hover {
+								background-position:-150px -53px;	
+							}
+						#page-header #header-content ul#navbar li.videos a {
+							width:89px;
+							background-position:-244px 0;	
+						}
+							#page-header #header-content ul#navbar li.videos a:hover {
+								background-position:-244px -53px;	
+							}
+						#page-header #header-content ul#navbar li.style a {
+							width:80px;
+							background-position:-333px 0;	
+						}
+							#page-header #header-content ul#navbar li.style a:hover {
+								background-position:-333px -53px;	
+							}
+						#page-header #header-content ul#navbar li.beauty a {
+							width:92px;
+							background-position:-413px 0;	
+						}
+							#page-header #header-content ul#navbar li.beauty a:hover {
+								background-position:-413px -53px;	
+							}
+						#page-header #header-content ul#navbar li.moms a {
+							width:80px;
+							background-position:-505px 0;	
+						}
+							#page-header #header-content ul#navbar li.moms a:hover {
+								background-position:-505px -53px;	
+							}
+						#page-header #header-content ul#navbar li.body a {
+							width:77px;
+							background-position:-585px 0;	
+						}
+							#page-header #header-content ul#navbar li.body a:hover {
+								background-position:-585px -53px;	
+							}
+						#page-header #header-content ul#navbar li.entertainment a {
+							width:148px;
+							background-position:-662px 0;	
+						}
+							#page-header #header-content ul#navbar li.entertainment a:hover {
+								background-position:-662px -53px;	
+							}
+						/* NAVBAR ON STATES*/
+						
+						/*homepage*/
+						.homepage #page-header #header-content ul#navbar li.home a {
+							width:77px;
+							background:url(http://www.usmagazine.com/images/fe/global-nav-on_state2.png) 0 0 no-repeat;
+						}
+						.homepage #page-header #header-content ul#navbar li.news a {
+							width:73px;
+							background-position:-77px 0;
+						}
+							.homepage #page-header #header-content ul#navbar li.news a:hover {
+								width:73px;
+								background-position:-77px -53px;
+							}
+						.stylebeauty.news #page-header #header-content ul#navbar li.news a {
+							background-image:url("http://www.usmagazine.com/images/fe/global-sprite-navbar2.png");
+							width:114px;
+							background-position:-112px 0;
+						}
+							.stylebeauty.news #page-header #header-content ul#navbar li.news a:hover {
+								background-position:-112px -53px;
+							}
+						/*news*/
+							.news #page-header #header-content ul#navbar li.home a,
+							.celebrity-news #page-header #header-content ul#navbar li.home a {
+								width:67px;
+							}
+							.news #page-header #header-content ul#navbar li.news a,
+							.celebrity-news #page-header #header-content ul#navbar li.news a {
+								width:86px;
+								background:url(http://www.usmagazine.com/images/fe/global-nav-on_state2.png) -76px 0 no-repeat;
+							}
+							.news #page-header #header-content ul#navbar li.photos a,
+							.celebrity-news #page-header #header-content ul#navbar li.photos a {
+								width:89px;
+								background-position:-155px 0;	
+							}
+								.news #page-header #header-content ul#navbar li.photos a:hover,
+								.celebrity-news #page-header #header-content ul#navbar li.photos a:hover {
+									background-position:-155px -53px;	
+								}
+						/*legacy celebritynews channel !~delete when urls change~! */
+							.celebritynews #page-header #header-content ul#navbar li.home a {
+								width:67px;
+							}
+							.celebritynews #page-header #header-content ul#navbar li.news a {
+								width:86px;
+								background:url(http://www.usmagazine.com/images/fe/global-nav-on_state2.png) -76px 0 no-repeat;
+							}
+						/*photos landing*/
+						.photos #page-header #header-content ul#navbar li.photos a {
+							width:102px;
+							background:url(http://www.usmagazine.com/images/fe/global-nav-on_state2.png) -163px 0 no-repeat;
+						}
+							.photos #page-header #header-content ul#navbar li.videos a {
+								width:84px;
+								background-position:-249px 0;	
+							}
+								.photos #page-header #header-content ul#navbar li.videos a:hover {
+									background-position:-249px -53px;	
+								}
+								.photos #page-header #header-content ul#navbar li.news a {
+									width:73px;	
+								}
+						/*videos landing*/
+						.videos #page-header #header-content ul#navbar li.videos a {
+							width:97px;
+							background:url(http://www.usmagazine.com/images/fe/global-nav-on_state2.png) -266px 0 no-repeat;
+						}
+						.videos #page-header #header-content ul#navbar li.photos a {
+							width:89px;
+						}
+						.videos #page-header #header-content ul#navbar li.style a {
+							width:75px;
+							background-position:-338px 0;	
+						}
+							.videos #page-header #header-content ul#navbar li.style a:hover {
+								background-position:-338px -53px;	
+							}
+						/*style*/
+							.celebrity-style #page-header #header-content ul#navbar li.videos a {
+								width:83px;
+							}
+							.celebrity-style #page-header #header-content ul#navbar li.style a {
+								width:87px;
+								background:url(http://www.usmagazine.com/images/fe/global-nav-on_state2.png) -363px 0 no-repeat;
+							}
+							.celebrity-style #page-header #header-content ul#navbar li.beauty a {
+								width:80px;
+								background-position: -417px 0;
+							}
+								.celebrity-style #page-header #header-content ul#navbar li.beauty a:hover {
+									width:80px;
+									background-position: -417px -53px;
+								}
+						/*beauty*/
+							.celebrity-beauty #page-header #header-content ul#navbar li.beauty a {
+								width:97px;
+								background:url(http://www.usmagazine.com/images/fe/global-nav-on_state2.png) -451px 0 no-repeat;
+							}
+							.celebrity-beauty #page-header #header-content ul#navbar li.style a {
+								width:73px;
+							}
+							
+						/*moms*/
+							.celebrity-moms #page-header #header-content ul#navbar li.moms a, .celebrity-moms #page-header #header-content ul#navbar li.moms a {
+								width:85px;
+								background:url(http://www.usmagazine.com/images/fe/global-nav-on_state2.png) -552px 0 no-repeat;
+							}
+							.celebrity-moms #page-header #header-content ul#navbar li.beauty a {
+								width:81px;
+							}
+						/*body (heathly lifestyle)*/
+							.celebrity-body #page-header #header-content ul#navbar li.moms a {
+								width:77px;
+							}
+							.celebrity-body #page-header #header-content ul#navbar li.body a {
+								width:85px;
+								background:url(http://www.usmagazine.com/images/fe/global-nav-on_state2.png) -638px 0 no-repeat;
+							}
+							.celebrity-body #page-header #header-content ul#navbar li.entertainment a {
+								width:140px;
+								background-position:-670px 0;
+							}
+							.celebrity-body #page-header #header-content ul#navbar li.entertainment a:hover {
+								width:140px;
+								background-position:-670px 0;
+							}
+						/*entertainment*/
+							.entertainment #page-header #header-content ul#navbar li.body a {
+								width:67px;
+							}
+							.entertainment #page-header #header-content ul#navbar li.entertainment a{
+								width:159px;
+								background:url(http://www.usmagazine.com/images/fe/global-nav-on_state2.png) -725px 0 no-repeat;
+							}
+
+						/*END NAVBAR ON STATES*/
+			#page-header .search-box {
+				width:382px;
+				position:absolute;
+				top:0; right:0;	
+			}
+				#page-header .search-box.logged-in {
+				 width:410px;	
+				}
+					#page-header .search-box.logged-in .subscription-tout {
+						width:170px;
+					}
+				#page-header .search-box .form-holder {
+					padding:52px 0 0 0;
+					width:238px;
+					float:left;
+				}
+					#page-header .search-box .form-holder input {
+						padding:6px 0 3px 9px; margin:0;
+						width:186px; height:17px;
+						border:none;
+						background:url(http://www.usmagazine.com/images/fe/global-search_box-background.png) 0 0 no-repeat;
+						font-size:12px;
+						color:#959595;
+						float:left;
+					}
+					#page-header .search-box .form-holder input.btn {
+						padding:0; margin:0;
+						width:31px; height:26px;
+						background:url(http://www.usmagazine.com/images/fe/global-search-button.png) 0 0 no-repeat;
+						cursor:pointer;
+					}
+				#page-header .search-box .subscription-tout {
+					width:143px;
+					position:relative;
+					float: right;
+					margin-top:52px;
+				}
+					#page-header .search-box ul.user-actions {
+						margin:0 0 8px 0;
+						font:bold 10px Arial, Helvetica, sans-serif;
+						text-align:left;
+						position:absolute;
+						right:0;
+						top:5px;
+					}
+						#page-header .search-box ul.user-actions li {
+							display:inline;
+						}
+							#page-header .search-box ul.user-actions li a {
+								color:#e01189;
+								text-transform:uppercase;
+								text-decoration:none;
+							}
+					#page-header .search-box .subscription-tout a.tout {
+						margin:0 0 2px 1px;
+						width:140px; height:67px;
+						background:url(http://www.usmagazine.com/images/fe/global-free_tout-link.png) 0 0 no-repeat;
+						display:block;
+						text-decoration:none;
+					}
+					#page-header .search-box .subscription-tout a.tout img {
+						border: 0;
+					}
+					#page-header .search-box .subscription-tout ul.subscription-actions {
+						font:bold 10px Arial, Helvetica, sans-serif;
+					}
+						#page-header .search-box .subscription-tout ul.subscription-actions li {
+							margin:0 3px 0 0;
+							display:inline;
+							float:left;
+						}
+							#page-header .search-box .subscription-tout ul.subscription-actions li.last {
+								margin:0;	
+							}
+							#page-header .search-box .subscription-tout ul.subscription-actions li a.gift {
+								margin:4px 0 0 0;
+								width:52px; height:9px;
+								background:url(http://www.usmagazine.com/images/fe/global-give_a_gift-link.png) 0 0 no-repeat;
+								display:block;	
+							}
+							#page-header .search-box .subscription-tout ul.subscription-actions li a.customer-service {
+								margin:4px 0 0 0;
+								width:81px; height:9px;
+								background:url(http://www.usmagazine.com/images/fe/global-customer_service-link.png) 0 0 no-repeat;
+								display:block;	
+							}
+/* CUSTOM PAGE HEADER SUB TOUT */
+#page-header .sublinkimg { 
+	background: url(/images/subscription_banners/btn_subscribe_137-2013_4_8-2.png) no-repeat 0 0;
+	width: 140px;
+	height: 54px;	
+	float: left;
+}
+#page-header .search-box .subscription-tout #custom_sub_links {font-size:10px}
+#page-header .head_circ_link { 
+	display: block;
+	float:right; 
+	clear:right;
+	width: 143px; 
+	height:35px; 
+}
+#page-header #head_gift_link { 
+	position: absolute;
+	top: 37px;
+	left: 0;
+	height: 20px;
+	width: 140px;
+	overflow: hidden;
+}
+
+/* remove after 2/14/2014 */
+/*
+#page-header .sublinkimg.vday{
+	background: url(/images/subscription_banners/btn_subscribe_137-2014_2_14.png) no-repeat 0 0;
+}
+
+#vday2014-offer{
+	position: absolute;
+	z-index: 1200;
+	width: 293px;
+	height: 145px;	
+	margin-left: -156px;	
+	display: none;
+}
+
+#vday2014-offer #head_vday2014_link{
+	background: url(/images/subscription_banners/Us-CircSpot-PopOut_Heart.png) no-repeat 0 0;
+	width: 293px;
+	height: 145px;
+	display: block;
+}
+*/
+#page-header .search-box .subscription-tout #custserv {color:#666}
+/*MAIN CONTENT AREA STYLES */
+#main-content-area {
+	margin: 0;
+	margin-top: 10px;
+	width: 990px;
+}
+#main-content-area.head-banner {
+	padding:36px 0 0;
+	position:relative;
+}
+
+/* MAIN CONTENT BOTTOM STYLES */
+#main-content-bottom {
+	background-color: #fff;
+	width: 990px;
+	margin: 40px 0 0;
+}
+.blackground #main-content-bottom {
+	background-color: #000;
+	width: 990px;
+	margin: 0 0 0 8px;
+}
+/*PAGE CONTENT STYLES*/
+	.page {
+		width:990px;
+	}
+	#page-content-bottom {
+		margin:0 auto;
+		padding:0 0 10px 0;
+		width:1002px;
+		background:url(http://www.usmagazine.com/images/fe/global-page_content_bottom-background.png) bottom left no-repeat;
+		z-index:100;
+		position:relative;
+	}
+	#page-content {
+		padding:160px 0 0 6px;
+		width:996px;
+		background:url(http://www.usmagazine.com/images/fe/global-page_content-background.png) bottom left repeat-y;
+		position: relative;
+	}
+	#page-content .wide-ad-wrapper {
+		margin:0 5px 0 0;
+		text-align:center;
+	}
+	#page-content .wide-ad-wrapper div {
+		margin: 0 auto;
+	}
+
+
+/*SUBNAV STYLES*/
+
+#trending{
+
+	display:none;
+}
+
+.subnav-holder {
+	margin: 0 0 10px 10px;
+	width: 970px;
+	height: 26px;
+}
+.subnav-holder ul.old-social-links {
+	padding: 4px 0 0 0;
+	margin: 0 0 0 0;
+	float: left;
+}
+.subnav-holder ul.old-social-links li {
+	display:inline;
+	float:left;
+	margin: 0 5px;
+}
+.subnav-holder ul.old-social-links li.twitter a {
+	width:41px; height:20px;
+	background:url(http://www.usmagazine.com/images/fe/global-subnav-twitter.png ) 0 0 no-repeat;
+	display:block;
+}
+.subnav-holder ul.old-social-links li.newsletter {
+	width:85px;
+}
+.subnav-holder ul.old-social-links li.newsletter a {
+	width:85px; height:20px;
+	background:url(http://www.usmagazine.com/images/fe/global-subnav-newsletter.png ) 0 0 no-repeat;
+	display:block;
+}
+	
+
+
+
+.subnav-holder {
+	margin:0 0 6px 10px;
+	width:970px;
+	height:26px;
+}			
+	
+.subnav-holder .social-links {
+	padding:4px 0 0 0;
+	margin:0 0 0 0;
+	float:right;
+}
+.subnav-holder .subnav li h3 {
+	position:absolute;
+	right:276px;
+	top:150px;
+	width:26px; 
+	height:21px;
+	background:url(http://www.usmagazine.com/images/fe/global-h3-more_on_us_us.png ) 0 0 no-repeat;
+}	
+
+.subnav-holder .subnav {
+	float:left;
+	height:18px;
+	margin:4px 0 0 1px;
+	background:url(http://www.usmagazine.com/images/fe/gray-flexnav-bg.png ) 0 0;
+	border: 1px solid #d2d4d5;
+	width: 700px;	
+}
+
+.subnav-holder .subnav h4 {
+	margin-top:3px;
+	margin-left:10px;
+	float: left;
+	width:72px;
+	height:20px;
+	background:url(http://www.usmagazine.com/images/fe/trending.png ) 0 0 no-repeat;
+}
+
+.subnav-holder .subnav ul {
+	float: left;
+}
+
+.subnav-holder .subnav li {
+	font-size:12px;
+	color:#686868;
+	text-transform:uppercase;
+	float:left;
+	padding:2px 5px 0 5px;
+	font-size:13px;
+	font-weight:bold;
+	letter-spacing:-0.2px;
+}		
+
+.subnav-holder .subnav li.separator {
+	color: #d0d0d0;
+	padding:1px 0 0 0;
+}	
+.subnav-holder .subnav li.title {
+	padding:0;
+	margin:0 4px 0 0;
+}
+.subnav-holder .subnav li h3 {
+	width:110px; height:21px;
+}	
+.subnav-holder .subnav li a {
+	color:#393939;
+	text-decoration:none;	
+}
+.subnav-holder .subnav li a:hover {
+	text-decoration:underline;
+}
+
+.subnav-holder ul.social-links {
+	padding:4px 0 0 0;
+	margin:0 0 0 0;
+	float: right;
+	margin-right: 6px;
+}
+
+.subnav-holder ul.social-links li {
+	display:inline;
+	float:left;
+	width: 26px;
+}
+.subnav-holder ul.social-links li.facebook {
+	width:90px;
+}
+.subnav-holder ul.social-links li.twitter a {
+	width: 23px;
+	height: 19px;
+	background: url(http://www.usmagazine.com/images/fe/social/tw-icon.png) 0 0 no-repeat;
+}
+.subnav-holder ul.social-links li.pinterest a {
+	width: 20px;
+	height: 20px;
+	background: url(http://www.usmagazine.com/images/fe/social/pin-icon.png) 0 0 no-repeat;
+}
+.subnav-holder ul.social-links li.gplus a {
+	width: 20px;
+	height: 20px;
+	background: url(http://www.usmagazine.com/images/fe/social/gplus-icon.png) 0 0 no-repeat;
+}
+.subnav-holder ul.social-links li.newsletter {
+	width:85px;
+}
+.subnav-holder ul.social-links li.newsletter a {
+	width: 91px;
+	height: 23px;
+	margin-top: -3px;
+	background:url(http://www.usmagazine.com/images/fe/social/newsletter-icon.png ) 0 0 no-repeat;
+	display:block;
+}
+/*
+.subnav-holder #gallery-subnav {
+	display:none;
+}
+
+.galleries-slideshow .subnav-holder .subnav, .gallery .subnav-holder .subnav, .upsell .subnav-holder .subnav {
+	display: none;
+}
+.galleries-slideshow .subnav-holder #gallery-subnav, .gallery .subnav-holder #gallery-subnav, .upsell .subnav-holder #gallery-subnav {
+	display: block;
+	float: right;
+}
+
+.galleries-slideshow .subnav-holder .social-links, .gallery .subnav-holder .social-links, .upsell .subnav-holder .social-links {
+	float: left;
+	background: none;
+	padding-left: 0;
+}
+*/
+/* COMMENTS STYLES */
+#comments {
+	overflow:hidden;
+	clear:both;
+}
+#comments #comments-header {
+	height:28px;
+}
+#comments #comments-header h3 {
+	width:253px; height:16px;
+	background-image: url(http://www.usmagazine.com/images/fe/comments-header.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin:2px 0 0 0 !important;
+	display:block;
+	float:left;
+	text-indent:-1000px;
+	overflow:hidden;
+}
+.gallery #comments #comments-header h3 {
+	background-image: url(http://www.usmagazine.com/images/fe/comments-header-white.png);
+}
+#comments #comments-header .count {
+	width:25px; height:22px;
+	display:block;
+	background-image: url(http://www.usmagazine.com/images/fe/gallery-comment_count.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin:0 0 0 10px;
+	padding:2px 0 0 0;
+	float:left;
+	text-align: center;
+	color:#fff;
+	font-weight:bold;
+	font-size:11px;
+}
+#post-comment {
+	background-color:#f2f2f2;
+	border:1px solid #cccccc;
+	padding:10px;
+}
+#post-comment #userpic {
+	width:50px; height:50px;
+	display:block;
+	float:left;
+	margin:0 0 10px 0;
+}
+#post-comment #info {
+	font-size:11px;
+	float:left;
+	margin:0 0 0 8px;
+}
+#post-comment #info a {
+	color:#10b3ef;
+	display:block;
+	font-weight:bold;
+	text-decoration:none;
+}
+#post-comment #info a:hover {
+	text-decoration:underline;
+}
+#post-comment #info h3 {
+	color:#10b3ef;
+	font-weight:bold;
+}
+#post-comment .user {
+	color:#8b8b8b;
+	font-weight:normal;
+	display:block;
+	margin:6px 0;
+}
+#post-comment .name {
+	color:#ec008c;
+	font-weight:bold;
+}
+#post-comment form {
+	clear:both;
+}
+#post-comment textarea {
+	width:435px;
+	border:1px solid #d9d9d9;
+	margin:0 0 10px 0;
+	padding:4px;
+	font-family: Lucida, sans-serif;
+	font-size:11px;
+}
+.gallery #post-comment textarea {
+	width:609px;
+}
+#post-comment #submit {
+	width:69px; height:22px;
+	display:block;
+}
+#comments .comments-list li {
+	border-bottom: 1px solid #e9e9e9;
+	padding:10px;
+	background-color:#fff;
+}
+#comments .comments-list li.new-comment {
+	display:none;
+}
+#comments .comments-list li .avatar {
+	float:left
+}
+#comments .comments-list li .comment-info {
+	width:385px;
+	float:left;
+	margin:0 0 0 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#comments .comments-list li .comment-info .date {
+	font-style:italic;
+	font-size:10px;
+	color:#939598;
+}
+#comments .comments-list li .comment-info strong {
+	display:block;
+	margin:5px 0;
+	color:#00aeef;
+}
+#comments .comments-list li .comment-info p {
+	font-size:11px;
+	color:#000;
+}
+
+/* End COMMENTS STYLES */
+
+/* FOOTER STYLES */
+	#footer {
+		clear:both;
+		width:100%;
+		padding:0 0 52px 0;
+		margin:-9px 0 0 0;
+		background:url(http://www.usmagazine.com/images/fe/global-footer-background.png)	bottom center repeat-x;
+		position:relative;
+		z-index: 90;
+	}
+	.blackground #footer {
+		background:url(http://www.usmagazine.com/images/fe/global-footer-background-black.png)	bottom center repeat-x;
+	}
+	
+		@font-face {
+			font-family: 'social';
+			src:url('http://www.usmagazine.com/fonts/social/social.eot?-j10ufv');
+			src:url('http://www.usmagazine.com/fonts/social/social.eot?#iefix-j10ufv') format('embedded-opentype'),
+				url('http://www.usmagazine.com/fonts/social/social.woff?-j10ufv') format('woff'),
+				url('http://www.usmagazine.com/fonts/social/social.ttf?-j10ufv') format('truetype'),
+				url('http://www.usmagazine.com/fonts/social/social.svg?-j10ufv#icomoon') format('svg');
+			font-weight: normal;
+			font-style: normal;			
+		}
+		
+		[class^="icon-"], [class*=" icon-"] {
+			font-family: 'social';
+			color: #ed008c;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+		
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		
+		.icon-facebook:before {
+			content: "\e600";
+		}
+		.icon-twitter:before {
+			content: "\e602";
+		}
+		.icon-googleplus:before {
+			content: "\e604";
+		}
+		.icon-pinterest:before {
+			content: "\e607";
+		}
+		.icon-instagram:before {
+			content: "\e608";
+		}
+		.icon-rss:before {
+			content: "\e609";
+		}
+		.icon-mail:before {
+			content: "\e60a";
+		}
+		.icon-mobile:before {
+			content: "\e60b";
+		}	
+	
+			#footer .footer-links {
+				width:970px;
+			}
+				#footer .footer-links .category {
+					float:left;
+					height:205px;
+					margin: 0 0 30px 0;
+					border-right:solid 1px #e8e8e8;
+				}
+					#footer .footer-links .category.magazine {
+						width:170px;
+					}
+					#footer .footer-links .category.featured {
+						padding:0 0 0 19px;
+						width:200px;
+					}
+					#footer .footer-links .category.about-us {
+						padding:0 0 0 19px;
+						width:215px;
+					}
+					#footer .footer-links .category.subscription {
+						padding:0 0 0 19px;
+						width:165px;
+					}
+					#footer .footer-links .category.follow-us {
+						padding:0 0 0 16px;
+						width:129px;
+						border:none;
+					}
+						#footer .footer-links .category.follow-us li {
+								
+						}
+							#footer .footer-links .category.follow-us li.title {
+								padding:0 0 0 3px;
+							}
+							#footer .footer-links .category.follow-us li.facebook a {
+								padding:0 0 0 22px;
+								width:50px;
+								background:url(http://www.usmagazine.com/images/fe/global-footer-facebook_icon.png) 0 0 no-repeat;
+							}
+							#footer .footer-links .category.follow-us li.twitter a {
+								padding:0 0 0 20px;
+								width:38px;
+								background:url(http://www.usmagazine.com/images/fe/global-footer-twitter_icon.png) 0 0 no-repeat;
+							}
+							#footer .footer-links .category.follow-us li.rss a {
+								padding:0 0 0 22px;
+								width:56px;
+								background:url(http://www.usmagazine.com/images/fe/global-footer-rss_icon.png) 0 0 no-repeat;
+							}
+							#footer .footer-links .category.follow-us li.newsletter a {
+								padding:0 0 0 22px;
+								width:56px;
+								background:url(http://www.usmagazine.com/images/fe/global-footer-newsletter_icon.png) 0 0 no-repeat;
+							}
+							#footer .footer-links .category.follow-us li.iphone a {
+								padding:0 0 0 21px;
+								width:70px;
+								background:url(http://www.usmagazine.com/images/fe/global-footer-iphone_icon.png) 0 0 no-repeat;
+							}
+				#footer .footer-links .category ul li {
+					margin:0 0 8px 0;
+					position:static;
+				}
+				#footer .footer-links .category ul li h5 {
+					color:#ee5198;
+					text-transform:uppercase;
+				}
+				#footer .footer-links .category ul li a {
+					color:#707070;
+					text-decoration:none;
+				}
+		#footer .bottom-bar {
+			width:970px;
+			height:1px;
+			overflow:visible;
+		}
+			#footer .bottom-bar .copyright {
+				padding:22px 0 0 0;
+				width:300px;
+				float:left;
+				font:bold 10px Arial, Helvetica, sans-serif;
+				color:#707070;	
+				text-transform:uppercase;
+			}
+			#footer .bottom-bar ul.wenner-links {
+				padding:17px 0 0 0;
+				width:486px;
+				float:right;
+				color:#707070;
+			}
+				
+					#footer .bottom-bar ul.wenner-links li {
+						padding:3px 0 0 0;
+						display:inline;
+						float:left;	
+					}
+						#footer .bottom-bar ul.wenner-links li a {
+							display:block;	
+						}
+						#footer .bottom-bar ul.wenner-links li.us {
+							padding:0px 0 0 15px;	
+						}
+							#footer .bottom-bar ul.wenner-links li.us a {
+								width:23px; height:18px;
+								background:url(http://www.usmagazine.com/images/fe/global-wenner_links-us.png) 0 0 no-repeat;
+							}
+							.blackground #footer .bottom-bar ul.wenner-links li.us a {
+								width:23px; height:18px;
+								background:url(http://www.usmagazine.com/images/fe/global-wenner_links-us-black.png) 0 0 no-repeat;
+							}
+						#footer .bottom-bar ul.wenner-links li.mj {
+							padding:0 0 0 15px;	
+						}
+							#footer .bottom-bar ul.wenner-links li.mj a {
+								width:85px; height:18px;
+								background:url(http://www.usmagazine.com/images/fe/global-wenner_links-mj2.png) 0 0 no-repeat;
+							}
+								.blackground #footer .bottom-bar ul.wenner-links li.mj a {
+									width:85px; height:18px;
+									background:url(http://www.usmagazine.com/images/fe/global-wenner_links-mj-black2.png) 0 0 no-repeat;
+								}
+						#footer .bottom-bar ul.wenner-links li.rs {
+							padding:0 0 0 15px;	
+						}
+							#footer .bottom-bar ul.wenner-links li.rs a {
+								width:118px; height:23px;
+								background:url(http://www.usmagazine.com/images/fe/global-wenner_links-rs2.png) 0 0 no-repeat;
+							}
+							.blackground #footer .bottom-bar ul.wenner-links li.rs a {
+								width:118px; height:23px;
+								background:url(http://www.usmagazine.com/images/fe/global-wenner_links-rs-black2.png) 0 0 no-repeat;
+							}
+						#footer .bottom-bar ul.wenner-links li.jsw {
+								padding:7px 0 0 15px;
+							}
+
+							#footer .bottom-bar ul.wenner-links li.jsw a {
+								width:100px; height:10px;
+								background:url(http://www.usmagazine.com/images/fe/global-wenner_links-jsw.png) 0 0 no-repeat;
+							}
+							.blackground #footer .bottom-bar ul.wenner-links li.jsw a {
+								width:100px; height:10px;
+								background:url(http://www.usmagazine.com/images/fe/global-wenner_links-jsw-black.png) 0 0 no-repeat;
+							}
+#footer .wide-ad-wrapper {
+	margin:0px auto 15px;
+	text-align:center;
+}
+#footer .wide-ad-wrapper div {
+	margin: 0 auto;
+}
+#footer #footer-inner {
+	margin:0px auto;
+	width:970px;
+	padding:21px 10px 0 10px;
+	background-image: url(http://www.usmagazine.com/images/fe/inner-footer-background.png);
+	background-color:#fff;
+	background-repeat:repeat-x;
+	background-position:bottom center;
+}
+.blackground #footer #footer-inner {
+	background-color:#000;
+	background-image: url(http://www.usmagazine.com/images/fe/inner-footer-background-black.png);
+}
+#omg-footer{
+	padding-top:2px;
+	margin-top:-3px;
+	clear: right;
+	float: right;
+}
+.blackground #omg-footer {
+	margin-top:12px;
+}
+
+/*EDITORIAL BANNER STYLES*/
+.gallery #editorial-banner {
+	width:990px;
+	margin-left:-5px;
+}
+
+.article #editorial-banner img {
+	width:990px
+}
+.article #editorial-banner {
+	width:990px;
+	float: left;
+	display: block;
+	margin-top: -42px;
+	margin-left: -5px;
+}
+
+.dartsz_336x280 {
+	width: 300px !important;	
+}
+
+/*LATEST LEFT RAIL GALLERIES*/
+
+.sidebar-rail-galleries-header{
+	width:166px;
+	height:31px;
+	background-image: url(http://www.usmagazine.com/images/fe/photo-gallery-left-rail-header.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	position:absolute;
+	z-index:1000;
+	left:5px;
+	top:5px;
+}
+
+
+
+.sidebar-rail-galleries{
+  width:176px;
+  margin-top:7px;
+  margin-left:1px;
+  margin-bottom:10px;
+  position:relative;
+}
+.sidebar-rail-galleries ul{
+padding-top:36px;
+}
+.sidebar-rail-galleries .top {
+background-image: url(http://www.usmagazine.com/images/fe/modules/dropshadow-176px-top-bg-article.png);
+background-repeat: no-repeat;
+background-position: top left;
+padding: 5px 0 0 0;
+}
+.sidebar-rail-galleries .bottom {
+	background-image: url(http://www.usmagazine.com/images/fe/modules/dropshadow-176px-bottom-bg-article.png);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	padding: 0 0 1px 0;
+}
+.sidebar-rail-galleries ul {
+  background-image: url(http://www.usmagazine.com/images/fe/modules/dropshadow-176px-bg.png);
+  background-repeat:repeat-y;
+}
+.sidebar-rail-galleries li h4:hover{
+	text-decoration:underline;
+}
+.sidebar-rail-galleries li{
+	color:white;
+	width: 157px;
+	margin: 0 auto 4px;
+	position:relative;
+	border-bottom:1px dotted #CBC2C6;
+}
+.sidebar-rail-galleries li.last {
+  border-bottom: 0;
+}
+.sidebar-rail-galleries li a {
+	display: block;
+  width: 157px;
+}
+.sidebar-rail-galleries li a:hover {
+  text-decoration:underline;
+}
+.gallery-thumbnail-link a {
+  text-decoration:none;
+}
+.gallery-thumbnail-link a:hover {
+  text-decoration:underline;
+  color:white;
+}
+.left-rail-gallery-caption-box h4
+{
+  padding: 0 4px;
+  color:#fff;
+  font-size:15px;
+  text-decoration:none;
+  font-weight:normal;
+}
+.sidebar-rail-galleries li .left-rail-gallery-caption-box{
+	color:white;
+	width: 157px;
+	position:absolute;
+	left: 0;
+	bottom: 3px;
+	padding: 8px 0;
+	background-image: url(http://www.usmagazine.com/images/fe/semi-trans-bg.png);
+}
+.sidebar-rail-galleries li .left-rail-gallery-caption-box a{
+	color:white;
+	text-decoration:none;
+	font-size:15px;
+	line-height:17px;
+	letter-spacing:1px;
+	padding-left:2px;
+}
+.link-arrow{
+color:#dc117d;
+}
+.more-link{
+	text-decoration:none;
+	text-transform:uppercase;
+	font-size:10px;
+	padding: 6px 0 12px 7px;
+	color:#dc117d;
+	font-weight:bold;
+}
+#promoted-galleries-container{
+	position:relative;
+	margin-bottom:10px;
+	padding-top:12px;
+	border-top: 1px solid #CCC
+}
+#promoted-gallery-left{
+	position:relative;
+	margin-left:20px;
+	float:left;
+	width:200px;
+	height:245px;
+	background-image: url(/images/article-promoted-galleries-background.png);
+	background-repeat:no-repeat;
+}
+#promoted-gallery-left-image{
+	position:absolute;
+	left:27px;
+	top:22px;
+}
+#promoted-gallery-left-text {
+	float:left;
+	width:185px;
+	padding-left:47px;
+	padding-bottom:15px;
+}
+#promoted-gallery-left-text a{
+	color: black;
+	text-decoration: none;
+	font-size: 17px;
+	font-weight: bold;
+}
+#promoted-gallery-left-text a:hover{
+	text-decoration:underline;
+}
+#promoted-gallery-right{
+	position:relative;
+	margin-left:25px;
+	float:left;
+	width:200px;
+	height:245px;
+	background-image: url(/images/article-promoted-galleries-background.png); 
+	background-repeat:no-repeat;
+}
+#promoted-gallery-right-image{
+	position:absolute;
+	left:27px;
+	top:22px;
+}
+#promoted-gallery-right-text{
+	float:left;
+	width:185px;
+	padding-left:33px;
+	padding-bottom:15px;
+}
+
+#promoted-gallery-right-text a{ 
+	color: black;
+	text-decoration: none;
+	font-size: 17px;
+	font-weight: bold;
+}
+#promoted-gallery-right-text a:hover{
+	text-decoration:underline;
+}
+
+#dsq-add-a-comment{
+margin:10px auto;
+width:468px;
+height:33px;
+background-image: url(/images/usmag-disqus-header.png); 
+background-repeat:no-repeat;
+}
+
+.dsq-email-icon{
+width:12px;
+height:12px;
+background-image: url(/images/icon-email-trans.png); 
+background-repeat:no-repeat;
+position:absolute;
+left:44px;
+}
+
+.dsq-rss-icon{
+right:101px;
+width:16px;
+height:16px;
+background-image: url(/images/mini-rss.png); 
+background-repeat:no-repeat;
+position:absolute;
+}
+
+/*-------------------------------------------- */
+/** OMG US Yahoo Module */
+/*-------------------------------------------- */
+.omg-us-module-container{
+	width: 309px;
+	height: auto;
+	margin-bottom:15px;
+	position:relative;
+	margin-top: 15px;
+}
+/*changing */
+#omg-us-module-container-list {
+	background: url(http://www.usmagazine.com/images/microsites/yahoo-omg/omg-us-module-bg-top.png) no-repeat 0 0;
+	padding-top: 50px;
+}
+.omg-thumb{
+width: 75px;
+height: 45px;
+float: left;
+padding-top: 5px;
+}
+
+.omg-headline{
+width: 267px;
+margin-left: 86px;
+font-size: 12px;
+font-weight: bold;
+display: table-cell;
+vertical-align: middle;
+text-align: left;
+padding: 5px 0 5px 5px;
+}
+.omg-headline a{
+font-size:12px;
+color:black;
+font-weight:bold;
+text-decoration:none;
+}
+.omg-headline:hover{
+text-decoration:underline;
+}
+.omg-headline a:hover{
+text-decoration:underline;
+}
+.news-entry.first{
+}
+.omg-us-module-more-linker {
+	background: url(http://www.usmagazine.com/images/microsites/yahoo-omg/omg-us-module-bg-bot.png) no-repeat 0 bottom;
+}
+
+.news-entry{
+clear: both;
+border-bottom: 1px solid #bababa;
+height: 70px;
+display: table;
+}
+.omg-us-module-container .news-entry {
+	height: 55px;
+}
+.pink-arrows{
+color:#e20f8a;
+}
+
+.omg-us-module-more-linker a{
+font-size: 12px;
+text-align: center;
+font-weight: bold;
+padding: 10px 0;
+text-decoration: none;
+color: black;
+display: block;
+}
+.omg-us-module-more-linker a:hover{
+text-decoration:underline;
+}
+
+#omg-header-badge{
+width: 94px;
+height: 30px;
+background: url(http://www.usmagazine.com/images/microsites/yahoo-omg/yahoo_celebrity_tab.png) 0 0 no-repeat;
+z-index: 99999;
+position: absolute;
+left: 186px;
+bottom: 42px;
+}
+.omg-header-linker{
+height: 50px;
+width: 300px;
+position: absolute;
+margin: -50px 0 0 5px;
+z-index: 999;
+}
+
+.omg-cafe-body .wide-ad-wrapper .dart_ad {
+margin: 0 auto;
+position: relative;
+width: 728px;
+}
+
+.panel_right_rail #new-photo-galleries{
+	margin-left:13px;
+}
+
+.ir {
+	display: block;
+	text-indent: -300%;
+	overflow: hidden;
+	font-size: 0 !important;
+	color: transparent;
+}
+
+a#subimglink {
+    position: absolute;
+    display: block;
+    left: 242px;
+    top: 27px;
+    width: 137px;
+    height: 39px;
+    background-image: url("about:blank");
+}
+
+a#giftimglink {
+    position: absolute;
+    display: block;
+    left: 242px;
+    top: 64px;
+    width: 137px;
+    height: 18px;
+    background-image: url("about:blank");
+}
+.swapimg{
+    display:none;
+    position: absolute;
+    left: 86px;
+    top: 2px;
+    width: 294px;
+    height: 143px;
+}
+#skirt {
+	background-color: #fff;
+	width: 100%;
+	height: 37px;
+	z-index: 85;
+	margin: -2px 0 0;
+	position: absolute;
+}
+.blackground #skirt {
+	height: 45px;
+}

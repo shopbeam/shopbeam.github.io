@@ -1,0 +1,180 @@
+#matches-fashion-logo {
+    display: block;
+    width: 300px;
+    height: 15px;
+    margin: 0 auto 30px auto;
+}
+#matches-fashion-logo-thanks {
+    width: 300px;
+    height: 15px;
+    margin: 0 0 30px 87px;
+}
+
+.table-cell {
+    display: table-cell;
+}
+.subheading-text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+
+#campaign-container {
+    display: table;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+#campaign-row {
+    display: table-row;
+}
+#campaign-left-contain {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 20px;
+}
+#campaign-right-contain {
+    display: table-cell;
+    vertical-align: middle;
+}
+.campaign-ul {
+    list-style: none;
+    margin: 20px auto 0 auto;
+    padding: 0;
+    text-align: center;
+}
+.campaign-ul > form {
+    display: inline-block;
+    padding-right: 70px;
+}
+.campaign-ul > form > li {
+    display: table-row;
+}
+.campaign-ul > form > li > label {
+    display: table-cell;
+    font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+    padding: 0 10px 30px 0;
+    text-align: right;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.campaign-ul > form > li > input {
+    display: table-cell;
+}
+input:not([type="radio"]):not([type="checkbox"]) {
+    width: 345px;
+    height: 30px;
+    border: 1px solid #000;
+    padding: 0 8px;
+}
+.campaign-ul > form > li > label.error {
+    display: block;
+    font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 8px;
+    padding: 2px 0 0 0;
+    letter-spacing: 1px;
+    text-align: left;
+}
+#button-container {
+    margin-top: -20px;
+}
+.field-button-submit {
+    font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+    background: #fff;
+    border: 4px solid #000;
+    text-transform: uppercase;
+    padding: 10px 40px 10px 40px;
+    letter-spacing: 7px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+#campaign-heading {
+    font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+#campaign-heading-hr {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #000;
+}
+.checkbox-contain {
+    width: 345px;
+    text-align: left;
+    display: inline-block;
+}
+.checkbox-text {
+    font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.label-select {
+    vertical-align: top;
+    margin-top: 8px;
+}
+
+.field-select {
+    font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+    width: 345px;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0);
+}
+.field-textarea {
+    font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+    border: 1px solid #000;
+    width: 345px;
+    resize: none;
+}
+#thank-you-container {
+    margin: 0 65px 0 0;
+    text-align: center;
+}
+#thank-you-hr {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 0;
+    border-top: 1px solid #000;
+    width: 380px;
+}
+#thank-you-heading {
+    font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
+#thank-you-subheading {
+    font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+#thank-you-message {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 13px;
+    font-style: italic;
+}
+#thank-you-social {
+    margin-top: 20px;
+}
+#thank-you-twitter {
+    margin-right: 10px;
+    display: inline-block;
+}
+#thank-you-facebook {
+    margin-left: 10px;
+    display: inline-block;
+}

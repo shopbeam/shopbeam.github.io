@@ -1,0 +1,1 @@
+PARSELY.pInit({"apikey":"highsnobiety.com","customizations":null,"bundle":"/code/slim_v02.js","settings":{"debug":false,"widget":false,"tracker":true},"uuid":"5533A13E-0624-4F67-965E-4BF9E17A12AA"});

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0137)http://assets.tumblr.com/assets/html/like_iframe.html?_v=a9e9ccfaa05321752015cb2cea8d519f#name=hautehomes&post_id=58703456411&rk=4CC3CzXG -->
+<html><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Tumblr</title>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                width: 100%;
+                height: 100%;
+            }
+
+            #like_wrapper {
+                height: 100%;
+                width: 100%;
+            }
+
+            #like {
+                display: block;
+                width: 100%;
+                height: 100%;
+                cursor: default;
+            }
+            
+            #like svg {
+                fill: #ccc;
+            }
+
+            .white #like svg {
+                fill: #fff;
+            }
+
+            .black #like svg {
+                fill: #000;
+            }
+
+            #like.liked svg {
+                fill: #cd1828;
+            }
+
+            #like.show {
+                opacity: 1;
+            }
+            
+            .no_svg #like {
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/iframe_like_big_default.png', sizingMethod='scale');
+            }
+
+            .no_svg .white #like {
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/iframe_like_big_white.png', sizingMethod='scale');
+            }
+
+            .no_svg .black #like {
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/iframe_like_big_black.png', sizingMethod='scale');
+            }
+
+            .no_svg #like.liked {
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/iframe_like_big_red.png', sizingMethod='scale');
+            }
+        </style>
+    <style type="text/css"></style></head>
+    <body>
+        <div id="like_wrapper">
+            <a href="http://www.tumblr.com/login?redirect_to=http%3A%2F%2Fhautehomes.tumblr.com%2F" id="like" target="_top" onclick="return false;" class="show" style="cursor: pointer;">
+                <svg width="100%" height="100%" viewBox="0 0 605 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><path d="M 302.949,94.332c 18.68-20.682, 76.381-90.143, 141.995-91.431c 65.629-1.272, 151.195,40.029, 153.693,167.719 c 2.808,143.189-117.574,247.917-296.06,338.525l-0.093,0.00 C 123.997,418.537, 3.631,313.809, 6.439,170.605C 8.921,42.93, 94.487,1.614, 160.132,2.901 c 65.629,1.288, 123.314,70.765, 142.01,91.431L 302.949,94.332 z"></path></svg>
+            </a>
+        </div>
+        <script type="text/javascript">
+            var state = '';
+            var form_key = '';
+            var post_id = '';
+            var reblog_key = '';
+            var like = document.getElementById('like');
+
+            function is_logged_in() {
+                return (document.cookie.indexOf('logged_in=1') != -1);
+            }
+
+            function setup_listener(callback){
+                callback = callback || function(){};
+                // http://davidwalsh.name/window-iframe
+                // Create IE + others compatible event handler
+                var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+                var eventer = window[eventMethod];
+                var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+                // Listen to message from child window
+                eventer(messageEvent,function(e) {
+                    var message = e.data.split(';');
+                    callback(message, e.origin);
+                },false);
+            }
+
+            function getVars() {
+                var get_vars = {};
+                window.location.hash.replace(
+                    /[#?&]+([^=&]+)(=[^&]*)?/gi,
+                    function(m, key, value){
+                        get_vars[key] = (value === undefined) ? true : value.substring(1);
+                    }
+                );
+
+                return get_vars;
+            }
+
+            function setup_variables() {
+                var vars = getVars();
+                if (vars['post_id']) post_id = vars['post_id'];
+                if (vars['rk']) reblog_key = vars['rk'];
+                if (vars['color']) {
+                    if (vars['color'] == 'white') {
+                        document.getElementById('like_wrapper').className = 'white';
+                    } else if (vars['color'] == 'black') {
+                        document.getElementById('like_wrapper').className = 'black';
+                    }
+                }
+
+            }
+
+            // Transition unload -- Supresses iframe white flash
+            window.onbeforeunload = function(){
+                if (window !== parent) parent.postMessage('location_change' + ';' + document.location.protocol + '//' + document.location.host, 
+                    document.referrer);
+            };
+
+            function like_post() {
+                var action = (state === 'liked') ? 'unlike' : 'like';
+                var data = action + ';' + JSON.stringify({post_id: post_id, reblog_key: reblog_key});
+                var iframe_count = window.parent.frames.length;
+
+                for (var i = 0; i<iframe_count; i++) {
+                    try {
+                        if (window.parent.frames[i] !== window) window.parent.frames[i].postMessage(data, '*');
+                    } catch (e) {
+                        // do nothing
+                    }
+                }
+            }
+
+            function update_status() {
+                like.className = (state === 'liked') ? 'show liked' : 'show';
+                var msg = "tumblelog_like;" + post_id + ";" + state;
+                window.parent.postMessage(msg, document.referrer);
+            }
+
+            function setup_state() {
+                like.style.cursor = "pointer";
+                like.onclick = function(e) {
+                    like_post();
+                    return false;
+                }
+                update_status();
+            }
+
+            function recieve_data(message, origin) {
+                if (message[0] === "state_update") {
+                    var data = JSON.parse(message[1]);
+                    if (typeof(data) === "object") {
+                        if (data.length) {
+                            data.forEach(function(d) {
+                                // Doing a non-strict check on ids, this is on
+                                // purpose because sometimes it appears to return
+                                // a string and not a number.
+                                if (d.post_id == post_id) {
+                                    state = (d.state) ? 'liked' : 'unliked';
+                                    setup_state();
+                                }
+                            });
+                        } else {
+                            // Non-strict check.
+                            if (data.post_id == post_id) {
+                                state = (data.state) ? 'liked' : 'unliked';
+                                setup_state();
+                            }
+                        }
+                    }
+                }
+            }
+
+            window.onload = function() {
+                if (post_id) {
+                    var data = 'like_iframe_load;' + JSON.stringify({post_id: post_id});
+                    window.parent.postMessage(data, '*');
+                }
+            }
+
+            // Set up variables -- logged out user should still pick up color settings.
+            setup_variables();
+
+            // don't setup the click events if they are not logged in
+            if (is_logged_in()) {
+                setup_listener(recieve_data);
+            } else {
+                // logged out and doesn't care about state
+                var path = (document.cookie.indexOf('logged_in') != -1) ? '/login?' : '/register?';
+                like.href = "http://www.tumblr.com" + path + 'redirect_to=' + encodeURIComponent(document.referrer);
+                like.onclick = function() { return true; };
+                like.style.cursor = "pointer";
+                like.className = 'show';
+            }
+        </script>
+    
+
+</body></html>

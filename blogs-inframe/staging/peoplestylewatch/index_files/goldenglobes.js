@@ -1,0 +1,1 @@
+if(typeof adFactory == 'object'){adFactory.setZone('redcarpet/goldenglobes');}

@@ -1,0 +1,253 @@
+/*Single post sidebar*/
+
+#sidebar-single{
+    float: right;
+    width: 320px;
+    padding-top: 0px;
+    background: #fff;
+}
+
+/*Page sidebar*/
+body.page #freshnessSidebar {
+    padding-top: 10px;
+}
+/*end*/
+
+/*Fixes gap colour issues caused by faux sidebar 100% height bg*/
+#sidebar-singleBgWrapper {
+    background: #e3e3e3;
+    float: left;
+}
+
+#prevThumbwrap a, #nextThumbwrap a {
+text-decoration: none;
+position: relative;
+}
+
+#prevThumbwrap a {
+float: right;
+}
+
+#nextThumbwrap a {
+float: left;
+}
+#prevThumbwrap a img, #nextThumbwrap a img {
+    width: 160px;
+    height: 160px;
+}
+#prevNextBar {
+background: #000;
+height: 36px;
+margin-bottom: 1px;
+}
+
+.prev_next a {
+text-transform: uppercase;
+font-size: 11px;
+font-weight: bold;
+color: #fff;
+text-decoration: none;
+}
+
+.prev_next a{
+margin-top: 12px;
+}
+
+#sidebarPrev a {
+float: left;
+background: url('images/sidebar/prev.png') no-repeat left center #000;
+margin-left: 10px;
+padding-left: 19px;
+}
+
+#sidebarNext a{
+float: right;
+background: url('images/sidebar/next.png') no-repeat right center #000;
+margin-right: 10px;
+padding-right: 20px;
+}
+
+.thumbTitle {
+position: absolute;
+bottom: 0px;
+left: 0px;
+width: 140px;
+height: 50px;
+font-size: 10px;
+color: white;
+background: url('images/sidebar/thumbhover.png') no-repeat;
+padding: 10px;
+display: none;
+}
+.thumbTitle span{
+    height: 32px;
+    overflow: hidden;
+    display: block;
+}
+
+/*Widgets*/
+
+/*Newsletter signup*/
+#newsletter, #tumblrFeedWrap{
+    background: #181818;
+    height: 110px;
+    width: 280px;
+    padding: 0 10px 10px 10px;
+    margin-bottom: 20px;
+}
+
+#newsletter .widget-title {
+    width: 100%;
+}
+
+.widget-title {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 0px 8px 0px;
+    border-bottom: 1px solid #3d3d3d;
+    margin: 0 auto 9px auto;
+}
+
+/*Champs Ad*/
+#champs, #tumblrFeedWrap{
+    background: #181818;
+    height: 234px;
+    width: 280px;
+    padding: 0 10px 10px 10px;
+    margin-bottom: 20px;
+}
+
+#champs .widget-title {
+    width: 100%;
+}
+
+.widget-title {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 0px 8px 0px;
+    border-bottom: 1px solid #3d3d3d;
+    margin: 0 auto 9px auto;
+}
+
+#freshnessSidebar .widget-title {
+    color: #cfdd1a;
+    width: 100%;
+    text-align: center;
+}
+
+/*Twitter hack*/
+.twtr-hd h4 {
+    font-weight: bold;
+}
+
+.twtr-widget .twtr-tweet {
+border-bottom: 1px solid #d0d0d0 !important;
+}
+
+/*Tumblr*/
+
+#tumblrFeedWrap {
+    height: 100%;
+    position: relative;
+}
+
+img#freshInsetImg {
+    position: absolute;
+    right: 0;
+}
+
+#tumblrFeedWrap  .widget-title {
+    color: #cc6600;
+}
+
+.tumblr_posts {
+   padding: 0;
+   min-height: 240px;
+}
+.tumblr_post {
+    margin: 0 15px;
+}
+
+.tumblr_caption a {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 5px 12px 5px;
+    display: block;
+}
+
+.tumblr_caption a:hover {
+    color: #e0e0e0;
+}
+
+#tumblrFeedWrap .tumNav{
+    display: block;
+    text-indent: -10000em;
+    width: 12px;
+    height: 11px;
+    position: absolute;
+    top: 153px;
+}
+
+#tumblrFeedWrap .previous {
+    background: url('images/sidebar/prev.png') no-repeat left center #000;
+    left: 6px;
+}
+
+#tumblrFeedWrap .next {
+    background: url('images/sidebar/next.png') no-repeat right center #000;
+    right: 6px;
+}
+
+#tumblrFeedWrap .previous:hover {
+    background: url('images/sidebar/prev_hover.png') no-repeat left center #000;
+}
+
+#tumblrFeedWrap .next:hover  {
+    background: url('images/sidebar/next_hover.png') no-repeat right center #000;
+}
+
+img#readLive {
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+/*Freshness social box/ Freshness Connect*/
+.freshnessConnect {
+    border: 1px solid #d0d0d0;
+    width: 298px;
+    background: #fff;
+}
+
+#freshnessSidebar .freshnessConnect .widget-title{
+    color: #C60;
+    width: 280px;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.freshnessConnectItem {
+    padding: 10px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+#freshnessConnectfb {
+    border-top: 0px;
+}
+#freshnessConnectGPlus {
+    background-color: #f6f6f6;
+}
+#freshnessConnectTw {
+    background-color: #EEF9FD;
+}
+#freshnessConnectStm {
+    background-color: #EBF9E8;
+}
+#freshnessConnectTum {
+    background-color: #EBF1F9;
+}
+

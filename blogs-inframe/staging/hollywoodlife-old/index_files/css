@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Passion One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Passion One'), local('PassionOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/passionone/v4/fY6k21F1QT2c_Oc3HRNDwobN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Pinyon Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pinyon Script'), local('PinyonScript'), url(http://themes.googleusercontent.com/static/fonts/pinyonscript/v4/TzghnhfCn7TuE73f-CBQ0BEVhAA1gnTRu3Am0EzDRlM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Waiting for the Sunrise';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Waiting for the Sunrise'), local('WaitingfortheSunrise'), url(http://themes.googleusercontent.com/static/fonts/waitingforthesunrise/v5/eNfH7kLpF1PZWpsetF-hazFoTnl3mJKNVVnPtbVHJow.woff) format('woff');
+}

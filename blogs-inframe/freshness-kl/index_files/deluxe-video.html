@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title></title>
+
+<script src="index_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+                    
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-30251-60']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+<script src="deluxe-video_data/a" defer="defer" id="audience_1379629302334"></script><script src="deluxe-video_data/gapro-1.js"></script></head>
+<body>
+<style>
+	body,html {margin: 0; padding: 0;}
+	#videocontainer {position: relative; width:850px;} /* make width of the video */
+	#playerrb {z-index: 2; position: absolute; top: 0; left: 0;}
+	#pushdownsound { position: absolute; right: 10px; top: 5px; z-index: 500;} /* position audio button */
+	#replay {z-index: 500; position: absolute; left: 10px; top: 10px; display:none; cursor: pointer;} /* position replay */
+</style>
+<script type="text/javascript" src="deluxe-video_data/vmcutility.js"></script>
+<script type="text/javascript" src="deluxe-video_data/vmtracking.js"></script>
+<script language="JavaScript" src="index_files/swfobject.js" type="text/javascript"></script>
+<script language="JavaScript" src="index_files/jwplayerL.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+//UPDATE THIS PATH   
+
+var campaignname = "JimmyChoo-9-2013-Video"; //fill in campaign name
+var unitType = "FWBB-Deluxe"; //type of unit ROS, TO, FWBB, TOOLBAR etc
+var unitname = campaignname + "-" + unitType;
+var thumbnail 	= "http://cdnl.complexmedianetwork.com/Q32013/jimmychoo/videodeluxe.jpg"; //video screen shot 
+videofilepath	= "http://cdnl.complexmedianetwork.com/Q32013/jimmychoo/JC_Trailer_15sec_Deluxe.mp4"; //video file name
+	
+
+   
+
+   
+function trackPlayVMC() {
+	log("trackPlayVMC");
+	clipInfo.id 	= unitname;
+	clipInfo.title 	= unitname;
+					
+	var duration 	= jwplayer().getDuration();
+	_vmc.getRemoteNode().clipViewed(clipInfo);
+	_vmc.getRemoteNode().setClipDuration(duration * 1000);
+}
+
+function cmnAudioOn() {
+	_gaq.push(['_trackEvent', campaignname, unitname, 'AudioOn']); 
+	jwplayer('FWBBvideoplayer').setVolume(55);
+	document.getElementById('pushdownsound').innerHTML  ="<a onClick=\"cmnAudioOff();\"><img src=\"http://cdn.complexmedianetwork.com/cdn/agenda.complex.com/assets/icons/sound_on.png\" height=\"35px\" width=\"35px\" border=\"0\" /></a>";
+}
+
+function cmnAudioOff() {
+	_gaq.push(['_trackEvent', campaignname, unitname, 'AudioOff']); 
+	jwplayer('FWBBvideoplayer').setVolume(0);
+	document.getElementById('pushdownsound').innerHTML  ="<a onClick=\"cmnAudioOn();\"><img src=\"http://cdn.complexmedianetwork.com/cdn/agenda.complex.com/assets/icons/sound_off.png\" height=\"35px\" width=\"35px\" border=\"0\" /></a>";
+}
+
+function cmnReplay() {
+	_gaq.push(['_trackEvent', campaignname, unitname, 'Replay']); 
+	jwplayer('FWBBvideoplayer').play(true);
+	document.getElementById('replay').style.display = 'none';
+	document.getElementById('pushdownsound').style.display = 'block';
+	cmnAudioOn(); 
+}
+
+function displayReplay() {
+	document.getElementById('replay').style.display = 'block';
+	document.getElementById('pushdownsound').style.display = 'none';  
+}						
+</script>
+
+<div id="videocontainer">
+	<div style="display: none;" id="pushdownsound"><a onclick="cmnAudioOn();" onmouseover="pointer" border="0"><img src="deluxe-video_data/sound_off.png" border="0" height="35px" width="35px"></a></div>
+	<div style="display: block;" id="replay"><a onclick="cmnReplay();" onmouseover="pointer" border="0"><img src="deluxe-video_data/replay.png" border="0"></a></div>
+	<div style="position: relative; width: 850px; height: 300px;" id="FWBBvideoplayer_wrapper"><object tabindex="0" name="FWBBvideoplayer" id="FWBBvideoplayer" bgcolor="#000000" data="deluxe-video_data/playerL.swf" type="application/x-shockwave-flash" height="100%" width="100%"><param value="true" name="allowfullscreen"><param value="always" name="allowscriptaccess"><param value="true" name="seamlesstabbing"><param value="opaque" name="wmode"><param value="netstreambasepath=http%3A%2F%2Fcdn.complexmedianetwork.com%2Fcdn%2Fagenda.complex.com%2Fassets%2FQ32013%2Fjimmychoo%2Ffwbb%2Fdeluxe-video.html&amp;id=FWBBvideoplayer&amp;allowscriptaccess=always&amp;image=http%3A%2F%2Fcdnl.complexmedianetwork.com%2FQ32013%2Fjimmychoo%2Fvideodeluxe.jpg&amp;file=http%3A%2F%2Fcdnl.complexmedianetwork.com%2FQ32013%2Fjimmychoo%2FJC_Trailer_15sec_Deluxe.mp4&amp;autostart=true&amp;backcolor=000000&amp;frontcolor=FFFFFF&amp;lightcolor=cccccc&amp;volume=0&amp;stretching=exactfit&amp;plugins=gapro-1h&amp;gapro.accountid=UA-30251-57&amp;gapro.trackstarts=true&amp;gapro.trackpercentage=true&amp;gapro.tracktime=true&amp;gapro.pluginmode=FLASH&amp;controlbar.position=none&amp;display.icons=false" name="flashvars"></object></div>
+	<script type="text/javascript">
+	jwplayer('FWBBvideoplayer').setup({
+		
+			'allowscriptaccess': 	'always',
+			'flashplayer': 			'http://cdn.complexmedianetwork.com/cdn/agenda.complex.com/js/playerL.swf',
+			'image': 				thumbnail,
+			'file': 				videofilepath,
+			'autostart': 			'true',
+			'backcolor': 			'000000',
+			'frontcolor': 			'FFFFFF',
+			'lightcolor': 			'cccccc',
+			'controlbar': 			'none',
+			'icons': 				'false',
+			'volume': 				'0',
+			'width': 				'850', // video width
+			'height': 				'300',
+			'stretching': 			'exactfit',
+			'plugins': {
+			'gapro-1': {accountid: 'UA-30251-57', trackstarts: 'true', trackpercentage: 'true', tracktime: 'true'}
+		}, 
+		events: {onPlay: function(event) {playbackStarted();},
+		onTime: function(event) {updateTimeCallback(); },
+		onComplete: function(event) {displayReplay() }
+	}       
+	});
+</script>
+</div>
+
+
+
+</body></html>

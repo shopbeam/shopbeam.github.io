@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0182)https://demo.shopbeam.com/app/widget/views/xdm/?xdm_e=http%3A%2F%2Fbeautysuitcase.com&xdm_c=default2120&xdm_p=1#/image?id=214584&apikey=33cbfd0c-d488-4b14-ac89-5f31ee6fff35&width=250 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="easyXDM-fb339ad5697eee0823f9e5fb44679e0c.js"></script><style type="text/css"></style><!--script(src='/socket.io/socket.io.js')--><!--[if lt IE 10]><script src="/js/lib/shiv/customEvents-aac081badff6b95ce085e813950094ae.js"></script><script src="/js/lib/shiv/filter-05f10b38c53f9d14b6bd9db93ec04d0c.js"></script><script src="/js/lib/shiv/map-b03893bbc107ff30ee8f583f90c61aa8.js"></script><script src="/js/lib/shiv/some-87d3a623948a88cbea18bf96afd2ff43.js"></script><script src="/js/lib/shiv/string-9f85bc778b97e07dd0e193465361faf2.js"></script><![endif]--></head><body style="height: 100%; width: 100%; background: transparent; overflow: hidden; margin: 0; padding: 0; position: absolute;"><iframe id="angular" src="saved_resource(1).html" frameborder="0" width="100%" height="100%" style="width: 100%; height: 100%;" allowtransparency="true"></iframe><script>var iframe = document.getElementById('angular')
+    , REGEXP = /mode=(\w+)(?:&|$)/
+    , modeMatch = location.hash.match(REGEXP) || ['','']
+    , appParams = location.hash.replace(modeMatch[0], '')
+    , mode = modeMatch[1]
+    ;
+    
+iframe.src = '/app/widget/' + mode + appParams;
+
+window.Shopbeam = {};
+//Shopbeam.socket = io.connect(window.location.host);
+
+//-- namespace easyXDM
+Shopbeam.easyXDM = easyXDM.noConflict('Shopbeam');
+
+var closeFlyoutEvent = new CustomEvent('closeFlyoutEvent');
+var openLightboxEvent = new CustomEvent('openLightboxEvent');
+
+Shopbeam.widget = new Shopbeam.easyXDM.Rpc({},
+  {
+    remote: {
+      openLightbox: {},
+      closeLightbox: {},
+      setPlaceholder: {},
+      getPlaceholder: {},
+      openCart: {},
+      providerReady: {},
+      getWidgetId: {},
+      location: {},
+      openFlyout: {},
+      closeFlyout: {},
+      flyoutActive: {},
+      setActive: {},
+      openCheckout: {}
+    },
+    local: {
+      openLightbox: function() {
+        iframe.contentWindow.dispatchEvent(openLightboxEvent);
+      },
+      closeFlyout: function() {
+        iframe.contentWindow.dispatchEvent(closeFlyoutEvent);
+      }
+    }
+  });
+  
+Shopbeam.widget.providerReady();</script></body></html>

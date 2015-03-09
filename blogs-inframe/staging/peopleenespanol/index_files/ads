@@ -1,0 +1,59 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = {}; 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=L&amp;ai=CClAdRVEgVMrtDamDwQGJ5YCABYq0lcQHovig6p8B-cj93wUQASCZlrYbKANQ4Kmx9wdgyd6Oi8Ck2A_IAQGoAwGqBHxP0Jfj2oBF1yIU-Nkz_SeSzFmWr-l3waS-HYOb9uZws-9Tl8mfUexGZO0u_zGptsjwRYAbGMtNp4xJFwKDkcjJcUZpl_mJQox8knT8luj8h0hTSE_0jR3mRilJ2SPpKZ-2V8ouHCFaQ5eOe6WB5XzDD6lTKJv51nQlaXMDgAei6J8x&amp;num=1&amp;sig=AOD64_1ZS9hwc_irggvo7RkvFqUWU7lakg&amp;client=ca-timeinc-peoplees-bah&amp;adurl=http://www.clairol.com/es-US/%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3DClairol.USH_Content_Contextual_SP%26utm_term%3Dgarnier%26utm_content%3Dgdn"; 
+google_ad.visible_url = "www.clairol.com/Nice-&#39;n-Easy"; 
+google_ad.log_info = "BsPpgRVEgVMrtDamDwQGJ5YCABQCi-KDqnwEAABABOAHIAQGoE4AB";
+google_ad.activeview_js_immediate_enabled = "true";
+google_ad.line1 = "Tinte de Pelo Clairol\x26#174;"; 
+google_ad.line2 = "Tu Mejor Color Empieza con el Tinte"; 
+google_ad.line3 = "Adecuado para Ti. Pru\x26#233;balo Ahora."; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_ad = {}; 
+google_ad.n = 2; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=C-pVWRVEgVMrtDamDwQGJ5YCABeCAgIMC2MbV5ZABwI23ARACIJmWthsoA1CjseL5BmDJ3o6LwKTYD6ABoOrT2APIAQGoAwGqBH9P0PeD94BG1yIU-Nkz_SeSzFmWr-l3waS-HYOb9uZws-9Tl8mfUexGZO0u_zGptsjwRYAbGMtNp4xJFwKDkcjJcUZpl_mJQox8knT8luj8h0hTSAf0BnMjpxub7SPpvHZd7XPH6ppbtpRKjqZFEj_T-OpDHZj59nLXTZfqiYaPiAYBgAfIlawn&amp;num=2&amp;cid=5GijnkMMuoC9N3pWlFbQNJv5&amp;sig=AOD64_2r_-krc_pC9yZIVmuVeeg4v4Qavg&amp;client=ca-timeinc-peoplees-bah&amp;adurl=http://beautyschoolsdirectory.com/lp3/es-index%3Fgooglespanishc_curso%2520maquillaje%2520profesional%26TrackingCode%3DctdvIiwQM_dc%7Cpcrid%7C38853162224%7Cpkw%7Ccurso%2520maquillaje%2520profesional%7Cpmt%7C"; 
+google_ad.visible_url = "www.beautyschoolsdirectory.com"; 
+google_ad.log_info = "BsPpgRVEgVMrtDamDwQGJ5YCABQCi-KDqnwEAABABOAHIAQGoE4AB";
+google_ad.activeview_js_immediate_enabled = "true";
+google_ad.line1 = "Curso de Maquillaje"; 
+google_ad.line2 = "Encuentre escuelas de belleza en tu"; 
+google_ad.line3 = "local. Get enrollment info today!"; 
+google_ad.regionname = ""; 
+google_ads[1] = google_ad; 
+google_ad = {}; 
+google_ad.n = 3; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=C35KxRVEgVMrtDamDwQGJ5YCABans5rAFwZbx-ZUBgPexj1IQAyCZlrYbKANQs6Sj1wFgyd6Oi8Ck2A-gAcf94dIDyAEBqQIEB6Tbk4K1PqgDAaoEhQFP0Ne4woBH1yIU-Nkz_SeSzFmWr-l3waS-HYOb9uZws-9Tl8mfUexGZO0u_zGptsjwRYAbGMtNp4xJFwKDkcjJcUZpl_mJQox8knT8luj8h0hTSH_3BjsjBgFI_APoQQCxaposxcpZ-paijR6AEj_T-qqXHZj5NDLHWJIyxxanXaAL3eCpiAYBgAehgp4t&amp;num=3&amp;cid=5GijnkMMuoC9N3pWlFbQNJv5&amp;sig=AOD64_2hEnuTzRcIOQD-0P5dPgY8PJJyHQ&amp;client=ca-timeinc-peoplees-bah&amp;adurl=http://www.clinlife.com/lpg/1598"; 
+google_ad.visible_url = "www.clinlife.com/Colesterol_alto"; 
+google_ad.log_info = "BsPpgRVEgVMrtDamDwQGJ5YCABQCi-KDqnwEAABABOAHIAQGoE4AB";
+google_ad.activeview_js_immediate_enabled = "true";
+google_ad.line1 = "\x26#191;Colesterol alto?"; 
+google_ad.line2 = "Vea si puede participar en un"; 
+google_ad.line3 = "estudio de investigaci\x26#243;n."; 
+google_ad.regionname = ""; 
+google_ads[2] = google_ad; 
+google_info.feedback_url = "https://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.peopleenespanol.com/cambia-tu-look%26gl%3DUS%26hl%3Des%26client%3Dca-timeinc-peoplees-bah%26hideleadgen%3D1%26ai0%3DCClAdRVEgVMrtDamDwQGJ5YCABYq0lcQHovig6p8B-cj93wUQASCZlrYbKANQ4Kmx9wdgyd6Oi8Ck2A_IAQGoAwGqBHxP0Jfj2oBF1yIU-Nkz_SeSzFmWr-l3waS-HYOb9uZws-9Tl8mfUexGZO0u_zGptsjwRYAbGMtNp4xJFwKDkcjJcUZpl_mJQox8knT8luj8h0hTSE_0jR3mRilJ2SPpKZ-2V8ouHCFaQ5eOe6WB5XzDD6lTKJv51nQlaXMDgAei6J8x%26ai1%3DC-pVWRVEgVMrtDamDwQGJ5YCABeCAgIMC2MbV5ZABwI23ARACIJmWthsoA1CjseL5BmDJ3o6LwKTYD6ABoOrT2APIAQGoAwGqBH9P0PeD94BG1yIU-Nkz_SeSzFmWr-l3waS-HYOb9uZws-9Tl8mfUexGZO0u_zGptsjwRYAbGMtNp4xJFwKDkcjJcUZpl_mJQox8knT8luj8h0hTSAf0BnMjpxub7SPpvHZd7XPH6ppbtpRKjqZFEj_T-OpDHZj59nLXTZfqiYaPiAYBgAfIlawn%26ai2%3DC35KxRVEgVMrtDamDwQGJ5YCABans5rAFwZbx-ZUBgPexj1IQAyCZlrYbKANQs6Sj1wFgyd6Oi8Ck2A-gAcf94dIDyAEBqQIEB6Tbk4K1PqgDAaoEhQFP0Ne4woBH1yIU-Nkz_SeSzFmWr-l3waS-HYOb9uZws-9Tl8mfUexGZO0u_zGptsjwRYAbGMtNp4xJFwKDkcjJcUZpl_mJQox8knT8luj8h0hTSH_3BjsjBgFI_APoQQCxaposxcpZ-paijR6AEj_T-qqXHZj5NDLHWJIyxxanXaAL3eCpiAYBgAehgp4t\x26usg\x3dAFQjCNE9NfI1NP_06MWYr7_7n3e1rQvyzg";
+var google_attribution_text = "Gestión anuncios";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

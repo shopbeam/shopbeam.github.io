@@ -1,0 +1,27 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body leftmargin="0" topmargin="0" style="background-color:transparent; width: 100%; text-align: center;" marginheight="0" marginwidth="0">
+<div><script type="text/javascript">
+function afterFinished_1370() {
+	var response = getTargetingTags_1370();
+	var tokens = new Array();
+	tokens = response.split(';');
+	var intStr = '';
+	for(a in tokens) {
+		if (tokens[a].indexOf('#')>0 && tokens[a].indexOf(':')>0) {
+			val = tokens[a].substring(tokens[a].indexOf('#')+1, tokens[a].indexOf(':'));
+			intStr += 'int=' + val + '/';
+		} else if (tokens[a].indexOf(':')>0) {
+			val = tokens[a].substring(0, tokens[a].indexOf(':'));
+			intStr += 'int=' + val + '/';			
+		}
+	}
+        if (intStr != '') {
+		var img = new Image();
+		img.src= 'http://bcp.crwdcntrl.net/5/c=244/' + intStr;
+	}
+}
+</script>
+<script type="text/javascript">p39_mpu_1370 = 'http://www.teenvogue.com/fashion/spring-trends/2014-03/tropical-prints';</script>
+<script id="peer39ScriptLoader" type="text/javascript" src="rtifr_data/trg_1370.js"></script><script type="text/javascript" src="rtifr_data/12717287881370.txt"> </script><iframe src="rtifr_data/px.htm" frameborder="0" height="0" scrolling="no" width="0"></iframe></div>
+
+</body></html>

@@ -1,0 +1,49 @@
+mmcore.SetCookie('mmid','520965334|AwAAAApY0kwfkQsAAA==',365,1);mmcore.SetCookie('pd','1950320717|BAAAAAoBQljSTB+RCyylCFsBAEvVTvGuEtJIAA4AAADS6Q7DrhLSSAAAAAD/////AP//////////AAZEaXJlY3QBkQsBAAAAAAABAAAAAAD///////////////8AAAAAAAFF',365);mmcore.SetCookie('srv','nycvwcgus10',365);(function(){if(typeof(mmcore.GenInfo)!='object')mmcore.GenInfo={};mmcore.EH=function(e){var s=e.message+'\r\n';if(!window.mm_error)window.mm_error=s;else window.mm_error+=s;};
+try{
+;(function(){
+    // configuration:
+    var defaultAccount = 'thestartsprod',
+        defaultParams = ['prop46', 'prop47', 'eVar46', 'eVar47'];
+    // this defaultParams array should have a number of values divisible by 2 because 
+    // every 1st, 3th, 5th, ... etc, param in this array will get passed the campaign name
+    // every 2nd, 4th, 6th, ... etc, param in this array will get passed the element and variant names
+
+    // arguments:
+    // campaignName = full name of campaign
+    // params = array of evar/prop parameters to pass (optional)
+    // account = track to a different omniture account (optional)
+    mmcore.trackOmniture = function(campaignName, params, account){
+        var GI = mmcore.GenInfo[campaignName];
+        if(!GI) return mmcore.EH({message:"Omniture function called for non-existant campaign."});
+
+        var output = [],
+            params = params || defaultParams,
+            account = account || defaultAccount;
+
+        var elems_varnts = [];
+
+
+        for(var key in GI) {
+            elems_varnts.push(key, GI[key].toLowerCase());
+        }
+        elems_varnts = elems_varnts.join(" | ");
+
+        mmcore.AddDocLoadHandler(function() {
+            var s = s_gi(account);
+            s.linkTrackVars = params.join(',');
+            for (var i = 0; i < params.length; i=i+2) {
+                s[params[i]] = campaignName;
+                if (params[i+1]) {
+                    s[params[i+1]] = elems_varnts;
+                }
+            }
+            s.tl(true, 'o', 'Maxymiser Generation');
+        });
+
+
+    };
+})();
+}catch(err){mmcore.EH(err);}
+if(typeof mmcore._callback=='object'&&typeof mmcore._callback[1]=='function'){try{mmcore._callback[1]();}catch(err){mmcore.EH(err);}
+finally{mmcore._callback[1]=null;}}
+})();

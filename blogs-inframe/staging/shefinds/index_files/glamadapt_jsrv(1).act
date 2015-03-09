@@ -1,0 +1,324 @@
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+
+
+   
+   
+ 
+      
+   
+   
+      
+   
+   
+      
+   
+
+
+      
+   
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+   
+   
+    
+   
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+/* Generated on : Thu Feb 27 2014 11:07:59 PST */
+
+
+/* ga_adb=ade;ga_srv=normal;;ga_plf=---- */
+
+
+function GlamAdaptSetInfo(gvar, gval) {
+ if ( ! window.glam_adapt_info ) {
+  window.glam_adapt_info = new Object();
+ }
+ window.glam_adapt_info[gvar]=gval;
+}
+function GlamAdaptGetInfo(gvar) {
+ if ( window.glam_adapt_info && window.glam_adapt_info[gvar]) {
+  return window.glam_adapt_info[gvar];
+ }
+ return null;
+}
+if ( ! window.GlamGetAffiliateInfo ) {
+ window.GlamGetAffiliateInfo = function(pName) {
+  var glam_info = new Object();
+  
+  var glam_affiliate_vars = 'js_mode=show;_ge_=3^2^d41b23fe78770e20570feed04dd0517d;ga_adb=ade;sid=11666013328769888111;browser=None;co=US;dma=501;;;flg=64;afid=8156650;zone=/;nt=g;cc=us;ec=ron;p=0;p=1;!c=b;!c=dcm;!c=dcs;!c=s;!c=sf;a_rmt=160;a_rmt=300;a_rmt=728;a_sov=1;atf=o;cl=130757;cl=156241;cl=157124;cl=157620b;cl=324136557;cnt=q;cnt=q=324138422;conv=zappos;cx=s;cx=sf;ec=tb;ec=tf;ec=tsk;ga_af_hydra=1;ga_dealid=st15734;ga_edealid=st25734;ga_erdealid=rn24858;ga_exdealid=exp;ga_rdealid=rn14858;ga_xaxis=portron;hawkeye=live;hyd_g_hq=1;ia=s;lng=en;nat=y;pec=f;pg=qual;psh=y;rmt=exp;rmt=ov;rsk=y;rsu=fs;rsu=po;rsu=sk;rsu=sl;rtb=agha;rtb=pgm;rtb=pgma;rtb=rgm;rtb=rgma;uk=google;uk=push;uk=rsk;vads=prelive;vec=st;vpec=st;vqs=9;atf=1;pfl=0;ga_callseq=2;pt=0;dsid=443996;uv=4;tt=j;u=b01xx0000000000000x,g10001s;sz=970x66;tile=2;ord=1128794751130044.5;ga_ctime=1395856971063;url=bukm5x;seq=1;ux=g-64,1,;_glt=240:3:14:2:51:63:2014:3:26;a_tz=-240;_g_cv=2;;gpa=1;;';
+  var vars = glam_affiliate_vars.split(";");
+  for (var i=0;i<vars.length;i++) {
+   var pair = vars[i].split("=");
+   if ( pair[1] ) { glam_info[pair[0]] = pair[1]; }
+  }
+  return ( glam_info[pName] ? glam_info[pName] : null);
+ }
+}
+GlamAdaptSetInfo('srv_ad_id', 0);
+
+GlamAdaptSetInfo('country_code', 'US');
+
+GlamAdaptSetInfo('dma', '501');
+
+GlamAdaptSetInfo('region_code', 'NY');
+
+GlamAdaptSetInfo('areacode', '212');
+
+GlamAdaptSetInfo('city', 'NEWYORK');
+
+GlamAdaptSetInfo('bw', '5000');
+
+
+
+  /* Served by  [ggvaapp42/10.143.0.62] for [www30a5.glam.com] at [Wed Mar 26 2014 11:44:29 PDT] */
+
+if ( !window.glamadapt_he_placements )
+{
+    window.glamadapt_he_placements = {};
+}
+function GlamIsHawkeyeAvailable(p)
+{
+ if (!window.glamadapt_he_placements['a'+p] && window.asiPqTag && window.asiPlacements &&  window.asiPlacements[p] && window.asiPlacements[p]['default'] && window.asiPlacements[p]['default']['key'] && window.asiPlacements[p]['blob'])
+  return true;
+ else
+  return false;
+}
+function GlamShowHawkeye(p)
+{
+ if (GlamIsHawkeyeAvailable(p))
+ {
+   window.glamadapt_he_placements['a'+p]=true;
+   document.write('<scri'+'pt type="text/javascript" src="http://imp.revsci.net/rtbads/pq?mode=s&placement=' + p+ '&adgroup=' + asiPlacements[p]['default']['key'] + '&blob=' + asiPlacements[p]['blob'] + '&cachebuster=cachebuster&click="></scri'+'pt>');
+   return true;
+ }
+return false;
+}
+
+
+function GlamIsAvailable(slotname)
+{
+  GlamLogWithTimer('GlamIsAdAvailable() called');
+  var adslot = GlamGetSlotObject(slotname);
+
+  if ( adslot && adslot.show && adslot.he_slot && (GlamIsHawkeyeAvailable(adslot.he_slot) || adslot.he_shown) )
+    return true;
+  else if ( !adslot || !adslot.show || adslot.noad || !window.glamadapt_done || adslot.nopda || adslot.processing || adslot.ccalls >= adslot.acalls )
+    return false;
+  else
+  {
+    adslot.ccalls++;
+    return true;
+  }
+}
+
+
+document.write(' <!-- 970x66 Default Ad //-->');
+
+if ( window.GlamAdaptSetInfo ) { GlamAdaptSetInfo('srv_ad_id', 5000000140);}
+
+
+/* rs = 112 */
+
+window.glam_adapt_ase_rs = 112; 
+
+  /* _ge_ = 1^2^d41b23fe78770e20570feed04dd0517d */
+ /* srv_ad_id=5000000140 / ase=112 */
+
+ 
+
+ 
+  
+ 

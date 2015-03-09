@@ -1,0 +1,102 @@
+(function(){
+var d=document,w=window,dle;
+
+function ff(){
+var p=w.parent,r;
+
+while (p != top) {
+try {
+  if (p.location.host == w.location.host) 
+	r = p.document.referrer;
+} catch (e) { } 
+
+p = p.parent;
+}
+
+return r;
+}
+
+function cD() {
+var q=w.location.search,f,gf='',sd;
+
+if (gf.length > 0) 
+	f = ff();
+while (true) {
+  try {
+    if (top.document.domain == d.domain) {
+      return true;
+    } else {
+      d.domain = top.document.domain;
+      return true;
+    }
+  } catch (e) { // We expect this to happen if the domains are different.
+	if (d.domain.indexOf('.') != -1) {
+		sd=d.domain.substr(d.domain.indexOf('.')+1);
+		if (sd.indexOf('.') == -1) {
+			if (gf.length > 0 && f) {
+				if (f.substring(0, 4) == 'http') {
+				dle=new Image();
+				dle.src="//a.dlqm.net/adscgen/log_error.php?errcode=6&amp;details=d1050929/272/";
+				var j = f.substring(8).indexOf('/');
+
+				if (j != -1) {
+					dle=d.createElement('iframe');
+					dle.width=0;
+					dle.height=0;
+					dle.src=f.substring(0, j + 8) + gf + q;
+					d.body.appendChild(dle);
+					return false;
+				}
+				}
+			}
+
+			dle=new Image();
+			dle.src="//a.dlqm.net/adscgen/log_error.php?errcode=4&details=" + (escape("d1050929/272/ " + document.location));
+		} else {
+			d.domain = sd;
+			continue;
+		}
+	}
+	return false;
+} /* catch */
+} /* while */
+}
+
+if (cD()) {
+var df=top;
+while (df.document.getElementsByTagName('frameset').length) {
+  var doc_area = 0, biggestframe = null;
+ 
+  for (var i = 0; i < df.frames.length; i++) {
+    if(d.body.clientWidth) {
+      DL_width = df.frames[i].document.body.clientWidth;
+      DL_height = df.frames[i].document.body.clientHeight;
+    } else {
+      DL_width = df.frames[i].innerWidth;
+      DL_height = df.frames[i].innerHeight;
+    }
+    // Choose the largest frame, but give the later
+    // frame preference if the difference is less than 1%.
+    if (doc_area <= DL_width*DL_height*1.01) {
+      doc_area = DL_width*DL_height;
+      biggestframe = df.frames[i];
+    }
+  }
+  df=biggestframe;
+}
+d=df.document;
+if (!df.DL_already_ran){
+dle=d.createElement('script');
+dle.src='//amch.questionmarket.com/adscgen/d_layer.php?sub=amch&type=d_layer&survey_num=1050929&lang=&from_node=25954&site=272';
+try {
+	if (dle.src.search('d_layer') && (window['$WLXRmAd'] || (window.parent && window.parent['$WLXRmAd']))) {
+		dle.src=dle.src.replace('d_layer','h_layer');
+	}
+} catch (e) {}
+dle.type="text/javascript";
+d=d.getElementsByTagName('head');
+if (d.length > 0) 
+	d.item(0).appendChild(dle);
+}
+}
+})();

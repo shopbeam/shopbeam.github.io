@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="a_data/easyXDM-fb339ad5697eee0823f9e5fb44679e0c.js"></script><!--script(src='/socket.io/socket.io.js')--></head><body style="height: 100%; width: 100%; background: transparent; overflow: hidden; margin: 0; padding: 0; position: absolute;"><iframe id="angular" src="xdm_data/cart.html" style="width: 100%; height: 100%;" allowtransparency="true" frameborder="0" height="100%" width="100%"></iframe><script>iframe = document.getElementById('angular');
+iframe.src = '/app/cart';
+
+window.Shopbeam = {};
+//Shopbeam.socket = io.connect(window.location.host);
+
+//-- namespace easyXDM
+Shopbeam.easyXDM = easyXDM.noConflict('Shopbeam');
+
+Shopbeam.cart = new Shopbeam.easyXDM.Rpc({},
+  {
+    remote: {
+      openCart: {},
+      closeCart: {},
+      hideCart:{},
+      cartReady: {},
+      location: {},
+      goTo: {},
+      openCheckout: {}
+    }
+  });
+  
+Shopbeam.cart.cartReady();</script></body></html>

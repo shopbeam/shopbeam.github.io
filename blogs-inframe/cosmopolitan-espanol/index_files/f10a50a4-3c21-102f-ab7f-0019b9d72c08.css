@@ -1,0 +1,811 @@
+/* COSMO MX WIDGET  */
+/* 2011-10-11 12:36 */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+ margin:0;
+ padding:0;
+ background-color: transparent;
+ border: none;
+}
+table {
+ border-collapse:collapse;
+ border-spacing:0;
+}
+fieldset,img {
+ border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+ font-style:normal;
+ font-weight:normal;
+}
+ol,ul {
+ list-style:none;
+}
+caption,th {
+ text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+ font-size:100%;
+ font-weight:normal;
+}
+q:before,q:after {
+ content:;
+}
+abbr,acronym { border:0;
+}
+HTML { overflow: /*hidden;*/ }
+/* FIN INICIALIZACI?N CROSSBROWSER */
+
+.wg_esmas_safe_wrapper *{
+ margin: 0;
+ padding:0;
+/* background: transparent;*/
+/*border: none;*/
+}
+
+.wg_esmas_safe_wrapper UL{
+	list-style:none;
+	list-style-type:none;
+}
+.wg_esmas_safe_wrapper{
+	width: 300px;
+	/*->height: 245px;*/
+	overflow: hidden;
+}
+
+.wg_esmas_safe_title_container{
+	background:url(http://editorial.esmas.com/img/vanidades/bck_plecader.jpg);
+	width: 300px;
+	height: 44px;
+	overflow:hidden;
+	display:none;
+}
+.wg_esmas_safe_title_container H1{
+	padding:10px 0 0 18px;
+	color:#fff;
+	font-size:19px;
+	height:100%;
+	width:100%;
+	font-family:Lucida Grande,Lucida Sans Unicode,Verdana,Arial,Helvetica,sans-serif;
+}
+
+.wg_esmas_safe_body_container{
+	width: 600px; 
+	/*->height: 178px; */
+	overflow:hidden;
+	/* border-left:2px solid #CECECE;
+	 border-right:2px solid #CECECE; */
+	 height:150px;
+}
+.wg_esmas_safe_sections{
+	position:relative;
+	width: 604px;
+}
+.wg_esmas_safe_simple_poll_section{
+	float: left;
+	width: 294px;
+	min-width:296px;
+	/*->height: 150px;*/
+	/*background-color: orange;*/
+	
+	/*->*/
+	padding-bottom: 15px;
+}
+
+.wg_esmas_safe_question_container{
+	display:inline-block;
+	width:296px; 
+	/*->height:55px;*/
+	/*background-color: blue;*/
+}
+.wg_esmas_safe_icon_container{
+	width: 0;
+	height: 0;
+	display: none;
+	visibility: hidden;
+	overflow:hidden;
+}
+.wg_esmas_safe_icon_container A IMG{
+	width: 0;
+	height: 0;
+	display: none;
+	visibility: hidden;
+	overflow:hidden;
+}
+.wg_esmas_safe_text_container{
+	background-image:none !important;
+	/*->width: 280px; */
+	/*->height: 48px; */
+	/*background-color: green; */
+	/*->*/
+}
+.wg_esmas_safe_text_container H2{
+	/*->*/ 
+	display:inline-block;
+	font-family: Helvetica, sans-serif;
+	color: #666; 
+	font-size: 13px;
+	font-weight:bold;
+
+	/*->*/
+	margin: 14px 14px 10px 14px; 
+}
+
+.wg_esmas_safe_answer_container{
+	width: 296px;
+	height:85px;
+	display: inline-block;
+	margin-top: 0px;
+	overflow:hidden;
+	/*background-color: magenta;*/
+}
+.wg_esmas_safe_answer_container UL{
+	width: 260px;
+	/*->height: 80px;*/
+	margin-left: 20px;
+	margin-right: 20px;	
+	margin-top: 0px;
+	/*background-color: orange;*/
+}
+.wg_esmas_safe_answer_container UL LI{
+	display:inline-block; 
+	float:none; 
+	/*width: 260px; */
+	margin: 0px !important; 
+	padding: 0px !important; 
+	min-height: 15px !important;
+	
+	/*->*/
+	margin-top: 12px !important;
+	
+	/*overflow: hidden;*/
+	
+}
+.wg_esmas_safe_answer_container UL LI DIV{
+	float: left;
+}
+.wg_esmas_safe_answer_container UL LI DIV INPUT{
+	margin-right: 7px;
+	height: 15px;
+}
+.wg_esmas_safe_answer_container UL LI DIV SPAN{
+	font-family: Helvetica, sans-serif;
+	font-size: 12px !important;
+	color: #666;
+	min-height: 15px;
+	width: 230px;
+	display: inline-block;
+}
+.wg_esmas_safe_answer_container UL LI DIV SPAN A{
+	color: #666;
+} 
+.mv_selected{
+}
+
+
+.wg_esmas_safe_footer_container{
+	width: 296px;
+	height: 40px;
+
+	/*background-color: red;*/
+}
+.wg_esmas_safe_footer_container INPUT{
+	margin-top: 5px;
+	margin-left: 20px;
+	margin-right: 5px;
+	float:left;
+}
+
+.wg_esmas_safe_footer_container A IMG{ 
+	margin-top: 10px; 
+	margin-left: 113px; 
+	margin-right: 5px; 
+	float:left; 
+	width: 58px; 
+	height: 27px; 
+	background-image:url(http://editorial.televisa.com/img/cosmopolitan/bt_vota.gif); 
+	background-repeat:no-repeat; 
+	border:none;
+} 
+
+.wg_esmas_safe_thanks_text{
+	width:150px;
+	height: 18px;
+	font-family: Helvetica, sans-serif;
+	font-size:12px;
+	color:#E11361;
+	margin: 0px;
+	margin-top: 5px;
+	margin-left: 0px;
+	padding-right: 20px;
+	text-align: right;	
+	display: block;
+	float:right;
+	font-weight:bold;
+}
+.wg_esmas_safe_thanks_text A{
+	color:#5C1C03;
+}
+
+.wg_esmas_safe_results_container{
+	float: left;
+	width: 296px;
+	/*->height: 150px;*/
+	margin-left: 0px;
+	padding-left: 0px;
+
+	/*ackground-color: darkorange;*/
+}
+.result {
+	border-bottom:0 !important;
+}
+
+.wg_esmas_safe_graph_container{
+	/*display:inline-block; */
+	width:270px;
+	/*->height:130px;*/
+	margin-left: 15px;
+	margin-top:3px;
+	/*background-color: yellow;*/
+}
+.wg_esmas_safe_chart_container{
+	width: 270px; 
+	/*->height: 130px;*/
+	text-align:center;
+	/*background-color: lightgreen;*/
+}
+
+.wg_esmas_safe_conclusion_container{
+	display: inline-block;
+	padding-top: 10px;
+        width: 287px;
+	/*->height: 15;*/
+	/*->overflow:visible;*/
+}
+.wg_esmas_safe_conclusion_container H2{
+	display: inline-block;
+	/*->width:270px;*/
+	/*->height: 15px;*/
+	font-family: Helvetica, sans-serif;
+	color: #666; 
+	font-size: 13px;
+	text-align:left !important;
+	font-weight:bold;
+	margin-left:15px;
+	margin-top:3px;
+	
+	/*-> */
+	text-align:left;
+}
+
+.wg_esmas_safe_otherpolls_container{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+
+.wg_safe_more_title{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.wg_safe_more_title H3{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.wg_safe_more_title H4{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.wg_safe_more_items{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.wg_safe_more_items LI{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.wg_safe_more_items LI A{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+
+.wg_esmas_safe_poll_go{padding-bottom:5px;}
+
+
+
+
+
+
+
+
+
+
+
+/*Cuerpo de Cajita de Encuestas Recientes*/
+.esmas_safe_more_spl DIV.safe_more_body{
+    width: 296px; 
+	overflow: hidden; 
+	background-color: #D4CDC7;
+}
+/*Contenedor de Elementos*/
+.esmas_safe_more_spl DIV.safe_more_body DIV.elements_container{
+    margin-top: 5px;
+}
+/*Cada uno de los elementos*/
+.esmas_safe_more_spl DIV.safe_more_body DIV.elements_container DIV.element{
+    width:298px;
+    display:inline-block;
+    padding-top: 5px; 
+    margin-left: 1px;
+}
+/*Caracter?icas de elemento alterno*/
+.esmas_safe_more_spl DIV.safe_more_body DIV.elements_container DIV.alternate{
+    background-color: #E6E1DB;
+}
+/*Contenedor de Link*/ 
+.esmas_safe_more_spl DIV.safe_more_body DIV.elements_container DIV.element SPAN{
+	display:inline-block;
+}
+/*Link*/            
+.esmas_safe_more_spl DIV.safe_more_body DIV.elements_container DIV.element SPAN A{
+	display:inline-block;
+    color: #5C1C03; 
+    font-size: 14px;
+    text-align:left;
+    font-weight: normal !important;
+    padding-left: 10px;
+	margin-bottom:3px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nt_esmas_safe_wrapper *{
+ margin: 0;
+ padding:0;
+ background-color: transparent;
+}
+.nt_esmas_safe_wrapper UL{
+	list-style:none;
+	list-style-type:none;
+}
+.nt_esmas_safe_wrapper{
+	width: 610px;
+	/*->height: 327px;*/
+	overflow: hidden;
+}
+
+
+
+
+
+.nt_esmas_safe_title_container{
+	width: 610px;
+	height: 37px;
+	background-image:url(http://polls.esmas.com/resources/img/standalone/head_encuesta_610px.gif);
+	background-repeat:no-repeat;
+}
+.nt_esmas_safe_title_container H1{
+	width: 610px;
+	height: 37px;
+	padding-left: 16px;
+	padding-top: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF; 
+	font-size: 14px;
+	text-align:left;
+	font-weight: bold;
+}
+
+
+
+
+
+
+.nt_esmas_safe_body_container{
+	width: 1220px; 
+	/*->height: 247px; */
+	background-color: #D4CDC7;
+	overflow:hidden;
+}
+.nt_esmas_safe_sections{
+	position:relative;
+	width: 1220px;
+}
+.nt_esmas_safe_simple_poll_section{
+	float: left;
+	width: 610px;
+	/*->height: 247px;*/
+	/*background-color: orange;*/
+}
+
+
+
+
+
+
+
+.nt_esmas_safe_question_container{
+	width:610px; 
+	/*->height:87px;*/
+	/*background-color: blue;*/
+}
+.nt_esmas_safe_icon_container{
+	width: 69px;
+	height: 69px;
+	margin-left: 20px;
+	margin-top: 7px;
+	background-image:url(http://polls.esmas.com/resources/img/standalone/logoTD.gif);
+	background-repeat:no-repeat;
+	background-position:top left;
+	float:left; 
+}
+.nt_esmas_safe_icon_container A IMG{
+	width: 69px;
+	height: 69px;
+	border: none;	
+}
+.nt_esmas_safe_text_container{
+	width: 500px;
+	/*->height: 69px;*/
+	float:left; 
+	margin-top: 7px;
+	/*background-color: green;*/
+}
+.nt_esmas_safe_text_container H2{
+	display: inline-block;
+	width: 500px;
+	margin-left: 10px;
+	font-family: Helvetica, sans-serif;
+	color: #666; 
+	font-size: 20px;
+	text-align:left;
+	font-weight:normal;
+	padding-top: 10px;
+}
+
+
+
+
+
+
+
+.nt_esmas_safe_answer_container{
+	width: 610px;
+	/*->height: 160px;*/
+	display: inline-block;
+	/*background-color: magenta;*/
+
+ 	padding: 0px !important;
+	
+	margin-bottom: 19px;
+}
+.nt_esmas_safe_answer_container UL{
+	width: 560px;
+	/*->height: 160px;*/
+	margin-left: 20px;
+	/*margin-right: 20px;	*/
+	margin-top: 0px !important;
+	padding-top: 0px !important;
+	/*background-color: orange;*/
+}
+.nt_esmas_safe_answer_container UL LI{
+	/*display:inline-block;*/ 
+	float:none;
+	width: 560px;
+	/*background-color: red;*/
+
+	height: 24px !important;
+	overflow: hidden !important;
+	margin: 0px !important;
+	padding: 0px !important;
+	
+	margin-bottom: 7px !important;
+
+}
+.nt_esmas_safe_answer_container UL LI DIV{
+	float: left;
+
+	height: 18px !important;
+	overflow: hidden !important;
+	margin: 0px !important;
+	padding: 0px !important;
+
+
+}
+.nt_esmas_safe_answer_container UL LI DIV INPUT{
+	margin-right: 7px;
+}
+.nt_esmas_safe_answer_container UL LI DIV SPAN{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px !important;
+	color: #5C1C03;
+
+	height: 18px !important;
+	overflow: hidden !important;
+	margin: 0px !important;
+	padding: 0px !important;
+
+
+}
+.nt_esmas_safe_answer_container UL LI DIV SPAN A{
+	color: #666;
+}
+
+.nt_esmas_safe_footer_container{
+	width: 610px;
+	height: 40px;
+	background-image:url(http://polls.esmas.com/resources/img/standalone/bg_rounded_bar_bottom_big_2.gif);
+	background-repeat:no-repeat;
+	background-position:bottom left;
+}
+.nt_esmas_safe_footer_container INPUT{
+	margin-top: 2px !important;
+	margin-left: 15px;
+	margin-right: 5px;
+	float:left;
+}
+
+.nt_esmas_safe_footer_container A IMG{ 
+	margin-top: 5px;
+	margin-left: 20px;
+	margin-right: 5px;
+	float:left;
+	width: 100px;
+	height: 35px;
+	background-image:url(http://polls.esmas.com/resources/img/frontend/a202deb4-c881-102d-8011-0019b9d72c08/a202deb4-c881-102d-8011-0019b9d72c08.gif);
+	background-repeat:no-repeat;	
+}
+
+.nt_esmas_safe_thanks_text{
+	width:150px !important;
+	height: 18px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#666;
+	font-weight:bold;
+	margin: 0px;
+	margin-top: 12px;
+	margin-left: 10px;
+	text-align: right;	
+	display: inline-block;
+	float:left;
+}
+.nt_esmas_safe_results_container{
+	float: left;
+	width: 610px;
+	/*->height: 225px;*/
+	margin-left: 0px;
+	padding-left: 0px;
+	/*ackground-color: darkorange;*/
+}
+.nt_esmas_safe_graph_container{
+	display:inline-block; 
+	width:560px; 
+	/*->height:120px;*/
+	margin-left: 20px;	
+	margin-top: 0px;
+
+	/*background-color: yellow;*/
+}
+.nt_esmas_safe_chart_container{
+	display: inline-block;
+	width: 560px;
+	/*->height: 120px;*/
+	text-align:center;
+	/*background-color: lightgreen;*/
+
+}
+
+
+
+
+
+.nt_esmas_safe_conclusion_container{
+	display: inline-block; 
+	width: 560px;
+	height: 69px;
+	position:relative;
+	margin-top: 10px;
+	left:20px;
+		
+}
+.nt_esmas_safe_conclusion_container H2{
+	/*->height: 69px;*/
+	display: inline-block; 
+	height: 59px;
+	background-image:url(http://polls.esmas.com/resources/img/standalone/logoTD.gif);
+	background-repeat:no-repeat;
+	background-position:top left;
+	
+	padding-left: 80px;
+
+	width: 560px;
+	/*margin-left: 10px;*/
+	font-family: Arial, Helvetica, sans-serif;
+	color: #5C1C03; 
+	font-size: 20px;
+	text-align:left;
+	font-weight:normal;
+	margin-top: 0px;
+}
+
+
+.nt_esmas_safe_otherpolls_container{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+
+
+.nt_safe_more_title{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.nt_safe_more_title H3{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.nt_safe_more_title H4{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.nt_safe_more_items{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.nt_safe_more_items LI{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+.nt_safe_more_items LI A{
+	width: 0px;
+	height: 0px;
+	overflow:hidden;
+	display: none;
+	visibility: hidden;
+}
+
+
+.nt_esmas_safe_poll_go{padding-bottom:5px;}
+
+
+
+.safe_chart_element_label{
+	color:#666 !important;
+	font-size: 12px !important;
+	font-family:Arial, Helvetica, sans-serif;
+	display: inline-block;
+	font-weight:normal;
+	padding-right:5px;
+}
+
+
+
+
+.safe_more_title{
+	height: 37px;
+	width: 300px; 
+	background-image:url(http://polls.esmas.com/resources/img/standalone/title_image.gif);
+	background-repeat:no-repeat;
+	background-position:top left;
+}
+.safe_more_title H4{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666; 
+	font-size: 14px;
+	text-align:left;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+
+
+
+
+/*COLORES DE SERIES (Agregar m?si se requieren encuestas con m?preguntas)*/
+.serie_color_0{
+	background-color: #61082A;
+	border:0 !important;
+}
+.serie_color_1{
+	background-color: #A10D46;
+	border:0 !important;
+}
+.serie_color_2{
+	background-color: #E11262;
+	border:0 !important;
+}
+.serie_color_3{
+	background-color: #EE1368;
+	border:0 !important;
+}
+.serie_color_4{
+	background-color: #C71057;
+	border:0 !important;
+}
+.serie_color_5{
+	background-color: #61082A;
+	border:0 !important;
+}
+.serie_color_6{
+	background-color: #A10D46;
+	border:0 !important; 
+}
+.serie_color_7{
+	background-color: #E11262; 
+	border:0 !important;
+}
+.serie_color_8{
+	background-color: #EE1368;
+	border:0 !important; 
+}
+.serie_color_9{
+	background-color: #C71057;
+	border:0 !important; 
+}
+.serie_color_10{
+	background-color: #61082A;
+	border:0 !important; 
+}
+
+esmas_safe_simple_poll_box iframe {
+	width:300px !important;}
+
+
+#esmas_safe_simplepoll_iframe_ca758fe2-a596-102f-b4f5-0019b9d72c08{width:300px !important;}
+
+

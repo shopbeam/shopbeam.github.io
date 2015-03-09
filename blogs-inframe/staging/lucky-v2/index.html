@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"  ng-app="cnapp"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"  ng-app="cnapp"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"  ng-app="cnapp"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"  ng-app="cnapp"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms no-csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths slideshow-showintro-false slideshow-showinitial-true wf-futurapt-n5-active wf-active ng-scope" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" ng-app="cnapp" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="index_files/ga.js" async="" type="text/javascript"></script><script src="index_files/event_002" type="text/javascript"></script><script src="index_files/event" type="text/javascript"></script><script src="index_files/event_003" type="text/javascript"></script><script src="index_files/slim_v05.js"></script><script src="index_files/client.js" async="" type="text/javascript" id="LR1"></script><script src="index_files/plugin.js" async="" type="text/javascript" id="nativeads-plugin"></script><script src="index_files/pinit_main.js" async="" type="text/javascript"></script><script src="index_files/luckymag.js"></script><script src="index_files/eventTracker.js"></script><script src="index_files/p.js"></script><script src="index_files/fhn3sic.js"></script><script src="index_files/page-ads.js"></script><script src="index_files/CommentCount.js"></script><script src="index_files/livefyre.js"></script><script src="index_files/heart_it_button.js" id="whi-heartitbutton"></script><script src="index_files/ga.js" async="" type="text/javascript"></script><style type="text/css"></style>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.luckymag.com/etc/designs/lucky/favicon.ico">
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="http://www.luckymag.com/etc/designs/lucky/favicon.ico"> <script src="index_files/gpt.js" type="text/javascript" async=""></script><script type="text/javascript">
+        CQURLInfo = {
+            "contextPath": null,
+            "requestPath": '/',
+            "selectorString": null,
+            "selectors": [],
+            "extension": 'html',
+            "suffix": null
+        };
+    </script>
+
+    <link rel="stylesheet" href="index_files/global.css" type="text/css">
+<link rel="stylesheet" media="print" href="index_files/print.css"> 
+
+
+
+<!--
+
+-->
+
+
+
+
+
+<script type="text/javascript" src="index_files/jquery.js"></script>
+<script type="text/javascript" src="index_files/top.js"></script>
+<script type="text/javascript" src="index_files/angular.js"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}</style>
+
+<script type="text/javascript">
+
+    CN.site.init({
+        env             : 'PROD',
+        code            : 'LKY',
+        title           : '',
+        tld             : 'luckymag.com',
+        name            : 'luckymag',
+        siteRoot        : 'lucky',
+        allowedDomains  : 'www.luckymag.com,contribute.luckymag.com',
+        pageId          : 'fcb607ca-0ef6-4aca-a701-0d7e0136edd1',
+        userServiceUrl  : 'http://user-service.condenast.com',
+        userServiceKey  : 'njmbac/BNXxZwmR89yZeNJaH6IU=',
+        ecomUrl         : 'https://subscribe.luckymag.com/api/circ/xml/Transaction'
+    });
+
+    CN.site.livefyre = 'true';
+    //sets shorten img url config for JS
+    CN.config.set({'shortenimgurl':false});
+
+    // Adds livefyre to the CN Namespace
+    CN.livefyre = CN.livefyre || {};
+
+    if(CN.site.livefyre != "true") {
+        CN.pluck.config.serverUrl = "http://sitelife.luckymag.com/ver1.0/Direct/Process";
+        CN.pluck.config.photoUrl = "http://sitelife.luckymag.com/ver1.0/Photo/Upload";
+        CN.pluck.config.siteUrl = "http://www.luckymag.com/";
+        CN.pluck.config.hostUrl = "http://sitelife.luckymag.com/ver1.0";
+        CN.pluck.config.mostpopularEntries = 5;
+        CN.pluck.config.domain = CN.url.domain();
+
+        if (typeof PluckSDK !== "undefined" && PluckSDK.SetEnv) {
+            PluckSDK.SetEnv(CN.pluck.config.hostUrl);
+        }
+
+        jQuery.noConflict();
+
+        CN.config.set({
+            reg     : {
+                urls : {
+                    login:    "/user/login",
+                    logout:   "/user/logout",
+                    reg  :    "/user/registration",
+                    profile : "/user/update",
+                    base :    "/"
+                }
+            },
+            pluckApps : {
+                swapCountDisplay   : true,
+                disableFriends     : true,
+                disableMiniPersona : true,
+                clickableAvatar    : false,
+                hideAbused         : true,
+                countComponent     : true,
+                personaSetup       : true,
+                useSlauth          : false,
+                useOmniture        : true,
+                disablePersonaLink : false
+            }
+        });
+    } else {
+        CN.config.set({
+            reg     : {
+                urls : {
+                    login:    "/user/login",
+                    logout:   "/user/logout",
+                    reg  :    "/user/registration",
+                    profile : "/user/update",
+                    base :    "/"
+                }
+            },
+            pluckApps : {
+                swapCountDisplay   : false,
+                disableFriends     : true,
+                disableMiniPersona : true,
+                clickableAvatar    : false,
+                hideAbused         : true,
+                countComponent     : false,
+                personaSetup       : true,
+                useSlauth          : false,
+                useOmniture        : false,
+                disablePersonaLink : true
+            }
+        });
+
+
+
+       if (typeof CN.livefyre === "undefined") {
+           CN.livefyre = {};
+       }
+
+       CN.livefyre.configOptions = {
+               network             :   "luckymag.fyre.co",
+               userToken           :   'eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJkb21haW4iOiAibHVja3ltYWcuZnlyZS5jbyIsICJleHBpcmVzIjogMTQ0NzI1ODU5MS4zMzg5ODgsICJ1c2VyX2lkIjogInN5c3RlbSJ9.NeRgJZprxABp1DisRpu38XuUX_TCLIxENbPUmzt-fys',
+               lfCookieName        :   "lt",
+               mostpopularEntries  :   "5",
+               mostpopularAge      :   "15",
+               trendingServer      :   "http://bootstrap.luckymag.fyre.co/api/v3.0/hottest/?site=",
+               moderatorFlagText   :   "Lucky"
+       };
+
+       CN.livefyre.trendingUrl = "http://bootstrap.luckymag.fyre.co/api/v3.0/hottest/?site=320164";
+       CN.livefyre.mostCommentedEntries = "5";
+    }
+
+
+
+    </script>
+
+<script type="text/javascript">
+        CN.livefyre.configOptions.pageConfig = {"siteId":"320164","el":"livefyre","collectionMeta":"eyJhbGciOiJIUzI1NiJ9.eyJ0YWdzIjoidGllcjFjb250ZW50LCBtdXNpYywgbXVzaWMsIGNlbGVicml0aWVzLCBtdXNpYywgIiwidGl0bGUiOiJGcm9tIENvdXJ0bmV5IExvdmUgVG8gVGhlIFNwaWNlIEdpcmxzOiBTaG9wIFRoZSBMb29rcyBPZiBZb3VyIEZhdm9yaXRlICc5MHMgTXVzaWMgSWNvbnMiLCJjaGVja3N1bSI6IjU3OTA1NmQzZTUxNzQyNTQ5NjQ1NzljYmMxMmUyZDljIiwiYXJ0aWNsZUlkIjoibHVja3ltYWdfZmNiNjA3Y2EtMGVmNi00YWNhLWE3MDEtMGQ3ZTAxMzZlZGQxIiwidXJsIjoiaHR0cDovL3d3dy5sdWNreW1hZy5jb20vY29udGVudC9sdWNreS9zdHlsZS8yMDE0LzA0Lzkwcy1tdXNpYy1zdHlsZS1pY29ucy5odG1sIn0.NYSURjY6Kb-RZgBjKaH8baUM4eJk5f9XZZAyjGIy87s","checksum":"579056d3e5174254964579cbc12e2d9c","articleId":"luckymag_fcb607ca-0ef6-4aca-a701-0d7e0136edd1"};
+        CN.labjsLivefyre = $LAB.script('//zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js').script('//zor.livefyre.com/wjs/v1.0/javascripts/CommentCount.js')</script>
+<script type="text/javascript">
+    var _ghearst_vars = (function() {
+        var metaKeyWords = '', metaCollection;
+        metaCollection = document.getElementsByTagName('meta');
+        for (i = 0; i < metaCollection.length; i++) {
+            nameAttribute = metaCollection[i].name.search(/keywords/);
+            if (nameAttribute != -1) {
+                metaKeyWords = metaCollection[i].content;
+                metaKeyWords = metaKeyWords.replace(/,/g, '%2C'); // to replace ,
+                metaKeyWords = metaKeyWords.replace(/ /g, ''); // to replace space
+            }
+        }
+        if ( (navigator.userAgent.match(/iPad/i) !== null) && (CN.cookie.get('ipadTakeover') !== 'true') && 'AMS_LKY_GLOBAL_IPAD_TAKEOVER' !== 'null') {
+            positionList = 'AMS_LKY_CONTENTPAGE_TRAIL%2CAMS_LKY_CONTENTPAGE_TRAIL_STICKY%2CAMS_LKY_GLOBAL_CONTENTRIVER%2CAMS_LKY_CONTENTPAGE_HEADERLEFT%2CAMS_LKY_CONTENTPAGE_HEADER%2CAMS_LKY_GLOBAL_NAVBAR%2CAMS_LKY_GLOBAL_NAVBAR_ROLLOVER%2CAMS_LKY_GLOBAL_RIGHTRAIL_A%2CAMS_LKY_GLOBAL_RIGHTRAIL_B%2CAMS_LKY_GLOBAL_RIGHTRAIL_C%2CAMS_LKY_GLOBAL_FOOTER%2CAMS_LKY_POPUP_FLOATINGAD%2CAMS_LKY_POPUP_EXIT%2CAMS_LKY_GLOBAL_SLIDESHOW%2CAMS_LKY_LITEREG_SUBSCRIBE%2CAMS_LKY_GLOBAL_SLIDESHOW_OVERLAY' + '%2CAMS_LKY_GLOBAL_IPAD_TAKEOVER';
+        } else {
+            positionList = 'AMS_LKY_CONTENTPAGE_TRAIL%2CAMS_LKY_CONTENTPAGE_TRAIL_STICKY%2CAMS_LKY_GLOBAL_CONTENTRIVER%2CAMS_LKY_CONTENTPAGE_HEADERLEFT%2CAMS_LKY_CONTENTPAGE_HEADER%2CAMS_LKY_GLOBAL_NAVBAR%2CAMS_LKY_GLOBAL_NAVBAR_ROLLOVER%2CAMS_LKY_GLOBAL_RIGHTRAIL_A%2CAMS_LKY_GLOBAL_RIGHTRAIL_B%2CAMS_LKY_GLOBAL_RIGHTRAIL_C%2CAMS_LKY_GLOBAL_FOOTER%2CAMS_LKY_POPUP_FLOATINGAD%2CAMS_LKY_POPUP_EXIT%2CAMS_LKY_GLOBAL_SLIDESHOW%2CAMS_LKY_LITEREG_SUBSCRIBE%2CAMS_LKY_GLOBAL_SLIDESHOW_OVERLAY';
+        }
+
+        return {
+            'ams_ads_script_src' : 'http://subscribe.luckymag.com/ams/page-ads.js?ad_category_prefix=content&browser_path=%2Fcontent%2Flucky%2Fstyle%2F2014%2F04%2F90s-music-style-icons.html&cat_prefixes=%2Ccontent%2Clucky%2Cstyle%2C2014%2C04%2C90s-music-style-icons.html&keywords=' + metaKeyWords + '&position_list=' + positionList + '&site_prefix=luckymag&subdomain=www&url_name=90s-music-style-icons'
+        };
+    })();
+
+    /***************************************
+     * Validate Registration URL
+     * and Show Popup when validated success
+     *
+     */
+    CN.validateRegistration = (function() {
+        var url_Param_ecomUpsellURL, url_window = window.location.href;
+        return {
+            checkSuccessURL : function() {
+                if (CN.url.params("ecomupsell", url_window) == "true") {
+                    url_Param_ecomUpsellURL = decodeURIComponent(decodeURIComponent(CN.url.params("ecomupsellurl", url_window)));
+                    url_Param_ecomUpsellURL = url_Param_ecomUpsellURL.replace(/^https*:\/\//g, window.location.protocol + "//");
+                    window.open(url_Param_ecomUpsellURL, "PaymentPage", "menubar=1,status=0,resizable=0,toolbar=0,scrollbars=0,width=910,height=560,left=" + ((screen.width) / 3) + ",top=" + ((screen.height) / 3));
+                }
+            }
+        };
+    })();
+
+    jQuery(document).ready(function() {
+        CN.validateRegistration.checkSuccessURL();
+    });
+
+    CN.labjsEcom = $LAB.script(_ghearst_vars.ams_ads_script_src);
+</script>
+<script type="text/javascript">
+CN.labjs = $LAB.setOptions({AlwaysPreserveOrder:true}).script("http://fonts.condenast.com/fhn3sic.js").wait(function(){CN.foundry.init(Typekit || {})});</script>
+
+
+<script type="text/javascript" src="index_files/ads_config.js"></script>
+    <script type="text/javascript">
+        CN.dart.init({site:'luckymag.dart', zone: 'style;', kws: ["style", "2014", "04", "90s-music-style-icons", "celeb", "entertainment"],charmap: {' ' : '+', '-' : '_'} });
+    </script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+
+/*
+  //deprecated to allow a page level tracker object to be used from components during their events.
+  _gaq.push(['_setAccount', 'UA-8293713-11']);
+  _gaq.push(['_trackPageview']);
+*/
+  _gaq.push(function() {
+      //global page tracker object
+      var pageTracker = _gat._createTracker('UA-8293713-11', 'CNTracker');
+  });
+  _gaq.push(['CNTracker._trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script type="text/javascript">
+    CN.config.set({
+      facebook     : {pageid: "32181195191", appId: "", apiKey: ""}
+    });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="description" content="Let's take a look back at the style of our favorite grunge, hip hop and rock-'n'-roll musicians of the 1990s.">
+    <meta name="keywords" content="tier1content, music, music, celebrities, Music">
+    <meta name="Author" content="Lucky Magazine">
+    <meta name="Copyright" content="Copyright (c) CondéNet 2014">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+
+    <meta name="application-name" content="Lucky Magazine">
+    <meta name="msapplication-TileImage" content="/etc/designs/lucky/images/icons/LKY.png">
+    <meta name="msapplication-TileColor" content="#e4002a">
+
+
+    <meta property="fb:admins" content="648235154">
+    <meta property="fb:admins" content="688620285">
+    <meta property="fb:admins" content="789168297">
+    <meta property="og:image" content="http://www.luckymag.com/style/2014/04/90s-music-style-icons/jcr:content/cn_page_metadata/search.rendition.facebookThumbnail.90s-music-icons-thumb.jpg">
+    <meta property="og:site_name" content="Lucky Magazine">
+
+
+    <meta property="og:title" content="'90s Music Style Icons: Shop Their Looks">
+                <meta property="og:description" content="Let's take a look back at the style of our favorite grunge, hip hop and rock-'n'-roll musicians of the 1990s.">
+        <meta property="og:url" content="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail">
+    <meta property="og:type" content="article">
+
+    <meta name="ROBOTS" content="NOARCHIVE">
+        <link rel="canonical" href="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail">
+    <meta name="parsely-page" content="{&quot;title&quot;:&quot;\u201990s Music Style Icons: Shop Their Looks&quot;,&quot;link&quot;:&quot;http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail&quot;,&quot;image_url&quot;:&quot;http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail/_jcr_content/cn_page_metadata/search.rendition.thumb.90s-music-icons-thumb.jpg&quot;,&quot;type&quot;:&quot;post&quot;,&quot;post_id&quot;:&quot;9893d4b0-e66a-4279-8237-be0fcd6b07d9&quot;,&quot;pub_date&quot;:&quot;2014-04-18T18:15:00&quot;,&quot;section&quot;:&quot;style&quot;,&quot;author&quot;:&quot;Madeline Alford&quot;,&quot;tags&quot;:[&quot;tier1content&quot;,&quot;music&quot;,&quot;music&quot;,&quot;celebrities&quot;,&quot;Music&quot;]}">
+    <title>'90s Music Style Icons: Shop Their Looks : Lucky Magazine</title>
+<link href="index_files/default.css" rel="stylesheet" type="text/css"><link media="all" href="index_files/livefyre_main.css" type="text/css" rel="stylesheet"><script defer="defer" async="" src="index_files/livefyre_base.js" type="text/javascript"></script><style type="text/css">.tk-futura-pt{font-family:"futura-pt",sans-serif;}</style><link href="index_files/fhn3sic-d.css" rel="stylesheet"><script src="index_files/MzIwMTY0Omx1Y2t5bWFnX2ZjYjYwN2NhLTBlZjYtNGFjYS1hNzAxLTBkN2U.json" type="text/javascript"></script><script src="index_files/cc.js"></script><script src="index_files/a.html" async="" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><script defer="defer" async="" src="index_files/livefyre_mod_main.js" type="text/javascript"></script><style type="text/css">a.PIN_1398310382858_pin_it_button_20 {  background-repeat: none!important; background-size: 40px 60px!important; height: 20px!important; margin: 0!important; padding: 0!important; vertical-align: baseline!important; text-decoration: none!important; width: 40px!important; background-position: 0 -20px }
+a.PIN_1398310382858_pin_it_button_20:hover { background-position: 0 0px }
+a.PIN_1398310382858_pin_it_button_20:active, a.PIN_1398310382858_pin_it_button_20.PIN_1398310382858_hazClick { background-position: 0 -40px }
+a.PIN_1398310382858_pin_it_button_inline_20 { position: relative!important; display: inline-block!important; }
+a.PIN_1398310382858_pin_it_button_floating_20 { position: absolute!important; }
+a.PIN_1398310382858_pin_it_button_en_20_red { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_red_20_1.png)!important; }
+a.PIN_1398310382858_pin_it_button_en_20_white { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_white_20_1.png)!important; }
+a.PIN_1398310382858_pin_it_button_en_20_gray { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_gray_20_1.png)!important; }
+a.PIN_1398310382858_pin_it_button_ja_20_red { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_red_20_1.png)!important; }
+a.PIN_1398310382858_pin_it_button_ja_20_white { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_white_20_1.png)!important; }
+a.PIN_1398310382858_pin_it_button_ja_20_gray { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_gray_20_1.png)!important; }
+a.PIN_1398310382858_pin_it_above_20 span.PIN_1398310382858_pin_it_button_count { background: transparent url(http://passets.pinterest.com/images/pidgets/count_north_white_rect_20_1.png) 0 0 no-repeat!important; background-size: 40px 29px!important; position: absolute!important; bottom: 21px!important; left: 0px!important; height: 29px!important; width: 40px!important; font: 12px Arial, Helvetica, sans-serif!important; line-height: 24px!important; text-indent: 0!important;}
+a.PIN_1398310382858_pin_it_button_20 span.PIN_1398310382858_pin_it_button_count { position: absolute!important; color: #777!important; text-align: center!important; text-indent: 0!important; }
+a.PIN_1398310382858_pin_it_beside_20 span.PIN_1398310382858_pin_it_button_count, a.PIN_1398310382858_pin_it_beside_20 span.PIN_1398310382858_pin_it_button_count i { background-color: transparent!important; background-repeat: no-repeat!important; background-image: url(http://passets.pinterest.com/images/pidgets/count_east_white_rect_20_1.png)!important; }
+a.PIN_1398310382858_pin_it_beside_20 span.PIN_1398310382858_pin_it_button_count { padding: 0 3px 0 10px!important; background-size: 45px 20px!important; background-position: 0 0!important; position: absolute!important; top: 0!important; left: 41px!important; height: 20px!important; font: 10px Arial, Helvetica, sans-serif!important; line-height: 20px!important; }
+a.PIN_1398310382858_pin_it_beside_20 span.PIN_1398310382858_pin_it_button_count i { background-position: 100% 0!important; position: absolute!important; top: 0!important; right: -2px!important; height: 20px!important; width: 2px!important; }
+a.PIN_1398310382858_pin_it_button_20.PIN_1398310382858_pin_it_above { margin-top: 20px!important; }
+a.PIN_1398310382858_pin_it_button_28 { background-repeat: none!important; background-size: 56px 84px!important; height: 28px!important; margin: 0!important; padding: 0!important; vertical-align: baseline!important; text-decoration: none!important; width: 56px!important; background-position: 0 -28px }
+a.PIN_1398310382858_pin_it_button_28:hover { background-position: 0 0px }
+a.PIN_1398310382858_pin_it_button_28:active, a.PIN_1398310382858_pin_it_button_28.PIN_1398310382858_hazClick { background-position: 0 -56px }
+a.PIN_1398310382858_pin_it_button_inline_28 { position: relative!important; display: inline-block!important; }
+a.PIN_1398310382858_pin_it_button_floating_28 { position: absolute!important; }
+a.PIN_1398310382858_pin_it_button_en_28_red { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_red_28_1.png)!important; }
+a.PIN_1398310382858_pin_it_button_en_28_white { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_white_28_1.png)!important; }
+a.PIN_1398310382858_pin_it_button_en_28_gray { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_gray_28_1.png)!important; }
+a.PIN_1398310382858_pin_it_button_ja_28_red { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_red_28_1.png)!important; }
+a.PIN_1398310382858_pin_it_button_ja_28_white { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_white_28_1.png)!important; }
+a.PIN_1398310382858_pin_it_button_ja_28_gray { background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_ja_rect_gray_28_1.png)!important; }
+a.PIN_1398310382858_pin_it_button_en_16_red_round, a.PIN_1398310382858_pin_it_button_en_32_red_round { background-repeat: none!important; margin: 0!important; padding: 0!important; vertical-align: baseline!important; text-decoration: none!important; }
+a.PIN_1398310382858_pin_it_button_en_16_red_round { height: 16px!important; width: 16px!important; background-size: 16px 16px!important; background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_round_red_16_1.png)!important;}
+a.PIN_1398310382858_pin_it_button_en_32_red_round { height: 32px!important; width: 32px!important; background-size: 32px 32px!important; background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_round_red_32_1.png)!important;}
+a.PIN_1398310382858_pin_it_button_inline_en_16_red_round, a.PIN_1398310382858_pin_it_button_inline_en_32_red_round { position: relative!important; display: inline-block!important; }
+a.PIN_1398310382858_pin_it_button_floating_en_16_red_round, a.PIN_1398310382858_pin_it_button_floating_en_32_red_round  { position: absolute!important; }
+a.PIN_1398310382858_pin_it_button_28 span.PIN_1398310382858_pin_it_button_count { position: absolute!important; color: #777!important; text-align: center!important; text-indent: 0!important; }
+a.PIN_1398310382858_pin_it_above_28 span.PIN_1398310382858_pin_it_button_count { background: transparent url(http://passets.pinterest.com/images/pidgets/count_north_white_rect_28_1.png) 0 0 no-repeat!important; background-size: 56px 37px!important; position: absolute!important; bottom: 29px!important; left: 0px!important; height: 37px!important; width: 56px!important; font: 15px Arial, Helvetica, sans-serif!important; line-height: 28px!important; text-indent: 0!important;}
+a.PIN_1398310382858_pin_it_beside_28 span.PIN_1398310382858_pin_it_button_count, a.PIN_1398310382858_pin_it_beside_28 span.PIN_1398310382858_pin_it_button_count i { background-color: transparent!important; background-repeat: no-repeat!important; background-image: url(http://passets.pinterest.com/images/pidgets/count_east_white_rect_28_1.png)!important; }
+a.PIN_1398310382858_pin_it_beside_28 span.PIN_1398310382858_pin_it_button_count { padding: 0 3px 0 10px!important; background-size: 63px 28px!important; background-position: 0 0!important; position: absolute!important; top: 0!important; left: 57px!important; height: 28px!important; font: 12px Arial, Helvetica, sans-serif!important; line-height: 28px!important; }
+a.PIN_1398310382858_pin_it_beside_28 span.PIN_1398310382858_pin_it_button_count i { background-position: 100% 0!important; position: absolute!important; top: 0!important; right: -2px!important; height: 28px!important; width: 2px!important; }
+a.PIN_1398310382858_pin_it_button_28.PIN_1398310382858_pin_it_above { margin-top: 28px!important; }
+a.PIN_1398310382858_follow_me_button, a.PIN_1398310382858_follow_me_button i { background-size: 200px 60px!important; background: transparent url(http://passets.pinterest.com/images/pidgets/bfs1.png) 0 0 no-repeat }
+a.PIN_1398310382858_follow_me_button { color: #444!important; display: inline-block!important; font: bold normal normal 11px/20px "Helvetica Neue",helvetica,arial,san-serif!important; height: 20px!important; margin: 0!important; padding: 0!important; position: relative!important; text-decoration: none!important; text-indent: 19px!important; vertical-align: baseline!important;}
+a.PIN_1398310382858_follow_me_button:hover { background-position: 0 -20px}
+a.PIN_1398310382858_follow_me_button:active  { background-position: 0 -40px}
+a.PIN_1398310382858_follow_me_button b { position: absolute!important; top: 3px!important; left: 3px!important; height: 14px!important; width: 14px!important; background-size: 14px 14px!important; background-image: url(http://passets.pinterest.com/images/pidgets/log1.png)!important; }
+a.PIN_1398310382858_follow_me_button i { position: absolute!important; top: 0!important; right: -4px!important; height: 20px!important; width: 4px!important; background-position: 100% 0px!important; }
+a.PIN_1398310382858_follow_me_button:hover i { background-position: 100% -20px!important;  }
+a.PIN_1398310382858_follow_me_button:active i { background-position: 100% -40px!important; }
+a.PIN_1398310382858_follow_me_button_tall, a.PIN_1398310382858_follow_me_button_tall i { background-size: 400px 84px!important; background: transparent url(http://passets.pinterest.com/images/pidgets/bft1.png) 0 0 no-repeat }
+a.PIN_1398310382858_follow_me_button_tall { color: #444!important; display: inline-block!important; font: bold normal normal 13px/28px "Helvetica Neue",helvetica,arial,san-serif!important; height: 28px!important; margin: 0!important; padding: 0!important; position: relative!important; text-decoration: none!important; text-indent: 33px!important; vertical-align: baseline!important;}
+a.PIN_1398310382858_follow_me_button_tall:hover { background-position: 0 -28px}
+a.PIN_1398310382858_follow_me_button_tall:active  { background-position: 0 -56px}
+a.PIN_1398310382858_follow_me_button_tall b { position: absolute!important; top: 5px!important; left: 10px!important; height: 18px!important; width: 18px!important; background-size: 18px 18px!important; background-image: url(http://passets.pinterest.com/images/pidgets/smt1.png)!important; }
+a.PIN_1398310382858_follow_me_button_tall i { position: absolute!important; top: 0!important; right: -10px!important; height: 28px!important; width: 10px!important; background-position: 100% 0px!important; }
+a.PIN_1398310382858_follow_me_button_tall:hover i { background-position: 100% -28px!important;  }
+a.PIN_1398310382858_follow_me_button_tall:active i { background-position: 100% -56px!important; }
+span.PIN_1398310382858_embed_pin { display: inline-block!important; text-align: center!important; width: 237px!important; overflow: hidden!important; vertical-align: top!important; }
+span.PIN_1398310382858_embed_pin.PIN_1398310382858_fancy { background: #fff!important; box-shadow: 0 0 3px #aaa!important; border-radius: 3px!important; }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_link { display: block!important;  margin: 0 auto!important; padding: 0!important; position: relative!important;  line-height: 0}
+span.PIN_1398310382858_embed_pin img { border: 0!important; margin: 0!important; padding: 0!important;}
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_link i.PIN_1398310382858_repin { left: 10px!important; top: 10px!important; position: absolute!important; height: 33px!important; width: 64px!important; background-size: 64px 99px!important; background: transparent url(http://passets.pinterest.com/images/pidgets/repin1.png) }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_link i.PIN_1398310382858_repin_ja { left: 10px!important; top: 10px!important; position: absolute!important; height: 33px!important; width: 64px!important; background-size: 64px 99px!important; background: transparent url(http://passets.pinterest.com/images/pidgets/ja_repin1.png) }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_link i.PIN_1398310382858_repin:hover { background-position: 0 -33px!important; }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_link i.PIN_1398310382858_repin.PIN_1398310382858_hazClick { background-position: 0 -66px!important; }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_link i.PIN_1398310382858_getThis { display: none }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_link:hover i.PIN_1398310382858_getThis, span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_link:hover i.PIN_1398310382858_getThis i { background: transparent url(http://passets.pinterest.com/images/pidgets/bfs1.png) }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_link:hover i.PIN_1398310382858_getThis { color: #555!important; display: inline-block!important; font: normal normal normal 11px/20px "Helvetica Neue",helvetica,arial,san-serif!important; height: 20px!important; margin: 0!important; padding: 0 1px 0 5px!important; position: absolute!important; bottom: 10px!important; right: 10px!important; text-decoration: none!important;  }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_link:hover i.PIN_1398310382858_getThis:hover { background-position: 0 -20px }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_link:hover i.PIN_1398310382858_getThis i { position: absolute!important; top: 0!important; right: -4px!important; height: 20px!important; width: 5px!important; background-position: 100% 0px }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_link:hover i.PIN_1398310382858_getThis:hover i { background-position: 100% -20px }
+span.PIN_1398310382858_embed_pin span.PIN_1398310382858_embed_pin_desc { color: #333!important; white-space: normal!important; border-bottom: 1px solid #eee!important; display: block!important; font-family: "Helvetica Neue", arial, sans-serif!important; font-size: 12px!important; line-height: 17px!important; padding: 10px!important; text-align: left!important; }
+span.PIN_1398310382858_embed_pin span.PIN_1398310382858_embed_pin_attrib, span.PIN_1398310382858_embed_pin span.PIN_1398310382858_embed_pin_text_container { color: #a7a7a7!important; font-family: "Helvetica", sans-serif!important; font-size: 10px!important; line-height: 18px!important; font-weight: bold!important; display: block!important;}
+span.PIN_1398310382858_embed_pin span.PIN_1398310382858_embed_pin_attrib img.PIN_1398310382858_embed_pin_attrib_icon { height: 16px!important; width: 16px!important; vertical-align: middle!important; margin-right: 5px!important; float: left!important;}
+span.PIN_1398310382858_embed_pin span.PIN_1398310382858_embed_pin_attrib a { color: #a7a7a7!important; text-decoration: none!important;}
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_text, span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_text span.PIN_1398310382858_embed_pin_text_container { position: relative!important; text-decoration: none!important; display: block!important; font-weight: bold!important; color: #b7b7b7!important; font-family: "Helvetica Neue", arial, sans-serif!important; font-size: 11px!important; line-height: 14px!important; height: 39px!important; text-align: left!important; }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_text { padding: 5px 0 0 7px!important; }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_text:hover { background: #eee!important;}
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_text img.PIN_1398310382858_embed_pin_text_avatar { border-radius: 2px!important; overflow: hidden!important; height: 30px!important; width: 30px!important; vertical-align: middle!important; margin-right: 5px!important; float: left!important;}
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_text span.PIN_1398310382858_embed_pin_text_container em.PIN_1398310382858_embed_pin_text_container_em { font-family: inherit!important; display: block!important; color: #717171!important; font-style: normal!important; width: 180px!important; text-overflow: ellipsis!important; overflow: hidden!important; white-space: nowrap!important; }
+span.PIN_1398310382858_embed_pin a.PIN_1398310382858_embed_pin_text b.PIN_1398310382858_embed_pin_link_shield { position: absolute!important; top: 0!important; left: 0!important; height: 100%!important; width: 100%!important; }
+span.PIN_1398310382858_embed_grid { display: inline-block!important; margin: 0!important; padding:10px 0!important; position: relative!important; text-align: center}
+span.PIN_1398310382858_embed_grid.PIN_1398310382858_fancy { background: #fff!important; box-shadow: 0 0 3px #aaa!important; border-radius: 3px!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_hd { display: block!important; margin: 0 10px!important; padding: 0!important; height: 45px!important; position: relative!important; background: #fff}
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_hd a.PIN_1398310382858_avatar { position: absolute!important; top: 0!important; left: 0!important; height: 36px!important; width: 36px!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_hd a.PIN_1398310382858_avatar::before { position: absolute!important; content:""!important; z-index: 2!important; top: 0!important; left: 0!important; right: 0!important; bottom: 0!important; box-shadow: inset 0 0 2px #888!important;  border-radius: 3px!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_hd a.PIN_1398310382858_avatar img { position: relative!important; height: 36px!important; width: 36px!important; margin: 0!important; padding: 0!important; border-radius: 3px!important; border: none!important;}
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_hd a { text-decoration: none!important; background: transparent!important; cursor: pointer!important; white-space: nowrap!important; position: absolute!important; left: 44px!important; text-align: left!important; overflow: hidden!important; text-overflow: ellipsis!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_hd a:hover { text-decoration: none!important; background: #fff!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_hd a:active { text-decoration: none!important; background: #fff!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_hd a.PIN_1398310382858_embed_grid_first { top: 2px!important; font-family: helvetica, sans-serif!important; font-weight: bold!important; color:#333!important; font-size: 14px!important; line-height: 16px!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_hd a.PIN_1398310382858_embed_grid_second { bottom: 11px!important; font-family: helvetica, sans-serif!important; color:#8e8e8e!important; font-size: 12px!important; line-height: 14px!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_hd a.PIN_1398310382858_embed_grid_mid { top: 12px!important; font-family: helvetica, sans-serif!important; font-weight: bold!important; color:#333!important; font-size: 14px!important; line-height: 16px!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_bd { display:block!important; margin: 0 10px!important; border-radius: 2px!important; position: relative!important; overflow: hidden }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_scrolling_okay { overflow: auto!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_bd span.PIN_1398310382858_embed_grid_ct { display:block!important; position: relative!important; overflow: hidden!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_bd a.PIN_1398310382858_embed_grid_th { cursor: pointer!important; display: inline-block!important; position: absolute!important; overflow: hidden!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_bd a.PIN_1398310382858_embed_grid_th::before { position: absolute!important; content:""!important; z-index: 2!important; top: 0!important; left: 0!important; right: 0!important; bottom: 0!important; box-shadow: inset 0 0 2px #888!important; }
+span.PIN_1398310382858_embed_grid span.PIN_1398310382858_embed_grid_bd a.PIN_1398310382858_embed_grid_th img.PIN_1398310382858_embed_grid_img { border: none!important; position: absolute!important; top: 50%!important; left: 0!important; }
+a.PIN_1398310382858_embed_grid_ft { text-shadow: 0 1px #fff!important; display: block!important; text-align: center!important; border: 1px solid #ccc!important; margin: 10px 10px 0!important; height: 31px!important; line-height: 30px!important;border-radius: 2px!important; text-decoration: none!important; font-family: Helvetica!important; font-weight: bold!important; font-size: 13px!important; color: #746d6a!important; background: #f4f4f4 url(http://passets.pinterest.com/images/pidgets/board_button_link.png) 0 0 repeat-x}
+a.PIN_1398310382858_embed_grid_ft:hover { text-decoration: none!important; background: #fefefe url(http://passets.pinterest.com/images/pidgets/board_button_hover.png) 0 0 repeat-x}
+a.PIN_1398310382858_embed_grid_ft:active { text-decoration: none!important; background: #e4e4e4 url(http://passets.pinterest.com/images/pidgets/board_button_active.png) 0 0 repeat-x}
+a.PIN_1398310382858_embed_grid_ft span.PIN_1398310382858_embed_grid_ft_logo { vertical-align: top!important; display: inline-block!important; margin-left: 2px!important; height: 30px!important; width: 66px!important; background: transparent url(http://passets.pinterest.com/images/pidgets/board_button_logo.png) 50% 48% no-repeat!important; }
+.PIN_1398310382858_hidden { display:none!important; }</style><script src="index_files/a_002.html" async="" type="text/javascript"></script><script defer="defer" async="" src="index_files/livefyre_mod_editor_main.js" type="text/javascript"></script><script src="index_files/pubads_impl_37.js" type="text/javascript" async=""></script><script src="index_files/a_002.html" async="" type="text/javascript"></script><style type="text/css">.mv-moreon h2 { width: 100% !important; } .mv-moreon h2 a{ display: block; clear: both; padding-top: 5px; } .mv-moreon .mv-sponsor-label { float: left; font-size: 18px; color: #000; line-height: 1; margin: 4px 0; } .mv-moreon .mv-sponsor-logo { float: right; } .mv-moreon .mv-sponsor-logo img { height: 30px; width: auto; }</style><style type="text/css">.mv-recommended figure { position: relative; } .mv-recommended .mv-sponsor-logo { position: absolute; height: 30px; width: auto; right: 0; top: 0; } .mv-recommended .mv-sponsor-logo img{ margin: 0 !important; } .mv-recommended .mv-sponsor-label { font-size: 11px; color: #000; line-height: 1; margin: 0 0 4px 0; display: inline-block; }</style><script src="index_files/a_002.html" async="" type="text/javascript"></script>
+<script class="shopbeam-script" type="text/javascript" src="https://staging.shopbeam.com/js/widget.loader.js" async="true"></script>
+</head>
+<body data-twttr-rendered="true" class="page cn_page  ng-scope" ng-controller="PageCtrl"><iframe src="index_files/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;" name="twttrHubFrameSecure" tabindex="0" allowtransparency="true" id="twttrHubFrameSecure" frameborder="0" scrolling="no"></iframe><iframe src="index_files/hub_002.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;" name="twttrHubFrame" tabindex="0" allowtransparency="true" id="twttrHubFrame" frameborder="0" scrolling="no"></iframe><div style="display: none;" id="cboxOverlay"></div><div class="" id="colorbox" style="padding-bottom: 62px; padding-right: 62px; display: none;"><div style="" id="cboxWrapper"><div style=""><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div class="" style="width: 0px; height: 0px; overflow: hidden;" id="cboxLoadedContent"></div><div class="" style="" id="cboxLoadingOverlay"></div><div class="" style="" id="cboxLoadingGraphic"></div><div class="" style="" id="cboxTitle"></div><div class="" style="" id="cboxCurrent"></div><div class="" style="" id="cboxNext"></div><div class="" style="" id="cboxPrevious"></div><div class="" style="" id="cboxSlideshow"></div><div class="" style="" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><div class=" fb_reset" id="fb-root"><script src="index_files/all.js" async=""></script><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="index_files/dgdTycPTSRj.html" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="index_files/dgdTycPTSRj_002.html" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><div id="interstitial1x1_frame" class="displayAd displayAd1x1Js" style="width: 1px; height: 0px; display: none;" data-cb-ad-id="interstitial1x1_frame"><div style="border: 0pt none;" id="google_ads_iframe_/3379/luckymag.dart/style_1__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/3379/luckymag.dart/style_1" id="google_ads_iframe_/3379/luckymag.dart/style_1" frameborder="0" height="1" scrolling="no" width="1"></iframe></div></div><div id="interstitial1x2_frame" class="displayAd displayAd1x2Js" style="width: 1px; height: 0px; display: none;" data-cb-ad-id="interstitial1x2_frame"><div style="border: 0pt none;" id="google_ads_iframe_/3379/luckymag.dart/style_2__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/3379/luckymag.dart/style_2" id="google_ads_iframe_/3379/luckymag.dart/style_2" frameborder="0" height="1" scrolling="no" width="1"></iframe></div></div>
+    <div class="parbase cn_page_metadata">
+</div>
+<div class="cn_parsys parsys cn_ecom_placement"><div id="floatingAd" style="display:none;">
+                <div id="floatingAd_header">
+                    <a onclick='s_objectID="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail#_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="#">Close</a>
+                </div>
+                <div id="floatingAd_content">
+                    <div style="visibility: visible;" id="AMS_LKY_POPUP_FLOATINGAD" class="ecom-placement"><a onclick='s_objectID="http://subscribe.luckymag.com/ams/amsClick?pos_id=2968&amp;campaign_id=19177&amp;creative_id=22497&amp;site_i_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://subscribe.luckymag.com/ams/amsClick?pos_id=2968&amp;campaign_id=19177&amp;creative_id=22497&amp;site_id=795&amp;top_level_section_prefix=content&amp;full_url=/content/lucky/style/2014/04/90s-music-style-icons.html" target="_blank"><img style="" class="ascat ascatLink ascatInvis" id="88918" src="index_files/LKY_Floating_306x250_v1_Apr14_A.jpg">
+
+
+
+</a></div>
+                </div>
+            </div>
+        
+</div>
+<div class="cn_parsys parsys cn_ecom_placement"><div id="rolloverAd" class="rolloverAd" data-timeout="" style="display:none;">
+                    <div id="rolloverAd_header" class="rolloverAd_header">
+                        <a onclick='s_objectID="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail#_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="#">Close</a>
+                    </div>
+                    <div id="rolloverAd_content" class="rolloverAd_content">
+                        <div style="visibility: visible;" id="AMS_LKY_GLOBAL_NAVBAR_ROLLOVER" class="ecom-placement"><a onclick='s_objectID="http://subscribe.luckymag.com/ams/amsClick?pos_id=2963&amp;campaign_id=19169&amp;creative_id=22489&amp;site_i_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://subscribe.luckymag.com/ams/amsClick?pos_id=2963&amp;campaign_id=19169&amp;creative_id=22489&amp;site_id=795&amp;top_level_section_prefix=content&amp;full_url=/content/lucky/style/2014/04/90s-music-style-icons.html" target="_blank"><img style="" class="ascat ascatLink ascatInvis" id="88918" src="index_files/Lucky_NavRollover_300x457_v1_Apr14_B.jpg">
+
+</a></div>
+                    </div>
+                    <div id="rolloverAd_footer" class="rolloverAd_footer"></div>
+                </div>
+            <script>
+                            CN.ecom.rolloverAd.init('rolloverAd');
+                        </script>
+                    
+</div>
+<div id="wrapper" class="Blog-Redesign-Slideshow section-style subsection-2014">
+
+        <div class="cn_parsys cn_page_header cn_iparsys"><div class="iparys_inherited">
+                <div class="cn_parsys cn_page_header cn_iparsys"><div class="section"><div class="cn_parsys cn_path_include"></div>
+</div><div class="section"><div class="cn_parsys cn_path_include"><div class="cn_page_include"><header id="site-header" class="snippet" role="banner">
+    <div class="cn_parsys"><div class="parbase cn_login_bar"><div id="loginbar">
+            <div id="login"><span class="loginbar loggedout"><span class="welcome">Welcome to luckymag</span> <span id="opts"><a onclick='s_objectID="http://www.luckymag.com/user/login?returnTo=http://www.luckymag.com/style/2014/04/90s-music-style_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/user/login?returnTo=http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail" class="first">Log in</a> | <a onclick='s_objectID="http://www.luckymag.com/user/registration_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/user/registration">Register</a></span></span></div>
+        </div>
+
+        </div>
+<div class="parbase cn_site_logo"><hgroup>
+    <h2><a onclick='s_objectID="http://www.luckymag.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/" title="Go to Lucky Magazine homepage">Lucky Magazine</a></h2>
+        <h3>The Online Source for Shopping &amp; Style</h3>
+    </hgroup>
+
+<div class="print-logo">
+    <img src="index_files/print-logo.png" alt="">
+</div>
+
+</div>
+<div class="parbase cn_main_nav"><nav role="navigation" class="global-nav">
+    <ul class="gnav-list">
+        <li id="nav-subscribe">
+                <div class="cn_parsys parsys cn_ecom_placement"><div id="global_navBar">
+                        <div id="AMS_LKY_GLOBAL_NAVBAR"><!--
+    LKY_global_navBar	
+    http://www.luckymag.com
+-->
+<a onclick='s_objectID="http://subscribe.luckymag.com/ams/amsClick?pos_id=2715&amp;campaign_id=19168&amp;creative_id=22488&amp;site_i_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" class="ascat ascatLink ascatVis" id="88918" title="Subscribe to Lucky magazine" target="_blank" href="http://subscribe.luckymag.com/ams/amsClick?pos_id=2715&amp;campaign_id=19168&amp;creative_id=22488&amp;site_id=795&amp;top_level_section_prefix=content&amp;full_url=/content/lucky/style/2014/04/90s-music-style-icons.html">Subscribe</a>
+
+</div>
+                    </div>
+                
+</div>
+</li>
+        <li class="gnav-1 current"><a onclick='s_objectID="http://www.luckymag.com/style_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style">Fashion &amp; Style</a><ul class="snav-list snav-1 current"><div class="menu-pointer-container"><div class="menu-pointer"></div></div><li class=""><a onclick='s_objectID="http://www.luckymag.com/blogs/luckyrightnow/news_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/blogs/luckyrightnow/news">Fashion News</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/magazine_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/magazine">In This Issue</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/about/editors_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/about/editors">Editors' Picks</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/streetstyle_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/streetstyle">Street Style</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/guides_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/guides">Guides</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/style/howto/dear-lucky_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style/howto/dear-lucky">Dear Lucky</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/lookout_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/lookout">Lookout</a></li></ul></li><li class="gnav-2 "><a onclick='s_objectID="http://www.luckymag.com/beauty_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/beauty">Beauty</a><ul class="snav-list snav-2 "><div class="menu-pointer-container"><div class="menu-pointer"></div></div><li class=""><a onclick='s_objectID="http://www.luckymag.com/about/hair_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/about/hair">Hair</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/about/skin-care_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/about/skin-care">Skin</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/about/nails_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/about/nails">Nails</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/about/makeup_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/about/makeup">Makeup</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/about/beauty-closet_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/about/beauty-closet">Jean's Beauty Closet</a></li></ul></li><li class="gnav-3 "><a onclick='s_objectID="http://www.luckymag.com/accessories_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/accessories">Accessories</a><ul class="snav-list snav-3 "><div class="menu-pointer-container"><div class="menu-pointer"></div></div><li class=""><a onclick='s_objectID="http://www.luckymag.com/about/shoes_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/about/shoes">Shoes</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/about/jewelry_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/about/jewelry">Jewelry</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/about/bags_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/about/bags">Bags</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/about/sunglasses_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/about/sunglasses">Sunglasses</a></li></ul></li><li class="gnav-4 "><a onclick='s_objectID="http://www.luckymag.com/breaks_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/breaks">Lucky Breaks</a><ul class="snav-list snav-4 "><div class="menu-pointer-container"><div class="menu-pointer"></div></div><li class=""><a onclick='s_objectID="http://www.luckymag.com/breaks/luckysweeps_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/breaks/luckysweeps">Lucky Breaks Giveaways</a></li><li class=""><a onclick='s_objectID="http://www.luckymag.com/breaks/lucky-breaks-daily_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/breaks/lucky-breaks-daily">Lucky Breaks Daily Deals</a></li></ul></li><li class="gnav-5 "><a onclick='s_objectID="http://contributors.luckymag.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://contributors.luckymag.com/">Community</a><ul class="snav-list snav-5 "><div class="menu-pointer-container"><div class="menu-pointer"></div></div><li class=""><a onclick='s_objectID="http://contributors.luckymag.com/contribute_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://contributors.luckymag.com/contribute">Sign Up</a></li><li class=""><a onclick='s_objectID="http://contributors.luckymag.com/lucky-fabb_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://contributors.luckymag.com/lucky-fabb">FABB</a></li></ul></li></ul> </nav>
+</div>
+<div class="parbase cn_search_box"><section class="search-box mg">
+
+    <form class="ng-pristine ng-valid" name="search-box-form-par" id="search-box-form-par" action="/search" method="get" role="search">
+        <div class="mg_search-button">search</div>
+
+        <div class="mg_search-form">
+        <h4><label for="search-box-query-par">Search</label></h4>
+
+        <input name="query" id="search-box-query-par" placeholder="Search Lucky Magazine" type="search">
+        <input name="sort" value="score desc" type="hidden">
+
+        <button type="submit" title="Search">Search</button>
+        </div>
+    </form>
+</section>
+</div>
+</div>
+</header>
+</div>
+</div>
+</div></div>
+</div> </div>
+<section id="site-body">
+    <div class="cn_parsys par"><div class="cn_parsys parsys cn_componentContainer cn_contentwell"><div id="page" class="wide">
+            <aside id="top-rail">
+                <div class="cn_parsys par-top_rail cn_iparsys"><div class="iparys_inherited">
+            <div class="cn_parsys par-top_rail cn_iparsys"><div class="section"><div class="cn_parsys cn_path_include"><div class="cn_page_include"><section id="redesign-trail" class="snippet" role="">
+    <div class="cn_parsys"><div class="cn_parsys parsys cn_ecom_placement"><div style="visibility: visible;" id="AMS_LKY_CONTENTPAGE_HEADER" class="contentPage_header ecom-placement"><!--
+        LKY_contentpage_header
+-->
+<h3 id="hdrsubs">
+<a onclick='s_objectID="http://subscribe.luckymag.com/ams/amsClick?pos_id=3355&amp;campaign_id=19173&amp;creative_id=22493&amp;site_i_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" class="ascat ascatLink ascatVis" id="88918" target="_blank" href="http://subscribe.luckymag.com/ams/amsClick?pos_id=3355&amp;campaign_id=19173&amp;creative_id=22493&amp;site_id=795&amp;top_level_section_prefix=content&amp;full_url=/content/lucky/style/2014/04/90s-music-style-icons.html" title="Subscribe at our introductory rate of just $3—Plus get a free scarf &amp; Lucky guides" rel="nofollow">Subscribe at our introductory rate of just $3—Plus get a free scarf &amp; Lucky guides</a> 
+</h3>
+
+</div>
+                
+</div>
+<div class="cn_parsys parsys cn_ecom_placement"><div style="visibility: visible;" id="AMS_LKY_CONTENTPAGE_HEADERLEFT" class="contentPage_headerLeft ecom-placement"><div id="subs-cover"><a onclick='s_objectID="http://subscribe.luckymag.com/ams/amsClick?pos_id=3356&amp;campaign_id=19174&amp;creative_id=22494&amp;site_i_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" class="ascat ascatLink ascatVis" id="88918" rel="nofollow" title="Subscribe to Lucky magazine" target="_blank" href="http://subscribe.luckymag.com/ams/amsClick?pos_id=3356&amp;campaign_id=19174&amp;creative_id=22494&amp;site_id=795&amp;top_level_section_prefix=content&amp;full_url=/content/lucky/style/2014/04/90s-music-style-icons.html">Subscribe</a></div>
+
+</div>
+                
+</div>
+<div class="parbase cn_ad_placement"><div style="" id="topbanner728x90_frame" class="displayAd 728x90 displayAd728x90Js"><div style="border: 0pt none;" id="google_ads_iframe_/3379/luckymag.dart/style_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/3379/luckymag.dart/style_0" id="google_ads_iframe_/3379/luckymag.dart/style_0" frameborder="0" height="90" scrolling="no" width="728"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/3379/luckymag.dart/style_0__hidden__" id="google_ads_iframe_/3379/luckymag.dart/style_0__hidden__" frameborder="0" height="0" scrolling="no" width="0"></iframe></div>
+    <script type="text/javascript">
+        CN.dart.call('topbanner', {sz:'728x90', kws:["top"]});</script>
+
+</div>
+<div class="cn_parsys parsys cn_features_container cn_componentContainer top-rail"><div class="trail-black-btn cn_rubric"><h5 class="rubric trail-black-btn"><a onclick='s_objectID="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail#_3";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="#">Genius Outfit Ideas</a></h5>
+    </div>
+<div class="cn_rotator parbase trail"><div class="display-5 carousel">
+        <div id="carousel-0" class="feature-carousel"><div class="feature-carousel-previous disabled">Previous</div><div class="feature-carousel-inner"><div class="feature-container"><section class="item ">
+                <figure class="media ">
+                        <a onclick='s_objectID="http://www.luckymag.com/magazine/2014/05/olivia-wilde?intcid=trail_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/magazine/2014/05/olivia-wilde?intcid=trail"><img data-file-ref="/dam/trail/trail_0422_olivia.png" alt="" src="index_files/item0.png"></a></figure>
+                <h3 class="headline"><a onclick='s_objectID="http://www.luckymag.com/magazine/2014/05/olivia-wilde?intcid=trail_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/magazine/2014/05/olivia-wilde?intcid=trail">Olivia Wilde Will Change How We Shop</a></h3></section><section class="item ">
+                <figure class="media">
+                        <a onclick='s_objectID="http://www.luckymag.com/guides/2014/under-50-mothers-day-gifts?intcid=trail_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/guides/2014/under-50-mothers-day-gifts?intcid=trail"><img data-file-ref="/dam/trail/trail_0422_mom.png" alt="" src="index_files/item1.png"></a></figure>
+                <h3 class="headline"><a onclick='s_objectID="http://www.luckymag.com/guides/2014/under-50-mothers-day-gifts?intcid=trail_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/guides/2014/under-50-mothers-day-gifts?intcid=trail">50 Mother's Day Gifts Under $50</a></h3></section><section class="item ">
+                <figure class="media">
+                        <a onclick='s_objectID="http://www.luckymag.com/style/2014/04/temporary-upgrades-rental-space?intcid=trail_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style/2014/04/temporary-upgrades-rental-space?intcid=trail"><img data-file-ref="/dam/trail/trail_0422_apartment.png" alt="" src="index_files/item2.png"></a></figure>
+                <h3 class="headline"><a onclick='s_objectID="http://www.luckymag.com/style/2014/04/temporary-upgrades-rental-space?intcid=trail_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style/2014/04/temporary-upgrades-rental-space?intcid=trail">40 Temporary Ways to Transform Your Home</a></h3></section><section class="item ">
+                <figure class="media">
+                        <a onclick='s_objectID="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail"><img data-file-ref="/dam/trail/trail_0422_90s.png" alt="" src="index_files/item3.png"></a></figure>
+                <h3 class="headline"><a onclick='s_objectID="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail">The 25 Most Stylish Music Icons of the '90s</a></h3></section><section class="item ">
+                <figure class="media">
+                        <a onclick='s_objectID="http://www.luckymag.com/beauty/2014/04/makeup-palettes-worth-every-penny?intcid=trail_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/beauty/2014/04/makeup-palettes-worth-every-penny?intcid=trail"><img data-file-ref="/dam/trail/trail_0422_beauty.png" alt="" src="index_files/item4.png"></a></figure>
+                <h3 class="headline"><a onclick='s_objectID="http://www.luckymag.com/beauty/2014/04/makeup-palettes-worth-every-penny?intcid=trail_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/beauty/2014/04/makeup-palettes-worth-every-penny?intcid=trail">Pretty Makeup Palettes Worth Every Penny</a></h3></section><section class="item ">
+                <figure class="media">
+                        <a onclick='s_objectID="http://www.luckymag.com/style/2014/04/fashion-items-lucky-editors-buy-in-multiple-colors?intcid=t_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style/2014/04/fashion-items-lucky-editors-buy-in-multiple-colors?intcid=trail"><img data-file-ref="/dam/trail/trail_0422_edpick.png" alt="" src="index_files/item5.png"></a></figure>
+                <h3 class="headline"><a onclick='s_objectID="http://www.luckymag.com/style/2014/04/fashion-items-lucky-editors-buy-in-multiple-colors?intcid=t_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style/2014/04/fashion-items-lucky-editors-buy-in-multiple-colors?intcid=trail">15 Items <i>Lucky</i> Editors Own in Multiples</a></h3></section><section class="item ">
+                <figure class="media">
+                        <a onclick='s_objectID="http://www.luckymag.com/style/2014/04/miranda-kerr-street-style-pictures?intcid=trail_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style/2014/04/miranda-kerr-street-style-pictures?intcid=trail"><img data-file-ref="/dam/trail/trail_0422_miranda.png" alt="" src="index_files/item6.png"></a></figure>
+                <h3 class="headline"><a onclick='s_objectID="http://www.luckymag.com/style/2014/04/miranda-kerr-street-style-pictures?intcid=trail_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style/2014/04/miranda-kerr-street-style-pictures?intcid=trail">Miranda Kerr's Best Street Style Looks</a></h3></section><section class="item ">
+                <figure class="media">
+                        <a onclick='s_objectID="http://www.luckymag.com/beauty/2014/04/olive-and-june-double-french-manicure-nail-art?intcid=trai_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/beauty/2014/04/olive-and-june-double-french-manicure-nail-art?intcid=trail"><img data-file-ref="/dam/trail/trail_0422_mani.png" alt="" src="index_files/item7.png"></a></figure>
+                <h3 class="headline"><a onclick='s_objectID="http://www.luckymag.com/beauty/2014/04/olive-and-june-double-french-manicure-nail-art?intcid=trai_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/beauty/2014/04/olive-and-june-double-french-manicure-nail-art?intcid=trail">A Pretty Twist On The French Manicure</a></h3></section><section class="item ">
+                <figure class="media">
+                        <a onclick='s_objectID="http://www.luckymag.com/accessories/2014/04/under-50-spring-shoes?intcid=trail_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/accessories/2014/04/under-50-spring-shoes?intcid=trail"><img data-file-ref="/dam/trail/trail_0422_sandals.png" alt="" src="index_files/item8.png"></a></figure>
+                <h3 class="headline"><a onclick='s_objectID="http://www.luckymag.com/accessories/2014/04/under-50-spring-shoes?intcid=trail_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/accessories/2014/04/under-50-spring-shoes?intcid=trail">The 25 Best Spring Shoes Under $50</a></h3></section><section class="item ">
+                <h3 class="headline"><a onclick='s_objectID="http://www.luckymag.com/style/2014/04/perfect-april-outfits?intcid=trail_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style/2014/04/perfect-april-outfits?intcid=trail">30 Perfect April Outfits</a></h3></section></div></div><div class="feature-carousel-next">Next</div></div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </div>
+<input name="rotatorSpeed" value="6" id="rotatorSpeedId" type="hidden">
+</div>
+
+
+</div>
+</div>
+</section>
+</div>
+</div>
+</div></div>
+</div> </div>
+</aside>
+
+            <div class="content-container">
+                <div id="content">
+                    <div id="main" role="main">
+                        <div class="cn_parsys par-main"><div class="cn_parsys parsys cn_componentContainer count2-width10_90 cn_colctrl"><div class="cols count2-width10_90">
+    <div class="col c1">
+            <div class="cn_parsys par-col1"><div class="untitled cn_keywords"><dl class="keywords ">
+        <dt></dt>
+        <dd class="tag0" title="2324"><a sl-processed="1" onclick="s_objectID='/about/celebrities?intcid=river_tags';return this.s_oc?this.s_oc(e):true" class="tag0" href="http://www.luckymag.com/about/celebrities?intcid=river_tags">celebrities</a></dd></dl></div>
+</div>
+</div>
+    <div class="col c2">
+            <div class="cn_parsys par-col2"><div class="title cn_title"><h1 class="headline ">
+    From Courtney Love To The Spice Girls: Shop The Looks Of Your Favorite '90s Music Icons</h1>
+
+</div>
+<div class="cn_parsys parsys cn_share_bar cn_componentContainer wide"><div class="utilities     wide"> <div class="section">
+                <div class="parbase cn_share_comments_count"><div class="share comments-count">
+            <a onclick='s_objectID="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail#livefyre_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="#livefyre"><span class="livefyre-commentcount commentstotal" data-lf-site-id="320164" data-lf-article-id="luckymag_fcb607ca-0ef6-4aca-a701-0d7e0136edd1"><div class="comments-button">Comments</div><div class="bubble"> <div class="commentCountValue">0</div><div class="bubble-arrow-border"></div> <div class="bubble-arrow"></div></div></span></a>
+        </div>
+
+
+        </div>
+</div> <div class="section">
+                <div class="parbase cn_share_email"><div class="share utility-email">
+
+     <a sl-processed="1" title="E-mail this page to a friend" onclick='s_objectID="http://www.luckymag.com/user/emailfriend?referringPage=http://www.luckymag.com/services/lookup/fc_1";return this.s_oc?this.s_oc(e):true' href="http://www.luckymag.com/user/emailfriend?referringPage=http://www.luckymag.com/services/lookup/fcb607ca-0ef6-4aca-a701-0d7e0136edd1&amp;intcid=social_skittles" rel="nofollow">E-Mail</a>
+
+</div>
+</div>
+</div> <div class="section">
+                <div class="parbase cn_share_tweet"><div class="share utility-tweet" data-twlayout="horizontal" data-twaction="tweet" id="05a48389-9d6e-4a3b-a834-4ded8863ba0c" data-show-count="" data-twurl="http://www.luckymag.com/style/2014/04/90s-music-style-icons" data-twtitle="'90s Music Style Icons: Shop Their Looks" bitly_login="" bitly_apikey="" data-twvia="LuckyMagazine"><iframe style="width: 107px; height: 20px;" data-twttr-rendered="true" title="Twitter Tweet Button" class="twitter-share-button twitter-tweet-button twitter-count-horizontal" src="index_files/tweet_button.html" allowtransparency="true" id="twitter-widget-0" frameborder="0" scrolling="no"></iframe></div>
+</div>
+</div> <div class="section">
+                <div class="parbase cn_share_facebook_share"><div class="share utility-fb" data-fblayout="button_count" id="62cd5ff3-e457-4cec-81ea-4d5e45cd56c0" data-fbaction="sharer"><fb:share-button fb-iframe-plugin-query="app_id=&amp;href=http%3A%2F%2Fwww.luckymag.com%2Fstyle%2F2014%2F04%2F90s-music-style-icons%3Fintcid%3Dtrail&amp;locale=en_US&amp;sdk=joey&amp;type=button_count" fb-xfbml-state="rendered" class=" fb_iframe_widget" type="button_count"><span style="vertical-align: bottom; width: 85px; height: 20px;"><iframe class="" src="index_files/share_button.html" style="border: medium none; visibility: visible; width: 85px; height: 20px;" title="fb:share_button Facebook Social Plugin" allowtransparency="true" name="f3d1b149a8b2112" frameborder="0" height="1000px" scrolling="no" width="1000px"></iframe></span></fb:share-button></div>
+
+
+</div>
+</div> <div class="section">
+                <div class="parbase cn_we_heart_it"><div class="share utility-weheartit" data-type="horizontal" data-image-url="http://www.luckymag.com/style/2014/04/90s-music-style-icons/_jcr_content/par/cn_contentwell/par-main/cn_lky_slideshow/item0.rendition.slideshowVertical.90s-music-icons-starter.jpg" data-source-url="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail"><iframe style="width: 88px;; height: 20px;" src="index_files/heart-it.html" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div>
+
+</div>
+</div> </div>
+
+
+</div>
+</div>
+</div>
+    </div>
+
+
+</div>
+<div class="parbase cn_lky_slideshow has-shown-tooltip"><script type="text/javascript">
+    CN.config.set({'interstitialFrequency':'8'});
+    CN.config.set({'interstitialAdSize':'300x250'});
+
+    //SEO FLAG FOR JS
+    CN.config.set({'seoFlag':true});
+
+    CN.config.set({'baseUrl':'/style/2014/04/90s-music-style-icons'});
+
+</script>
+ <div style="
+    display: inline-block;
+    width: 278px;
+    margin: 0px;
+"><img class="nopin" src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/w_207/https%3A%2F%2Fs3.amazonaws.com%2Fsb-photos%2F15749%2Fe13afd2b-936d-4394-bc42-20f79fa8107c-751fc0da99244056bbf2d321bd64ec6a.png" width="207" height="420" alt="*mkl Collective - The Countdown Tank" id="shopbeam-in-frame-widget-image-placeholder-57478943-af6d-4862-b651-469f39745505" data-shopbeam-url="/v1/products?id=6623309&image=1&apiKey=6ff12160-02f3-4e28-8080-a74d56753865" />
+    <img class="nopin" src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/w_193/https%3A%2F%2Fs3.amazonaws.com%2Fsb-photos%2F15749%2F3054b9a6-8ec1-49d9-a8f5-cc79e7b1e79d-8aeb30cf2c57487195c7967b84a2cfa0.png" width="193" height="420" alt="*mkl Collective - The Midnight Velvet Maxi Skirt" id="shopbeam-in-frame-widget-image-placeholder-89ac31cb-8dd4-488c-8dc8-39ecd9cbf8ff" data-shopbeam-url="/v1/products?id=6622050&image=1&apiKey=6ff12160-02f3-4e28-8080-a74d56753865" />
+            <img class="nopin" src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/w_190/https%3A%2F%2Fs3.amazonaws.com%2Fsb-photos%2F15749%2Fa4a340d9-059c-4dea-966e-ba881f9ae953-2802974a192342038d7c686bb02630e8.png" width="190" height="420" alt="Zac Zac Posen - Abbey Sleeveless Curved Seam Dress" id="shopbeam-in-frame-widget-image-placeholder-bc8e89ad-22e7-4efa-a338-b07ed9d74ae0" data-shopbeam-url="/v1/products?id=8731909&image=1&apiKey=42e23195-b3cb-4ee7-a1f0-2fe924eb49a8" />
+    <div class="content-wraper" style="
+    display: inline-block;
+    width: 278px;
+    margin: 0px;
+"><div class="inner-wrapper"><div class="count inline-slide-count" style="">1 OF 51</div><span class="count-separator"></span><header class="item-header"><h3 class="product-information"></h3></header><div id="slideshow-description-outer" class="body">Let's take a look back at the styles of our favorite grunge, hip hop and rock-'n'-roll musicians of the 1990s. <b>Click through to shop the closets of your favorite '90s music icons!</b><br>
+</div><footer class="item-footer"><p class="photo-credits">WireImage, Time Life Pictures/Getty Images<br>
+</p></footer></div></div></div>
+            
+
+<div class="last-slide">
+    <div class="cn_ecom_placement">
+        <div class="slideshow-cm-subsoffer">
+            <div class="cn_parsys header_ecom_placement parsys cn_ecom_placement"><div style="visibility: visible;" id="AMS_LKY_GLOBAL_SLIDESHOW" class="ecom-placement"><a onclick='s_objectID="http://subscribe.luckymag.com/ams/amsClick?pos_id=2971&amp;campaign_id=14023&amp;creative_id=17349&amp;site_i_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://subscribe.luckymag.com/ams/amsClick?pos_id=2971&amp;campaign_id=14023&amp;creative_id=17349&amp;site_id=795&amp;top_level_section_prefix=content&amp;full_url=/content/lucky/style/2014/04/90s-music-style-icons.html" target="_blank"><img style="" class="ascat ascatLink ascatInvis" id="81084" src="index_files/Conde_Amazon_Lucky_online_269x338_FINAL.jpg">
+
+</a></div>
+        
+</div>
+</div>
+    </div>
+
+    <div class="_cq_template cn_slideshow_share"><div>
+   <div class="share utility-email">
+
+     <a sl-processed="1" title="E-mail this page to a friend" onclick='s_objectID="http://www.luckymag.com/user/emailfriend?referringPage=http://www.luckymag.com/services/lookup/fc_2";return this.s_oc?this.s_oc(e):true' href="http://www.luckymag.com/user/emailfriend?referringPage=http://www.luckymag.com/services/lookup/fcb607ca-0ef6-4aca-a701-0d7e0136edd1" rel="nofollow">E-Mail</a>
+
+</div>
+</div>
+<div>
+   <div class="share utility-share">
+    <a sl-processed="1" href="http://www.addthis.com/bookmark.php?pub=luckymag&amp;url=http%3a%2f%2fwww.luckymag.com%2fstyle%2f2014%2f04%2f90s-music-style-icons&amp;title=%2790s+Music+Style+Icons%3a+Shop+Their+Looks+%3a+Lucky+Magazine" target="addthis" rel="nofollow" onclick='s_objectID="http://www.addthis.com/bookmark.php?pub=luckymag&amp;url=http%3a%2f%2fwww.luckymag.com%2fstyle%2f2014_1";return this.s_oc?this.s_oc(e):true' title="Bookmark using any bookmark manager!">Share</a>
+</div>
+
+</div>
+<div>
+    <div class="share slideshow-replay">
+    <a onclick='s_objectID="http://www.luckymag.com/style/2014/04/90s-music-style-icons?slide=1_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style/2014/04/90s-music-style-icons?slide=1" title="Replay Slideshow">Replay</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div class="cn_parsys count3-width10_60_30 parsys cn_componentContainer cn_colctrl"><div class="cols count3-width10_60_30">
+    <div class="col c1">
+            <div class="cn_parsys par-col1"><div class="parbase disable_pinit image no-bottom-margin float-right cn_image"><figure class="media float-right  no-bottom-margin disable_pinit">
+    <img src="index_files/cn_image.jpg" alt="" title=""></figure>
+
+
+
+</div>
+<div class="cn_contributors parbase float-right"><div class="byline float-right">
+        <span class="contributor first last" data-contributor-type="editor"><label>By</label>
+        <span class="name">Madeline Alford</span></span></div>
+</div>
+<div class="contributors parbase cn_text"><div class="body contributors">
+    <p><span class="contributors">Digital Editorial Assistant</span><iframe style="width: 59px; height: 20px;" data-twttr-rendered="true" title="Twitter Follow Button" class="twitter-follow-button twitter-follow-button" src="index_files/follow_button.html" allowtransparency="true" id="twitter-widget-1" frameborder="0" scrolling="no"></iframe></p></div>
+
+</div>
+</div>
+</div>
+    <div class="col c2">
+            <div class="cn_parsys par-col2"><div class="parbase cn_text"><div class="body ">
+    <p><span class="dc">F</span>rom the fuzzy pink scrunchies to those 
+parachute pants, the outfit changes in Britney Spears' "…Baby One More 
+Time" music video perfectly encapsulate the '90s for me. I can't tell 
+you how many times my friends and I studied that video to learn the 
+choreography—and more importantly, to copy Britney's outfits. With her 
+double braids and knotted white button-down, Britney was the girl every 
+'90s child wanted to be.</p>
+<p>While the pop princess may have embodied the '90s music scene to me, 
+she's but one of the decade's many musical style muses. I already 
+analyzed 25 of the <a sl-processed="1" onclick="s_objectID='http://www.luckymag.com/style/2014/03/90s-tv-style-icons?intcid=inline_link';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/style/2014/03/90s-tv-style-icons?intcid=inline_link" target="_blank">best TV icons</a>
+ of the '90s, and now it's time to look back at the era's original 
+grunge, hip hop and rock-'n'-roll style. Everything the 25 musicians 
+above wore was groundbreaking back in the day, but what would they wear 
+today? We shopped out the styles of our 25 favorite style icons, 
+straight from the age of Tommy Hilfiger overalls and combat boots, in a 
+way that'd be oh-so-stylish in 2014.</p>
+<p>Ranking these style stars would be out of the question, so all 
+artists are arranged in order of the release of their first big albums. 
+Because you know there ain't no party like a S Club party, am I right? <b>Click through to shop the closets of your favorite '90s music icons!</b><br>
+</p></div>
+
+</div>
+<div class="cn_parsys parsys cn_share_bar cn_componentContainer wide"><div class="utilities     wide"> <div class="section">
+                <div class="parbase cn_share_comments_count"><div class="share comments-count">
+            <a onclick='s_objectID="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail#livefyre_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="#livefyre"><span class="livefyre-commentcount commentstotal" data-lf-site-id="320164" data-lf-article-id="luckymag_fcb607ca-0ef6-4aca-a701-0d7e0136edd1"><div class="comments-button">Comments</div><div class="bubble"> <div class="commentCountValue">0</div><div class="bubble-arrow-border"></div> <div class="bubble-arrow"></div></div></span></a>
+        </div>
+
+
+        </div>
+</div> <div class="section">
+                <div class="parbase cn_text"><div class="body ">
+    <p><a sl-processed="1" onclick="s_objectID='#livefyre?intcid=inline_link';return this.s_oc?this.s_oc(e):true" href="#livefyre?intcid=inline_link">Comments »</a></p></div>
+
+</div>
+</div> <div class="section"></div></div>
+
+
+</div>
+<div class="cn_parsys parsys cn_features_container cn_componentContainer"><div class="cn_parsys cn_manual_feature parsys cn_componentContainer"><section class="feature "> <div class="cn_parsys parsys cn_componentContainer cn_newsletter_feature_form_container"><div class="newsletter-form collapse true" tabindex="1">
+    <form class="ng-pristine ng-valid" name="newslettersForm" action="/bin/user/newsletter" method="post" data-form-url="/bin/user/newsletter">
+        <div class="newsletter-arrow-border"></div>
+        <div class="newsletter-arrow"></div>
+        <input name="toolkit.application" value="newsletter" type="hidden">
+        <input name="toolkit.applicationId" value="" type="hidden">
+        <input name="formName" value="shortForm" type="hidden">
+        <input name="errorView" value="/services/newsletters/demographics" type="hidden">
+        <input name="successView" value="/style/2014/04/90s-music-style-icons?intcid=trail" type="hidden">
+            <input name="partnerCode" value="" type="hidden">
+        <input name="sourceCode" value="" type="hidden"> <div class="parbase cn_subheader"><h2 class="subheader ">Sign up for <b>free newsletters</b> and get a daily digest of <b>Lucky finds! </b><a onclick='s_objectID="http://www.luckymag.com/dam/newsletter/email/lucky_newsletter.png_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" class="sample" href="http://www.luckymag.com/dam/newsletter/email/lucky_newsletter.png">SEE SAMPLE</a></h2></div>
+<div class="parbase cn_newsletter"><fieldset>
+        <div class="row">
+<input id="newsletter.5017" name="newsletters" value="5017" checked="checked" type="checkbox">
+<label class="replace" for="newsletter.5017"></label>
+            <div class="description">
+                <h4>Lucky Breaks Daily</h4>
+                </div>
+        </div>
+    </fieldset>
+
+</div>
+<div class="parbase cn_newsletter"><fieldset>
+        <div class="row">
+<input id="newsletter.5163" name="newsletters" value="5163" checked="checked" type="checkbox">
+<label class="replace" for="newsletter.5163"></label>
+            <div class="description">
+                <h4>Lucky Beauty</h4>
+                </div>
+        </div>
+    </fieldset>
+
+</div>
+<div class="parbase cn_newsletter"><fieldset>
+        <div class="row">
+<input id="newsletter.264" name="newsletters" value="264" checked="checked" type="checkbox">
+<label class="replace" for="newsletter.264"></label>
+            <div class="description">
+                <h4>Luckymag.com Daily</h4>
+                <p class="tip">I understand and agree that registration on or use of this site constitutes agreement to its <a onclick='s_objectID="http://www.condenast.com/privacy-policy_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenast.com/privacy-policy">User Agreement</a> and <a onclick='s_objectID="http://www.condenast.com/privacy-policy#privacypolicy_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenast.com/privacy-policy#privacypolicy">Privacy Policy</a>.</p>
+                </div>
+        </div>
+    </fieldset>
+
+</div>
+<fieldset class="email">
+            <div class="row submit">
+                <label for="newsletter-email" class="replace">Enter your e-mail address</label>
+                <input name="email" class="newsletter-email" value="Enter your e-mail address" type="text">
+                <button type="submit" name="submit-newsletter" class="submit-newsletter">Sign Up</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+
+</div>
+</section>
+</div>
+</div>
+<div class="cn_parsys parsys cn_features_container cn_componentContainer left-align more-on"><!-- Solr Debug Query Explain: N/A --><div class="rubric-boxed-arrow cn_rubric"><h5 class="rubric rubric-boxed-arrow">More On</h5>
+    </div>
+<div class="cn_keywords"><dl class="keywords categories">
+        <dt> </dt>
+        <dd class="tag0" title="2324"><a sl-processed="1" onclick="s_objectID='/about/celebrities?intcid=river_tags';return this.s_oc?this.s_oc(e):true" class="tag0" href="http://www.luckymag.com/about/celebrities?intcid=river_tags">celebrities</a></dd></dl></div>
+<div class="cn_search_features parbase disable_pinit"><section class="feature search-result odd ">
+                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <figure class="media disable_pinit">
+    <a sl-processed="1" onclick="s_objectID='/beauty/2014/04/prom-beauty-inspiration?intcid=more_on';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/beauty/2014/04/prom-beauty-inspiration?intcid=more_on"> <img src="index_files/search.jpg" alt="" title=""></a> </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2 class="headline disable_pinit">
+    <a sl-processed="1" onclick="s_objectID='/beauty/2014/04/prom-beauty-inspiration?intcid=more_on';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/beauty/2014/04/prom-beauty-inspiration?intcid=more_on">Get Inspired: 13 Prom-Ready Beauty Looks</a>
+    </h2>
+
+
+
+
+
+
+</section>
+                                <section class="mv-moreon feature search-result">
+  <figure class="media disable_pinit">
+    <a rel="nofollow" href="http://www.luckymag.com/sponsored/polar?mvi=a2a1f264e0ec4ffe8a25601e6f94909c" sl-processed="1">
+      <img src="index_files/53553c55bfcd968033908aff.jpg" alt="" title="" height="100" width="100">
+    </a>
+  </figure>
+  <h2 class="headline disable_pinit">
+    <div class="mv-sponsor">
+      <div class="mv-sponsor-label">
+        Sponsor Content
+      </div>
+      <div class="mv-sponsor-logo">
+        <img src="index_files/53555fcdbfcd968033909148.png" height="30">
+      </div>
+    </div>
+    <a rel="nofollow" href="http://www.luckymag.com/sponsored/polar?mvi=a2a1f264e0ec4ffe8a25601e6f94909c" sl-processed="1">Tech Chic: How 4 Style Bloggers Get It Right</a>
+  </h2>
+</section>
+                                </div>
+</div>
+<div class="cn_parsys parsys cn_features_container cn_componentContainer left-align"><!-- Solr Debug Query Explain: N/A --><div class="cn_search_features parbase disable_pinit"><section class="feature search-result even ">
+                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <figure class="media disable_pinit">
+    <a sl-processed="1" onclick="s_objectID='/style/2014/04/leather-jackets-men-photos?intcid=more_on';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/style/2014/04/leather-jackets-men-photos?intcid=more_on"> <img src="index_files/search_003.jpg" alt="" title=""></a> </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2 class="headline disable_pinit">
+    <a sl-processed="1" onclick="s_objectID='/style/2014/04/leather-jackets-men-photos?intcid=more_on';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/style/2014/04/leather-jackets-men-photos?intcid=more_on">Attractive Men Made More Attractive With Leather Jackets: A History</a>
+    </h2>
+
+
+
+
+
+
+</section>
+                                </div>
+</div>
+<div class="parbase cn_next_blog_post_nav"><div style="left: 1154px;" class="next-blog-post-nav">
+
+            <a onclick='s_objectID="http://www.luckymag.com/style/2014/04/seven-style-and-beauty-secrets-april-18_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/style/2014/04/seven-style-and-beauty-secrets-april-18">
+                <div class="rubric-boxed-arrow cn_rubric" style="position:static;">
+                    <h5 class="rubric rubric-boxed-arrow">NEXT</h5>
+                </div>
+
+                <figure class="media disable_pinit">
+    <img src="index_files/search_004.jpg" alt="" title=""></figure>
+
+
+
+<span class="next-article-title">Seven Style And Beauty Secrets We Learned Last Week</span>
+            </a>
+
+    </div>
+
+    </div>
+</div>
+</div>
+    <div class="col c3">
+            <div class="cn_parsys par-col3"><div class="parbase cn_ad_placement"><div style="" id="rightRailTop300x250_frame" class="displayAd 300x250 displayAd300x250Js"><div style="border: 0pt none;" id="google_ads_iframe_/3379/luckymag.dart/style_5__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/3379/luckymag.dart/style_5" id="google_ads_iframe_/3379/luckymag.dart/style_5" frameborder="0" height="600" scrolling="no" width="300"></iframe></div></div>
+    <script type="text/javascript">
+        CN.dart.call('rightRailTop', {sz:'300x250', kws:["top"]});</script>
+
+</div>
+</div>
+</div>
+    </div>
+
+
+</div>
+<div class="cn_parsys parsys cn_componentContainer count2-width10_90 cn_colctrl"><div class="cols count2-width10_90">
+    <div class="col c1">
+            <div class="cn_parsys par-col1"><div class="parbase image cn_image"><figure class="media disable_pinit">
+    </figure>
+
+
+
+</div>
+</div>
+</div>
+    <div class="col c2">
+            <div class="cn_parsys par-col2"><div class="cn_parsys thumbnail-grid parsys cn_features_container cn_componentContainer"><!-- Solr Debug Query Explain: N/A --><div class="rubric-boxed-arrow cn_rubric"><h5 class="rubric rubric-boxed-arrow">Recommended</h5>
+    </div>
+<div class="title cn_title"><h2 class="headline ">
+    Just for you...</h2>
+
+</div>
+<div class="cn_search_features parbase disable_pinit"><section class="feature search-result odd ">
+                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <figure class="media disable_pinit">
+    <a sl-processed="1" onclick="s_objectID='/style/2014/04/exercise-clothes-outside-the-gym?intcid=recommended';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/style/2014/04/exercise-clothes-outside-the-gym?intcid=recommended"> <img src="index_files/search_005.jpg" alt="" title=""></a> </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2 class="headline disable_pinit">
+    <a sl-processed="1" onclick="s_objectID='/style/2014/04/exercise-clothes-outside-the-gym?intcid=recommended';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/style/2014/04/exercise-clothes-outside-the-gym?intcid=recommended">The Compete Guide To Wearing Workout Clothes Outside The Gym</a>
+    </h2>
+
+
+
+
+
+
+</section>
+                                <section class="feature search-result even ">
+                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <figure class="media disable_pinit">
+    <a sl-processed="1" onclick="s_objectID='/style/2014/04/coachella-2014-celebrity-photos?intcid=recommended';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/style/2014/04/coachella-2014-celebrity-photos?intcid=recommended"> <img src="index_files/search_002.jpg" alt="" title=""></a> </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2 class="headline disable_pinit">
+    <a sl-processed="1" onclick="s_objectID='/style/2014/04/coachella-2014-celebrity-photos?intcid=recommended';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/style/2014/04/coachella-2014-celebrity-photos?intcid=recommended">Coachella 2014: The Best Celebrity Looks From The Music Festival—And How To Get Them!</a>
+    </h2>
+
+
+
+
+
+
+</section>
+                                <section class="feature search-result odd ">
+                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <figure class="media disable_pinit">
+    <a sl-processed="1" onclick="s_objectID='/style/2014/04/flashdance-outfits?intcid=recommended';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/style/2014/04/flashdance-outfits?intcid=recommended"> <img src="index_files/search.png" alt="" title=""></a> </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2 class="headline disable_pinit">
+    <a sl-processed="1" onclick="s_objectID='/style/2014/04/flashdance-outfits?intcid=recommended';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/style/2014/04/flashdance-outfits?intcid=recommended">What A Feeling: Four Inspiring Outfits Straight Out Of <em>Flashdance</em></a>
+    </h2>
+
+
+
+
+
+
+</section>
+                                <section class="feature search-result even ">
+                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <figure class="media disable_pinit">
+    <a sl-processed="1" onclick="s_objectID='/style/2014/04/five-ways-to-style-a-concert-tee?intcid=recommended';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/style/2014/04/five-ways-to-style-a-concert-tee?intcid=recommended"> <img src="index_files/search_006.jpg" alt="" title=""></a> </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2 class="headline disable_pinit">
+    <a sl-processed="1" onclick="s_objectID='/style/2014/04/five-ways-to-style-a-concert-tee?intcid=recommended';return this.s_oc?this.s_oc(e):true" href="http://www.luckymag.com/style/2014/04/five-ways-to-style-a-concert-tee?intcid=recommended">Five New Ways To Wear Your Favorite Concert T-Shirt</a>
+    </h2>
+
+
+
+
+
+
+</section>
+                                </div>
+</div>
+</div>
+</div>
+    </div>
+
+
+</div>
+<div class="cn_parsys count3-width10_60_30 parsys cn_componentContainer cn_colctrl"><div class="cols count3-width10_60_30">
+    <div class="col c1">
+            <div class="cn_parsys par-col1"><div class="parbase image cn_image"><figure class="media disable_pinit">
+    </figure>
+
+
+
+</div>
+</div>
+</div>
+    <div class="col c2">
+            <div class="cn_parsys par-col2"><div class="rubric-boxed-arrow cn_rubric"><h5 class="rubric rubric-boxed-arrow">Comments</h5>
+    </div>
+<div class="parbase cn_reactions_comments"><aside class="livefyre-comments">
+            <h4>Post a Comment</h4>
+            <div id="livefyre"><div class="fyre fyre-width-medium"><div class="fyre-widget fyre-avatar-disabled"><iframe src="index_files/httpwww.html" style="position: absolute; height: 1px; width: 1px; z-index: 99999; background-color: transparent;" frameborder="0"></iframe><div class="fyre-featured-content-wrapper" style="display: none"></div><div class="fyre-stream-stats"><div class="fyre-comment-count"><span class="bubbleCommentCount">0</span><span>comments</span></div><div class="fyre-help"><div class="fyre-box-wrapper"><a onclick='s_objectID="http://livefyre.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://livefyre.com/" target="_blank"><img class="fyre-logo-drop" src="index_files/down_arrow.png"><img class="fyre-logo-help" src="index_files/lf-logo.png" alt="Livefyre"></a><ul class="fyre-box-list"><li><a onclick='s_objectID="http://livefyre.com/_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://livefyre.com/" target="_blank" title="Get Livefyre">Get Livefyre</a></li><li><a onclick='s_objectID="http://support.livefyre.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://support.livefyre.com/" target="_blank" title="FAQ">FAQ</a></li></ul></div></div></div><div class="fyre-auth"><div class="fyre-login-bar"><a rel="nofollow" class="fyre-user-loggedout">Sign in</a></div><div class="fyre-live-container"><div class="fyre-livecount"><span class="bubbleLiveCount">4</span><span class="bubbleLiveCountStr"> people listening</span></div></div></div><div class="fyre-editor"><div class="fyre-editor-container fyre-editor-container-focus"><div style="" id="fyre-editor-3" class="fyre-editor-editable editable fyre-editor-iframe">&nbsp;<iframe style="width: 466px; height: 100px;" frameborder="0"></iframe></div><span style="display: none;" class="fyre-editor-spinner"></span><div class="fyre-editor-preview"></div><div style="display: none;" class="fyre-editor-media-drawer"></div><div class="fyre-editor-toolbar"><div aria-haspopup="true" role="menu" style="-moz-user-select: none; display: none;" class="fyre-mention-menu fyre-mention-menu-vertical"><div class="fyre-mention-menu-filter"><div></div><input tabindex="-1" autocomplete="off" type="text"></div><div class="fyre-mention-menu-content"><div id=":d" style="-moz-user-select: none;" aria-disabled="true" class="goog-control goog-control-disabled"></div><div id=":e" style="-moz-user-select: none;" aria-disabled="true" class="goog-control goog-control-disabled"></div><div id=":f" style="-moz-user-select: none;" aria-disabled="true" class="goog-control goog-control-disabled"></div><div id=":g" style="-moz-user-select: none; display: none;" aria-hidden="true" class="fyre-mention-item fyre-mention-item-twitter"><img src="index_files/50.jpg" class="fyre-mention-item-avatar"><h4 class="fyre-mention-item-display-name"></h4><span class="fyre-mention-item-twitter"></span></div><div id=":h" style="-moz-user-select: none; display: none;" aria-hidden="true" class="fyre-mention-item fyre-mention-item-livefyre"><img src="index_files/50.jpg" class="fyre-mention-item-avatar"><h4 class="fyre-mention-item-display-name"></h4><span class="fyre-mention-item-livefyre"></span></div></div></div><div role="toolbar" style="-moz-user-select: none;" class="goog-toolbar goog-toolbar-horizontal"><div id=":a" role="separator" style="-moz-user-select: none;" class="goog-toolbar-separator goog-inline-block">&nbsp;</div><div id=":c" style="-moz-user-select: none;" role="button" class="goog-inline-block fyre-button-left fyre-format-button"><div class="goog-inline-block fyre-button-left-outer-box"><div class="goog-inline-block fyre-button-left-inner-box"></div></div></div><div id=":j" style="-moz-user-select: none;" role="button" class="goog-inline-block fyre-button-left fyre-mention-button"><div class="goog-inline-block fyre-button-left-outer-box"><div class="goog-inline-block fyre-button-left-inner-box"></div></div></div><div aria-hidden="true" id=":m" style="-moz-user-select: none; display: none;" role="button" class="goog-inline-block fyre-button-left fyre-embed-button"><div class="goog-inline-block fyre-button-left-outer-box"><div class="goog-inline-block fyre-button-left-inner-box"></div></div></div><div id=":o" style="-moz-user-select: none; display: none;" role="button" class="goog-inline-block fyre-button-left fyre-raw-button"><div class="goog-inline-block fyre-button-left-outer-box"><div class="goog-inline-block fyre-button-left-inner-box"></div></div></div><div id=":q" style="-moz-user-select: none;" role="button" class="goog-inline-block fyre-button-left fyre-follow-button"><div class="goog-inline-block fyre-button-left-outer-box"><div class="goog-inline-block fyre-button-left-inner-box">+ Follow</div></div></div><div id=":s" style="-moz-user-select: none;" role="button" class="goog-inline-block fyre-button-right fyre-share-button"><div class="goog-inline-block fyre-button-right-outer-box"><div class="goog-inline-block fyre-button-right-inner-box">Share<label class="fyre-share-counter fyre-share-empty"></label></div></div></div><div id=":u" style="-moz-user-select: none;" role="button" class="goog-inline-block fyre-button-right fyre-post-button fyre-post-button-new"><div class="goog-inline-block fyre-button-right-outer-box"><div class="goog-inline-block fyre-button-right-inner-box">Post comment as...</div></div></div></div></div></div><div style="display: none;" class="fyre-comment-preview"><h5>Custom HTML Preview<span class="fyre-icon-remove"></span></h5><div class="fyre-roundedpanel-content fyre-comment-preview-content"><article class="fyre-comment-article"><div class="fyre-comment"><div class="fyre-comment-raw-html"></div></div></article></div></div></div><div class="fyre-input-box-collapsed"></div><div class="fyre-stream-header"><div style="display: none;" class="fyre-content-loading">Loading</div><div class="fyre-stream-sort"><div class="fyre-stream-sort-options"><a class="fyre-stream-sort-newest fyre-stream-sort-selected">Newest</a><span class="fyre-stream-sort-bar"> | </span><a class="fyre-stream-sort-oldest">Oldest</a></div><a class="fyre-stream-sort-back"></a></div></div><div class="fyre-comment-stream"><div class="fyre-stream-content"></div><div class="fyre-stream-content-not-found"></div><div style="display: none;" class="fyre-stream-more"><div class="fyre-stream-more-container"><div class="fyre-text">Show More Comments</div><div class="fyre-spinner"><div class="fyre-ball"><!--[if IE]><img src="http://zor.fyre.co/wjs/v3.0.1398119574/images/fyre-spinner-ball.gif" alt="" /><![endif]--><!--[if !IE]><!--><img src="index_files/fyre-spinner-ball.png" alt=""><!--<![endif]--></div></div></div></div></div><div class="fyre-top-content-stream"></div><div class="fyre-thread-breakout-stream"></div><div class="fyre-stream-menu-container"></div></div></div></div>
+        </aside>
+
+
+    </div>
+</div>
+</div>
+    <div class="col c3">
+            <div class="cn_parsys par-col3"><div class="parbase cn_ad_placement"><div style="" id="rightRailBottom300x250_frame" class="displayAd 300x250 displayAd300x250Js"><div style="border: 0pt none;" id="google_ads_iframe_/3379/luckymag.dart/style_6__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" name="google_ads_iframe_/3379/luckymag.dart/style_6" id="google_ads_iframe_/3379/luckymag.dart/style_6" frameborder="0" height="250" scrolling="no" width="300"></iframe></div></div>
+    <script type="text/javascript">
+        CN.dart.call('rightRailBottom', {sz:'300x250', kws:["bottom"]});</script>
+
+</div>
+</div>
+</div>
+    </div>
+
+
+</div>
+</div>
+</div>
+
+                    <aside id="u-rail">
+                    </aside>
+                </div>
+            </div>
+
+            <div id="bottom-rail">
+                <div class="cn_parsys cn_iparsys par-bottom"><div class="section">
+                <div class="cn_parsys cn_path_include"></div>
+</div> <div class="iparys_inherited">
+                <div class="cn_parsys cn_iparsys par-bottom"><div class="section"><div class="cn_parsys parsys cn_ecom_placement"><div style="visibility: visible;" id="AMS_LKY_GLOBAL_FOOTER" class="global_footer ecom-placement"><a onclick='s_objectID="http://subscribe.luckymag.com/ams/amsClick?pos_id=2967&amp;campaign_id=19171&amp;creative_id=22491&amp;site_i_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://subscribe.luckymag.com/ams/amsClick?pos_id=2967&amp;campaign_id=19171&amp;creative_id=22491&amp;site_id=795&amp;top_level_section_prefix=content&amp;full_url=/content/lucky/style/2014/04/90s-music-style-icons.html" target="_blank"><img class="ascat ascatLink ascatInvis" id="88918" src="index_files/Lucky_Footer_737x344_v1_Apr14_B.jpg">
+
+</a></div>
+                
+</div>
+</div></div>
+</div> <div class="section">
+                <div class="cn_script_include_google_adsense parbase"><div class="adsense-heading">ADVERTISEMENT</div>
+<script type="text/javascript">
+    // Adsense parameters
+    google_ad_client = 'ca-conde_lucky';                                                   // clientID
+    google_ad_channel = 'lucky_standard_a';                                                 // channelID
+    google_language = 'en';                           //english
+    google_ad_width = '970';                                // width of iframe
+    google_ad_height = '90';                             // height of iframe
+    google_ad_format = '970x90_pas_abgc';                // specifies HTML template used to fill iframe
+    google_ad_type = 'text';                                  // type of ads to display
+    //google_page_url = 'http://www.example.com';
+    google_alternate_ad_url = '';
+    google_alternate_color = '';
+    google_color_bg = 'ffffff';             // the ads' background color is white
+    google_color_border = '';                       // the border surrounding all of the ads is none
+    google_color_line = 'b0b0b0';                   // the line surrounding each ad is green
+    google_color_link = '666666';                       // the ad link is blue
+    google_color_text = '666666';                       // the ad text is black
+    google_color_url = '2c628b';
+    google_encoding = 'utf8';
+    google_safe = 'high';
+    google_adtest = 'off';
+    google_ad_section = 'default';
+    google_ui_features = '';                                                                //corner style
+
+</script>
+<script type="text/javascript" src="index_files/show_ads.js"></script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="90" scrolling="no" width="970"></iframe></ins></ins>
+</div>
+</div> </div>
+</div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="cn_parsys parsys cn_componentContainer cn_site_footer"><footer id="site-footer">
+
+        <div class="cn_parsys cn_iparsys"><div class="iparys_inherited">
+            <div class="cn_parsys cn_iparsys"><div class="section"><div class="parbase cn_site_footer_nav"><nav class="foot-nav">
+    <ul class="fnav-list">
+        <li class="fnav-1"><a onclick='s_objectID="https://w1.buysub.com/servlet/CSGateway?cds_mag_code=LKY_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="https://w1.buysub.com/servlet/CSGateway?cds_mag_code=LKY">Subscription Services</a></li>
+        <li class="fnav-2"><a onclick='s_objectID="http://www.luckymag.com/contact/contactus_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/contact/contactus">Contact Lucky</a></li>
+        <li class="fnav-3"><a onclick='s_objectID="http://www.condenast.com/reprints-permissions_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenast.com/reprints-permissions">Reprints/Permissions</a></li>
+        <li class="fnav-4"><a onclick='s_objectID="http://www.luckymag.com/services/newsletters/demographics_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/services/newsletters/demographics">Newsletter Signup</a></li>
+        <li class="fnav-5"><a onclick='s_objectID="http://www.luckymag.com/services/rss/summary_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/services/rss/summary">Rss Feeds</a></li>
+        <li class="fnav-6"><a onclick='s_objectID="http://www.luckymag.com/services/sitemap_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/services/sitemap">Site Map</a></li>
+        </ul>
+</nav>
+
+</div>
+</div><div class="section"><div class="parbase cn_global_footer_nav"><nav class="cnd-nav">
+    <h2>Lucky Deals</h2><ul class="cnd-nav-list">
+        <li><a onclick='s_objectID="http://www.luckymag.com/breaks_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/breaks">Lucky Breaks</a></li>
+
+        <li><a onclick='s_objectID="http://rewards.luckymag.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://rewards.luckymag.com/">Lucky Rewards</a></li>
+
+        <li><a onclick='s_objectID="http://www.luckymag.com/breaks/luckysweeps0_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/breaks/luckysweeps0">Lucky Giveaways</a></li>
+
+        <li><a onclick='s_objectID="http://www.luckymag.com/breaks_3";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/breaks">All Lucky Deals</a></li>
+
+        </ul>
+</nav>
+
+</div>
+</div><div class="section"><div class="parbase image image-center cn_image"><figure class="media disable_pinit">
+    <a onclick='s_objectID="http://www.condenast.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenast.com/"> <img src="index_files/cn_image.png" alt="Condé Nast" title=""></a> </figure>
+
+
+
+</div>
+</div><div class="section"><div class="cn_dropdown parbase"><div class="cn-dropdown cn-dropdown-standard">
+    <h3 class="cn-dropdown-standard-header">Visit our sister sites</h3><ul>
+                        <li><a onclick='s_objectID="http://www.allure.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.allure.com/">Allure</a></li>
+                        <li><a onclick='s_objectID="http://www.architecturaldigest.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.architecturaldigest.com/">Architectural Digest</a></li>
+                        <li><a onclick='s_objectID="http://www.arstechnica.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.arstechnica.com/">Ars Technica</a></li>
+
+                        <li><a onclick='s_objectID="http://www.bonappetit.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.bonappetit.com/">Bon Appétit</a></li>
+                        <li><a onclick='s_objectID="http://www.brides.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.brides.com/">Brides.com</a></li>
+                        <li><a onclick='s_objectID="http://www.concierge.com/cntraveler_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.concierge.com/cntraveler">Condé Nast Traveler</a></li>
+                        <li><a onclick='s_objectID="http://www.concierge.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.concierge.com/">Concierge</a></li>
+                        <li><a onclick='s_objectID="http://www.details.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.details.com/">Details</a></li>
+
+                        <li><a onclick='s_objectID="http://www.epicurious.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.epicurious.com/">Epicurious</a></li>
+                        <li><a onclick='s_objectID="http://www.glamour.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.glamour.com/">Glamour</a></li>
+                        <li><a onclick='s_objectID="http://www.golfdigest.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.golfdigest.com/">Golf Digest</a></li>
+                        <li><a onclick='s_objectID="http://www.golfworld.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.golfworld.com/">Golf World</a></li>
+                        <li><a onclick='s_objectID="http://www.gq.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.gq.com/">GQ</a></li>
+                        <li><a onclick='s_objectID="http://www.hotelchatter.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.hotelchatter.com/">Hotel Chatter</a></li>
+
+                        <li><a onclick='s_objectID="http://www.jaunted.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.jaunted.com/">Jaunted</a></li>
+                        <li><a onclick='s_objectID="http://www.luckymag.com/_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.luckymag.com/">Lucky</a></li>
+                        <li><a onclick='s_objectID="http://www.nutritiondata.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.nutritiondata.com/">NutritionData</a></li>
+                        <li><a onclick='s_objectID="http://www.reddit.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.reddit.com/">Reddit</a></li>
+                        <li><a onclick='s_objectID="http://www.self.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.self.com/">Self</a></li>
+                        <li><a onclick='s_objectID="http://www.style.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.style.com/">Style</a></li>
+
+                        <li><a onclick='s_objectID="http://www.teenvogue.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.teenvogue.com/">Teen Vogue</a></li>
+                        <li><a onclick='s_objectID="http://www.newyorker.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.newyorker.com/">The New Yorker</a></li>
+                        <li><a onclick='s_objectID="http://www.vanityfair.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.vanityfair.com/">Vanity Fair</a></li>
+                        <li><a onclick='s_objectID="http://www.vegaschatter.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.vegaschatter.com/">Vegas Chatter</a></li>
+                        <li><a onclick='s_objectID="http://www.vogue.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.vogue.com/">Vogue</a></li>
+                        <li><a onclick='s_objectID="http://www.wmagazine.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.wmagazine.com/">W</a></li>
+
+                        <li><a onclick='s_objectID="http://www.wired.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.wired.com/">Wired</a></li>
+                    </ul>
+                </div>
+</div>
+</div><div class="section"><div class="parbase global-footer-section-2 cn_global_footer_text"><div class="global-footer global-footer-section-2">
+    <ul>
+<li><a onclick='s_objectID="http://www.condenaststore.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenaststore.com/">Condé Nast Store</a></li>
+<li><a onclick='s_objectID="http://www.condenast.com/careers_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenast.com/careers" target="_blank">Careers</a></li>
+<li><a onclick='s_objectID="http://www.condenast.com/brands_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenast.com/brands">Lucky Media Kit</a></li>
+</ul></div>
+
+</div>
+</div><div class="section"><div class="parbase global-footer-copyright cn_global_footer_text"><div class="global-footer global-footer-copyright">
+    <p style="text-align: center;">© 2014 Condé Nast. All rights reserved.<br>
+Use of this Site constitutes acceptance of our&amp;nbsp;<a onclick='s_objectID="http://www.condenast.com/privacy-policy_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenast.com/privacy-policy">User Agreement</a> (effective 1/2/2014) and <a onclick='s_objectID="http://www.condenast.com/privacy-policy#privacypolicy_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenast.com/privacy-policy#privacypolicy">Privacy Policy</a> (effective 1/2/2014)<br>
+<a onclick='s_objectID="http://www.condenast.com/privacy-policy#privacypolicy-california_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenast.com/privacy-policy#privacypolicy-california">Your California Privacy Rights</a><br>
+The material on this site may not be reproduced, distributed, 
+transmitted, cached or otherwise used, except with the prior written 
+permission of Condé Nast.<br>
+<a onclick='s_objectID="http://www.condenast.com/privacy-policy#privacypolicy-optout_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" target="_blank" href="http://www.condenast.com/privacy-policy#privacypolicy-optout">Ad Choices</a><br>
+</p></div>
+
+</div>
+</div><div class="section"><div class="cn_script_include parbase"><script type="text/javascript" src="index_files/40456X1045851.js"></script>
+</div>
+</div></div>
+</div> </div>
+</footer>
+
+</div>
+</div>
+
+    <div class="lightreg-forms login" ng-controller="LightRegCtrl">
+                <div id="modal-frame" modal-window="modal-window" backdrop="true" class="ng-cloak  modal hide fade modal hide fade">
+  <div modal-message="modal-message" class="">
+    <div class="modal-header"><h3 class="ng-binding">Login</h3><a onclick='s_objectID="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail#/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="#/" class="close" id="btn-cancel" title="Close">×</a></div>
+    <div class="modal-body " ng-transclude="">
+      <div ng-include="" src="templateUrl"></div>
+    
+                    <div class="ng-scope" ng-view=""></div>
+                </div>
+    <div style="" class="modal-footer" ng-show="control">
+      <button class="btn btn-primary ng-binding" ng-click="submit(user)" ng-disabled="entryInvalid">Confirm</button>
+      <p class="disclaimer"><small>Use of this site constitutes acceptance of our <a onclick='s_objectID="http://www.condenast.com/privacy-policy_3";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenast.com/privacy-policy" target="_blank">User Agreement</a> and <a onclick='s_objectID="http://www.condenast.com/privacy-policy#privacypolicy_3";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenast.com/privacy-policy#privacypolicy" target="_blank">Privacy Policy</a> (your <a onclick='s_objectID="http://www.condenast.com/privacy-policy#privacypolicy-california_2";return this.s_oc?this.s_oc(e):true' sl-processed="1" href="http://www.condenast.com/privacy-policy#privacypolicy-california" target="_blank">CA Privacy Rights</a>) Copyright © Condé Nast Digital. All rights reserved.</small></p>
+      <span class="edge"></span>
+    </div>
+  </div>
+</div>
+            </div>
+        <script type="text/javascript">
+    CN.labjsBrightcove = $LAB.script(function(){
+        return jQuery('.cn_brightcove_video').length ? "http://admin.brightcove.com/js/BrightcoveExperiences.js" : null;
+    })
+    .script(function(){
+        return jQuery('.cn_brightcove_video').length ? "http://admin.brightcove.com/js/APIModules_all.js" : null;
+    });
+</script>
+
+<script type="text/javascript">
+    
+            CN.labjsEcom.wait(function() {
+                if (CN.url.params('nojoy') != 1) {
+                    (function(pageAds){
+    var
+        div = null;
+
+    if ((typeof pageAds !== 'undefined') && (typeof pageAds.AMS_LKY_POPUP_FLOATINGAD !== 'undefined')) {
+        div = document.getElementById("AMS_LKY_POPUP_FLOATINGAD");
+
+        if (div !== null) {
+            div.innerHTML = "";
+
+            jQuery("#AMS_LKY_POPUP_FLOATINGAD").html(pageAds.AMS_LKY_POPUP_FLOATINGAD.replace(/document.write\(.*\)/gi,"/*filtered out because of document.write(...)*/"));
+        }
+    }
+    if ('AMS_LKY_POPUP_FLOATINGAD' === 'AMS_LKY_') {
+                if (jQuery('#AMS_LKY_POPUP_FLOATINGAD').length > 0) {
+                    jQuery('#mag_subnav_subscribe').parent().html(pageAds.AMS_LKY_POPUP_FLOATINGAD);
+                    jQuery('#AMS_LKY_POPUP_FLOATINGAD').hide();
+                }
+    }
+})(window.pageAds);
+(function(pageAds){
+    var
+        div = null;
+
+    if ((typeof pageAds !== 'undefined') && (typeof pageAds.AMS_LKY_GLOBAL_NAVBAR_ROLLOVER !== 'undefined')) {
+        div = document.getElementById("AMS_LKY_GLOBAL_NAVBAR_ROLLOVER");
+
+        if (div !== null) {
+            div.innerHTML = "";
+
+            jQuery("#AMS_LKY_GLOBAL_NAVBAR_ROLLOVER").html(pageAds.AMS_LKY_GLOBAL_NAVBAR_ROLLOVER.replace(/document.write\(.*\)/gi,"/*filtered out because of document.write(...)*/"));
+        }
+    }
+    if ('AMS_LKY_GLOBAL_NAVBAR_ROLLOVER' === 'AMS_LKY_') {
+                if (jQuery('#AMS_LKY_GLOBAL_NAVBAR_ROLLOVER').length > 0) {
+                    jQuery('#mag_subnav_subscribe').parent().html(pageAds.AMS_LKY_GLOBAL_NAVBAR_ROLLOVER);
+                    jQuery('#AMS_LKY_GLOBAL_NAVBAR_ROLLOVER').hide();
+                }
+    }
+})(window.pageAds);
+(function(pageAds){
+    var
+        div = null;
+
+    if ((typeof pageAds !== 'undefined') && (typeof pageAds.AMS_LKY_GLOBAL_NAVBAR !== 'undefined')) {
+        div = document.getElementById("AMS_LKY_GLOBAL_NAVBAR");
+
+        if (div !== null) {
+            div.innerHTML = "";
+
+            jQuery("#AMS_LKY_GLOBAL_NAVBAR").html(pageAds.AMS_LKY_GLOBAL_NAVBAR.replace(/document.write\(.*\)/gi,"/*filtered out because of document.write(...)*/"));
+        }
+    }
+    if ('AMS_LKY_GLOBAL_NAVBAR' === 'AMS_LKY_') {
+                if (jQuery('#AMS_LKY_GLOBAL_NAVBAR').length > 0) {
+                    jQuery('#mag_subnav_subscribe').parent().html(pageAds.AMS_LKY_GLOBAL_NAVBAR);
+                    jQuery('#AMS_LKY_GLOBAL_NAVBAR').hide();
+                }
+    }
+})(window.pageAds);
+(function(pageAds){
+    var
+        div = null;
+
+    if ((typeof pageAds !== 'undefined') && (typeof pageAds.AMS_LKY_CONTENTPAGE_HEADER !== 'undefined')) {
+        div = document.getElementById("AMS_LKY_CONTENTPAGE_HEADER");
+
+        if (div !== null) {
+            div.innerHTML = "";
+
+            jQuery("#AMS_LKY_CONTENTPAGE_HEADER").html(pageAds.AMS_LKY_CONTENTPAGE_HEADER.replace(/document.write\(.*\)/gi,"/*filtered out because of document.write(...)*/"));
+        }
+    }
+    if ('AMS_LKY_CONTENTPAGE_HEADER' === 'AMS_LKY_') {
+                if (jQuery('#AMS_LKY_CONTENTPAGE_HEADER').length > 0) {
+                    jQuery('#mag_subnav_subscribe').parent().html(pageAds.AMS_LKY_CONTENTPAGE_HEADER);
+                    jQuery('#AMS_LKY_CONTENTPAGE_HEADER').hide();
+                }
+    }
+})(window.pageAds);
+(function(pageAds){
+    var
+        div = null;
+
+    if ((typeof pageAds !== 'undefined') && (typeof pageAds.AMS_LKY_CONTENTPAGE_HEADERLEFT !== 'undefined')) {
+        div = document.getElementById("AMS_LKY_CONTENTPAGE_HEADERLEFT");
+
+        if (div !== null) {
+            div.innerHTML = "";
+
+            jQuery("#AMS_LKY_CONTENTPAGE_HEADERLEFT").html(pageAds.AMS_LKY_CONTENTPAGE_HEADERLEFT.replace(/document.write\(.*\)/gi,"/*filtered out because of document.write(...)*/"));
+        }
+    }
+    if ('AMS_LKY_CONTENTPAGE_HEADERLEFT' === 'AMS_LKY_') {
+                if (jQuery('#AMS_LKY_CONTENTPAGE_HEADERLEFT').length > 0) {
+                    jQuery('#mag_subnav_subscribe').parent().html(pageAds.AMS_LKY_CONTENTPAGE_HEADERLEFT);
+                    jQuery('#AMS_LKY_CONTENTPAGE_HEADERLEFT').hide();
+                }
+    }
+})(window.pageAds);
+(function(pageAds){
+    var
+        div = null;
+
+    if ((typeof pageAds !== 'undefined') && (typeof pageAds.AMS_LKY_GLOBAL_SLIDESHOW_OVERLAY !== 'undefined')) {
+        div = document.getElementById("AMS_LKY_GLOBAL_SLIDESHOW_OVERLAY");
+
+        if (div !== null) {
+            div.innerHTML = "";
+
+            jQuery("#AMS_LKY_GLOBAL_SLIDESHOW_OVERLAY").html(pageAds.AMS_LKY_GLOBAL_SLIDESHOW_OVERLAY.replace(/document.write\(.*\)/gi,"/*filtered out because of document.write(...)*/"));
+        }
+    }
+    if ('AMS_LKY_GLOBAL_SLIDESHOW_OVERLAY' === 'AMS_LKY_') {
+                if (jQuery('#AMS_LKY_GLOBAL_SLIDESHOW_OVERLAY').length > 0) {
+                    jQuery('#mag_subnav_subscribe').parent().html(pageAds.AMS_LKY_GLOBAL_SLIDESHOW_OVERLAY);
+                    jQuery('#AMS_LKY_GLOBAL_SLIDESHOW_OVERLAY').hide();
+                }
+    }
+})(window.pageAds);
+(function(pageAds){
+    var
+        div = null;
+
+    if ((typeof pageAds !== 'undefined') && (typeof pageAds.AMS_LKY_GLOBAL_SLIDESHOW !== 'undefined')) {
+        div = document.getElementById("AMS_LKY_GLOBAL_SLIDESHOW");
+
+        if (div !== null) {
+            div.innerHTML = "";
+
+            jQuery("#AMS_LKY_GLOBAL_SLIDESHOW").html(pageAds.AMS_LKY_GLOBAL_SLIDESHOW.replace(/document.write\(.*\)/gi,"/*filtered out because of document.write(...)*/"));
+        }
+    }
+    if ('AMS_LKY_GLOBAL_SLIDESHOW' === 'AMS_LKY_') {
+                if (jQuery('#AMS_LKY_GLOBAL_SLIDESHOW').length > 0) {
+                    jQuery('#mag_subnav_subscribe').parent().html(pageAds.AMS_LKY_GLOBAL_SLIDESHOW);
+                    jQuery('#AMS_LKY_GLOBAL_SLIDESHOW').hide();
+                }
+    }
+})(window.pageAds);
+(function(pageAds){
+    var
+        div = null;
+
+    if ((typeof pageAds !== 'undefined') && (typeof pageAds.AMS_LKY_GLOBAL_FOOTER !== 'undefined')) {
+        div = document.getElementById("AMS_LKY_GLOBAL_FOOTER");
+
+        if (div !== null) {
+            div.innerHTML = "";
+
+            jQuery("#AMS_LKY_GLOBAL_FOOTER").html(pageAds.AMS_LKY_GLOBAL_FOOTER.replace(/document.write\(.*\)/gi,"/*filtered out because of document.write(...)*/"));
+        }
+    }
+    if ('AMS_LKY_GLOBAL_FOOTER' === 'AMS_LKY_') {
+                if (jQuery('#AMS_LKY_GLOBAL_FOOTER').length > 0) {
+                    jQuery('#mag_subnav_subscribe').parent().html(pageAds.AMS_LKY_GLOBAL_FOOTER);
+                    jQuery('#AMS_LKY_GLOBAL_FOOTER').hide();
+                }
+    }
+})(window.pageAds);
+                }
+                CN.ecom.show();
+            });
+            setTimeout(CN.ecom.show, 10 * 1000);
+        </script>
+<script type="text/javascript">
+/* CONFIGURATION
+ * For objects, components, and features that require configuration before invocation.
+ * This will be dumped into a script element just before the inclusion of cn.bottom
+*/
+
+    // CN Slideshow config
+    CN.config.set({
+        
+        useInterstitial : true,
+        showInterstitialTimer : 15,
+        hasIntro : 'false',
+        slideshowType :  'inlineslideshow',
+        wordCount : ''
+    });</script>
+
+<script type="text/javascript" src="index_files/bottom.js"></script><!-- START Parse.ly Include: Async --><div id="parsely-root" style="display: none"><a onclick='s_objectID="http://parsely.com/_1";return this.s_oc?this.s_oc(e):true' sl-processed="1" id="parsely-cfg" data-parsely-site="luckymag.com" href="http://parsely.com/">Powered by the Parse.ly Publisher Platform (P3).</a></div><!-- END Parse.ly Include: Async -->
+<script type="text/javascript">
+
+CN.features.render({
+    features : (function() {
+        var
+            i,
+            feature = null,
+            render = [],
+            featuresOnPage = "toprail leftalign moreon leftalign thumbnailgrid".replace(/\s{2,}/g, ' ').split(' '),
+            len = featuresOnPage.length,
+            cssClass;
+
+        featuresOnPage = jQuery.grep(featuresOnPage,function(el,idx){
+            return jQuery.inArray(el, featuresOnPage) === idx;
+        });
+        for(i = 0; i < len; i++){
+            cssClass = featuresOnPage[i];
+            if (CN.features.types.hasOwnProperty(cssClass)) {
+                render.push(cssClass);
+            }
+        }
+        return render;
+    }())
+});
+
+
+    CN.labjsLivefyre.wait(function(){
+        CN.livefyre.main.loader().loadLivefyre();
+    });
+/* INITIALIZATION
+ * Call init and render functions here, or attach DOM.ready handlers.
+ * (You can also call Stowe's momma here, too.)
+*/
+            // CN.login_bar start
+            CN.login.init();
+                CN.carousel.render();
+                CN.rail.render();
+            CN.labjsLivefyre.wait(function(){
+                CN.livefyre.commentCountStyle();
+            });
+
+        // CN Twitter
+        CN.twitter.init();
+
+        CN.facebook.init();
+
+        CN.weheartit.render();
+
+        // CN Slideshow init
+        // Adds classes for rendering based on intro and hash state
+        CN.lucky.slideshow.render('#items-container', '/style/2014/04/90s-music-style-icons/jcr:content/par/cn_contentwell/par-main/cn_lky_slideshow.2.json');
+        // CN Slideshow
+
+        // CN Newsletter
+        CN.newsletter.render();
+            jQuery(document).ready(function() {
+
+                if (typeof CN.nextBlogPostNav !== 'undefined') {
+                    CN.nextBlogPostNav.render();
+                }
+            });
+    CN.dropdown.init();</script>
+
+<script type="text/javascript">
+ jQuery(document).ready(function () {
+     if(typeof CN.popups !== 'undefined' && !CN.popups.isExecuted()){
+         CN.popups.setArriving(true).setExiting(true).setLayer(true).setForceLayer(false).setCookieLife(24).setPopDelay(3).init();
+     }
+ });
+ </script>
+ <script>
+        CN.labjsEventTracker = $LAB.script("http://event.luckymag.com/js/eventTracker.js");
+    </script>
+<div id="eventListHolder" style="display:none;"><img src="index_files/event.gif"></div>
+<script type="text/javascript">
+    CN.labjsEventTracker.wait(function(){
+        var
+            i   = 0,
+            ns  = CN,
+            len = 0,
+            absoluteUrl    = false,
+            trackingUrl    = "/services/lookup/fcb607ca-0ef6-4aca-a701-0d7e0136edd1",
+            allowedDomains = [],
+            domain         = location.protocol + "//" + location.host;
+
+        if (CN.site && CN.site.allowedDomains) {
+            allowedDomains = CN.site.allowedDomains.split(",");
+            len            = allowedDomains.length
+        }
+
+        for(; i < len; i++) {
+            if (domain.indexOf(allowedDomains[i]) >= 0) {
+                absoluteUrl = true;
+            }
+        }
+
+        if (absoluteUrl) {
+
+            trackingUrl = domain + trackingUrl;
+            ns.site     = ns.site || {};
+
+            ns.site.eventTrackingList   = new EventList("eventListHolder");
+            ns.site.eventTrackingList.setBaseUrl("http://event.luckymag.com/");
+            ns.site.eventTrackingEvent  = new EventObject("LKY", "most_viewed");
+            ns.site.eventTrackingEvent.setEnvironment("PROD");
+
+            if (CN.site.pageId && CN.site.pageId !== "null") {
+                ns.site.eventTrackingEvent.setContentId(CN.site.pageId);
+            }
+
+            ns.site.eventTrackingEvent.setFullUrl(trackingUrl);
+            ns.site.eventTrackingEvent.setContentTitle(CN.utils.trim("&#039;90s Music Style Icons: Shop Their Looks"));
+
+            
+                ns.site.eventTrackingEvent.setProperty("pd","2014/04/18 00:00:00");
+            
+
+            ns.site.eventTrackingList.addEvent(ns.site.eventTrackingEvent);
+            ns.site.eventTrackingList.writeImageTags();
+        }
+    });
+</script>
+<div id="stats">
+        <div class="clickstreamcloud">
+<script type="text/javascript" src="index_files/librarymanager.js"></script>
+<script type="text/javascript">
+CQClientLibraryManager.write([{"p":"/etc/clientlibs/foundation/shared.js","c":[]},{"p":"/libs/cq/personalization/clientlib.js","c":[]},{"p":"/libs/cq/personalization/clientlib/themes/default.css","c":[]},{"p":"/libs/cq/personalization/clientlib/ie6/themes/default.css","c":["ie6"]}],false);
+</script><script src="index_files/shared.js" type="text/javascript"></script>
+<script src="index_files/clientlib.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="index_files/segmentation.js"></script>
+
+<script type="text/javascript">
+CQ_Analytics.PageDataMgr.addInitProperty('sitesection', '2014');
+CQ_Analytics.PageDataMgr.addInitProperty('url', 'http://www.luckymag.com/style/2014/04/90s-music-style-icons');
+CQ_Analytics.PageDataMgr.addInitProperty('urlType', 'campaign');
+</script>
+
+<div id="clickstreamcloud-gui"></div></div>
+<div class="analytics">
+
+<!-- SiteCatalyst code version: H.23.3.
+Copyright 1996-2011 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="index_files/analytics.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+CQ_Analytics.Sitecatalyst.updateEvars = function() {
+    // user defined mappings
+     
+}
+
+CQ_Analytics.ClickstreamcloudMgr.addListener("storesloaded", function(e) {
+    // set page name
+    s.pageName="2014:04:90s-music-style-icons";
+    // collect component events
+    CQ_Analytics.Sitecatalyst.collect();
+    // base mappings
+    CQ_Analytics.Sitecatalyst.getBaseMappings();    
+    // set basic variables
+    
+    // update 
+    CQ_Analytics.Sitecatalyst.updateEvars();
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code=s.t();if(s_code)document.write(s_code)
+});
+
+//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+
+<noscript><img src="http://stats2.luckymag.com/b/ss/conde-luckymag/1/H.23.3--NS/1398310381204?cdp=0&gn=2014%3A04%3A90s-music-style-icons" height="1" width="1" border="0" alt=""/></noscript>
+<!-- End SiteCatalyst code version: H.23.3. -->
+
+</div>
+</div>
+<!--<cn:pi>a:0744G1</cn:pi>-->
+    
+
+<div style="left: -31px; top: -69px;" class="pin-favorites-tooltip"><a onclick='s_objectID="http://www.luckymag.com/style/2014/04/90s-music-style-icons?intcid=trail#_6";return this.s_oc?this.s_oc(e):true' sl-processed="1" class="close" href="#"></a><span>Pin Your Favorites!</span></div><iframe src="index_files/dest3.html" style="display: none; width: 0px; height: 0px;" id="destination_publishing_iframe_condenast_0"></iframe><iframe style="border: 0px none; width: 0px; height: 0px; display: block;" src="index_files/rtifr.html" id="LOTCCFrameWed Apr 23 2014 23:33:06 GMT-0400 (EDT)"></iframe></body></html>

@@ -1,0 +1,51 @@
+
+<!-- saved from url=(0113)http://www.tuenlinea.com/crossiframes/iframetest-resize.html?height=222&guid=1ddd69f4-7c1c-1031-b4c0-0019b9d72c08 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Resizing Page</title>
+    <script type="text/javascript">
+      /*
+      Micro-Iframe cargado por el iFrame ordinario. Se comunicará con el Padre para disparar el Resizeado 
+      */
+	   
+      function onLoad() {
+	  
+        var params = window.location.search.substring( 1 ).split( '&' );
+        var height;
+		var guid;
+		
+		for(var i = 0;i < params.length;i++){
+		
+          var parts = params[i].split( '=' );
+		  
+          switch( parts[0] ) {
+			  case 'height':
+				height = parseInt( parts[1] );
+				break;
+			  
+			  case 'guid':
+				guid = parts[1].toString();
+				break;
+			}
+		  
+        }
+		
+        if( typeof( height ) == 'number' ) {
+		
+			try {
+				window.top.updateIFrame(height,guid);
+			 } catch (error){
+				//alert(error);
+			 } finally {
+				
+			 }
+
+        }
+      
+	  }
+
+    window.onload = onLoad;
+    </script>
+  </head>
+  <body>
+
+</body></html>

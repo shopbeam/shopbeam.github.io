@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html><head><script src="hdm-lib_hearstuser_proxy_data/get_hearst_user.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script>
+
+
+
+
+var Proxy = {
+	_vars : {
+		source : null,
+		origin : null,
+		hearst_user : null
+	},
+	util : {
+		storage : null,
+		storeData: function(key,data){
+			if (this.storage){
+//				console.log("** storing data!",data)
+				localStorage[key] = (typeof data === 'object') ? JSON.stringify(data) : data;
+			} else {
+				console.error("localstorage not supported.. ignoring this setData request")
+			}
+		},
+		getData: function(key){
+			if ((this.storage) && (localStorage[key])){
+//				console.log("[Proxy.util.getData] retreiving",JSON.parse(localStorage[key]))
+				return localStorage[key];
+			} else {
+				console.error("[Proxy.util.getData] localstorage item not found");
+				return;
+			}
+		},
+		getJSON : function(key){
+			if ((this.storage) && (localStorage[key])){
+//				console.log("[Proxy.util.getJSON] retreiving",JSON.parse(localStorage[key]))
+				return JSON.parse(localStorage[key]);
+			} else {
+//				console.error("[Proxy.util.getJSON] localstorage item not found");
+				return;
+			}
+		},
+		removeData : function(key){
+			if (this.storage){
+//				console.log("** delete data!",key)
+				delete localStorage[key]; //delete it
+			}
+		},
+		buildHearstUserScriptTag : function(callback,jsonp){
+//			alert("[get_hearst_user.js] expensive call made to get_hearst_user.js")
+//			console.warn("[Proxy.util.buildHearstUserScriptTag] get_hearst_user.js requested")
+			function previewHost(){
+				if (Proxy._vars.origin.match('alphapreview')){
+					return "alphapreview.";
+				} else if (Proxy._vars.origin.match('betapreview')){
+					return "betapreview.";
+				} else {
+					return "";
+				}				
+			}
+			var src = "http://"+previewHost()+"services.hearstmags.com/registration/get_hearst_user.js?cachebust="+Date.now();//var src = "http://services.hearstmags.com/registration/get_hearst_user.js"+ (jsonp ? "?jsonp="+jsonp : "");
+			var scriptNode = document.createElement("SCRIPT");
+			scriptNode.onload = function(){
+				if (typeof callback == "function"){
+					callback();
+				}
+			}
+			scriptNode.type = "text/javascript";
+			scriptNode.src = src;
+			var head = document.getElementsByTagName ("head")[0] || document.documentElement;
+			head.insertBefore(scriptNode, head.firstChild);
+		}
+	},
+	callbacks : {
+		boot : function(hearst_user){
+			// okay we need to ghetto check this...
+			function isEmpty(a){for(var b in a)if(a.hasOwnProperty(b))return!1;return!0}; // simple check to see if obj is empty
+			if (isEmpty(hearst_user)){// meaning nothing was found.. lets build out an offline object and store it
+				hearst_user = { logged_in: false,tempstatus: true,cookieScan : "offline"};
+				// console.warn("[Proxy.callbacks.boot] ghetto check has found that this is empty, lets create an empty sucker")
+			}
+			Proxy.util.storeData("hearst_user",hearst_user)
+			Proxy._vars.hearst_user = hearst_user;
+			var msg = {
+				command : "save",
+				hearst_user : hearst_user
+			}
+			Proxy.tunnel.sendMessage(msg);
+		}
+	},
+	exe : {
+		boot : function(forceUpdate){
+			if (forceUpdate){
+				Proxy.util.removeData("hearst_user");
+			}
+			function fastScanCookies(c){
+				var c = c + "=",
+					d = document.cookie.split(";"),
+					b;
+				for (b = 0; b < d.length; b++) {
+					for (var a = d[b];
+					" " === a.charAt(0);) a = a.substring(1, a.length);
+					if (0 === a.indexOf(c)) return !0
+				}
+				return !1
+			};
+			var ret = Proxy.util.getJSON("hearst_user");
+			
+			var cookiefound = false;
+			if (fastScanCookies("password")&&fastScanCookies("cgi-session-id")&&fastScanCookies("fSpaceSSOUserCheck")){
+				cookiefound = true;
+//				alert("[hdm-lib_hearstuser_proxy] hearst_user cookies found!")
+			} else {
+//				alert("[hdm-lib_hearstuser_proxy] hearst_user cookies NOT found! HDM account is OFFLINE",fastScanCookies("password"),fastScanCookies("cgi-session-id"),fastScanCookies("fSpaceSSOUserCheck"))
+/*				var msg = {
+					command : "save",
+					hearst_user : { logged_in: false,tempstatus: true,cookieScan : "offline"}
+				}
+				Proxy._vars.hearst_user = msg.hearst_user;
+				Proxy.tunnel.sendMessage(msg);*/
+			}
+//			console.log("[Proxy.exe.boot] init",ret);
+//console.log("getting exe.boot call!",ret,forceUpdate)
+			if ((typeof ret == "undefined")||(forceUpdate)){
+				// ok this needs to be initialized because data is bad...
+//				console.error("[Proxy.exe.boot] building out localstorage");
+				Proxy.util.buildHearstUserScriptTag(function(){
+//					console.log("{Proxy.util.buildUserScriptTag}",window.hearst_user)
+					Proxy.callbacks.boot(window["hearst_user"]);
+				});
+			} else {
+//				console.log("[Proxy.exe.boot] retreive hearst_user from localstorage"); 
+				Proxy._vars.hearst_user = ret;
+				
+				var tlogged = !!ret["logged_in"];
+				
+				if (cookiefound == ret["logged_in"]){
+					
+//					alert("oh hey it's the same!"+ret["logged_in"])
+					var msg = {
+						command : "save",
+						hearst_user : ret
+					}
+					Proxy._vars.hearst_user = msg.hearst_user;
+					Proxy.tunnel.sendMessage(msg);
+				} else {
+//					console.log("Proxy.exe.boot: ret is..")
+//					console.dir(ret)
+					var msg = {
+						command : "parentget"
+					}
+					Proxy.tunnel.sendMessage(msg);
+				}
+				
+				
+				
+//				console.log("{****************************************}",ret)
+			}
+			
+			
+			
+			
+		},
+		queryLoggedIn : function(){
+			var ret = Proxy.util.getJSON("hearst_user");
+			var loggedin = (Proxy.util.getData("hdm_loggedin") === "true");
+			if (!loggedin){
+				ret = {};
+				console.warn("***queryLoggedIn: hdm_loggedin == false! lets send out {}")
+			}
+			var msg = {
+				command : "queryLoggedIn",
+				loggedin : loggedin,
+				hearst_user : ret
+			}
+			console.warn("[Proxy.exe.queryLoggedIn] check if msg can be undefined object, may need to do some pre-sanitization")
+			Proxy.tunnel.sendMessage(msg);
+		}
+	},
+	tunnel : {
+		receiveMessage : function(e){
+			Proxy._vars.source = e.source;
+			Proxy._vars.origin = e.origin;
+			var data = e.data;
+//			console.log("[Proxy.tunnel.receiveMessage] message received",data,e,Proxy);
+			if (typeof data == "string"){
+				if (/^[\],:{}\s]*$/.test(data.replace(/\\["\\\/bfnrtu]/g, '@').replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, ']').replace(/(?:^|:|,)(?:\s*\[)+/g, ''))) {
+					data = JSON.parse(data);
+				}else{
+					console.error("invalid message format received\n"+data);
+					return false;
+				
+				}				
+			}
+			var cmd = data.command;
+			
+			// lets begin to parse the messages....
+			
+			if (cmd == "initialize"){
+//				console.warn("[Proxy.tunnel] initializing")
+				Proxy.exe.boot(data.force);
+				// this is where we check if the Hearstuser object is corrupt or missing...
+			} else if (cmd == "logoff"){
+//				Proxy.util.removeData("hearst_user");
+				Proxy.util.storeData("hdm_loggedin","false");
+			} else if (cmd == "logon"){
+				Proxy.util.storeData("hdm_loggedin","true");
+			} else if (cmd == "update"){
+				console.warn("[Proxy.tunnel.receiveMessage] update requested")
+				Proxy.util.removeData("hearst_user");
+				Proxy.exe.boot();
+			} else if (cmd == "delete"){
+				console.warn("[Proxy.tunnel.receiveMessage] update requested")
+				Proxy.util.removeData("hearst_user");
+			} else if (cmd == "queryLoggedIn"){
+				Proxy.exe.queryLoggedin();
+			} else if (cmd == "flagforrefresh"){
+				Proxy.util.removeData("hearst_user");
+			} else if (cmd == "parentSet"){
+				Proxy.util.storeData("hearst_user",data.hearst_user);
+			} else if (cmd == "syn"){
+				console.log("syn received! Lets acknowledge it.")
+				Proxy.tunnel.sendMessage({command : "ack"})
+			}
+			
+			
+			
+			
+			
+		},
+		sendMessage : function(msg){
+			if (typeof x != "string"){
+				msg = JSON.stringify(msg);
+			}
+//			console.log("*** Proxy.tunnel.sendMessage: sending!",msg)
+//			console.dir(Proxy._vars)
+			Proxy._vars.source.postMessage(msg,Proxy._vars.origin)
+		}
+	},
+	init : function(){
+		var storage = (function() {
+			var uid = new Date,
+				result;
+			try {
+				localStorage.setItem(uid, uid);
+				result = localStorage.getItem(uid) == uid;
+				localStorage.removeItem(uid);
+				return result && localStorage;
+			} catch(e) {}
+		}());
+		Proxy.util.storage = storage;
+		window.addEventListener("message",Proxy.tunnel.receiveMessage,false)
+	}
+}
+
+
+// need to do a safety check...
+var $h = {
+	session : {
+		callback : {
+			run : function(){return false;}
+		}
+	}
+}
+Proxy.init();
+</script>
+</head>
+
+<body>
+
+
+</body></html>

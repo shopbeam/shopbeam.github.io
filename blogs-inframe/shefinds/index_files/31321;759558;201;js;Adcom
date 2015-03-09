@@ -1,0 +1,17 @@
+
+var ftGUID_759558="1509539C42419B";
+var ftConfID_759558="990656";
+var ftParams_759558="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_ifb=1&ft_domain=www.shefinds.com&ft_referrer=http%3A%2F%2Fwww.shefinds.com%2F2014%2Fshop-reese-witherspoons-designer-accessories-now%2F&cachebuster=189838.788472116";
+var ftKeyword_759558="";
+var ftCustom_759558="";
+var ftSection_759558="";
+var ftSegment_759558="aelsku5870225,ael,dfq,dem,cxt,cxv,cxx,cbf_sports,cbf,cbf4336233,dr6,dr6030eacc5_7195_4fbf_813e_3094ce4e835d,tmo_SamsungGalaxyS4";
+var ftSegmentList_759558=[{m:'c1122_lv',s:'aelsku5870225'},{s:'ael'},{m:'sg',s:'dfq'},{s:'dem',t:21780000},{s:'cxt'},{s:'cxv'},{s:'cxx'},{m:'shEventType',s:'cbf_sports'},{s:'cbf'},{m:'shViewed',s:'cbf4336233'},{s:'dr6'},{m:'c1351_c1351_v',s:'dr6030eacc5_7195_4fbf_813e_3094ce4e835d'},{m:'tm',s:'tmo_SamsungGalaxyS4'}];
+var ftRuleMatch_759558="00100000";
+var ftTimestamp_759558="1395859479";
+var ftImp759558 = {};
+ftImp759558.privacy = "x";
+ftImp759558.guidAge = "767";
+
+document.write('<scr'+'ipt src="https://secure.flashtalking.com/xre/75/759558/679671/js/j-759558-679671.js" id="ftscript_m759558" name="ftscript_m759558"></scr'+'ipt>');
+                    

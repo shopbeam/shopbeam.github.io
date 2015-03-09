@@ -1,0 +1,53 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = {}; 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=l&amp;ai=C3iC0_posU-jtA-SNlAKu_IGoAdHlxvUDwcq7mDyhhKOyjQEQASChlbYbKANQ0ODQzf______AWDJ3o6LwKTYD6ABp-Ky3gPIAQGoAwGqBHdP0NAMB8tB7T1A3XYYsxBwYsKGOBUfvtZTwbF78GocxhGL2JjDiS2Cg-BX1nvbwiHxf81bMTA_qgRY6lwb77GkfioaxUnYkuHR640ELJPZiTvx1uHsgZHFXi_ZAFlstrx8Rsmnvr7J4VtpICzVFWyn9-hxWfn6ooAHwZ3NIQ&amp;num=1&amp;sig=AOD64_0JfxdxTVrslS59qR7anyDs6AU7xA&amp;client=ca-timeinc-instyle-photo&amp;adurl=http://clickserve.dartsearch.net/link/click%3Flid%3D43700003575473471%26ds_s_kwgid%3D58700000035451295%26ds_e_adid%3D16083931481%26ds_e_matchtype%3Dcontent%26ds_url_v%3D2"; 
+google_ad.visible_url = "www.ralphlauren.com"; 
+google_ad.line1 = "Ralph Lauren\x26#174; Online"; 
+google_ad.line2 = "Shop the Official Site for Ralph"; 
+google_ad.line3 = "Lauren Apparel, Accessories \x26amp; More."; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_ad = {}; 
+google_ad.n = 2; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=l&amp;ai=CqpBQ_posU-jtA-SNlAKu_IGoAYDwvd0H0NvGvbcBwIuM10wQAiChlbYbKANQxuH5gf7_____AWDJ3o6LwKTYD6ABiKOvuwPIAQGoAwGqBHpP0OAqdstC7T1A3XYYsxBwYsKGOBUfvtZTwbF78GocxhGL2JjDiS2Cg-BX1nvbwiHxf81bMTA_qgRY6lwb77GkfioaxUnYkuHR640ELJPZsTj13uEcqxQHY5Io6bLW87x8LsmnkaPJ6q5q7NnWUZnkZwg3iNlAQu1zKYAH4NzQRA&amp;num=2&amp;sig=AOD64_1y_-ZrdYfsG2qCwOexkxpKhdw83g&amp;client=ca-timeinc-instyle-photo&amp;adurl=https://ad.doubleclick.net/clk%3B278395550%3B105588156%3Bs"; 
+google_ad.visible_url = "google.com/Chromecast"; 
+google_ad.line1 = "Google Chromecast for $35"; 
+google_ad.line2 = "Enjoy online video \x26amp; anything from"; 
+google_ad.line3 = "the web on your TV. buy now!"; 
+google_ad.regionname = ""; 
+google_ads[1] = google_ad; 
+google_ad = {}; 
+google_ad.n = 3; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=l&amp;ai=Ctd0a_posU-jtA-SNlAKu_IGoAaWs5coE1cSR2YIBhrSinnEQAyChlbYbKANQxsyMugJgyd6Oi8Ck2A-gAeuH8eUDyAEBqAMBqgR9T9CQZT_LQ-09QN12GLMQcGLChjgVH77WU8Gxe_BqHMYRi9iYw4ktgoPgV9Z728Ih8X_NWzEwP6oEWOpcG--xpH4qGsVJ2JLh0euNBCyT2bE49Z7hFKMU4X4u5bRtchpXxmvJp_mjycWzaucs1Z1s5yP9dBg5BpK2uvBERoaAB_33jho&amp;num=3&amp;sig=AOD64_3l_iLsm33NCgjkFgRekWzGZrUrbQ&amp;client=ca-timeinc-instyle-photo&amp;adurl=http://citylips.com/cmd.php%3Fad%3D650412"; 
+google_ad.visible_url = "consumersguides.com"; 
+google_ad.line1 = "How To Remove Dark Spots"; 
+google_ad.line2 = "A Weird Trick To Remove Dark Spots"; 
+google_ad.line3 = "Without A Doctor"; 
+google_ad.regionname = ""; 
+google_ads[2] = google_ad; 
+google_info.feedback_url = "https://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttps://www.shopbeam.com/blogs/instyle-modcloth/%26gl%3DUS%26hl%3Den%26client%3Dca-timeinc-instyle-photo%26hideleadgen%3D1%26ai0%3DC3iC0_posU-jtA-SNlAKu_IGoAdHlxvUDwcq7mDyhhKOyjQEQASChlbYbKANQ0ODQzf______AWDJ3o6LwKTYD6ABp-Ky3gPIAQGoAwGqBHdP0NAMB8tB7T1A3XYYsxBwYsKGOBUfvtZTwbF78GocxhGL2JjDiS2Cg-BX1nvbwiHxf81bMTA_qgRY6lwb77GkfioaxUnYkuHR640ELJPZiTvx1uHsgZHFXi_ZAFlstrx8Rsmnvr7J4VtpICzVFWyn9-hxWfn6ooAHwZ3NIQ%26ai1%3DCqpBQ_posU-jtA-SNlAKu_IGoAYDwvd0H0NvGvbcBwIuM10wQAiChlbYbKANQxuH5gf7_____AWDJ3o6LwKTYD6ABiKOvuwPIAQGoAwGqBHpP0OAqdstC7T1A3XYYsxBwYsKGOBUfvtZTwbF78GocxhGL2JjDiS2Cg-BX1nvbwiHxf81bMTA_qgRY6lwb77GkfioaxUnYkuHR640ELJPZsTj13uEcqxQHY5Io6bLW87x8LsmnkaPJ6q5q7NnWUZnkZwg3iNlAQu1zKYAH4NzQRA%26ai2%3DCtd0a_posU-jtA-SNlAKu_IGoAaWs5coE1cSR2YIBhrSinnEQAyChlbYbKANQxsyMugJgyd6Oi8Ck2A-gAeuH8eUDyAEBqAMBqgR9T9CQZT_LQ-09QN12GLMQcGLChjgVH77WU8Gxe_BqHMYRi9iYw4ktgoPgV9Z728Ih8X_NWzEwP6oEWOpcG--xpH4qGsVJ2JLh0euNBCyT2bE49Z7hFKMU4X4u5bRtchpXxmvJp_mjycWzaucs1Z1s5yP9dBg5BpK2uvBERoaAB_33jho\x26usg\x3dAFQjCNHRAkEV-xYWJySRko-HyjVu_BzEcg";
+var google_attribution_text = "AdChoices";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

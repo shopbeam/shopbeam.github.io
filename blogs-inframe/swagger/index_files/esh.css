@@ -1,0 +1,139 @@
+.wpb-esh-wrapper {
+    margin:auto;
+    position:relative;
+    display: inline-block;
+    overflow:hidden;
+}
+
+.wpb-esh-wrapper>img {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%
+}
+
+.wpb-esh-overlay {
+    position: absolute;
+    z-index: 5;
+    overflow: hidden;
+    text-align: center;
+}
+
+.wpb-esh-background {
+    position: absolute;
+    z-index: 5;
+    width:100%;
+    height:100%;
+}
+
+.wpb-social-container {
+  min-width: 32px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.wpb-social-container a {
+  margin: 0 auto;
+  float:left;
+}
+
+.wpb-esh-facebook {
+    margin: 10px;
+    position: relative;
+    z-index: 10;
+    background: url('../images/facebook.png');
+    background-position: 0px 0px;
+    width:32px;
+    height:32px;
+}
+
+.wpb-esh-facebook:hover {
+    position: relative;
+    z-index: 10;
+    background: url('../images/facebook.png');
+    background-position: 0px 32px;
+    width:32px;
+    height:32px;
+}
+
+.wpb-esh-pinterest {
+    margin: 10px;
+    position: relative;
+    z-index: 10;
+    background: url('../images/pinterest.png');
+    background-position: 0px 0px;
+    width:32px;
+    height:32px;
+}
+
+.wpb-esh-pinterest:hover {
+    position: relative;
+    z-index: 10;
+    background: url('../images/pinterest.png');
+    background-position: 0px 32px;
+    width:32px;
+    height:32px;
+}
+
+.wpb-esh-google {
+    margin: 10px;
+    position: relative;
+    z-index: 10;
+    background: url('../images/google.png');
+    background-position: 0px 0px;
+    width:32px;
+    height:32px;
+}
+
+.wpb-esh-google:hover {
+    position: relative;
+    z-index: 10;
+    background: url('../images/google.png');
+    background-position: 0px 32px;
+    width:32px;
+    height:32px;
+}
+
+.wpb-esh-in {
+    margin: 10px;
+    position: relative;
+    z-index: 10;
+    background: url('../images/in.png');
+    background-position: 0px 0px;
+    width:32px;
+    height:32px;
+}
+
+.wpb-esh-in:hover {
+    position: relative;
+    z-index: 10;
+    background: url('../images/in.png');
+    background-position: 0px 32px;
+    width:32px;
+    height:32px;
+}
+
+.wpb-esh-twitter {
+    margin: 10px;
+    position: relative;
+    z-index: 10;
+    background: url('../images/twitter.png');
+    background-position: 0px 0px;
+    width:32px;
+    height:32px;
+}
+
+.wpb-esh-twitter:hover {
+    position: relative;
+    z-index: 10;
+    background: url('../images/twitter.png');
+    background-position: 0px 32px;
+    width:32px;
+    height:32px;
+}

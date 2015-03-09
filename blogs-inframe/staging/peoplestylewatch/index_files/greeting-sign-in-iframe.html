@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>PEOPLE Premium: Top Nav Greeting and Sign in</title>
+    <style>
+        html {background:transparent url('http://img2.timeinc.net/people/static/i/nav/sprite-premium-top-nav-v3.png') 0 -440px repeat-x;}
+        body {background:transparent;margin: 6px 18px;}
+        .tools {display:block;float:right;padding:7px 10px 0 0;font:bold 13px Arial, sans-serif;color:#bfecff;text-decoration:none;}
+        a.tools:hover {color:#fff;text-decoration:underline;}
+        a#insider-greeting:hover {color:#bfecff;text-decoration:none;cursor:default;}
+        .tools span {display:block;height:18px;padding-left:10px;border-left:1px solid #63bdf0;}
+        #insider-greeting,
+        #insider-notice {display:none;border-left:none;}
+        #insider-greeting.show,
+        #insider-notice.show {display:block;}
+        #insider-vip {color:#fff;padding-right:23px;background:transparent url('http://img2.timeinc.net/people/static/i/premium/sprite-greeting-icons.png') right -46px no-repeat;}
+        #insider-vip {border-left:none;}
+        #insider-sign-in-out.in {padding:0;margin-right:12px;}
+        #insider-sign-in-out.in span{color:#fff;background:#4029d4;padding:6px 10px 4px;border-left:none;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+        #insider-sign-in-out.out span{color:#fff;}
+		#insider-sign-in-out:hover{text-decoration:none;}
+		#insider-sign-in-out.out:hover{text-decoration:underline;}
+		#insider-sign-in-out span:hover{text-decoration:none;background-color:#34008e;}
+		#insider-sign-in-out.out span:hover{background-color:transparent;}
+    </style>
+    <script src="greeting-sign-in-iframe_data/jquery-1.js"></script>
+</head>
+<body>
+    <a class="tools" id="insider-vip" href="#" title="Learn about PEOPLE V.I.P."><span>V.I.P.</span></a>
+    <a class="tools in" id="insider-sign-in-out" href="#"><span class="sign-in">Sign In</span></a>
+    <a class="tools" id="insider-greeting" href="#">Welcome</a>
+    <div class="tools show" id="insider-notice">NEW! Exclusively for Our Digital Subscribers</div>
+    <div class="clear"></div>
+<script>
+
+    /****************************************************
+     * Cookie utility, and functions for auth and login.
+     ****************************************************/
+
+    /*\
+     |*|
+     |*|  :: cookies.js ::
+     |*|
+     |*|  A complete cookies reader/writer framework with full unicode support.
+     |*|
+     |*|  https://developer.mozilla.org/en-US/docs/DOM/document.cookie
+     |*|
+     |*|  This framework is released under the GNU Public License, version 3 or later.
+     |*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html
+     |*|
+     |*|  Syntaxes:
+     |*|
+     |*|  * docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
+     |*|  * docCookies.getItem(name)
+     |*|  * docCookies.removeItem(name[, path])
+     |*|  * docCookies.hasItem(name)
+     |*|  * docCookies.keys()
+     |*|
+     \*/
+
+    var docCookies = {
+        getItem: function (sKey) {
+            return unescape(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + escape(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+        },
+        setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
+            if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { return false; }
+            var sExpires = "";
+            if (vEnd) {
+                switch (vEnd.constructor) {
+                    case Number:
+                        sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
+                        break;
+                    case String:
+                        sExpires = "; expires=" + vEnd;
+                        break;
+                    case Date:
+                        sExpires = "; expires=" + vEnd.toGMTString();
+                        break;
+                }
+            }
+            document.cookie = escape(sKey) + "=" + escape(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
+            return true;
+        },
+        removeItem: function (sKey, sPath) {
+            if (!sKey || !this.hasItem(sKey)) { return false; }
+            document.cookie = escape(sKey) + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT" + (sPath ? "; path=" + sPath : "");
+            return true;
+        },
+        hasItem: function (sKey) {
+            return (new RegExp("(?:^|;\\s*)" + escape(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test(document.cookie);
+        },
+        keys: /* optional method: you can safely remove it! */ function () {
+            var aKeys = document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, "").split(/\s*(?:\=[^;]*)?;\s*/);
+            for (var nIdx = 0; nIdx < aKeys.length; nIdx++) { aKeys[nIdx] = unescape(aKeys[nIdx]); }
+            return aKeys;
+        }
+    };
+
+    document.domain = 'people.com';
+
+    (function(){
+        var $notice = $('#insider-notice'),
+            $greeting = $('#insider-greeting'),
+            $signWrapper = $('#insider-sign-in-out'),
+            $sign = $signWrapper.find('span'),
+            $vip = $('#insider-vip'),
+            split,
+            length,
+            params = {};
+
+        function getCookie() {
+            return docCookies.getItem('TISub');
+        }
+
+        function parseCookie() {
+            var cookie = getCookie();
+
+            if ( cookie != null ) {
+                split = cookie.split('|');
+                length = split.length;
+                params = {};
+
+                for ( var i = 0; i < length; i++ ) {
+                    var pair = split[i],
+                        pairSplit = pair.split('~'),
+                        key = pairSplit[0],
+                        value = pairSplit[1];
+
+                    params[key] = value;
+                }
+
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function showNotice() {
+            $notice.addClass('show');
+        }
+
+        function hideNotice() {
+            $notice.removeClass('show');
+        }
+
+        function showGreeting() {
+            var replaceName,
+                userName = params['firstName'];
+
+            if ( userName != null ) {
+                replaceName = userName.replace( '+', ' ' );
+                $greeting.text( 'Welcome, ' + replaceName + '!' );
+                $greeting.addClass('show');
+            }
+        }
+
+        function hideGreeting() {
+            $greeting.removeClass('show');
+        }
+
+        function showSignOut() {
+            $sign.text('Sign Out');
+            $sign.addClass('sign-out').removeClass('sign-in');
+            $signWrapper.addClass('out').removeClass('in');
+        }
+
+        function showSignIn() {
+            $sign.text('Sign In');
+            $sign.addClass('sign-in').removeClass('sign-out');
+            $signWrapper.addClass('in').removeClass('out');
+        }
+
+        function bindSignInOut() { 
+            $sign.bind('click', function(){
+                if ( $(this).hasClass('sign-in') ) {
+                    parent.postMessage( 'sign-in', '*' );
+                } else {
+                    parent.postMessage( 'sign-out', '*' );
+                }
+            });
+        }
+
+        function bindVIP() {
+            $vip.bind('click', function(){
+                parent.postMessage( 'vip-link', '*' );
+            });
+        }
+
+        function init() {
+            if ( parseCookie() ) {
+                hideNotice();
+                showGreeting();
+                showSignOut();
+            } else {
+                showNotice();
+                hideGreeting();
+                showSignIn();
+            }
+
+            bindSignInOut();
+            bindVIP();
+        }
+
+        init();
+    })();
+</script>
+
+
+</body></html>
