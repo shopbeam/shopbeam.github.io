@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/www_rogaine_ca/themes/rogaine/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="image_src" href="http://www.rogaine.ca/sites/default/files/images/logo.png" />
+<link rel="canonical" href="confidentialite" />
+<link rel="shortlink" href="http://www.rogaine.ca/fr/node/54" />
+<meta property="og:site_name" content="ROGAINE® Canada" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.rogaine.ca/fr/confidentialite" />
+<meta property="og:title" content="Politique de confidentialité" />
+<meta property="og:updated_time" content="2014-08-22T08:39:31-04:00" />
+<meta property="og:image" content="/sites/default/files/images/logo.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="http://www.rogaine.ca/fr/confidentialite" />
+<meta name="twitter:title" content="Politique de confidentialité" />
+<meta name="twitter:image:src" content="/sites/default/files/images/logo.png" />
+<meta property="article:published_time" content="2013-09-14T07:24:53-04:00" />
+<meta property="article:modified_time" content="2014-08-22T08:39:31-04:00" />
+	<title>Politique de confidentialité | ROGAINE® Canada</title>
+	<link type="text/css" rel="stylesheet" href="../sites/www_rogaine_ca/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/www_rogaine_ca/files/css/css_IvAPCDx0nd4Gtp_w5V4zXDG0hNtPhSZScbPWCET911w.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/www_rogaine_ca/files/css/css_Gh01R-RLFlmNq2cSKiwgNl7I2IIjC5eLCVVVqqipfr8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/www_rogaine_ca/files/css/css_DJdaerAp89PJHV02nrbsu93VwWCbgXcIatsjykyOFjM.css" media="all" />
+	<script type="text/javascript" src="../sites/www_rogaine_ca/files/js/js_u3VF1WNuVpwL8K6DNehpjvgIuc2sur3QRK4PqzuPY-s.js"></script>
+<script type="text/javascript" src="http://assets.adobedtm.com/bf12630c02a44df137a783f39cdb4dbd09e2b5d7/satelliteLib-a77040281e8ad94d1a2e4c30d4df757c9e6fed98.js"></script>
+<script type="text/javascript" src="../sites/www_rogaine_ca/files/js/js_R9UbiVw2xuTUI0GZoaqMDOdX0lrZtgX-ono8RVOUEVc.js"></script>
+<script type="text/javascript" src="../sites/www_rogaine_ca/files/js/js_wPapLwFut-GHUuXpj73D3e-_oQ8liTi4grsWn9gWcNU.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-24534796-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/www_rogaine_ca/files/js/js_uJNWa2O3Tp3S9JJRr3pcXi2BjoG3a6UdtsZ31mWOSCQ.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"fr\/","ajaxPageState":{"theme":"rogaine","theme_token":"DBHrUM-hVnqOvLmYMRYM1iGXg32EkyIRYgCPM44ox-A","js":{"0":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/assets.adobedtm.com\/bf12630c02a44df137a783f39cdb4dbd09e2b5d7\/satelliteLib-a77040281e8ad94d1a2e4c30d4df757c9e6fed98.js":1,"profiles\/canada\/modules\/contrib\/admin_menu\/admin_devel\/admin_devel.js":1,"profiles\/canada\/modules\/custom\/framework_1_5\/js\/framework_1_5.js":1,"profiles\/canada\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"1":1,"sites\/www_rogaine_ca\/themes\/rogaine\/scripts\/lib\/modernizr.js":1,"sites\/www_rogaine_ca\/themes\/rogaine\/scripts\/jquery-migrate.js":1,"sites\/www_rogaine_ca\/themes\/rogaine\/scripts\/jquery.bxslider.min.js":1,"sites\/www_rogaine_ca\/themes\/rogaine\/scripts\/lib\/less-1.3.3.min.js":1,"sites\/www_rogaine_ca\/themes\/rogaine\/scripts\/scripts.js":1,"sites\/www_rogaine_ca\/themes\/rogaine\/scripts\/ga-scripts-rogaine.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"profiles\/canada\/modules\/contrib\/google_appliance\/theme\/google_appliance.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"profiles\/canada\/modules\/contrib\/ctools\/css\/ctools.css":1,"modules\/locale\/locale.css":1,"sites\/www_rogaine_ca\/themes\/rogaine\/styles\/general.css":1,"sites\/www_rogaine_ca\/themes\/rogaine\/styles\/media-ports.css":1,"sites\/www_rogaine_ca\/themes\/rogaine\/styles\/bv.css":1}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"}});
+//--><!]]>
+</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-54 node-type-page i18n-fr privacy-policy  fr confidentialite" >
+	<div id="fb-root"></div><script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = '//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=318133798333360'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>		<!--<div class="mainContent">
+	</div>-->
+   <div id="bodyWrapper">
+    <header>
+	 <div id="headerWrap">
+		<div class="logo">
+			<a href="node/10"><img alt="Hair Loss Treatment" class="desktop_logo" title="Hair Loss Treatment" src="../sites/www_rogaine_ca/files/images/logo.png" /></a>
+			<a href="javascript: void(0);" class="mobile_dropdwn"><img border="0" src="../sites/www_rogaine_ca/files/images/drop-down-menu.png"></a>		</div><!--/logo-->
+		 
+		<div class="searchWrap">
+			<div class="mobile_seach_button search_btn"><a href="javascript:void(0);">Recherche</a></div>			<div class="search_box">
+				<div class="search_arrow"><img alt="Search" src="../sites/www_rogaine_ca/files/images/search-arrow.png" border="0"/></div>				<div class="searchForm">  <div class="region region-site-search">
+    <div id="block-google-appliance-ga-block-search-form" class="block block-google-appliance">
+
+    
+  <div class="content">
+    <form action="confidentialite" method="post" id="google-appliance-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search Google Appliance</h2>
+    <div class="form-item form-type-textfield form-item-search-keys">
+  <label class="element-invisible" for="edit-search-keys">Enter the terms you wish to search for. </label>
+ <input type="text" id="edit-search-keys" name="search_keys" value="Entrer les termes pour la recherche ici…" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Recherche" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-BID7jjIeBYXjJKaMkN1nYD4NCMRPLoh_HI2SQZ_DeeE" />
+<input type="hidden" name="form_id" value="google_appliance_block_form" />
+  
+</div>
+</div></form>  </div>
+</div>
+  </div>
+</div>
+			</div><!--/search_box-->
+		</div><!--/searchWrap-->
+		<div class="Search_btn_swichlang">
+			  <div class="region region-header">
+    <div id="block-locale-language" class="block block-locale">
+
+    
+  <div class="content">
+    <ul class="language-switcher-locale-url"><li class="en first"><a href="../node/53" class="language-link" lang="en" title="Privacy Policy">EN</a></li>
+<li class="fr last active"><a href="confidentialite" class="language-link active" lang="fr" title="Politique de confidentialité">FR</a></li>
+</ul>  </div>
+</div>
+  </div>
+		  </div><!--/Search_btn_swichlang-->
+		  
+			<div class="favorite_lnk">
+				<div class="fb-like" data-href="http://www.rogaine.ca/fr/confidentialite" data-width="108" data-layout="button_count" data-show-faces="false" data-send="false"></div>			</div><!--/favorite_lnk-->
+			   
+	   
+	   
+	   <div class="mainNavWrap">
+	     <div class="main_nav">
+			  <div class="region region-header-menu">
+    <div id="block-menu-menu-main-navigation-fr" class="block block-menu">
+
+    
+  <div class="content">
+    <ul class="menu"><li class="first expanded"><a href="au-sujet-de-la-perte-des-cheveux" title="Au sujet de la chute des cheveux" class="about-hair-loss">Au sujet de la chute des cheveux</a><ul class="menu"><li class="first leaf"><a href="au-sujet-de-la-perte-des-cheveux/raisons-de-la-perte-des-cheveux" title="Raisons de la chute des cheveux" class="reason-hair-loss">Raisons de la chute des cheveux</a></li>
+<li class="leaf"><a href="au-sujet-de-la-perte-des-cheveux/d'autres-causes-de-perte-de-cheveux" title="Autres causes de la chute des cheveux" class="other-causes-hair-loss">Autres causes de la chute des cheveux</a></li>
+<li class="last leaf"><a href="au-sujet-de-la-perte-des-cheveux/mythes-au-sujet-de-la-perte-des-cheveux" title="Mythes au sujet de la chute des cheveux" class="myth-hair-loss">Mythes au sujet de la chute des cheveux</a></li>
+</ul></li>
+<li class="expanded"><a href="hair-loss-products" title="Produits" class="rogaine-products">Produits</a><ul class="menu"><li class="first leaf"><a href="produits-contre-la-perte-des-cheveux/solution-de-minoxidil-rogaine-2" title="Solution ROGAINE® à 2 %" class="rogaine-solution">Solution ROGAINE<sup>&reg;</sup> à 2 %</a></li>
+<li class="last leaf"><a href="produits-contre-la-perte-des-cheveux/mousse-rogaine-5" title="Mousse ROGAINE® à 5 %" class="rogaine-foam">Mousse ROGAINE<sup>&reg;</sup> à 5 %</a></li>
+</ul></li>
+<li class="last expanded"><a href="comment-cela-fonctionne-t-il" title="Mode d’action de ROGAINE®" class="how-it-works">Mode d’action de ROGAINE<sup>&reg;</sup></a><ul class="menu"><li class="first leaf"><a href="comment-cela-fonctionne-t-il/ce-qui-se-passe-quand-jutilise" title="Ce qui se passe quand j’utilise ROGAINE®" class="what-happens-when">Ce qui ce passe quand j’utilise les produits ROGAINE<sup>&reg;</sup></a></li>
+<li class="leaf"><a href="how-does-it-work/testimonials-reviews" title="Témoignages" class="rogaine-testimonials">Témoignages</a></li>
+<li class="last leaf"><a href="comment-cela-fonctionne-t-il/faq" title="FAQ" class="rogaine-faqs">FAQ</a></li>
+</ul></li>
+</ul>  </div>
+</div>
+  </div>
+		 </div><!--/main_nav-->
+		   <div class="region region-header-desc">
+    <div id="block-block-8" class="block block-block">
+
+    
+  <div class="content">
+    <p><span class="Dermatologist">La marque no 1 recommandée par les dermatologues*</span></p>
+  </div>
+</div>
+  </div>
+	   </div><!--/mainNavWrap-->
+	 
+	 </div><!--/headerWrap-->  
+	
+	</header>
+	<section>
+	  <div class="breadcrumbWrap">
+	    <div class="inner_breadcrum"><div class="breadcrumb"><ul><li class="accueil"><a href="node/10" title="Accueil">Accueil</a></li> <li class="last politique_de_confidentialité">Politique de confidentialité</li></ul></div>		  <!--<ul class="breadcrum">
+		    <li><a href="#">Home</a></li> 
+			<li class="last">Products</li> 
+		 </ul>-->
+		
+		</div><!--/inner_breadcrum-->
+	  
+	  </div><!--/breadcrumbWrap-->
+	  
+	  <div class="innerpage_contntWrap">
+	  		
+		<div class="innerContnt">
+			  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-54" class="node node-page clearfix" about="/fr/confidentialite" typeof="foaf:Document">
+
+  
+      <span property="dc:title" content="Politique de confidentialité" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+      </div>
+
+  
+  
+</div>
+  </div>
+</div>
+<div id="block-rogaine-tweaks-rogaine-privacy-policy-content" class="block block-rogaine-tweaks">
+
+    
+  <div class="content">
+    <div class='uprivacy_policy'><div id="policyWrap">
+<div class="pl-basic-title"><h3>Privacy Policy - FR</h3></div>
+<div class="pl-basic-content"><br><center>	<h2 class="uprivacy">		<b>Politique de
+confidentialit&eacute;</b></h2>	<br />	DERNI&Egrave;RE MISE &Agrave; JOUR : 1er
+ao&ucirc;t 2014</center><br /><br /><p>	Chez Johnson &amp; Johnson Inc. (&laquo;
+<b>JJI</b> &raquo;, &laquo; <b>nous</b> &raquo;, &laquo; <b>nos</b> &raquo; ou
+&laquo; <b>notre</b> &raquo;), nous sommes soucieux des enjeux de
+confidentialit&eacute; et tenons &agrave; vous faire savoir comment nous
+recueillons, utilisons et divulguons divers &eacute;l&eacute;ments
+d&rsquo;information. La pr&eacute;sente Politique de confidentialit&eacute;
+pr&eacute;cise nos pratiques &agrave; l&rsquo;&eacute;gard de
+l&rsquo;information que nous (ou nos fournisseurs de services) recueillons,
+notamment sur l&rsquo;un de nos sites Web ou au moyen d&rsquo;une de nos
+applications pour appareils mobiles, ressources que nous exploitons et
+contr&ocirc;lons, et &agrave; partir desquelles vous avez eu acc&egrave;s
+&agrave; la pr&eacute;sente Politique de confidentialit&eacute;. La collecte de
+donn&eacute;es peut aussi se faire &agrave; partir du site d&rsquo;un tiers
+o&ugrave; nous faisons la promotion d&rsquo;un produit ou service, ou
+commanditons une telle promotion. Le cas &eacute;ch&eacute;ant, il y est
+mentionn&eacute; que la collecte de vos renseignements sera r&eacute;gie par
+notre Politique de confidentialit&eacute;. Dans un cas comme dans l&rsquo;autre,
+c&rsquo;est ce que nous entendons par &laquo; <b>site(s)</b> &raquo;, dans le
+pr&eacute;sent document. Lorsque vous nous soumettez des renseignements
+personnels par le truchement d&rsquo;un de nos sites, vous consentez aux
+modalit&eacute;s de la pr&eacute;sente Politique de
+confidentialit&eacute;.</p><br /><p>	<b>COLLECTE DE RENSEIGNEMENTS
+PERSONNELS</b></p><p>	<b>Buts</b></p><p>	JJI recueille des renseignements
+personnels pour diverses raisons relatives &agrave; la gestion de notre
+entreprise et aux services qui vous sont offerts, pour que vous puissiez
+profiter de fonctions ou de promotions qui auront &eacute;t&eacute;
+sp&eacute;cifi&eacute;es, ou encore participer &agrave; une activit&eacute; en
+particulier. Par exemple, nous recueillons des renseignements dans les buts
+suivants :</p><ul class="list-personalinfo">	<li>		offrir nos produits et nos
+services et g&eacute;rer nos activit&eacute;s commerciales de fa&ccedil;on
+g&eacute;n&eacute;rale, y compris conserver nos documents administratifs pendant
+une p&eacute;riode raisonnable et d&eacute;fendre et intenter des actions en
+justice;</li>	<li>		mettre au point et am&eacute;liorer nos
+services;</li>	<li>		&eacute;laborer et mettre en &oelig;uvre des programmes de
+commercialisation pour nos produits et aupr&egrave;s des consommateurs,
+programmes qui adaptent les offres et les communications aux besoins
+sp&eacute;cifiques exprim&eacute;s dans les renseignements personnels que vous
+nous avez fournis et qui r&eacute;v&egrave;lent vos pr&eacute;f&eacute;rences ou
+exigences concernant les produits et les achats;</li>	<li>		administrer les
+concours, les promotions, les services de marketing, les sondages ainsi que les
+salons de clavardage en ligne ou les forums de discussion d&rsquo;applications
+et de m&eacute;dias sociaux (p. ex. messages sur le mur de Facebook) ou de toute
+autre application Web ou mobile;</li>	<li>		effectuer des sondages sur la
+satisfaction des consommateurs afin d&rsquo;am&eacute;liorer les produits et les
+services que nous vous proposons;</li>	<li>		vous offrir de l&rsquo;information
+m&eacute;dicale relative &agrave; la sant&eacute; et aux
+produits;</li>	<li>		r&eacute;pondre &agrave; vos demandes, questions et
+commentaires ou obtenir des clarifications;</li>	<li>		recevoir et
+&eacute;valuer les demandes de renseignements sur les produits, les rapports
+concernant les effets ind&eacute;sirables et les plaintes sur les
+produits;</li>	<li>		aider lors des rappels de produits ou coordonner ces
+rappels;</li>	<li>		&eacute;tablir et maintenir nos relations avec les
+professionnels et administrateurs des soins de sant&eacute; et tout autre
+intervenant avec lesquels nous traitons dans le cadre de nos activit&eacute;s
+commerciales;</li>	<li>		offrir de l&rsquo;aide et des conseils aux
+professionnels et aux &eacute;tablissements de soins de sant&eacute; en ce qui
+concerne nos produits;</li>	<li>		tester et analyser nos produits pour en
+d&eacute;terminer l&rsquo;efficacit&eacute; et
+l&rsquo;innocuit&eacute;;</li>	<li>		satisfaire aux exigences l&eacute;gales,
+r&eacute;glementaires, s&eacute;curitaires, d&eacute;ontologiques et en
+mati&egrave;re d&rsquo;assurance, ainsi qu&rsquo;aux imp&eacute;ratifs de
+traitement des donn&eacute;es en ce qui concerne le signalement des effets
+ind&eacute;sirables et la communication des donn&eacute;es cliniques &agrave;
+Sant&eacute; Canada et aux organismes de
+r&eacute;glementation;</li>	<li>		surveiller la mise en application des
+exigences du consentement &eacute;clair&eacute; chez les patients qui
+participent aux essais cliniques; v&eacute;rifier que les donn&eacute;es
+cliniques recueillies par JJI pendant ces essais cliniques sont conformes aux
+donn&eacute;es source enregistr&eacute;es au centre de recherche o&ugrave; se
+d&eacute;roule l&rsquo;essai;</li>	<li>		utiliser les observations qui nous sont
+communiqu&eacute;es lors des r&eacute;unions des conseils consultatifs afin
+d&rsquo;&eacute;laborer un positionnement strat&eacute;gique pour nos
+produits;</li>	<li>		g&eacute;rer, administrer, recueillir et faire respecter
+les comptes;</li>	<li>		r&eacute;mun&eacute;rer les personnes qui rendent des
+services pour le compte de JJI;</li>	<li>		nous permettre d&rsquo;agir de
+fa&ccedil;on responsable en cas de crise d&rsquo;ordre m&eacute;dical ou autre,
+ou en pr&eacute;sence d&rsquo;une situation critique et pour am&eacute;liorer la
+s&eacute;curit&eacute; dans le milieu du travail;</li>	<li>		&eacute;valuer les
+curriculum vit&aelig; ou tout autre renseignement personnel qui nous sont soumis
+en vue de possibilit&eacute;s d&rsquo;emploi. Quant aux candidats &agrave; qui
+un poste n&rsquo;est pas propos&eacute; ou qui n&rsquo;acceptent pas le poste
+offert, nous retenons leurs renseignements personnels si tout autre poste venait
+&agrave; devoir &ecirc;tre combl&eacute; ou s&rsquo;ils postulent de nouveau
+pour un autre poste aupr&egrave;s de JJI.</li>	<li>		effectuer des analyses pour
+nos besoins commerciaux, par exemple pour les v&eacute;rifications, la mise au
+point de nouveaux produits, l&rsquo;am&eacute;lioration de nos sites Web,
+l&rsquo;am&eacute;lioration de nos produits et services, l&rsquo;identification
+des tendances d&rsquo;utilisation du site, la personnalisation de votre
+exp&eacute;rience sur le site (affichage de produits et d&rsquo;offres
+adapt&eacute;s &agrave; vos int&eacute;r&ecirc;ts et besoins) et la
+d&eacute;termination de l&rsquo;efficacit&eacute; de nos campagnes
+promotionnelles.</li></ul><p>	&nbsp;</p><p>	JJI limitera la collecte et
+l&rsquo;utilisation du nombre et du type de renseignements personnels au strict
+n&eacute;cessaire pour r&eacute;aliser les fins identifi&eacute;es au moment de
+la collecte ou en vertu de ce qui a &eacute;t&eacute; &eacute;tabli
+ci-dessus.</p><p>	De plus, il est possible que nous utilisions vos
+renseignements personnels &agrave; des fins pr&eacute;cis&eacute;es au moment de
+la collecte de l&rsquo;information, apr&egrave;s avoir obtenu votre consentement
+ou si la loi l&rsquo;autorise ou l&rsquo;exige. Nous vous pr&eacute;ciserons les
+renseignements obligatoires et ceux qui sont
+facultatifs.</p><p>	<b>Renseignements que vous fournissez</b></p><p>	Dans
+certaines zones d&rsquo;un site, il se peut qu&rsquo;on vous demande de
+soumettre des renseignements personnels, par exemple lorsque vous :</p><ul
+class="list-personalinfo">	<li>		achetez un produit directement aupr&egrave;s de
+nous;</li>	<li>		interagissez sur l&rsquo;un de nos sites Web ou l&rsquo;une de
+nos applications mobiles;</li>	<li>		participez &agrave; des forums de
+discussion dans les m&eacute;dias sociaux ou affichez des renseignements sur des
+babillards, des blogues commandit&eacute;s ou sur nos sites Web;</li>	<li>		ou
+encore lorsque vous nous communiquez vos renseignements personnels, par
+t&eacute;l&eacute;phone, courrier postal, courriel, t&eacute;l&eacute;copieur,
+par le biais d&rsquo;un de nos sites Web ou d&rsquo;une application de
+conversation ou par SMS/messagerie textuelle, ou autres moyens
+&eacute;lectroniques.</li></ul><p>	&nbsp;</p><p>	<b>Les renseignements que nous
+pouvons recueillir incluent :</b></p><ul class="list-personalinfo">	<li>		vos
+coordonn&eacute;es personnelles et professionnelles, tels vos nom, titre,
+adresse postale, num&eacute;ro de t&eacute;l&eacute;phone et adresse
+&eacute;lectronique;</li>	<li>		vos nom, adresse, &acirc;ge, information
+enregistr&eacute;e (comme les vid&eacute;os) et images photographiques en lien
+avec des promotions tels les concours;</li>	<li>		vos pr&eacute;f&eacute;rences
+et commentaires en tant que consommateur au sujet de nos produits et de nos
+services;</li>	<li>		les noms et coordonn&eacute;es de consommateurs qui
+utilisent nos produits et de leurs m&eacute;decins et, dans certaines
+circonstances, des renseignements confidentiels concernant la sant&eacute; ou
+les ant&eacute;c&eacute;dents m&eacute;dicaux, comme lorsque nous aurons
+re&ccedil;u un rapport d&rsquo;effet ind&eacute;sirable ou lorsque nous
+participons &agrave; la coordination d&rsquo;un rappel de
+produit;</li>	<li>		des renseignements recueillis en lien avec des questions ou
+des commentaires soulev&eacute;s par des personnes qui contactent notre centre
+de service aux consommateurs;</li>	<li>		les noms et autres coordonn&eacute;es
+des m&eacute;decins qui participent &agrave; des conseils consultatifs et les
+opinions ou commentaires communiqu&eacute;s par ces m&eacute;decins durant les
+r&eacute;unions de ces conseils consultatifs;</li>	<li>		les noms et autres
+coordonn&eacute;es des m&eacute;decins qui collaborent &agrave; la
+r&eacute;alisation d&rsquo;essais cliniques, ainsi que leurs renseignements
+professionnels tels que leur curriculum vit&aelig; et autres renseignements
+qu&rsquo;il faut communiquer &agrave; Sant&eacute; Canada et &agrave;
+d&rsquo;autres organismes de r&eacute;glementation;</li>	<li>		les
+renseignements sur les patients qui participent &agrave; des essais cliniques,
+tels leurs nom, &acirc;ge et sexe ainsi que les donn&eacute;es cliniques
+recueillies dans le cadre de ces essais. Les donn&eacute;es cliniques que JJI
+re&ccedil;oit sont habituellement enregistr&eacute;es au moyen
+d&rsquo;identifiants autres que le nom complet des patients, comme leurs
+initiales par exemple. Les donn&eacute;es int&eacute;grales, y compris le nom
+complet des patients, pourraient &ecirc;tre revues par les chefs du centre de
+recherche clinique qui assistent &agrave; l&rsquo;essai, aux fins du
+contr&ocirc;le de la conformit&eacute;;</li>	<li>		des renseignements au sujet
+des personnes qui visitent nos installations, comme leur nom et le nom de la
+soci&eacute;t&eacute; pour laquelle elles travaillent ou qu&rsquo;elles
+repr&eacute;sentent. Nous disposons &eacute;galement de cam&eacute;ras
+vid&eacute;o dans les zones d&rsquo;acc&egrave;s public de nos
+installations;</li>	<li>		les noms d&rsquo;utilisateur utilis&eacute;s par les
+consommateurs sur les sites des m&eacute;dias sociaux et les
+commentaires/questions qu&rsquo;ils y affichent; et</li>	<li>		toute autre
+information obtenue avec votre consentement ou tel que permis ou exig&eacute;
+par la loi.</li></ul><p>	&nbsp;</p><p>	Les appels t&eacute;l&eacute;phoniques
+faits et re&ccedil;us par JJI pourraient &ecirc;tre enregistr&eacute;s et/ou
+surveill&eacute;s &agrave; des fins de contr&ocirc;le de la qualit&eacute; et de
+formation. Les enregistrements peuvent aussi &ecirc;tre utilis&eacute;s pour
+nous aider &agrave; mettre au point et &agrave; am&eacute;liorer nos produits et
+services. En outre, les renseignements peuvent &ecirc;tre recueillis de
+fa&ccedil;ons active et passive sur nos sites Web. Vous trouverez
+ci-apr&egrave;s plus de renseignements sur les implications
+technologiques.</p><p>	Il peut arriver que nous <b>combinions</b> les
+renseignements que vous fournissez avec d&rsquo;autres renseignements que nous
+avons recueillis sur vous en ligne ou hors ligne, notamment, par exemple,
+l&rsquo;historique de vos achats. Nous pourrions aussi les combiner avec des
+renseignements que nous recevons sur vous &agrave; partir d&rsquo;autres
+sources, comme d&rsquo;autres soci&eacute;t&eacute;s en exploitation de Johnson
+&amp; Johnson, des sources d&rsquo;information accessibles au public (notamment
+de l&rsquo;information obtenue &agrave; partir de vos profils accessibles au
+public sur les m&eacute;dias sociaux) ou d&rsquo;autres
+tiers.</p><p>	&nbsp;</p><p>	<b>Collecte passive d&rsquo;information et
+utilisation de cette information</b><br />	<br />	Lorsque vous parcourez nos
+sites Web, une collecte passive de certains renseignements anonymes pourrait
+&ecirc;tre effectu&eacute;e (c&rsquo;est-&agrave;-dire, &agrave; votre insu)
+&agrave; l&rsquo;aide de divers moyens technologiques. Nous ou nos tiers
+fournisseurs de services pouvons recueillir passivement cette information et
+nous en servir de diverses fa&ccedil;ons, notamment :</p><p>	<b>&Agrave; partir
+de votre navigateur :</b> Certains &eacute;l&eacute;ments d&rsquo;information
+sont recueillis par la plupart des navigateurs, notamment votre adresse MAC
+(Media Access Control), le type d&rsquo;ordinateur (Windows ou Macintosh), la
+r&eacute;solution d&rsquo;&eacute;cran, la version du syst&egrave;me
+d&rsquo;exploitation ainsi que le type de navigateur Internet et sa version.
+Nous pouvons recueillir des informations similaires, notamment votre type de
+p&eacute;riph&eacute;rique et l&rsquo;identificateur qui y est associ&eacute;,
+si vous consultez le site &agrave; partir d&rsquo;un appareil
+mobile.</p><p>	<b>&Agrave; l&rsquo;aide des t&eacute;moins (&laquo; cookies
+&raquo;) :</b> Les t&eacute;moins sont des &eacute;l&eacute;ments
+d&rsquo;information stock&eacute;s directement sur l&rsquo;ordinateur que vous
+utilisez. Les t&eacute;moins nous permettent de recueillir divers
+renseignements, notamment sur le type de navigateur, le temps pass&eacute; sur
+le site, les pages consult&eacute;es et les pr&eacute;f&eacute;rences
+linguistiques. Nos tiers fournisseurs de services et nous utilisons cette
+information &agrave; des fins de s&eacute;curit&eacute;, pour faciliter la
+navigation, afficher les informations avec plus d&rsquo;efficacit&eacute; et
+pour personnaliser votre exp&eacute;rience lorsque vous utilisez le site. Nous
+utilisons &eacute;galement les t&eacute;moins pour reconna&icirc;tre
+l&rsquo;ordinateur ou le p&eacute;riph&eacute;rique que vous utilisez, ce qui
+permet de faciliter votre utilisation du site, par exemple en se souvenant de ce
+qui se trouve dans votre panier d&rsquo;achats. En outre, nous utilisons des
+t&eacute;moins pour recueillir des donn&eacute;es statistiques sur la
+fr&eacute;quentation du site afin d&rsquo;am&eacute;liorer continuellement sa
+conception et ses fonctionnalit&eacute;s, comprendre la mani&egrave;re dont les
+visiteurs l&rsquo;utilisent et contribuer &agrave; la r&eacute;solution des
+probl&egrave;mes qui peuvent se pr&eacute;senter. Les t&eacute;moins nous
+permettent &eacute;galement de s&eacute;lectionner nos annonces et offres qui
+sont le plus susceptibles de vous int&eacute;resser &ndash; et de les afficher
+lorsque vous consultez le site. Nous pouvons &eacute;galement utiliser les
+t&eacute;moins dans la publicit&eacute; en ligne pour faire le suivi des
+r&eacute;ponses des consommateurs &agrave; nos annonces.</p><p>	Vous avez la
+possibilit&eacute; de refuser ou d&rsquo;accepter ces t&eacute;moins en suivant
+les instructions de votre navigateur. Toutefois, si vous ne les acceptez pas,
+vous pouvez &ecirc;tre confront&eacute; &agrave; certains inconv&eacute;nients
+dans votre utilisation du site. Il vous sera &eacute;galement impossible de
+recevoir nos annonces et autres offres adapt&eacute;es &agrave; vos
+int&eacute;r&ecirc;ts et besoins. Pour en savoir davantage au sujet des
+t&eacute;moins visitez <a href="http://www.allaboutcookies.org"
+target="_blank">http://www.allaboutcookies.org</a>.</p><p>	<b>&Agrave;
+l&rsquo;aide de t&eacute;moins Flash</b>: Notre recours &agrave; la technologie
+Adobe Flash (y compris des objets locaux partag&eacute;s Flash [Flash Local
+Stored Objects ou &laquo; Flash LSO &raquo;]) nous permet notamment de vous
+proposer des renseignements plus personnalis&eacute;s, de faciliter votre
+acc&egrave;s continu et votre utilisation du site et de recueillir et
+d&rsquo;enregistrer les renseignements concernant votre utilisation du site. Si
+vous ne voulez pas que des Flash LSO soient enregistr&eacute;s sur votre
+ordinateur, vous pouvez configurer les param&egrave;tres de votre lecteur Flash
+de mani&egrave;re &agrave; bloquer l&rsquo;enregistrement des Flash LSO, en
+utilisant les outils contenus dans le <a
+href="http://www.macromedia.com/support/documentation/fr/flashplayer/help/settings_manager07.html"
+target="_blank">panneau des param&egrave;tres d&rsquo;enregistrement</a> sur le
+site Web. Vous pouvez aussi refuser les Flash LSO en allant sur le <a
+href="http://www.macromedia.com/support/documentation/fr/flashplayer/help/settings_manager03.html"
+target="_blank">panneau des param&egrave;tres globaux d&rsquo;enregistrement</a>
+et en suivant les instructions, lesquelles peuvent comprendre des instructions
+expliquant par exemple comment supprimer des Flash LSO existants (nomm&eacute;s
+&laquo; information &raquo; sur le site Macromedia), comment emp&ecirc;cher les
+Flash LSO d&rsquo;&ecirc;tre enregistr&eacute;s sur votre ordinateur sans votre
+permission et, pour Flash Player 8 et les versions ult&eacute;rieures, comment
+bloquer les Flash LSO qui ne sont pas livr&eacute;s par l&rsquo;op&eacute;rateur
+de la page que vous visitez &agrave; ce moment-l&agrave;. Veuillez noter que si
+vous configurez Flash Player de mani&egrave;re &agrave; emp&ecirc;cher ou
+&agrave; limiter l&rsquo;acceptation des Flash LSO, cela pourrait diminuer la
+fonctionnalit&eacute; de certaines applications Flash, y compris peut-&ecirc;tre
+les applications Flash utilis&eacute;es pour le site ou notre contenu en
+ligne.</p><p>	<b>Au moyen de pixels-espions, de balises Web, de GIF invisibles
+ou d&rsquo;autres technologies similaires</b>: Ceux-ci peuvent &ecirc;tre
+utilis&eacute;s relativement &agrave; certaines pages du site et &agrave;
+certains courriels en format HTML pour, notamment, suivre les actions des
+utilisateurs du site et des destinataires des courriels, mesurer le
+succ&egrave;s de nos campagnes de marketing et compiler des statistiques sur
+l&rsquo;utilisation du site et les taux de
+r&eacute;ponse.</p><p>	<b>Publicit&eacute; comportementale en ligne</b>:
+L&rsquo;utilisation de t&eacute;moins, de pixels-espions, de balises Web, de GIF
+invisibles et d&rsquo;autres technologies similaires permet &agrave; nos tiers
+fournisseurs de pr&eacute;senter des publicit&eacute;s sur nos produits et
+services lorsque vous visitez le site ou d&rsquo;autres sites ou
+propri&eacute;t&eacute;s Web sur Internet. Ces fournisseurs peuvent placer des
+pixels-espions, des balises Web, des GIF invisibles ou des technologies
+similaires sur le site et sur d&rsquo;autres sites ou propri&eacute;t&eacute;s
+Web et, aussi, placer ou reconna&icirc;tre des t&eacute;moins de tiers lorsque
+vous visitez le site ou d&rsquo;autres sites ou propri&eacute;t&eacute;s Web.
+Ils peuvent utiliser l&rsquo;information concernant vos visites sur le site et
+sur d&rsquo;autres sites ou propri&eacute;t&eacute;s Web pour afficher des
+publicit&eacute;s sur des produits et services susceptibles de vous
+int&eacute;resser.</p><p>	<b>Adresse IP</b>: Votre adresse IP est un
+num&eacute;ro qui est assign&eacute; automatiquement par votre fournisseur de
+services Internet &agrave; l&rsquo;ordinateur que vous utilisez. Une adresse IP
+est reconnue et enregistr&eacute;e automatiquement dans le fichier journal du
+serveur lorsqu&rsquo;un utilisateur visite le site; elle indique l&rsquo;heure
+de la visite et les pages consult&eacute;es. La collecte des adresses IP est une
+pratique courante sur Internet et elle est effectu&eacute;e automatiquement par
+de nombreux sites Web. Nous utilisons les adresses IP pour d&eacute;terminer,
+par exemple, les taux d&rsquo;utilisation du site, nous aider &agrave;
+diagnostiquer les probl&egrave;mes li&eacute;s au serveur et pour administrer le
+site.</p><p>	<b>Renseignements sur l&rsquo;appareil</b>: Nous pouvons recueillir
+les renseignements concernant votre appareil mobile, par exemple
+l&rsquo;identifiant unique de votre appareil.</p><p>	&nbsp;</p><p>	<b>Comment
+nous divulguons les renseignements</b></p><p>	Nous utilisons et divulguons les
+renseignements que vous nous fournissez de la mani&egrave;re d&eacute;crite au
+point de collecte, et ce, aux fins pr&eacute;cis&eacute;es dans la
+pr&eacute;sente Politique de confidentialit&eacute;.</p><p>	Nous divulguons
+aussi les renseignements recueillis par l&rsquo;interm&eacute;diaire du site
+:</p><ul class="list-personalinfo">	<li>		<b>&agrave; nos filiales</b> aux fins
+d&eacute;crites dans la pr&eacute;sente Politique de confidentialit&eacute;.
+Vous trouverez <a href="http://www.investor.jnj.com/governance/sec-filings.cfm"
+target="_blank">ici</a> (cliquez sur le lien pour Form 10K, Exhibit 21, sous
+&laquo; SEC Filings &raquo;) une liste de nos filiales. <b>Johnson &amp; Johnson
+Inc.</b> est la partie responsable de la gestion des renseignements personnels
+utilis&eacute;s conjointement;</li>	<li>		<b>&agrave; des tiers partenaires </b>
+avec qui nous avons conclu un accord de r&eacute;ciprocit&eacute; pour proposer
+des promotions conjointes et/ou d&rsquo;autres services;</li>	<li>		<b>&agrave;
+des agents ou fournisseurs de services externes </b>((y compris des
+soci&eacute;t&eacute;s affili&eacute;es agissant en cette qualit&eacute;) qui se
+chargent de divers services en notre nom, par exemple : certaines fonctions
+comme l&rsquo;administration de la paie et des avantages sociaux; la
+r&eacute;ception et l&rsquo;administration de plaintes au sujet de
+r&eacute;actions ind&eacute;sirables ou de la qualit&eacute; de nos produits;
+certains services de cartes de cr&eacute;dit, de facturation, de publipostage,
+de commercialisation, de gestion de commandes, de gestion de concours,
+d&rsquo;administration de promotions, d&rsquo;informatique et/ou
+d&rsquo;h&eacute;bergement ou de traitement de donn&eacute;es, ou autres
+services semblables; ou qui recueillent, utilisent, divulguent, ont
+acc&egrave;s, entreposent ou traitent les renseignements personnels pour notre
+compte aux fins d&eacute;crites dans la pr&eacute;sente Politique de
+confidentialit&eacute;;</li>	<li>		<b>&agrave; une tierce partie, dans les cas
+&eacute;ventuels suivants</b> r&eacute;organisation, fusion, vente d&rsquo;une
+filiale/division, cr&eacute;ation d&rsquo;une coentreprise, cession, transfert
+ou toute autre ali&eacute;nation de la totalit&eacute; ou d&rsquo;une partie de
+notre entreprise, de nos actifs ou de nos actions (y compris relativement
+&agrave; une faillite ou &agrave; des proc&eacute;dures similaires). Les
+cessionnaires ou ayants droit de nos unit&eacute;s commerciales ou de nos actifs
+pourraient vouloir utiliser et divulguer vos renseignements personnels &agrave;
+des fins similaires &agrave; celles qui sont pr&eacute;cis&eacute;es dans la
+pr&eacute;sente Politique de confidentialit&eacute;;</li>	<li>		<b>afin de
+satisfaire</b> &agrave; des exigences l&eacute;gales, r&eacute;glementaires et
+autor&eacute;glementaires de l&rsquo;industrie, et aux exigences relatives aux
+assurances, &agrave; la v&eacute;rification, &agrave; la s&eacute;curit&eacute;
+ou &agrave; la d&eacute;ontologie, y compris les obligations envers les
+organismes de sant&eacute;, de r&eacute;glementation des m&eacute;dicaments et
+d&rsquo;autor&eacute;glementation, les m&eacute;decins, les h&ocirc;pitaux ou
+autres &eacute;tablissements de soins de
+sant&eacute;.</li></ul><p>	&nbsp;</p><p>	En outre, nous utilisons et divulguons
+les renseignements recueillis sur le site si nous le jugeons n&eacute;cessaire
+ou appropri&eacute; : a) lorsque cela est permis par la loi applicable, y
+compris les lois de pays autres que votre pays de r&eacute;sidence; b) pour nous
+conformer au processus judiciaire; c) pour r&eacute;pondre aux demandes des
+pouvoirs publics et des autorit&eacute;s gouvernementales, y compris les
+pouvoirs publics et les autorit&eacute;s gouvernementales &agrave;
+l&rsquo;ext&eacute;rieur de votre pays de r&eacute;sidence; d) pour imposer le
+respect des conditions; e) pour prot&eacute;ger nos activit&eacute;s
+commerciales ou celles de nos filiales; f) pour prot&eacute;ger nos droits,
+notre confidentialit&eacute;, notre s&eacute;curit&eacute; ou nos biens ainsi
+que ceux de nos filiales, les v&ocirc;tres ou ceux d&rsquo;autres personnes; et
+g) pour nous permettre d&rsquo;exercer les recours disponibles ou de limiter les
+pr&eacute;judices que nous pourrions subir. Nous pouvons aussi utiliser et
+divulguer les renseignements recueillis par l&rsquo;entremise du site
+d&rsquo;autres mani&egrave;res, moyennant votre consentement.</p><p>	Nous
+utilisons et divulguons aussi les renseignements que nous recueillons de
+fa&ccedil;on passive comme il est d&eacute;crit ci-dessus, sous &laquo; Collecte
+passive d&rsquo;information et utilisation de cette information &raquo;, et
+&agrave; toute autre fin, sauf si nous sommes tenus de faire autrement en vertu
+des lois en vigueur (par exemple, si nous sommes tenus de traiter ces
+renseignements comme des renseignements personnels). En outre, nous pouvons
+utiliser et divulguer &agrave; toute fin les renseignements qui ne permettent
+pas d&rsquo;identifier une personne. Si nous combinons des renseignements ne
+permettant pas d&rsquo;identifier une personne avec des renseignements qui le
+permettent (en combinant, par exemple, votre nom et votre emplacement
+g&eacute;ographique), nous traiterons ces renseignements comme des
+renseignements personnels tant qu&rsquo;ils seront
+combin&eacute;s.</p><p>	<b>Divulgations &ndash; Utilisation de fournisseurs de
+services</b></p><p>	Il est possible que nous transmettions vos renseignements
+personnels &agrave; des agents ou fournisseurs de services externes, tel que
+cela est pr&eacute;cis&eacute; ci-dessus. Certains de ces fournisseurs de
+service pourraient exercer leurs activit&eacute;s &agrave;
+l&rsquo;ext&eacute;rieur du Canada, y compris aux &Eacute;tats-Unis. En dehors
+du Canada, vos renseignements personnels seront soumis aux exigences
+l&eacute;gales &eacute;trang&egrave;res applicables, ce qui peut inclure la
+divulgation l&eacute;gale de renseignements personnels aux autorit&eacute;s
+gouvernementales dans certaines circonstances. Nous adoptons des mesures
+contractuelles ou autres pour nous assurer que les renseignements personnels
+recueillis, utilis&eacute;s, divulgu&eacute;s, acc&eacute;d&eacute;s,
+entrepos&eacute;s et autrement trait&eacute;s par le fournisseur de services
+pour notre compte soient prot&eacute;g&eacute;s, utilis&eacute;s ou
+divulgu&eacute;s uniquement aux fins que nous avons indiqu&eacute;es, sous
+r&eacute;serve des exigences l&eacute;gales applicables &agrave; ces groupes
+dans les territoires &eacute;trangers.</p><p>	Veuillez consulter la section NOUS
+JOINDRE (<b>Comment consulter, modifier ou faire supprimer vos renseignements
+personnels</b>) ci-dessous pour savoir comment obtenir des renseignements
+&eacute;crits portant sur nos pratiques en mati&egrave;re de recours &agrave;
+des fournisseurs de services &agrave; l&rsquo;ext&eacute;rieur du Canada et le
+titre de la personne qui peut r&eacute;pondre au nom de JJI &agrave; vos
+questions au sujet a) des fournisseurs de services en dehors du Canada qui
+pourraient recueillir, utiliser, divulguer, avoir acc&egrave;s ou entreposer vos
+renseignements personnels, b) des raisons pour lesquelles vos renseignements
+sont recueillis, utilis&eacute;s, divulgu&eacute;s, acc&eacute;d&eacute;s ou
+entrepos&eacute;s, ou c) de l&rsquo;endroit o&ugrave; ces renseignements seront
+sauvegard&eacute;s ou des personnes qui y auront acc&egrave;s.</p><p>	<b>Autres
+divulgationsM</b></p><p>	Nous pourrions aussi divulguer vos renseignements
+personnels dans d&rsquo;autres circonstances, avec votre
+consentement.</p><p>	<b>SITES ET SERVICES DE TIERS</b></p><p>	La pr&eacute;sente
+Politique de confidentialit&eacute; ne porte pas (et nous n&rsquo;en sommes
+aucunement responsables) sur le respect de la vie priv&eacute;e, sur le
+traitement des renseignements ou sur d&rsquo;autres pratiques de tiers,
+notamment des tiers exploitant un site ou une propri&eacute;t&eacute; Web
+quelconque (y compris entre autres une application) qui est accessible au moyen
+du pr&eacute;sent site ou dont le lien se trouve sur le pr&eacute;sent site. La
+disponibilit&eacute; ou l&rsquo;int&eacute;gration, dans le pr&eacute;sent site,
+d&rsquo;un lien vers un tel autre site ou une telle autre
+propri&eacute;t&eacute; n&rsquo;implique nullement que nous ou nos filiales
+ent&eacute;rinons ces sites ou
+propri&eacute;t&eacute;s.</p><p>	<b>M&Eacute;CANISMES DE
+S&Eacute;CURIT&Eacute;</b></p><p>	Nous prenons des mesures organisationnelles,
+techniques et administratives raisonnables pour prot&eacute;ger les
+renseignements personnels que nous d&eacute;tenons. Malheureusement, aucune
+transmission de donn&eacute;es sur Internet ou syst&egrave;me de stockage de
+donn&eacute;es ne peut se targuer d&rsquo;une garantie de s&eacute;curit&eacute;
+&agrave; 100 %. Si vous avez des raisons de croire que votre interaction avec
+nous n&rsquo;est plus s&eacute;curis&eacute;e (par exemple si vous avez
+l&rsquo;impression que la s&eacute;curit&eacute; de tout compte que vous
+d&eacute;tenez aupr&egrave;s de nous a &eacute;t&eacute; compromise), veuillez
+nous aviser du probl&egrave;me imm&eacute;diatement en nous contactant
+conform&eacute;ment &agrave; la rubrique <i>Nous joindre</i>,
+ci-dessous.</p><p>	&nbsp;</p><p>	<b>CHOIX, CONSENTEMENT ET
+ACC&Egrave;S</b></p><p>	<b>Vos choix en ce qui concerne la collecte,
+l&rsquo;utilisation et la divulgation de vos renseignements personnels
+:</b></p><p>	Vous pouvez donner votre consentement &agrave; la collecte,
+&agrave; l&rsquo;utilisation et &agrave; la divulgation de vos renseignements
+personnels de nombreuses fa&ccedil;ons. Le consentement peut &ecirc;tre
+accord&eacute; sous forme explicite (de vive voix, par &eacute;crit ou par
+transmission &eacute;lectronique), sous forme implicite (lorsque vous nous
+fournissez vos nom et adresse pour que nous puissions vous envoyer des produits
+ou des renseignements que vous nous avez demand&eacute;s) ou par
+l&rsquo;interm&eacute;diaire de votre repr&eacute;sentant autoris&eacute;
+(notamment, un tuteur l&eacute;gal ou une personne agissant par procuration).
+Habituellement, quand vous nous fournissez vos renseignements personnels, nous
+supposons que vous consentez &agrave; ce qu&rsquo;ils soient recueillis,
+utilis&eacute;s et divulgu&eacute;s comme d&eacute;crit dans cette politique, le
+cas &eacute;ch&eacute;ant, ou tel que mentionn&eacute; au moment de la collecte
+de ces renseignements.</p><p>	Nous vous offrons des choix en ce qui concerne la
+collecte, l&rsquo;utilisation et la divulgation de vos renseignements personnels
+&agrave; des fins de marketing. Dans certains cas, au moment de la collecte des
+renseignements personnels, l&rsquo;option de participation vous sera offerte. En
+acceptant cette option, vous accordez votre consentement explicite &agrave;
+recevoir ult&eacute;rieurement des communications qui pourraient &ecirc;tre
+pertinentes pour vous. Vous pouvez accorder votre consentement &agrave; la
+collecte, &agrave; l&rsquo;utilisation et &agrave; la divulgation de ce type
+d&rsquo;information en cochant une case sur un formulaire, en cliquant sur un
+ic&ocirc;ne d&eacute;sign&eacute; dans l&rsquo;un des sites Web, ou par
+d&rsquo;autres moyens, p. ex. en nous contactant par t&eacute;l&eacute;phone ou
+par courrier &eacute;lectronique, ou en signant un formulaire de consentement
+sur lequel vos renseignements personnels sont demand&eacute;s. En pareilles
+circonstances, vos renseignements personnels ne seront recueillis,
+utilis&eacute;s ou divulgu&eacute;s qu&rsquo;aux fins d&eacute;crites au moment
+o&ugrave; l&rsquo;option de participation vous est propos&eacute;e. Par exemple,
+vous aurez le choix d&rsquo;accepter de recevoir de l&rsquo;information au sujet
+des offres sp&eacute;ciales sur des produits de JJI. Le cas
+&eacute;ch&eacute;ant, vous recevrez l&rsquo;information concernant les produits
+et les programmes de JJI susceptibles de vous int&eacute;resser. En acceptant
+l&rsquo;option de participation aux offres promotionnelles de JJI, vous
+confirmez votre consentement &agrave; recevoir automatiquement des
+communications sur des marques et des programmes de JJI que nous jugeons
+susceptibles de vous int&eacute;resser. Sinon, vous avez l&rsquo;option de
+participer s&eacute;par&eacute;ment, si cette option est offerte, pour recevoir
+de l&rsquo;information <u>uniquement</u> au sujet de marques sp&eacute;cifiques
+et de programmes connexes ou <u>seulement</u> de programmes sp&eacute;cifiques.
+Apr&egrave;s avoir accept&eacute; de recevoir de l&rsquo;information sur les
+offres et programmes, il vous sera possible de vous &laquo; d&eacute;sabonner
+&raquo; ou de retirer votre autorisation si vous ne souhaitez plus recevoir ces
+communications; vous pouvez le faire en suivant les directives que nous vous
+ferons parvenir par courrier &eacute;lectronique ou en communiquant avec nous
+par d&rsquo;autres moyens, comme il est d&eacute;crit ci-dessous.</p><p>	Lorsque
+nous recueillons des renseignements personnels qui seront conserv&eacute;s dans
+les bases de donn&eacute;es de JJI, notre politique actuelle consiste &agrave;
+n&rsquo;utiliser ces renseignements que dans le but d&rsquo;envoyer des
+communiqu&eacute;s et des offres promotionnelles aux consommateurs selon la
+description ci-dessus. &Agrave; moins que vous indiquiez vouloir recevoir de
+l&rsquo;information sur des programmes ou des marques sp&eacute;cifiques, les
+renseignements personnels que vous soumettez ne seront pas utilis&eacute;s pour
+vous communiquer des offres qui ne font pas partie de l&rsquo;interaction
+initiale (c&rsquo;est-&agrave;-dire inscription, offre d&rsquo;essai, concours
+ou demande de coupon).</p><p>	Lorsque vous d&eacute;sirez participer &agrave;
+une promotion, &agrave; un concours ou &agrave; un sondage, ou lorsque vous
+participez &agrave; une discussion ou interagissez autrement sur l&rsquo;un de
+nos sites Web, ou que vous achetez un produit, on ne vous demandera pas, comme
+condition de participation ou d&rsquo;achat d&rsquo;un produit, de fournir plus
+de renseignements personnels que n&eacute;cessaire ou l&eacute;galement requis
+pour nous permettre d&rsquo;administrer la promotion, le concours ou le sondage,
+de faciliter la discussion ou de vous transmettre les produits auxquels vous
+avez droit ou que vous souhaitez recevoir. Cependant, il se peut que
+l&rsquo;option de fournir des renseignements suppl&eacute;mentaires vous soit
+propos&eacute;e. Vous pouvez d&eacute;cider, par exemple, de fournir des
+renseignements personnels suppl&eacute;mentaires en r&eacute;pondant &agrave; un
+questionnaire sur un bulletin de participation &agrave; un concours, ou sur un
+profil personnel, au sujet de votre utilisation de nos produits. Le cas
+&eacute;ch&eacute;ant, nous pourrons nous servir de ces renseignements afin de
+mettre au point, d&rsquo;am&eacute;liorer et de vendre nos produits ou pour
+am&eacute;liorer vos interactions avec nous sur nos sites Web.</p><p>	Si vous
+nous avez d&eacute;j&agrave; soumis des renseignements personnels et que vous
+voulez retirer votre consentement en ce qui a trait &agrave; leur conservation,
+utilisation ou divulgation, il vous est possible de demander &agrave; ne plus
+recevoir de notre part des communications &agrave; des fins de marketing. Si
+c&rsquo;est le cas, vous pouvez choisir de ne plus les recevoir par une des
+<b>m&eacute;thodes ci-apr&egrave;s</b>. Dans la r&eacute;ponse que vous nous
+destinez, veuillez pr&eacute;ciser votre nom, identifier la/les forme(s) de
+communication que vous souhaitez ne plus recevoir et indiquer les adresses
+auxquelles celle(s)-ci a/ont &eacute;t&eacute; envoy&eacute;e(s). Par exemple,
+si vous souhaitez ne plus recevoir de courriers &eacute;lectroniques ou de
+publipostages de marketing de notre part, il vous suffit de nous le dire en
+indiquant votre nom et votre adresse &eacute;lectronique ou votre adresse
+postale. Nous nous efforcerons d&rsquo;acc&eacute;der &agrave; votre demande
+dans les plus brefs d&eacute;lais possibles, conform&eacute;ment aux lois
+applicables en mati&egrave;re de
+confidentialit&eacute;.</p><p>	&nbsp;</p><p>	<b>NOUS JOINDRE</b></p><p>	Vous
+pouvez communiquer avec nous tel que d&eacute;crit ci-dessous pour les fins
+suivantes :</p><ul class="list-correction">	<li>		Recevoir une copie de la
+version la plus r&eacute;cente de notre Politique de confidentialit&eacute; ou
+de nos pratiques en ce qui a trait &agrave; l&rsquo;utilisation de tiers
+fournisseurs de services en dehors du Canada;</li>	<li>		Nous communiquer vos
+questions, commentaires ou pr&eacute;occupations au sujet de notre Politique de
+confidentialit&eacute; ou de nos pratiques de traitement des renseignements
+personnels ou pour demander des informations
+suppl&eacute;mentaires;</li>	<li>		Retirer votre consentement &agrave; la
+conservation, &agrave; l&rsquo;utilisation ou &agrave; la divulgation de vos
+renseignements personnels;</li>	<li>		Consulter vos renseignements personnels ou
+les faire corriger;</li>	<li>		Recevoir de l&rsquo;information ou des offres
+sp&eacute;ciales;</li>	<li>		Obtenir de l&rsquo;information &eacute;crite sur
+nos pratiques relatives aux fournisseurs de services en dehors du Canada, et
+obtenir des r&eacute;ponses &agrave; vos questions au sujet a) des fournisseurs
+de services en dehors du Canada qui pourraient recueillir, utiliser, divulguer
+ou entreposer vos renseignements personnels, ou qui pourraient y avoir
+acc&egrave;s, b) des fins auxquelles nous recueillons, utilisons, divulguons et
+conservons vos renseignements personnels, ou auxquelles nous y avons
+acc&egrave;s ou c) de l&rsquo;endroit o&ugrave; vos renseignements personnels
+seront conserv&eacute;s ou des cat&eacute;gories de personnes qui y auront
+acc&egrave;s;</li>	<li>		Les demandes en ce qui concerne l&rsquo;article 4
+ci-dessus doivent &ecirc;tre faites par &eacute;crit et sont sujettes &agrave;
+certaines exceptions tel que prescrit par la loi et pr&eacute;cis&eacute; au
+paragraphe Exceptions au droit d&rsquo;acc&egrave;s. Toute exception &agrave;
+vous fournir l&rsquo;acc&egrave;s &agrave; vos renseignements personnels doit
+&ecirc;tre approuv&eacute;e par le chef de la protection des renseignements
+personnels pour le Canada.</li></ul><p>	&nbsp;</p><p>	<b>Comment consulter,
+modifier ou faire supprimer vos renseignements personnels :</b></p><p>	Si vous
+souhaitez consulter, corriger, mettre &agrave; jour ou faire supprimer les
+renseignements personnels que vous avez fournis par l&rsquo;interm&eacute;diaire
+d&rsquo;un de nos sites, veuillez communiquer avec nous par l&rsquo;un ou
+l&rsquo;autre de ces moyens :</p><p>	<b>Par &eacute;crit</b> &agrave;
+l&rsquo;adresse suivante :<br />	<br />	Johnson &amp; Johnson Inc.<br
+/>	Consumer Care Centre<br />	Attention: <b>Canadian Chief Privacy
+Officer</b><br />	199 Grandview Road<br />	Skillman, NJ 08558-9418</p><p>	<b>Par
+t&eacute;l&eacute;phone</b> au 1 800 265-8383 (num&eacute;ro sans frais).
+Demandez &agrave; parler au <b>Chef de la protection des renseignements
+personnels;</b> ou</p><p>	<b>Par courrier &eacute;lectronique,</b> au moyen du
+formulaire en ligne pour <a
+href="https://www.ccc-consumercarecenter.com/fr/universal-contact-us/ca-jnjcanada-ucu/www.jnjcanada.com"
+target="_blank">Nous joindre</a>.</p><p>	Nous prendrons des mesures raisonnables
+pour v&eacute;rifier votre identit&eacute; avant de vous donner acc&egrave;s
+&agrave; vos renseignements ou de vous permettre de les corriger. Nous vous
+r&eacute;pondrons dans les trente (30) jours suivant la r&eacute;ception de
+votre demande &eacute;crite d&rsquo;acc&egrave;s ou de correction, et nous vous
+aviserons durant cette p&eacute;riode si nous avons besoin de plus de temps pour
+r&eacute;pondre convenablement &agrave; votre demande, pourvu que cette
+prolongation de trente (30) jours soit permise par les lois applicables sur la
+protection des renseignements personnels.</p><p>	Nous nous efforcerons
+d&rsquo;acc&eacute;der &agrave; votre demande dans les plus brefs d&eacute;lais
+possibles et dans le respect des lois en vigueur. Veuillez noter en outre que si
+vous choisissez de ne plus recevoir nos communications de marketing, nous
+pourrions continuer n&eacute;anmoins &agrave; vous faire parvenir
+d&rsquo;importants messages transactionnels et administratifs, que vous ne
+pourrez pas refuser de recevoir en vertu des lois en
+vigueur</p><p>	&nbsp;</p><p>	<b>Exceptions au droit d&rsquo;acc&egrave;s
+:</b></p><p>	Il est interdit d&rsquo;acc&eacute;der &agrave; certains
+renseignements, dans des circonstances restreintes. Dans certaines situations,
+par exemple, les exceptions suivantes s&rsquo;appliquent aux renseignements
+:</p><ul class="list-correction">	<li>		qui font r&eacute;f&eacute;rence
+&agrave; d&rsquo;autres personnes et qui ne sont pas d&eacute;tachables de vos
+renseignements personnels;</li>	<li>		dont la divulgation d&eacute;voilerait de
+l&rsquo;information commerciale confidentielle; et</li>	<li>		qui sont sujets
+&agrave; une communication prot&eacute;g&eacute;e par le secret professionnel
+entre avocat-client ou qui rel&egrave;vent du privil&egrave;ge relatif au
+litige.</li></ul><p>	Le Chef de la protection des renseignements personnels pour
+le Canada doit approuver toute exception au droit d&rsquo;acc&egrave;s. Le motif
+du refus du droit d&rsquo;acc&egrave;s sera communiqu&eacute;, sur demande, par
+JJI.</p><p>	&nbsp;</p><p>	<b>P&Eacute;RIODE DE CONSERVATION</b></p><p>	Nous
+conservons vos renseignements personnels pendant la p&eacute;riode
+n&eacute;cessaire pour satisfaire aux fins d&eacute;crites dans la
+pr&eacute;sente Politique de confidentialit&eacute;, sauf si une p&eacute;riode
+de conservation plus longue est requise ou permise par la loi &ndash; ou si cela
+est n&eacute;cessaire pour respecter une obligation
+juridique.</p><p>	&nbsp;</p><p>	<b>UTILISATION DU SITE PAR DES
+MINEURS</b></p><p>	Nos sites ne sont pas destin&eacute;s aux personnes de moins
+de <b>13 ans</b>. Nous insistons sur le fait que ces personnes ne doivent pas
+fournir de renseignements personnels par l&rsquo;interm&eacute;diaire du site,
+&agrave; moins d&rsquo;indication expresse sur le site &ndash; et avec le
+consentement des parents. Si un enfant de moins de 13 ans nous a soumis des
+renseignements personnels, nous demandons que l&rsquo;un de ses parents ou son
+tuteur l&eacute;gal communique avec nous pour nous demander d&rsquo;effacer ces
+renseignements de nos dossiers. Nous ferons tout notre possible pour effacer les
+renseignements personnels de l&rsquo;enfant de nos dossiers existants. Nous
+encourageons les parents &agrave; parler avec leurs enfants au sujet de
+l&rsquo;utilisation d&rsquo;Internet et des renseignements qu&rsquo;ils
+fournissent aux sites Web ou autres.</p><p>	&nbsp;</p><p>	<b>TRANSFERT
+TRANSFRONTALIER</b></p><p>	Vos renseignements personnels peuvent &ecirc;tre
+conserv&eacute;s et trait&eacute;s dans tout pays o&ugrave; nous avons des
+installations ou des fournisseurs de services. En utilisant notre site ou en
+nous donnant votre consentement (lorsque la loi l&rsquo;exige), vous acceptez
+que vos renseignements soient transmis &agrave; des pays autres que votre pays
+de r&eacute;sidence, y compris aux &Eacute;tats-Unis, qui peuvent appliquer des
+r&egrave;gles diff&eacute;rentes en mati&egrave;re de protection de
+donn&eacute;es.</p><p>	&nbsp;</p><p>	<b>RENSEIGNEMENTS DE NATURE
+D&Eacute;LICATE</b></p><p>	Sauf sur demande ou invitation expresse de notre
+part, vous ne devez pas nous envoyer ou divulguer des renseignements personnels
+de nature d&eacute;licate (p. ex. sur votre origine raciale ou ethnique, vos
+opinions politiques, vos croyances religieuses ou autres, votre sant&eacute;,
+vos ant&eacute;c&eacute;dents criminels ou votre adh&eacute;sion &agrave; un
+syndicat) sur le site ou par tout autre moyen. Dans les rares cas o&ugrave; nous
+pourrions vous inviter &agrave; fournir des renseignements de nature
+d&eacute;licate, nous le ferons avec votre consentement
+expr&egrave;s.</p><p>	&nbsp;</p><p>	<b>MISE &Agrave; JOUR DE LA POLITIQUE DE
+CONFIDENTIALIT&Eacute;</b></p><p>	La pr&eacute;sente Politique de
+confidentialit&eacute; peut &ecirc;tre modifi&eacute;e de temps &agrave; autre.
+Veuillez consulter la rubrique &laquo; DERNI&Egrave;RE MISE &Agrave; JOUR
+&raquo; au haut de cette page pour voir &agrave; quand remonte la
+derni&egrave;re mise &agrave; jour de la politique. Toute modification de notre
+Politique de confidentialit&eacute; entrera en vigueur lorsque nous afficherons
+la nouvelle politique sur le site ou vous en fournirons autrement une copie. Le
+fait que vous continuiez &agrave; utiliser nos sites ou &agrave; nous fournir
+des renseignements personnels &agrave; la suite de telles modifications signifie
+que vous acceptez la politique r&eacute;vis&eacute;e.</p></div>
+</div>
+
+</div>  </div>
+</div>
+  </div>
+		</div><!--/innerContnt-->
+	  
+	  </div><!--/innerpage_contntWrap-->
+	  
+	</section>
+	
+	<footer>
+		<div id="footerWrap">
+			  <div class="region region-footer-message">
+    <div id="block-menu-menu-footer-menu-fr" class="block block-menu">
+
+    
+  <div class="content">
+    <ul class="menu"><li class="first leaf active-trail"><a href="confidentialite" title="Politique de confidentialité" class="active-trail active">Politique de confidentialité</a></li>
+<li class="leaf"><a href="avis-légal" title="Avis légal">Avis légal</a></li>
+<li class="leaf"><a href="contactez-nous" title="Nous contacter">Nous contacter</a></li>
+<li class="last leaf"><a href="carte-du-site" title="Plan du site">Plan du site</a></li>
+</ul>  </div>
+</div>
+<div id="block-block-9" class="block block-block">
+
+    
+  <div class="content">
+    <div class="footerContnt">
+<p class="footNote">*Marque EVL contre la chute des cheveux selon une enquête commune menée en 2012 au Canada et aux États-Unis.</p>
+<p class="footNote"><sup>†</sup>Le programme BIEN VIVRE<sup>MC</sup> propose des informations, des solutions et des offres exclusives de Johnson &amp; Johnson inc.</p>
+<p>© Johnson &amp; Johnson Inc. 2007-2013. Ce site est la propriété de Soins-santé grand public McNeil, une division de Johnson &amp; Johnson Inc., seule responsable de son contenu. Il est destiné uniquement aux résidents du Canada.</p>
+<p><span>Dernière mise à jour : avril 2015.</span></p></div>
+<!--/footerContnt-->  </div>
+</div>
+  </div>
+		</div><!--/footerWrap-->
+	</footer>
+   
+   </div><!--/bodyWrapper-->	<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+_satellite.pageBottom();
+//--><!]]>
+</script>
+</body>
