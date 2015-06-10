@@ -46,19 +46,32 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 </head>
 <body class="html front not-logged-in no-sidebars page-node page-node- page-node-1 node-type-page i18n-en body_class  " >
+<div id="password_protect_overlay" style="z-index: 100000; position: fixed; top: 0; bottom: 0; left: 0; right: 0; width: 100vw; height: 100vh; margin: 0px; padding: 0px; background: white;">
+  <section style="position: fixed; top: 25%; left: 25%; width: 500px; height: 100px; background: grey;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; width: 200px;">
+      <form onsubmit="javascript: return false;">
+        <style>
+          input[disabled] { background-color: rgb(221, 221, 221); }
+        </style>
+        <input id="password" type="password" disabled/>
+        <button type="submit" id="password_submit">Submit</button>
+      </form>
+    </div>
+  </section>
+</div>
 	<div id="fb-root"></div><script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = '//connect.facebook.net/en_US/all.js#xfbml=1&appId=318133798333360'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>		<div id="bodyWrapper">
 <header>
 <div id="headerWrap">
 <div class="logo">
   <a href="node/1"><img alt="Hair Loss Treatment" class="desktop_logo" title="Hair Loss Treatment" src="sites/www_rogaine_ca/files/images/logo.png" /></a>
   <a href="javascript: void(0);" class="mobile_dropdwn"><img alt="menuDropdown" border="0" src="sites/www_rogaine_ca/files/images/drop-down-menu.png"></a></div><!--/logo-->
- 
+
 <div class="searchWrap">
   <div class="mobile_seach_button search_btn"><a href="javascript:void(0);">Recherche</a></div>  <div class="search_box">
     <div class="search_arrow"><img alt="Search" src="sites/www_rogaine_ca/files/images/search-arrow.png" border="0"/></div>    <div class="searchForm">  <div class="region region-site-search">
     <div id="block-google-appliance-ga-block-search-form" class="block block-google-appliance">
 
-    
+
   <div class="content">
     <form action="node/1" method="post" id="google-appliance-block-form" accept-charset="UTF-8"><div><div class="container-inline">
       <h2 class="element-invisible">Search Google Appliance</h2>
@@ -68,7 +81,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 </div>
 <div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="SEARCH" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-NXUmGdR9GANwBiqcHq-RTESiZPHgGjL-18rNBjfU40o" />
 <input type="hidden" name="form_id" value="google_appliance_block_form" />
-  
+
 </div>
 </div></form>  </div>
 </div>
@@ -80,7 +93,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
     <div class="region region-header">
     <div id="block-locale-language" class="block block-locale">
 
-    
+
   <div class="content">
     <ul class="language-switcher-locale-url"><li class="en first active"><a href="node/1" class="language-link active" lang="en">EN</a></li>
 <li class="fr last"><a href="fr/node/10" class="language-link" lang="fr">FR</a></li>
@@ -88,18 +101,18 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 </div>
   </div>
   </div><!--/Search_btn_swichlang-->
-  
+
   <div class="favorite_lnk">
     <div class="fb-like" data-href="http://www.rogaine.ca/home" data-width="108" data-layout="button_count" data-show-faces="false" data-send="false"></div>  </div><!--/favorite_lnk-->
- 
- 
- 
+
+
+
  <div class="mainNavWrap">
    <div class="main_nav">
     <div class="region region-header-menu">
     <div id="block-menu-menu-main-navigation" class="block block-menu">
 
-    
+
   <div class="content">
     <ul class="menu"><li class="first expanded"><a href="node/43" title="ABOUT HAIR LOSS" class="about-hair-loss">ABOUT HAIR LOSS</a><ul class="menu"><li class="first leaf"><a href="node/47" title="Reasons for Hair Loss" class="reason-hair-loss">Reasons for Hair Loss</a></li>
 <li class="leaf"><a href="node/49" title="Other Causes of Hair Loss" class="other-causes-hair-loss">Other Causes of Hair Loss</a></li>
@@ -130,7 +143,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
    <div class="region region-header-desc">
     <div id="block-block-1" class="block block-block">
 
-    
+
   <div class="content">
     <p><span class="Dermatologist">#1 Dermatologist Recommended*</span></p>
   </div>
@@ -138,7 +151,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
   </div>
  </div><!--/mainNavWrap-->
 
-</div><!--/headerWrap-->  
+</div><!--/headerWrap-->
 
 </header>
 <section>
@@ -147,30 +160,30 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
   <div class="region region-content">
     <div id="block-rogaine-tweaks-home-banners" class="block block-rogaine-tweaks">
 
-    
+
   <div class="content">
     <div class="innerBannerWrap"><ul class="bannerList">		  <li class="rogain_form">
       <a data-shopbeam-url="/v1/products?id=9187221&image=1&apiKey=bdac27b3-9e03-42b6-93bb-050a9ac01c10" href="javascript:void(0)" title="Rogaine - Hair Regrowth Treatment Foam" id="shopbeam-widget-text-link-df79cb7b-0920-4715-8375-99b169bb6b1b">
 	     <div class="banner_image">
 		   <img src="sites/www_rogaine_ca/files/images/banner-image1.png" border="0"/>
-		 
+
 		 </div><!--/banner_image-->
 		 <div class="banner-Contnt">
 		     <h5>Now available without a prescription!</h5>
 			 <h1>ROGAINE<sup>&reg;</sup> 5% Foam</h1>
-		   
+
 		 </div><!--/banner_contnt-->
       </a>
 		  </li><li class="dermatologist_recomd">
 		   <div class="banner-Contnt">
-		     
+
 			 <h1>#1 Dermatologist<br> Recommended</h1>
 			 <h5>*OTC hair loss treatment brand based on 2012 combined survey of Canada and U.S.A</h5>
 		  </div><!--/banner_contnt-->
 	     <div class="banner_image">
 		   <img border="0" src="sites/www_rogaine_ca/files/images/banner-image2.png">
 		 </div><!--/banner_image-->
-		
+
 		  </li><li class="dermatologist_recomd"><div class="banner-Contnt"><h1>LEARN MORE ABOUT<br>HAIR LOSS</h1></div><!--/banner_contnt--><div class="banner_image hairLoss"><img border="0" src="sites/www_rogaine_ca/files/images/banner-image3.png"></div><!--/banner_image--></li>
     <li>
       <div style="text-align: center;" >
@@ -181,18 +194,18 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 </div>
 <div id="block-system-main" class="block block-system">
 
-    
+
   <div class="content">
     <div id="node-1" class="node node-page clearfix" about="/home" typeof="foaf:Document">
 
-  
+
       <span property="dc:title" content="Hair Loss Treatment &amp; Hair Regrowth" class="rdf-meta element-hidden"></span>
-  
+
   <div class="content">
       </div>
 
-  
-  
+
+
 </div>
   </div>
 </div>
@@ -205,7 +218,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
     <div class="region region-right">
     <div id="block-block-2" class="block block-block">
 
-    
+
   <div class="content">
     <div class="product_feature">
 <h3>PRODUCT FEATURE</h3>
@@ -229,13 +242,13 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 </div>
 <div id="block-rogaine-tweaks-rogaine-testimonials" class="block block-rogaine-tweaks">
 
-    
+
   <div class="content">
     <div class="testimonial randomTestimonial"><h3>TESTIMONIALS</h3><div class="product_contnt"><h4>Comments from T.H.</h4><p><span>“</span>It's easy to use ... like putting deodorant on in the morning ... At first I wasn't a believer, and now I am. I can feel the new hair. It feels thicker and different.<span>”</span><br><br><span>“</span>Image is important to me, and most people ... feeling younger promotes a positive image ... Growing hair will bring me back to a time when I was ..</p></div><p><a href="node/57" title="VIEW MORE"><span>VIEW MORE</span></a></p></div>  </div>
 </div>
 <div id="block-block-4" class="block block-block">
 
-    
+
   <div class="content">
     <div class="health_essential">
 <h3><img border="0" src="sites/www_rogaine_ca/files/images/health-essential.png" /></h3>
@@ -259,7 +272,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
     <div class="region region-footer-message">
     <div id="block-menu-menu-footer-menu-en" class="block block-menu">
 
-    
+
   <div class="content">
     <ul class="menu"><li class="first leaf"><a href="node/53" title="Privacy Policy">Privacy Policy</a></li>
 <li class="leaf"><a href="node/55" title="Legal Notice">Legal Notice</a></li>
@@ -269,7 +282,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 </div>
 <div id="block-block-5" class="block block-block">
 
-    
+
   <div class="content">
     <div class="footerContnt">
 <p class="footNote">*OTC HAIR LOSS TREATMENT BRAND BASED ON 2012 COMBINED SURVEY OF CANADA AND U.S.A</p>
@@ -287,4 +300,20 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 _satellite.pageBottom();
 //--><!]]>
 </script>
+  <script>
+    var password = document.querySelector('#password');
+    password.value = "Please Wait..."
+
+    jQuery(document).ready(function(){
+      password.value = '';
+      password.removeAttribute('disabled');
+      password.style['background-color'] = 'white';
+    });
+
+    document.querySelector('#password_submit').addEventListener('click', function(e){
+      if (password.value == 'Shopbeam123') {
+        document.querySelector('#password_protect_overlay').remove();
+      }
+    })
+  </script>
 </body>
