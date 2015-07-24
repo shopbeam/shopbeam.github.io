@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- saved from url=(0115)http://assets.adobedtm.com/6f743006a41bd9090cd6c6b7dfa16b2cbed9c289/scripts/satellite-53ac31c02942accb12000626.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+    <script>
+      (function(){
+        function escapeForHtml(str){
+          if (!str) return str
+          return str
+            .replace(/\&/g, '&amp;')
+            .replace(/\</g, '&lt;')
+            .replace(/\>/g, '&gt;')
+            .replace(/\"/g, '&quot;')
+            .replace(/\'/g, '&#x27;')
+            .replace(/\//g, '&#x2F;')
+        }
+        function parseQueryString(){
+          var ret = {}, parts = location.search.substring(1).split('&');
+          for (var i = parts.length; i--;) {
+            var vardef = parts[i].split('='), varname = vardef[0], value = vardef[1];
+            ret[varname] = value;
+          }
+          return ret;
+        }
+        var queryParams = parseQueryString();
+
+        var markup = "<meta name=\"apple-itunes-app\" content=\"app-id=466951815, affiliate-data=partnerId=30&siteID=XGpulyu3Z64\">";
+
+        for (var name in queryParams){
+          var regex = new RegExp('%' + name.replace('.', '\.') + '%', 'ig');
+          markup = markup.replace(regex, 
+            escapeForHtml(queryParams[name]));
+        }
+
+        document.write(markup)
+      })();
+    </script><meta name="apple-itunes-app" content="app-id=466951815, affiliate-data=partnerId=30&amp;siteID=XGpulyu3Z64">
+  
+
+</body></html>

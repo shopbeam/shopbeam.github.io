@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- saved from url=(0115)http://assets.adobedtm.com/6f743006a41bd9090cd6c6b7dfa16b2cbed9c289/scripts/satellite-553012876563650c7db20200.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+    <script type="text/javascript" async="" src="http://s.moatads.com/rodale450aOVh43/moatcontent.js"></script><script>
+      (function(){
+        function escapeForHtml(str){
+          if (!str) return str
+          return str
+            .replace(/\&/g, '&amp;')
+            .replace(/\</g, '&lt;')
+            .replace(/\>/g, '&gt;')
+            .replace(/\"/g, '&quot;')
+            .replace(/\'/g, '&#x27;')
+            .replace(/\//g, '&#x2F;')
+        }
+        function parseQueryString(){
+          var ret = {}, parts = location.search.substring(1).split('&');
+          for (var i = parts.length; i--;) {
+            var vardef = parts[i].split('='), varname = vardef[0], value = vardef[1];
+            ret[varname] = value;
+          }
+          return ret;
+        }
+        var queryParams = parseQueryString();
+
+        var markup = "<script type=\"text/javascript\">(function(){var a=document,b=a.createElement(\"script\"),a=a.getElementsByTagName(\"script\")[0];b.type=\"text/javascript\";b.async=!0;b.src=\"http://s.moatads.com/rodale450aOVh43/moatcontent.js\";a.parentNode.insertBefore(b,a)})();</scr"+"ipt>";
+
+        for (var name in queryParams){
+          var regex = new RegExp('%' + name.replace('.', '\.') + '%', 'ig');
+          markup = markup.replace(regex, 
+            escapeForHtml(queryParams[name]));
+        }
+
+        document.write(markup)
+      })();
+    </script><script type="text/javascript">(function(){var a=document,b=a.createElement("script"),a=a.getElementsByTagName("script")[0];b.type="text/javascript";b.async=!0;b.src="http://s.moatads.com/rodale450aOVh43/moatcontent.js";a.parentNode.insertBefore(b,a)})();</script>
+  
+
+</body></html>
