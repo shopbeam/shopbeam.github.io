@@ -1,0 +1,95 @@
+.bpp_post_wrapper p.aligncenter {
+    text-align:center;
+}
+.bpp_post_wrapper p.alignleft,
+.bpp_post_wrapper p.alignnone {
+    text-align:left;
+}
+.bpp_post_wrapper p.alignright {
+    text-align:right;
+}
+
+.bpp_post_wrapper p.aligncenter.bpp_imp {
+    text-align:center !important;
+}
+.bpp_post_wrapper p.alignleft.bpp_imp,
+.bpp_post_wrapper p.alignnone.bpp_imp {
+    text-align:left !important;
+}
+.bpp_post_wrapper p.alignright.bpp_imp {
+    text-align:right !important;
+}
+
+.bpp_post_wrapper .bpp_img_wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.bpp_post_wrapper .bpp_img_wrapper img,
+.bpp_post_wrapper .bpp_img_wrapper a img {
+    margin:0;
+    padding:0;
+}
+
+/* Hide button when onhover only is set */
+.bpp_post_wrapper .bpp_img_wrapper.onhover .bpp_button_wrapper {
+    display: none;
+}
+/* trigger showing on hover action */
+.bpp_post_wrapper .bpp_img_wrapper.onhover:hover .bpp_button_wrapper {
+    display: block;
+}
+
+
+.bpp_post_wrapper .bpp_img_wrapper .bpp_button_wrapper a {
+    text-decoration: none;
+    border-width: 0;
+}
+
+/* Default positioning */
+.bpp_post_wrapper .bpp_img_wrapper .bpp_button_wrapper {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+/* Customize for no count (default) */
+.bpp_post_wrapper .bpp_img_wrapper.northwest .bpp_button_wrapper {
+    top: 5px;
+    left: 5px;
+    right: inherit;
+}
+.bpp_post_wrapper .bpp_img_wrapper.southwest .bpp_button_wrapper {
+    bottom: 5px;
+    left: 5px;
+    right: inherit;
+    top: inherit;
+}
+.bpp_post_wrapper .bpp_img_wrapper.southeast .bpp_button_wrapper {
+    bottom: 5px;
+    right: 5px;
+    top: inherit;
+}
+
+/* Default positioning for count above image */
+.bpp_post_wrapper .bpp_img_wrapper.count_above.northeast .bpp_button_wrapper,
+.bpp_post_wrapper .bpp_img_wrapper.count_above.northwest .bpp_button_wrapper {
+    top: 35px;
+}
+
+/* Default positioning for count above LARGE image */
+.bpp_post_wrapper .bpp_img_wrapper.large.count_above.northeast .bpp_button_wrapper,
+.bpp_post_wrapper .bpp_img_wrapper.large.count_above.northwest .bpp_button_wrapper {
+    top: 45px;
+}
+
+/* Default positioning for count beside image */
+.bpp_post_wrapper .bpp_img_wrapper.count_beside.northeast .bpp_button_wrapper,
+.bpp_post_wrapper .bpp_img_wrapper.count_beside.southeast .bpp_button_wrapper {
+    right: 55px;
+}
+/* Default positioning for count beside LARGE image */
+.bpp_post_wrapper .bpp_img_wrapper.large.count_beside.northeast .bpp_button_wrapper,
+.bpp_post_wrapper .bpp_img_wrapper.large.count_beside.southeast .bpp_button_wrapper {
+    right: 65px;
+}
