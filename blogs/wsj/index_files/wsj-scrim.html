@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0721)http://cdn.cxpublic.com/wsj-scrim.html?ref=http%3A%2F%2Fwww.wsj.com%2Farticles%2Fkate-winslet-stars-in-the-highly-anticipated-film-steve-jobs-1443621106#media=html&sid=9222318613852486900&width=100%25&height=0&meta=%7B%22hasAd%22%3A%22n%22%2C%22retina%22%3A%22n%22%2C%22subscriber%22%3A%22nonsubscriber%22%2C%22template%22%3A%22full%22%2C%22access%22%3A%22free%22%2C%22section%22%3A%22Magazine%22%2C%22edition%22%3A%22naus%22%2C%22bucket%22%3A5%2C%22hasUid%22%3A%22n%22%7D&resizeToContentSize=true&ctx=http%3A%2F%2Fwww.wsj.com%2Farticles%2Fkate-winslet-stars-in-the-highly-anticipated-film-steve-jobs-1443621106&usi=ifpoft2391ebqrp0&rnd=595581269&prnd=ifpoft0y8uh2ap5r&tzo=240&parentElementId=cxWidget_0.34338148054666817 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" type="text/javascript" id="cXJsonpCBifpoftigdtnfnhuoscript" src="http://adserver.cxad.cxense.com/adserver/search?media=javascript&asId=000000016232ba4f&sid=9222318613852486900&k=wsjnonsubscriber%20wsjgroup5&usi=ifpoftiebkojrm6c&rnd=571094576&prnd=ifpofti1ocjmjswj&tzo=240&callback=cXJsonpCBifpoftigdtnfnhuo"></script>
+    <title>Cxense - WSJ Scrim Offer</title>
+    <style type="text/css">
+        html{background-color: transparent}
+        body {margin:0; padding:0;background-color: transparent}
+        #cx-scrim-overlay{width:100%; height:100%; position:absolute;background: rgba(255, 255, 255, 0.9);}
+        #cx-scrim{position:fixed;top:50%; left:50%;margin-left:-310px; margin-top:-232px;width:620px; height:432px;opacity:1;background:transparent}
+        #cx-scrim .close-btn{position:relative;background:transparent; cursor: pointer; width:32px; height:32px;left: 603px;top: 15px;}
+        .cx-scrim-creative, .cx-scrim-creative img{width:620px; height:400px;clear:right}
+
+        /*hide four Unit by default */
+        .cx-scrim-creative .four{display:none}
+
+        @media all and (max-width: 635px) and (min-width:120px) {
+            .cx-scrim-creative .eight{display:none}
+            .cx-scrim-creative .four{display:block}
+            #cx-scrim{position:fixed;top:50%; left:50%;;width:300px; height:282px; margin-left: -150px;margin-top: -160px;}
+            .cx-scrim-creative, .cx-scrim-creative img{width:300px;height:250px;}
+            #cx-scrim .close-btn{left: 268px;top: -4px;}
+        }
+
+        .template {display: none;}
+
+    </style>
+
+    <script type="text/javascript" src="jquery.min(1).js"></script>
+    <script type="text/javascript" src="cx.js"></script>
+
+
+</head>
+
+<body xmlns:tmp="javascript:">
+
+<script type="text/javascript">
+
+    function getContent(ad, key, defaultValue) {
+        if (ad.creative && ad.creative.content && ad.creative.content.length) {
+            var contents = ad.creative.content;
+            for (var k = 0; k < contents.length; k++) {
+                var content = contents[k];
+                if (content.key === key) {
+                    return content.value[0];
+                }
+            }
+        }
+        return defaultValue || '';
+    }
+
+    function getImage(ad, key) {
+        var posts = [''];
+
+        if (isRetina) {
+            posts = [' retina', ''];
+        }
+
+        for (var ix in posts) {
+            var p = posts[ix];
+
+            if (ad.creative && ad.creative.images && ad.creative.images.length) {
+                var images = ad.creative.images;
+                var lowerKey = key.toLowerCase();
+                for (var k = 0; k < images.length; k++) {
+                    var image = images[k];
+
+                    var actualKey = image.key.toLowerCase();
+
+                    if (actualKey === lowerKey + p) {
+                        return image.source;
+                    }
+                }
+            }
+        }
+
+        return '';
+    }
+
+    function getAd(data) {
+        if (data && data.searchResult && data.searchResult.spaces && data.searchResult.spaces[0] && data.searchResult.spaces[0].ads) {
+            var adSpace = data.searchResult.spaces[0];
+            if (adSpace.ads.length >= 1) {
+                return adSpace.ads[0];
+            }
+        }
+        return null;
+    }
+
+    function onGotScrim(data) {
+        var ad = getAd(data);
+
+        if (ad) {
+            cX.library.renderTemplate('adsTemplate', 'targetElement', ad);
+            cX.postMessageToParent('method=cxCandyResize&contentHeight=100%25&type=scrim', '*');
+            cX.postMessageToParent('method=cxCandyShow&type=scrim', '*');
+
+            cX.setSiteId('9222334397379502889');
+            meta.adCreative = ad.creative.id;
+            cX.setCustomParameters(meta);
+            cX.sendPageViewEvent({ 'location': 'http://scrim.wsj.com' });
+
+            //$( "#targetElement" ).on( "click", ".close-btn", function() {
+            $( ".close-btn" ).click(function(event){
+                $('#cx-scrim-overlay').fadeOut();
+                cX.postMessageToParent('method=cxUserAction&type=wsjscrimclose', '*');
+                cX.postMessageToParent('method=cxCandyHide&type=scrim', '*');
+                return false;
+            });
+
+            $( "#cx-scrim-overlay" ).click(function(event){
+                $('#cx-scrim-overlay').fadeOut();
+                cX.postMessageToParent('method=cxUserAction&type=wsjscrimsdismiss', '*');
+                cX.postMessageToParent('method=cxCandyHide&type=scrim', '*');
+            });
+        } else {
+            cX.postMessageToParent('method=cxShowAllOffers', '*');
+        }
+    }
+
+</script>
+
+<div id="targetElement">
+
+</div>
+
+<div id="adsTemplate" class="template">
+    <!--%
+    var ad = data;
+    var defaultCreative = getImage(ad, '620 default'); // '16/12/8 Image');
+    //var defaultCreative = getImage(ad, '620 retina'); // '16/12/8 Image Retina');
+    var smallCreative = getImage(ad, '300 default'); // '4 Image');
+    //var smallCreative = getImage(ad, '300 retina'); // '4 Image Retina');
+
+    %-->
+    <div tmp:id="cx-scrim-overlay">
+        <div tmp:id="cx-scrim">
+            <div tmp:class="close-btn">
+                <img tmp:src="http://www.wsj.com/img/cxense/icon-close2x.png" width="32px" height="32px" title="Close">
+            </div>
+            <div tmp:class="cx-scrim-creative">
+                <a tmp:id="{{cX.clickTracker(ad.clickUrl)}}" tmp:href="{{ad.creative.destinationUrl}}" tmp:target="_blank">
+                    <div class="eight"><img tmp:src="{{defaultCreative}}" tmp:title="" tmp:alt=""></div>
+                    <div class="four"><img tmp:src="{{smallCreative}}" tmp:title="" tmp:alt=""></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+    var meta = {};
+
+    var isRetina = false;
+
+    cX.callQueue.push(['invoke', function() {
+        var args = cX.library.parseHashArgs();
+        if (args.meta) {
+            meta = JSON.parse(args.meta);
+        }
+
+        isRetina = meta.retina === 'y';
+
+
+        var spaces = {
+            "naus": "000000016232ba4f",
+            "europe": "000000016232ba4f",
+            "europetr": "000000016232ba4f",
+            "asia": "000000016232ba4f",
+            "asiaindia": "000000016232ba4f",
+            "asiakr": "000000016232ba4f",
+            "asiajp": "000000016232ba4f",
+            "asiaindo": "000000016232ba4f",
+            "asiacn": "000000016232ba4f",
+            "europeuk": "000000016232ba4f",
+            "nabr": "000000016232ba4f"
+        };
+
+        var adSpaceId = '000000016232ba4f';
+
+        if (spaces[meta.edition]) {
+            adSpaceId = spaces[meta.edition];
+        }
+
+        var kTarget = 'wsj' + meta.subscriber;
+
+        if (meta.navSource) {
+            kTarget += ' wsjmod' + meta.navSource;
+        }
+
+        if (meta.bucket) {
+            kTarget += ' wsjgroup' + meta.bucket;
+        }
+
+        cX.insertAdSpace({
+            adSpaceId: adSpaceId,
+            siteId : '9222318613852486900',
+            renderFunction: onGotScrim,
+            adUnitWidth: 620,
+            adUnitHeight: 400,
+            initialHorizontalAdUnits: 1,
+            initialVerticalAdUnits: 1,
+            k: kTarget
+        });
+    }]);
+
+</script>
+
+</body></html>

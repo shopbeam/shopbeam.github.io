@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*Admin CSS*/
+
+#accordions_metabox ul.accordions_bg_img_list{}
+
+#accordions_metabox ul.accordions_bg_img_list li {
+  display: inline-block;
+  margin: 5px;
+}
+#accordions_metabox ul.accordions_bg_img_list li.bg-selected {}
+
+#accordions_metabox ul.accordions_bg_img_list li img{border: 2px solid #ffffff;}
+
+#accordions_metabox ul.accordions_bg_img_list li.bg-selected img{
+  border: 2px solid #ff5a11;
+}
+
+
+#accordions_metabox .accordions_icons_custom {
+  display: none;
+  margin-top: 15px;
+}
+
+#accordions_metabox .accordions_icons_custom_plus {
+  background: none repeat scroll 0 0 / 100% auto rgb(221, 221, 221);
+  display: inline-block;
+  height: 20px;
+  margin-right: 5px;
+  width: 20px;
+  cursor: pointer;
+  border: 1px solid rgb(255, 89, 16);
+}
+
+#accordions_metabox .accordions_icons_custom_minus {
+  background: none repeat scroll 0 0 / 100% auto rgb(221, 221, 221);
+  display: inline-block;
+  height: 20px;
+  margin-right: 5px;
+  width: 20px;
+  cursor: pointer;
+  border: 1px solid rgb(255, 89, 16);
+}
+
+
+
+#accordions_metabox .accordions_content_title, #accordions_metabox .accordions-content textarea {
+	width:95%;
+}
+
+
+
+
+#accordions_metabox .accordions-content .removeaccordions:hover {
+  background: none repeat scroll 0 0 rgb(255, 134, 87);
+}
+
+#accordions_metabox .accordions-content .tab-new {
+  background: none repeat scroll 0 0 #a3dbff;
+}
+
+
+
+
+#accordions_metabox .accordions-content {
+
+}
+
+#accordions_metabox .accordions-content tr {
+  background: none repeat scroll 0 0 rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(153, 153, 153);
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+#accordions_metabox .accordions-content .section-dragHandle {
+   text-align: center;
+  vertical-align: middle;
+  width: 20px;
+}
+
+
+#accordions_metabox .accordions-content .section-header {
+  border-bottom: 1px solid rgb(153, 153, 153);
+  padding: 5px 10px;
+}
+
+#accordions_metabox .accordions-content .accordions-title-preview {
+  display: inline-block;
+}
+#accordions_metabox .accordions-content .section-header .removeaccordions {
+  background: none repeat scroll 0 0 rgb(255, 91, 64);
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  margin-left: 20px;
+  text-align: center;
+  width: 20px;
+}
+
+#accordions_metabox .accordions-content .section-header label {
+  float: right;
+}
+
+
+
+
+
+
+#accordions_metabox .accordions-content .section-panel {
+  display: none;
+}
+
+
+#accordions_metabox .accordions-content .active .section-panel {
+  display: block;
+  padding: 25px 10px;
+  text-align: left;
+  background:#bde6fc;
+}
+
+#accordions_metabox .accordions-content .active .section-header{
+	background:#a7e1ff;
+
+}
+
+
+
+/*CSS front page*/
+
+.accordions-container {
+  margin: 50px 0;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+  text-align: center;
+}
+
+
+.responsive-accordion-icons {
+  height: 16px;
+  width: 16px;
+}
+
+.responsive-accordion-plus.arrow-double {
+  background: url("icons/arrow-double.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.responsive-accordion-minus.arrow-double{
+background: url("icons/arrow-double.png") no-repeat scroll 0 -16px rgba(0, 0, 0, 0);
+}
+
+
+
+.responsive-accordion-plus.arrow-dark {
+  background: url("icons/arrow-dark.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.responsive-accordion-minus.arrow-dark{
+background: url("icons/arrow-dark.png") no-repeat scroll 0 -16px rgba(0, 0, 0, 0);
+}
+
+.responsive-accordion-plus.arrow-naked {
+  background: url("icons/arrow-naked.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.responsive-accordion-minus.arrow-naked{
+background: url("icons/arrow-naked.png") no-repeat scroll 0 -16px rgba(0, 0, 0, 0);
+}
+
+.responsive-accordion-plus.arrow-round-inside-2 {
+  background: url("icons/arrow-round-inside-2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.responsive-accordion-minus.arrow-round-inside-2{
+background: url("icons/arrow-round-inside-2.png") no-repeat scroll 0 -16px rgba(0, 0, 0, 0);
+}
+
+.responsive-accordion-plus.arrow-thin {
+  background: url("icons/arrow-thin.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.responsive-accordion-minus.arrow-thin{
+background: url("icons/arrow-thin.png") no-repeat scroll 0 -16px rgba(0, 0, 0, 0);
+}
+
+
+
