@@ -1,0 +1,179 @@
+.mh-region {
+  padding: 0;
+}
+
+.mh-region-inside {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.mh-region-inside-first {
+  padding-left: 0;
+}
+
+.mh-region-inside-last {
+  padding-right: 0;
+}
+
+.mh-column {
+  padding: 0;
+}
+
+.mh-column-inside {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.mh-column-inside-first {
+  padding-left: 0;
+}
+
+.mh-column-inside-last {
+  padding-right: 0;
+}
+
+.mh-row {
+  padding: 0 0 0.5em 0;
+  margin: 0;
+}
+
+.mh-row-last {
+  padding-bottom: 0;
+}
+
+.mh-column-17-main {
+  float: left;
+  width: 99.0000%;
+}
+
+.panels-flexible-17-inside {
+  padding-right: 0px;
+}
+
+.panels-flexible-17 {
+  width: auto;
+}
+
+.mh-region-17-pencil_ad {
+  float: left;
+  width: 99.0000%;
+}
+
+.mh-row-17-18-inside {
+  padding-right: 0px;
+}
+
+.mh-column-17-1 {
+  float: left;
+  width: 49.5000%;
+}
+
+.mh-column-17-2 {
+  float: left;
+  width: 49.5000%;
+}
+
+.mh-row-17-main-row-inside {
+  padding-right: 0px;
+}
+
+.mh-column-17-7 {
+  float: left;
+  width: 49.5000%;
+}
+
+.mh-column-17-9 {
+  float: left;
+  width: 49.5000%;
+}
+
+.mh-row-17-6-inside {
+  padding-right: 0px;
+}
+
+.mh-region-17-top_left {
+  float: left;
+  width: 99.0000%;
+}
+
+.mh-row-17-11-inside {
+  padding-right: 0px;
+}
+
+.mh-column-17-13 {
+  float: left;
+  width: 49.5000%;
+}
+
+.mh-column-17-14 {
+  float: left;
+  width: 49.5000%;
+}
+
+.mh-row-17-12-inside {
+  padding-right: 0px;
+}
+
+.mh-region-17-middle_1_col {
+  float: left;
+  width: 99.0000%;
+}
+
+.mh-row-17-15-inside {
+  padding-right: 0px;
+}
+
+.mh-region-17-middle_2_col {
+  float: left;
+  width: 99.0000%;
+}
+
+.mh-row-17-16-inside {
+  padding-right: 0px;
+}
+
+.mh-region-17-middle_3_col {
+  float: left;
+  width: 99.0000%;
+}
+
+.mh-row-17-17-inside {
+  padding-right: 0px;
+}
+
+.mh-region-17-middle_4_col {
+  float: left;
+  width: 99.0000%;
+}
+
+.mh-row-17-19-inside {
+  padding-right: 0px;
+}
+
+.mh-region-17-top_middle {
+  float: left;
+  width: 99.0000%;
+}
+
+.mh-row-17-10-inside {
+  padding-right: 0px;
+}
+
+.mh-region-17-top {
+  float: left;
+  width: 99.0000%;
+}
+
+.mh-row-17-3-inside {
+  padding-right: 0px;
+}
+
+.mh-region-17-right_sidebar {
+  float: left;
+  width: 99.0000%;
+}
+
+.mh-row-17-4-inside {
+  padding-right: 0px;
+}
+
