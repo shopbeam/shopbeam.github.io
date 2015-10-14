@@ -360,10 +360,14 @@
     <div class="panel-footer">
       <h4 class="text-center">The HTML</h4>
       <pre style="width: 640px; margin: auto;"><code class="language-markup">
-        &lt;a data-shopbeam-url="[shopbeam product url]
-        &image=[default lightbox image index]&apiKey=[your shopbeam apikey]"
-        href="javascript:void(0)" title="[brand name] - [product name]"
-        id="shopbeam-widget-text-link-[random uuid]"&gt;
+        &lt;img class="nopin"
+        src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/
+        w_[width],h_[height],c_[crop mode]/[url-encoded image url]"
+        width="[width]" height="[height]" alt="[brand name] - [product name]"
+        id="shopbeam-in-frame-widget-image-placeholder-[random uuid]"
+        data-shopbeam-url="[shopbeam product url]
+        &image=[default lightbox image index]
+        &apiKey=[your shopbeam API key]"/&gt;
       </code></pre>
       <div class="row">
         <div class="col-md-6">
