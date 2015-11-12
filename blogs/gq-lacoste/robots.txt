@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /search/
+ 
+Sitemap: http://www.gq.com/sitemap.xml
+Sitemap: http://www.gq.com/latest-news.xml
