@@ -1,433 +1,213 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title>Widget Sandbox</title>
+	<head>
+		<title>Shopbeam - Demos</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<!-- Header -->
+			<div id="header">
 
-  <!-- Optional theme -->
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">-->
+				<div class="top">
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+					<!-- Logo -->
+						<div id="logo">
+							<h1 id="title">Shopbeam</h1>
+							<p><i>Demos & Mock-ups</i></p>
+						</div>
 
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
 
-  <!-- Shopbeam script -->
-  <script class="shopbeam-script" type="text/javascript" src="https://www.shopbeam.com/js/widget.loader.js"
-          async="true"></script>
+								Prologue's nav expects links in one of two formats:
 
-  <!-- Prism for syntax highlighting -->
-  <script src="prism.js"></script>
-  <link rel="stylesheet" href="prism.css"/>
+								1. Hash link (scrolls to a different section within the page)
 
-  <style>
-    .widget-example {
-      width: 670px;
-    }
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
 
-    .coming-soon {
-      position: relative;
-    }
+								2. Standard link (sends the user to another page/site)
 
-    .coming-soon::before {
-      content:          'Coming Soon';
-      position:         absolute;
-      display:          block;
-      font-size:        34px;
-      background-color: rgba(255, 255, 255, 0.62);
-      border-radius:    6px;
-      padding:          5px;
-      transform:        rotate(-25deg);
-      left:             15%;
-      top:              0;
-    }
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
 
-    [id*='shopbeam-widget-text-'] {
-      display: inline-block;
-      width:   300px;
-    }
+							-->
+							<ul>
+								<li><a href="#scale" id="scale-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Scale Solution</span></a></li>
+								<li><a href="#premium" id="premium-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Premium Solution</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
 
-    .panel-footer > pre {
-      border:     0;
-      margin:     0;
-      padding:    0;
-      background: none;
-    }
+				</div>
 
-    .dl-horizontal.skinny > dt {
-      width: 90px;
-    }
+				<div class="bottom">
 
-    .dl-horizontal.skinny > dd {
-      margin-left: 100px;
-    }
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://twitter.com/_shopbeam" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com/shopbeam/?fref=ts" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/shopbeam" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="ads@shopbeam.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
 
-    .dl-horizontal.wide > dt {
-      width: 200px;
-    }
+				</div>
 
-    .dl-horizontal.wide > dd {
-      margin-left: 210px;
-    }
+			</div>
 
-    .dl-horizontal > dd {
-      overflow:      hidden;
-      text-overflow: ellipsis;
-    }
-  </style>
+		<!-- Main -->
+			<div id="main">
 
-</head>
-<body>
-<div class="container">
-  <div class="jumbotron">
-    <h1>Welcome to Shopbeam Demos!</h1>
+				<!-- Intro -->
+			
 
-    <p>
-      Hello there! On this page are some example widgets of varying type, along with the cart and
-      checkout apps that render along-side them, they make up the the entry point into the Shopbeam
-      experience.
+				<!-- Solutions -->
+					<section id="scale" class="three">
+						<div class="container">
 
-    <p>
+							<header>
+								<h2><b>Scale Solution</b></h2>
+							</header>
 
-    <p>
-      <a class="btn btn-primary btn-lg" href="/docs" target="_blank" role="button">Read The Docs</a>
-      <a class="btn btn-primary btn-lg" href="http://shopbeam.com" target="_blank" role="button">Learn More</a>
-    </p>
-  </div>
+							<p><h2>Full shopping experience happens inside the banner  infinitely scalable across the web</h2></p>
 
-  <!-- PREMIUM SOLUTION -->
-  <h1>Premium Solution</h1>
+						</div>
+						<div class="container">
 
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3>Image Widget</h3>
-    </div>
-    <div class="panel-body">
-      <p>
-        Here we have an example of our "Premium Solution" image widget. This widget begins as an
-        <code>img</code> tag on the page and features an optional hover action (enabled by default)
-        that shows the widget's <strong>Product Name</strong>, <strong>Brand Name</strong>,
-        <stong>List Price</stong>
-        , and <strong>Sale Price</strong> (if applicable).
-      </p>
 
-      <div class="widget-example center-block">
-        <!-- PREMIUM IMAGE WIDGET -->
-        <img class="nopin"
-             src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/w_300,h_600,c_fill/http%3A%2F%2Fbananarepublic.gap.com%2Fwebcontent%2F0008%2F194%2F515%2Fcn8194515.jpg"
-             width="300" height="600" alt="Banana Republic - Modern Slim-Fit Grey Suit Jacket"
-             id="shopbeam-widget-image-placeholder-d7742bbb-4530-496e-a6c3-36ec9fb4a056"
-             data-shopbeam-url="/v1/products?id=9184101&image=1&apiKey=db5fae85-7de5-4da8-a4d8-1a8df6a2e373"/>
-        <!-- END PREMIUM IMAGE WIDGET -->
-        <dl class="dl-horizontal skinny" style="display: inline-block; vertical-align: top;">
-          <dt>Features</dt>
-          <dd>
-            <ul class="list-group">
-              <li class="list-group-item">Hover action touch-point</li>
-              <li class="list-group-item">Parent-page product lightbox</li>
-              <li class="list-group-item">Parent-page universal shopping cart</li>
-              <li class="list-group-item">Parent-page checkout experience</li>
-            </ul>
-          </dd>
-          <dt>Options</dt>
-          <dd>
-            <ul class="list-group">
-              <li class="list-group-item">Hover action enabled/disabled</li>
-              <li class="list-group-item">Custom image</li>
-              <li class="list-group-item">Custom dimensions</li>
-            </ul>
-          </dd>
-        </dl>
-      </div>
-    </div>
-    <div class="panel-footer">
-      <h4 class="text-center">The HTML</h4>
-      <pre style="width: 640px; margin: auto;"><code class="language-markup">
-        &lt;img class="nopin"
-        src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/
-        w_[width],h_[height],c_[crop mode]/[url-encoded image url]"
-        width="[width]" height="[height]" alt="[brand name] - [product name]"
-        id="shopbeam-widget-image-placeholder-[random uuid]"
-        data-shopbeam-url="[shopbeam product url]
-        &image=[default lightbox image index]
-        &apiKey=[your shopbeam API key]"/&gt;
-      </code></pre>
-      <div class="row">
-        <div class="col-md-6">
-          <h4 class="text-center">Example Data</h4>
-          <dl class="dl-horizontal wide">
-            <dt>Width</dt>
-            <dd>300</dd>
-            <dt>Height</dt>
-            <dd>600</dd>
-            <dt>Crop Mode</dt>
-            <dd>fill</dd>
-            <dt>URL-encoded Image URL</dt>
-            <dd>http%3A%2F%2Fbananarepublic.gap.com%2Fwebcontent%2F0008%2F194%2F515%2Fcn8194515.jpg</dd>
-            <dt>Brand Name</dt>
-            <dd>Banana Republic</dd>
-            <dt>Product Name</dt>
-            <dd>Modern Slim-Fit Grey Suit Jacket</dd>
-            <dt>Random UUID</dt>
-            <dd>d7742bbb-4530-496e-a6c3-36ec9fb4a056</dd>
-            <dt>Shopbeam Product Url</dt>
-            <dd>/v1/products?id=9184101</dd>
-            <dt>Default Lightbox Image Index</dt>
-            <dd>1</dd>
-            <dt>Your Shopbeam API key</dt>
-            <dd>db5fae85-7de5-4da8-a4d8-1a8df6a2e373</dd>
-          </dl>
-        </div>
-        <div class="col-md-6">
-          <h4 class="text-center">Variable Descriptions</h4>
-          <dl class="dl-horizontal wide">
-            <dt>Width</dt>
-            <dd>integer <strong>without</strong> unit</dd>
-            <dt>Height</dt>
-            <dd>integer <strong>without</strong> unit</dd>
-            <dt>Crop Mode</dt>
-            <dd>see <a href="http://cloudinary.com/documentation/image_transformations#crop_modes">cloudinary docs</a>:
-              fill, pad, etc.
-            </dd>
-            <dt>URL-encoded Image URL</dt>
-            <dd>url-encoded url for the image to show in the page content</dd>
-            <dt>Brand Name</dt>
-            <dd>brand name for interpolation into <code>alt</code> attribute</dd>
-            <dt>Product Name</dt>
-            <dd>product name for interpolation into <code>alt</code> attribute</dd>
-            <dt>Random UUID</dt>
-            <dd>random, <a href="http://en.wikipedia.org/wiki/Universally_unique_identifier">universally
-              <strong>unique</strong> identifier</a></dd>
-            <dt>Shopbeam Product Url</dt>
-            <dd>url path for querying shopbem product resource for wiget product</dd>
-            <dt>Default Lightbox Image Index</dt>
-            <dd>index of the default hero image for the lightbox</dd>
-            <dt>Your Shopbeam API key</dt>
-            <dd>your shopbeam api key</dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3>Text Widget</h3>
-    </div>
-    <div class="panel-body">
-      <p>
-        Here we have an example of our "Premium Solution" text widget. This widget begins as an
-        <code>a</code> ("anchor") tag on the page.
-      </p>
+							<p>Demos & mock-ups</p>
 
-      <div class="widget-example center-block">
-        <!-- PREMIUM TEXT WIDGET -->
-        <a data-shopbeam-url="/v1/products?id=9187266&image=1&apiKey=db5fae85-7de5-4da8-a4d8-1a8df6a2e373"
-           href="javascript:void(0)" title="Milly - Cubist-Print Midi Pencil Skirt"
-           id="shopbeam-widget-text-link-5a187136-b00f-4f1b-8638-8532e542cabc">
-          <h2>
-            Hello there,
-            <br/>
-            I'm a skirt!
-          </h2>
-        </a>
-        <!-- END PREMIUM TEXT WIDGET -->
-        <dl class="dl-horizontal skinny" style="display: inline-block; vertical-align: top;">
-          <dt>Features</dt>
-          <dd>
-            <ul class="list-group">
-              <li class="list-group-item">Make any HTML shoppable!</li>
-              <li class="list-group-item">Parent-page product lightbox</li>
-              <li class="list-group-item">Parent-page universal shopping cart</li>
-              <li class="list-group-item">Parent-page checkout experience</li>
-            </ul>
-          </dd>
-          <dt>Options</dt>
-          <dd>
-            <ul class="list-group">
-              <li class="list-group-item">None</li>
-            </ul>
-          </dd>
-        </dl>
-      </div>
-    </div>
-    <div class="panel-footer">
-      <h4 class="text-center">The HTML</h4>
-      <pre style="width: 640px; margin: auto;"><code class="language-markup">
-        &lt;a data-shopbeam-url="[shopbeam product url]
-        &image=[default lightbox image index]&apiKey=[your shopbeam apikey]"
-        href="javascript:void(0)" title="[brand name] - [product name]"
-        id="shopbeam-widget-text-link-[random uuid]"&gt;
-      </code></pre>
-      <div class="row">
-        <div class="col-md-6">
-          <h4 class="text-center">Example Data</h4>
-          <dl class="dl-horizontal wide">
-            <dt>Shopbeam Product Url</dt>
-            <dd>/v1/products?id=9187266</dd>
-            <dt>Default Lightbox Image Index</dt>
-            <dd>1</dd>
-            <dt>Your Shopbeam API key</dt>
-            <dd>db5fae85-7de5-4da8-a4d8-1a8df6a2e373</dd>
-            <dt>Brand Name</dt>
-            <dd>Milly</dd>
-            <dt>Product Name</dt>
-            <dd>Cubist-Print Midi Pencil Skirt</dd>
-            <dt>Random UUID</dt>
-            <dd>5a187136-b00f-4f1b-8638-8532e542cabc</dd>
-          </dl>
-        </div>
-        <div class="col-md-6">
-          <h4 class="text-center">Variable Descriptions</h4>
-          <dl class="dl-horizontal wide">
-            <dt>Brand Name</dt>
-            <dd>brand name for interpolation into <code>title</code> attribute</dd>
-            <dt>Product Name</dt>
-            <dd>product name for interpolation into <code>title</code> attribute</dd>
-            <dt>Random UUID</dt>
-            <dd>random, <a href="http://en.wikipedia.org/wiki/Universally_unique_identifier">universally
-              <strong>unique</strong> identifier</a></dd>
-            <dt>Shopbeam Product Url</dt>
-            <dd>url path for querying shopbem product resource for wiget product</dd>
-            <dt>Default Lightbox Image Index</dt>
-            <dd>index of the default hero image for the lightbox</dd>
-            <dt>Your Shopbeam API key</dt>
-            <dd>your shopbeam api key</dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br/>
+							<div class="row">
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="http://zae652.axshare.com/paramount-dvd.html" target="_blank" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+										<header>
+											<h3>Electronics</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="http://demo.shopbeam.com/blogs/gucci/index.html" target="_blank" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+										<header>
+											<h3>Consumer Goods</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="http://5w0kv2.axshare.com/havaianas.html" target="_blank" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+										<header>
+											<h3>Fashion</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="http://d41e6s.axshare.com/registration_flow.html" target="_blank" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+										<header>
+											<h3>Lead Generation</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u$ 12u$(mobile)">
+									<iframe src="http://files.bannersnack.net/banners/bxujyuk1e/embed/index.html?userId=21992961&t=1450452298" width="300" height="600" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe>
+									</article>
+								</div>
+							</div>
 
-  <!-- SCALE SOLUTION -->
-  <h1>Scale Solution</h1>
+						</div>
+					</section>
+					</section>
+										<section id="premium" class="three">
+						<div class="container">
 
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3>Image Widget</h3>
-    </div>
-    <div class="panel-body">
-      <p>
-        This is an example of our "Scale Solution" image widget. This widget features a different
-        design than the "Premium" image widget. Similar to the "Premium" image
-        widget, this widget begins as an <code>img</code> tag on the page and and also features an
-        optional hover action (enabled by default) that shows the widget's <strong>Product Name</strong>,
-        <strong>Brand Name</strong>,
-        <stong>List Price</stong>
-        , and <strong>Sale Price</strong>
-        (if applicable); however, instead of opening a lightbox which takes over the page, this
-        widget stays within it's iframe and provides an entire shopping experience right in place.
-      </p>
+							<header>
+								<h2><b>Premium Solution</b></h2>
+							</header>
 
-      <p>
-        This means this widget can be used in ad creatives without publisher supoprt! (i.e. no publisher-side javascript
-        / iframe-buster, etc.)
-      </p>
+							<p><h2>Full page immersive shopping experience delivers an onsite universal shopping cart </h2></p>
 
-      <div class="widget-example center-block">
-        <script class="shopbeam-script" type="text/javascript" src="https://www.shopbeam.com/js/widget.loader.js"
-                async="true"></script>
-        <img class="nopin"
-             src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/w_300,h_600,c_fill/http%3A%2F%2Fimages.neimanmarcus.com%2Fca%2F1%2Fproduct_assets%2FT%2F7%2F4%2FN%2FR%2FNMT74NR_mz.jpg"
-             width="300" height="600" alt="Neiman Marcus - Ava Cutout Sheer-Skirt Gown"
-             id="shopbeam-in-frame-widget-image-placeholder-5a9e41cc-6f20-47ce-a288-5173ea1ef056"
-             data-shopbeam-url="/v1/products?id=9189394&image=1&apiKey=db5fae85-7de5-4da8-a4d8-1a8df6a2e373"/>
-        <dl class="dl-horizontal skinny" style="display: inline-block; vertical-align: top;">
-          <dt>Features</dt>
-          <dd>
-            <ul class="list-group">
-              <li class="list-group-item">Hover action touch-point</li>
-              <li class="list-group-item">In-unit product discovery</li>
-              <li class="list-group-item">In-unit universal shopping cart</li>
-              <li class="list-group-item">In-unit checkout experience</li>
-            </ul>
-          </dd>
-          <dt>Options</dt>
-          <dd>
-            <ul class="list-group">
-              <li class="list-group-item">Hover action enabled/disabled</li>
-              <li class="list-group-item">Custom image</li>
-              <li class="list-group-item">Custom dimensions</li>
-            </ul>
-          </dd>
-        </dl>
-      </div>
-    </div>
-    <div class="panel-footer">
-      <h4 class="text-center">The HTML</h4>
-      <pre style="width: 640px; margin: auto;"><code class="language-markup">
-        &lt;img class="nopin"
-        src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/
-        w_[width],h_[height],c_[crop mode]/[url-encoded image url]"
-        width="[width]" height="[height]" alt="[brand name] - [product name]"
-        id="shopbeam-in-frame-widget-image-placeholder-[random uuid]"
-        data-shopbeam-url="[shopbeam product url]
-        &image=[default lightbox image index]
-        &apiKey=[your shopbeam API key]"/&gt;
-      </code></pre>
-      <div class="row">
-        <div class="col-md-6">
-          <h4 class="text-center">Example Data</h4>
-          <dl class="dl-horizontal wide">
-            <dt>Shopbeam Product Url</dt>
-            <dd>/v1/products?id=9189394</dd>
-            <dt>Default Lightbox Image Index</dt>
-            <dd>1</dd>
-            <dt>Your Shopbeam API key</dt>
-            <dd>db5fae85-7de5-4da8-a4d8-1a8df6a2e373</dd>
-            <dt>Brand Name</dt>
-            <dd>Milly</dd>
-            <dt>Product Name</dt>
-            <dd>Neiman Marcus - Ava Cutout Sheer-Skirt Gown</dd>
-            <dt>Random UUID</dt>
-            <dd>5a9e41cc-6f20-47ce-a288-5173ea1ef056</dd>
-          </dl>
-        </div>
-        <div class="col-md-6">
-          <h4 class="text-center">Variable Descriptions</h4>
-          <dl class="dl-horizontal wide">
-            <dt>Brand Name</dt>
-            <dd>brand name for interpolation into <code>title</code> attribute</dd>
-            <dt>Product Name</dt>
-            <dd>product name for interpolation into <code>title</code> attribute</dd>
-            <dt>Random UUID</dt>
-            <dd>random, <a href="http://en.wikipedia.org/wiki/Universally_unique_identifier">universally
-              <strong>unique</strong> identifier</a></dd>
-            <dt>Shopbeam Product Url</dt>
-            <dd>url path for querying shopbem product resource for wiget product</dd>
-            <dt>Default Lightbox Image Index</dt>
-            <dd>index of the default hero image for the lightbox</dd>
-            <dt>Your Shopbeam API key</dt>
-            <dd>your shopbeam api key</dd>
-          </dl>
-        </div>
-      </div>
-    </div>
 
-    <!-- COMMERCE SOLUTION -->
-    <!--
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h1>Commerce Solution</h1>
-      </div>
-      <div class="panel-body">
-        <h3>Image Widget</h3>
+						</div>
+						<div class="container">
 
-        <p>
-          Here we have an example of our "Premium Solution" image widget. This widget begins as an
-          <code>img</code> tag on the page and features an optional hover action (enabled by default)
-          that shows the widget's <strong>Product Name</strong>, <strong>Brand Name</strong>,
-          <stong>List Price</stong>
-          , and <strong>Sale Price</strong> (if applicable).
-        </p>
-      </div>
-    </div>
-    -->
-  </div>
-</body>
+
+							<p>Demos & mock-ups</p>
+
+							<div class="row">
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<img class="nopin" src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/w_250/http%3A%2F%2Fimagena1.lacoste.com%2Fsits_pod26%2Fdw%2Fimage%2Fv2%2FAAUP_PRD%2Fon%2Fdemandware.static%2F-%2FSites-master%2Fdefault%2Fdw6b3b1ec9%2F10_2010748_000_24.jpg%3Fsw%3D656%26amp%3Bsh%3D656%26amp%3Bsm%3Dfit" width="300" height="300" alt="Lacoste - Austin Watch" id="shopbeam-widget-image-placeholder-c25b0778-b2ab-4162-a1d5-d9bcd0986afb" data-shopbeam-url="/v1/products?id=9189555&image=1&apiKey=0caadba3-a578-4e31-b9df-9c0e6bec27d0" />
+									</article>
+									<article class="item">
+										<a href="http://sandbox.eyereturn.com/preview/index.php?MXwxMTM5NjUyfDB8MHxzc3xzc3IsMnx8MHwwfGxifGxidCw5YTE5YWYyZA" target="_blank" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
+										<header>
+											<h3>Consumer Goods</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="http://demo.shopbeam.com/blogs/nytimes/index.html" target="_blank" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
+										<header>
+											<h3>Publishers</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u$ 12u$(mobile)">
+									<article class="item">
+										<a href="http://demo.shopbeam.com/blogs/allure/index.html" target="_blank" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
+										<header>
+											<h3>Publishers</h3>
+										</header>
+									</article>
+									<article class="item">
+										<img class="nopin" src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/w_350/http%3A%2F%2Fneimanmarcus.scene7.com%2Fir%2Frender%2FNeimanMarcusRender%2FNMC0VB6_m_1D%3Fobj%3Dbase_color%26src%3DNMC0VB6_1D%26resmode%3Dsharp2%26sharpen%3D1%26qlt%3D85%2C1%26wid%3D1200%26height%3D1500" width="250" height="350" alt="Nars - IllUMINATOR 1oz" id="shopbeam-widget-image-placeholder-9e15740b-3f33-4fbe-833a-79525755d7f9" data-shopbeam-url="/v1/products?id=9187056&image=1&apiKey=0caadba3-a578-4e31-b9df-9c0e6bec27d0" />
+
+									</article>
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<form method="post" action="mailto:ads@shopbeam.com" target="_blank">
+
+										<input type="submit" value="Request a demo" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Shopbeam Inc. All rights reserved.</li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script class="shopbeam-script" type="text/javascript" src="https://www.shopbeam.com/js/widget.loader.js" async="true"></script>
+
+	</body>
 </html>
-
