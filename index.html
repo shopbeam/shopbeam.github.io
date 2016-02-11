@@ -3,6 +3,7 @@
 <head lang="en">
   <meta charset="UTF-8">
   <title>Widget Sandbox</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./examples/images/favicon.ico" />
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -28,11 +29,9 @@
     .widget-example {
       width: 670px;
     }
-
     .coming-soon {
       position: relative;
     }
-
     .coming-soon::before {
       content:          'Coming Soon';
       position:         absolute;
@@ -45,35 +44,28 @@
       left:             15%;
       top:              0;
     }
-
     [id*='shopbeam-widget-text-'] {
       display: inline-block;
       width:   300px;
     }
-
     .panel-footer > pre {
       border:     0;
       margin:     0;
       padding:    0;
       background: none;
     }
-
     .dl-horizontal.skinny > dt {
       width: 90px;
     }
-
     .dl-horizontal.skinny > dd {
       margin-left: 100px;
     }
-
     .dl-horizontal.wide > dt {
       width: 200px;
     }
-
     .dl-horizontal.wide > dd {
       margin-left: 210px;
     }
-
     .dl-horizontal > dd {
       overflow:      hidden;
       text-overflow: ellipsis;
@@ -96,6 +88,8 @@
     <p>
       <a class="btn btn-primary btn-lg" href="/docs" target="_blank" role="button">Read The Docs</a>
       <a class="btn btn-primary btn-lg" href="http://shopbeam.com" target="_blank" role="button">Learn More</a>
+      <a class="btn btn-primary btn-lg" href="http://shopbeam.com/examples" target="_blank" role="button">Examples</a>
+      <a class="btn btn-primary btn-lg" href="/examples/casestudy01.pdf" target="_blank" role="button">Case Studies</a>
     </p>
   </div>
 
@@ -145,7 +139,7 @@
       </div>
     </div>
     <div class="panel-footer">
-      <h4 class="text-center">The HTML</h4>
+      <h4 class="text-center">The HTML - Sample Code <a href="samplecode.rtf">HERE</a></h4>
       <pre style="width: 640px; margin: auto;"><code class="language-markup">
         &lt;img class="nopin"
         src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/
@@ -255,7 +249,7 @@
       </div>
     </div>
     <div class="panel-footer">
-      <h4 class="text-center">The HTML</h4>
+      <h4 class="text-center">The HTML - Sample Code <a href="samplecode.rtf">HERE</a></h4>
       <pre style="width: 640px; margin: auto;"><code class="language-markup">
         &lt;a data-shopbeam-url="[shopbeam product url]
         &image=[default lightbox image index]&apiKey=[your shopbeam apikey]"
@@ -329,7 +323,7 @@
       </p>
 
       <div class="widget-example center-block">
-        <script class="shopbeam-script" type="text/javascript" src="https://www.shopbeam.com/js/widget.loader.js"
+        <script class="shopbeam-script" type="text/javascript" src="https://staging.shopbeam.com/js/widget.loader.js"
                 async="true"></script>
         <img class="nopin"
              src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/w_300,h_600,c_fill/http%3A%2F%2Fimages.neimanmarcus.com%2Fca%2F1%2Fproduct_assets%2FT%2F7%2F4%2FN%2FR%2FNMT74NR_mz.jpg"
@@ -358,7 +352,7 @@
       </div>
     </div>
     <div class="panel-footer">
-      <h4 class="text-center">The HTML</h4>
+      <h4 class="text-center">The HTML - Sample Code <a href="samplecode.rtf">HERE</a></h4>
       <pre style="width: 640px; margin: auto;"><code class="language-markup">
         &lt;img class="nopin"
         src="https://cloudinary-a.akamaihd.net/shopbeam/image/fetch/
@@ -416,7 +410,6 @@
       </div>
       <div class="panel-body">
         <h3>Image Widget</h3>
-
         <p>
           Here we have an example of our "Premium Solution" image widget. This widget begins as an
           <code>img</code> tag on the page and features an optional hover action (enabled by default)
@@ -430,4 +423,3 @@
   </div>
 </body>
 </html>
-
